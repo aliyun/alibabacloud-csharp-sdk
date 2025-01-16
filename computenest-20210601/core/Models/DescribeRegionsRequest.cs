@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
-    public class UpdateUserInformationResponseBody : TeaModel {
+    public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>51945B04-6AA6-410D-93BA-236E0248B104</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

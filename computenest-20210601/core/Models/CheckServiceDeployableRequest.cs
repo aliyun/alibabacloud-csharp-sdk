@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class CheckServiceDeployableRequest : TeaModel {
         /// <summary>
+        /// <para>Total amount of postpaid.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.29</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string PostPaidAmount { get; set; }
 
         /// <summary>
+        /// <para>Total amount of prepayment.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.0</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string PrePaidAmount { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The service ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceId { get; set; }
 
         /// <summary>
+        /// <para>The service version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -52,6 +61,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceVersion { get; set; }
 
         /// <summary>
+        /// <para>The trial type of the service instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Trial</b>: Trials are supported.</description></item>
+        /// <item><description><b>NotTrial</b>: Trials are not supported.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>NotTrial</para>
         /// </summary>

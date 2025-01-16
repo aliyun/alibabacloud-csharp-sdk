@@ -119,6 +119,23 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string ServiceInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Sort Order. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Ascending: Ascending order</para>
+        /// </description></item>
+        /// <item><description><para>Descending (default value): Descending order</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Ascending: Ascending order</para>
+        /// <para>Descending (default value): Descending order</para>
+        /// </summary>
+        [NameInMap("SortOrder")]
+        [Validation(Required=false)]
+        public string SortOrder { get; set; }
+
     }
 
 }

@@ -1,3 +1,9 @@
+2025-01-16 Version: 2.6.0
+- Support API DescribeRegions.
+- Update API GetService: update param ServiceVersion.
+- Update API ListServiceInstanceLogs: add param SortOrder.
+
+
 2024-12-09 Version: 2.5.0
 - Support API CheckServiceDeployable.
 - Support API GetService.

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户取消服务使用请求</para>
+        /// <para>Cancels the application for using a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户取消服务使用请求</para>
+        /// <para>Cancels the application for using a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户取消服务使用请求</para>
+        /// <para>Cancels the application for using a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户取消服务使用请求</para>
+        /// <para>Cancels the application for using a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -935,7 +935,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户创建服务使用请求</para>
+        /// <para>Creates an application for using a service.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -991,7 +991,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户创建服务使用请求</para>
+        /// <para>Creates an application for using a service.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1047,7 +1047,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户创建服务使用请求</para>
+        /// <para>Creates an application for using a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1065,7 +1065,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户创建服务使用请求</para>
+        /// <para>Creates an application for using a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1215,6 +1215,126 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteServiceInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
+        public DescribeRegionsResponse DescribeRegionsWithOptions(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegions",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
+        public async Task<DescribeRegionsResponse> DescribeRegionsWithOptionsAsync(DescribeRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRegions",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
+        public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRegionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List available regions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRegionsResponse
+        /// </returns>
+        public async Task<DescribeRegionsResponse> DescribeRegionsAsync(DescribeRegionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1539,7 +1659,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算巢服务部署询价</para>
+        /// <para>Queries the estimated price for creating a service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1631,7 +1751,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算巢服务部署询价</para>
+        /// <para>Queries the estimated price for creating a service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1723,7 +1843,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算巢服务部署询价</para>
+        /// <para>Queries the estimated price for creating a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1741,7 +1861,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算巢服务部署询价</para>
+        /// <para>Queries the estimated price for creating a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2267,11 +2387,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>@param request GetUserInformationRequest</description></item>
-        /// </list>
+        /// <para>Queries the information about a customer.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetUserInformationRequest
+        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -2308,11 +2429,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>@param request GetUserInformationRequest</description></item>
-        /// </list>
+        /// <para>Queries the information about a customer.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetUserInformationRequest
+        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -2349,10 +2471,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>@param request GetUserInformationRequest</description></item>
-        /// </list>
+        /// <para>Queries the information about a customer.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserInformationRequest
+        /// </param>
         /// 
         /// <returns>
         /// GetUserInformationResponse
@@ -2365,10 +2489,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>@param request GetUserInformationRequest</description></item>
-        /// </list>
+        /// <para>Queries the information about a customer.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserInformationRequest
+        /// </param>
         /// 
         /// <returns>
         /// GetUserInformationResponse
@@ -2520,6 +2646,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             {
                 query["ServiceInstanceId"] = request.ServiceInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2585,6 +2715,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
             {
                 query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2843,7 +2977,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看服务实例升级历史</para>
+        /// <para>Queries the upgrade history of a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2897,7 +3031,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看服务实例升级历史</para>
+        /// <para>Queries the upgrade history of a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2951,7 +3085,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看服务实例升级历史</para>
+        /// <para>Queries the upgrade history of a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2969,7 +3103,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看服务实例升级历史</para>
+        /// <para>Queries the upgrade history of a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3147,7 +3281,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户查询服务使用申请接口</para>
+        /// <para>Queries the applications for using a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3197,7 +3331,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户查询服务使用申请接口</para>
+        /// <para>Queries the applications for using a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3247,7 +3381,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户查询服务使用申请接口</para>
+        /// <para>Queries the applications for using a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3265,7 +3399,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户查询服务使用申请接口</para>
+        /// <para>Queries the applications for using a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3465,6 +3599,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return await ListServicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签键列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagKeysRequest
         /// </param>
@@ -3510,6 +3649,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ListTagKeysResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签键列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagKeysRequest
         /// </param>
@@ -3555,6 +3699,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ListTagKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签键列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagKeysRequest
         /// </param>
@@ -3568,6 +3717,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return ListTagKeysWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签键列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagKeysRequest
         /// </param>
@@ -3581,6 +3735,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return await ListTagKeysWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签资源列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -3634,6 +3793,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签资源列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -3687,6 +3851,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签资源列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -3700,6 +3869,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签资源列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -3713,6 +3887,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签值列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagValuesRequest
         /// </param>
@@ -3762,6 +3941,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ListTagValuesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签值列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagValuesRequest
         /// </param>
@@ -3811,6 +3995,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<ListTagValuesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签值列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagValuesRequest
         /// </param>
@@ -3824,6 +4013,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return ListTagValuesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签值列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagValuesRequest
         /// </param>
@@ -3975,7 +4169,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚服务实例</para>
+        /// <para>Rolls back an upgraded service instance to the previous version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4025,7 +4219,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚服务实例</para>
+        /// <para>Rolls back an upgraded service instance to the previous version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4075,7 +4269,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚服务实例</para>
+        /// <para>Rolls back an upgraded service instance to the previous version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4093,7 +4287,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚服务实例</para>
+        /// <para>Rolls back an upgraded service instance to the previous version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4381,6 +4575,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return await StopServiceInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>给资源打标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -4430,6 +4629,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>给资源打标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -4479,6 +4683,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>给资源打标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -4492,6 +4701,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>给资源打标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -4505,6 +4719,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>给资源解除标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnTagResourcesRequest
         /// </param>
@@ -4558,6 +4777,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<UnTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>给资源解除标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnTagResourcesRequest
         /// </param>
@@ -4611,6 +4835,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<UnTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>给资源解除标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnTagResourcesRequest
         /// </param>
@@ -4624,6 +4853,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return UnTagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>给资源解除标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnTagResourcesRequest
         /// </param>
@@ -4639,7 +4873,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务实例属性</para>
+        /// <para>Updates the attributes of a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4689,7 +4923,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务实例属性</para>
+        /// <para>Updates the attributes of a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4739,7 +4973,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务实例属性</para>
+        /// <para>Updates the attributes of a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4757,7 +4991,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务实例属性</para>
+        /// <para>Updates the attributes of a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4773,6 +5007,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return await UpdateServiceInstanceAttributesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the configurations of a service instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>Configuration change is enabled and the related parameters are configured for the service by the service provider.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// UpdateServiceInstanceSpecRequest
         /// </param>
@@ -4844,6 +5089,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<UpdateServiceInstanceSpecResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the configurations of a service instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>Configuration change is enabled and the related parameters are configured for the service by the service provider.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// UpdateServiceInstanceSpecRequest
         /// </param>
@@ -4915,6 +5171,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return TeaModel.ToObject<UpdateServiceInstanceSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the configurations of a service instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>Configuration change is enabled and the related parameters are configured for the service by the service provider.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateServiceInstanceSpecRequest
         /// </param>
@@ -4928,6 +5195,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             return UpdateServiceInstanceSpecWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the configurations of a service instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>Configuration change is enabled and the related parameters are configured for the service by the service provider.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateServiceInstanceSpecRequest
         /// </param>
@@ -4943,7 +5221,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户更新服务使用请求</para>
+        /// <para>Updates the application for using a service.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4999,7 +5277,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户更新服务使用请求</para>
+        /// <para>Updates the application for using a service.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5055,7 +5333,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户更新服务使用请求</para>
+        /// <para>Updates the application for using a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5073,7 +5351,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户更新服务使用请求</para>
+        /// <para>Updates the application for using a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5091,7 +5369,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户全局信息</para>
+        /// <para>Updates the information about a customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5137,7 +5415,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户全局信息</para>
+        /// <para>Updates the information about a customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5183,7 +5461,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户全局信息</para>
+        /// <para>Updates the information about a customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5201,7 +5479,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户全局信息</para>
+        /// <para>Updates the information about a customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5219,7 +5497,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级服务实例</para>
+        /// <para>Upgrades the version of a service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5287,7 +5565,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级服务实例</para>
+        /// <para>Upgrades the version of a service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5355,7 +5633,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级服务实例</para>
+        /// <para>Upgrades the version of a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5373,7 +5651,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级服务实例</para>
+        /// <para>Upgrades the version of a service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

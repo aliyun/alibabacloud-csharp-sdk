@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class CheckServiceDeployableResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Inspection result.</para>
+        /// </summary>
         [NameInMap("CheckResults")]
         [Validation(Required=false)]
         public List<CheckServiceDeployableResponseBodyCheckResults> CheckResults { get; set; }
         public class CheckServiceDeployableResponseBodyCheckResults : TeaModel {
             /// <summary>
+            /// <para>Returns a hint message for the result.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
             /// </summary>
@@ -22,6 +27,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Message { get; set; }
 
             /// <summary>
+            /// <para>Check type, invalid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Balance ：Account balance.</para>
+            /// </description></item>
+            /// <item><description><para>Quota:  Account quota.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Balance</para>
             /// </summary>
@@ -30,6 +43,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Type { get; set; }
 
             /// <summary>
+            /// <para>Inspection result.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>

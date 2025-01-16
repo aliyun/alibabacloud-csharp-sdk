@@ -9,11 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class UpdateUserInformationRequest : TeaModel {
+        /// <summary>
+        /// <para>The modified delivery settings.</para>
+        /// </summary>
         [NameInMap("DeliverySettings")]
         [Validation(Required=false)]
         public UpdateUserInformationRequestDeliverySettings DeliverySettings { get; set; }
         public class UpdateUserInformationRequestDeliverySettings : TeaModel {
             /// <summary>
+            /// <para>Specifies whether to enable screencast delivery to OSS. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -22,6 +31,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public bool? ActiontrailDeliveryToOssEnabled { get; set; }
 
             /// <summary>
+            /// <para>The name of the OSS bucket.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;mybucket&quot;</para>
             /// </summary>
@@ -30,6 +41,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string OssBucketName { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to enable screencast delivery to Object Storage Service (OSS). Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -38,6 +55,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public bool? OssEnabled { get; set; }
 
             /// <summary>
+            /// <para>The number of days for which the screencasts are saved.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>7</para>
             /// </summary>
@@ -46,6 +65,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public long? OssExpirationDays { get; set; }
 
             /// <summary>
+            /// <para>The OSS path.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;path1/path2/&quot;</para>
             /// </summary>
@@ -56,6 +77,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

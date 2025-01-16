@@ -27,10 +27,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public UpdateServiceInstanceSpecShrinkRequestCommodity Commodity { get; set; }
         public class UpdateServiceInstanceSpecShrinkRequestCommodity : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
+            /// <para>Specifies whether to enable automatic payment.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true (default)</b>: automatically completes the payment. You must make sure that your account balance is sufficient.</description></item>
+            /// <item><description><b>false</b>: does not automatically complete the payment. An unpaid order is generated. If your account balance is insufficient, you can set AutoPay to false. In this case, an unpaid order is generated. You can complete the payment in the Expenses and Costs console.<a href="https://rdsnext.console.aliyun.com/dashboard/cn-beijing"></a></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,10 +44,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. A dry run includes checks on the permissions and instance state.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true: performs a dry run for the request, but does not create a service instance.</b></description></item>
-        /// <item><description><b>false: performs a dry run for the request, and creates a service instance if the request passes the dry run.</b></description></item>
+        /// <item><description>true: performs a dry run but does not create a service instance.</description></item>
+        /// <item><description>false: performs a dry run and creates a service instance if the request passes the dry run.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,11 +59,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Prometheus on the customer side. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
-        /// </list>
+        /// <para>Specifies whether to enable Prometheus monitoring on the user side.</para>
+        /// <para>Valid values:</para>
+        /// <para>true</para>
+        /// <para>false</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -71,7 +72,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public bool? EnableUserPrometheus { get; set; }
 
         /// <summary>
-        /// <para>The name of the configuration update operation.</para>
+        /// <para>The name of the configuration change operation.</para>
+        /// <para>To obtain the names and content of the configuration change operations of the service, you can call the <a href="https://help.aliyun.com/document_detail/2340828.html">GetService</a> operation. In the response, check the value of <b>ModifyParametersConfig</b> in the value of <b>OperationMetadata</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>package modify</para>
@@ -81,7 +83,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string OperationName { get; set; }
 
         /// <summary>
-        /// <para>The configuration parameters of the service instance.</para>
+        /// <para>The configuration parameter.</para>
+        /// <para>This parameter is available if the service provider set <b>Method</b> to <b>Change Parameter</b> when configuring configuration change operations.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>To obtain the parameters of the service that support configuration change, you can call the <a href="https://help.aliyun.com/document_detail/2340828.html">GetService</a> operation. In the response, check the value of <b>ModifyParametersConfig</b> in the value of <b>OperationMetadata</b>.</para>
+        /// </description></item>
+        /// <item><description><para>You can also view the parameters of the service that support configuration change in the <b>configuration change</b> dialog box in the <a href="https://computenest.console.aliyun.com/service/instance/cn-hangzhou">Compute Nest console</a>.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>For example, if the service supports Elastic Compute Service (ECS) instance type upgrade, you must specify an instance type that has higher specifications than the current one.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -93,7 +105,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the specification package.</para>
+        /// <para>The name of the configuration plan.</para>
+        /// <para>This parameter is available if the service provider set <b>Method</b> to <b>Change Plan</b> when configuring configuration change operations.</para>
+        /// <para>To obtain the configuration plan names of the service, you can call the <a href="https://help.aliyun.com/document_detail/2340828.html">GetService</a> operation. In the response, check the value of <b>PredefinedParameters</b> in the value of <b>DeployMetadata</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>package One</para>
@@ -103,7 +117,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string PredefinedParametersName { get; set; }
 
         /// <summary>
-        /// <para>The service instance ID.</para>
+        /// <para>The ID of the service instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances</a> operation to obtain the ID of the service instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

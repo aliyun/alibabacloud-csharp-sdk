@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class UpdateServiceInstanceAttributesRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to authorize the service provider to perform O\&amp;M operations on the service instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public bool? EnableOperation { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the service instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances</a> operation to obtain the ID of the service instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

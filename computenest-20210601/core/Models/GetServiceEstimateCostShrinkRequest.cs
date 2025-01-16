@@ -20,27 +20,24 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The commodity details.</para>
+        /// <para>The information about the subscription duration.</para>
         /// </summary>
         [NameInMap("Commodity")]
         [Validation(Required=false)]
         public string CommodityShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the configuration update operation.</para>
+        /// <para>The name of the configuration change operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>修改游戏参数</para>
+        /// <para>Parameter change</para>
         /// </summary>
         [NameInMap("OperationName")]
         [Validation(Required=false)]
         public string OperationName { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are specified for service instance deployment.</para>
-        /// <remarks>
-        /// <para> If you want to specify the region in which the service instance is deployed, you must specify the information in Parameters.</para>
-        /// </remarks>
+        /// <para>The parameters that are specified to deploy the service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ \&quot;RegionId\&quot;: \&quot;cn-hangzhou\&quot;, \&quot;InstanceType\&quot;: \&quot;ecs.g5.large\&quot;}</para>
@@ -91,26 +88,20 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceVersion { get; set; }
 
         /// <summary>
-        /// <para>The package name.</para>
+        /// <para>The name of the package specification.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>自定义套餐</para>
+        /// <para>Package 1</para>
         /// </summary>
         [NameInMap("SpecificationName")]
         [Validation(Required=false)]
         public string SpecificationName { get; set; }
 
         /// <summary>
-        /// <para>The name of the template. This parameter is returned only if you specify TemplateId.</para>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.</description></item>
-        /// <item><description>If you not specify TemplateVersion, the name of the template whose version is the default version is returned.</description></item>
-        /// </list>
-        /// </remarks>
+        /// <para>The template name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>模板1</para>
+        /// <para>Template 1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
