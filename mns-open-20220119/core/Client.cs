@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AuthorizeEndpointAcl</para>
+        /// <para>Adds one or more ACLrules for an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AuthorizeEndpointAcl</para>
+        /// <para>Adds one or more ACLrules for an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AuthorizeEndpointAcl</para>
+        /// <para>Adds one or more ACLrules for an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AuthorizeEndpointAcl</para>
+        /// <para>Adds one or more ACLrules for an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -751,7 +751,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisableEndpoint</para>
+        /// <para>You can call this operation to disable an endpoint of a specified type. After the endpoint is disabled, requests from the endpoint are blocked and an error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -793,7 +793,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisableEndpoint</para>
+        /// <para>You can call this operation to disable an endpoint of a specified type. After the endpoint is disabled, requests from the endpoint are blocked and an error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -835,7 +835,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisableEndpoint</para>
+        /// <para>You can call this operation to disable an endpoint of a specified type. After the endpoint is disabled, requests from the endpoint are blocked and an error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -853,7 +853,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisableEndpoint</para>
+        /// <para>You can call this operation to disable an endpoint of a specified type. After the endpoint is disabled, requests from the endpoint are blocked and an error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -871,7 +871,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>EnableEndpoint</para>
+        /// <para>You can call this operation to enable an endpoint of a specified type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -913,7 +913,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>EnableEndpoint</para>
+        /// <para>You can call this operation to enable an endpoint of a specified type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -955,7 +955,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>EnableEndpoint</para>
+        /// <para>You can call this operation to enable an endpoint of a specified type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -973,7 +973,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>EnableEndpoint</para>
+        /// <para>You can call this operation to enable an endpoint of a specified type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1927,7 +1927,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RevokeEndpointAcl</para>
+        /// <para>Deletes one or more ACLs from an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1983,7 +1983,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RevokeEndpointAcl</para>
+        /// <para>Deletes one or more ACLs from an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2039,7 +2039,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RevokeEndpointAcl</para>
+        /// <para>Deletes one or more ACLs from an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2057,7 +2057,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RevokeEndpointAcl</para>
+        /// <para>Deletes one or more ACLs from an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -97,20 +97,41 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 [Validation(Required=false)]
                 public long? MessageRetentionPeriod { get; set; }
 
+                /// <summary>
+                /// <para>The tags added to the resources.</para>
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<ListTopicResponseBodyDataPageDataTags> Tags { get; set; }
                 public class ListTopicResponseBodyDataPageDataTags : TeaModel {
+                    /// <summary>
+                    /// <para>The tag key.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>tag1</para>
+                    /// </summary>
                     [NameInMap("TagKey")]
                     [Validation(Required=false)]
                     public string TagKey { get; set; }
 
+                    /// <summary>
+                    /// <para>The tag value.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test</para>
+                    /// </summary>
                     [NameInMap("TagValue")]
                     [Validation(Required=false)]
                     public string TagValue { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The internal URL of the message topic. The internal URL can be accessed over an internal network.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>http:// 111111111****.mns.us-west-1-internal.aliyuncs.com/topics/testTopic</para>
+                /// </summary>
                 [NameInMap("TopicInnerUrl")]
                 [Validation(Required=false)]
                 public string TopicInnerUrl { get; set; }
@@ -125,6 +146,12 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 [Validation(Required=false)]
                 public string TopicName { get; set; }
 
+                /// <summary>
+                /// <para>The URL of the message topic.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>http:// 111111111****.mns.us-west-1.aliyuncs.com/topics/testTopic</para>
+                /// </summary>
                 [NameInMap("TopicUrl")]
                 [Validation(Required=false)]
                 public string TopicUrl { get; set; }

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string SubscriptionName { get; set; }
 
         /// <summary>
-        /// <para>The name of the topic.</para>
+        /// <para>The topic name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

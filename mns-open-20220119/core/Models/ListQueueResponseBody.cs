@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public List<ListQueueResponseBodyDataPageData> PageData { get; set; }
             public class ListQueueResponseBodyDataPageData : TeaModel {
                 /// <summary>
-                /// <para>The total number of messages that are in the Active state in the queue. The value is an approximate number.</para>
+                /// <para>The total number of messages that are in the Active state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The total number of the messages that are in the Delayed state in the queue. The value is an approximate number.</para>
+                /// <para>The total number of messages that are in the Delayed state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public long? DelaySeconds { get; set; }
 
                 /// <summary>
-                /// <para>The total number of the messages that are in the Inactive state in the queue. The value is an approximate number.</para>
+                /// <para>The total number of messages that are in the Inactive state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -147,14 +147,29 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 [Validation(Required=false)]
                 public string QueueName { get; set; }
 
+                /// <summary>
+                /// <para>The tags added to the resources.</para>
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<ListQueueResponseBodyDataPageDataTags> Tags { get; set; }
                 public class ListQueueResponseBodyDataPageDataTags : TeaModel {
+                    /// <summary>
+                    /// <para>The tag key.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>tag1</para>
+                    /// </summary>
                     [NameInMap("TagKey")]
                     [Validation(Required=false)]
                     public string TagKey { get; set; }
 
+                    /// <summary>
+                    /// <para>The tag value.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test</para>
+                    /// </summary>
                     [NameInMap("TagValue")]
                     [Validation(Required=false)]
                     public string TagValue { get; set; }

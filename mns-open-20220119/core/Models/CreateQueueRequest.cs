@@ -20,11 +20,12 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? DelaySeconds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the logging feature. Valid values:</para>
+        /// <para>Specifies whether to enable the log management feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True</description></item>
-        /// <item><description>False (default)</description></item>
+        /// <item><description>true: enabled.</description></item>
+        /// <item><description>false: disabled.</description></item>
         /// </list>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -78,10 +79,18 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public List<CreateQueueRequestTag> Tag { get; set; }
         public class CreateQueueRequestTag : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>tag1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

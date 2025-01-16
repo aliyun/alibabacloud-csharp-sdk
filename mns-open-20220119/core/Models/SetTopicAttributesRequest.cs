@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class SetTopicAttributesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the logging feature. Valid values:</para>
+        /// <para>Specifies whether to enable the log management feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True</description></item>
-        /// <item><description>False (default)</description></item>
+        /// <item><description>true: enabled.</description></item>
+        /// <item><description>false: disabled. Default value: false.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

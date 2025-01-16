@@ -43,10 +43,18 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public List<ListQueueRequestTag> Tag { get; set; }
         public class ListQueueRequestTag : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>tag1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
