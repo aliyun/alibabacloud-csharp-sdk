@@ -1,3 +1,7 @@
+2025-01-16 Version: 6.11.2
+- Update API AssociateVpcCidrBlock: update response param.
+
+
 2024-12-30 Version: 6.11.1
 - Update API DescribeNatGatewayAssociateNetworkInterfaces: update response param.
 

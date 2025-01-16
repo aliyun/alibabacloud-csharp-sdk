@@ -115,6 +115,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string SecondaryCidrBlock { get; set; }
 
+        /// <summary>
+        /// <para>Add secondary CIDR blocks to the VPC from the IPAM pool by entering a mask.</para>
+        /// <remarks>
+        /// <para>To add a secondary CIDR block to the VPC using the specified IPAM pool, you must specify at least one of the parameters, SecondaryCidrBlock or SecondaryCidrMask.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16</para>
+        /// </summary>
         [NameInMap("SecondaryCidrMask")]
         [Validation(Required=false)]
         public int? SecondaryCidrMask { get; set; }

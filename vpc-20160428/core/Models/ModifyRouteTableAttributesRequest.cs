@@ -49,6 +49,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether to enable route propagation to receive dynamic routes. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b> (default): enables route propagation.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disables route propagation.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>

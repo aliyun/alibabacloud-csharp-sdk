@@ -45627,8 +45627,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If your VPN gateway was created before December 10, 2022, you must upgrade your VPN gateway to the latest version before you can view connection information about SSL clients. For more information, see <a href="https://help.aliyun.com/document_detail/2671058.html">Upgrade a VPN gateway</a>.
-        /// If your VPN gateway was created after December 10, 2022, you can view connection information about SSL clients by default.</para>
+        /// <para>If your VPN gateway was created before December 10, 2022, you need to upgrade the VPN gateway to the latest version to view the connection information about SSL clients. For more information, see <a href="https://help.aliyun.com/document_detail/2671058.html">Upgrade a VPN gateway</a>.
+        /// If your VPN gateway was created after December 10, 2022, you can view the connection information about SSL clients by default.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45703,8 +45703,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If your VPN gateway was created before December 10, 2022, you must upgrade your VPN gateway to the latest version before you can view connection information about SSL clients. For more information, see <a href="https://help.aliyun.com/document_detail/2671058.html">Upgrade a VPN gateway</a>.
-        /// If your VPN gateway was created after December 10, 2022, you can view connection information about SSL clients by default.</para>
+        /// <para>If your VPN gateway was created before December 10, 2022, you need to upgrade the VPN gateway to the latest version to view the connection information about SSL clients. For more information, see <a href="https://help.aliyun.com/document_detail/2671058.html">Upgrade a VPN gateway</a>.
+        /// If your VPN gateway was created after December 10, 2022, you can view the connection information about SSL clients by default.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45779,8 +45779,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If your VPN gateway was created before December 10, 2022, you must upgrade your VPN gateway to the latest version before you can view connection information about SSL clients. For more information, see <a href="https://help.aliyun.com/document_detail/2671058.html">Upgrade a VPN gateway</a>.
-        /// If your VPN gateway was created after December 10, 2022, you can view connection information about SSL clients by default.</para>
+        /// <para>If your VPN gateway was created before December 10, 2022, you need to upgrade the VPN gateway to the latest version to view the connection information about SSL clients. For more information, see <a href="https://help.aliyun.com/document_detail/2671058.html">Upgrade a VPN gateway</a>.
+        /// If your VPN gateway was created after December 10, 2022, you can view the connection information about SSL clients by default.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45803,8 +45803,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If your VPN gateway was created before December 10, 2022, you must upgrade your VPN gateway to the latest version before you can view connection information about SSL clients. For more information, see <a href="https://help.aliyun.com/document_detail/2671058.html">Upgrade a VPN gateway</a>.
-        /// If your VPN gateway was created after December 10, 2022, you can view connection information about SSL clients by default.</para>
+        /// <para>If your VPN gateway was created before December 10, 2022, you need to upgrade the VPN gateway to the latest version to view the connection information about SSL clients. For more information, see <a href="https://help.aliyun.com/document_detail/2671058.html">Upgrade a VPN gateway</a>.
+        /// If your VPN gateway was created after December 10, 2022, you can view the connection information about SSL clients by default.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -64188,7 +64188,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HAVIP within the specified period of time.</para>
+        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HAVIP within the specified periods of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -64262,7 +64262,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HAVIP within the specified period of time.</para>
+        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HAVIP within the specified periods of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -64336,7 +64336,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HAVIP within the specified period of time.</para>
+        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HAVIP within the specified periods of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -64354,7 +64354,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HAVIP within the specified period of time.</para>
+        /// <para>You cannot repeatedly call the <b>ModifyHaVipAttribute</b> operation to modify the name and description of an HAVIP within the specified periods of time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -68833,14 +68833,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you modify only the <b>name</b> of the SSL server, the operation is synchronous. If you also modify other configurations besides the <b>name</b>, the operation is asynchronous.</para>
+        /// <para>  To enable two-factor authentication for an SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</para>
         /// <list type="bullet">
-        /// <item><description>When <b>ModifySslVpnServer</b> is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the task.<list type="bullet">
-        /// <item><description>If a VPN gateway is in the <b>updating</b> state, the configurations of the SSL server are being modified.</description></item>
-        /// <item><description>If a VPN gateway is in the <b>active</b> state, the configurations of the SSL server are modified.</description></item>
+        /// <item><description>If you modify only <b>Name</b>, this operation is synchronous. If you modify other parameters besides <b>Name</b>, this operation is asynchronous.</description></item>
+        /// <item><description><b>ModifySslVpnServer</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.<list type="bullet">
+        /// <item><description>If the VPN gateway is in the <b>updating</b> state, the SSL server is being modified.</description></item>
+        /// <item><description>If the VPN gateway is in the <b>active</b> state, the SSL server is modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call <b>ModifySslVpnServer</b> to modify the configurations of an SSL server within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call <b>ModifySslVpnServer</b> within the specified period of time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -68956,14 +68957,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you modify only the <b>name</b> of the SSL server, the operation is synchronous. If you also modify other configurations besides the <b>name</b>, the operation is asynchronous.</para>
+        /// <para>  To enable two-factor authentication for an SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</para>
         /// <list type="bullet">
-        /// <item><description>When <b>ModifySslVpnServer</b> is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the task.<list type="bullet">
-        /// <item><description>If a VPN gateway is in the <b>updating</b> state, the configurations of the SSL server are being modified.</description></item>
-        /// <item><description>If a VPN gateway is in the <b>active</b> state, the configurations of the SSL server are modified.</description></item>
+        /// <item><description>If you modify only <b>Name</b>, this operation is synchronous. If you modify other parameters besides <b>Name</b>, this operation is asynchronous.</description></item>
+        /// <item><description><b>ModifySslVpnServer</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.<list type="bullet">
+        /// <item><description>If the VPN gateway is in the <b>updating</b> state, the SSL server is being modified.</description></item>
+        /// <item><description>If the VPN gateway is in the <b>active</b> state, the SSL server is modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call <b>ModifySslVpnServer</b> to modify the configurations of an SSL server within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call <b>ModifySslVpnServer</b> within the specified period of time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -69079,14 +69081,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you modify only the <b>name</b> of the SSL server, the operation is synchronous. If you also modify other configurations besides the <b>name</b>, the operation is asynchronous.</para>
+        /// <para>  To enable two-factor authentication for an SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</para>
         /// <list type="bullet">
-        /// <item><description>When <b>ModifySslVpnServer</b> is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the task.<list type="bullet">
-        /// <item><description>If a VPN gateway is in the <b>updating</b> state, the configurations of the SSL server are being modified.</description></item>
-        /// <item><description>If a VPN gateway is in the <b>active</b> state, the configurations of the SSL server are modified.</description></item>
+        /// <item><description>If you modify only <b>Name</b>, this operation is synchronous. If you modify other parameters besides <b>Name</b>, this operation is asynchronous.</description></item>
+        /// <item><description><b>ModifySslVpnServer</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.<list type="bullet">
+        /// <item><description>If the VPN gateway is in the <b>updating</b> state, the SSL server is being modified.</description></item>
+        /// <item><description>If the VPN gateway is in the <b>active</b> state, the SSL server is modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call <b>ModifySslVpnServer</b> to modify the configurations of an SSL server within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call <b>ModifySslVpnServer</b> within the specified period of time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -69110,14 +69113,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you modify only the <b>name</b> of the SSL server, the operation is synchronous. If you also modify other configurations besides the <b>name</b>, the operation is asynchronous.</para>
+        /// <para>  To enable two-factor authentication for an SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</para>
         /// <list type="bullet">
-        /// <item><description>When <b>ModifySslVpnServer</b> is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the task.<list type="bullet">
-        /// <item><description>If a VPN gateway is in the <b>updating</b> state, the configurations of the SSL server are being modified.</description></item>
-        /// <item><description>If a VPN gateway is in the <b>active</b> state, the configurations of the SSL server are modified.</description></item>
+        /// <item><description>If you modify only <b>Name</b>, this operation is synchronous. If you modify other parameters besides <b>Name</b>, this operation is asynchronous.</description></item>
+        /// <item><description><b>ModifySslVpnServer</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.<list type="bullet">
+        /// <item><description>If the VPN gateway is in the <b>updating</b> state, the SSL server is being modified.</description></item>
+        /// <item><description>If the VPN gateway is in the <b>active</b> state, the SSL server is modified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call <b>ModifySslVpnServer</b> to modify the configurations of an SSL server within the specified period of time.</description></item>
+        /// <item><description>You cannot repeatedly call <b>ModifySslVpnServer</b> within the specified period of time.</description></item>
         /// </list>
         /// </description>
         /// 

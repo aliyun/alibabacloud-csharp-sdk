@@ -74,6 +74,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableMultiFactorAuth { get; set; }
 
         /// <summary>
+        /// <para>The ID of the IDaaS application.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>app_my6g4qmvnwxzj2f****</para>
         /// </summary>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IDaaSApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IDaaS instance.</para>
+        /// <para>The ID of the IDaaS EIAM instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idaas-cn-hangzhou-****</para>
@@ -92,6 +94,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IDaaSInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The version of the IDaaS EIAM instance.</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter is returned only if the SSL server is associated with an IDaaS EIAM 2.0 instance. Only <b>EIAM 2.0</b> is returned.</description></item>
+        /// <item><description>If the SSL server is associated with an IDaaS EIAM 1.0 instance, no value is returned.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>EIAM 2.0</para>
         /// </summary>

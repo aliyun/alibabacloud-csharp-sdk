@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6Address> Ipv6Address { get; set; }
             public class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6Address : TeaModel {
+                /// <summary>
+                /// <para>The type of IPv6 address. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>IPv6Address (default): indicates a single IPv6 IP.</description></item>
+                /// <item><description>IPv6Prefix: indicates IPv6 CIDR.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>IPv6Address</para>
+                /// </summary>
                 [NameInMap("AddressType")]
                 [Validation(Required=false)]
                 public string AddressType { get; set; }
