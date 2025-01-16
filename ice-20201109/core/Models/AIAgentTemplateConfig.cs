@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string VoiceId { get; set; }
 
+            [NameInMap("VoiceIdList")]
+            [Validation(Required=false)]
+            public List<string> VoiceIdList { get; set; }
+
             [NameInMap("VoiceprintId")]
             [Validation(Required=false)]
             public string VoiceprintId { get; set; }
@@ -170,6 +174,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("VoiceId")]
             [Validation(Required=false)]
             public string VoiceId { get; set; }
+
+            [NameInMap("VoiceIdList")]
+            [Validation(Required=false)]
+            public List<string> VoiceIdList { get; set; }
 
             [NameInMap("VoiceprintId")]
             [Validation(Required=false)]
@@ -266,6 +274,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("VoiceId")]
             [Validation(Required=false)]
             public string VoiceId { get; set; }
+
+            [NameInMap("VoiceIdList")]
+            [Validation(Required=false)]
+            public List<string> VoiceIdList { get; set; }
 
             [NameInMap("VoiceprintId")]
             [Validation(Required=false)]
