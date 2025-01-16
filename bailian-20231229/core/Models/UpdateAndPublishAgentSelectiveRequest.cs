@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
                 [NameInMap("enableWebSearch")]
                 [Validation(Required=false)]
-                public string EnableWebSearch { get; set; }
+                public bool? EnableWebSearch { get; set; }
 
                 [NameInMap("fixedReplyDetail")]
                 [Validation(Required=false)]
