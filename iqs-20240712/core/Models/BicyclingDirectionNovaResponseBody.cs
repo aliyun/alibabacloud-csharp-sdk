@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20240712.Models
 {
     public class BicyclingDirectionNovaResponseBody : TeaModel {
+        [NameInMap("code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
         [NameInMap("data")]
         [Validation(Required=false)]
         public BicyclingDirectionNovaResponseBodyData Data { get; set; }
@@ -218,6 +222,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
         [NameInMap("errorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        [NameInMap("message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
 
         [NameInMap("requestId")]
         [Validation(Required=false)]
