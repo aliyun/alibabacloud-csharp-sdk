@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public GetLoginProfileResponseBodyLoginProfile LoginProfile { get; set; }
         public class GetLoginProfileResponseBodyLoginProfile : TeaModel {
+            [NameInMap("AutoDisableLoginStatus")]
+            [Validation(Required=false)]
+            public string AutoDisableLoginStatus { get; set; }
+
             /// <summary>
             /// <para>The time of the most recent logon. The time is displayed in UTC.</para>
             /// 

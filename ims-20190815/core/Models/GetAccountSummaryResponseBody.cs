@@ -96,6 +96,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public int? AttachedSystemPoliciesPerUserQuota { get; set; }
 
+            [NameInMap("ConditionsPerAKPolicyQuota")]
+            [Validation(Required=false)]
+            public int? ConditionsPerAKPolicyQuota { get; set; }
+
             /// <summary>
             /// <para>The number of RAM user groups.</para>
             /// 
@@ -125,6 +129,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [NameInMap("GroupsQuota")]
             [Validation(Required=false)]
             public int? GroupsQuota { get; set; }
+
+            [NameInMap("IPItemsPerAKPolicyQuota")]
+            [Validation(Required=false)]
+            public int? IPItemsPerAKPolicyQuota { get; set; }
 
             /// <summary>
             /// <para>The number of virtual multi-factor authentication (MFA) devices.</para>

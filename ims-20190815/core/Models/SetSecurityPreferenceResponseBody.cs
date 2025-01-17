@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [Validation(Required=false)]
                 public bool? AllowUserToChangePassword { get; set; }
 
+                [NameInMap("AllowUserToLoginWithPasskey")]
+                [Validation(Required=false)]
+                public bool? AllowUserToLoginWithPasskey { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether RAM users can remember the MFA devices for seven days.</para>
                 /// 
@@ -130,6 +134,20 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [NameInMap("AllowUserToManageMFADevices")]
                 [Validation(Required=false)]
                 public bool? AllowUserToManageMFADevices { get; set; }
+
+            }
+
+            [NameInMap("MaxIdleDays")]
+            [Validation(Required=false)]
+            public SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays MaxIdleDays { get; set; }
+            public class SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays : TeaModel {
+                [NameInMap("MaxIdleDaysForAccessKeys")]
+                [Validation(Required=false)]
+                public int? MaxIdleDaysForAccessKeys { get; set; }
+
+                [NameInMap("MaxIdleDaysForUsers")]
+                [Validation(Required=false)]
+                public int? MaxIdleDaysForUsers { get; set; }
 
             }
 

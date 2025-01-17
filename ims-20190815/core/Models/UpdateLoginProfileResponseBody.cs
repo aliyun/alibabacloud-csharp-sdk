@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public UpdateLoginProfileResponseBodyLoginProfile LoginProfile { get; set; }
         public class UpdateLoginProfileResponseBodyLoginProfile : TeaModel {
+            [NameInMap("AutoDisableLoginStatus")]
+            [Validation(Required=false)]
+            public string AutoDisableLoginStatus { get; set; }
+
             /// <summary>
             /// <para>Indicates whether MFA must be enabled.</para>
             /// 

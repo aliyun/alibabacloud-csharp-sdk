@@ -1,3 +1,12 @@
+2025-01-17 Version: 2.1.4
+- Update API GetAccountSummary: update response param.
+- Update API GetLoginProfile: update response param.
+- Update API GetSecurityPreference: update response param.
+- Update API SetSecurityPreference: add param AllowUserToLoginWithPasskey.
+- Update API SetSecurityPreference: update response param.
+- Update API UpdateLoginProfile: update response param.
+
+
 2024-12-10 Version: 2.1.3
 - Generated csharp 2019-08-15 for Ims.
 

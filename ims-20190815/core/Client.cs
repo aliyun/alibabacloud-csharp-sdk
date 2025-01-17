@@ -8182,6 +8182,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             {
                 query["AllowUserToChangePassword"] = request.AllowUserToChangePassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUserToLoginWithPasskey))
+            {
+                query["AllowUserToLoginWithPasskey"] = request.AllowUserToLoginWithPasskey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUserToManageAccessKeys))
             {
                 query["AllowUserToManageAccessKeys"] = request.AllowUserToManageAccessKeys;
@@ -8271,6 +8275,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUserToChangePassword))
             {
                 query["AllowUserToChangePassword"] = request.AllowUserToChangePassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUserToLoginWithPasskey))
+            {
+                query["AllowUserToLoginWithPasskey"] = request.AllowUserToLoginWithPasskey;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUserToManageAccessKeys))
             {
@@ -8375,6 +8383,11 @@ namespace AlibabaCloud.SDK.Ims20190815
             return await SetSecurityPreferenceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置用户SSO身份提供商信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetUserSsoSettingsRequest
         /// </param>
@@ -8424,6 +8437,11 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<SetUserSsoSettingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置用户SSO身份提供商信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetUserSsoSettingsRequest
         /// </param>
@@ -8473,6 +8491,11 @@ namespace AlibabaCloud.SDK.Ims20190815
             return TeaModel.ToObject<SetUserSsoSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置用户SSO身份提供商信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetUserSsoSettingsRequest
         /// </param>
@@ -8486,6 +8509,11 @@ namespace AlibabaCloud.SDK.Ims20190815
             return SetUserSsoSettingsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置用户SSO身份提供商信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetUserSsoSettingsRequest
         /// </param>

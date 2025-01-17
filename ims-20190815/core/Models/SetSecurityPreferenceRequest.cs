@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public bool? AllowUserToChangePassword { get; set; }
 
+        [NameInMap("AllowUserToLoginWithPasskey")]
+        [Validation(Required=false)]
+        public bool? AllowUserToLoginWithPasskey { get; set; }
+
         /// <summary>
         /// <para>Specifies whether RAM users can manage their AccessKey pairs. Valid values:</para>
         /// <list type="bullet">
