@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string Secret { get; set; }
 
         /// <summary>
-        /// <para>The signature verification mode. ORIGIN: compares the password and AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</para>
+        /// <para>The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string SignMode { get; set; }
 
         /// <summary>
-        /// <para>The username.</para>
+        /// <para>The username. The value cannot exceed 64 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

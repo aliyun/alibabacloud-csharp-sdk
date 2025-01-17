@@ -21,11 +21,6 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 
         /// <summary>
         /// <para>The identity type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>USER</description></item>
-        /// <item><description>CLIENT</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>

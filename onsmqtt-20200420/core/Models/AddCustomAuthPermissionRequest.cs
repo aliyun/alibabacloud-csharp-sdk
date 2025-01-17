@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class AddCustomAuthPermissionRequest : TeaModel {
         /// <summary>
-        /// <para>Specify whether to allow or deny the permissions.</para>
+        /// <para>Specifies whether to allow or deny access.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The permissions that you want to add.</para>
+        /// <para>The permissions that you want to grant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string PermitAction { get; set; }
 
         /// <summary>
-        /// <para>The topic on which you want to add the permissions. Multi-level topics and wildcard characters are supported.</para>
+        /// <para>The topics on which you want to grant permissions. Multi-level topics and wildcard characters are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

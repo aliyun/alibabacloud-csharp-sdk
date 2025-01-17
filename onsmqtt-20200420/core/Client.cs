@@ -42,15 +42,6 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// <para>Activate CA Certificate</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>仅铂金版和专业版实例支持使用ActiveCaCertificate接口。</description></item>
-        /// <item><description>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</description></item>
-        /// <item><description>ActiveCaCertificate接口仅支持对已在云消息队列 MQTT 版服务端注册的CA证书进行操作，您可以通过<a href="https://help.aliyun.com/document_detail/436768.html">ListCaCertificate</a>接口查询指定实例下已注册的CA证书。</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// ActiveCaCertificateRequest
         /// </param>
@@ -96,15 +87,6 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// <summary>
         /// <para>Activate CA Certificate</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>仅铂金版和专业版实例支持使用ActiveCaCertificate接口。</description></item>
-        /// <item><description>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</description></item>
-        /// <item><description>ActiveCaCertificate接口仅支持对已在云消息队列 MQTT 版服务端注册的CA证书进行操作，您可以通过<a href="https://help.aliyun.com/document_detail/436768.html">ListCaCertificate</a>接口查询指定实例下已注册的CA证书。</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ActiveCaCertificateRequest
@@ -152,15 +134,6 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// <para>Activate CA Certificate</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>仅铂金版和专业版实例支持使用ActiveCaCertificate接口。</description></item>
-        /// <item><description>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</description></item>
-        /// <item><description>ActiveCaCertificate接口仅支持对已在云消息队列 MQTT 版服务端注册的CA证书进行操作，您可以通过<a href="https://help.aliyun.com/document_detail/436768.html">ListCaCertificate</a>接口查询指定实例下已注册的CA证书。</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// ActiveCaCertificateRequest
         /// </param>
@@ -178,15 +151,6 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// <summary>
         /// <para>Activate CA Certificate</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>仅铂金版和专业版实例支持使用ActiveCaCertificate接口。</description></item>
-        /// <item><description>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</description></item>
-        /// <item><description>ActiveCaCertificate接口仅支持对已在云消息队列 MQTT 版服务端注册的CA证书进行操作，您可以通过<a href="https://help.aliyun.com/document_detail/436768.html">ListCaCertificate</a>接口查询指定实例下已注册的CA证书。</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ActiveCaCertificateRequest
@@ -659,7 +623,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds permissions on topics. You must create a level-1 topic in the ApsaraMQ for MQTT console before you call this operation.</para>
+        /// <para>Grants permissions on topics. You must create a parent topic in the console before you call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -721,7 +685,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds permissions on topics. You must create a level-1 topic in the ApsaraMQ for MQTT console before you call this operation.</para>
+        /// <para>Grants permissions on topics. You must create a parent topic in the console before you call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -783,7 +747,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds permissions on topics. You must create a level-1 topic in the ApsaraMQ for MQTT console before you call this operation.</para>
+        /// <para>Grants permissions on topics. You must create a parent topic in the console before you call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -801,7 +765,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds permissions on topics. You must create a level-1 topic in the ApsaraMQ for MQTT console before you call this operation.</para>
+        /// <para>Grants permissions on topics. You must create a parent topic in the console before you call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2358,14 +2322,6 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// <para>Queries the details of a certificate authority (CA) certificate, such as the content and status of the certificate. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>仅铂金版和专业版实例支持使用GetCaCertificate接口。</description></item>
-        /// <item><description>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// GetCaCertificateRequest
         /// </param>
@@ -2403,14 +2359,6 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// <summary>
         /// <para>Queries the details of a certificate authority (CA) certificate, such as the content and status of the certificate. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>仅铂金版和专业版实例支持使用GetCaCertificate接口。</description></item>
-        /// <item><description>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetCaCertificateRequest
@@ -2450,14 +2398,6 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// <para>Queries the details of a certificate authority (CA) certificate, such as the content and status of the certificate. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>仅铂金版和专业版实例支持使用GetCaCertificate接口。</description></item>
-        /// <item><description>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// GetCaCertificateRequest
         /// </param>
@@ -2475,14 +2415,6 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// <summary>
         /// <para>Queries the details of a certificate authority (CA) certificate, such as the content and status of the certificate. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>仅铂金版和专业版实例支持使用GetCaCertificate接口。</description></item>
-        /// <item><description>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetCaCertificateRequest
@@ -3983,6 +3915,150 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListGroupIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
+        public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTagResources",
+                Version = "2020-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
+        public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTagResources",
+                Version = "2020-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
+        public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTagResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
+        public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5623,14 +5699,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a certificate authority (CA) certificate with an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you use a device certificate to authenticate an ApsaraMQ for MQTT client, you must register the CA certificate for which you apply with the ApsaraMQ for MQTT broker.</para>
+        /// <para>RegisterCaCertificate</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>Only Platinum and Professional instances support using the RegisterCaCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</description></item>
-        /// </list>
+        /// <para>Registers a certificate authority (CA) certificate with an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you use a device certificate to authenticate an ApsaraMQ for MQTT client, you must register the CA certificate for which you apply with the ApsaraMQ for MQTT broker.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5684,14 +5758,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a certificate authority (CA) certificate with an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you use a device certificate to authenticate an ApsaraMQ for MQTT client, you must register the CA certificate for which you apply with the ApsaraMQ for MQTT broker.</para>
+        /// <para>RegisterCaCertificate</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>Only Platinum and Professional instances support using the RegisterCaCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</description></item>
-        /// </list>
+        /// <para>Registers a certificate authority (CA) certificate with an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you use a device certificate to authenticate an ApsaraMQ for MQTT client, you must register the CA certificate for which you apply with the ApsaraMQ for MQTT broker.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5745,14 +5817,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a certificate authority (CA) certificate with an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you use a device certificate to authenticate an ApsaraMQ for MQTT client, you must register the CA certificate for which you apply with the ApsaraMQ for MQTT broker.</para>
+        /// <para>RegisterCaCertificate</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>Only Platinum and Professional instances support using the RegisterCaCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</description></item>
-        /// </list>
+        /// <para>Registers a certificate authority (CA) certificate with an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you use a device certificate to authenticate an ApsaraMQ for MQTT client, you must register the CA certificate for which you apply with the ApsaraMQ for MQTT broker.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5770,14 +5840,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers a certificate authority (CA) certificate with an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you use a device certificate to authenticate an ApsaraMQ for MQTT client, you must register the CA certificate for which you apply with the ApsaraMQ for MQTT broker.</para>
+        /// <para>RegisterCaCertificate</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>Only Platinum and Professional instances support using the RegisterCaCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</description></item>
-        /// </list>
+        /// <para>Registers a certificate authority (CA) certificate with an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you use a device certificate to authenticate an ApsaraMQ for MQTT client, you must register the CA certificate for which you apply with the ApsaraMQ for MQTT broker.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6120,11 +6188,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The <b>SendMessage</b> operation is called by applications on cloud servers. It is complementary to the operation that is called by ApsaraMQ for MQTT clients to send messages. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see <a href="https://help.aliyun.com/document_detail/179160.html">Developer guide</a>.</para>
+        /// <para>  The <b>SendMessage</b> operation is called by an application on a cloud server. This operation is complementary to the operation that is called to send a message from an ApsaraMQ for MQTT client. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see <a href="https://help.aliyun.com/document_detail/179160.html">Developer guide</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call the <b>SendMessage</b> operation, make sure that the kernel version of your ApsaraMQ for MQTT instance is 3.3.0 or later. You can obtain the information about the kernel version on the <a href="https://mqtt.console.aliyun.com">Instance Details</a> page that corresponds to the instance in the <b>ApsaraMQ for MQTT console</b>.</description></item>
-        /// <item><description>Messages that are sent by calling the <b>SendMessage</b> operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT to forward messages to ApsaraMQ for RocketMQ, send the messages by using an SDK. For more information, see <a href="https://help.aliyun.com/document_detail/174527.html">Export data from ApsaraMQ for MQTT to other Alibaba Cloud services</a>. You can call the <b>SendMessage</b> operation up to 1,000 times per second. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
-        /// <item><description>Each successful call to the <b>SendMessage</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For information about the billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
+        /// <item><description>Messages that are sent by calling the <b>SendMessage</b> operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT broker to forward messages to ApsaraMQ for RocketMQ, use <a href="https://help.aliyun.com/document_detail/174527.html">an SDK to send the messages</a>. The <b>SendMessage</b> operation supports up to 1,000 queries per second (QPS). For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</description></item>
+        /// <item><description>Each successful call to the <b>SendMessage</b> operation is calculated as a message transaction per second (TPS). This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6180,11 +6247,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The <b>SendMessage</b> operation is called by applications on cloud servers. It is complementary to the operation that is called by ApsaraMQ for MQTT clients to send messages. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see <a href="https://help.aliyun.com/document_detail/179160.html">Developer guide</a>.</para>
+        /// <para>  The <b>SendMessage</b> operation is called by an application on a cloud server. This operation is complementary to the operation that is called to send a message from an ApsaraMQ for MQTT client. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see <a href="https://help.aliyun.com/document_detail/179160.html">Developer guide</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call the <b>SendMessage</b> operation, make sure that the kernel version of your ApsaraMQ for MQTT instance is 3.3.0 or later. You can obtain the information about the kernel version on the <a href="https://mqtt.console.aliyun.com">Instance Details</a> page that corresponds to the instance in the <b>ApsaraMQ for MQTT console</b>.</description></item>
-        /// <item><description>Messages that are sent by calling the <b>SendMessage</b> operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT to forward messages to ApsaraMQ for RocketMQ, send the messages by using an SDK. For more information, see <a href="https://help.aliyun.com/document_detail/174527.html">Export data from ApsaraMQ for MQTT to other Alibaba Cloud services</a>. You can call the <b>SendMessage</b> operation up to 1,000 times per second. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
-        /// <item><description>Each successful call to the <b>SendMessage</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For information about the billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
+        /// <item><description>Messages that are sent by calling the <b>SendMessage</b> operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT broker to forward messages to ApsaraMQ for RocketMQ, use <a href="https://help.aliyun.com/document_detail/174527.html">an SDK to send the messages</a>. The <b>SendMessage</b> operation supports up to 1,000 queries per second (QPS). For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</description></item>
+        /// <item><description>Each successful call to the <b>SendMessage</b> operation is calculated as a message transaction per second (TPS). This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6240,11 +6306,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The <b>SendMessage</b> operation is called by applications on cloud servers. It is complementary to the operation that is called by ApsaraMQ for MQTT clients to send messages. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see <a href="https://help.aliyun.com/document_detail/179160.html">Developer guide</a>.</para>
+        /// <para>  The <b>SendMessage</b> operation is called by an application on a cloud server. This operation is complementary to the operation that is called to send a message from an ApsaraMQ for MQTT client. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see <a href="https://help.aliyun.com/document_detail/179160.html">Developer guide</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call the <b>SendMessage</b> operation, make sure that the kernel version of your ApsaraMQ for MQTT instance is 3.3.0 or later. You can obtain the information about the kernel version on the <a href="https://mqtt.console.aliyun.com">Instance Details</a> page that corresponds to the instance in the <b>ApsaraMQ for MQTT console</b>.</description></item>
-        /// <item><description>Messages that are sent by calling the <b>SendMessage</b> operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT to forward messages to ApsaraMQ for RocketMQ, send the messages by using an SDK. For more information, see <a href="https://help.aliyun.com/document_detail/174527.html">Export data from ApsaraMQ for MQTT to other Alibaba Cloud services</a>. You can call the <b>SendMessage</b> operation up to 1,000 times per second. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
-        /// <item><description>Each successful call to the <b>SendMessage</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For information about the billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
+        /// <item><description>Messages that are sent by calling the <b>SendMessage</b> operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT broker to forward messages to ApsaraMQ for RocketMQ, use <a href="https://help.aliyun.com/document_detail/174527.html">an SDK to send the messages</a>. The <b>SendMessage</b> operation supports up to 1,000 queries per second (QPS). For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</description></item>
+        /// <item><description>Each successful call to the <b>SendMessage</b> operation is calculated as a message transaction per second (TPS). This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6268,11 +6333,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The <b>SendMessage</b> operation is called by applications on cloud servers. It is complementary to the operation that is called by ApsaraMQ for MQTT clients to send messages. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see <a href="https://help.aliyun.com/document_detail/179160.html">Developer guide</a>.</para>
+        /// <para>  The <b>SendMessage</b> operation is called by an application on a cloud server. This operation is complementary to the operation that is called to send a message from an ApsaraMQ for MQTT client. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see <a href="https://help.aliyun.com/document_detail/179160.html">Developer guide</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call the <b>SendMessage</b> operation, make sure that the kernel version of your ApsaraMQ for MQTT instance is 3.3.0 or later. You can obtain the information about the kernel version on the <a href="https://mqtt.console.aliyun.com">Instance Details</a> page that corresponds to the instance in the <b>ApsaraMQ for MQTT console</b>.</description></item>
-        /// <item><description>Messages that are sent by calling the <b>SendMessage</b> operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT to forward messages to ApsaraMQ for RocketMQ, send the messages by using an SDK. For more information, see <a href="https://help.aliyun.com/document_detail/174527.html">Export data from ApsaraMQ for MQTT to other Alibaba Cloud services</a>. You can call the <b>SendMessage</b> operation up to 1,000 times per second. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
-        /// <item><description>Each successful call to the <b>SendMessage</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For information about the billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
+        /// <item><description>Messages that are sent by calling the <b>SendMessage</b> operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT broker to forward messages to ApsaraMQ for RocketMQ, use <a href="https://help.aliyun.com/document_detail/174527.html">an SDK to send the messages</a>. The <b>SendMessage</b> operation supports up to 1,000 queries per second (QPS). For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</description></item>
+        /// <item><description>Each successful call to the <b>SendMessage</b> operation is calculated as a message transaction per second (TPS). This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6291,7 +6355,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置多域名证书</para>
+        /// <para>Configures a multi-domain certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6341,7 +6405,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置多域名证书</para>
+        /// <para>Configures a multi-domain certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6391,7 +6455,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置多域名证书</para>
+        /// <para>Configures a multi-domain certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6409,7 +6473,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置多域名证书</para>
+        /// <para>Configures a multi-domain certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6423,6 +6487,142 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetSniConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增tag</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
+        public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TagResources",
+                Version = "2020-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增tag</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
+        public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TagResources",
+                Version = "2020-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增tag</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
+        public TagResourcesResponse TagResources(TagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TagResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增tag</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
+        public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6583,6 +6783,150 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UnRegisterDeviceCredentialWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
+        public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
+            {
+                query["All"] = request.All;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKey))
+            {
+                query["TagKey"] = request.TagKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UntagResources",
+                Version = "2020-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
+        public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
+            {
+                query["All"] = request.All;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKey))
+            {
+                query["TagKey"] = request.TagKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UntagResources",
+                Version = "2020-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
+        public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UntagResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
+        public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class ActiveCaCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>CA证书所绑定的实例ID，即云消息队列 MQTT 版的实例ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +20,6 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string MqttInstanceId { get; set; }
 
         /// <summary>
-        /// <para>待激活CA证书的SN序列号，用于唯一标识一个CA证书。</para>
-        /// <para>取值范围：不超过128 Byte。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
