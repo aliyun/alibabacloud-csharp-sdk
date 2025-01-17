@@ -1,3 +1,6 @@
+2025-01-17 Version: 1.1.2
+- Generated csharp 2022-05-30 for eflo.
+
 2025-01-10 Version: 1.1.0
 - Support API AssignLeniPrivateIpAddress.
 - Support API AssignPrivateIpAddress.
