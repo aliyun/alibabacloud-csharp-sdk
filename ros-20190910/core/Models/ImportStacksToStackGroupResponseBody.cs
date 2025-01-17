@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ImportStacksToStackGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>Operation ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6da106ca-1784-4a6f-a7e1-e723863d****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string OperationId { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>14A07460-EBE7-47CA-9757-12CC4761D47A</para>
         /// </summary>

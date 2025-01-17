@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("DeploymentOptions")]
+        [Validation(Required=false)]
+        public List<string> DeploymentOptions { get; set; }
+
         /// <summary>
         /// <para>The folders in which ROS deploy stacks in service-managed permission model.</para>
         /// <remarks>

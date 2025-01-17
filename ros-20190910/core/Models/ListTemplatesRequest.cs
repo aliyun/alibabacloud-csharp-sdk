@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTemplatesRequest : TeaModel {
+        [NameInMap("Filters")]
+        [Validation(Required=false)]
+        public List<ListTemplatesRequestFilters> Filters { get; set; }
+        public class ListTemplatesRequestFilters : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Values")]
+            [Validation(Required=false)]
+            public List<string> Values { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Specifies whether to query the tag information. Valid values:</para>
         /// <list type="bullet">

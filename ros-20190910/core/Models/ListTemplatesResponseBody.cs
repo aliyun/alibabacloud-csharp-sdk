@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public List<ListTemplatesResponseBodyTemplates> Templates { get; set; }
         public class ListTemplatesResponseBodyTemplates : TeaModel {
+            [NameInMap("AdditionalInfo")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> AdditionalInfo { get; set; }
+
             /// <summary>
             /// <para>The time when the template was created.</para>
             /// 
@@ -160,6 +164,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
+
+            [NameInMap("TemplateUrl")]
+            [Validation(Required=false)]
+            public string TemplateUrl { get; set; }
 
             /// <summary>
             /// <para>The latest version of the template.</para>

@@ -121,6 +121,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public List<object> AllowedValues { get; set; }
 
+                [NameInMap("Behavior")]
+                [Validation(Required=false)]
+                public string Behavior { get; set; }
+
+                [NameInMap("BehaviorReason")]
+                [Validation(Required=false)]
+                public string BehaviorReason { get; set; }
+
                 /// <summary>
                 /// <para>The name of the resource property.</para>
                 /// 

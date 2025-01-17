@@ -1944,6 +1944,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentOptions))
+            {
+                query["DeploymentOptions"] = request.DeploymentOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentTargetsShrink))
             {
                 query["DeploymentTargets"] = request.DeploymentTargetsShrink;
@@ -2049,6 +2053,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentOptions))
+            {
+                query["DeploymentOptions"] = request.DeploymentOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentTargetsShrink))
             {
@@ -8677,6 +8685,11 @@ namespace AlibabaCloud.SDK.ROS20190910
             return await GetTemplateSummaryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Import stacks from multiple different accounts into a stack group.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ImportStacksToStackGroupRequest
         /// </param>
@@ -8752,6 +8765,11 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<ImportStacksToStackGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Import stacks from multiple different accounts into a stack group.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ImportStacksToStackGroupRequest
         /// </param>
@@ -8827,6 +8845,11 @@ namespace AlibabaCloud.SDK.ROS20190910
             return TeaModel.ToObject<ImportStacksToStackGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Import stacks from multiple different accounts into a stack group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportStacksToStackGroupRequest
         /// </param>
@@ -8840,6 +8863,11 @@ namespace AlibabaCloud.SDK.ROS20190910
             return ImportStacksToStackGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Import stacks from multiple different accounts into a stack group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportStacksToStackGroupRequest
         /// </param>
@@ -12376,6 +12404,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeTags))
             {
                 query["IncludeTags"] = request.IncludeTags;
@@ -12442,6 +12474,10 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeTags))
             {
                 query["IncludeTags"] = request.IncludeTags;
@@ -14808,6 +14844,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentOptions))
+            {
+                query["DeploymentOptions"] = request.DeploymentOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentTargetsShrink))
             {
                 query["DeploymentTargets"] = request.DeploymentTargetsShrink;
@@ -14951,6 +14991,10 @@ namespace AlibabaCloud.SDK.ROS20190910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentOptions))
+            {
+                query["DeploymentOptions"] = request.DeploymentOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentTargetsShrink))
             {

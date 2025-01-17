@@ -98,6 +98,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("DeploymentOptions")]
+        [Validation(Required=false)]
+        public List<string> DeploymentOptions { get; set; }
+
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 

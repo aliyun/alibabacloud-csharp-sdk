@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetTemplateResponseBody : TeaModel {
+        [NameInMap("AdditionalInfo")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> AdditionalInfo { get; set; }
+
         /// <summary>
         /// <para>The ID of the change set. This parameter is returned only if you specify ChangeSetId.</para>
         /// 
