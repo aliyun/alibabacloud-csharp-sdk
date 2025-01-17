@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
                     }
 
+                    [NameInMap("dialogSop")]
+                    [Validation(Required=false)]
+                    public string DialogSop { get; set; }
+
                     [NameInMap("dialogSummary")]
                     [Validation(Required=false)]
                     public string DialogSummary { get; set; }
