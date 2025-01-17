@@ -413,6 +413,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Uuid { get; set; }
 
+            [NameInMap("VendorAuthAlias")]
+            [Validation(Required=false)]
+            public string VendorAuthAlias { get; set; }
+
             /// <summary>
             /// <para>The ID of the virtual private cloud (VPC) in which the server resides.</para>
             /// 

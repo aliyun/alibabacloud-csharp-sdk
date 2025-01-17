@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SubAccountName { get; set; }
 
+        [NameInMap("VendorAuthAlias")]
+        [Validation(Required=false)]
+        public string VendorAuthAlias { get; set; }
+
     }
 
 }

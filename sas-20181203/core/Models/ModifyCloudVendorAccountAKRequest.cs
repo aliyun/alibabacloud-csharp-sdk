@@ -143,6 +143,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
+        [NameInMap("VendorAuthAlias")]
+        [Validation(Required=false)]
+        public string VendorAuthAlias { get; set; }
+
     }
 
 }

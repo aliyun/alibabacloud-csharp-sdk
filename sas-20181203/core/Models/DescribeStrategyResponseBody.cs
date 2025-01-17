@@ -183,6 +183,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? PassRate { get; set; }
 
+            /// <summary>
+            /// <para>The progress of the baseline check by using the baseline. This parameter is returned only if the value of the ExecStatus parameter is 2.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50%</para>
+            /// </summary>
             [NameInMap("Percent")]
             [Validation(Required=false)]
             public string Percent { get; set; }
@@ -231,6 +237,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Type { get; set; }
 
+            /// <summary>
+            /// <para>The time when the baseline check policy was last modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025-01-07 10:46:43</para>
+            /// </summary>
             [NameInMap("UserModifyTime")]
             [Validation(Required=false)]
             public long? UserModifyTime { get; set; }
