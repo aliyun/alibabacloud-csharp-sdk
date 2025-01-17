@@ -1,3 +1,7 @@
+2025-01-17 Version: 2.4.0
+- Support API RunNetworkContentAudit.
+
+
 2025-01-15 Version: 2.3.0
 - Support API RunScriptChat.
 - Support API RunScriptRefine.
