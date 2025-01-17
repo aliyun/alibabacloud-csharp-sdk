@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
+        [NameInMap("AppPolicyId")]
+        [Validation(Required=false)]
+        public string AppPolicyId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>false</para>

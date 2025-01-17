@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
-    public class RenewSessionPackageResponse : TeaModel {
+    public class ListBindInfoResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public RenewSessionPackageResponseBody Body { get; set; }
+        public ListBindInfoResponseBody Body { get; set; }
 
     }
 

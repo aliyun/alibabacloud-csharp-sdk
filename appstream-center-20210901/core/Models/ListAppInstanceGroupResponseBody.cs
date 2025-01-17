@@ -59,6 +59,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string AppPolicyId { get; set; }
 
+            [NameInMap("AppPolicyImageCheck")]
+            [Validation(Required=false)]
+            public bool? AppPolicyImageCheck { get; set; }
+
+            [NameInMap("AppPolicyVersion")]
+            [Validation(Required=false)]
+            public string AppPolicyVersion { get; set; }
+
             [NameInMap("Apps")]
             [Validation(Required=false)]
             public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> Apps { get; set; }

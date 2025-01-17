@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string NodePoolShrink { get; set; }
 
+        [NameInMap("PerSessionPerApp")]
+        [Validation(Required=false)]
+        public bool? PerSessionPerApp { get; set; }
+
         [NameInMap("PreOpenAppId")]
         [Validation(Required=false)]
         public string PreOpenAppId { get; set; }

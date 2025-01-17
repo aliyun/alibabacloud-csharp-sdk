@@ -462,6 +462,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string SessionTimeout { get; set; }
 
+            [NameInMap("SessionType")]
+            [Validation(Required=false)]
+            public string SessionType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>false</para>

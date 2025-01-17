@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         }
 
+        [NameInMap("PerSessionPerApp")]
+        [Validation(Required=false)]
+        public bool? PerSessionPerApp { get; set; }
+
         [NameInMap("PreOpenAppId")]
         [Validation(Required=false)]
         public string PreOpenAppId { get; set; }
@@ -120,6 +124,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("StorageTypeList")]
             [Validation(Required=false)]
             public List<string> StorageTypeList { get; set; }
+
+            [NameInMap("UserProfileFollow")]
+            [Validation(Required=false)]
+            public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow UserProfileFollow { get; set; }
+            public class ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfileFollow : TeaModel {
+                [NameInMap("FileSystemId")]
+                [Validation(Required=false)]
+                public string FileSystemId { get; set; }
+
+                [NameInMap("ProfileFollowSwitch")]
+                [Validation(Required=false)]
+                public bool? ProfileFollowSwitch { get; set; }
+
+            }
 
         }
 
