@@ -1,3 +1,8 @@
+2025-01-19 Version: 2.12.0
+- Support API DescribePhoneNumberOperatorAttributeAnnual.
+- Support API DescribePhoneNumberOperatorAttributeAnnualUse.
+
+
 2024-11-05 Version: 2.11.0
 - Support API DescribePhoneNumberAnalysisPai.
 - Update API CertNoThreeElementVerification: update param CertName.

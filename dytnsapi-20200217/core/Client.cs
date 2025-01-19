@@ -2090,7 +2090,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         /// <returns>
         /// DescribePhoneNumberAttributeResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribePhoneNumberAttribute is deprecated, please use Dytnsapi::2020-02-17::DescribePhoneNumberOperatorAttribute instead.\n")]
+        [Obsolete("OpenAPI DescribePhoneNumberAttribute is deprecated, please use Dytnsapi::2020-02-17::DescribePhoneNumberOperatorAttribute instead.")]
         // Deprecated
         public DescribePhoneNumberAttributeResponse DescribePhoneNumberAttributeWithOptions(DescribePhoneNumberAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2160,7 +2160,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         /// <returns>
         /// DescribePhoneNumberAttributeResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribePhoneNumberAttribute is deprecated, please use Dytnsapi::2020-02-17::DescribePhoneNumberOperatorAttribute instead.\n")]
+        [Obsolete("OpenAPI DescribePhoneNumberAttribute is deprecated, please use Dytnsapi::2020-02-17::DescribePhoneNumberOperatorAttribute instead.")]
         // Deprecated
         public async Task<DescribePhoneNumberAttributeResponse> DescribePhoneNumberAttributeWithOptionsAsync(DescribePhoneNumberAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -2227,7 +2227,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         /// <returns>
         /// DescribePhoneNumberAttributeResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribePhoneNumberAttribute is deprecated, please use Dytnsapi::2020-02-17::DescribePhoneNumberOperatorAttribute instead.\n")]
+        [Obsolete("OpenAPI DescribePhoneNumberAttribute is deprecated, please use Dytnsapi::2020-02-17::DescribePhoneNumberOperatorAttribute instead.")]
         // Deprecated
         public DescribePhoneNumberAttributeResponse DescribePhoneNumberAttribute(DescribePhoneNumberAttributeRequest request)
         {
@@ -2261,7 +2261,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         /// <returns>
         /// DescribePhoneNumberAttributeResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribePhoneNumberAttribute is deprecated, please use Dytnsapi::2020-02-17::DescribePhoneNumberOperatorAttribute instead.\n")]
+        [Obsolete("OpenAPI DescribePhoneNumberAttribute is deprecated, please use Dytnsapi::2020-02-17::DescribePhoneNumberOperatorAttribute instead.")]
         // Deprecated
         public async Task<DescribePhoneNumberAttributeResponse> DescribePhoneNumberAttributeAsync(DescribePhoneNumberAttributeRequest request)
         {
@@ -2691,6 +2691,278 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePhoneNumberOperatorAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>号码归属服务(包年包月客户专用)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePhoneNumberOperatorAttributeAnnualRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePhoneNumberOperatorAttributeAnnualResponse
+        /// </returns>
+        public DescribePhoneNumberOperatorAttributeAnnualResponse DescribePhoneNumberOperatorAttributeAnnualWithOptions(DescribePhoneNumberOperatorAttributeAnnualRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
+            {
+                query["Number"] = request.Number;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePhoneNumberOperatorAttributeAnnual",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePhoneNumberOperatorAttributeAnnualResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>号码归属服务(包年包月客户专用)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePhoneNumberOperatorAttributeAnnualRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePhoneNumberOperatorAttributeAnnualResponse
+        /// </returns>
+        public async Task<DescribePhoneNumberOperatorAttributeAnnualResponse> DescribePhoneNumberOperatorAttributeAnnualWithOptionsAsync(DescribePhoneNumberOperatorAttributeAnnualRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
+            {
+                query["Number"] = request.Number;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePhoneNumberOperatorAttributeAnnual",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePhoneNumberOperatorAttributeAnnualResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>号码归属服务(包年包月客户专用)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePhoneNumberOperatorAttributeAnnualRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePhoneNumberOperatorAttributeAnnualResponse
+        /// </returns>
+        public DescribePhoneNumberOperatorAttributeAnnualResponse DescribePhoneNumberOperatorAttributeAnnual(DescribePhoneNumberOperatorAttributeAnnualRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePhoneNumberOperatorAttributeAnnualWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>号码归属服务(包年包月客户专用)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePhoneNumberOperatorAttributeAnnualRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePhoneNumberOperatorAttributeAnnualResponse
+        /// </returns>
+        public async Task<DescribePhoneNumberOperatorAttributeAnnualResponse> DescribePhoneNumberOperatorAttributeAnnualAsync(DescribePhoneNumberOperatorAttributeAnnualRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePhoneNumberOperatorAttributeAnnualWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>号码归属服务(包年包月客户专用)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePhoneNumberOperatorAttributeAnnualUseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePhoneNumberOperatorAttributeAnnualUseResponse
+        /// </returns>
+        public DescribePhoneNumberOperatorAttributeAnnualUseResponse DescribePhoneNumberOperatorAttributeAnnualUseWithOptions(DescribePhoneNumberOperatorAttributeAnnualUseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
+            {
+                query["InputNumber"] = request.InputNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePhoneNumberOperatorAttributeAnnualUse",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePhoneNumberOperatorAttributeAnnualUseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>号码归属服务(包年包月客户专用)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePhoneNumberOperatorAttributeAnnualUseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePhoneNumberOperatorAttributeAnnualUseResponse
+        /// </returns>
+        public async Task<DescribePhoneNumberOperatorAttributeAnnualUseResponse> DescribePhoneNumberOperatorAttributeAnnualUseWithOptionsAsync(DescribePhoneNumberOperatorAttributeAnnualUseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
+            {
+                query["InputNumber"] = request.InputNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePhoneNumberOperatorAttributeAnnualUse",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePhoneNumberOperatorAttributeAnnualUseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>号码归属服务(包年包月客户专用)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePhoneNumberOperatorAttributeAnnualUseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePhoneNumberOperatorAttributeAnnualUseResponse
+        /// </returns>
+        public DescribePhoneNumberOperatorAttributeAnnualUseResponse DescribePhoneNumberOperatorAttributeAnnualUse(DescribePhoneNumberOperatorAttributeAnnualUseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePhoneNumberOperatorAttributeAnnualUseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>号码归属服务(包年包月客户专用)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePhoneNumberOperatorAttributeAnnualUseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePhoneNumberOperatorAttributeAnnualUseResponse
+        /// </returns>
+        public async Task<DescribePhoneNumberOperatorAttributeAnnualUseResponse> DescribePhoneNumberOperatorAttributeAnnualUseAsync(DescribePhoneNumberOperatorAttributeAnnualUseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePhoneNumberOperatorAttributeAnnualUseWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
