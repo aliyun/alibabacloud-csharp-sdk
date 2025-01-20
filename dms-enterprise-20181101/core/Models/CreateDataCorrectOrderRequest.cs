@@ -75,7 +75,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 /// <item><description>To obtain the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</description></item>
                 /// <item><description>To obtain the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</description></item>
                 /// </list>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1860****</para>
@@ -84,13 +83,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public long? DbId { get; set; }
 
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
+                public long? InstanceId { get; set; }
+
                 /// <summary>
                 /// <para>Specifies whether the database is a logical database. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>true</b>: The database is a logical database.</description></item>
                 /// <item><description><b>false</b>: The database is a physical database.</description></item>
                 /// </list>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>

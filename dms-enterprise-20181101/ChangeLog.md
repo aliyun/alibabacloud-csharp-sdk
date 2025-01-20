@@ -1,3 +1,7 @@
+2025-01-20 Version: 1.66.2
+- Update API CreateDataCorrectOrder: update param Param.
+
+
 2025-01-16 Version: 1.66.1
 - Update API CreateFreeLockCorrectOrder: add param RealLoginUserUid.
 - Update API ModifyDataCorrectExecSQL: add param RealLoginUserUid.
