@@ -3669,6 +3669,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["CallbackUrl"] = request.CallbackUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CameraSelection))
+            {
+                query["CameraSelection"] = request.CameraSelection;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
             {
                 query["CertName"] = request.CertName;
@@ -3847,6 +3851,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
             {
                 query["CallbackUrl"] = request.CallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CameraSelection))
+            {
+                query["CameraSelection"] = request.CameraSelection;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
             {

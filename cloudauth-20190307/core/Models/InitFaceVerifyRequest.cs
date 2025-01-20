@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string CallbackUrl { get; set; }
 
+        [NameInMap("CameraSelection")]
+        [Validation(Required=false)]
+        public string CameraSelection { get; set; }
+
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }
