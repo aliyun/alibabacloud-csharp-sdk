@@ -1,3 +1,8 @@
+2025-01-20 Version: 2.4.10
+- Update API EvaluatePreConfigRules: add param ResourceTypeFormat.
+- Update API EvaluatePreConfigRules: update param EnableManagedRules.
+
+
 2025-01-15 Version: 2.4.9
 - Update API CreateConfigRule: add param Tag.
 - Update API GetAggregateConfigRule: add param Tag.

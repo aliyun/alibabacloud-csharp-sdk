@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         }
 
+        [NameInMap("ResourceTypeFormat")]
+        [Validation(Required=false)]
+        public string ResourceTypeFormat { get; set; }
+
     }
 
 }

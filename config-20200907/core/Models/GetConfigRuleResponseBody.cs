@@ -717,14 +717,29 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string TagValueScope { get; set; }
 
+            /// <summary>
+            /// <para>The tag list.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<GetConfigRuleResponseBodyConfigRuleTags> Tags { get; set; }
             public class GetConfigRuleResponseBodyConfigRuleTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key. The tag key can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key-1</para>
+                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value-1</para>
+                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

@@ -6047,6 +6047,10 @@ namespace AlibabaCloud.SDK.Config20200907
             {
                 body["ResourceEvaluateItems"] = request.ResourceEvaluateItemsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypeFormat))
+            {
+                body["ResourceTypeFormat"] = request.ResourceTypeFormat;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -6098,6 +6102,10 @@ namespace AlibabaCloud.SDK.Config20200907
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceEvaluateItemsShrink))
             {
                 body["ResourceEvaluateItems"] = request.ResourceEvaluateItemsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypeFormat))
+            {
+                body["ResourceTypeFormat"] = request.ResourceTypeFormat;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

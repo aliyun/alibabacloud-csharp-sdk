@@ -254,6 +254,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string SourceOwner { get; set; }
 
+        /// <summary>
+        /// <para>rule attached tags</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string TagShrink { get; set; }

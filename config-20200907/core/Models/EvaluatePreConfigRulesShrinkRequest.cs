@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ResourceEvaluateItemsShrink { get; set; }
 
+        [NameInMap("ResourceTypeFormat")]
+        [Validation(Required=false)]
+        public string ResourceTypeFormat { get; set; }
+
     }
 
 }
