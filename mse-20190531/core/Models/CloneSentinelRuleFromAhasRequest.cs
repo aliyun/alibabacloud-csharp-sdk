@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? IsAHASPublicRegion { get; set; }
 
+        [NameInMap("MseAppName")]
+        [Validation(Required=false)]
+        public string MseAppName { get; set; }
+
         /// <summary>
         /// <para>The namespace.</para>
         /// <para>This parameter is required.</para>
