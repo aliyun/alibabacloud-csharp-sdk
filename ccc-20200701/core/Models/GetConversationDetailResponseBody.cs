@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public int? End { get; set; }
 
+            [NameInMap("Finished")]
+            [Validation(Required=false)]
+            public bool? Finished { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>agent@ccc-test</para>
