@@ -11266,7 +11266,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query serverless configuration.</para>
+        /// <para>Queries the serverless configurations of a serverless cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11324,7 +11324,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query serverless configuration.</para>
+        /// <para>Queries the serverless configurations of a serverless cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11382,7 +11382,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query serverless configuration.</para>
+        /// <para>Queries the serverless configurations of a serverless cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11400,7 +11400,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query serverless configuration.</para>
+        /// <para>Queries the serverless configurations of a serverless cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20403,6 +20403,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ImciAutoIndex"] = request.ImciAutoIndex;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyRowCompression))
+            {
+                query["ModifyRowCompression"] = request.ModifyRowCompression;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -20430,6 +20434,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageUpperBound))
             {
                 query["StorageUpperBound"] = request.StorageUpperBound;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMeta))
+            {
+                query["TableMeta"] = request.TableMeta;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -20497,6 +20505,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ImciAutoIndex"] = request.ImciAutoIndex;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyRowCompression))
+            {
+                query["ModifyRowCompression"] = request.ModifyRowCompression;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -20524,6 +20536,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageUpperBound))
             {
                 query["StorageUpperBound"] = request.StorageUpperBound;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMeta))
+            {
+                query["TableMeta"] = request.TableMeta;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -22958,7 +22974,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables Secure Sockets Layer (SSL) encryption or updates the Certificate Authorities (CA) certificate for a specified PolarDB cluster.</para>
+        /// <para>Enables or disables the SSL encryption feature for a PolarDB cluster, or updates the CA certificate of the cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23032,7 +23048,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables Secure Sockets Layer (SSL) encryption or updates the Certificate Authorities (CA) certificate for a specified PolarDB cluster.</para>
+        /// <para>Enables or disables the SSL encryption feature for a PolarDB cluster, or updates the CA certificate of the cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23106,7 +23122,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables Secure Sockets Layer (SSL) encryption or updates the Certificate Authorities (CA) certificate for a specified PolarDB cluster.</para>
+        /// <para>Enables or disables the SSL encryption feature for a PolarDB cluster, or updates the CA certificate of the cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23124,7 +23140,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables Secure Sockets Layer (SSL) encryption or updates the Certificate Authorities (CA) certificate for a specified PolarDB cluster.</para>
+        /// <para>Enables or disables the SSL encryption feature for a PolarDB cluster, or updates the CA certificate of the cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23418,6 +23434,174 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBClusterServerlessConfWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改存储性能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBClusterStoragePerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBClusterStoragePerformanceResponse
+        /// </returns>
+        public ModifyDBClusterStoragePerformanceResponse ModifyDBClusterStoragePerformanceWithOptions(ModifyDBClusterStoragePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
+            {
+                query["BurstingEnabled"] = request.BurstingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
+            {
+                query["ModifyType"] = request.ModifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvisionedIops))
+            {
+                query["ProvisionedIops"] = request.ProvisionedIops;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBClusterStoragePerformance",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBClusterStoragePerformanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改存储性能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBClusterStoragePerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBClusterStoragePerformanceResponse
+        /// </returns>
+        public async Task<ModifyDBClusterStoragePerformanceResponse> ModifyDBClusterStoragePerformanceWithOptionsAsync(ModifyDBClusterStoragePerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BurstingEnabled))
+            {
+                query["BurstingEnabled"] = request.BurstingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
+            {
+                query["ModifyType"] = request.ModifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvisionedIops))
+            {
+                query["ProvisionedIops"] = request.ProvisionedIops;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBClusterStoragePerformance",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDBClusterStoragePerformanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改存储性能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBClusterStoragePerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBClusterStoragePerformanceResponse
+        /// </returns>
+        public ModifyDBClusterStoragePerformanceResponse ModifyDBClusterStoragePerformance(ModifyDBClusterStoragePerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDBClusterStoragePerformanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改存储性能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBClusterStoragePerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBClusterStoragePerformanceResponse
+        /// </returns>
+        public async Task<ModifyDBClusterStoragePerformanceResponse> ModifyDBClusterStoragePerformanceAsync(ModifyDBClusterStoragePerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDBClusterStoragePerformanceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

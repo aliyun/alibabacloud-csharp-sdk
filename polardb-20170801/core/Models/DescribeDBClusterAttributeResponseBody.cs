@@ -620,6 +620,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ImciAutoIndex { get; set; }
 
+        [NameInMap("ImperceptibleSwitch")]
+        [Validation(Required=false)]
+        public string ImperceptibleSwitch { get; set; }
+
         /// <summary>
         /// <para>Maximum number of inodes in the file system.</para>
         /// 
@@ -856,6 +860,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("RestoreType")]
         [Validation(Required=false)]
         public string RestoreType { get; set; }
+
+        [NameInMap("RowCompression")]
+        [Validation(Required=false)]
+        public string RowCompression { get; set; }
 
         /// <summary>
         /// <para>Storage amount of SQL, in bytes. If the value is -1, it indicates no data.</para>

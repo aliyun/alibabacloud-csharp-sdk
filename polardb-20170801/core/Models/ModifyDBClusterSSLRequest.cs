@@ -25,11 +25,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is required for a PolarDB for MySQL cluster.</para>
+        /// <item><description><para>This parameter is required for PolarDB for MySQL clusters.</para>
         /// </description></item>
-        /// <item><description><para>This parameter is not required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. By default, SSL encryption is enabled for all endpoints.</para>
+        /// <item><description><para>This parameter is not required for PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle) clusters. By default, SSL encryption is enabled for all endpoints of the clusters.</para>
         /// </description></item>
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/153414.html">DescribeDBClusterSSL</a> operation to view the details of the endpoint.</para>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/2319159.html">DescribeDBClusterSSL</a> operation to view the details of the endpoint.</para>
         /// </description></item>
         /// </list>
         /// 

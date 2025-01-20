@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>Indicates whether backups are retained when you delete a cluster. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ALL</b>: permanently retains all backups.</description></item>
-        /// <item><description><b>LATEST</b>: permanently retains only the last backup.</description></item>
+        /// <item><description><b>LATEST</b>: permanently retains the most recent backup.</description></item>
         /// <item><description><b>NONE</b>: does not retain backups.</description></item>
         /// </list>
         /// 
@@ -135,10 +135,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <list type="bullet">
         /// <item><description><b>0</b>: The cross-region level-2 backup feature is disabled.</description></item>
         /// <item><description><b>30 to 7300</b>: Cross-region level-2 backups are retained for 30 to 7,300 days.</description></item>
-        /// <item><description><b>1</b>: Cross-region level-2 backups are permanently retained.</description></item>
+        /// <item><description><b>1</b>: Cross-region level-2 backups are retained for a long period of time.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is <b>0</b>. By default, the level-2 backup feature is disabled when you create a cluster.</para>
+        /// <para> The default value of the parameter is <b>0</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -179,10 +179,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <list type="bullet">
         /// <item><description>0: The level-2 backup feature is disabled.</description></item>
         /// <item><description>30 to 7300: Level-2 backups are retained for 30 to 7,300 days.</description></item>
-        /// <item><description>\-1: Level-2 backups are permanently retained.</description></item>
+        /// <item><description>\-1: Level-2 backups are retained for a long period of time.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is <b>0</b>. By default, the level-2 backup feature is disabled when you create a cluster.</para>
+        /// <para> The default value of this parameter is <b>0</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

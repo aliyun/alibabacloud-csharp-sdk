@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Maximum limit for the number of read-only column storage nodes. Range: 0~7.</para>
+        /// <para>The maximum number of read-only column store nodes. Valid values: 0 to 15.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleApRoNumMax { get; set; }
 
         /// <summary>
-        /// <para>Minimum limit for the number of read-only column storage nodes. Range: 0~7.</para>
+        /// <para>The minimum number of read-only column store nodes. Valid values: 0 to 15.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

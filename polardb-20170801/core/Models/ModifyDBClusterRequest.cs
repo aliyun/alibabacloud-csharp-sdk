@@ -117,6 +117,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ImciAutoIndex { get; set; }
 
+        [NameInMap("ModifyRowCompression")]
+        [Validation(Required=false)]
+        public string ModifyRowCompression { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -173,6 +177,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("StorageUpperBound")]
         [Validation(Required=false)]
         public long? StorageUpperBound { get; set; }
+
+        [NameInMap("TableMeta")]
+        [Validation(Required=false)]
+        public string TableMeta { get; set; }
 
     }
 
