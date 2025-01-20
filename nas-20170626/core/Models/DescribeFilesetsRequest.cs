@@ -92,6 +92,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("OrderByField")]
+        [Validation(Required=false)]
+        public string OrderByField { get; set; }
+
+        [NameInMap("SortOrder")]
+        [Validation(Required=false)]
+        public string SortOrder { get; set; }
+
     }
 
 }

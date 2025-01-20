@@ -50,6 +50,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public List<DescribeSnapshotsResponseBodySnapshotsSnapshot> Snapshot { get; set; }
             public class DescribeSnapshotsResponseBodySnapshotsSnapshot : TeaModel {
+                /// <summary>
+                /// <para>The time when snapshot creation was complete.</para>
+                /// <para>The time follows the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> standard in UTC. The time is displayed in the <c>yyyy-MM-ddThh:mmZ</c> format.</para>
+                /// <remarks>
+                /// <para> This parameter is valid only when the snapshot is created. During snapshot creation, the value of this parameter is the same as that of CreateTime.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2014-07-24T13:10:52Z</para>
+                /// </summary>
                 [NameInMap("CompletedTime")]
                 [Validation(Required=false)]
                 public string CompletedTime { get; set; }
