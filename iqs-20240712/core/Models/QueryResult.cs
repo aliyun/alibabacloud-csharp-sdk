@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
             [Validation(Required=false)]
             public string CityName { get; set; }
 
+            [NameInMap("distanceMeter")]
+            [Validation(Required=false)]
+            public string DistanceMeter { get; set; }
+
             [NameInMap("districtCode")]
             [Validation(Required=false)]
             public string DistrictCode { get; set; }
@@ -63,6 +67,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
             [Validation(Required=false)]
             public QueryResultDataMetadata Metadata { get; set; }
             public class QueryResultDataMetadata : TeaModel {
+                [NameInMap("averageSpend")]
+                [Validation(Required=false)]
+                public string AverageSpend { get; set; }
+
                 [NameInMap("businessArea")]
                 [Validation(Required=false)]
                 public string BusinessArea { get; set; }
@@ -110,6 +118,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
             public string Types { get; set; }
 
         }
+
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
     }
 
