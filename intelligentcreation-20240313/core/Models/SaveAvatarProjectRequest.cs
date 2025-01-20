@@ -161,6 +161,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string ResSpecType { get; set; }
 
+        [NameInMap("resolution")]
+        [Validation(Required=false)]
+        public string Resolution { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>9:16</para>

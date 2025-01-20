@@ -185,6 +185,152 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量发布剧本任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchCreateAICoachTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateAICoachTaskResponse
+        /// </returns>
+        public BatchCreateAICoachTaskResponse BatchCreateAICoachTaskWithOptions(BatchCreateAICoachTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptRecordId))
+            {
+                body["scriptRecordId"] = request.ScriptRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StudentIds))
+            {
+                body["studentIds"] = request.StudentIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCreateAICoachTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/batchCreateTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCreateAICoachTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量发布剧本任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchCreateAICoachTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateAICoachTaskResponse
+        /// </returns>
+        public async Task<BatchCreateAICoachTaskResponse> BatchCreateAICoachTaskWithOptionsAsync(BatchCreateAICoachTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptRecordId))
+            {
+                body["scriptRecordId"] = request.ScriptRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StudentIds))
+            {
+                body["studentIds"] = request.StudentIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCreateAICoachTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/batchCreateTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCreateAICoachTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量发布剧本任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchCreateAICoachTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateAICoachTaskResponse
+        /// </returns>
+        public BatchCreateAICoachTaskResponse BatchCreateAICoachTask(BatchCreateAICoachTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchCreateAICoachTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量发布剧本任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchCreateAICoachTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateAICoachTaskResponse
+        /// </returns>
+        public async Task<BatchCreateAICoachTaskResponse> BatchCreateAICoachTaskAsync(BatchCreateAICoachTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchCreateAICoachTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>批量查询项目信息</para>
         /// </summary>
         /// 
@@ -3789,6 +3935,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -3800,6 +3950,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3843,6 +3997,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -3854,6 +4012,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5739,6 +5901,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             {
                 body["resSpecType"] = request.ResSpecType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
+            {
+                body["resolution"] = request.Resolution;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleType))
             {
                 body["scaleType"] = request.ScaleType;
@@ -5808,6 +5974,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResSpecType))
             {
                 body["resSpecType"] = request.ResSpecType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
+            {
+                body["resolution"] = request.Resolution;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleType))
             {
@@ -6441,9 +6611,17 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelToken))
+            {
+                body["channelToken"] = request.ChannelToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPushUrl))
             {
                 body["customPushUrl"] = request.CustomPushUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomUserId))
+            {
+                body["customUserId"] = request.CustomUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
@@ -6495,9 +6673,17 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelToken))
+            {
+                body["channelToken"] = request.ChannelToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPushUrl))
             {
                 body["customPushUrl"] = request.CustomPushUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomUserId))
+            {
+                body["customUserId"] = request.CustomUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {

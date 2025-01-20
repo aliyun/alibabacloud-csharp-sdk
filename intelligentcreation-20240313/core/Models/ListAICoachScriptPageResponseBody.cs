@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public List<ListAICoachScriptPageResponseBodyList> List { get; set; }
         public class ListAICoachScriptPageResponseBodyList : TeaModel {
+            [NameInMap("appendQuestionFlag")]
+            [Validation(Required=false)]
+            public string AppendQuestionFlag { get; set; }
+
+            [NameInMap("assessmentScope")]
+            [Validation(Required=false)]
+            public string AssessmentScope { get; set; }
+
             [NameInMap("completeStrategy")]
             [Validation(Required=false)]
             public ListAICoachScriptPageResponseBodyListCompleteStrategy CompleteStrategy { get; set; }
@@ -66,6 +74,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [NameInMap("coverUrl")]
             [Validation(Required=false)]
             public string CoverUrl { get; set; }
+
+            [NameInMap("dialogueTipFlag")]
+            [Validation(Required=false)]
+            public bool? DialogueTipFlag { get; set; }
+
+            [NameInMap("evaluateReportFlag")]
+            [Validation(Required=false)]
+            public bool? EvaluateReportFlag { get; set; }
 
             [NameInMap("expressiveness")]
             [Validation(Required=false)]
@@ -115,6 +131,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("orderAckFlag")]
+            [Validation(Required=false)]
+            public bool? OrderAckFlag { get; set; }
+
             [NameInMap("sampleDialogueList")]
             [Validation(Required=false)]
             public List<ListAICoachScriptPageResponseBodyListSampleDialogueList> SampleDialogueList { get; set; }
@@ -141,6 +161,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public string ScriptRecordId { get; set; }
 
+            [NameInMap("sparringTipContent")]
+            [Validation(Required=false)]
+            public string SparringTipContent { get; set; }
+
+            [NameInMap("sparringTipTitle")]
+            [Validation(Required=false)]
+            public string SparringTipTitle { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
@@ -148,6 +176,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
+
+            [NameInMap("studentThinkTimeFlag")]
+            [Validation(Required=false)]
+            public bool? StudentThinkTimeFlag { get; set; }
+
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public int? Type { get; set; }
 
             [NameInMap("weights")]
             [Validation(Required=false)]
@@ -168,6 +204,18 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                 [NameInMap("expressiveness")]
                 [Validation(Required=false)]
                 public int? Expressiveness { get; set; }
+
+                [NameInMap("expressivenessEnabled")]
+                [Validation(Required=false)]
+                public bool? ExpressivenessEnabled { get; set; }
+
+                [NameInMap("pointDeductionRule")]
+                [Validation(Required=false)]
+                public int? PointDeductionRule { get; set; }
+
+                [NameInMap("pointDeductionRuleEnabled")]
+                [Validation(Required=false)]
+                public bool? PointDeductionRuleEnabled { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class ListAICoachScriptPageRequest : TeaModel {
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [NameInMap("status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
+
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public int? Type { get; set; }
 
     }
 

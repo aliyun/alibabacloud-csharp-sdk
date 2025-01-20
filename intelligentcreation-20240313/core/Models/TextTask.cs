@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public ReferenceTag ReferenceTag { get; set; }
 
-        [NameInMap("relatedRagId")]
+        [NameInMap("relatedRagIds")]
         [Validation(Required=false)]
-        public int? RelatedRagId { get; set; }
+        public List<long?> RelatedRagIds { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

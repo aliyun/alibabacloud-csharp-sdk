@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string IdempotentId { get; set; }
 
+        [NameInMap("imageUrls")]
+        [Validation(Required=false)]
+        public List<string> ImageUrls { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>4</para>

@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class StartAvatarSessionRequest : TeaModel {
+        [NameInMap("channelToken")]
+        [Validation(Required=false)]
+        public string ChannelToken { get; set; }
+
         [NameInMap("customPushUrl")]
         [Validation(Required=false)]
         public string CustomPushUrl { get; set; }
+
+        [NameInMap("customUserId")]
+        [Validation(Required=false)]
+        public string CustomUserId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
