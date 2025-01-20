@@ -1,3 +1,9 @@
+2025-01-20 Version: 2.34.0
+- Support API CreateCallSummary.
+- Support API GetSummaryTemplate.
+- Support API UpdateCallSummary.
+
+
 2025-01-20 Version: 2.33.1
 - Update API GetConversationDetail: update response param.
 
