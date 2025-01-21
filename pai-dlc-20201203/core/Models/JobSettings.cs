@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("EnableCPUAffinity")]
+        [Validation(Required=false)]
+        public bool? EnableCPUAffinity { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
         [NameInMap("EnableErrorMonitoringInAIMaster")]

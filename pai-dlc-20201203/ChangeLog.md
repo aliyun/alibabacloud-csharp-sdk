@@ -1,3 +1,6 @@
+2025-01-21 Version: 1.5.23
+- Generated csharp 2020-12-03 for pai-dlc.
+
 2025-01-09 Version: 1.5.22
 - Update API ListJobs: add param PaymentType.
 
