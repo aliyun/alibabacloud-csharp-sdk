@@ -10,156 +10,216 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class CreateServerCertificateWithCsrRequest : TeaModel {
         /// <summary>
-        /// The expiration time of the server certificate. This value is a UNIX timestamp. Unit: seconds.
+        /// <para>The expiration time of the server certificate. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <remarks>
+        /// <para> The <b>BeforeTime</b> and <b>AfterTime</b> parameters must be both empty or both specified.</para>
+        /// </remarks>
         /// 
-        /// >  The **BeforeTime** and **AfterTime** parameters must be both empty or both specified.
+        /// <b>Example:</b>
+        /// <para>1665819958</para>
         /// </summary>
         [NameInMap("AfterTime")]
         [Validation(Required=false)]
         public long? AfterTime { get; set; }
 
         /// <summary>
-        /// The key algorithm of the server certificate. The key algorithm is in the `<Encryption algorithm>_<Key length>` format. Valid values:
+        /// <para>The key algorithm of the server certificate. The key algorithm is in the <c>&lt;Encryption algorithm&gt;_&lt;Key length&gt;</c> format. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>RSA_1024</b>: The signature algorithm is Sha256WithRSA.</description></item>
+        /// <item><description><b>RSA_2048</b>: The signature algorithm is Sha256WithRSA.</description></item>
+        /// <item><description><b>RSA_4096</b>: The signature algorithm is Sha256WithRSA.</description></item>
+        /// <item><description><b>ECC_256</b>: The signature algorithm is Sha256WithECDSA.</description></item>
+        /// <item><description><b>ECC_384</b>: The signature algorithm is Sha256WithECDSA.</description></item>
+        /// <item><description><b>ECC_512</b>: The signature algorithm is Sha256WithECDSA.</description></item>
+        /// <item><description><b>SM2_256</b>: The signature algorithm is SM3WithSM2.</description></item>
+        /// </list>
+        /// <para>The encryption algorithm of the server certificate must be the same as the encryption algorithm of the intermediate CA certificate. The key length can be different. For example, if the key algorithm of the intermediate CA certificate is RSA_2048, the key algorithm of the server certificate must be RSA_1024, RSA_2048, or RSA_4096.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/328096.html">DescribeCACertificate</a> operation to query the key algorithm of an intermediate CA certificate.</para>
+        /// </remarks>
         /// 
-        /// *   **RSA\_1024**: The signature algorithm is Sha256WithRSA.
-        /// *   **RSA\_2048**: The signature algorithm is Sha256WithRSA.
-        /// *   **RSA\_4096**: The signature algorithm is Sha256WithRSA.
-        /// *   **ECC\_256**: The signature algorithm is Sha256WithECDSA.
-        /// *   **ECC\_384**: The signature algorithm is Sha256WithECDSA.
-        /// *   **ECC\_512**: The signature algorithm is Sha256WithECDSA.
-        /// *   **SM2\_256**: The signature algorithm is SM3WithSM2.
-        /// 
-        /// The encryption algorithm of the server certificate must be the same as the encryption algorithm of the intermediate CA certificate. The key length can be different. For example, if the key algorithm of the intermediate CA certificate is RSA\_2048, the key algorithm of the server certificate must be RSA\_1024, RSA\_2048, or RSA\_4096.
-        /// 
-        /// >  You can call the [DescribeCACertificate](~~328096~~) operation to query the key algorithm of an intermediate CA certificate.
+        /// <b>Example:</b>
+        /// <para>RSA_2048</para>
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// The issuance time of the server certificate. This value is a UNIX timestamp. The default value is the time when you call this operation. Unit: seconds.
+        /// <para>The issuance time of the server certificate. This value is a UNIX timestamp. The default value is the time when you call this operation. Unit: seconds.</para>
+        /// <remarks>
+        /// <para> The <b>BeforeTime</b> and <b>AfterTime</b> parameters must be both empty or both specified.</para>
+        /// </remarks>
         /// 
-        /// >  The **BeforeTime** and **AfterTime** parameters must be both empty or both specified.
+        /// <b>Example:</b>
+        /// <para>1634283958</para>
         /// </summary>
         [NameInMap("BeforeTime")]
         [Validation(Required=false)]
         public long? BeforeTime { get; set; }
 
         /// <summary>
-        /// The common name of the certificate. The value can contain letters.
+        /// <para>The name of the certificate user. The user of a server certificate is a server. We recommend that you enter the domain name or IP address of the server.</para>
         /// 
-        /// >  If you specify the **CsrPemString** parameter, the value of the **CommonName** parameter is determined by the **CsrPemString** parameter.
+        /// <b>Example:</b>
+        /// <para>mtcsq.com</para>
         /// </summary>
         [NameInMap("CommonName")]
         [Validation(Required=false)]
         public string CommonName { get; set; }
 
         /// <summary>
-        /// The code of the country in which the organization is located, such as **CN**.
+        /// <para>The code of the country in which the organization is located, such as CN or US.</para>
         /// 
-        /// >  This parameter is available and required only when the **RegistrantProfileId** parameter is not specified. In this case, you must specify this parameter. If this parameter is not specified, the domain name fails to be registered.
+        /// <b>Example:</b>
+        /// <para>CN</para>
         /// </summary>
         [NameInMap("Country")]
         [Validation(Required=false)]
         public string Country { get; set; }
 
         /// <summary>
-        /// The content of the CSR file. You can generate a CSR file by using the OpenSSL tool or Keytool. For more information, see [How do I create a CSR file?](~~42218~~) You can also create a CSR file in the Certificate Management Service console. For more information, see [Create a CSR](~~313297~~).
+        /// <para>The content of the CSR.</para>
+        /// <para>You can generate a CSR by using the OpenSSL tool or the Keytool tool. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How do I create a CSR file?</a></para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-----BEGIN CERTIFICATE REQUEST-----   ...... -----END CERTIFICATE REQUEST-----</para>
         /// </summary>
         [NameInMap("Csr")]
         [Validation(Required=false)]
         public string Csr { get; set; }
 
         /// <summary>
-        /// The content of the CSR file. You can generate a CSR file by using the OpenSSL tool or Keytool. For more information, see [How do I create a CSR file?](~~42218~~) You can also create a CSR file in the Certificate Management Service console. For more information, see [Create a CSR](~~313297~~).
-        /// </summary>
-        [NameInMap("Csr1")]
-        [Validation(Required=false)]
-        public string Csr1 { get; set; }
-
-        /// <summary>
-        /// The validity period of the server certificate. Unit: days. You must specify at least one of the **Days**, **BeforeTime**, and **AfterTime** parameters. The **BeforeTime** and **AfterTime** parameters must be both empty or both specified. The following list describes how to specify these parameters:
+        /// <para>The validity period of the server certificate. Unit: days.</para>
+        /// <para>You must specify at least one of the <b>Days</b>, <b>BeforeTime</b>, and <b>AfterTime</b> parameters. The <b>BeforeTime</b> and <b>AfterTime</b> parameters must be both empty or both specified. The following list describes how to specify these parameters:</para>
+        /// <list type="bullet">
+        /// <item><description>If you specify the <b>Days</b> parameter, you can specify both the <b>BeforeTime</b> and <b>AfterTime</b> parameters or leave them both empty.********</description></item>
+        /// <item><description>If you do not specify the <b>Days</b> parameter, you must specify both the <b>BeforeTime</b> and <b>AfterTime</b> parameters.</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you specify the <b>Days</b>, <b>BeforeTime</b>, and <b>AfterTime</b> parameters at the same time, the validity period of the server certificate is determined by the value of the <b>Days</b> parameter.</description></item>
+        /// <item><description>The validity period of the server certificate cannot exceed the validity period of the intermediate CA certificate. You can call the <a href="https://help.aliyun.com/document_detail/328096.html">DescribeCACertificate</a> operation to query the validity period of an intermediate CA certificate.</description></item>
+        /// </list>
         /// 
-        /// *   If you specify the **Days** parameter, you can specify both the **BeforeTime** and **AfterTime** parameters or leave them both empty.********
-        /// *   If you do not specify the **Days** parameter, you must specify both the **BeforeTime** and **AfterTime** parameters.
-        /// 
-        /// > 
-        /// 
-        /// *   If you specify the **Days**, **BeforeTime**, and **AfterTime** parameters together, the validity period of the server certificate is determined by the value of the **Days** parameter.
-        /// 
-        /// *   The validity period of the server certificate cannot exceed the validity period of the intermediate CA certificate. You can call the [DescribeCACertificate](~~328096~~) operation to query the validity period of an intermediate CA certificate.
+        /// <b>Example:</b>
+        /// <para>365</para>
         /// </summary>
         [NameInMap("Days")]
         [Validation(Required=false)]
         public int? Days { get; set; }
 
         /// <summary>
-        /// The additional domain names or additional IP addresses of the server certificate. After you add additional domain names and additional IP addresses to a certificate, you can apply the certificate to the domain names and IP addresses.
+        /// <para>The additional domain names or additional IP addresses of the server certificate. After you add additional domain names and additional IP addresses to a certificate, you can apply the certificate to the domain names and IP addresses.</para>
+        /// <para>You can specify multiple domain names and IP addresses. If you specify multiple domain names and IP addresses, separate them with commas (,).</para>
         /// 
-        /// You can specify multiple domain names and IP addresses. If you specify multiple domain names and IP addresses, separate them with commas (,).
+        /// <b>Example:</b>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the certificate. Valid values:
+        /// <para>include the CRL address.</para>
+        /// <list type="bullet">
+        /// <item><description>0- No</description></item>
+        /// <item><description>1- Yes</description></item>
+        /// </list>
         /// 
-        /// *   **0**: does not return the certificate. This is the default value.
-        /// *   **1**: returns the certificate.
-        /// *   **2**: returns the certificate and the certificate chain of the certificate.
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("EnableCrl")]
+        [Validation(Required=false)]
+        public long? EnableCrl { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to return the certificate. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: does not return the certificate. This is the default value.</description></item>
+        /// <item><description><b>1</b>: returns the certificate.</description></item>
+        /// <item><description><b>2</b>: returns the certificate and the certificate chain of the certificate.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Immediately")]
         [Validation(Required=false)]
         public int? Immediately { get; set; }
 
         /// <summary>
-        /// The name of the city in which the organization is located. The value can contain letters. The default value is the name of the city in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.
+        /// <para>The name of the city in which the organization is located. The value can contain letters. The default value is the name of the city in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Hangzhou</para>
         /// </summary>
         [NameInMap("Locality")]
         [Validation(Required=false)]
         public string Locality { get; set; }
 
         /// <summary>
-        /// The validity period of the server certificate. Unit: months.
+        /// <para>The validity period of the server certificate. Unit: months.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("Months")]
         [Validation(Required=false)]
         public int? Months { get; set; }
 
         /// <summary>
-        /// The name of the organization. Default value: Alibaba Inc.
+        /// <para>The name of the organization. Default value: Alibaba Inc.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ec server o</para>
         /// </summary>
         [NameInMap("Organization")]
         [Validation(Required=false)]
         public string Organization { get; set; }
 
         /// <summary>
-        /// The name of the department. Default value: Aliyun CDN.
+        /// <para>The name of the department. Default value: Aliyun CDN.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IT</para>
         /// </summary>
         [NameInMap("OrganizationUnit")]
         [Validation(Required=false)]
         public string OrganizationUnit { get; set; }
 
         /// <summary>
-        /// The unique identifier of the intermediate CA certificate from which the server certificate is issued.
+        /// <para>The unique identifier of the intermediate CA certificate from which the server certificate is issued.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> operation to query the unique identifier of an intermediate CA certificate.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifier of an intermediate CA certificate.
+        /// <b>Example:</b>
+        /// <para>270oe6bb538d538c70c01f81hfd3****</para>
         /// </summary>
         [NameInMap("ParentIdentifier")]
         [Validation(Required=false)]
         public string ParentIdentifier { get; set; }
 
         /// <summary>
-        /// The province, municipality, or autonomous region in which the organization is located. The value can contain letters. The default value is the name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.
+        /// <para>The province, municipality, or autonomous region in which the organization is located. The value can contain letters. The default value is the name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Zhejiang</para>
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
 
         /// <summary>
-        /// The validity period of the server certificate. Unit: years.
+        /// <para>The validity period of the server certificate. Unit: years.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Years")]
         [Validation(Required=false)]

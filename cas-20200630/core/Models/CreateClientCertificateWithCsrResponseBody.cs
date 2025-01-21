@@ -10,35 +10,50 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class CreateClientCertificateWithCsrResponseBody : TeaModel {
         /// <summary>
-        /// The certificate chain of the client certificate.
+        /// <para>The certificate chain of the client certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n</para>
         /// </summary>
         [NameInMap("CertificateChain")]
         [Validation(Required=false)]
         public string CertificateChain { get; set; }
 
         /// <summary>
-        /// The unique identifier of the client certificate.
+        /// <para>The unique identifier of the client certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200ae6bb538d538c70c01f81dcf2****</para>
         /// </summary>
         [NameInMap("Identifier")]
         [Validation(Required=false)]
         public string Identifier { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>31C66C7B-671A-4297-9187-2C4477247A74</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The serial number of the server certificate.
+        /// <para>The serial number of the server certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0f29522da2dae7a1c4b6ab7132ad3c06</para>
         /// </summary>
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]
         public string SerialNumber { get; set; }
 
         /// <summary>
-        /// The content of the client certificate.
+        /// <para>The content of the client certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----</para>
         /// </summary>
         [NameInMap("X509Certificate")]
         [Validation(Required=false)]

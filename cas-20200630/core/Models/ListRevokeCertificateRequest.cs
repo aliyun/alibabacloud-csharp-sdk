@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class ListRevokeCertificateRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Default value: **1**.
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// The number of revoked certificates to return on each page. Default value: **20**.
+        /// <para>The number of revoked certificates to return on each page. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("ShowSize")]
         [Validation(Required=false)]

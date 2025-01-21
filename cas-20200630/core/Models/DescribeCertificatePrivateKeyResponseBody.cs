@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class DescribeCertificatePrivateKeyResponseBody : TeaModel {
         /// <summary>
-        /// The content of the encrypted private key.
+        /// <para>The content of the encrypted private key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-----BEGIN ENCRYPTED PRIVATE KEY----- …… -----END ENCRYPTED PRIVATE KEY-----</para>
         /// </summary>
         [NameInMap("EncryptedData")]
         [Validation(Required=false)]
         public string EncryptedData { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>09470F19-CEE8-5C63-BF2C-02B5E3F07A17</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
