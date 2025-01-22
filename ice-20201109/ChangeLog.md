@@ -1,3 +1,31 @@
+2025-01-22 Version: 3.13.0
+- Support API CreateChannel.
+- Support API CreateProgram.
+- Support API CreateSource.
+- Support API CreateSourceLocation.
+- Support API DeleteChannel.
+- Support API DeleteProgram.
+- Support API DeleteSource.
+- Support API DeleteSourceLocation.
+- Support API GetChannel.
+- Support API GetProgram.
+- Support API GetSource.
+- Support API GetSourceLocation.
+- Support API ListAlerts.
+- Support API ListChannelAlerts.
+- Support API ListChannels.
+- Support API ListPrograms.
+- Support API ListSchedules.
+- Support API ListSourceLocations.
+- Support API ListSources.
+- Support API StartChannel.
+- Support API StopChannel.
+- Support API UpdateChannel.
+- Support API UpdateProgram.
+- Support API UpdateSource.
+- Support API UpdateSourceLocation.
+
+
 2025-01-21 Version: 3.12.0
 - Support API AddMediaConnectFlowInput.
 - Support API AddMediaConnectFlowOutput.
