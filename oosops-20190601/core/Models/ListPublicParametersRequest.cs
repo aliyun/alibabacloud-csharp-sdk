@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Oosops20190601.Models
 {
     public class ListPublicParametersRequest : TeaModel {
+        [NameInMap("CreatedDateAfter")]
+        [Validation(Required=false)]
+        public string CreatedDateAfter { get; set; }
+
+        [NameInMap("CreatedDateBefore")]
+        [Validation(Required=false)]
+        public string CreatedDateBefore { get; set; }
+
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }

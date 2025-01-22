@@ -1,3 +1,8 @@
+2025-01-22 Version: 1.0.4
+- Update API ListPublicParameters: add param CreatedDateAfter.
+- Update API ListPublicParameters: add param CreatedDateBefore.
+
+
 2024-11-13 Version: 1.0.3
 - Update API CreatePublicTemplate: add param IsExample.
 - Update API CreatePublicTemplate: add param VersionName.
