@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? HandledCount { get; set; }
 
+            [NameInMap("LanguageType")]
+            [Validation(Required=false)]
+            public string LanguageType { get; set; }
+
             /// <summary>
             /// <para>The number of vulnerabilities that have the <b>medium</b> priority.</para>
             /// 

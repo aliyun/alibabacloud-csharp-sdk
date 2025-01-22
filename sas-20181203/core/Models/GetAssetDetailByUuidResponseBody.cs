@@ -49,11 +49,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The edition of Security Center that is authorized to protect the server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Basic edition (Unauthorized)</description></item>
-            /// <item><description><b>6</b>: Anti-virus edition</description></item>
-            /// <item><description><b>5</b>: Advanced edition</description></item>
-            /// <item><description><b>3</b>: Enterprise edition</description></item>
-            /// <item><description><b>7</b>: Ultimate edition</description></item>
+            /// <item><description><b>1</b>: Basic (Unauthorized).</description></item>
+            /// <item><description><b>6</b>: Anti-virus.</description></item>
+            /// <item><description><b>5</b>: Advanced.</description></item>
+            /// <item><description><b>3</b>: Enterprise.</description></item>
+            /// <item><description><b>7</b>: Ultimate.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,6 +92,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ClientStatus { get; set; }
 
+            /// <summary>
+            /// <para>The sub-status of the Security Center agent on the server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>online</b>: The Security Center agent on the asset is <b>enabled</b>.</description></item>
+            /// <item><description><b>offline</b>: The Security Center agent on the asset is <b>disabled</b>.</description></item>
+            /// <item><description><b>pause</b>: The Security Center agent is <b>suspended</b>.</description></item>
+            /// <item><description><b>uninstalled</b>: The Security Center agent is <b>not installed</b>.</description></item>
+            /// <item><description><b>stopped</b>: The asset is <b>shut down</b>.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>online</para>
+            /// </summary>
             [NameInMap("ClientSubStatus")]
             [Validation(Required=false)]
             public string ClientSubStatus { get; set; }

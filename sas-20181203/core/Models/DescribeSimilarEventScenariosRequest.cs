@@ -14,6 +14,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the alert event.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the ID of the alert event.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +28,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? SecurityEventId { get; set; }
 
         /// <summary>
+        /// <para>The source IP address of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.2.XX.XX</para>
         /// </summary>

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class GetCheckDetailRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the check item.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,8 +26,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +38,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the server resides.</para>
+        /// <para>The region ID of the instance.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> operation to query the region ID.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

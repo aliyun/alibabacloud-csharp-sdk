@@ -25,7 +25,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The expression of the rule.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;groups&quot;:&quot;0&quot;,&quot;fieldValueType&quot;:&quot;string&quot;,&quot;field&quot;:&quot;internetIp&quot;,&quot;operator&quot;:&quot;equals&quot;,&quot;value&quot;:&quot;12.0.0.1&quot;}]</para>
@@ -74,7 +73,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description>If TagType is set to group, set this parameter to {&quot;groupId&quot;:XXX}. XXX specifies the ID of the group. You can call the <a href="~~DescribeGroupStruct~~">DescribeGroupStruct</a> operation to query the ID.</description></item>
         /// <item><description>If TagType is set to tag, set this parameter to {&quot;tagId&quot;:XXX}. XXX specifies the ID of the tag. You can call the <a href="~~DescribeGroupedTags~~">DescribeGroupedTags</a> operation to query the ID.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;tagId&quot;:7804789}</para>

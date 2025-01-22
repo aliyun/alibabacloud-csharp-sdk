@@ -279,6 +279,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                [NameInMap("RegistryType")]
+                [Validation(Required=false)]
+                public string RegistryType { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the image repository.</para>
                 /// 

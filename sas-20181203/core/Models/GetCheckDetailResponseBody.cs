@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DefaultValue { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</para>
+            /// <para>The name of the custom configuration item, which is unique in a check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SessionTimeMax</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The keyword that identifies the custom configuration item for internationalization.</para>
+            /// <para>The display name of the custom configuration item for internationalization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Maximum session time</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Link { get; set; }
 
             /// <summary>
-            /// <para>The type of the description of the check item. The value is fixed as text.</para>
+            /// <para>The description type of the check item. The value is fixed as text.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text</para>
@@ -151,91 +151,245 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is deprecated.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("RepairReset")]
         [Validation(Required=false)]
         [Obsolete]
         public string RepairReset { get; set; }
 
+        /// <summary>
+        /// <para>The fixing parameter configurations of the check item.</para>
+        /// </summary>
         [NameInMap("RepairSetting")]
         [Validation(Required=false)]
         public GetCheckDetailResponseBodyRepairSetting RepairSetting { get; set; }
         public class GetCheckDetailResponseBodyRepairSetting : TeaModel {
+            /// <summary>
+            /// <para>The description of the fixing workflow.</para>
+            /// </summary>
             [NameInMap("FlowStep")]
             [Validation(Required=false)]
             public List<GetCheckDetailResponseBodyRepairSettingFlowStep> FlowStep { get; set; }
             public class GetCheckDetailResponseBodyRepairSettingFlowStep : TeaModel {
+                /// <summary>
+                /// <para>The text description of the fixing step.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>The first step is to open the calling interface.</para>
+                /// </summary>
                 [NameInMap("ShowText")]
                 [Validation(Required=false)]
                 public string ShowText { get; set; }
 
+                /// <summary>
+                /// <para>The sequence number of the fixing step.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("Step")]
                 [Validation(Required=false)]
                 public string Step { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The configurations of the fixing parameters.</para>
+            /// </summary>
             [NameInMap("RepairConfigs")]
             [Validation(Required=false)]
             public List<GetCheckDetailResponseBodyRepairSettingRepairConfigs> RepairConfigs { get; set; }
             public class GetCheckDetailResponseBodyRepairSettingRepairConfigs : TeaModel {
+                /// <summary>
+                /// <para>Indicates whether the value of the parameter is displayed in the console. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: The historical value and real-time value of the parameter are displayed.</description></item>
+                /// <item><description>1: Only the real-time value of the parameter is displayed.</description></item>
+                /// <item><description>2: The value of the parameter is not displayed in the console.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("ConsoleParamType")]
                 [Validation(Required=false)]
                 public string ConsoleParamType { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether custom configurations of the fixing parameters are supported. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("CustomFlag")]
                 [Validation(Required=false)]
                 public bool? CustomFlag { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether data needs to be encrypted during transmission. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Data does not need to be encrypted during transmission.</description></item>
+                /// <item><description>1: Data needs to be encrypted during transmission.</description></item>
+                /// <item><description>2: Data needs to be encrypted during transmission, and the user must perform secondary confirmation.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("DataTransformType")]
                 [Validation(Required=false)]
                 public string DataTransformType { get; set; }
 
+                /// <summary>
+                /// <para>The default value of the parameter. The value is a string.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("DefaultValue")]
                 [Validation(Required=false)]
                 public string DefaultValue { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether this parameter is specified by the user. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: The default value is used.</description></item>
+                /// <item><description>1: This parameter is required, and no default value is specified.</description></item>
+                /// <item><description>2: This parameter can be left empty.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("EmptyParamSwitch")]
                 [Validation(Required=false)]
                 public string EmptyParamSwitch { get; set; }
 
+                /// <summary>
+                /// <para>The fixing parameters that are not compatible with this parameter.</para>
+                /// </summary>
                 [NameInMap("ExclusiveName")]
                 [Validation(Required=false)]
                 public List<string> ExclusiveName { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the fixing workflow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>64312d3ee19d470a9b54393dab****</para>
+                /// </summary>
                 [NameInMap("FlowId")]
                 [Validation(Required=false)]
                 public string FlowId { get; set; }
 
+                /// <summary>
+                /// <para>The name of the parameter. The name must be unique within the check item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>navicat</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The display name of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>port</para>
+                /// </summary>
                 [NameInMap("ShowName")]
                 [Validation(Required=false)]
                 public string ShowName { get; set; }
 
+                /// <summary>
+                /// <para>The type of the parameter. The value is a JSON string.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{\&quot;type\&quot;:\&quot;NUMBER\&quot;,\&quot;range\&quot;:[1,24]}</para>
+                /// </summary>
                 [NameInMap("TypeDefine")]
                 [Validation(Required=false)]
                 public string TypeDefine { get; set; }
 
+                /// <summary>
+                /// <para>The type of the parameter. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: asset parameters that are required during fixing.</description></item>
+                /// <item><description>2: user-provided parameters that are required during fixing.</description></item>
+                /// <item><description>3: parameters that are temporarily provided by the user.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("UsageType")]
                 [Validation(Required=false)]
                 public string UsageType { get; set; }
 
+                /// <summary>
+                /// <para>The user-configured value of the parameter. The value is a string.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>Indicates whether a restart is required after the fixing. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("RepairReset")]
             [Validation(Required=false)]
             public bool? RepairReset { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the check item supports the quick fix feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("RepairSupport")]
             [Validation(Required=false)]
             public bool? RepairSupport { get; set; }
 
+            /// <summary>
+            /// <para>The fixing type that is supported. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: The fixing and rollback are supported.</description></item>
+            /// <item><description><b>2</b>: The fixing is supported, but the rollback is not supported.</description></item>
+            /// <item><description><b>3</b>: The fixing must be performed on a third-party platform.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("RepairSupportType")]
             [Validation(Required=false)]
             public int? RepairSupportType { get; set; }
@@ -243,13 +397,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is deprecated.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RepairSupportType")]
         [Validation(Required=false)]
         [Obsolete]
         public int? RepairSupportType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15A6ED6A-DBFE-5255-A248-289907809BEC</para>

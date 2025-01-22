@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageRepoDetailListResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the information about image repositories.</para>
+        /// <para>The information about image repositories.</para>
         /// </summary>
         [NameInMap("ImageRepoResponses")]
         [Validation(Required=false)]
@@ -69,6 +69,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Endpoints { get; set; }
 
+            /// <summary>
+            /// <para>The number of the images on which risks are detected.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("HasRiskImageCount")]
             [Validation(Required=false)]
             public int? HasRiskImageCount { get; set; }
