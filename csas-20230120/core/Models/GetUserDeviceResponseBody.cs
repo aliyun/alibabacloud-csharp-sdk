@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string DlpStatus { get; set; }
 
+            [NameInMap("EdrStatus")]
+            [Validation(Required=false)]
+            public string EdrStatus { get; set; }
+
             [NameInMap("HistoryUsers")]
             [Validation(Required=false)]
             public List<GetUserDeviceResponseBodyDeviceHistoryUsers> HistoryUsers { get; set; }

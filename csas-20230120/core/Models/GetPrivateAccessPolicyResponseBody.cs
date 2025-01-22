@@ -123,6 +123,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public List<string> TagIds { get; set; }
 
+            [NameInMap("TriggerTemplateId")]
+            [Validation(Required=false)]
+            public string TriggerTemplateId { get; set; }
+
             [NameInMap("UserGroupIds")]
             [Validation(Required=false)]
             public List<string> UserGroupIds { get; set; }
