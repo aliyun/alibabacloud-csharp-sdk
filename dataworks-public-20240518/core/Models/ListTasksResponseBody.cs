@@ -267,19 +267,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>para1=$bizdate para2=$[yyyymmdd]</para>
+                /// </summary>
                 [NameInMap("ScriptParameters")]
                 [Validation(Required=false)]
                 public string ScriptParameters { get; set; }
-
-                /// <summary>
-                /// <para>The tenant ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
-                [NameInMap("TenantId")]
-                [Validation(Required=false)]
-                public long? TenantId { get; set; }
 
                 /// <summary>
                 /// <para>The timeout period of task running. Unit: seconds.</para>

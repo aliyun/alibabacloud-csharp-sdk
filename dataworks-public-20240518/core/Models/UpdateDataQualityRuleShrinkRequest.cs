@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SamplingConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The strength of the rule. Valid values:</para>
+        /// <para>The strength of the rule.</para>
         /// <list type="bullet">
         /// <item><description>Normal</description></item>
         /// <item><description>High</description></item>
@@ -88,13 +88,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [NameInMap("Severity")]
         [Validation(Required=false)]
         public string Severity { get; set; }
-
-        /// <summary>
-        /// <para>The monitored object of the rule.</para>
-        /// </summary>
-        [NameInMap("Target")]
-        [Validation(Required=false)]
-        public string TargetShrink { get; set; }
 
         /// <summary>
         /// <para>The ID of the template used by the rule.</para>

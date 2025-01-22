@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the rule.</para>
+        /// <para>Specifies whether to enable the monitoring rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SamplingConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The strength of the rule. Valid values:</para>
+        /// <para>The strength of the rule.</para>
         /// <list type="bullet">
         /// <item><description>Normal</description></item>
         /// <item><description>High</description></item>

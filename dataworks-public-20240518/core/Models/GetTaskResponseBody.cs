@@ -703,16 +703,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The tenant ID.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
-                    [NameInMap("TenantId")]
-                    [Validation(Required=false)]
-                    public long? TenantId { get; set; }
-
-                    /// <summary>
                     /// <para>The timeout period of task running. Unit: seconds.</para>
                     /// 
                     /// <b>Example:</b>
@@ -860,16 +850,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Value { get; set; }
 
             }
-
-            /// <summary>
-            /// <para>The tenant ID.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("TenantId")]
-            [Validation(Required=false)]
-            public long? TenantId { get; set; }
 
             /// <summary>
             /// <para>The timeout period of task running. Unit: seconds.</para>

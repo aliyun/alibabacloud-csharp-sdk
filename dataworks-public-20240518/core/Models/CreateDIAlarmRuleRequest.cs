@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The description of the alert rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The description of the alert rule.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -97,6 +100,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Obsolete]
             public int? InhibitionInterval { get; set; }
 
+            /// <summary>
+            /// <para>告警抑制间隔时长，单位分钟，默认5分钟。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("MuteInterval")]
             [Validation(Required=false)]
             public int? MuteInterval { get; set; }
@@ -187,6 +196,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Obsolete]
             public List<string> DdlReportTags { get; set; }
 
+            /// <summary>
+            /// <para>在DDL通知的时候才生效，需要生效的DDL列表。</para>
+            /// </summary>
             [NameInMap("DdlTypes")]
             [Validation(Required=false)]
             public List<string> DdlTypes { get; set; }

@@ -258,16 +258,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public long? ProjectId { get; set; }
 
                     /// <summary>
-                    /// <para>The region ID.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>cn-shanghai</para>
-                    /// </summary>
-                    [NameInMap("RegionId")]
-                    [Validation(Required=false)]
-                    public string RegionId { get; set; }
-
-                    /// <summary>
                     /// <para>The configuration of the data source. The value of the queue field is default, and that of the sqlEngine field can be set to SPARK_SQL, KYUUBI, PRESTO_SQL, or HIVE_SQL. The value default indicates the YARN queue for E-MapReduce (EMR) tasks.</para>
                     /// 
                     /// <b>Example:</b>

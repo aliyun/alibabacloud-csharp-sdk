@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
     public class CreateDIJobRequest : TeaModel {
         /// <summary>
         /// <para>The description of the synchronization task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The description of the synchronization task.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

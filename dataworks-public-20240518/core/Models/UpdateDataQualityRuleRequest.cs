@@ -41,15 +41,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public UpdateDataQualityRuleRequestCheckingConfigThresholdsCritical Critical { get; set; }
                 public class UpdateDataQualityRuleRequestCheckingConfigThresholdsCritical : TeaModel {
                     /// <summary>
-                    /// <para>阈值表达式。</para>
-                    /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
-                    /// <list type="bullet">
-                    /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
-                    /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
-                    /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
-                    /// </list>
-                    /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</para>
-                    /// 
                     /// <b>Example:</b>
                     /// <para>$checkValue &gt; 0.05</para>
                     /// </summary>
@@ -96,15 +87,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public UpdateDataQualityRuleRequestCheckingConfigThresholdsExpected Expected { get; set; }
                 public class UpdateDataQualityRuleRequestCheckingConfigThresholdsExpected : TeaModel {
                     /// <summary>
-                    /// <para>阈值表达式。</para>
-                    /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
-                    /// <list type="bullet">
-                    /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
-                    /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
-                    /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
-                    /// </list>
-                    /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</para>
-                    /// 
                     /// <b>Example:</b>
                     /// <para>$checkValue &lt;= 0.01</para>
                     /// </summary>
@@ -151,15 +133,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public UpdateDataQualityRuleRequestCheckingConfigThresholdsWarned Warned { get; set; }
                 public class UpdateDataQualityRuleRequestCheckingConfigThresholdsWarned : TeaModel {
                     /// <summary>
-                    /// <para>阈值表达式。</para>
-                    /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
-                    /// <list type="bullet">
-                    /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
-                    /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
-                    /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
-                    /// </list>
-                    /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</para>
-                    /// 
                     /// <b>Example:</b>
                     /// <para>$checkValue &gt; 0.01</para>
                     /// </summary>
@@ -365,7 +338,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The strength of the rule. Valid values:</para>
+        /// <para>The strength of the rule.</para>
         /// <list type="bullet">
         /// <item><description>Normal</description></item>
         /// <item><description>High</description></item>
@@ -377,67 +350,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [NameInMap("Severity")]
         [Validation(Required=false)]
         public string Severity { get; set; }
-
-        /// <summary>
-        /// <para>The monitored object of the rule.</para>
-        /// </summary>
-        [NameInMap("Target")]
-        [Validation(Required=false)]
-        public UpdateDataQualityRuleRequestTarget Target { get; set; }
-        public class UpdateDataQualityRuleRequestTarget : TeaModel {
-            /// <summary>
-            /// <para>The type of the database to which the table belongs. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>maxcompute</description></item>
-            /// <item><description>emr</description></item>
-            /// <item><description>cdh</description></item>
-            /// <item><description>hologres</description></item>
-            /// <item><description>analyticdb_for_postgresql</description></item>
-            /// <item><description>analyticdb_for_mysql</description></item>
-            /// <item><description>starrocks</description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>maxcompute</para>
-            /// </summary>
-            [NameInMap("DatabaseType")]
-            [Validation(Required=false)]
-            public string DatabaseType { get; set; }
-
-            /// <summary>
-            /// <para>The configuration of the partitioned table.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>ds=$[yyyymmdd-1]</para>
-            /// </summary>
-            [NameInMap("PartitionSpec")]
-            [Validation(Required=false)]
-            public string PartitionSpec { get; set; }
-
-            /// <summary>
-            /// <para>The ID of the table that is limited by the rule in Data Map.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>odps.unit_test.tb_unit_test</para>
-            /// </summary>
-            [NameInMap("TableGuid")]
-            [Validation(Required=false)]
-            public string TableGuid { get; set; }
-
-            /// <summary>
-            /// <para>The type of the monitored object. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Table</description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>Table</para>
-            /// </summary>
-            [NameInMap("Type")]
-            [Validation(Required=false)]
-            public string Type { get; set; }
-
-        }
 
         /// <summary>
         /// <para>The ID of the template used by the rule.</para>

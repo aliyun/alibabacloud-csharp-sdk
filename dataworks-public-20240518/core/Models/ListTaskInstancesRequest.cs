@@ -68,8 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace.</para>
-        /// <para>Valid values:</para>
+        /// <para>The environment of the workspace. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Prod: production environment</description></item>
         /// <item><description>Dev: development environment</description></item>
@@ -161,8 +160,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler.</para>
-        /// <para>Valid values:</para>
+        /// <para>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Pause</description></item>
         /// <item><description>Skip</description></item>
@@ -177,8 +175,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TriggerRecurrence { get; set; }
 
         /// <summary>
-        /// <para>The trigger type.</para>
-        /// <para>Valid values:</para>
+        /// <para>The trigger type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Scheduler: scheduling cycle-based trigger</description></item>
         /// <item><description>Manual: manual trigger</description></item>
@@ -212,8 +209,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? WorkflowInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the workflow instance.</para>
-        /// <para>Valid values:</para>
+        /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SmokeTest</description></item>
         /// <item><description>Manual</description></item>

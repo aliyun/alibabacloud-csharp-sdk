@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTask DataQualityEvaluationTask { get; set; }
         public class GetDataQualityEvaluationTaskResponseBodyDataQualityEvaluationTask : TeaModel {
+            [NameInMap("DataSourceId")]
+            [Validation(Required=false)]
+            public long? DataSourceId { get; set; }
+
             /// <summary>
             /// <para>质量监控任务描述</para>
             /// </summary>

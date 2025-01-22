@@ -144,10 +144,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     }
 
-                    [NameInMap("TenantId")]
-                    [Validation(Required=false)]
-                    public long? TenantId { get; set; }
-
                     /// <summary>
                     /// <para>The timeout period of task running. Unit: seconds.</para>
                     /// </summary>
@@ -468,16 +464,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [NameInMap("StepType")]
                 [Validation(Required=false)]
                 public string StepType { get; set; }
-
-                /// <summary>
-                /// <para>The tenant ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
-                [NameInMap("TenantId")]
-                [Validation(Required=false)]
-                public long? TenantId { get; set; }
 
                 /// <summary>
                 /// <para>The timeout period of task running. Unit: seconds.</para>

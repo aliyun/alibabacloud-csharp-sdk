@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Validation(Required=false)]
                     public CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical Critical { get; set; }
                     public class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical : TeaModel {
+                        [NameInMap("Expression")]
+                        [Validation(Required=false)]
+                        public string Expression { get; set; }
+
                         /// <summary>
                         /// <para>The comparison operator. Valid values:</para>
                         /// <list type="bullet">
@@ -85,6 +89,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Validation(Required=false)]
                     public CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected Expected { get; set; }
                     public class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected : TeaModel {
+                        [NameInMap("Expression")]
+                        [Validation(Required=false)]
+                        public string Expression { get; set; }
+
                         /// <summary>
                         /// <para>The comparison operator. Valid values:</para>
                         /// <list type="bullet">
@@ -122,6 +130,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Validation(Required=false)]
                     public CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned Warned { get; set; }
                     public class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned : TeaModel {
+                        [NameInMap("Expression")]
+                        [Validation(Required=false)]
+                        public string Expression { get; set; }
+
                         /// <summary>
                         /// <para>The comparison operator. Valid values:</para>
                         /// <list type="bullet">

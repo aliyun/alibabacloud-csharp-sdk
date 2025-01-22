@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListResourceGroupsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListResourceGroupsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListResourceGroupsResponseBodyPagingInfo : TeaModel {
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -29,6 +36,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// <para>The resource groups returned.</para>
+            /// </summary>
             [NameInMap("ResourceGroupList")]
             [Validation(Required=false)]
             public List<ListResourceGroupsResponseBodyPagingInfoResourceGroupList> ResourceGroupList { get; set; }
@@ -98,6 +108,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string OrderInstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The billing method of the resource group. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>PrePaid</para>
                 /// </summary>
@@ -114,6 +126,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Remark { get; set; }
 
                 /// <summary>
+                /// <para>The type of the resource group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>CommonV2: serverless resource group</description></item>
+                /// <item><description>ExclusiveDataIntegration: exclusive resource group for Data Integration</description></item>
+                /// <item><description>ExclusiveScheduler: exclusive resource group for scheduling</description></item>
+                /// <item><description>ExclusiveDataService: exclusive resource group for DataService Studio</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>CommonV2</para>
                 /// </summary>
@@ -144,6 +164,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
+                /// <para>The status of the resource group. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Normal: The resource group is running or in use.</description></item>
+                /// <item><description>Stop: The resource group is expired.</description></item>
+                /// <item><description>Deleted: The resource group is released or destroyed.</description></item>
+                /// <item><description>Creating: The resource group is being started.</description></item>
+                /// <item><description>CreateFailed: The resource group fails to be started.</description></item>
+                /// <item><description>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</description></item>
+                /// <item><description>UpdateFailed: The resource group fails to be scaled out or upgraded.</description></item>
+                /// <item><description>Deleting: The resource group is being released or destroyed.</description></item>
+                /// <item><description>DeleteFailed: The resource group fails to be released or destroyed.</description></item>
+                /// <item><description>Timeout: The operations that are performed on the resource group time out.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
                 /// </summary>
@@ -164,7 +198,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>

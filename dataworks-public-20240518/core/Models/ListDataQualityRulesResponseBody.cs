@@ -382,16 +382,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string DatabaseType { get; set; }
 
                     /// <summary>
-                    /// <para>The configuration of the partitioned table.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>ds=$[yyyymmdd-1]</para>
-                    /// </summary>
-                    [NameInMap("PartitionSpec")]
-                    [Validation(Required=false)]
-                    public string PartitionSpec { get; set; }
-
-                    /// <summary>
                     /// <para>The ID of the table that is limited by the rule in Data Map.</para>
                     /// 
                     /// <b>Example:</b>

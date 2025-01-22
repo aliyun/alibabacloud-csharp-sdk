@@ -102,15 +102,29 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         [Validation(Required=false)]
                         public string ReferencedSamplesFilter { get; set; }
 
+                        /// <summary>
+                        /// <para>The threshold settings.</para>
+                        /// </summary>
                         [NameInMap("Thresholds")]
                         [Validation(Required=false)]
                         public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholds Thresholds { get; set; }
                         public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholds : TeaModel {
+                            /// <summary>
+                            /// <para>The threshold settings for critical alerts.</para>
+                            /// </summary>
                             [NameInMap("Critical")]
                             [Validation(Required=false)]
                             public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsCritical Critical { get; set; }
                             public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsCritical : TeaModel {
                                 /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>$checkValue &gt; 0.01</para>
+                                /// </summary>
+                                [NameInMap("Expression")]
+                                [Validation(Required=false)]
+                                public string Expression { get; set; }
+
+                                /// <summary>
                                 /// <list type="bullet">
                                 /// <item><description>\&gt;</description></item>
                                 /// <item><description>\&gt;=</description></item>
@@ -138,11 +152,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                             }
 
+                            /// <summary>
+                            /// <para>The expected threshold setting.</para>
+                            /// </summary>
                             [NameInMap("Expected")]
                             [Validation(Required=false)]
                             public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsExpected Expected { get; set; }
                             public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsExpected : TeaModel {
                                 /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>$checkValue &gt; 0.01</para>
+                                /// </summary>
+                                [NameInMap("Expression")]
+                                [Validation(Required=false)]
+                                public string Expression { get; set; }
+
+                                /// <summary>
                                 /// <list type="bullet">
                                 /// <item><description>\&gt;</description></item>
                                 /// <item><description>\&gt;=</description></item>
@@ -170,10 +195,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                             }
 
+                            /// <summary>
+                            /// <para>The threshold settings for normal alerts.</para>
+                            /// </summary>
                             [NameInMap("Warned")]
                             [Validation(Required=false)]
                             public ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsWarned Warned { get; set; }
                             public class ListDataQualityResultsResponseBodyPagingInfoDataQualityResultsRuleCheckingConfigThresholdsWarned : TeaModel {
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>$checkValue &gt; 0.01</para>
+                                /// </summary>
+                                [NameInMap("Expression")]
+                                [Validation(Required=false)]
+                                public string Expression { get; set; }
+
                                 /// <summary>
                                 /// <list type="bullet">
                                 /// <item><description>\&gt;</description></item>
@@ -389,14 +425,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         [NameInMap("DatabaseType")]
                         [Validation(Required=false)]
                         public string DatabaseType { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>ds=$[yyyymmdd-1]</para>
-                        /// </summary>
-                        [NameInMap("PartitionSpec")]
-                        [Validation(Required=false)]
-                        public string PartitionSpec { get; set; }
 
                         /// <summary>
                         /// <b>Example:</b>

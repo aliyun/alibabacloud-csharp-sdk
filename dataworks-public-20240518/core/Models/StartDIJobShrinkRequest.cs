@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DIJobId { get; set; }
 
         /// <summary>
+        /// <para>Deprecated</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -40,6 +42,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// <para>The settings for starting real-time synchronization.</para>
+        /// </summary>
         [NameInMap("RealtimeStartSettings")]
         [Validation(Required=false)]
         public string RealtimeStartSettingsShrink { get; set; }

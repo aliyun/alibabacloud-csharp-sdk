@@ -1,3 +1,36 @@
+2025-01-22 Version: 3.0.0
+- Support API BatchUpdateTasks.
+- Support API CreateWorkflowInstances.
+- Support API DeleteWorkflow.
+- Support API ExecuteAdhocWorkflowInstance.
+- Support API GetCreateWorkflowInstancesResult.
+- Support API GetWorkflow.
+- Support API GetWorkflowInstance.
+- Support API ListWorkflowInstances.
+- Support API ListWorkflows.
+- Support API StartWorkflowInstances.
+- Support API StopWorkflowInstances.
+- Support API UpdateTask.
+- Support API UpdateWorkflow.
+- Update API CreateDataQualityEvaluationTask: update param DataQualityRules.
+- Update API GetDataQualityEvaluationTask: update response param.
+- Update API GetTask: update response param.
+- Update API GetTaskInstance: update response param.
+- Update API ListDataQualityEvaluationTaskInstances: update response param.
+- Update API ListDataQualityResults: update response param.
+- Update API ListDataQualityRules: update response param.
+- Update API ListDownstreamTaskInstances: update response param.
+- Update API ListDownstreamTasks: update response param.
+- Update API ListTaskInstances: update response param.
+- Update API ListTasks: add param Ids.
+- Update API ListTasks: update response param.
+- Update API ListUpstreamTaskInstances: update response param.
+- Update API ListUpstreamTasks: update response param.
+- Update API UpdateDataQualityEvaluationTask: update param DataQualityRules.
+- Update API UpdateDataQualityRule: delete param Target.
+- Update API UpdateTaskInstances: update param RegionId.
+
+
 2025-01-14 Version: 2.0.0
 - Support API CreateDataAssetTag.
 - Support API DeleteDataAssetTag.

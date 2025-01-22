@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListTasksRequest : TeaModel {
+        [NameInMap("Ids")]
+        [Validation(Required=false)]
+        public List<long?> Ids { get; set; }
+
         /// <summary>
         /// <para>The name of the task. Fuzzy match is supported.</para>
         /// </summary>

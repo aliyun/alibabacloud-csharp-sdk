@@ -41,15 +41,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public CreateDataQualityRuleRequestCheckingConfigThresholdsCritical Critical { get; set; }
                 public class CreateDataQualityRuleRequestCheckingConfigThresholdsCritical : TeaModel {
                     /// <summary>
-                    /// <para>阈值表达式。</para>
-                    /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
-                    /// <list type="bullet">
-                    /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
-                    /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
-                    /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
-                    /// </list>
-                    /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</para>
-                    /// 
                     /// <b>Example:</b>
                     /// <para>$checkValue &gt; 0.05</para>
                     /// </summary>
@@ -96,15 +87,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public CreateDataQualityRuleRequestCheckingConfigThresholdsExpected Expected { get; set; }
                 public class CreateDataQualityRuleRequestCheckingConfigThresholdsExpected : TeaModel {
                     /// <summary>
-                    /// <para>阈值表达式。</para>
-                    /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
-                    /// <list type="bullet">
-                    /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
-                    /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
-                    /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
-                    /// </list>
-                    /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</para>
-                    /// 
                     /// <b>Example:</b>
                     /// <para>$checkValue &lt;= 0.01</para>
                     /// </summary>
@@ -151,15 +133,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public CreateDataQualityRuleRequestCheckingConfigThresholdsWarned Warned { get; set; }
                 public class CreateDataQualityRuleRequestCheckingConfigThresholdsWarned : TeaModel {
                     /// <summary>
-                    /// <para>阈值表达式。</para>
-                    /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
-                    /// <list type="bullet">
-                    /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
-                    /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
-                    /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
-                    /// </list>
-                    /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</para>
-                    /// 
                     /// <b>Example:</b>
                     /// <para>$checkValue &gt; 0.01</para>
                     /// </summary>
@@ -231,7 +204,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the rule.</para>
+        /// <para>Specifies whether to enable the monitoring rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -359,7 +332,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The strength of the rule. Valid values:</para>
+        /// <para>The strength of the rule.</para>
         /// <list type="bullet">
         /// <item><description>Normal</description></item>
         /// <item><description>High</description></item>

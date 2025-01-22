@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityRuleTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>UserDefined:3001</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }

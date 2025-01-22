@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListDIAlarmRulesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListDIAlarmRulesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The alert rules returned.</para>
+            /// <para>The alert rules.</para>
             /// </summary>
             [NameInMap("DIJobAlarmRules")]
             [Validation(Required=false)]
@@ -123,6 +123,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Obsolete]
                     public long? InhibitionInterval { get; set; }
 
+                    /// <summary>
+                    /// <para>The duration of the alert suppression interval. Unit: minutes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5</para>
+                    /// </summary>
                     [NameInMap("MuteInterval")]
                     [Validation(Required=false)]
                     public long? MuteInterval { get; set; }
@@ -206,6 +212,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Obsolete]
                     public List<string> DdlReportTags { get; set; }
 
+                    /// <summary>
+                    /// <para>The types of DDL operations for which the alert rule takes effect. This parameter is returned only if the MetricType parameter is set to DdlReport.</para>
+                    /// </summary>
                     [NameInMap("DdlTypes")]
                     [Validation(Required=false)]
                     public List<string> DdlTypes { get; set; }

@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The description of the alert rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The description of the alert rule.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -50,6 +53,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>The alert rule Id</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34982</para>
         /// </summary>
@@ -104,6 +109,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Obsolete]
             public long? InhibitionInterval { get; set; }
 
+            /// <summary>
+            /// <para>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("MuteInterval")]
             [Validation(Required=false)]
             public long? MuteInterval { get; set; }
@@ -193,6 +204,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Obsolete]
             public List<string> DdlReportTags { get; set; }
 
+            /// <summary>
+            /// <para>The types of DDL operations for which the alert rule takes effect.</para>
+            /// </summary>
             [NameInMap("DdlTypes")]
             [Validation(Required=false)]
             public List<string> DdlTypes { get; set; }

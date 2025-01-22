@@ -259,6 +259,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
+            /// <para>The status of the job.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Running</para>
             /// </summary>

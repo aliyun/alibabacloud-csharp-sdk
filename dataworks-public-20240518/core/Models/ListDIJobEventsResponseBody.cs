@@ -55,6 +55,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The alert details.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aggregator:avg [**] for 5 minutes, service maybe abnormal</para>
                 /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
@@ -194,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>645F6D68-9C29-5961-80B1-BDD4B794C22D</para>

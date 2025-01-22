@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DIJobId { get; set; }
 
         /// <summary>
+        /// <para>Deprecated</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -40,11 +42,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// <para>The settings for starting real-time synchronization.</para>
+        /// </summary>
         [NameInMap("RealtimeStartSettings")]
         [Validation(Required=false)]
         public StartDIJobRequestRealtimeStartSettings RealtimeStartSettings { get; set; }
         public class StartDIJobRequestRealtimeStartSettings : TeaModel {
             /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// <para>The failover settings.</para>
+            /// </summary>
             [NameInMap("FailoverSettings")]
             [Validation(Required=false)]
             [Obsolete]
@@ -53,6 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
+                /// <para>The failover interval. Unit: minutes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -65,6 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
+                /// <para>The maximum number of failovers allowed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -77,6 +88,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
+            /// <para>The start time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1671516776</para>
             /// </summary>

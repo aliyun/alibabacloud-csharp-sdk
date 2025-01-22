@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The description of the alert rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The description of the alert rule.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -50,6 +53,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>The alert rule Id</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34982</para>
         /// </summary>
