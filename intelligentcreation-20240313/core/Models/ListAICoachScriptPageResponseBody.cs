@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public string CoverUrl { get; set; }
 
+            [NameInMap("dialogueTextFlag")]
+            [Validation(Required=false)]
+            public bool? DialogueTextFlag { get; set; }
+
             [NameInMap("dialogueTipFlag")]
             [Validation(Required=false)]
             public bool? DialogueTipFlag { get; set; }
@@ -150,6 +154,20 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                 [NameInMap("role")]
                 [Validation(Required=false)]
                 public string Role { get; set; }
+
+            }
+
+            [NameInMap("scoreConfig")]
+            [Validation(Required=false)]
+            public ListAICoachScriptPageResponseBodyListScoreConfig ScoreConfig { get; set; }
+            public class ListAICoachScriptPageResponseBodyListScoreConfig : TeaModel {
+                [NameInMap("enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+                [NameInMap("passScore")]
+                [Validation(Required=false)]
+                public int? PassScore { get; set; }
 
             }
 

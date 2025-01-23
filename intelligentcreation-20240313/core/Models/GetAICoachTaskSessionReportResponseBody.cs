@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("evaluationRating")]
+        [Validation(Required=false)]
+        public string EvaluationRating { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>{}</para>
