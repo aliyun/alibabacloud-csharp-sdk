@@ -9,9 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class Rules : TeaModel {
-        [NameInMap("SchedulingRule")]
+        [NameInMap("Scheduling")]
         [Validation(Required=false)]
-        public SchedulingRule SchedulingRule { get; set; }
+        public SchedulingRule Scheduling { get; set; }
 
     }
 
