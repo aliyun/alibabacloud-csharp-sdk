@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string VaultName { get; set; }
 
+        [NameInMap("WormEnabled")]
+        [Validation(Required=false)]
+        public bool? WormEnabled { get; set; }
+
     }
 
 }

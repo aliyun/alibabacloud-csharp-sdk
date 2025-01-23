@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeBackupJobs2Request : TeaModel {
         /// <summary>
-        /// <para>The keys in the filter.</para>
+        /// <para>The keys that you want to match in the filter.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<DescribeBackupJobs2RequestFilters> Filters { get; set; }
         public class DescribeBackupJobs2RequestFilters : TeaModel {
             /// <summary>
-            /// <para>The key in the filter. Valid values:</para>
+            /// <para>The keys in the filter. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>RegionId</b>: the ID of a region</description></item>
             /// <item><description><b>PlanId</b>: the ID of a backup plan</description></item>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <item><description><b>Status</b>: the status of a backup job</description></item>
             /// <item><description><b>CreatedTime</b>: the start time of a backup job</description></item>
             /// <item><description><b>CompleteTime</b>: the end time of a backup job</description></item>
-            /// <item><description><b>InstanceName</b>: the name of a Tablestore instance</description></item>
+            /// <item><description><b>instanceName</b>: the name of a Tablestore instance</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -48,11 +48,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <item><description><b>GREATER_THAN_OR_EQUAL</b>: greater than or equal to</description></item>
             /// <item><description><b>LESS_THAN</b>: less than</description></item>
             /// <item><description><b>LESS_THAN_OR_EQUAL</b>: less than or equal to</description></item>
-            /// <item><description><b>BETWEEN</b>: specifies a JSON array as a range. The results must fall within the range in the <c>[Minimum value,Maximum value]</c> format.</description></item>
+            /// <item><description><b>BETWEEN</b>: specifies a JSON array as a range. The results must fall within the range in the <c>[Minimum value,maximum value]</c> format.</description></item>
             /// <item><description><b>IN</b>: specifies an array as a collection. The results must fall within the collection.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>If you specify the <b>CompleteTime</b> parameter as a key to query backup jobs, you cannot use the IN operator to perform a match.</para>
+            /// <para> If you specify <b>CompleteTime</b> as a key to query backup jobs, you cannot use the IN operator to perform a match.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string Operator { get; set; }
 
             /// <summary>
-            /// <para>The variable values of the filter.</para>
+            /// <para>The values that you want to match in the filter.</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]

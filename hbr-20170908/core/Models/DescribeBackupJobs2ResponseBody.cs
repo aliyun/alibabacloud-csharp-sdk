@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DescribeBackupJobs2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The backup jobs that meet the specified conditions.</para>
+        /// <para>The returned backup jobs that meet the specified conditions.</para>
         /// </summary>
         [NameInMap("BackupJobs")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public List<DescribeBackupJobs2ResponseBodyBackupJobsBackupJob> BackupJob { get; set; }
             public class DescribeBackupJobs2ResponseBodyBackupJobsBackupJob : TeaModel {
                 /// <summary>
-                /// <para>The actual amount of data that is backed up after the system removes duplicate files. Unit: bytes.</para>
+                /// <para>The actual amount of data that is backed up after duplicates are removed. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>600</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? ActualFiles { get; set; }
 
                 /// <summary>
-                /// <para>The actual number of objects that are backed up by the backup job. This parameter is returned only if the value of <b>SourceType</b> is <b>ECS_FILE</b>.</para>
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter indicates the actual number of objects that are backed up by the backup job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? ActualItems { get; set; }
 
                 /// <summary>
-                /// <para>The backup type. Only <b>COMPLETE</b> may be returned, which indicates full backup.</para>
+                /// <para>The backup type. Valid value: <b>COMPLETE</b>, which indicates full backup.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>COMPLETE</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string BackupType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the OSS bucket that is backed up. This parameter is returned only if the value of <b>SourceType</b> is <b>OSS</b>.</para>
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>OSS</b>. This parameter indicates the name of the OSS bucket that is backed up.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hbr-backup-oss</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? BytesTotal { get; set; }
 
                 /// <summary>
-                /// <para>The configurations of the incremental file synchronization. This parameter is returned only for data synchronization.</para>
+                /// <para>The data source details at the destination. Thisparameter is returned only for data synchronization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;dataSourceId&quot;: &quot;ds-123456789&quot;, &quot;path&quot;: &quot;/changelist&quot;}</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string ChangeListPath { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the backup client. This parameter is returned only if the value of <b>SourceType</b> is <b>ECS_FILE</b>.</para>
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter indicates the ID of the backup client.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c-*********************</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string ClientId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the backup job was complete. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The time when the backup job was completed. This value is a UNIX timestamp. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1554347313</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? CompleteTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the file system was created. This parameter is returned only if the value of <b>SourceType</b> is <b>NAS</b>. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>NAS</b>. This parameter indicates the time when the file system was created. This value is a UNIX timestamp. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1607436917</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the backup job was created. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The time when the backup job was created. This value is a UNIX timestamp. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1554347313</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? CreatedTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</para>
+                /// <para>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BackupRole</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string CrossAccountRoleName { get; set; }
 
                 /// <summary>
-                /// <para>The backup type. Valid values:</para>
+                /// <para>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</description></item>
                 /// <item><description>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</description></item>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? CrossAccountUserId { get; set; }
 
                 /// <summary>
-                /// <para>The data source details at the destination. This parameter is returned only for data synchronization.</para>
+                /// <para>Destination data source details. (Required only for synchronization)</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;prefix\&quot;:\&quot;/\&quot;}</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string DestDataSourceDetail { get; set; }
 
                 /// <summary>
-                /// <para>The data source ID at the destination. This parameter is returned only for data synchronization.</para>
+                /// <para>Destination data source ID. (Required only for synchronization)</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ds-000cov4ufudxklj24zdk</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string DestDataSourceId { get; set; }
 
                 /// <summary>
-                /// <para>The data source type at the destination. This parameter is returned only for data synchronization.</para>
+                /// <para>Destination data source type. (Required only for synchronization)</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OSS</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string DestSourceType { get; set; }
 
                 /// <summary>
-                /// <para>The details of the ECS instance backup job.</para>
+                /// <para>The udm backup job detail.</para>
                 /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
@@ -295,24 +295,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                     public bool? DoCopy { get; set; }
 
                     /// <summary>
-                    /// <para>ECS instance information, including ECS instance name, instance type, etc.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>{
-                    ///   &quot;i-xxxxxxxx&quot;: {
-                    ///     &quot;hostName&quot;: &quot;test&quot;,
-                    ///     &quot;instanceName&quot;: &quot;test&quot;,
-                    ///     &quot;instanceType&quot;: &quot;ecs.c7.xlarge&quot;,
-                    ///     &quot;osType&quot;: &quot;linux&quot;,
-                    ///     &quot;diskIds&quot;: [
-                    ///       &quot;d-xxxxxxxx01&quot;,
-                    ///       &quot;d-xxxxxxxx02&quot;
-                    ///     ],
-                    ///     &quot;osNameEn&quot;: &quot;Rocky Linux 8.8 64 bit&quot;,
-                    ///     &quot;osName&quot;: &quot;Rocky Linux 8.8 64位&quot;,
-                    ///     &quot;platform&quot;: &quot;Rocky Linux&quot;
-                    ///   }
-                    /// }</para>
+                    /// <para>The ecs instance infos.</para>
                     /// </summary>
                     [NameInMap("InstanceInfos")]
                     [Validation(Required=false)]
@@ -341,7 +324,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The paths to the files that are excluded from the backup job. This parameter is returned only if the value of <b>SourceType</b> is <b>ECS_FILE</b>. The value can be up to 255 characters in length.</para>
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter indicates the paths to the files that are excluded from the backup job. The value must be 1 to 255 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;/var&quot;, &quot;/proc&quot;]</para>
@@ -351,7 +334,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Exclude { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the NAS file system. This parameter is returned only if the value of <b>SourceType</b> is <b>NAS</b>.</para>
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>NAS</b>. This parameter indicates the ID of the NAS file system.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>005494</para>
@@ -381,7 +364,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? FilesTotal { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the cluster that is backed up in the container backup job. This parameter is returned only if the value of SourceType is CONTAINER. If the cluster is a Container Service for Kubernetes (ACK) cluster, the value of this parameter is the ACK cluster ID.</para>
+                /// <para>The identifier of the container cluster. For a Container Service for Kubernetes (ACK) cluster, specify the cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c83**************************b76</para>
@@ -401,7 +384,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Include { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the ECS instance. This parameter is returned only if the value of <b>SourceType</b> is <b>NAS</b>.</para>
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>NAS</b>. This parameter indicates the ID of the ECS instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-*********************</para>
@@ -421,7 +404,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The number of objects that are backed up. This parameter is returned only if the value of <b>SourceType</b> is <b>ECS_FILE</b>.</para>
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter indicates the number of objects that are backed up.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -431,7 +414,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? ItemsDone { get; set; }
 
                 /// <summary>
-                /// <para>The total number of objects in the data source. This parameter is returned only if the value of <b>SourceType</b> is <b>ECS_FILE</b>.</para>
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter indicates the total number of objects in the data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -461,11 +444,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string JobName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path. This parameter is returned only if the value of <b>SourceType</b> is <b>ECS_FILE</b>.</para>
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter indicates whether Windows VSS is used to define a backup path.</para>
                 /// <list type="bullet">
                 /// <item><description>This parameter is available only for Windows ECS instances.</description></item>
-                /// <item><description>A value of <c>[&quot;UseVSS&quot;:true]</c> indicates that the consistency between the source data and backup data is ensured while data changes occur in the source data.</description></item>
-                /// <item><description>If VSS is used, multiple directories cannot be backed up at a time.</description></item>
+                /// <item><description>If data changes occur in the backup source, the source data must be the same as the data to be backed up before the system sets this parameter to <c>[&quot;UseVSS&quot;:true]</c>.</description></item>
+                /// <item><description>If you use VSS, you cannot back up data from multiple directories.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -476,14 +459,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Options { get; set; }
 
                 /// <summary>
-                /// <para>The details of the Tablestore instance.</para>
+                /// <para>The details about the Tablestore instance.</para>
                 /// </summary>
                 [NameInMap("OtsDetail")]
                 [Validation(Required=false)]
                 public DescribeBackupJobs2ResponseBodyBackupJobsBackupJobOtsDetail OtsDetail { get; set; }
                 public class DescribeBackupJobs2ResponseBodyBackupJobsBackupJobOtsDetail : TeaModel {
                     /// <summary>
-                    /// <para>The names of the tables in the Tablestore instance.</para>
+                    /// <para>The names of the destination tables in the Tablestore instance.</para>
                     /// </summary>
                     [NameInMap("TableNames")]
                     [Validation(Required=false)]
@@ -498,7 +481,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 }
 
                 /// <summary>
-                /// <para>The source paths.</para>
+                /// <para>The backup paths.</para>
                 /// </summary>
                 [NameInMap("Paths")]
                 [Validation(Required=false)]
@@ -521,7 +504,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string PlanId { get; set; }
 
                 /// <summary>
-                /// <para>The prefix of objects that are backed up. This parameter is returned only if the value of <b>SourceType</b> is <b>OSS</b>.</para>
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>OSS</b>. This parameter indicates the prefix of objects that are backed up.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example/</para>
@@ -531,7 +514,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Prefix { get; set; }
 
                 /// <summary>
-                /// <para>The backup progress. Valid values: 0 to 10000. For example, a value of 10000 indicates that the progress is 100%.</para>
+                /// <para>The backup progress. For example, 10000 indicates that the progress is 100%.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -543,9 +526,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 /// <summary>
                 /// <para>The type of the data source. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>ECS_FILE</b>: ECS file.</description></item>
-                /// <item><description><b>OSS</b>: OSS bucket.</description></item>
-                /// <item><description><b>NAS</b>: NAS file system.</description></item>
+                /// <item><description><b>ECS_FILE</b>: ECS files</description></item>
+                /// <item><description><b>OSS</b>: OSS buckets</description></item>
+                /// <item><description><b>NAS</b>: NAS file systems</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -566,9 +549,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? Speed { get; set; }
 
                 /// <summary>
-                /// <para>The throttling rules. This parameter is returned only if the value of <b>SourceType</b> is <b>ECS_FILE</b>. Format: <c>{start}:{end}:{bandwidth}</c>. Multiple throttling rules are separated by vertical bars (<c>|</c>). The time ranges of the throttling rules cannot overlap.</para>
+                /// <para>This parameter is returned only if the <b>SourceType</b> parameter is set to <b>ECS_FILE</b>. This parameter indicates the throttling rules. Format: <c>{start}{end}{bandwidth}</c>. Multiple throttling rules are separated with vertical bars (<c>{start}|{end}|{bandwidth}</c>). A specified time range cannot overlap with another one.</para>
                 /// <list type="bullet">
-                /// <item><description><b>start</b>: the start hour.</description></item>
+                /// <item><description><b>start</b>: the start hour</description></item>
                 /// <item><description><b>end</b>: the end hour</description></item>
                 /// <item><description><b>bandwidth</b>: the bandwidth. Unit: KB/s.</description></item>
                 /// </list>
@@ -581,7 +564,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string SpeedLimit { get; set; }
 
                 /// <summary>
-                /// <para>The time when the backup job started. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The time when the backup job started. This value is a UNIX timestamp. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1554347313</para>
@@ -591,11 +574,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The state of the backup job. Valid values:</para>
+                /// <para>The status of the backup job. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>COMPLETE</b></description></item>
-                /// <item><description><b>PARTIAL_COMPLETE</b></description></item>
-                /// <item><description><b>FAILED</b></description></item>
+                /// <item><description><b>COMPLETE</b>: The backup job is completed.</description></item>
+                /// <item><description><b>PARTIAL_COMPLETE</b>: The backup job is partially completed.</description></item>
+                /// <item><description><b>FAILED</b>: The restore job has failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -606,7 +589,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The name of the table in the Tablestore instance.</para>
+                /// <para>The name of a destination table in the Tablestore instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>table1</para>
@@ -616,7 +599,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the backup job was last updated. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The time when the backup job was updated. This value is a UNIX timestamp. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1554347313</para>
@@ -670,7 +653,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.</para>
+        /// <para>The number of entries returned per page. Valid values: 1 to 99. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -690,7 +673,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// <list type="bullet">
         /// <item><description>true: The call is successful.</description></item>
         /// <item><description>false: The call fails.</description></item>

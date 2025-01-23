@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class CreateRestoreJobRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</para>
+        /// <para>The name of the role created in the RAM of the original account for cross-account backup managed by the current account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BackupRole</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string CrossAccountRoleName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</para>
+        /// <para>Cross-account backup type. Supported values:</para>
         /// <list type="bullet">
-        /// <item><description>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</description></item>
-        /// <item><description>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</description></item>
+        /// <item><description>SELF_ACCOUNT: Backup within the same account</description></item>
+        /// <item><description>CROSS_ACCOUNT: Cross-account backup</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string CrossAccountType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</para>
+        /// <para>The original account ID managed by the current account for cross-account backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>158975xxxxx4625</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? CrossAccountUserId { get; set; }
 
         /// <summary>
-        /// <para>The paths to the files that you do not want to restore. No files in the specified paths are restored. The value must be 1 to 255 characters in length.</para>
+        /// <para>The path not to be restored. All documents under this path will not be restored. Maximum length is 255 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;/var&quot;, &quot;/proc&quot;]</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Exclude { get; set; }
 
         /// <summary>
-        /// <para>Details of restoration to local.</para>
+        /// <para>Details of restoring to the local environment.</para>
         /// </summary>
         [NameInMap("FailbackDetail")]
         [Validation(Required=false)]
         public Dictionary<string, object> FailbackDetail { get; set; }
 
         /// <summary>
-        /// <para>The paths to the files that you want to restore. All files in the specified paths are restored. The value must be 1 to 255 characters in length.</para>
+        /// <para>The path to be restored. All documents under this path will be restored. Maximum length is 255 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Include { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to initiate the request by using Container Service for Kubernetes (ACK). Default value: false.</para>
+        /// <para>Indicates whether it is called by the container service. Default is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? InitiatedByAck { get; set; }
 
         /// <summary>
-        /// <para>Parameters for restoring a task</para>
+        /// <para>Parameters for the restore job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;includes\&quot;:[],\&quot;excludes\&quot;:[],\&quot;conflictPolicy\&quot;:\&quot;OVERWRITE_EXISTING\&quot;}</para>
@@ -91,20 +91,20 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>The details about the Tablestore instance.</para>
+        /// <para>Details of the Table Store instance.</para>
         /// </summary>
         [NameInMap("OtsDetail")]
         [Validation(Required=false)]
         public OtsTableRestoreDetail OtsDetail { get; set; }
 
         /// <summary>
-        /// <para>The type of the restore destination. Valid values:</para>
+        /// <para>The type of the restore destination data source. Possible values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS_FILE</b>: restores data to Elastic Compute Service (ECS) files.</description></item>
-        /// <item><description><b>OSS</b>: restores data to Object Storage Service (OSS) buckets.</description></item>
-        /// <item><description><b>NAS</b>: restores data to Apsara File Storage NAS file systems.</description></item>
-        /// <item><description><b>OTS_TABLE</b>: restores data to Tablestore instances.</description></item>
-        /// <item><description><b>UDM_ECS_ROLLBACK</b>: restores data to ECS instances.</description></item>
+        /// <item><description><b>ECS_FILE</b>: Restore to ECS file.</description></item>
+        /// <item><description><b>OSS</b>: Restore to Alibaba Cloud OSS.</description></item>
+        /// <item><description><b>NAS</b>: Restore to Alibaba Cloud NAS.</description></item>
+        /// <item><description><b>OTS_TABLE</b>: Restore to Alibaba Cloud OTS.</description></item>
+        /// <item><description><b>UDM_ECS_ROLLBACK</b>: Restore to Alibaba Cloud ECS whole machine.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string RestoreType { get; set; }
 
         /// <summary>
-        /// <para>The hash value of the backup snapshot.</para>
+        /// <para>The HASH value of the backup snapshot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f2fe...</para>
@@ -136,13 +136,13 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Valid values:</para>
+        /// <para>The type of the data source. Possible values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS_FILE</b>: ECS files</description></item>
-        /// <item><description><b>OSS</b>: OSS buckets</description></item>
-        /// <item><description><b>NAS</b>: NAS file systems</description></item>
-        /// <item><description><b>OTS_TABLE</b>: Tablestore instances</description></item>
-        /// <item><description><b>UDM_ECS</b>: ECS instances</description></item>
+        /// <item><description><b>ECS_FILE</b>: Restore ECS file.</description></item>
+        /// <item><description><b>OSS</b>: Restore Alibaba Cloud OSS.</description></item>
+        /// <item><description><b>NAS</b>: Restore Alibaba Cloud NAS.</description></item>
+        /// <item><description><b>OTS_TABLE</b>: Restore to Alibaba Cloud OTS.</description></item>
+        /// <item><description><b>UDM_ECS</b>: Restore to Alibaba Cloud ECS whole machine.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only if the <b>RestoreType</b> parameter is set to <b>OSS</b>. This parameter specifies the name of the OSS bucket to which you want to restore data.</para>
+        /// <para>Valid only when <b>RestoreType</b> is <b>OSS</b>. Indicates the name of the OSS bucket at the restore destination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hbr-backup-oss</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string TargetBucket { get; set; }
 
         /// <summary>
-        /// <para>The details about the container to which you want to restore data.</para>
+        /// <para>Details of the target container.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;host\&quot;:\&quot;k8s-node1\&quot;,\&quot;hostPrefix\&quot;:\&quot;/var/lib/kubelet/pods/4acb31fe-8577-40ff-bc8c-eccabd835f73/volumes/kubernetes.io~csi/pvc-b050b00e-ef17-4792-aab1-1642355cf1f4/mount\&quot;,\&quot;pvPath\&quot;:\&quot;/\&quot;}</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string TargetContainer { get; set; }
 
         /// <summary>
-        /// <para>The ID of the container cluster to which you want to restore data.</para>
+        /// <para>The ID of the target container cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-000amjsc7o1h9506oob7</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string TargetContainerClusterId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only if the <b>RestoreType</b> parameter is set to <b>NAS</b>. This parameter specifies the time when the file system is created.</para>
+        /// <para>Valid only when <b>RestoreType</b> is <b>NAS</b>. Indicates the creation time of the file system at the restore destination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1554347313</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? TargetCreateTime { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only if the <b>RestoreType</b> parameter is set to <b>NAS</b>. This parameter specifies the ID of the file system to which you want to restore data.</para>
+        /// <para>Valid only when <b>RestoreType</b> is <b>NAS</b>. Indicates the ID of the file system at the restore destination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>005494</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string TargetFileSystemId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only if the <b>RestoreType</b> parameter is set to <b>ECS_FILE</b>. This parameter specifies the ID of the ECS instance to which you want to restore data.</para>
+        /// <para>Valid only when <b>RestoreType</b> is <b>ECS_FILE</b>. Indicates the ECS instance ID at the restore destination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-*********************</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string TargetInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Tablestore instance to which you want to restore data.</para>
+        /// <para>The name of the target Table Store instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instancename</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string TargetInstanceName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only if the <b>RestoreType</b> parameter is set to <b>ECS_FILE</b>. This parameter specifies the destination file path.</para>
+        /// <para>Valid only when <b>RestoreType</b> is <b>ECS_FILE</b>. Indicates the file path at the restore destination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C:\</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string TargetPath { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only if the <b>RestoreType</b> parameter is set to <b>OSS</b>. This parameter specifies the prefix of objects that you want to restore.</para>
+        /// <para>Valid only when <b>RestoreType</b> is <b>OSS</b>. Indicates the object prefix at the restore destination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hbr</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string TargetPrefix { get; set; }
 
         /// <summary>
-        /// <para>The name of the table that stores the restored data.</para>
+        /// <para>The name of the data table in the target Table Store.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tablename</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string TargetTableName { get; set; }
 
         /// <summary>
-        /// <para>The time when data is restored to the Tablestore instance. The value must be a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The time of the Table Store to be restored. UNIX timestamp, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1642496881</para>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public long? TargetTime { get; set; }
 
         /// <summary>
-        /// <para>The details of ECS instance backup.</para>
+        /// <para>Details of the whole machine backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;sourceInstanceId\&quot;:\&quot;i-uf62te6pm3iwsyxyz66q\&quot;,\&quot;bootAfterRestore\&quot;:false}</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public Dictionary<string, object> UdmDetail { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required only if you set the <b>SourceType</b> parameter to <b>UDM_ECS</b>. This parameter specifies the region to which you want to restore data.</para>
+        /// <para>Valid only when <b>SourceType</b> is <b>UDM_ECS</b>. Indicates the target region for the restore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string UdmRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup vault to which the backup snapshot belongs.</para>
+        /// <para>The ID of the backup vault that the snapshot belongs to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-*********************</para>
