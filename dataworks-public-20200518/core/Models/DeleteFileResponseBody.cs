@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? DeploymentId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the file. You can use the ListFiles interface to query the ID of the corresponding file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ConnectionNotExists</para>
         /// </summary>

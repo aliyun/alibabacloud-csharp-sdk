@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class CreateDIJobRequest : TeaModel {
         /// <summary>
         /// <para>The description of the synchronization task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Synchronize mysql to hologres</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -43,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The type of the destination. Valid values: Hologres and Hive.</para>
+        /// <para>The destination type. Valid values: Hologres and Hive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hologres</para>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<CreateDIJobRequestJobSettingsColumnDataTypeSettings> ColumnDataTypeSettings { get; set; }
             public class CreateDIJobRequestJobSettingsColumnDataTypeSettings : TeaModel {
                 /// <summary>
-                /// <para>The data type of a destination field.</para>
+                /// <para>The data type of the destination field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DestinationDataType { get; set; }
 
                 /// <summary>
-                /// <para>The data type of a source field.</para>
+                /// <para>The data type of the source field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bigint</para>
@@ -149,7 +152,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<CreateDIJobRequestJobSettingsDdlHandlingSettings> DdlHandlingSettings { get; set; }
             public class CreateDIJobRequestJobSettingsDdlHandlingSettings : TeaModel {
                 /// <summary>
-                /// <para>The processing policy for DDL messages. Valid values:</para>
+                /// <para>The processing policy. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Ignore: ignores a DDL message.</description></item>
                 /// <item><description>Critical: reports an error for a DDL message.</description></item>
@@ -223,14 +226,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The name of the configuration item. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>runtime.offline.speed.limit.mb: indicates the maximum transmission rate that is allowed for a batch synchronization task. This configuration item takes effect only when runtime.offline.speed.limit.enable is set to true.</description></item>
-                /// <item><description>runtime.offline.speed.limit.enable: indicates whether throttling is enabled for a batch synchronization task.</description></item>
-                /// <item><description>dst.offline.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a batch synchronization task.</description></item>
-                /// <item><description>runtime.offline.concurrent: indicates the maximum number of parallel threads that are allowed for a batch synchronization task.</description></item>
-                /// <item><description>dst.realtime.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a real-time synchronization task.</description></item>
-                /// <item><description>runtime.enable.auto.create.schema: indicates whether schemas are automatically created in the destination of a synchronization task.</description></item>
-                /// <item><description>src.offline.datasource.max.connection: indicates the maximum number of connections that are allowed for reading data from the source of a batch synchronization task.</description></item>
-                /// <item><description>runtime.realtime.concurrent: indicates the maximum number of parallel threads that are allowed for a real-time synchronization task.</description></item>
+                /// <item><description>runtime.offline.speed.limit.mb: specifies the maximum transmission rate that is allowed for a batch synchronization task. This configuration item takes effect only when runtime.offline.speed.limit.enable is set to true.</description></item>
+                /// <item><description>runtime.offline.speed.limit.enable: specifies whether throttling is enabled for a batch synchronization task.</description></item>
+                /// <item><description>dst.offline.connection.max: specifies the maximum number of connections that are allowed for writing data to the destination of a batch synchronization task.</description></item>
+                /// <item><description>runtime.offline.concurrent: specifies the maximum number of parallel threads that are allowed for a batch synchronization task.</description></item>
+                /// <item><description>dst.realtime.connection.max: specifies the maximum number of connections that are allowed for writing data to the destination of a real-time synchronization task.</description></item>
+                /// <item><description>runtime.enable.auto.create.schema: specifies whether schemas are automatically created in the destination of a synchronization task.</description></item>
+                /// <item><description>src.offline.datasource.max.connection: specifies the maximum number of connections that are allowed for reading data from the source of a batch synchronization task.</description></item>
+                /// <item><description>runtime.realtime.concurrent: specifies the maximum number of parallel threads that are allowed for a real-time synchronization task.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -326,6 +329,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             }
 
+            /// <summary>
+            /// <para>The number of compute units (CUs) in the resource group that are used for incremental and full synchronization.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2.0</para>
+            /// </summary>
             [NameInMap("RequestedCu")]
             [Validation(Required=false)]
             public float? RequestedCu { get; set; }
@@ -359,7 +368,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The type of the source. Set the value to MySQL.</para>
+        /// <para>The source type. Set this parameter to MySQL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -386,7 +395,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public List<CreateDIJobRequestTableMappings> TableMappings { get; set; }
         public class CreateDIJobRequestTableMappings : TeaModel {
             /// <summary>
-            /// <para>The rule used to select synchronization objects in the source. You can configure multiple rules.</para>
+            /// <para>The rules used to select synchronization objects in the source.</para>
             /// </summary>
             [NameInMap("SourceObjectSelectionRules")]
             [Validation(Required=false)]
@@ -403,7 +412,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Expression { get; set; }
 
                 /// <summary>
-                /// <para>The type of the object. Valid values:</para>
+                /// <para>The object type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Table</description></item>
                 /// <item><description>Database</description></item>
@@ -419,14 +428,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The transformation rules applied to the selected synchronization objects.</para>
+            /// <para>The list of transformation rules that you want to apply to the synchronization objects selected from the source.</para>
             /// </summary>
             [NameInMap("TransformationRules")]
             [Validation(Required=false)]
             public List<CreateDIJobRequestTableMappingsTransformationRules> TransformationRules { get; set; }
             public class CreateDIJobRequestTableMappingsTransformationRules : TeaModel {
                 /// <summary>
-                /// <para>The type of the action. Valid values:</para>
+                /// <para>The action type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>DefinePrimaryKey</description></item>
                 /// <item><description>Rename</description></item>
@@ -474,14 +483,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</para>
+        /// <para>The list of transformation rules that you want to apply to the synchronization objects selected from the source. Each entry in the list defines a transformation rule.</para>
         /// </summary>
         [NameInMap("TransformationRules")]
         [Validation(Required=false)]
         public List<CreateDIJobRequestTransformationRules> TransformationRules { get; set; }
         public class CreateDIJobRequestTransformationRules : TeaModel {
             /// <summary>
-            /// <para>The type of the action. Valid values:</para>
+            /// <para>The action type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>DefinePrimaryKey</description></item>
             /// <item><description>Rename</description></item>
@@ -510,7 +519,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>Example of a rule used to add a specific field to the destination and assign a value to the field: {&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}</para>
             /// <list type="bullet">
             /// <item><description>If you do not configure such a rule, no fields are added to the destination and no values are assigned by default.</description></item>
-            /// <item><description>columnName: the name of the field that you want to add.</description></item>
+            /// <item><description>columnName: the name of the field that is added.</description></item>
             /// <item><description>columnValueType: the type of the value of the field. Valid values: Constant and Variable.</description></item>
             /// <item><description>columnValue: the value of the field that you want to add. If you set the valueType parameter to Constant, set the columnValue parameter to a custom constant of the STRING type. If you set the valueType parameter to Variable, set the columnValue to a built-in variable. The following built-in variables are supported: EXECUTE_TIME (LONG data type), DB_NAME_SRC (STRING data type), DATASOURCE_NAME_SRC (STRING data type), TABLE_NAME_SRC (STRING data type), DB_NAME_DEST (STRING data type), DATASOURCE_NAME_DEST (STRING data type), TABLE_NAME_DEST (STRING data type), and DB_NAME_SRC_TRANSED (STRING data type). EXECUTE_TIME specifies the execution time. DB_NAME_SRC specifies the name of a source database. DATASOURCE_NAME_SRC specifies the name of the source. TABLE_NAME_SRC specifies the name of a source table. DB_NAME_DEST specifies the name of a destination database. DATASOURCE_NAME_DEST specifies the name of the destination. TABLE_NAME_DEST specifies the name of a destination table. DB_NAME_SRC_TRANSED specifies the database name obtained after a transformation.</description></item>
             /// </list>

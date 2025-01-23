@@ -10,17 +10,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetDeploymentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data about the deployment task.</para>
+        /// <para>The details of the deployment package.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDeploymentResponseBodyData Data { get; set; }
         public class GetDeploymentResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The deployed items.</para>
+            /// </summary>
             [NameInMap("DeployedItems")]
             [Validation(Required=false)]
             public List<GetDeploymentResponseBodyDataDeployedItems> DeployedItems { get; set; }
             public class GetDeploymentResponseBodyDataDeployedItems : TeaModel {
                 /// <summary>
+                /// <para>The file ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>507642378</para>
                 /// </summary>
@@ -29,6 +34,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FileId { get; set; }
 
                 /// <summary>
+                /// <para>The version of the file.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>7</para>
                 /// </summary>
@@ -37,6 +44,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? FileVersion { get; set; }
 
                 /// <summary>
+                /// <list type="bullet">
+                /// <item><description>UNPUBLISHED(0): not published</description></item>
+                /// <item><description>SUCCESS(1): Published</description></item>
+                /// <item><description>ERROR(2): Publishing failed</description></item>
+                /// <item><description>CLONED(3): successfully CLONED</description></item>
+                /// <item><description>DEPLOY_ERROR(4): Publishing failed</description></item>
+                /// <item><description>CLONING(5): CLONING</description></item>
+                /// <item><description>REJECT(6): release rejected</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -89,6 +106,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The error message that was returned when the deployment task failed. In this case, the value of the Status parameter is 2.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Success</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]

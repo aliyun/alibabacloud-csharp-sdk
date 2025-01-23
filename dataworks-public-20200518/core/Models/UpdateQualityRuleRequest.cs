@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: The monitoring rule is a strong rule.</description></item>
-        /// <item><description>0: The monitoring rule is a weak rule. You can specify the strength of a monitoring rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</description></item>
+        /// <item><description>1: indicates that the monitoring rule is a strong rule.</description></item>
+        /// <item><description>0: indicates that the monitoring rule is a weak rule. You can specify whether a monitoring rule is a strong rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and nodes that are associated with the rule are blocked from running.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The description of the monitoring rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Verify the number of table rows</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]

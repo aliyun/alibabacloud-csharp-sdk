@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NotificationSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The conditions that can trigger the alert rule.</para>
+        /// <para>The conditions that are used to trigger the alert rule.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TriggerConditions")]

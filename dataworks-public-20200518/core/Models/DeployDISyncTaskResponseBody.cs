@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public DeployDISyncTaskResponseBodyData Data { get; set; }
         public class DeployDISyncTaskResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The reason for the failure to publish a data integration synchronization task.</para>
+            /// <para>If the data integration synchronization task is published successfully, the return value of this parameter is empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>submit and deploy fail.</para>
             /// </summary>
@@ -42,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The result of deploying the real-time synchronization node or data synchronization solution.</para>
+        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc1411515937635973****</para>

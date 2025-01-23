@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListShiftSchedulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.</para>
+        /// <para>The Alibaba Cloud account ID. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1933790683****</para>

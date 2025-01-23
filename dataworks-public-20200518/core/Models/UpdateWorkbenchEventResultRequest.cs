@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The cause of the check failure.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>注意节点有效期</para>
+        /// <para>SQL is too long</para>
         /// </summary>
         [NameInMap("CheckResultTip")]
         [Validation(Required=false)]

@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetTopicInfluenceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetTopicInfluenceResponseBodyData Data { get; set; }
         public class GetTopicInfluenceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The affected baseline instances.</para>
+            /// </summary>
             [NameInMap("Influences")]
             [Validation(Required=false)]
             public List<GetTopicInfluenceResponseBodyDataInfluences> Influences { get; set; }
             public class GetTopicInfluenceResponseBodyDataInfluences : TeaModel {
                 /// <summary>
+                /// <para>The baseline ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
                 /// </summary>

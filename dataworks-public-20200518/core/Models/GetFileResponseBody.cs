@@ -150,6 +150,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The description of the file.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>My first DataWorks file</para>
                 /// </summary>
                 [NameInMap("FileDescription")]
                 [Validation(Required=false)]
@@ -166,6 +169,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string FileFolderId { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the file.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100000001</para>
                 /// </summary>
@@ -373,6 +378,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? EndEffectDate { get; set; }
 
                 /// <summary>
+                /// <para>Scheduling configuration-&gt; previous cycle-&gt; whether to skip the upstream empty run attribute</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -627,6 +634,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? Stop { get; set; }
 
                 /// <summary>
+                /// <para>Scheduling configuration timeout definition</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -636,11 +645,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             }
 
+            /// <summary>
+            /// <para>Resource download address</para>
+            /// </summary>
             [NameInMap("ResourceDownloadLink")]
             [Validation(Required=false)]
             public GetFileResponseBodyDataResourceDownloadLink ResourceDownloadLink { get; set; }
             public class GetFileResponseBodyDataResourceDownloadLink : TeaModel {
                 /// <summary>
+                /// <para>Resource download address link</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://xx">http://xx</a></para>
                 /// </summary>

@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ParaValue { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID.</para>
+        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -301,6 +301,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <item><description>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</description></item>
         /// </list>
         /// <para>This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ALL_ALLOWD</description></item>
+        /// <item><description>FAILURE_ALLOWED</description></item>
+        /// <item><description>ALL_DENIED</description></item>
+        /// <item><description>ALL_ALLOWED</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ALL_ALLOWED</para>
@@ -377,6 +384,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Stop { get; set; }
 
         /// <summary>
+        /// <para>The timeout period.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

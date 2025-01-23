@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public ListDIAlarmRulesResponseBodyDIAlarmRulePaging DIAlarmRulePaging { get; set; }
         public class ListDIAlarmRulesResponseBodyDIAlarmRulePaging : TeaModel {
             /// <summary>
-            /// <para>The list of alert rules.</para>
+            /// <para>The alert rules.</para>
             /// </summary>
             [NameInMap("DIJobAlarmRules")]
             [Validation(Required=false)]
@@ -123,17 +123,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     }
 
                     /// <summary>
-                    /// <para>The alert notification recipients.</para>
+                    /// <para>The settings of alert notification recipients.</para>
                     /// </summary>
                     [NameInMap("NotificationReceivers")]
                     [Validation(Required=false)]
                     public List<ListDIAlarmRulesResponseBodyDIAlarmRulePagingDIJobAlarmRulesNotificationSettingsNotificationReceivers> NotificationReceivers { get; set; }
                     public class ListDIAlarmRulesResponseBodyDIAlarmRulePagingDIJobAlarmRulesNotificationSettingsNotificationReceivers : TeaModel {
                         /// <summary>
-                        /// <para>The recipient type.</para>
+                        /// <para>The recipient type. Valid values: AliyunUid and DingToken.</para>
                         /// <list type="bullet">
-                        /// <item><description>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</description></item>
-                        /// <item><description>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</description></item>
+                        /// <item><description>If the alert notification method is Mail, Phone, or Sms, the value of this parameter is <b>AliyunUid</b>, which indicates the Alibaba Cloud account ID.</description></item>
+                        /// <item><description>If the alert notification method is Ding, the value of this parameter is <b>DingToken</b>, which indicates the DingTalk chatbot token.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// <para>The conditions that can trigger the alert rule.</para>
+                /// <para>The conditions that are used to trigger the alert rule.</para>
                 /// </summary>
                 [NameInMap("TriggerConditions")]
                 [Validation(Required=false)]

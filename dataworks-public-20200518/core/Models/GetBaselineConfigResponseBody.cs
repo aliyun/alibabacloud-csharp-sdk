@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The name of the baseline.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Baseline name</para>
             /// </summary>
             [NameInMap("BaselineName")]
             [Validation(Required=false)]
@@ -114,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The workspace ID.</para>
+            /// <para>The ID of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>

@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ConnectionNotExists</para>
         /// </summary>

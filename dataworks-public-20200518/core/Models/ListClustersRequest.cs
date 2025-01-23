@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListClustersRequest : TeaModel {
         /// <summary>
+        /// <para>The type of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CDH: CDH cluster</description></item>
+        /// <item><description>EMR: EMR cluster</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +25,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ClusterType { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from page 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +35,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

@@ -88,6 +88,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public class GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail : TeaModel {
                     /// <summary>
                     /// <para>The information of the data synchronization solution.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{\&quot;fusionProps\&quot;:{\&quot;dataSource\&quot;:[{\&quot;fileName\&quot;:\&quot;holo_20221020161613\&quot;,\&quot;status\&quot;:\&quot;SUCCESS\&quot;}]},\&quot;customProps\&quot;:{\&quot;showSN\&quot;:true,\&quot;columns\&quot;:[{\&quot;dataIndex\&quot;:\&quot;fileName\&quot;,\&quot;width\&quot;:0.8,\&quot;title\&quot;:\&quot;Real-time synchronization name\&quot;},{\&quot;dataIndex\&quot;:\&quot;status\&quot;,\&quot;width\&quot;:0.2,\&quot;title\&quot;:\&quot;Status\&quot;}]},\&quot;componentName\&quot;:\&quot;Table\&quot;}</para>
                     /// </summary>
                     [NameInMap("Info")]
                     [Validation(Required=false)]
@@ -115,6 +118,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                     /// <summary>
                     /// <para>The name of the step in the data synchronization solution.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Create a base table</para>
                     /// </summary>
                     [NameInMap("StepName")]
                     [Validation(Required=false)]

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class CallbackExtensionRequest : TeaModel {
         /// <summary>
         /// <para>The check message of the extension point event. If CheckResult is set to FAIL, you must provide the failure cause.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The xxx rule is hit. Modify it and try again.</para>
         /// </summary>
         [NameInMap("CheckMessage")]
         [Validation(Required=false)]

@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The description of the alert rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql synchronizes to hologres heartbeat alert</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -87,8 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<string> Channels { get; set; }
 
                 /// <summary>
-                /// <para>The severity level.</para>
-                /// <para>Valid values:</para>
+                /// <para>The severity level. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Warning</description></item>
                 /// <item><description>Critical</description></item>
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The alert notification recipients.</para>
+            /// <para>The settings of alert notification recipients.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("NotificationReceivers")]
@@ -112,10 +114,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<CreateDIAlarmRuleRequestNotificationSettingsNotificationReceivers> NotificationReceivers { get; set; }
             public class CreateDIAlarmRuleRequestNotificationSettingsNotificationReceivers : TeaModel {
                 /// <summary>
-                /// <para>The recipient type.</para>
+                /// <para>The recipient type. Valid values: AliyunUid and DingToken.</para>
                 /// <list type="bullet">
-                /// <item><description>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</description></item>
-                /// <item><description>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</description></item>
+                /// <item><description>If the alert notification method is Mail, Phone, or Sms, set this parameter to <b>AliyunUid</b>, which specifies the Alibaba Cloud account ID.</description></item>
+                /// <item><description>If the alert notification method is Ding, set this parameter to <b>DingToken</b>, which indicates the DingTalk chatbot token.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -137,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The conditions that can trigger the alert rule.</para>
+        /// <para>The conditions that are used to trigger the alert rule.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TriggerConditions")]

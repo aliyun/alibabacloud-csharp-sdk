@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListBaselineConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListBaselineConfigsResponseBodyData Data { get; set; }
         public class ListBaselineConfigsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of baselines.</para>
+            /// <para>The baselines.</para>
             /// </summary>
             [NameInMap("Baselines")]
             [Validation(Required=false)]

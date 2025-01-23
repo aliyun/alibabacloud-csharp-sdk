@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetNodeParentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the ancestor nodes.</para>
+        /// <para>The ancestor nodes.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -133,6 +133,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public string SchedulerType { get; set; }
 
+                /// <summary>
+                /// <para>The scheduling dependency type.</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: same-cycle scheduling dependency</description></item>
+                /// <item><description><b>3</b>: cross-cycle scheduling dependency</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("StepType")]
                 [Validation(Required=false)]
                 public string StepType { get; set; }
@@ -172,7 +182,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. You can troubleshoot issues based on the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asfasdfs-adfasdf-asfas-dfasdf-asdf</para>

@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The error message. The value is the same as that of ErrorMessage.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Missing parameter</para>
         /// </summary>
         [NameInMap("DynamicErrorMessage")]
         [Validation(Required=false)]
@@ -48,6 +51,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Missing parameter</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The description of the alert rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql synchronizes to hologres heartbeat alert</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NotificationSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The conditions that can trigger the alert rule.</para>
+        /// <para>The conditions that are used to trigger the alert rule.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TriggerConditions")]

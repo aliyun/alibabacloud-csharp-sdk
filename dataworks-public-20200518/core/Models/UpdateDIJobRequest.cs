@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public UpdateDIJobRequestJobSettings JobSettings { get; set; }
         public class UpdateDIJobRequestJobSettings : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{&quot;structInfo&quot;:&quot;MANAGED&quot;,&quot;storageType&quot;:&quot;TEXTFILE&quot;,&quot;writeMode&quot;:&quot;APPEND&quot;,&quot;partitionColumns&quot;:[{&quot;columnName&quot;:&quot;pt&quot;,&quot;columnType&quot;:&quot;STRING&quot;,&quot;comment&quot;:&quot;&quot;}],&quot;fieldDelimiter&quot;:&quot;&quot;}</para>
+            /// </summary>
             [NameInMap("ChannelSettings")]
             [Validation(Required=false)]
             public string ChannelSettings { get; set; }
@@ -70,6 +74,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public UpdateDIJobRequestJobSettingsCycleScheduleSettings CycleScheduleSettings { get; set; }
             public class UpdateDIJobRequestJobSettingsCycleScheduleSettings : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>bizdate=$bizdate</para>
+                /// </summary>
                 [NameInMap("ScheduleParameters")]
                 [Validation(Required=false)]
                 public string ScheduleParameters { get; set; }
@@ -205,6 +213,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2.0</para>
+            /// </summary>
             [NameInMap("RequestedCu")]
             [Validation(Required=false)]
             public float? RequestedCu { get; set; }

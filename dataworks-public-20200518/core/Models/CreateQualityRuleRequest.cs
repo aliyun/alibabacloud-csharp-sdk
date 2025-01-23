@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateQualityRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The strength type of the monitoring rule. Valid values: 0 and 1. The value 0 indicates that the monitoring rule is a weak rule. The value 1 indicates that the monitoring rule is a strong rule.</para>
+        /// <para>The strength type of the monitoring rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: The monitoring rule is a weak rule.</description></item>
+        /// <item><description>1: The monitoring rule is a strong rule.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +36,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The description of the monitoring rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Verification</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]

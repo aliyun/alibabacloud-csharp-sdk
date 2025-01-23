@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateTableAddColumnRequest : TeaModel {
         /// <summary>
-        /// <para>The list of fields.</para>
+        /// <para>The fields.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Column")]
@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The display name of the field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Chinese</para>
             /// </summary>
             [NameInMap("ColumnNameCn")]
             [Validation(Required=false)]
@@ -48,6 +51,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The comment of the field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Remarks</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetNodeChildrenResponseBodyData Data { get; set; }
         public class GetNodeChildrenResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of descendant nodes.</para>
+            /// <para>The descendant nodes.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
@@ -133,6 +133,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public string SchedulerType { get; set; }
 
+                /// <summary>
+                /// <para>The scheduling dependency type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>: same-cycle scheduling dependency</description></item>
+                /// <item><description><b>3</b>: cross-cycle scheduling dependency</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("StepType")]
                 [Validation(Required=false)]
                 public string StepType { get; set; }

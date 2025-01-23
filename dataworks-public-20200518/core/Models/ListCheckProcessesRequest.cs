@@ -19,7 +19,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string EventCode { get; set; }
 
+        [NameInMap("MessageId")]
+        [Validation(Required=false)]
+        public string MessageId { get; set; }
+
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123333232</para>
         /// </summary>

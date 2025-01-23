@@ -46,13 +46,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The name of a data category.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Personal information</para>
         /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
         /// <summary>
-        /// <para>The sorting method.</para>
+        /// <para>The sorting method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>DESC</description></item>
         /// <item><description>ASC</description></item>
@@ -145,6 +148,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The name of the sensitive field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name</para>
         /// </summary>
         [NameInMap("SensitiveName")]
         [Validation(Required=false)]

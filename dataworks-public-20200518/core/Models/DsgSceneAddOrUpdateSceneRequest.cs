@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public class DsgSceneAddOrUpdateSceneRequestScenes : TeaModel {
             /// <summary>
             /// <para>The description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test scenarios</para>
             /// </summary>
             [NameInMap("desc")]
             [Validation(Required=false)]

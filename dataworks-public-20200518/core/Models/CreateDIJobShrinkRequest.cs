@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class CreateDIJobShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The description of the synchronization task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Synchronize mysql to hologres</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DestinationDataSourceSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the destination. Valid values: Hologres and Hive.</para>
+        /// <para>The destination type. Valid values: Hologres and Hive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hologres</para>
@@ -92,7 +95,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string SourceDataSourceSettingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the source. Set the value to MySQL.</para>
+        /// <para>The source type. Set this parameter to MySQL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TableMappingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</para>
+        /// <para>The list of transformation rules that you want to apply to the synchronization objects selected from the source. Each entry in the list defines a transformation rule.</para>
         /// </summary>
         [NameInMap("TransformationRules")]
         [Validation(Required=false)]

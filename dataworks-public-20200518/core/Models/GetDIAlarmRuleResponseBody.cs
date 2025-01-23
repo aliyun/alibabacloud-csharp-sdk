@@ -58,6 +58,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The description of the alert rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mysql synchronizes to hologres heartbeat alert</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -143,10 +146,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<GetDIAlarmRuleResponseBodyDIAlarmRuleNotificationSettingsNotificationReceivers> NotificationReceivers { get; set; }
                 public class GetDIAlarmRuleResponseBodyDIAlarmRuleNotificationSettingsNotificationReceivers : TeaModel {
                     /// <summary>
-                    /// <para>The recipient type.</para>
+                    /// <para>The recipient type. Valid values: AliyunUid and DingToken.</para>
                     /// <list type="bullet">
-                    /// <item><description>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</description></item>
-                    /// <item><description>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</description></item>
+                    /// <item><description>If the alert notification method is Mail, Phone, or Sms, the value of this parameter is <b>AliyunUid</b>, which indicates the Alibaba Cloud account ID.</description></item>
+                    /// <item><description>If the alert notification method is Ding, the value of this parameter is <b>DingToken</b>, which indicates the DingTalk chatbot token.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -168,7 +171,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The conditions that can trigger the alert rule.</para>
+            /// <para>The conditions that are used to trigger the alert rule.</para>
             /// </summary>
             [NameInMap("TriggerConditions")]
             [Validation(Required=false)]

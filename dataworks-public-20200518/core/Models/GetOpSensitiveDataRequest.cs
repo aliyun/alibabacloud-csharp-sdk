@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string OpType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Minimum value: 1. Maximum value: 1000.</para>
+        /// <para>The page number. Valid values: 1 to 1000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

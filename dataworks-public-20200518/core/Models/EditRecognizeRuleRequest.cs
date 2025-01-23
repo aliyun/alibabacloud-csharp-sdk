@@ -80,6 +80,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The name of the sensitivity level. You can call the <a href="https://help.aliyun.com/document_detail/2743948.html">QueryDefaultTemplate</a> operation to obtain the name of the sensitivity level in the related template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Confidential</para>
         /// </summary>
         [NameInMap("LevelName")]
         [Validation(Required=false)]
@@ -99,6 +102,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The information about the parent data category of the current data category. You can call the <a href="https://help.aliyun.com/document_detail/2746850.html">QuerySensClassification</a> operation to obtain the ID of a data category.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Customer/personal/personal_Natural_Information/personal_basic_profile_information</para>
         /// </summary>
         [NameInMap("NodeParent")]
         [Validation(Required=false)]
@@ -147,6 +153,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The description of the sensitive field. Enter a string that is less than 128 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a sensitive field that identifies the name.</para>
         /// </summary>
         [NameInMap("SensitiveDescription")]
         [Validation(Required=false)]
@@ -166,6 +175,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The name of the custom sensitive field. Enter a string that is less than 128 characters in length.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>name</para>
         /// </summary>
         [NameInMap("SensitiveName")]
         [Validation(Required=false)]

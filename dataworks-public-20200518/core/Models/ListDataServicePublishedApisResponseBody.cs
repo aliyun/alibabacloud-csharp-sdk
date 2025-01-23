@@ -764,7 +764,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardConnection WizardConnection { get; set; }
                     public class ListDataServicePublishedApisResponseBodyDataApisWizardDetailsWizardConnection : TeaModel {
                         /// <summary>
-                        /// <para>The data source ID.</para>
+                        /// <para>The ID of the data source.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>123</para>

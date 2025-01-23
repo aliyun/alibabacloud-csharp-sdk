@@ -11,14 +11,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class DeployFileRequest : TeaModel {
         /// <summary>
         /// <para>The description of the deployment operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>First release task</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID.</para>
-        /// <para>You must configure either the FileId parameter or the NodeId parameter.</para>
+        /// <para>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the file ID. You must configure either this parameter or the NodeId parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>

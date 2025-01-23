@@ -12,6 +12,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The description of the API.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test API description</para>
         /// </summary>
         [NameInMap("ApiDescription")]
         [Validation(Required=false)]
@@ -31,6 +34,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The name of the API. The name must be 4 to 50 characters in length. The name can contain letters, digits, and underscores (_) and must start with a letter.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test API name</para>
         /// </summary>
         [NameInMap("ApiName")]
         [Validation(Required=false)]
@@ -60,6 +66,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The business process ID.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Business process ID</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

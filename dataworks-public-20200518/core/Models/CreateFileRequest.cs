@@ -90,6 +90,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>If the directory specified in the parameter (FileFolderPath) does not exist in the system, whether the directory is automatically created. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>true: If the directory does not exist, the directory is automatically created.</description></item>
+        /// <item><description>false: If the directory does not exist, the call fails.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -174,6 +180,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The description of the file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Here is the file description</para>
         /// </summary>
         [NameInMap("FileDescription")]
         [Validation(Required=false)]
@@ -181,6 +190,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The path of the file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Business_process/First_Business_Process/MaxCompute/Folder_1/Folder_2</para>
         /// </summary>
         [NameInMap("FileFolderPath")]
         [Validation(Required=false)]
@@ -189,6 +201,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The name of the file.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>File name</para>
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
@@ -207,6 +222,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? FileType { get; set; }
 
         /// <summary>
+        /// <para>Whether to use the last cycle empty run attribute. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The empty run attribute of the previous cycle is used.</description></item>
+        /// <item><description>false: The empty run attribute of the previous cycle is not used.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

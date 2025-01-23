@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetFolderRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the folder. You can call the <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a> operation to query the ID.</para>
-        /// <para>You must specify either this parameter or the FolderPath parameter.</para>
+        /// <para>The ID of the folder. You must configure either this parameter or the FolderPath parameter. You can call the <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a> operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>273****</para>
@@ -21,15 +20,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FolderId { get; set; }
 
         /// <summary>
-        /// <para>The path of the folder. You can call the <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a> operation to query the path.</para>
-        /// <para>You must specify either this parameter or the FolderId parameter.</para>
+        /// <para>The path of the folder. You must configure either this parameter or the FolderId parameter. You can call the <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a> operation to query the path.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Business_process/my_first_business_process/MaxCompute/ods_layer</para>
         /// </summary>
         [NameInMap("FolderPath")]
         [Validation(Required=false)]
         public string FolderPath { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID. You must specify either this parameter or ProjectIdentifier to determine the DataWorks workspace to which the operation is applied.</para>
+        /// <para>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

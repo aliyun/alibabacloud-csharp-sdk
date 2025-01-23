@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgSceneQuerySceneListByNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data entries returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The description of the data masking scenario.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test scenarios</para>
             /// </summary>
             [NameInMap("Desc")]
             [Validation(Required=false)]

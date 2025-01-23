@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListEnabledExtensionsForProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the extension.</para>
+        /// <para>The extensions.</para>
         /// </summary>
         [NameInMap("Extensions")]
         [Validation(Required=false)]

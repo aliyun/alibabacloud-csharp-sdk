@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The alert notification recipients.</para>
+            /// <para>The settings of alert notification recipients.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("NotificationReceivers")]
@@ -113,8 +113,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The recipient type.</para>
                 /// <list type="bullet">
-                /// <item><description>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</description></item>
-                /// <item><description>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</description></item>
+                /// <item><description>If the alert notification method is Mail, Phone, or Sms, the recipient type is the Alibaba Cloud account ID.</description></item>
+                /// <item><description>If the alert notification method is Ding, the recipient type is the DingTalk chatbot token.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The conditions that can trigger the alert rule.</para>
+        /// <para>The conditions that are used to trigger the alert rule.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TriggerConditions")]
@@ -171,8 +171,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The alert threshold.</para>
             /// <list type="bullet">
             /// <item><description>If the alert rule is for task status, you do not need to specify a threshold.</description></item>
-            /// <item><description>If the alert rule is for failovers, specify the number of failovers.</description></item>
-            /// <item><description>If the alert rule is for latency, specify the latency duration, in seconds.</description></item>
+            /// <item><description>If the alert rule is for failovers, you must specify the number of failovers.</description></item>
+            /// <item><description>If the alert rule is for latency, you must specify the latency duration, in seconds.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

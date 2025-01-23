@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The type of the migration task.</para>
+                /// <para>The type of the migration task. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>IMPORT</description></item>
                 /// <item><description>EXPORT</description></item>
