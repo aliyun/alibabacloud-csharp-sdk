@@ -536,6 +536,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The ID of the cluster.</para>
+            /// <remarks>
+            /// <para> The value of this parameter is returned only if you use the Ultimate edition of Security Center that can protect container assets.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>c863dc93bed3843de9934d4346dc4****</para>
@@ -546,6 +549,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The namespace.</para>
+            /// <remarks>
+            /// <para> If you use the Ultimate edition of Security Center, the value of this parameter is queried from container assets. If you do not use the Ultimate edition, the value of this parameter is queried from the Security Center agent.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -556,6 +562,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The ID of the node.</para>
+            /// <remarks>
+            /// <para> The value of this parameter is returned only if you use the Ultimate edition of Security Center that can protect container assets.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp1ifm6suw9mnbsr****</para>
@@ -566,6 +575,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The name of the node.</para>
+            /// <remarks>
+            /// <para> The value of this parameter is returned only if you use the Ultimate edition of Security Center that can protect container assets.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>deployment-riskai-7b67d68975-m****</para>
@@ -576,6 +588,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The name of the pod.</para>
+            /// <remarks>
+            /// <para> The value of this parameter is returned only if you use the Ultimate edition of Security Center that can protect container assets.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>deployment-riskai-7b67d68975-m****</para>
@@ -676,6 +691,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? PrimaryId { get; set; }
 
+            /// <summary>
+            /// <para>The progress of the vulnerability fixing.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public int? Progress { get; set; }

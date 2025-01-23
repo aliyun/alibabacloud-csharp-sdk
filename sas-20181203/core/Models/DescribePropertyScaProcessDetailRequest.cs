@@ -9,10 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyScaProcessDetailRequest : TeaModel {
+        /// <summary>
+        /// <para>The type of the application process. Default value: <b>java</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>java</b>: Java process.</description></item>
+        /// <item><description><b>php</b>: PHP process.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>java</para>
+        /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
 
+        /// <summary>
+        /// <para>The startup parameter.</para>
+        /// <remarks>
+        /// <para> This parameter supports only prefix queries. Fuzzy match is not supported.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>java -jar</para>
+        /// </summary>
         [NameInMap("Cmdline")]
         [Validation(Required=false)]
         public string Cmdline { get; set; }
@@ -41,7 +60,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the process.</para>
+        /// <para>The process ID.</para>
+        /// <remarks>
+        /// <para> Only exact match is supported.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>756</para>
@@ -63,8 +85,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The UUID of the server.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID.</para>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// </description></item>
+        /// <item><description><para>Only exact match is supported.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>D0D6E6E4-CB8C-4897-B852-46AEFDA0****</para>

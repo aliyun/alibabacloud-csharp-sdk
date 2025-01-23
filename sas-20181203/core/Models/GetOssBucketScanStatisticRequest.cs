@@ -16,6 +16,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> BucketNameList { get; set; }
 
+        /// <summary>
+        /// <para>The source of the data. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>API</b></description></item>
+        /// <item><description><b>OSS</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>API</para>
+        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
