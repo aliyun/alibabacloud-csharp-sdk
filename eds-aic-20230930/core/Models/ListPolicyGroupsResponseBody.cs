@@ -97,6 +97,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 [Validation(Required=false)]
                 public string ProxyUserName { get; set; }
 
+                [NameInMap("Rules")]
+                [Validation(Required=false)]
+                public List<ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules> Rules { get; set; }
+                public class ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules : TeaModel {
+                    [NameInMap("RuleType")]
+                    [Validation(Required=false)]
+                    public string RuleType { get; set; }
+
+                    [NameInMap("Target")]
+                    [Validation(Required=false)]
+                    public string Target { get; set; }
+
+                }
+
             }
 
             /// <summary>
@@ -117,7 +131,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// </summary>
             [NameInMap("SessionResolutionHeight")]
             [Validation(Required=false)]
-            public string SessionResolutionHeight { get; set; }
+            public int? SessionResolutionHeight { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -125,7 +139,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// </summary>
             [NameInMap("SessionResolutionWidth")]
             [Validation(Required=false)]
-            public string SessionResolutionWidth { get; set; }
+            public int? SessionResolutionWidth { get; set; }
 
         }
 

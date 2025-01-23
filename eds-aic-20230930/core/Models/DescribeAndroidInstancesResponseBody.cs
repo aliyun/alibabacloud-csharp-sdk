@@ -199,6 +199,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string RenderingType { get; set; }
 
+            [NameInMap("SessionStatus")]
+            [Validation(Required=false)]
+            public string SessionStatus { get; set; }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeAndroidInstancesResponseBodyInstanceModelTags> Tags { get; set; }

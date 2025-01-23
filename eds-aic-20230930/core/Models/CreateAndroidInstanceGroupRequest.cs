@@ -116,8 +116,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>pg-b7bxrrwxkijjh****</para>
         /// </summary>

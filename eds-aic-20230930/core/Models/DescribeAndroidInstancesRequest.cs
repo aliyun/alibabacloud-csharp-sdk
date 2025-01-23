@@ -69,6 +69,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("NodeId")]
+        [Validation(Required=false)]
+        public string NodeId { get; set; }
+
+        [NameInMap("NodeName")]
+        [Validation(Required=false)]
+        public string NodeName { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>standard</para>

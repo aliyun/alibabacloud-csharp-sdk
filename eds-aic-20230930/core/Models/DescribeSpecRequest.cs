@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        [NameInMap("MatrixSpec")]
+        [Validation(Required=false)]
+        public string MatrixSpec { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>20</para>
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        [NameInMap("SaleMode")]
+        [Validation(Required=false)]
+        public string SaleMode { get; set; }
 
         [NameInMap("SpecIds")]
         [Validation(Required=false)]

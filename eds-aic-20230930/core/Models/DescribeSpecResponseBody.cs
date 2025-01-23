@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public int? Memory { get; set; }
 
+            [NameInMap("PhoneCount")]
+            [Validation(Required=false)]
+            public string PhoneCount { get; set; }
+
+            [NameInMap("Resolution")]
+            [Validation(Required=false)]
+            public string Resolution { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>acp.basic.small</para>

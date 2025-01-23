@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
+        [NameInMap("ImagePackageType")]
+        [Validation(Required=false)]
+        public string ImagePackageType { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
