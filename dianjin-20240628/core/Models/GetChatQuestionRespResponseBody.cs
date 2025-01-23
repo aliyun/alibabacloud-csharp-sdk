@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
+                [NameInMap("oriContent")]
+                [Validation(Required=false)]
+                public string OriContent { get; set; }
+
                 [NameInMap("reply")]
                 [Validation(Required=false)]
                 public string Reply { get; set; }
