@@ -89,6 +89,24 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
             [Validation(Required=false)]
             public string ManagementStatus { get; set; }
 
+            [NameInMap("OverlapDetail")]
+            [Validation(Required=false)]
+            public List<ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail> OverlapDetail { get; set; }
+            public class ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail : TeaModel {
+                [NameInMap("OverlapResourceCidr")]
+                [Validation(Required=false)]
+                public string OverlapResourceCidr { get; set; }
+
+                [NameInMap("OverlapResourceId")]
+                [Validation(Required=false)]
+                public string OverlapResourceId { get; set; }
+
+                [NameInMap("OverlapResourceRegion")]
+                [Validation(Required=false)]
+                public string OverlapResourceRegion { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Nonoverlapping</para>
