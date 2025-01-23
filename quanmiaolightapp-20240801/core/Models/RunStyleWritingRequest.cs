@@ -9,16 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
     public class RunStyleWritingRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("learningSamples")]
         [Validation(Required=false)]
         public List<string> LearningSamples { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+        [NameInMap("processStage")]
+        [Validation(Required=false)]
+        public string ProcessStage { get; set; }
+
         [NameInMap("referenceMaterials")]
         [Validation(Required=false)]
         public List<string> ReferenceMaterials { get; set; }
@@ -27,9 +25,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public string StyleFeature { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+        [NameInMap("useSearch")]
+        [Validation(Required=false)]
+        public bool? UseSearch { get; set; }
+
         [NameInMap("writingTheme")]
         [Validation(Required=false)]
         public string WritingTheme { get; set; }
