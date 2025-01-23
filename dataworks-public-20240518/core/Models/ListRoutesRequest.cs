@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListRoutesRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -34,6 +32,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

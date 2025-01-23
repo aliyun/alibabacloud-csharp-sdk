@@ -1,3 +1,8 @@
+2025-01-23 Version: 3.0.1
+- Update API ListRoutes: add param ResourceGroupId.
+- Update API ListRoutes: update param NetworkId.
+
+
 2025-01-22 Version: 3.0.0
 - Support API BatchUpdateTasks.
 - Support API CreateWorkflowInstances.
