@@ -108,6 +108,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             }
 
+            [NameInMap("AcceleratorId")]
+            [Validation(Required=false)]
+            public string AcceleratorId { get; set; }
+
             /// <summary>
             /// <para>The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.</para>
             /// 

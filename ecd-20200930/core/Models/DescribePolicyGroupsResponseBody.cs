@@ -464,6 +464,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string EndUserGroupCoordinate { get; set; }
 
+            [NameInMap("FileTransfer")]
+            [Validation(Required=false)]
+            public string FileTransfer { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the image quality feature is enabled for Graphics cloud desktops. If you have high requirements for desktop performance and user experience, we recommend that you enable this feature. For example, you can enable this feature in professional graphic design scenarios.</para>
             /// <para>Valid values:</para>
@@ -792,6 +796,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public long? RecordContentExpires { get; set; }
 
+            [NameInMap("RecordEventDuration")]
+            [Validation(Required=false)]
+            public int? RecordEventDuration { get; set; }
+
+            [NameInMap("RecordEventFilePaths")]
+            [Validation(Required=false)]
+            public List<string> RecordEventFilePaths { get; set; }
+
+            [NameInMap("RecordEventRegisters")]
+            [Validation(Required=false)]
+            public List<string> RecordEventRegisters { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the screen recording feature is enabled.</para>
             /// <para>Valid values:</para>
@@ -912,6 +928,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("RemoteCoordinate")]
             [Validation(Required=false)]
             public string RemoteCoordinate { get; set; }
+
+            [NameInMap("ResetDesktop")]
+            [Validation(Required=false)]
+            public string ResetDesktop { get; set; }
 
             [NameInMap("ResourceGroupCount")]
             [Validation(Required=false)]

@@ -329,6 +329,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string SortType { get; set; }
 
+        [NameInMap("SupportMinSessionCount")]
+        [Validation(Required=false)]
+        public int? SupportMinSessionCount { get; set; }
+
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
+
     }
 
 }

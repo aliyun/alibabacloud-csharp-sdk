@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
 
+        [NameInMap("DesktopGroupIds")]
+        [Validation(Required=false)]
+        public List<string> DesktopGroupIds { get; set; }
+
         /// <summary>
         /// <para>The name of the cloud computer pool to query. Fuzzy search is supported.</para>
         /// 
@@ -69,6 +73,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
+
+        [NameInMap("MultiResource")]
+        [Validation(Required=false)]
+        public bool? MultiResource { get; set; }
 
         /// <summary>
         /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</para>

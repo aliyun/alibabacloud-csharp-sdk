@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
 
+        [NameInMap("DesktopGroupIds")]
+        [Validation(Required=false)]
+        public List<string> DesktopGroupIds { get; set; }
+
         /// <summary>
         /// <para>The IDs of the orders.</para>
         /// </summary>

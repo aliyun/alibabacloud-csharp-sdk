@@ -87,7 +87,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The ID of the desktop template.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b-je9hani001wfn****</para>
@@ -157,6 +156,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public long? ConnectDuration { get; set; }
 
+        [NameInMap("DataDiskCategory")]
+        [Validation(Required=false)]
+        public string DataDiskCategory { get; set; }
+
+        [NameInMap("DataDiskPerLevel")]
+        [Validation(Required=false)]
+        public string DataDiskPerLevel { get; set; }
+
+        [NameInMap("DataDiskSize")]
+        [Validation(Required=false)]
+        public int? DataDiskSize { get; set; }
+
         /// <summary>
         /// <para>The default number of cloud desktops to create when you create the desktop group. Default value: 1.</para>
         /// 
@@ -167,6 +178,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? DefaultInitDesktopCount { get; set; }
 
+        [NameInMap("DefaultLanguage")]
+        [Validation(Required=false)]
+        public string DefaultLanguage { get; set; }
+
         /// <summary>
         /// <para>The name of the desktop group.</para>
         /// 
@@ -176,6 +191,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("DesktopGroupName")]
         [Validation(Required=false)]
         public string DesktopGroupName { get; set; }
+
+        [NameInMap("DesktopType")]
+        [Validation(Required=false)]
+        public string DesktopType { get; set; }
 
         /// <summary>
         /// <para>The ID of the directory.</para>
@@ -194,6 +213,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> EndUserIds { get; set; }
 
+        [NameInMap("ExclusiveType")]
+        [Validation(Required=false)]
+        public string ExclusiveType { get; set; }
+
         /// <summary>
         /// <para>The File Storage NAS (NAS) file system that is used after data roaming is enabled.</para>
         /// 
@@ -203,6 +226,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
+
+        [NameInMap("GroupAmount")]
+        [Validation(Required=false)]
+        public int? GroupAmount { get; set; }
 
         /// <summary>
         /// <para>The desktop group version.</para>
@@ -214,6 +241,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? GroupVersion { get; set; }
 
+        [NameInMap("Hostname")]
+        [Validation(Required=false)]
+        public string Hostname { get; set; }
+
         /// <summary>
         /// <para>The maximum period of time for which a session remains idle. If an end user performs no operations on a cloud desktop by using keyboards or mouses during a session, the session becomes idle. When the specified maximum period of time is reached, the session automatically disconnects. Unit: milliseconds. This parameter is required only for cloud desktops in the same desktop group.</para>
         /// 
@@ -223,6 +254,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("IdleDisconnectDuration")]
         [Validation(Required=false)]
         public long? IdleDisconnectDuration { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
 
         /// <summary>
         /// <para>The retention period of the cloud desktop after the end user disconnects from the cloud desktop. Unit: milliseconds.</para>
@@ -263,6 +298,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("MinDesktopsCount")]
         [Validation(Required=false)]
         public int? MinDesktopsCount { get; set; }
+
+        [NameInMap("MultiResource")]
+        [Validation(Required=false)]
+        public bool? MultiResource { get; set; }
 
         /// <summary>
         /// <para>The ID of the workspace.</para>
@@ -393,6 +432,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ScaleStrategyId { get; set; }
 
+        [NameInMap("SessionType")]
+        [Validation(Required=false)]
+        public string SessionType { get; set; }
+
+        [NameInMap("SnapshotPolicyId")]
+        [Validation(Required=false)]
+        public string SnapshotPolicyId { get; set; }
+
         /// <summary>
         /// <para>The period of time before the idle cloud desktop is stopped. When the specified period of time is reached, the idle cloud desktop automatically stops. If an end user connects to a stopped cloud desktop, the cloud desktop automatically starts. Unit: milliseconds.</para>
         /// 
@@ -402,6 +449,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("StopDuration")]
         [Validation(Required=false)]
         public long? StopDuration { get; set; }
+
+        [NameInMap("SystemDiskCategory")]
+        [Validation(Required=false)]
+        public string SystemDiskCategory { get; set; }
+
+        [NameInMap("SystemDiskPerLevel")]
+        [Validation(Required=false)]
+        public string SystemDiskPerLevel { get; set; }
+
+        [NameInMap("SystemDiskSize")]
+        [Validation(Required=false)]
+        public int? SystemDiskSize { get; set; }
 
         /// <summary>
         /// <para>The tags that you want to attach to the cloud computer pool. You can specify 1 to 20 tags.</para>
@@ -433,6 +492,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("TimerGroupId")]
+        [Validation(Required=false)]
+        public string TimerGroupId { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to enable disk encryption.</para>

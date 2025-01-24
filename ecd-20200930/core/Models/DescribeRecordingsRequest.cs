@@ -75,6 +75,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? SignedUrlExpireMinutes { get; set; }
 
+        [NameInMap("StandardEndTime")]
+        [Validation(Required=false)]
+        public string StandardEndTime { get; set; }
+
+        [NameInMap("StandardStartTime")]
+        [Validation(Required=false)]
+        public string StandardStartTime { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>20230424000000</para>

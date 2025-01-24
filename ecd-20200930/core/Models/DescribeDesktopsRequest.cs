@@ -181,6 +181,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        [NameInMap("MultiResource")]
+        [Validation(Required=false)]
+        public bool? MultiResource { get; set; }
+
         /// <summary>
         /// <para>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</para>
         /// 

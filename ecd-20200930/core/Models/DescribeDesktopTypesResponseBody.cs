@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string InstanceTypeFamily { get; set; }
 
+            [NameInMap("MaxSessionCount")]
+            [Validation(Required=false)]
+            public int? MaxSessionCount { get; set; }
+
             /// <summary>
             /// <para>The memory size. Unit: MiB.</para>
             /// 

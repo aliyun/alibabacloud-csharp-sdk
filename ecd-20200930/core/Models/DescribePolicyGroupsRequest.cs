@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribePolicyGroupsRequest : TeaModel {
+        [NameInMap("ExternalPolicyGroupIds")]
+        [Validation(Required=false)]
+        public List<string> ExternalPolicyGroupIds { get; set; }
+
         /// <summary>
         /// <para>The number of entries per page.</para>
         /// <list type="bullet">
