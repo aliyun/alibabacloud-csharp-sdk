@@ -1195,6 +1195,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["ChangeListPath"] = request.ChangeListPath;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTime))
             {
                 query["CreateTime"] = request.CreateTime;
@@ -1268,6 +1272,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
                 query["VaultId"] = request.VaultId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["DataSourceId"] = request.DataSourceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Exclude))
             {
                 body["Exclude"] = request.Exclude;
@@ -1386,6 +1394,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["ChangeListPath"] = request.ChangeListPath;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTime))
             {
                 query["CreateTime"] = request.CreateTime;
@@ -1459,6 +1471,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
                 query["VaultId"] = request.VaultId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                body["DataSourceId"] = request.DataSourceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Exclude))
             {
                 body["Exclude"] = request.Exclude;

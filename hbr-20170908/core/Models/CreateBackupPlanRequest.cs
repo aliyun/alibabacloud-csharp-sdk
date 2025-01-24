@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string ChangeListPath { get; set; }
 
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required when <b>SourceType</b> is set to <b>NAS</b>. It represents the creation time of the file system, in UNIX timestamp, in seconds.</para>
         /// 
@@ -83,6 +87,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [NameInMap("CrossAccountUserId")]
         [Validation(Required=false)]
         public long? CrossAccountUserId { get; set; }
+
+        [NameInMap("DataSourceId")]
+        [Validation(Required=false)]
+        public string DataSourceId { get; set; }
 
         /// <summary>
         /// <para>Destination data source details. (Required only for synchronization)</para>
