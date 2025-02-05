@@ -101,6 +101,38 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public bool? AutoChaptersEnabled { get; set; }
 
+            [NameInMap("ContentExtraction")]
+            [Validation(Required=false)]
+            public CreateTaskRequestParametersContentExtraction ContentExtraction { get; set; }
+            public class CreateTaskRequestParametersContentExtraction : TeaModel {
+                [NameInMap("ExtractionContents")]
+                [Validation(Required=false)]
+                public List<CreateTaskRequestParametersContentExtractionExtractionContents> ExtractionContents { get; set; }
+                public class CreateTaskRequestParametersContentExtractionExtractionContents : TeaModel {
+                    [NameInMap("Content")]
+                    [Validation(Required=false)]
+                    public string Content { get; set; }
+
+                    [NameInMap("Title")]
+                    [Validation(Required=false)]
+                    public string Title { get; set; }
+
+                }
+
+                [NameInMap("SceneIntroduction")]
+                [Validation(Required=false)]
+                public string SceneIntroduction { get; set; }
+
+                [NameInMap("SpeakerMap")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> SpeakerMap { get; set; }
+
+            }
+
+            [NameInMap("ContentExtractionEnabled")]
+            [Validation(Required=false)]
+            public bool? ContentExtractionEnabled { get; set; }
+
             [NameInMap("CustomPrompt")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersCustomPrompt CustomPrompt { get; set; }
