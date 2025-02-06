@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public int? AsrTaskPriority { get; set; }
 
+                [NameInMap("AsrVersion")]
+                [Validation(Required=false)]
+                public int? AsrVersion { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0</para>

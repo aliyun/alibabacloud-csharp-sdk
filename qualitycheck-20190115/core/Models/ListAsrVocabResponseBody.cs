@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListAsrVocabResponseBodyDataAsrVocab> AsrVocab { get; set; }
             public class ListAsrVocabResponseBodyDataAsrVocab : TeaModel {
+                [NameInMap("AsrVersion")]
+                [Validation(Required=false)]
+                public int? AsrVersion { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>2019-04-15T14:57Z</para>
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
+
+                [NameInMap("ModelCustomizationId")]
+                [Validation(Required=false)]
+                public string ModelCustomizationId { get; set; }
 
                 [NameInMap("Name")]
                 [Validation(Required=false)]

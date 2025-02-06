@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public GetAsrVocabResponseBodyData Data { get; set; }
         public class GetAsrVocabResponseBodyData : TeaModel {
+            [NameInMap("AsrVersion")]
+            [Validation(Required=false)]
+            public int? AsrVersion { get; set; }
+
+            [NameInMap("ModelCustomizationId")]
+            [Validation(Required=false)]
+            public string ModelCustomizationId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>test</para>

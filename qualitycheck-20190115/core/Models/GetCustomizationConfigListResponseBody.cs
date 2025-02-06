@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo> ModelCustomizationDataSetPo { get; set; }
             public class GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo : TeaModel {
+                [NameInMap("AsrVersion")]
+                [Validation(Required=false)]
+                public int? AsrVersion { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>2019-01-08</para>

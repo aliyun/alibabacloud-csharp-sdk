@@ -151,6 +151,40 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public string Rid { get; set; }
 
+                [NameInMap("RuleInfoBase")]
+                [Validation(Required=false)]
+                public SyncQualityCheckResponseBodyDataRulesRuleInfoBase RuleInfoBase { get; set; }
+                public class SyncQualityCheckResponseBodyDataRulesRuleInfoBase : TeaModel {
+                    [NameInMap("Comments")]
+                    [Validation(Required=false)]
+                    public string Comments { get; set; }
+
+                    [NameInMap("Level")]
+                    [Validation(Required=false)]
+                    public int? Level { get; set; }
+
+                    [NameInMap("RuleCategoryName")]
+                    [Validation(Required=false)]
+                    public string RuleCategoryName { get; set; }
+
+                    [NameInMap("ScoreNum")]
+                    [Validation(Required=false)]
+                    public int? ScoreNum { get; set; }
+
+                    [NameInMap("ScoreNumType")]
+                    [Validation(Required=false)]
+                    public int? ScoreNumType { get; set; }
+
+                    [NameInMap("ScoreType")]
+                    [Validation(Required=false)]
+                    public int? ScoreType { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public int? Type { get; set; }
+
+                }
+
                 [NameInMap("RuleName")]
                 [Validation(Required=false)]
                 public string RuleName { get; set; }
