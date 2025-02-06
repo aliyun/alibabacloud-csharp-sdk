@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class StartDBInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public StartDBInstanceResponseBodyData Data { get; set; }
         public class StartDBInstanceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cc-bp100p4q1g9z3****</para>
             /// </summary>
@@ -21,11 +26,16 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             [Validation(Required=false)]
             public long? DBInstanceID { get; set; }
 
+            /// <summary>
+            /// <para>The cluster name.</para>
+            /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100000837</para>
             /// </summary>
@@ -36,6 +46,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F5178C10-1407-4987-9133-DE4DC9119F76</para>
         /// </summary>

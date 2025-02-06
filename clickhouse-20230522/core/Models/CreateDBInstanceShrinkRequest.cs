@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
+        [NameInMap("DeploySchema")]
+        [Validation(Required=false)]
+        public string DeploySchema { get; set; }
+
         /// <summary>
         /// <para>The engine type.</para>
         /// 

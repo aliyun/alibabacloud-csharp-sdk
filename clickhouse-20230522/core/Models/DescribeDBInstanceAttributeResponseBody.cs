@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeDBInstanceAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The result returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDBInstanceAttributeResponseBodyData Data { get; set; }
@@ -101,6 +104,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>23.8.1.41495_6</para>
+            /// </summary>
             [NameInMap("LatestEngineMinorVersion")]
             [Validation(Required=false)]
             public string LatestEngineMinorVersion { get; set; }
@@ -149,6 +156,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 [Validation(Required=false)]
                 public string NodeStatus { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-h</para>
+                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
