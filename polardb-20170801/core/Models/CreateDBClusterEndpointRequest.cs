@@ -188,9 +188,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Whether the node has enabled the global consistency (high-performance mode) feature. The value range is as follows:</para>
+        /// <para>Specifies whether to enable the global consistency (high-performance mode) feature for the nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b>: Enabled - <b>OFF</b>: Disabled</description></item>
+        /// <item><description><b>ON</b></description></item>
+        /// <item><description><b>OFF</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

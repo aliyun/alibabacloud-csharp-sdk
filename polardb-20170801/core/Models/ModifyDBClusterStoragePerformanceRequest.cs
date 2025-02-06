@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterStoragePerformanceRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable the I/O Burst feature for the ESSD AutoPL disk. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is available only when the StorageType parameter is set to ESSDAUTOPL.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

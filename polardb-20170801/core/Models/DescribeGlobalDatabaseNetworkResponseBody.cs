@@ -76,7 +76,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeGlobalDatabaseNetworkResponseBodyDBClusters> DBClusters { get; set; }
         public class DescribeGlobalDatabaseNetworkResponseBodyDBClusters : TeaModel {
             /// <summary>
-            /// <para>The edition of the cluster.</para>
+            /// <para>The edition of the cluster. Valid values:</para>
+            /// <para>Normal: Cluster Edition Basic: Single Node Edition Archive: X-Engine Edition NormalMultimaster: Multi-master Cluster Edition SENormal: Standard Edition</para>
+            /// <remarks>
+            /// </remarks>
+            /// <list type="bullet">
+            /// <item><description><para>PolarDB for PostgreSQL clusters that run the PostgreSQL 11 database engine do not support Single Node Edition.</para>
+            /// </description></item>
+            /// <item><description><para>PolarDB for MySQL 8.0 and 5.7 clusters, and PolarDB for PostgreSQL clusters that run the PostgreSQL 14 database engine support Standard Edition.</para>
+            /// </description></item>
+            /// <item><description><para>PolarDB for MySQL 8.0 clusters support X-Engine Edition and Multi-master Cluster Edition.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>

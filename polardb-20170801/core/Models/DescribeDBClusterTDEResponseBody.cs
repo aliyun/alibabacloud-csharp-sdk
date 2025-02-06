@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Enabled</para>
+        /// </summary>
         [NameInMap("EncryptionKeyStatus")]
         [Validation(Required=false)]
         public string EncryptionKeyStatus { get; set; }

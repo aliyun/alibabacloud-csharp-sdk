@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// <para>The type of the zone. Valid values:</para>
+        /// <para>The zone type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Primary</b>: primary zone</description></item>
         /// <item><description><b>Standby</b>: secondary zone</description></item>

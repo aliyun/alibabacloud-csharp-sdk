@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string AliyunOrderId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>aa:bb:cc:dd:ee:ff</para>
+        /// </summary>
+        [NameInMap("MacAddress")]
+        [Validation(Required=false)]
+        public string MacAddress { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -55,6 +63,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3312548696141831911</para>
+        /// </summary>
+        [NameInMap("SystemIdentifier")]
+        [Validation(Required=false)]
+        public string SystemIdentifier { get; set; }
 
     }
 

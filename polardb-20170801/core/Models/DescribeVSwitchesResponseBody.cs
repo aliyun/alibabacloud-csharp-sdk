@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The details of the vSwitch.</para>
+        /// <para>The vSwitches.</para>
         /// </summary>
         [NameInMap("VSwitchs")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The descriptions of the vSwitch.</para>
+            /// <para>The description of the vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vSwitchDescription</para>

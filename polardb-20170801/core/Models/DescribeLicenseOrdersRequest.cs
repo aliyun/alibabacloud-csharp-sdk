@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the package. Valid values:</para>
+        /// <para>The plan type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>single_node_subscribe: Single-node Edition (Subscription).</description></item>
         /// <item><description>single_node_long_term: Single-node Edition (Long-term).</description></item>

@@ -200,8 +200,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>Elastic sensitivity. Values: - normal: standard - flexible: sensitive</para>
         /// 
         /// <b>Example:</b>
-        /// <para>normal
-        /// flexible</para>
+        /// <para>normal</para>
         /// </summary>
         [NameInMap("ServerlessRuleMode")]
         [Validation(Required=false)]

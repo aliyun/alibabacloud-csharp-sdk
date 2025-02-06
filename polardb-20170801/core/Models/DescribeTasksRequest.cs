@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. The value is an integer that is greater than 0.</para>
+        /// <para>The page number. Pages start from page 1.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>

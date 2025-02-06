@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDasConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>593AE1C5-B70C-463F-9207-074639******</para>
@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the automatic storage expansion feature is enabled for the standard cluster.</para>
+        /// <para>Specifies whether to enable automatic storage scaling for the Standard Edition cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Enable</description></item>
+        /// <item><description>Disable</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Enable</para>
@@ -30,9 +34,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageAutoScale { get; set; }
 
         /// <summary>
-        /// <para>The maximum storage capacity of the standard cluster that is scaled up. Unit: GB.</para>
+        /// <para>The maximum storage capacity that is allowed for storage automatic scaling of the Standard Edition cluster. Unit: GB.</para>
         /// <remarks>
-        /// <para> This parameter is returned when the StorageAutoScale parameter is set to Enable.</para>
+        /// <para> This parameter is valid only when the StorageAutoScale parameter is set to Enable.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Valid values: any non-zero positive integer.</para>
+        /// <para>The page number. Pages start from 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>

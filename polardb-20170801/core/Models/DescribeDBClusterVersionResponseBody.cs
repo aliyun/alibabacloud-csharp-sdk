@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Stable</para>
+            /// <para>LTS</para>
             /// </summary>
             [NameInMap("ReleaseType")]
             [Validation(Required=false)]

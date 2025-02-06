@@ -80,11 +80,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The type of the node. Valid values:</para>
+        /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>RO</description></item>
         /// <item><description>STANDBY</description></item>
         /// <item><description>DLNode</description></item>
+        /// </list>
+        /// <para>Enumerated values:</para>
+        /// <list type="bullet">
+        /// <item><description>DLNode: AI node</description></item>
+        /// <item><description>STANDBY: standby node</description></item>
+        /// <item><description>RO: read-only node</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
