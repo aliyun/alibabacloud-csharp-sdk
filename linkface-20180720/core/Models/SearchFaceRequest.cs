@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.LinkFace20180720.Models
+{
+    public class SearchFaceRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aliyun</para>
+        /// </summary>
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>base64imagedata</para>
+        /// </summary>
+        [NameInMap("Image")]
+        [Validation(Required=false)]
+        public string Image { get; set; }
+
+    }
+
+}
