@@ -1,3 +1,8 @@
+2025-02-07 Version: 2.35.0
+- Support API CreateChatMediaUrl.
+- Support API ProcessCustomIMCallback.
+
+
 2025-01-20 Version: 2.34.0
 - Support API CreateCallSummary.
 - Support API GetSummaryTemplate.
