@@ -37,11 +37,16 @@ namespace AlibabaCloud.SDK.Opt20210730
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @param request GetOpenStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetOpenStatusResponse
-         */
+        /// <param name="request">
+        /// GetOpenStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOpenStatusResponse
+        /// </returns>
         public GetOpenStatusResponse GetOpenStatusWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -57,14 +62,26 @@ namespace AlibabaCloud.SDK.Opt20210730
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetOpenStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetOpenStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetOpenStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @param request GetOpenStatusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetOpenStatusResponse
-         */
+        /// <param name="request">
+        /// GetOpenStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOpenStatusResponse
+        /// </returns>
         public async Task<GetOpenStatusResponse> GetOpenStatusWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -80,32 +97,49 @@ namespace AlibabaCloud.SDK.Opt20210730
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetOpenStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetOpenStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetOpenStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @return GetOpenStatusResponse
-         */
+        /// <returns>
+        /// GetOpenStatusResponse
+        /// </returns>
         public GetOpenStatusResponse GetOpenStatus()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetOpenStatusWithOptions(runtime);
         }
 
-        /**
-         * @return GetOpenStatusResponse
-         */
+        /// <returns>
+        /// GetOpenStatusResponse
+        /// </returns>
         public async Task<GetOpenStatusResponse> GetOpenStatusAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetOpenStatusWithOptionsAsync(runtime);
         }
 
-        /**
-         * @param request GetOrderInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetOrderInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取在线license列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrderInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrderInfoResponse
+        /// </returns>
         public GetOrderInfoResponse GetOrderInfoWithOptions(GetOrderInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -138,14 +172,31 @@ namespace AlibabaCloud.SDK.Opt20210730
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetOrderInfoResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetOrderInfoResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetOrderInfoResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @param request GetOrderInfoRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetOrderInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取在线license列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrderInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrderInfoResponse
+        /// </returns>
         public async Task<GetOrderInfoResponse> GetOrderInfoWithOptionsAsync(GetOrderInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -178,34 +229,62 @@ namespace AlibabaCloud.SDK.Opt20210730
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetOrderInfoResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetOrderInfoResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetOrderInfoResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @param request GetOrderInfoRequest
-         * @return GetOrderInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取在线license列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrderInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrderInfoResponse
+        /// </returns>
         public GetOrderInfoResponse GetOrderInfo(GetOrderInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetOrderInfoWithOptions(request, runtime);
         }
 
-        /**
-         * @param request GetOrderInfoRequest
-         * @return GetOrderInfoResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取在线license列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOrderInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrderInfoResponse
+        /// </returns>
         public async Task<GetOrderInfoResponse> GetOrderInfoAsync(GetOrderInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetOrderInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @param request GetOrderUsageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetOrderUsageResponse
-         */
+        /// <param name="request">
+        /// GetOrderUsageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrderUsageResponse
+        /// </returns>
         public GetOrderUsageResponse GetOrderUsageWithOptions(GetOrderUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -242,14 +321,26 @@ namespace AlibabaCloud.SDK.Opt20210730
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetOrderUsageResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetOrderUsageResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetOrderUsageResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @param request GetOrderUsageRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetOrderUsageResponse
-         */
+        /// <param name="request">
+        /// GetOrderUsageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrderUsageResponse
+        /// </returns>
         public async Task<GetOrderUsageResponse> GetOrderUsageWithOptionsAsync(GetOrderUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -286,23 +377,36 @@ namespace AlibabaCloud.SDK.Opt20210730
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetOrderUsageResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetOrderUsageResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetOrderUsageResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @param request GetOrderUsageRequest
-         * @return GetOrderUsageResponse
-         */
+        /// <param name="request">
+        /// GetOrderUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrderUsageResponse
+        /// </returns>
         public GetOrderUsageResponse GetOrderUsage(GetOrderUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetOrderUsageWithOptions(request, runtime);
         }
 
-        /**
-         * @param request GetOrderUsageRequest
-         * @return GetOrderUsageResponse
-         */
+        /// <param name="request">
+        /// GetOrderUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOrderUsageResponse
+        /// </returns>
         public async Task<GetOrderUsageResponse> GetOrderUsageAsync(GetOrderUsageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

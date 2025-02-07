@@ -14,14 +14,20 @@ namespace AlibabaCloud.SDK.Opt20210730.Models
         public bool? ListReleased { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MP</para>
         /// </summary>
         [NameInMap("RelService")]
         [Validation(Required=false)]
         public string RelService { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

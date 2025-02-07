@@ -10,26 +10,36 @@ namespace AlibabaCloud.SDK.Opt20210730.Models
 {
     public class GetOrderUsageRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LicenseKey")]
         [Validation(Required=false)]
         public string LicenseKey { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MP</para>
         /// </summary>
         [NameInMap("RelService")]
         [Validation(Required=false)]
         public string RelService { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public int? ResourceType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("TimeRange")]
         [Validation(Required=false)]
         public int? TimeRange { get; set; }
