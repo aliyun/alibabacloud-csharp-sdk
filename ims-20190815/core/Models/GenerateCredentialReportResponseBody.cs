@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GenerateCredentialReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BBCCA90A-A1F0-4B16-B355-692247197805</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The generation status of the user credential report. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>STARTED: The user credential report starts to generate.</description></item>
+        /// <item><description>STARTED: The system starts to generate the user credential report.</description></item>
         /// <item><description>INPROGRESS: The user credential report is being generated.</description></item>
         /// <item><description>COMPLETED: The user credential report is generated.</description></item>
         /// </list>

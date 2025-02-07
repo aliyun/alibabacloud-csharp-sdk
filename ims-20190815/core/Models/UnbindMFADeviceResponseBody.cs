@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UnbindMFADeviceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the MFA device.</para>
+        /// <para>The information about the MFA device.</para>
         /// </summary>
         [NameInMap("MFADevice")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A26CB3E9-1021-452A-AC57-3134B3BA0E4C</para>

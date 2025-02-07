@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The new logon name of the RAM user.</para>
         /// <para>The name is in the format of <c>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</c>. <c>&lt;username&gt;</c> indicates the name of the RAM user. <c>&lt;AccountAlias&gt;.onaliyun.com</c> indicates the default domain name.</para>
-        /// <para>The value of <c>UserPrincipalName</c> must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <c>&lt;username&gt;</c> must be 1 to 64 characters in length.</para>
+        /// <para>The value of <c>NewUserPrincipalName</c> must be <c>1 to 128</c> characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <c>&lt;username&gt;</c> must be <c>1 to 64</c> characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:new@example.onaliyun.com">new@example.onaliyun.com</a></para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class CreateAccessKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the AccessKey pair.</para>
+        /// <para>The information about the AccessKey pair.</para>
         /// </summary>
         [NameInMap("AccessKey")]
         [Validation(Required=false)]
         public CreateAccessKeyResponseBodyAccessKey AccessKey { get; set; }
         public class CreateAccessKeyResponseBodyAccessKey : TeaModel {
             /// <summary>
-            /// <para>The AccessKey ID provided to you by Alibaba Cloud.</para>
+            /// <para>The AccessKey ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LTAI4G3HaMmeHpay2gcq****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string AccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey secret provided to you by Alibaba Cloud.</para>
+            /// <para>The AccessKey secret.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Y3MSLE6OgizS4qrz5LVFDoyZEL****</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19DDD9F7-AFCC-4D72-8CBA-CCE5A142E7AB</para>

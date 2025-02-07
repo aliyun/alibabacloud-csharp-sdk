@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the RAM user group.</para>
+        /// <para>The information about the RAM user group.</para>
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CDA656E3-3CE9-4A03-A8A3-B42A0C3C3287</para>

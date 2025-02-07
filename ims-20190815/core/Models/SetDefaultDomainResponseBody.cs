@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string DefaultDomainName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66815255-7CCE-4759-AC37-9755794C3626</para>

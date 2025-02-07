@@ -166,10 +166,18 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public GetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays MaxIdleDays { get; set; }
             public class GetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>730</para>
+                /// </summary>
                 [NameInMap("MaxIdleDaysForAccessKeys")]
                 [Validation(Required=false)]
                 public int? MaxIdleDaysForAccessKeys { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>730</para>
+                /// </summary>
                 [NameInMap("MaxIdleDaysForUsers")]
                 [Validation(Required=false)]
                 public int? MaxIdleDaysForUsers { get; set; }

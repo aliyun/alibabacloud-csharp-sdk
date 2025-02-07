@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
         /// <summary>
         /// <para>The new description.</para>
-        /// <para>The value can be up to 128 characters in length.</para>
+        /// <para>The description can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test-Team</para>

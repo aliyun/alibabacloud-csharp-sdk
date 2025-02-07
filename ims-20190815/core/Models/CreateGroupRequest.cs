@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
     public class CreateGroupRequest : TeaModel {
         /// <summary>
         /// <para>The description.</para>
-        /// <para>The value can be up to 128 characters in length.</para>
+        /// <para>The description can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Dev-Team</para>

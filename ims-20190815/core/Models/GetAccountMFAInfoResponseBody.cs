@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetAccountMFAInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether MFA is enabled. Valid values:</para>
+        /// <para>Indicates whether MFA devices are enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public bool? IsMFAEnable { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4BE83135-0B08-467C-B3A2-27B312FD0F57</para>

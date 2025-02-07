@@ -60,16 +60,15 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string MobilePhone { get; set; }
 
         /// <summary>
-        /// <para>The tag value.</para>
-        /// <para>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c>.</para>
+        /// <para>The tags. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateUserRequestTag> Tag { get; set; }
         public class CreateUserRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N.</para>
-            /// <para>Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The key of the tag.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>operator</para>
@@ -79,8 +78,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N.</para>
-            /// <para>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c>.</para>
+            /// <para>The value of the tag.</para>
+            /// <para>The tag value can be an empty string. The tag value can be up to 128 characters in length. The tag value cannot start with <c>acs:</c> or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alice</para>
@@ -92,9 +91,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The logon name of the RAM user.</para>
-        /// <para>The name is in the format of <c>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</c>. <c>&lt;username&gt;</c> indicates the name of the RAM user. <c>&lt;AccountAlias&gt;.onaliyun.com</c> indicates the default domain name. For more information about how to obtain the default domain name, see <a href="https://help.aliyun.com/document_detail/186720.html">GetDefaultDomain</a>.</para>
-        /// <para>The value of <c>UserPrincipalName</c> must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <c>&lt;username&gt;</c> must be 1 to 64 characters in length.</para>
+        /// <para>The logon name of the Resource Access Management (RAM) user.</para>
+        /// <para>The name is in the format of <c>&lt;username&gt;@&lt;AccountAlias&gt;.onaliyun.com</c>. <c>&lt;username&gt;</c> indicates the name of the RAM user. <c>&lt;AccountAlias&gt;.onaliyun.com</c> indicates the default domain name. For more information about how to query the default domain name, see <a href="https://help.aliyun.com/document_detail/186720.html">GetDefaultDomain</a>.</para>
+        /// <para>The value of <c>UserPrincipalName</c> must be <c>1 to 128</c> characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_). The value of <c>&lt;username&gt;</c> must be <c>1 to 64</c> characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

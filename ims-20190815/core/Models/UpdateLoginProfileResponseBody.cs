@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class UpdateLoginProfileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The logon information.</para>
+        /// <para>The console logon configurations.</para>
         /// </summary>
         [NameInMap("LoginProfile")]
         [Validation(Required=false)]
         public UpdateLoginProfileResponseBodyLoginProfile LoginProfile { get; set; }
         public class UpdateLoginProfileResponseBodyLoginProfile : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("AutoDisableLoginStatus")]
             [Validation(Required=false)]
             public string AutoDisableLoginStatus { get; set; }
@@ -31,7 +35,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? MFABindRequired { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the RAM user must reset the password at the next logon.</para>
+            /// <para>Indicates whether the RAM user is required to reset the password upon the next logon.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? PasswordResetRequired { get; set; }
 
             /// <summary>
-            /// <para>The status of password-based logon.</para>
+            /// <para>Indicates whether to enable password-based logons to the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -51,7 +55,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-14T07:48:41Z</para>
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BCDB6A7F-2199-41D9-B577-4FA536A5ADE1</para>

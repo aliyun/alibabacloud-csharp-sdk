@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class CreateSAMLProviderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A95A763D-F6B7-5242-83EB-AB45CE67F358</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the IdP.</para>
+        /// <para>The information about the IdP.</para>
         /// </summary>
         [NameInMap("SAMLProvider")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string Arn { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-22T02:37:05Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public string SAMLProviderName { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-22T02:51:20Z</para>

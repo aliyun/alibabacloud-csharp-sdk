@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetAccountSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>81313F5E-3C85-478F-BCC9-E1B70E4556DB</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public GetAccountSummaryResponseBodySummaryMap SummaryMap { get; set; }
         public class GetAccountSummaryResponseBodySummaryMap : TeaModel {
             /// <summary>
-            /// <para>The maximum number of AccessKey pairs that a RAM user can have.</para>
+            /// <para>The maximum number of AccessKey pairs that a Resource Access Management (RAM) user can have.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -96,6 +96,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public int? AttachedSystemPoliciesPerUserQuota { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>8</para>
+            /// </summary>
             [NameInMap("ConditionsPerAKPolicyQuota")]
             [Validation(Required=false)]
             public int? ConditionsPerAKPolicyQuota { get; set; }
@@ -130,6 +134,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public int? GroupsQuota { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>50</para>
+            /// </summary>
             [NameInMap("IPItemsPerAKPolicyQuota")]
             [Validation(Required=false)]
             public int? IPItemsPerAKPolicyQuota { get; set; }

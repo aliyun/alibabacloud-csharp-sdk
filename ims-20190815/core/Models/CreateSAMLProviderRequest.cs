@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The metadata file, which is Base64 encoded.</para>
-        /// <para>The file is provided by an IdP that supports SAML 2.0.</para>
+        /// <para>The metadata file which is Base64-encoded.</para>
+        /// <para>The file is provided by an IdP that supports Security Assertion Markup Language (SAML) 2.0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PD94bWwgdmVy****</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
         /// <summary>
         /// <para>The name of the IdP.</para>
-        /// <para>The value can be up to 128 characters in length. The name can contain letters, digits,<c> periods (.), hyphens (-), and underscores (_)</c>. The name cannot start or end with<c> periods (.), hyphens (-), or underscores (_)</c>.</para>
+        /// <para>The name can be up to 128 characters in length. The name can contain letters, digits, <c>periods (.), hyphens (-), and underscores (_)</c>. The name cannot start or end with <c>periods (.), hyphens (-), or underscores (_)</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

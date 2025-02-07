@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The <c>marker</c>. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.</para>
+        /// <para>The <c>marker</c>. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.``</para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2D8B70D3-E194-41C9-93C5-F6A10D716D24</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the IdP.</para>
+        /// <para>The information about IdPs.</para>
         /// </summary>
         [NameInMap("SAMLProviders")]
         [Validation(Required=false)]

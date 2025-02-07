@@ -1,3 +1,9 @@
+2025-02-07 Version: 2.2.0
+- Support API DeletePasskey.
+- Support API ListPasskeys.
+- Support API UpdatePasskey.
+
+
 2025-01-17 Version: 2.1.4
 - Update API GetAccountSummary: update response param.
 - Update API GetLoginProfile: update response param.

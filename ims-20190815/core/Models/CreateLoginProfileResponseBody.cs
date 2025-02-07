@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         public CreateLoginProfileResponseBodyLoginProfile LoginProfile { get; set; }
         public class CreateLoginProfileResponseBodyLoginProfile : TeaModel {
             /// <summary>
-            /// <para>Indicates whether MFA must be enabled.</para>
+            /// <para>Indicates whether to forcefully enable MFA for the RAM user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? MFABindRequired { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the RAM user must reset the password at the next logon.</para>
+            /// <para>Indicates whether the RAM user is required to reset the password upon the next logon.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             public bool? PasswordResetRequired { get; set; }
 
             /// <summary>
-            /// <para>The status of password-based logon.</para>
+            /// <para>Indicates whether to enable password-based logons to the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>29CB303C-1F05-43A6-A6BC-EBC5A797F8DB</para>

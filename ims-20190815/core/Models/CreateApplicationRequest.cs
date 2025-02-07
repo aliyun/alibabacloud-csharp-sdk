@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 
         /// <summary>
         /// <para>The scope of application permissions.</para>
-        /// <para>For more information about the application permission scope, see <a href="https://help.aliyun.com/document_detail/93693.html">Open authorization scope</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to obtain the permission scopes supported by different types of applications.</para>
+        /// <para>For more information about the application permission scope, see <a href="https://help.aliyun.com/document_detail/93693.html">Open authorization scope</a>. You can also call the <a href="https://help.aliyun.com/document_detail/187206.html">ListPredefinedScopes</a> operation to query the permissions that are supported by different types of applications.</para>
         /// <para>If you enter multiple permission scopes, separate them with semicolons (;).</para>
         /// 
         /// <b>Example:</b>
@@ -116,9 +116,9 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         /// <summary>
         /// <para>The required permission.</para>
         /// <para>You can specify one or more permissions for the <c>RequiredScopes</c> parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.</para>
-        /// <para>If you enter multiple permissions, separate them with semicolons (;).</para>
+        /// <para>If you enter multiple permission scopes, separate them with semicolons (;).</para>
         /// <remarks>
-        /// <para> If the permission that you specify for the <c>RequiredScopes</c> parameter is not included in value of the <c>PredefinedScopes</c> parameter, the permission does not take effect.</para>
+        /// <para> If the permission that you specify for the <c>RequiredScopes</c> parameter is not included in the value of the <c>PredefinedScopes</c> parameter, the permission does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class GetAccountSecurityPracticeReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the security report for the Alibaba Cloud account.</para>
+        /// <para>The information about the security report for the Alibaba Cloud account.</para>
         /// </summary>
         [NameInMap("AccountSecurityPracticeInfo")]
         [Validation(Required=false)]
         public GetAccountSecurityPracticeReportResponseBodyAccountSecurityPracticeInfo AccountSecurityPracticeInfo { get; set; }
         public class GetAccountSecurityPracticeReportResponseBodyAccountSecurityPracticeInfo : TeaModel {
             /// <summary>
-            /// <para>The information of the security report for the Alibaba Cloud account.</para>
+            /// <para>The information about the security report for the Alibaba Cloud account.</para>
             /// </summary>
             [NameInMap("AccountSecurityPracticeUserInfo")]
             [Validation(Required=false)]
             public GetAccountSecurityPracticeReportResponseBodyAccountSecurityPracticeInfoAccountSecurityPracticeUserInfo AccountSecurityPracticeUserInfo { get; set; }
             public class GetAccountSecurityPracticeReportResponseBodyAccountSecurityPracticeInfoAccountSecurityPracticeUserInfo : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether MFA is enabled. Valid values:</para>
+                /// <para>Indicates whether multi-factor authentication (MFA) is enabled. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true</description></item>
                 /// <item><description>false</description></item>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public int? SubUserWithOldAccessKey { get; set; }
 
                 /// <summary>
-                /// <para>The number of RAM users that have no AccessKey pairs.</para>
+                /// <para>The number of Resource Access Management (RAM) users that have unused AccessKey pairs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABA822EE-85C2-4418-9577-A1831FC8466D</para>

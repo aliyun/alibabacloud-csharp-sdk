@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class ListPredefinedScopesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of application permissions.</para>
+        /// <para>The information about application permissions.</para>
         /// </summary>
         [NameInMap("PredefinedScopes")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The name of the scope.</para>
+                /// <para>The name of the permission scope.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>openid</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>955C096D-EC99-480B-AF37-3921109107D0</para>

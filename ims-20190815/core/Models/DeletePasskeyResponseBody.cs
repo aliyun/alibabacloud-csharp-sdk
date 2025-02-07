@@ -8,12 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
-    public class DeleteGroupResponseBody : TeaModel {
+    public class DeletePasskeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>85836703-8D4F-485F-9726-4D1C730F957E</para>
+        /// <para>8A1673AA-5DB3-5AFB-8758-AF9EC2889259</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
