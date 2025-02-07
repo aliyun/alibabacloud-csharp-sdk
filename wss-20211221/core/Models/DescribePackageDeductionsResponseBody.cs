@@ -147,6 +147,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
+        [NameInMap("TotalUsedCoreTime")]
+        [Validation(Required=false)]
+        public float? TotalUsedCoreTime { get; set; }
+
+        [NameInMap("TotalUsedTime")]
+        [Validation(Required=false)]
+        public long? TotalUsedTime { get; set; }
+
     }
 
 }

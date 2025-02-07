@@ -8,48 +8,44 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Wss20211221.Models
 {
-    public class DescribePackageDeductionsRequest : TeaModel {
-        [NameInMap("EndTime")]
+    public class ModifyInstancePropertiesRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>mdp-0c62ayep0nk4v****</para>
+        /// </summary>
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public long? EndTime { get; set; }
+        public string InstanceId { get; set; }
 
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
-        [NameInMap("PackageIds")]
-        [Validation(Required=false)]
-        public List<string> PackageIds { get; set; }
-
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>PackageUsedUpStrategy</para>
         /// </summary>
-        [NameInMap("PageNum")]
+        [NameInMap("Key")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>100</para>
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
+        public string Key { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CorePackage</para>
+        /// <para>DurationPackage</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
-        [NameInMap("StartTime")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Postpaid</para>
+        /// </summary>
+        [NameInMap("Value")]
         [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public string Value { get; set; }
 
     }
 
