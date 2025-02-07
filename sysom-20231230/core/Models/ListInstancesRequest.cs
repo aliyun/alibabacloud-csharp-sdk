@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
     public class ListInstancesRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>xxxxx</para>
+        /// </summary>
+        [NameInMap("cluster_id")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
         [NameInMap("current")]
