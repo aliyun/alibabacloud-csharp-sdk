@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public List<DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail> HistoryDetail { get; set; }
             public class DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail : TeaModel {
+                [NameInMap("BytesPerMinute")]
+                [Validation(Required=false)]
+                public long? BytesPerMinute { get; set; }
+
                 /// <summary>
                 /// <b>if can be null:</b>
                 /// <c>false</c>
@@ -27,6 +31,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [NameInMap("DisableWriteWindows")]
                 [Validation(Required=false)]
                 public string DisableWriteWindows { get; set; }
+
+                [NameInMap("PartsPerMinute")]
+                [Validation(Required=false)]
+                public double? PartsPerMinute { get; set; }
 
                 /// <summary>
                 /// <para>The progress of the data migration.</para>
@@ -66,6 +74,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                [NameInMap("SubJob")]
+                [Validation(Required=false)]
+                public string SubJob { get; set; }
+
+                [NameInMap("SubJobStatus")]
+                [Validation(Required=false)]
+                public string SubJobStatus { get; set; }
+
                 [NameInMap("TargetControlVersion")]
                 [Validation(Required=false)]
                 public string TargetControlVersion { get; set; }
@@ -79,6 +95,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [NameInMap("TargetDBCluster")]
                 [Validation(Required=false)]
                 public string TargetDBCluster { get; set; }
+
+                [NameInMap("UnsyncedBytes")]
+                [Validation(Required=false)]
+                public long? UnsyncedBytes { get; set; }
+
+                [NameInMap("UnsyncedParts")]
+                [Validation(Required=false)]
+                public long? UnsyncedParts { get; set; }
 
             }
 

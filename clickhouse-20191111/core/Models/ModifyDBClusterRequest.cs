@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string DBNodeStorage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CloudESSD</para>
+        /// </summary>
         [NameInMap("DbNodeStorageType")]
         [Validation(Required=false)]
         public string DbNodeStorageType { get; set; }

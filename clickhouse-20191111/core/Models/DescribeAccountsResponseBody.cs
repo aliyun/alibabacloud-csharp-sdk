@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [Validation(Required=false)]
                 public string AccountType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>SQL</para>
+                /// </summary>
                 [NameInMap("ConfigType")]
                 [Validation(Required=false)]
                 public string ConfigType { get; set; }

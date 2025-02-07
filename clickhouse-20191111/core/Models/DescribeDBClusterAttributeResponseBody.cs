@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public string AppointmentRestartTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{&quot;MajorVersion&quot;:&quot;MinorVersion&quot;}</para>
+            /// </summary>
             [NameInMap("AvailableUpgradeMajorVersion")]
             [Validation(Required=false)]
             public Dictionary<string, object> AvailableUpgradeMajorVersion { get; set; }

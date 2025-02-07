@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CheckServiceLinkedRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The role.</para>
+        /// <para>Indicates whether a service-linked role is created for ApsaraDB for ClickHouse.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>

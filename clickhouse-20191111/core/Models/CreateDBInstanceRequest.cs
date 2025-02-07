@@ -63,26 +63,22 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The specifications of the cluster.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values when the cluster is of Single-replica Edition: </para>
+        /// <item><description><para>Valid values for a Single-replica Edition cluster:</para>
         /// <list type="bullet">
-        /// <item><description><b>S4</b>: 4 CPU cores and 16 GB of memory </description></item>
-        /// <item><description><b>S8</b>: 8 CPU cores and 32 GB of memory</description></item>
-        /// <item><description><b>S16</b>: 16 CPU cores and 64 GB of memory</description></item>
-        /// </list>
-        /// <list type="bullet">
-        /// <item><description><b>S32</b>: 32 CPU cores and 128 GB of memory</description></item>
-        /// <item><description><b>S64</b>: 64 CPU cores and 256 GB of memory</description></item>
-        /// <item><description><b>S104</b>: 104 CPU cores and 384 GB of memory</description></item>
+        /// <item><description><b>S8</b>: 8 cores and 32 GB of memory</description></item>
+        /// <item><description><b>S16</b>: 16 cores and 64 GB of memory</description></item>
+        /// <item><description><b>S32</b>: 32 cores and 128 GB of memory</description></item>
+        /// <item><description><b>S64</b>: 64 cores and 256 GB of memory</description></item>
+        /// <item><description><b>S104</b>: 104 cores and 384 GB of memory</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values when the cluster is of Double-replica Edition: </para>
+        /// <item><description><para>Valid values for a Double-replica Edition cluster:</para>
         /// <list type="bullet">
-        /// <item><description><b>C4</b>: 4 CPU cores and 16 GB of memory </description></item>
-        /// <item><description><b>C8</b>: 8 CPU cores and 32 GB of memory </description></item>
-        /// <item><description><b>C16</b>: 16 CPU cores and 64 GB of memory </description></item>
-        /// <item><description><b>C32</b>: 32 CPU cores and 128 GB of memory </description></item>
-        /// <item><description><b>C64</b>: 64 CPU cores and 256 GB of memory </description></item>
-        /// <item><description><b>C104</b>: 104 CPU cores and 384 GB of memory</description></item>
+        /// <item><description><b>C8</b>: 8 cores and 32 GB of memory</description></item>
+        /// <item><description><b>C16</b>: 16 cores and 64 GB of memory</description></item>
+        /// <item><description><b>C32</b>: 32 cores and 128 GB of memory</description></item>
+        /// <item><description><b>C64</b>: 64 cores and 256 GB of memory</description></item>
+        /// <item><description><b>C104</b>: 104 cores and 384 GB of memory</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -228,8 +224,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. This parameter is required when PayType is set to Prepaid.</para>
-        /// <para>Valid values:</para>
+        /// <para>The unit of the subscription duration for the cluster. Valid values:</para>
+        /// <remarks>
+        /// <para> This parameter is required only when PayType is set to Prepaid.</para>
+        /// </remarks>
         /// <list type="bullet">
         /// <item><description><b>Year</b></description></item>
         /// <item><description><b>Month</b></description></item>
@@ -285,11 +283,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string SourceDBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the subscription cluster. This parameter is required when PayType is set to Prepaid.</para>
-        /// <para>Valid values:</para>
+        /// <para>The subscription duration of the subscription cluster.</para>
+        /// <remarks>
+        /// <para> This parameter is required only when PayType is set to Prepaid.</para>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If Period is set to Year, the value of UsedTime must be an integer that ranges from 1 to 3.</description></item>
-        /// <item><description>If Period is set to Month, the value of UsedTime must be an integer that ranges from 1 to 9.</description></item>
+        /// <item><description>Valid values when Period is set to Year: 1 to 3 (integer)</description></item>
+        /// <item><description>Valid values when Period is set to Month: 1 to 9 (integer)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>Secondary zone 2.</para>
+        /// <para>The secondary zone 2 of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-j</para>

@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string SourceAccount { get; set; }
 
+        [NameInMap("SourceClusterName")]
+        [Validation(Required=false)]
+        public string SourceClusterName { get; set; }
+
         /// <summary>
         /// <para>The password that corresponds to the database account for logging on to the database in the source ApsaraDB for ClickHouse cluster.</para>
         /// <para>This parameter is required.</para>
@@ -97,6 +101,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [NameInMap("SourcePassword")]
         [Validation(Required=false)]
         public string SourcePassword { get; set; }
+
+        [NameInMap("SourceShards")]
+        [Validation(Required=false)]
+        public string SourceShards { get; set; }
 
         /// <summary>
         /// <para>The database account that is used to log on to the database in the destination ApsaraDB for ClickHouse cluster.</para>

@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The minimum query duration. The minimum value is <b>1000</b>, and the default value is <b>1000</b>. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.</para>
+        /// <para>The minimum query duration. Minimum value: <b>1000</b>. Default value: <b>1000</b>. Unit: milliseconds. Queries that last longer than the specified duration are returned in response parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

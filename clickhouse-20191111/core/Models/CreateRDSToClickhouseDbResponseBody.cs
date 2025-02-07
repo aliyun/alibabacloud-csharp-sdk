@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CreateRDSToClickhouseDbResponseBody : TeaModel {
         /// <summary>
-        /// <para>If -1 is returned for the <b>Status</b> parameter, the cause of the creation failure is returned.</para>
+        /// <para>If the value of the <b>Status</b> parameter is -1, the cause of the creation failure is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ClickHouse exception, code: 49, host: 100.100.79.102, port: 14540; Code: 49, e.displayText() = DB::Exception: Logical error: there is no global context (version 20.8.17.25)n</para>
