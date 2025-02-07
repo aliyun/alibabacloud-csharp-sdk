@@ -10,14 +10,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class TagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the asynchronous task.
-        /// </summary>
-        [NameInMap("JobId")]
-        [Validation(Required=false)]
-        public string JobId { get; set; }
-
-        /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>54B48E3D-DF70-471B-AA93-08E683A1B45</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

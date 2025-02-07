@@ -10,45 +10,73 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class ListListenerCertificatesRequest : TeaModel {
         /// <summary>
-        /// The type of the certificate. Valid values:
+        /// <para>The type of the certificate. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Ca</b>: CA certificate.</description></item>
+        /// <item><description><b>Server</b>: server certificate</description></item>
+        /// </list>
         /// 
-        /// *   **Server**: a server certificate.
-        /// *   **Ca**: Certificate Authority Certificate
+        /// <b>Example:</b>
+        /// <para>Ca</para>
         /// </summary>
         [NameInMap("CertType")]
         [Validation(Required=false)]
         public string CertType { get; set; }
 
         /// <summary>
-        /// The ID of the listener. Specify the ID of a listener that uses SSL over TCP.
+        /// <para>The server certificates. Only one server certificate is supported.</para>
+        /// <remarks>
+        /// <para>This parameter takes effect only for listeners that use SSL over TCP.</para>
+        /// </remarks>
         /// 
-        /// This parameter is required.
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("CertificateIds")]
+        [Validation(Required=false)]
+        public List<string> CertificateIds { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the listener. Specify the ID of a listener that uses SSL over TCP.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lsn-j49ht1jxxqyg45****@80</para>
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
+        /// <item><description>You must specify the token that is obtained from the previous query as the value of NextToken.</description></item>
+        /// </list>
         /// 
-        /// *   You do not need to specify this parameter for the first request.
-        /// *   You must specify the token that is obtained from the previous query as the value of NextToken.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The ID of the region where the Network Load Balancer (NLB) instance is deployed.
+        /// <para>The ID of the region where the Network Load Balancer (NLB) instance is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

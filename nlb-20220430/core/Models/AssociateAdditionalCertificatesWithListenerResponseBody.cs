@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class AssociateAdditionalCertificatesWithListenerResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the asynchronous task.
+        /// <para>The ID of the asynchronous task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>72dcd26b-f12d-4c27-b3af-18f6aed5****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>365F4154-92F6-4AE4-93F8-7FF34B540710</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

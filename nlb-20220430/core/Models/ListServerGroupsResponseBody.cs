@@ -10,191 +10,267 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class ListServerGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The number of entries per page. Valid values: **1** to **100**.
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
+        /// <item><description>If a value is returned for <b>NextToken</b>, the value is the token that determines the start point of the next query.</description></item>
+        /// </list>
         /// 
-        /// *   If **NextToken** is empty, no next page exists.
-        /// *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>54B28E3D-DF70-471B-AA93-08E683A1B45</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// A list of server groups.
+        /// <para>A list of server groups.</para>
         /// </summary>
         [NameInMap("ServerGroups")]
         [Validation(Required=false)]
         public List<ListServerGroupsResponseBodyServerGroups> ServerGroups { get; set; }
         public class ListServerGroupsResponseBodyServerGroups : TeaModel {
             /// <summary>
-            /// The IP version. Valid values:
+            /// <para>The IP version. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ipv4</b></description></item>
+            /// <item><description><b>DualStack</b></description></item>
+            /// </list>
             /// 
-            /// *   **ipv4**
-            /// *   **DualStack**
+            /// <b>Example:</b>
+            /// <para>ipv4</para>
             /// </summary>
             [NameInMap("AddressIPVersion")]
             [Validation(Required=false)]
             public string AddressIPVersion { get; set; }
 
             /// <summary>
-            /// The ID of the Alibaba Cloud account.
+            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>165820696622****</para>
             /// </summary>
             [NameInMap("AliUid")]
             [Validation(Required=false)]
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// Indicates whether the feature of forwarding requests to all ports is enabled. Valid values:
+            /// <para>Indicates whether the feature of forwarding requests to all ports is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("AnyPortEnabled")]
             [Validation(Required=false)]
             public bool? AnyPortEnabled { get; set; }
 
             /// <summary>
-            /// Indicates whether connection draining is enabled. Valid values:
+            /// <para>Indicates whether connection draining is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
-            /// *   **true**
-            /// *   **false**
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("ConnectionDrainEnabled")]
             [Validation(Required=false)]
             public bool? ConnectionDrainEnabled { get; set; }
 
             /// <summary>
-            /// The timeout period of connection draining. Unit: seconds. Valid values: **10** to **900**.
+            /// <para>The timeout period of connection draining. Unit: seconds. Valid values: <b>10</b> to <b>900</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("ConnectionDrainTimeout")]
             [Validation(Required=false)]
             public int? ConnectionDrainTimeout { get; set; }
 
             /// <summary>
-            /// The configurations of health checks.
+            /// <para>The configurations of health checks.</para>
             /// </summary>
             [NameInMap("HealthCheck")]
             [Validation(Required=false)]
             public ListServerGroupsResponseBodyServerGroupsHealthCheck HealthCheck { get; set; }
             public class ListServerGroupsResponseBodyServerGroupsHealthCheck : TeaModel {
                 /// <summary>
-                /// The backend port that is used for health checks.
+                /// <para>The backend port that is used for health checks.</para>
+                /// <para>Valid values: <b>0</b> to <b>65535</b>.</para>
+                /// <para>A value of <b>0</b> indicates that the port on a backend server is used for health checks.</para>
                 /// 
-                /// Valid values: **0** to **65535**.
-                /// 
-                /// A value of **0** indicates that the port on a backend server is used for health checks.
+                /// <b>Example:</b>
+                /// <para>200</para>
                 /// </summary>
                 [NameInMap("HealthCheckConnectPort")]
                 [Validation(Required=false)]
                 public int? HealthCheckConnectPort { get; set; }
 
                 /// <summary>
-                /// The maximum timeout period of a health check. Unit: seconds. Valid values: **1** to **300**.
+                /// <para>The maximum timeout period of a health check. Unit: seconds. Valid values: <b>1</b> to <b>300</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>200</para>
                 /// </summary>
                 [NameInMap("HealthCheckConnectTimeout")]
                 [Validation(Required=false)]
                 public int? HealthCheckConnectTimeout { get; set; }
 
                 /// <summary>
-                /// The domain name that you want to use for health checks. Valid values:
+                /// <para>The domain name that you want to use for health checks. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>$SERVER_IP</b>: the private IP address of a backend server.</description></item>
+                /// <item><description><b>domain</b>: a specified domain name. The domain name must be 1 to 80 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.).</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
+                /// </remarks>
                 /// 
-                /// *   **$SERVER_IP**: the private IP address of a backend server.
-                /// *   **domain**: a specified domain name. The domain name must be 1 to 80 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.).
-                /// 
-                /// > This parameter takes effect only when **HealthCheckType** is set to **HTTP**.
+                /// <b>Example:</b>
+                /// <para>$SERVER_IP</para>
                 /// </summary>
                 [NameInMap("HealthCheckDomain")]
                 [Validation(Required=false)]
                 public string HealthCheckDomain { get; set; }
 
                 /// <summary>
-                /// Indicates whether the health check feature is enabled. Valid values:
+                /// <para>Indicates whether the health check feature is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
                 /// 
-                /// *   **true**
-                /// *   **false**
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("HealthCheckEnabled")]
                 [Validation(Required=false)]
                 public bool? HealthCheckEnabled { get; set; }
 
+                /// <summary>
+                /// <para>The response string of UDP health checks. The string must be 1 to 64 characters in length, and can contain letters and digits.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ok</para>
+                /// </summary>
                 [NameInMap("HealthCheckExp")]
                 [Validation(Required=false)]
                 public string HealthCheckExp { get; set; }
 
                 /// <summary>
-                /// The HTTP status codes returned for health checks. Multiple HTTP status codes are separated by commas (,). Valid values: **http_2xx**, **http_3xx**, **http_4xx**, and **http_5xx**.
-                /// 
-                /// > This parameter takes effect only when **HealthCheckType** is set to **HTTP**.
+                /// <para>The HTTP status codes returned for health checks. Multiple HTTP status codes are separated by commas (,). Valid values: <b>http_2xx</b>, <b>http_3xx</b>, <b>http_4xx</b>, and <b>http_5xx</b>.</para>
+                /// <remarks>
+                /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
+                /// </remarks>
                 /// </summary>
                 [NameInMap("HealthCheckHttpCode")]
                 [Validation(Required=false)]
                 public List<string> HealthCheckHttpCode { get; set; }
 
                 /// <summary>
-                /// The interval at which health checks are performed. Unit: seconds.
+                /// <para>The interval at which health checks are performed. Unit: seconds.</para>
+                /// <para>Valid values: <b>5</b> to <b>50</b>.</para>
                 /// 
-                /// Valid values: **5** to **50**.
+                /// <b>Example:</b>
+                /// <para>200</para>
                 /// </summary>
                 [NameInMap("HealthCheckInterval")]
                 [Validation(Required=false)]
                 public int? HealthCheckInterval { get; set; }
 
+                /// <summary>
+                /// <para>The request string of UDP health checks. The string must be 1 to 64 characters in length, and can contain letters and digits.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hello</para>
+                /// </summary>
                 [NameInMap("HealthCheckReq")]
                 [Validation(Required=false)]
                 public string HealthCheckReq { get; set; }
 
                 /// <summary>
-                /// The protocol that is used for health checks. Valid values: **TCP** and **HTTP**.
+                /// <para>The protocol that is used for health checks. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>TCP</b></description></item>
+                /// <item><description><b>HTTP</b></description></item>
+                /// <item><description><b>UDP</b></description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TCP</para>
                 /// </summary>
                 [NameInMap("HealthCheckType")]
                 [Validation(Required=false)]
                 public string HealthCheckType { get; set; }
 
                 /// <summary>
-                /// The path to which health check probes are sent.
+                /// <para>The path to which health check probes are sent.</para>
+                /// <remarks>
+                /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
+                /// </remarks>
                 /// 
-                /// > This parameter takes effect only when **HealthCheckType** is set to **HTTP**.
+                /// <b>Example:</b>
+                /// <para>/test/index.html</para>
                 /// </summary>
                 [NameInMap("HealthCheckUrl")]
                 [Validation(Required=false)]
                 public string HealthCheckUrl { get; set; }
 
                 /// <summary>
-                /// The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from **fail** to **success**.
+                /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <b>fail</b> to <b>success</b>.</para>
+                /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
                 /// 
-                /// Valid values: **2** to **10**.
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("HealthyThreshold")]
                 [Validation(Required=false)]
                 public int? HealthyThreshold { get; set; }
 
                 /// <summary>
-                /// The HTTP method that is used for health checks. Valid values: **GET** and **HEAD**.
+                /// <para>The HTTP method that is used for health checks. Valid values: <b>GET</b> and <b>HEAD</b>.</para>
+                /// <remarks>
+                /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
+                /// </remarks>
                 /// 
-                /// > This parameter takes effect only when **HealthCheckType** is set to **HTTP**.
+                /// <b>Example:</b>
+                /// <para>GET</para>
                 /// </summary>
                 [NameInMap("HttpCheckMethod")]
                 [Validation(Required=false)]
                 public string HttpCheckMethod { get; set; }
 
                 /// <summary>
-                /// The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from **success** to **fail**.
+                /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <b>success</b> to <b>fail</b>.</para>
+                /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
                 /// 
-                /// Valid values: **2** to **10**.
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("UnhealthyThreshold")]
                 [Validation(Required=false)]
@@ -203,120 +279,159 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             }
 
             /// <summary>
-            /// Indicates whether client IP preservation is enabled. Valid values:
+            /// <para>Indicates whether client IP preservation is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>This parameter is set to <b>true</b> by default when <b>AddressIPVersion</b> is set to <b>ipv4</b>. This parameter is set to <b>false</b> when <b>AddressIPVersion</b> is set to <b>ipv6</b>. <b>true</b> will be supported by later versions.</para>
+            /// </remarks>
             /// 
-            /// *   **true**
-            /// *   **false**
-            /// 
-            /// > This parameter is set to **true** by default when **AddressIPVersion** is set to **ipv4**. This parameter is set to **false** when **AddressIPVersion** is set to **ipv6**. **true** will be supported by later versions.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("PreserveClientIpEnabled")]
             [Validation(Required=false)]
             public bool? PreserveClientIpEnabled { get; set; }
 
             /// <summary>
-            /// The protocol used to forward requests to the backend servers. Valid values: **TCP**, **UDP**, and **TCPSSL**.
+            /// <para>The backend protocol. Valid values: <b>TCP</b> and <b>UDP</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TCP</para>
             /// </summary>
             [NameInMap("Protocol")]
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
             /// <summary>
-            /// The region ID of the NLB instance.
+            /// <para>The region ID of the NLB instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// The NLB instances.
+            /// <para>The NLB instances.</para>
             /// </summary>
             [NameInMap("RelatedLoadBalancerIds")]
             [Validation(Required=false)]
             public List<string> RelatedLoadBalancerIds { get; set; }
 
             /// <summary>
-            /// The ID of the resource group to which the server group belongs.
+            /// <para>The ID of the resource group to which the server group belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-atstuj3rtop****</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The routing algorithm. Valid values:
+            /// <para>The routing algorithm. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Wrr</b>: Backend servers with higher weights receive more requests than backend servers with lower weights.</description></item>
+            /// <item><description><b>rr</b>: Requests are forwarded to the backend servers in sequence. sch: Requests are forwarded to the backend servers based on source IP address hashing.</description></item>
+            /// <item><description><b>sch</b>: Requests from the same source IP address are forwarded to the same backend server.</description></item>
+            /// <item><description><b>tch</b>: Four-element hashing, which specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are forwarded to the same backend server.</description></item>
+            /// <item><description><b>qch</b>: QUIC ID hashing. Requests that contain the same QUIC ID are forwarded to the same backend server.</description></item>
+            /// </list>
             /// 
-            /// *   **Wrr**: Backend servers with higher weights receive more requests than backend servers with lower weights.
-            /// *   **rr**: Requests are forwarded to the backend servers in sequence. sch: Requests are forwarded to the backend servers based on source IP address hashing.
-            /// *   **sch**: Requests from the same source IP address are forwarded to the same backend server.
-            /// *   **tch**: Four-element hashing, which specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are forwarded to the same backend server.
-            /// *   **qch**: QUIC ID hashing. Requests that contain the same QUIC ID are forwarded to the same backend server.
+            /// <b>Example:</b>
+            /// <para>Wrr</para>
             /// </summary>
             [NameInMap("Scheduler")]
             [Validation(Required=false)]
             public string Scheduler { get; set; }
 
             /// <summary>
-            /// The number of server groups associated with the NLB instances.
+            /// <para>The number of server groups associated with the NLB instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("ServerCount")]
             [Validation(Required=false)]
             public int? ServerCount { get; set; }
 
             /// <summary>
-            /// The server group ID.
+            /// <para>The server group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sgp-atstuj3rtoptyui****</para>
             /// </summary>
             [NameInMap("ServerGroupId")]
             [Validation(Required=false)]
             public string ServerGroupId { get; set; }
 
             /// <summary>
-            /// The server group name.
+            /// <para>The server group name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NLB_ServerGroup</para>
             /// </summary>
             [NameInMap("ServerGroupName")]
             [Validation(Required=false)]
             public string ServerGroupName { get; set; }
 
             /// <summary>
-            /// The status of the server group. Valid values:
+            /// <para>The status of the server group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Creating</b></description></item>
+            /// <item><description><b>Available</b></description></item>
+            /// <item><description><b>Configuring</b></description></item>
+            /// </list>
             /// 
-            /// *   **Creating**
-            /// *   **Available**
-            /// *   **Configuring**
+            /// <b>Example:</b>
+            /// <para>Available</para>
             /// </summary>
             [NameInMap("ServerGroupStatus")]
             [Validation(Required=false)]
             public string ServerGroupStatus { get; set; }
 
             /// <summary>
-            /// The type of server group. Valid values:
+            /// <para>The type of server group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Instance</b> : contains servers of the <b>Ecs</b>, <b>Ens</b>, and <b>Eci</b> types.</description></item>
+            /// <item><description><b>Ip</b>: contains servers specified by IP addresses.</description></item>
+            /// </list>
             /// 
-            /// *   **Instance** : contains servers of the **Ecs**, **Ens**, and **Eci** types.
-            /// *   **Ip**: contains servers specified by IP addresses.
+            /// <b>Example:</b>
+            /// <para>Instance</para>
             /// </summary>
             [NameInMap("ServerGroupType")]
             [Validation(Required=false)]
             public string ServerGroupType { get; set; }
 
             /// <summary>
-            /// The tag.
+            /// <para>The tag.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListServerGroupsResponseBodyServerGroupsTags> Tags { get; set; }
             public class ListServerGroupsResponseBodyServerGroupsTags : TeaModel {
                 /// <summary>
-                /// The tag key. At most 10 tag keys are returned.
+                /// <para>The tag key. At most 10 tag keys are returned.</para>
+                /// <para>The tag key can be up to 64 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
                 /// 
-                /// The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+                /// <b>Example:</b>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value. At most 10 tag values are returned.
+                /// <para>The tag value. At most 10 tag values are returned.</para>
+                /// <para>The tag value can be up to 128 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
                 /// 
-                /// The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+                /// <b>Example:</b>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -325,7 +440,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             }
 
             /// <summary>
-            /// The ID of the VPC to which the server group belongs.
+            /// <para>The ID of the VPC to which the server group belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-bp15zckdt37pq72zv****</para>
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -334,7 +452,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

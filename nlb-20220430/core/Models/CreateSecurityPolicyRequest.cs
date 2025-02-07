@@ -10,120 +10,140 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class CreateSecurityPolicyRequest : TeaModel {
         /// <summary>
-        /// The supported cipher suites, which are determined by the TLS protocol version. You can specify at most 32 cipher suites.
-        /// 
-        /// TLS 1.0 and TLS 1.1 support the following cipher suites:
-        /// 
-        /// *   **ECDHE-ECDSA-AES128-SHA**
-        /// *   **ECDHE-ECDSA-AES256-SHA**
-        /// *   **ECDHE-RSA-AES128-SHA**
-        /// *   **ECDHE-RSA-AES256-SHA**
-        /// *   **AES128-SHA**
-        /// *   **AES256-SHA**
-        /// *   **DES-CBC3-SHA**
-        /// 
-        /// TLS 1.2 supports the following cipher suites:
-        /// 
-        /// *   **ECDHE-ECDSA-AES128-SHA**
-        /// *   **ECDHE-ECDSA-AES256-SHA**
-        /// *   **ECDHE-RSA-AES128-SHA**
-        /// *   **ECDHE-RSA-AES256-SHA**
-        /// *   **AES128-SHA**
-        /// *   **AES256-SHA**
-        /// *   **DES-CBC3-SHA**
-        /// *   **ECDHE-ECDSA-AES128-GCM-SHA256**
-        /// *   **ECDHE-ECDSA-AES256-GCM-SHA384**
-        /// *   **ECDHE-ECDSA-AES128-SHA256**
-        /// *   **ECDHE-ECDSA-AES256-SHA384**
-        /// *   **ECDHE-RSA-AES128-GCM-SHA256**
-        /// *   **ECDHE-RSA-AES256-GCM-SHA384**
-        /// *   **ECDHE-RSA-AES128-SHA256**
-        /// *   **ECDHE-RSA-AES256-SHA384**
-        /// *   **AES128-GCM-SHA256**
-        /// *   **AES256-GCM-SHA384**
-        /// *   **AES128-SHA256**
-        /// *   **AES256-SHA256**
-        /// 
-        /// TLS 1.3 supports the following cipher suites:
-        /// 
-        /// *   **TLS_AES_128_GCM_SHA256**
-        /// *   **TLS_AES_256_GCM_SHA384**
-        /// *   **TLS_CHACHA20_POLY1305_SHA256**
-        /// *   **TLS_AES_128_CCM_SHA256**
-        /// *   **TLS_AES_128_CCM_8_SHA256**
-        /// 
-        /// This parameter is required.
+        /// <para>The supported cipher suites, which are determined by the TLS protocol version. You can specify at most 32 cipher suites.</para>
+        /// <para>TLS 1.0 and TLS 1.1 support the following cipher suites:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ECDHE-ECDSA-AES128-SHA</b></description></item>
+        /// <item><description><b>ECDHE-ECDSA-AES256-SHA</b></description></item>
+        /// <item><description><b>ECDHE-RSA-AES128-SHA</b></description></item>
+        /// <item><description><b>ECDHE-RSA-AES256-SHA</b></description></item>
+        /// <item><description><b>AES128-SHA</b></description></item>
+        /// <item><description><b>AES256-SHA</b></description></item>
+        /// <item><description><b>DES-CBC3-SHA</b></description></item>
+        /// </list>
+        /// <para>TLS 1.2 supports the following cipher suites:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ECDHE-ECDSA-AES128-SHA</b></description></item>
+        /// <item><description><b>ECDHE-ECDSA-AES256-SHA</b></description></item>
+        /// <item><description><b>ECDHE-RSA-AES128-SHA</b></description></item>
+        /// <item><description><b>ECDHE-RSA-AES256-SHA</b></description></item>
+        /// <item><description><b>AES128-SHA</b></description></item>
+        /// <item><description><b>AES256-SHA</b></description></item>
+        /// <item><description><b>DES-CBC3-SHA</b></description></item>
+        /// <item><description><b>ECDHE-ECDSA-AES128-GCM-SHA256</b></description></item>
+        /// <item><description><b>ECDHE-ECDSA-AES256-GCM-SHA384</b></description></item>
+        /// <item><description><b>ECDHE-ECDSA-AES128-SHA256</b></description></item>
+        /// <item><description><b>ECDHE-ECDSA-AES256-SHA384</b></description></item>
+        /// <item><description><b>ECDHE-RSA-AES128-GCM-SHA256</b></description></item>
+        /// <item><description><b>ECDHE-RSA-AES256-GCM-SHA384</b></description></item>
+        /// <item><description><b>ECDHE-RSA-AES128-SHA256</b></description></item>
+        /// <item><description><b>ECDHE-RSA-AES256-SHA384</b></description></item>
+        /// <item><description><b>AES128-GCM-SHA256</b></description></item>
+        /// <item><description><b>AES256-GCM-SHA384</b></description></item>
+        /// <item><description><b>AES128-SHA256</b></description></item>
+        /// <item><description><b>AES256-SHA256</b></description></item>
+        /// </list>
+        /// <para>TLS 1.3 supports the following cipher suites:</para>
+        /// <list type="bullet">
+        /// <item><description><b>TLS_AES_128_GCM_SHA256</b></description></item>
+        /// <item><description><b>TLS_AES_256_GCM_SHA384</b></description></item>
+        /// <item><description><b>TLS_CHACHA20_POLY1305_SHA256</b></description></item>
+        /// <item><description><b>TLS_AES_128_CCM_SHA256</b></description></item>
+        /// <item><description><b>TLS_AES_128_CCM_8_SHA256</b></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Ciphers")]
         [Validation(Required=false)]
         public List<string> Ciphers { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
-        /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether only to precheck the request. Valid values:
+        /// <para>Specifies whether only to precheck the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: checks the request but does not create the security policy. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: checks the request but does not create the security policy. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The ID of the region where the NLB instance is deployed.
+        /// <para>The ID of the region where the NLB instance is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-atstuj3rtop****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The name of the security policy.
+        /// <para>The name of the security policy.</para>
+        /// <para>The name must be 1 to 200 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
-        /// The name must be 1 to 200 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).
+        /// <b>Example:</b>
+        /// <para>TLSCipherPolicy</para>
         /// </summary>
         [NameInMap("SecurityPolicyName")]
         [Validation(Required=false)]
         public string SecurityPolicyName { get; set; }
 
         /// <summary>
-        /// 标签列表。
+        /// <para>The tags.</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateSecurityPolicyRequestTag> Tag { get; set; }
         public class CreateSecurityPolicyRequestTag : TeaModel {
             /// <summary>
-            /// 标签键。最多支持128个字符，不能以`aliyun`或`acs:`开头，不能包含`http://`或`https://`。
+            /// <para>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
             /// 
-            /// 一次调用最多支持添加20个标签。
+            /// <b>Example:</b>
+            /// <para>KeyTest</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// 标签值。最多支持128个字符，不能以`aliyun`或`acs:`开头，不能包含`http://`或`https://`。
+            /// <para>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
-            /// 一次调用最多支持添加20个标签。
+            /// <b>Example:</b>
+            /// <para>ValueTest</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -132,9 +152,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         }
 
         /// <summary>
-        /// The supported versions of the Transport Layer Security (TLS) protocol. Valid values: **TLSv1.0**, **TLSv1.1**, **TLSv1.2**, and **TLSv1.3**.
-        /// 
-        /// This parameter is required.
+        /// <para>The supported versions of the Transport Layer Security (TLS) protocol. Valid values: <b>TLSv1.0</b>, <b>TLSv1.1</b>, <b>TLSv1.2</b>, and <b>TLSv1.3</b>.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TlsVersions")]
         [Validation(Required=false)]

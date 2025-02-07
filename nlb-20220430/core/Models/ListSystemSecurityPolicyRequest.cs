@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class ListSystemSecurityPolicyRequest : TeaModel {
         /// <summary>
-        /// The region ID of the NLB instance.
+        /// <para>The region ID of the NLB instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

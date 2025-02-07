@@ -10,162 +10,227 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class UpdateListenerAttributeShrinkRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:
+        /// <para>Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("AlpnEnabled")]
         [Validation(Required=false)]
         public bool? AlpnEnabled { get; set; }
 
         /// <summary>
-        /// The ALPN policy. Valid values:
+        /// <para>The ALPN policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>HTTP1Only</b>: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</description></item>
+        /// <item><description><b>HTTP2Only</b>: uses only HTTP 2.0.</description></item>
+        /// <item><description><b>HTTP2Optional</b>: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.</description></item>
+        /// <item><description><b>HTTP2Preferred</b>: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is required if AlpnEnabled is set to true.</para>
+        /// </remarks>
         /// 
-        /// *   **HTTP1Only**: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.
-        /// *   **HTTP2Only**: uses only HTTP 2.0.
-        /// *   **HTTP2Optional**: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.
-        /// *   **HTTP2Preferred**: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.
+        /// <b>Example:</b>
+        /// <para>HTTP1Only</para>
         /// 
-        /// > This parameter is required if AlpnEnabled is set to true.
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("AlpnPolicy")]
         [Validation(Required=false)]
         public string AlpnPolicy { get; set; }
 
         /// <summary>
-        /// The CA certificates. Only one CA certificate is supported.
-        /// 
-        /// >  This parameter takes effect only for listeners that use SSL over TCP.
+        /// <para>The CA certificates. Only one CA certificate is supported.</para>
+        /// <remarks>
+        /// <para> This parameter takes effect only for listeners that use SSL over TCP.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("CaCertificateIds")]
         [Validation(Required=false)]
         public List<string> CaCertificateIds { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable mutual authentication. Valid values:
+        /// <para>Specifies whether to enable mutual authentication. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b> (default): no</description></item>
+        /// </list>
         /// 
-        /// *   **true**: yes
-        /// *   **false** (default): no
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("CaEnabled")]
         [Validation(Required=false)]
         public bool? CaEnabled { get; set; }
 
         /// <summary>
-        /// The server certificates.
+        /// <para>The server certificates.</para>
         /// </summary>
         [NameInMap("CertificateIds")]
         [Validation(Required=false)]
         public List<string> CertificateIds { get; set; }
 
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-        /// 
-        /// > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// The maximum number of connections that can be created per second on the NLB instance. Valid values: **0** to **1000000**. **0** specifies that the number of connections is unlimited.
+        /// <para>The maximum number of new connections per second supported by the listener in each zone (virtual IP address). Valid values: <b>0</b> to <b>1000000</b>. <b>0</b> indicates that the number of connections is unlimited.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000</para>
         /// </summary>
         [NameInMap("Cps")]
         [Validation(Required=false)]
         public int? Cps { get; set; }
 
         /// <summary>
-        /// Specifies whether only to precheck the request. Valid values:
+        /// <para>Specifies whether only to precheck the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: prechecks the request but does not update the configurations of the listener. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: prechecks the request but does not update the configurations of the listener. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The timeout period of an idle connection. Unit: seconds. Valid values: **1** to **900**.
+        /// <para>The timeout period of idle connections. Unit: seconds</para>
+        /// <list type="bullet">
+        /// <item><description>If the listener uses <b>TCP</b> or <b>TCPSSL</b>, you can set the timeout period of idle connections to <b>10</b> to <b>900</b> seconds. Default value: <b>900</b>.</description></item>
+        /// <item><description>If the listener uses <b>UDP</b>, you can set the timeout period of idle connections to <b>10</b> to <b>20</b> seconds. Default value: <b>20</b>.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>900</para>
         /// </summary>
         [NameInMap("IdleTimeout")]
         [Validation(Required=false)]
         public int? IdleTimeout { get; set; }
 
         /// <summary>
-        /// Enter a name for the listener.
+        /// <para>Enter a name for the listener.</para>
+        /// <para>The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</para>
         /// 
-        /// The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).
+        /// <b>Example:</b>
+        /// <para>tcpssl_443</para>
         /// </summary>
         [NameInMap("ListenerDescription")]
         [Validation(Required=false)]
         public string ListenerDescription { get; set; }
 
         /// <summary>
-        /// The ID of the listener.
+        /// <para>The ID of the listener.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lsn-bp1bpn0kn908w4nbw****@443</para>
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// The size of the largest TCP segment. Unit: bytes. Valid values: **0** to **1500**. **0** specifies that the maximum segment size remains unchanged. This parameter is supported only by listeners that use SSL over TCP.
+        /// <para>The size of the largest TCP segment. Unit: bytes. Valid values: <b>0</b> to <b>1500</b>. <b>0</b> specifies that the maximum segment size remains unchanged. This parameter is supported only by listeners that use SSL over TCP.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>344</para>
         /// </summary>
         [NameInMap("Mss")]
         [Validation(Required=false)]
         public int? Mss { get; set; }
 
         /// <summary>
-        /// Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:
+        /// <para>Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ProxyProtocolEnabled")]
         [Validation(Required=false)]
         public bool? ProxyProtocolEnabled { get; set; }
 
         /// <summary>
-        /// Specifies that the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.
+        /// <para>Specifies that the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</para>
         /// </summary>
         [NameInMap("ProxyProtocolV2Config")]
         [Validation(Required=false)]
         public string ProxyProtocolV2ConfigShrink { get; set; }
 
         /// <summary>
-        /// The ID of the region where the NLB instance is deployed.
+        /// <para>The ID of the region where the NLB instance is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// Specifies whether to enable fine-grained monitoring. Valid values:
+        /// <para>Specifies whether to enable fine-grained monitoring. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("SecSensorEnabled")]
         [Validation(Required=false)]
         public bool? SecSensorEnabled { get; set; }
 
         /// <summary>
-        /// The ID of the security policy.
+        /// <para>The ID of the security policy.</para>
+        /// <remarks>
+        /// <para> This parameter takes effect only for listeners that use SSL over TCP.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter takes effect only for listeners that use SSL over TCP.
+        /// <b>Example:</b>
+        /// <para>tls_cipher_policy_1_1</para>
         /// </summary>
         [NameInMap("SecurityPolicyId")]
         [Validation(Required=false)]
         public string SecurityPolicyId { get; set; }
 
         /// <summary>
-        /// The ID of the server group.
+        /// <para>The ID of the server group.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set <b>ListenerProtocol</b> to <b>TCP</b>, you can associate the listener with server groups whose backend protocol is <b>TCP</b> or <b>TCP_UDP</b>. You cannot associate the listener with server groups whose backend protocol is <b>UDP</b>.</description></item>
+        /// <item><description>If you set <b>ListenerProtocol</b> to <b>UDP</b>, you can associate the listener with server groups whose backend protocol is <b>UDP</b> or <b>TCP_UDP</b>. You cannot associate the listener with server groups whose backend protocol is <b>TCP</b>.</description></item>
+        /// <item><description>If you set <b>ListenerProtocol</b> to <b>TCPSSL</b>, you can associate the listener with server groups whose backend protocol is <b>TCP</b> and have <b>client IP preservation disabled</b>. You cannot associate the listener with server groups whose backend protocol is <b>TCP</b> and have <b>client IP preservation enabled</b> or server groups whose backend protocol is <b>UDP</b> or <b>TCP_UDP</b>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sgp-ppdpc14gdm3x4o****</para>
         /// </summary>
         [NameInMap("ServerGroupId")]
         [Validation(Required=false)]

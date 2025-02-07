@@ -10,35 +10,22 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class GetListenerHealthStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the listener of the NLB instance.
+        /// <para>The ID of the listener of the NLB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>lsn-bp1bpn0kn908w4nbw****@80</para>
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
-        /// </summary>
-        [NameInMap("MaxResults")]
-        [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        /// <summary>
-        /// The token that is used for the next query. Valid values:
+        /// <para>The ID of the region where the NLB instance is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// *   If this is your first query or no next query is to be sent, ignore this parameter.
-        /// *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
-        /// </summary>
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
-
-        /// <summary>
-        /// The ID of the region where the NLB instance is deployed.
-        /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

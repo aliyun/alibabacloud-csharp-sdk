@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class GetJobStatusResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>365F4154-92F6-4AE4-92F8-7FF34B540710</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The state of the task. Valid values:
+        /// <para>The state of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Succeeded</b>: The task is successful.</description></item>
+        /// <item><description><b>processing</b>: The ticket is being executed.</description></item>
+        /// </list>
         /// 
-        /// *   **Succeeded**: The task is successful.
-        /// *   **processing**: The ticket is being executed.
+        /// <b>Example:</b>
+        /// <para>Succeeded</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

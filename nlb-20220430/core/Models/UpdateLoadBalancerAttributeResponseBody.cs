@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class UpdateLoadBalancerAttributeResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the asynchronous task.
+        /// <para>The ID of the asynchronous task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aab74cfa-3bc4-48fc-80fc-0101da5a****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7294679F-08DE-16D4-8E5D-1625685DC10B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

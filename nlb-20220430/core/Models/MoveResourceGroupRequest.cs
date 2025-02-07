@@ -10,46 +10,49 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the new resource group.
+        /// <para>The ID of the new resource group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can log on to the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups) to view resource group IDs.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rg-aekzjcnrv3vvqhq</para>
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// The region ID of the NLB instance.
+        /// <para>The region ID of the NLB instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to obtain the region ID.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the bastion host for which you want to change the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeInstances](https://help.aliyun.com/document_detail/153281.html) operation to query the ID of the bastion host.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>nlb-nrnrxwd15en27r****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource. Valid values:
+        /// <para>The type of the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>loadbalancer</b>: a Network Load Balancer (NLB) instance</description></item>
+        /// <item><description><b>securitypolicy</b>: a security policy</description></item>
+        /// <item><description><b>servergroup</b>: a server group</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **loadbalancer**: a Network Load Balancer (NLB) instance
-        /// *   **securitypolicy**: a security policy
-        /// *   **servergroup**: a server group
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>loadbalancer</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

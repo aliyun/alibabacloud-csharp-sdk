@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,114 +10,135 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class AddServersToServerGroupRequest : TeaModel {
         /// <summary>
-        /// The client token that is used to ensure the idempotence of the request.
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> of each API request may be different.</para>
+        /// </remarks>
         /// 
-        /// You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
-        /// 
-        /// >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** of each API request may be different.
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// Specifies whether only to precheck the request. Valid values:
+        /// <para>Specifies whether only to precheck the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: prechecks the request but does not add the servers to the server group. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: prechecks the request but does not add the servers to the server group. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-        /// *   **false** (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// The ID of the region where the NLB instance is deployed.
+        /// <para>The ID of the region where the NLB instance is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/443657.html) operation to query the most recent region list.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the server group.
+        /// <para>The ID of the server group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>sgp-atstuj3rtoptyui****</para>
         /// </summary>
         [NameInMap("ServerGroupId")]
         [Validation(Required=false)]
         public string ServerGroupId { get; set; }
 
         /// <summary>
-        /// A list of backend servers.
-        /// 
-        /// This parameter is required.
+        /// <para>The backend servers.</para>
+        /// <remarks>
+        /// <para> You can add at most 200 backend servers in each call.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Servers")]
         [Validation(Required=false)]
         public List<AddServersToServerGroupRequestServers> Servers { get; set; }
         public class AddServersToServerGroupRequestServers : TeaModel {
             /// <summary>
-            /// The description of the servers.
+            /// <para>The description of the backend server.</para>
+            /// <para>The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at sings (@), underscores (_), and hyphens (-).</para>
             /// 
-            /// The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).
-            /// 
-            /// >  You can specify at most 40 servers in each call.
+            /// <b>Example:</b>
+            /// <para>ECS</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The port used by the backend server. Valid values: **1** to **65535**.
+            /// <para>The port that is used by the backend server. Valid values: <b>0 to 65535</b>. If you do not specify a port, the default value <b>0</b> is used.</para>
+            /// <para>If you enable all-port forwarding, you do not need to specify a port when you add a backend server. The default port is port 0. NLB forwards requests to the requested ports. To determine whether all-port forwarding is enabled, call the <a href="https://help.aliyun.com/document_detail/445895.html">ListServerGroups</a> API operation and check the value of the <b>AnyPortEnabled</b> parameter.</para>
             /// 
-            /// >  You can specify at most 40 servers in each call.
+            /// <b>Example:</b>
+            /// <para>443</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
             /// <summary>
-            /// The ID of the server. You can specify at most 40 server IDs in each call.
+            /// <para>The ID of the server group.</para>
+            /// <list type="bullet">
+            /// <item><description>If the server group is of the <b>Instance</b> type, set this parameter to the IDs of <b>Elastic Compute Service (ECS) instances</b>, <b>elastic network interfaces (ENIs)</b>, or <b>elastic container instances</b>.</description></item>
+            /// <item><description>If the server group is of the <b>Ip</b> type, set this parameter to IP addresses.</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   If the server group type is **Instance**, set the ServerId parameter to the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.
-            /// *   If the server group type is **Ip**, set the ServerId parameter to an IP address.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>i-bp67acfmxazb4p****</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
             public string ServerId { get; set; }
 
             /// <summary>
-            /// The IP address of the server. If the server group type is **Ip**, set the ServerId parameter to an IP address.
+            /// <para>The IP addresses of servers. If the server group type is <b>Ip</b>, set the ServerId parameter to IP addresses.</para>
             /// 
-            /// >  You can specify at most 40 server IP addresses in each call.
+            /// <b>Example:</b>
+            /// <para>192.168.6.6</para>
             /// </summary>
             [NameInMap("ServerIp")]
             [Validation(Required=false)]
             public string ServerIp { get; set; }
 
             /// <summary>
-            /// The type of the backend server. Valid values:
+            /// <para>The type of the backend server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Ecs</b>: ECS instance</description></item>
+            /// <item><description><b>Eni</b>: ENI</description></item>
+            /// <item><description><b>Eci</b>: elastic container instance</description></item>
+            /// <item><description><b>Ip</b>: IP address</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
             /// 
-            /// *   **Ecs**: an ECS instance
-            /// *   **Eni**: an ENI
-            /// *   **Eci**: an elastic container instance
-            /// *   **Ip**: an IP address
-            /// 
-            /// >  You can specify at most 40 servers in each call.
-            /// 
-            /// This parameter is required.
+            /// <b>Example:</b>
+            /// <para>Ecs</para>
             /// </summary>
             [NameInMap("ServerType")]
             [Validation(Required=false)]
             public string ServerType { get; set; }
 
             /// <summary>
-            /// The weight of the backend server. Valid values: **0** to **100**. Default value: **100**. If the weight of a backend server is set to **0**, no requests are forwarded to the backend server.
+            /// <para>The weight of the backend server. Valid values: <b>0</b> to <b>100</b>. Default value: <b>100</b>. If the value is set to <b>0</b>, no requests are forwarded to the server.</para>
             /// 
-            /// >  You can specify at most 40 servers in each call.
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("Weight")]
             [Validation(Required=false)]
