@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GetClusterCheckResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the cluster check task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1697100584236600453-ce0da5a1d627e4e9e9f96cae8ad07****-clustercheck-lboto</para>

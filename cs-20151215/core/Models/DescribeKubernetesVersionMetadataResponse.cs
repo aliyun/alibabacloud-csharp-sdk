@@ -23,6 +23,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public class DescribeKubernetesVersionMetadataResponseBody : TeaModel {
             /// <summary>
             /// <para>Features of the queried Kubernetes version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///       &quot;AnyAZ&quot;: true,
+            ///       &quot;ChargeType&quot;: &quot;PostPaid&quot;
+            /// }</para>
             /// </summary>
             [NameInMap("capabilities")]
             [Validation(Required=false)]
@@ -146,13 +152,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>The metadata of the Kubernetes version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///       &quot;KubernetesVersion&quot;: &quot;1.31.1-aliyun.1&quot;,
+            ///       &quot;SubClass&quot;: &quot;default&quot;,
+            ///       &quot;ServiceCIDR&quot;: &quot;&quot;
+            /// }</para>
             /// </summary>
             [NameInMap("meta_data")]
             [Validation(Required=false)]
             public Dictionary<string, object> MetaData { get; set; }
 
             /// <summary>
-            /// <para>Details of the supported container runtimes.</para>
+            /// <para>The container runtime configurations.</para>
             /// </summary>
             [NameInMap("runtimes")]
             [Validation(Required=false)]

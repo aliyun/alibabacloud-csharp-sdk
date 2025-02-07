@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public int? MinReplicaCount { get; set; }
 
+        /// <summary>
+        /// <para>Auto-scaling priority configuration. After creating a node pool with elasticity enabled, you can choose whether to configure a priority strategy and priority settings through <a href="https://help.aliyun.com/document_detail/119099.html">Enabling Node Auto-scaling</a>. This allows you to set priorities for the specified auto-scaling node pool scaling group. The priority value range is [1, 100] and must be a positive integer.</para>
+        /// </summary>
         [NameInMap("priorities")]
         [Validation(Required=false)]
         public Dictionary<string, List<string>> Priorities { get; set; }
@@ -126,8 +129,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? ScaleUpFromZero { get; set; }
 
         /// <summary>
+        /// <para>Elastic component type, default is goatscaler for cluster version 1.24 and above, and cluster-autoscaler below that. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>goatscaler</c>: Instant elasticity. </description></item>
+        /// <item><description><c>cluster-autoscaler</c>: Auto-scaling.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
-        /// <para>cluster-autoscaler</para>
+        /// <para>goatscaler</para>
         /// </summary>
         [NameInMap("scaler_type")]
         [Validation(Required=false)]

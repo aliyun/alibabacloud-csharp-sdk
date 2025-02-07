@@ -57,6 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para><b>This parameter is deprecated.</b></para>
         /// <para>Specifies whether to enable auto-renewal. This parameter takes effect only when <c>charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: enables auto-renewal.</description></item>
@@ -76,8 +77,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para><b>This parameter is deprecated.</b></para>
         /// <para>The auto-renewal duration. This parameter takes effect only if charge_type is set to PrePaid and auto_renew is set to true. If you set <c>period_unit</c> to Month, the valid values of auto_renew_period are 1, 2, 3, 6, and 12.</para>
-        /// <para>Default value: 1</para>
+        /// <para>Default value: 1.</para>
         /// <para>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</para>
         /// 
         /// <b>Example:</b>
@@ -91,13 +93,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The billing method of the resource. The following resources are billed on a subscription basis:</para>
-        /// <para>The internal-facing SLB instance used by the API server.</para>
-        /// <para>Valid values:</para>
-        /// <para>PrePaid: subscription</para>
-        /// <para>PostPaid: pay-as-you-go</para>
-        /// <para>Default value: PostPaid.</para>
-        /// <para>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</para>
+        /// <para>The billing method of the Classic Load Balancer (CLB) instance that is used by the API server. Default value: PostPaid. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PostPaid: pay-as-you-go</description></item>
+        /// <item><description>PrePaid: subscription. The newly created billing method for the CLB instance is not supported.</description></item>
+        /// </list>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</para>
+        /// </description></item>
+        /// <item><description><para>Starting from December 1, 2024, new CLB instances no longer support the subscription billing method and will be charged for the instances.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2839797.html">CLB billing adjustments</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -192,11 +201,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ContainerCidr { get; set; }
 
+        /// <summary>
+        /// <para>The control plane configurations of an ACK dedicated cluster.</para>
+        /// </summary>
         [NameInMap("control_plane_config")]
         [Validation(Required=false)]
         public CreateClusterRequestControlPlaneConfig ControlPlaneConfig { get; set; }
         public class CreateClusterRequestControlPlaneConfig : TeaModel {
             /// <summary>
+            /// <para>Indicates whether auto-renewal is enabled for the control plane node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -205,6 +219,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
+            /// <para>The auto-renewal duration for the control plane node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -213,6 +229,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? AutoRenewPeriod { get; set; }
 
             /// <summary>
+            /// <para>The billing method of the control plane node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
             /// </summary>
@@ -221,6 +239,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ChargeType { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether to install CloudMonitor for the node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -229,6 +249,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? CloudMonitorFlags { get; set; }
 
             /// <summary>
+            /// <para>The CPU management policy of nodes in the node pool.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>none</para>
             /// </summary>
@@ -237,6 +259,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CpuPolicy { get; set; }
 
             /// <summary>
+            /// <para>The ID of the deployment set.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ds-bp10b35imuam5amw****</para>
             /// </summary>
@@ -245,6 +269,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string DeploymentsetId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the image.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>aliyun_3_x64_20G_alibase_20240819.vhd</para>
             /// </summary>
@@ -253,6 +279,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ImageId { get; set; }
 
             /// <summary>
+            /// <para>The type of the OS image.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AliyunLinux3</para>
             /// </summary>
@@ -260,11 +288,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string ImageType { get; set; }
 
+            /// <summary>
+            /// <para>The instance type of the node.</para>
+            /// </summary>
             [NameInMap("instance_types")]
             [Validation(Required=false)]
             public List<string> InstanceTypes { get; set; }
 
             /// <summary>
+            /// <para>The name of the key pair. You must set key_pair or login_password.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ack</para>
             /// </summary>
@@ -273,6 +306,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string KeyPair { get; set; }
 
             /// <summary>
+            /// <para>The SSH logon password. The password must be 8 to 30 characters in length and contain a minimum of three of the following character types: uppercase letters, lowercase letters, digits, and special characters. You must set login_password or key_pair.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ack@Test</para>
             /// </summary>
@@ -281,6 +316,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LoginPassword { get; set; }
 
             /// <summary>
+            /// <para>The node port range.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30000-32767</para>
             /// </summary>
@@ -289,6 +326,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodePortRange { get; set; }
 
             /// <summary>
+            /// <para>The subscription duration of the control plane node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -297,6 +336,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Period { get; set; }
 
             /// <summary>
+            /// <para>The unit of the subscription duration of the control plane node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Month</para>
             /// </summary>
@@ -305,6 +346,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
+            /// <para>The runtime.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>containerd</para>
             /// </summary>
@@ -313,6 +356,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Runtime { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether to enable Alibaba Cloud Linux Security Hardening.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -321,6 +366,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SecurityHardeningOs { get; set; }
 
             /// <summary>
+            /// <para>The number of control plane nodes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -329,6 +376,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Size { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether to enable MLPS security hardening.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -337,6 +386,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SocEnabled { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether to enable the burst feature for the system disk.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -345,6 +396,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SystemDiskBurstingEnabled { get; set; }
 
             /// <summary>
+            /// <para>The category of the system disk for nodes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cloud_essd</para>
             /// </summary>
@@ -353,6 +406,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
+            /// <para>The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for ESSDs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PL1</para>
             /// </summary>
@@ -361,6 +416,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskPerformanceLevel { get; set; }
 
             /// <summary>
+            /// <para>The preset read/write IOPS of the system disk.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -369,6 +426,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? SystemDiskProvisionedIops { get; set; }
 
             /// <summary>
+            /// <para>The system disk size of the node. The value must be at least 40 GB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>120</para>
             /// </summary>
@@ -377,6 +436,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? SystemDiskSize { get; set; }
 
             /// <summary>
+            /// <para>The automatic snapshot policy of the node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sp-2zej1nogjvovnz4z****</para>
             /// </summary>
@@ -743,7 +804,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for master nodes.</para>
         /// <para>Valid values: 1, 2, 3, 6, and 12.</para>
-        /// <para>Default value: 1</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -772,8 +833,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The billing method of master nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PrePaid</c>: subscription.</description></item>
-        /// <item><description><c>PostPaid</c>: the pay-as-you-go.</description></item>
+        /// <item><description><c>PrePaid</c>: subscription</description></item>
+        /// <item><description><c>PostPaid</c>: the pay-as-you-go</description></item>
         /// </list>
         /// <para>Default value: <c>PostPaid</c></para>
         /// 
@@ -800,7 +861,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The subscription duration of master nodes. This parameter takes effect and is required only when <c>master_instance_charge_type</c> is set to <c>PrePaid</c>.</para>
         /// <para>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
-        /// <para>Default value: 1</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -830,8 +891,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The system disk type of master nodes. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>cloud_efficiency</c>: ultra disk</description></item>
-        /// <item><description><c>cloud_ssd</c>: standard SSD.</description></item>
-        /// <item><description><c>cloud_essd</c>: Enterprise SSD (ESSD).</description></item>
+        /// <item><description><c>cloud_ssd</c>: standard SSD</description></item>
+        /// <item><description><c>cloud_essd</c>: Enterprise SSD (ESSD)</description></item>
         /// </list>
         /// <para>Default value: <c>cloud_ssd</c>. The default value may vary in different zones.</para>
         /// 
@@ -1041,9 +1102,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para><b>This parameter is deprecated.</b></para>
         /// <para>The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.</para>
         /// <para>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
-        /// <para>Default value: 1</para>
+        /// <para>Default value: 1.</para>
         /// <para>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</para>
         /// 
         /// <b>Example:</b>
@@ -1057,6 +1119,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para><b>This parameter is deprecated.</b></para>
         /// <para>The billing cycle. This parameter is required if charge_type is set to PrePaid.</para>
         /// <para>Valid value: Month, which indicates that resources are billed only on a monthly basis.</para>
         /// <para>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</para>
@@ -1300,7 +1363,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</para>
+        /// <para>The taint. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</para>
         /// </summary>
         [NameInMap("taints")]
         [Validation(Required=false)]
@@ -1464,8 +1527,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The billing method of worker nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PrePaid</c>: subscription.</description></item>
-        /// <item><description><c>PostPaid</c>: the pay-as-you-go.</description></item>
+        /// <item><description><c>PrePaid</c>: subscription</description></item>
+        /// <item><description><c>PostPaid</c>: the pay-as-you-go</description></item>
         /// </list>
         /// <para>Default value: PostPaid.</para>
         /// 
@@ -1492,7 +1555,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The subscription duration of worker nodes. This parameter takes effect and is required only when <c>worker_instance_charge_type</c> is set to <c>PrePaid</c>.</para>
         /// <para>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
-        /// <para>Default value: 1</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -1522,10 +1585,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The system disk category of worker nodes. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Elastic Block Storage devices</a>.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>cloud_efficiency</c>: ultra disk.</description></item>
-        /// <item><description><c>cloud_ssd</c>: standard SSD.</description></item>
+        /// <item><description><c>cloud_efficiency</c>: ultra disk</description></item>
+        /// <item><description><c>cloud_ssd</c>: standard SSD</description></item>
         /// </list>
-        /// <para>Default value: <c>cloud_ssd</c>.</para>
+        /// <para>Default value: <c>cloud_ssd</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_efficiency</para>

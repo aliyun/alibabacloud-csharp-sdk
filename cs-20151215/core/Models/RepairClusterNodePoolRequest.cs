@@ -26,14 +26,26 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public List<string> Nodes { get; set; }
 
+        /// <summary>
+        /// <para>The repair operation to be performed. If not specified, all repair operations will be executed by default. Generally, there is no need to specify this in most scenarios.</para>
+        /// </summary>
         [NameInMap("operations")]
         [Validation(Required=false)]
         public List<RepairClusterNodePoolRequestOperations> Operations { get; set; }
         public class RepairClusterNodePoolRequestOperations : TeaModel {
+            /// <summary>
+            /// <para>List of repair operation parameters.</para>
+            /// </summary>
             [NameInMap("args")]
             [Validation(Required=false)]
             public List<string> Args { get; set; }
 
+            /// <summary>
+            /// <para>Repair operation ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>remove.containerdContainer</para>
+            /// </summary>
             [NameInMap("operation_id")]
             [Validation(Required=false)]
             public string OperationId { get; set; }

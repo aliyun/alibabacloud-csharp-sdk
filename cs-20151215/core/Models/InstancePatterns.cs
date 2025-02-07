@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string InstanceFamilyLevel { get; set; }
 
+        [NameInMap("instance_type_families")]
+        [Validation(Required=false)]
+        public List<string> InstanceTypeFamilies { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>8</para>
@@ -95,6 +99,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Obsolete]
         public float? MaxPrice { get; set; }
 
+        [NameInMap("maximum_gpu_amount")]
+        [Validation(Required=false)]
+        public long? MaximumGpuAmount { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>8</para>
@@ -118,6 +126,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("min_memory_size")]
         [Validation(Required=false)]
         public float? MinMemorySize { get; set; }
+
+        [NameInMap("minimum_eni_ipv6_address_quantity")]
+        [Validation(Required=false)]
+        public long? MinimumEniIpv6AddressQuantity { get; set; }
+
+        [NameInMap("minimum_eni_private_ip_address_quantity")]
+        [Validation(Required=false)]
+        public long? MinimumEniPrivateIpAddressQuantity { get; set; }
+
+        [NameInMap("minimum_eni_quantity")]
+        [Validation(Required=false)]
+        public long? MinimumEniQuantity { get; set; }
 
     }
 
