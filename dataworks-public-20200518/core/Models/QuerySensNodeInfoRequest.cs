@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The name of the sensitive field. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Data Security Guard page to obtain the name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ID card</para>
         /// </summary>
         [NameInMap("SensitiveName")]
         [Validation(Required=false)]

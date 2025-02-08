@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The description of the extension.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ODPS SQL compatible Spark engine detection</para>
             /// </summary>
             [NameInMap("ExtensionDesc")]
             [Validation(Required=false)]
@@ -45,6 +48,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The name of the extension.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>max_pt function is not allowed.</para>
             /// </summary>
             [NameInMap("ExtensionName")]
             [Validation(Required=false)]

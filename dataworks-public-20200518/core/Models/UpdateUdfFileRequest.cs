@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ReturnValue { get; set; }
 
         /// <summary>
-        /// <para>The description of the function. This parameter corresponds to the Description parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</para>
+        /// <para>The description of the function. This parameter corresponds to the Description parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Concatenate several strings to generate a new string</para>

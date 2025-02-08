@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Cycle { get; set; }
 
                 /// <summary>
-                /// <para>承诺时间，hh:mm格式，hh的取值范围为[0,47]，mm的取值范围为[0,59]。</para>
+                /// <para>Commitment time, hh:mm format, hh value range is [0,47],mm value range is [0,59].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00:00</para>

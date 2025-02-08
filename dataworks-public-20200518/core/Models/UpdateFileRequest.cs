@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AdvancedSettings { get; set; }
 
         /// <summary>
+        /// <para>Whether the scheduling configuration takes effect immediately after the release.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -162,6 +164,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The description of the file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Here is the file description</para>
         /// </summary>
         [NameInMap("FileDescription")]
         [Validation(Required=false)]
@@ -169,6 +174,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The path of the file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Business_process/First_Business_Process/data_integration/Folder_1/Folder_2</para>
         /// </summary>
         [NameInMap("FileFolderPath")]
         [Validation(Required=false)]
@@ -197,12 +205,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FileName { get; set; }
 
         /// <summary>
+        /// <para>Scheduling configuration-&gt; previous cycle-&gt; whether to skip the upstream empty run attribute.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("IgnoreParentSkipRunningProperty")]
         [Validation(Required=false)]
         public bool? IgnoreParentSkipRunningProperty { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
 
         /// <summary>
         /// <para>The output name of the parent file on which the current file depends. If you specify multiple output names, separate them with commas (,).</para>

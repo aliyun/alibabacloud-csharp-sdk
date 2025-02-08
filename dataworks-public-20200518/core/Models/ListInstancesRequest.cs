@@ -83,6 +83,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
+        /// <summary>
+        /// <para>The sorting rule of the instances to be returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CREATE_TIME_DESC: The instances are sorted in descending order of their creation time.</description></item>
+        /// <item><description>INSTANCE_ID_DESC (default): The instances are sorted in descending order of their IDs.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>INSTANCE_ID_DESC</para>
+        /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
@@ -128,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProgramType { get; set; }
 
         /// <summary>
-        /// <para>The time when the node was last modified.</para>
+        /// <para>The environment in which the node runs. Valid values: DEV and PROD.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -150,7 +160,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance started to wait to be scheduled.</para>
+        /// <para>The status of the node. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NOT_RUN: The node is not run.</description></item>
+        /// <item><description>WAIT_TIME: The node is waiting for the scheduling time to arrive.</description></item>
+        /// <item><description>WAIT_RESOURCE: The node is waiting for resources.</description></item>
+        /// <item><description>RUNNING: The node is running.</description></item>
+        /// <item><description>CHECKING: Data quality is being checked for the node.</description></item>
+        /// <item><description>CHECKING_CONDITION: Branch conditions are being checked for the node.</description></item>
+        /// <item><description>FAILURE: The node fails to run.</description></item>
+        /// <item><description>SUCCESS: The node is successfully run.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>NOT_RUN</para>

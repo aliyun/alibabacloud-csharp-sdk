@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the associated workflow.</para>
+        /// <para>The nodes.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListNodesResponseBodyData Data { get; set; }
         public class ListNodesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The scheduling type of the node. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>NORMAL: indicates that the node is a normal auto triggered node.</description></item>
-            /// <item><description>MANUAL: indicates that the node is a manually triggered node.</description></item>
-            /// <item><description>PAUSE: indicates that the node is a paused node.</description></item>
-            /// <item><description>SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</description></item>
-            /// </list>
+            /// <para>The information about the nodes.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
@@ -59,6 +53,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public string Connection { get; set; }
 
+                /// <summary>
+                /// <para>The timestamp when the node was created. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1593879116000</para>
+                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
@@ -73,6 +73,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public string CronExpress { get; set; }
 
+                /// <summary>
+                /// <para>The timestamp when the node was deployed. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1734537600000</para>
+                /// </summary>
                 [NameInMap("DeployDate")]
                 [Validation(Required=false)]
                 public long? DeployDate { get; set; }
@@ -107,18 +113,43 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public int? DqcType { get; set; }
 
+                /// <summary>
+                /// <para>The file ID. You can call the ListFiles operation to query the ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
                 [NameInMap("FileId")]
                 [Validation(Required=false)]
                 public long? FileId { get; set; }
 
+                /// <summary>
+                /// <para>Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node collection</a>.
+                /// You can also call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> interface to query the code type of the file.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
                 [NameInMap("FileType")]
                 [Validation(Required=false)]
                 public int? FileType { get; set; }
 
+                /// <summary>
+                /// <para>The latest version number of the file.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("FileVersion")]
                 [Validation(Required=false)]
                 public int? FileVersion { get; set; }
 
+                /// <summary>
+                /// <para>The timestamp when the node was modified. Unit: milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1593879116000</para>
+                /// </summary>
                 [NameInMap("ModifyTime")]
                 [Validation(Required=false)]
                 public long? ModifyTime { get; set; }
@@ -213,6 +244,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public long? RepeatInterval { get; set; }
 
+                /// <summary>
+                /// <para>The rerun mode. The value 0 indicates that rerun can be performed only if a failure occurs. The value 1 indicates that rerun can be performed in all cases. The value 2 indicates that rerun cannot be performed in all cases.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("RepeatMode")]
                 [Validation(Required=false)]
                 public int? RepeatMode { get; set; }
@@ -227,6 +264,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public bool? Repeatability { get; set; }
 
+                /// <summary>
+                /// <para>The identifier of the resource group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>group_123</para>
+                /// </summary>
                 [NameInMap("ResGroupIdentifier")]
                 [Validation(Required=false)]
                 public string ResGroupIdentifier { get; set; }

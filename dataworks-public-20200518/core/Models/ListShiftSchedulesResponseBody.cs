@@ -55,6 +55,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the shift schedule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Duty table name</para>
                 /// </summary>
                 [NameInMap("ShiftScheduleName")]
                 [Validation(Required=false)]

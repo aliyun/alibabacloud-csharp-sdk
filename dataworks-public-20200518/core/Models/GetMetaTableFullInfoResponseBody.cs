@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTableFullInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Business data.</para>
+        /// <para>The business data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetMetaTableFullInfoResponseBodyData Data { get; set; }
         public class GetMetaTableFullInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the EMR cluster.</para>
+            /// <para>The EMR cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C-010A704DA760****</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>A list of columns.</para>
+            /// <para>The fields in the table.</para>
             /// </summary>
             [NameInMap("ColumnList")]
             [Validation(Required=false)]
             public List<GetMetaTableFullInfoResponseBodyDataColumnList> ColumnList { get; set; }
             public class GetMetaTableFullInfoResponseBodyDataColumnList : TeaModel {
                 /// <summary>
-                /// <para>The description of the column.</para>
+                /// <para>The description of the field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>data comment</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Caption { get; set; }
 
                 /// <summary>
-                /// <para>The unique identifier of the column.</para>
+                /// <para>The unique identifier of the field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps.engine_name.table_name.1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ColumnGuid { get; set; }
 
                 /// <summary>
-                /// <para>The name of the column.</para>
+                /// <para>The name of the field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ColumnName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the column.</para>
+                /// <para>The data type of the field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ColumnType { get; set; }
 
                 /// <summary>
-                /// <para>The comment for the column.</para>
+                /// <para>The remarks of the field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>comment</para>
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>Whether the field is a foreign key, with values as follows: </para>
+                /// <para>Indicates whether the field is a foreign key. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true, it is a foreign key. </description></item>
-                /// <item><description>false, it is not a foreign key.</description></item>
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? IsForeignKey { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the column is a partition column, with the following values:</para>
+                /// <para>Indicates whether the field is a partition field. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: It is a partition column.</description></item>
-                /// <item><description>false: It is not a partition column.</description></item>
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -112,10 +112,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? IsPartitionColumn { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the column is a primary key, with the following values:</para>
+                /// <para>Indicates whether the field is a primary key. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: It is a primary key.</description></item>
-                /// <item><description>false: It is not a primary key.</description></item>
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? IsPrimaryKey { get; set; }
 
                 /// <summary>
-                /// <para>The position of the column in the order.</para>
+                /// <para>The sequence number of the field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The comment of the table.</para>
+            /// <para>The comment on the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>comment</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The time when the table was created. The result is displayed as a timestamp, which you can convert to the corresponding date based on your timezone.</para>
+            /// <para>The time when the table was created. A timestamp is returned for this parameter. You can convert the timestamp to the related date based on the time zone that you use.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1589870293000</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The storage space occupied by the table, in bytes (B).</para>
+            /// <para>The size of the storage space that is consumed by the table. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -178,10 +178,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string DatabaseName { get; set; }
 
             /// <summary>
-            /// <para>Environment type, with the following values:</para>
+            /// <para>The type of the environment. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0 indicates a table in the development environment.</description></item>
-            /// <item><description>1 indicates a table in the production environment.</description></item>
+            /// <item><description>0: indicates that the table resides in the development environment.</description></item>
+            /// <item><description>1: indicates that the table resides in the production environment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -192,12 +192,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? EnvType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the table is visible, with the following values:</para>
+            /// <para>The scope in which the table is visible. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The table is visible to workspace members.</description></item>
-            /// <item><description>1: The table is visible within the tenant.</description></item>
-            /// <item><description>2: The table is visible across tenants.</description></item>
-            /// <item><description>3: The table is only visible to the responsible person.</description></item>
+            /// <item><description>0: indicates that the table is visible to workspace members.</description></item>
+            /// <item><description>1: indicates that the table is visible to users within a tenant.</description></item>
+            /// <item><description>2: indicates that the table is visible to all tenants.</description></item>
+            /// <item><description>3: indicates that the table is visible only to the table owner.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? IsVisible { get; set; }
 
             /// <summary>
-            /// <para>The last time the table was accessed. The result is displayed as a timestamp, which you can convert to the corresponding date based on your timezone.</para>
+            /// <para>The time when the table was last accessed. A timestamp is returned for this parameter. You can convert the timestamp to the related date based on the time zone that you use.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1589870294000</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? LastAccessTime { get; set; }
 
             /// <summary>
-            /// <para>The last time the table structure was changed. The result is displayed as a timestamp, which you can convert to the corresponding date based on your timezone.</para>
+            /// <para>The time when the schema of the table was last changed. A timestamp is returned for this parameter. You can convert the timestamp to the related date based on the time zone that you use.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1589870294000</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? LastDdlTime { get; set; }
 
             /// <summary>
-            /// <para>The last time the table was updated. The result is displayed as a timestamp, which you can convert to the corresponding date based on your timezone.</para>
+            /// <para>The time when the table was last updated. A timestamp is returned for this parameter. You can convert the timestamp to the related date based on the time zone that you use.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1589870294000</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? LastModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The lifecycle of the table, in days.</para>
+            /// <para>The lifecycle of the table. Unit: days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? LifeCycle { get; set; }
 
             /// <summary>
-            /// <para>The storage location of the Hive table.</para>
+            /// <para>The storage path of the Hive table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hdfs://localhost:777/user/hadoop/test.txt</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string OwnerId { get; set; }
 
             /// <summary>
-            /// <para>Partition keys.</para>
+            /// <para>The partition key column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string PartitionKeys { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace where the table is located.</para>
+            /// <para>The ID of the workspace to which the table belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The name of the workspace where the table is located.</para>
+            /// <para>The name of the workspace to which the table belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -297,6 +297,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public string ProjectName { get; set; }
 
+            /// <summary>
+            /// <para>The schema information of the table.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
+            /// </summary>
             [NameInMap("Schema")]
             [Validation(Required=false)]
             public string Schema { get; set; }
@@ -332,7 +338,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? TenantId { get; set; }
 
             /// <summary>
-            /// <para>The total number of columns.</para>
+            /// <para>The total number of fields.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -344,7 +350,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1031203110005</para>
@@ -354,7 +360,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified parameters are invalid.</para>
@@ -364,7 +370,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -374,7 +380,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Request ID. Used for locating logs and troubleshooting issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc1411515937****</para>
@@ -384,7 +390,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

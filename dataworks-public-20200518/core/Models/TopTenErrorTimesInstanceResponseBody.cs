@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Node name</para>
                 /// </summary>
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]

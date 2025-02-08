@@ -4773,6 +4773,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["IgnoreParentSkipRunningProperty"] = request.IgnoreParentSkipRunningProperty;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputList))
             {
                 body["InputList"] = request.InputList;
@@ -4949,6 +4953,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreParentSkipRunningProperty))
             {
                 body["IgnoreParentSkipRunningProperty"] = request.IgnoreParentSkipRunningProperty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputList))
             {
@@ -23624,8 +23632,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke the GetMetaTableFullInfo interface to obtain the complete information of a table (including field information).</para>
+        /// <para>Queries the complete information about a table, including information about fields in the table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetaTableFullInfoRequest
@@ -23669,8 +23682,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke the GetMetaTableFullInfo interface to obtain the complete information of a table (including field information).</para>
+        /// <para>Queries the complete information about a table, including information about fields in the table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetaTableFullInfoRequest
@@ -23714,8 +23732,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke the GetMetaTableFullInfo interface to obtain the complete information of a table (including field information).</para>
+        /// <para>Queries the complete information about a table, including information about fields in the table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetaTableFullInfoRequest
@@ -23732,8 +23755,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke the GetMetaTableFullInfo interface to obtain the complete information of a table (including field information).</para>
+        /// <para>Queries the complete information about a table, including information about fields in the table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetaTableFullInfoRequest
@@ -27084,6 +27112,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GetQualityEntityWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the subscribers of a partition filter expression.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityFollowerRequest
         /// </param>
@@ -27136,6 +27169,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the subscribers of a partition filter expression.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityFollowerRequest
         /// </param>
@@ -27188,6 +27226,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the subscribers of a partition filter expression.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityFollowerRequest
         /// </param>
@@ -27201,6 +27244,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return GetQualityFollowerWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the subscribers of a partition filter expression.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityFollowerRequest
         /// </param>
@@ -27960,6 +28008,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GetTopicWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries baseline instances affected by an event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Debugging</h2>
+        /// <para><a href="https://api.aliyun.com/#product=dataworks-public%5C&api=GetTopicInfluence%5C&type=RPC%5C&version=2020-05-18">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetTopicInfluenceRequest
         /// </param>
@@ -28004,6 +28063,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries baseline instances affected by an event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Debugging</h2>
+        /// <para><a href="https://api.aliyun.com/#product=dataworks-public%5C&api=GetTopicInfluence%5C&type=RPC%5C&version=2020-05-18">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetTopicInfluenceRequest
         /// </param>
@@ -28048,6 +28118,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries baseline instances affected by an event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Debugging</h2>
+        /// <para><a href="https://api.aliyun.com/#product=dataworks-public%5C&api=GetTopicInfluence%5C&type=RPC%5C&version=2020-05-18">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetTopicInfluenceRequest
         /// </param>
@@ -28061,6 +28142,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return GetTopicInfluenceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries baseline instances affected by an event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Debugging</h2>
+        /// <para><a href="https://api.aliyun.com/#product=dataworks-public%5C&api=GetTopicInfluence%5C&type=RPC%5C&version=2020-05-18">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetTopicInfluenceRequest
         /// </param>
@@ -29378,7 +29470,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询扩展事件的检查列表</para>
+        /// <para>Queries the check results of extension point events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29451,7 +29543,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询扩展事件的检查列表</para>
+        /// <para>Queries the check results of extension point events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29524,7 +29616,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询扩展事件的检查列表</para>
+        /// <para>Queries the check results of extension point events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29542,7 +29634,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询扩展事件的检查列表</para>
+        /// <para>Queries the check results of extension point events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33110,6 +33202,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await ListFileTypeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of file versions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFileVersionsRequest
         /// </param>
@@ -33170,6 +33267,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of file versions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFileVersionsRequest
         /// </param>
@@ -33230,6 +33332,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of file versions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFileVersionsRequest
         /// </param>
@@ -33243,6 +33350,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return ListFileVersionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of file versions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFileVersionsRequest
         /// </param>
@@ -33256,6 +33368,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await ListFileVersionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of files.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFilesRequest
         /// </param>
@@ -33352,6 +33469,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of files.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFilesRequest
         /// </param>
@@ -33448,6 +33570,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of files.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFilesRequest
         /// </param>
@@ -33461,6 +33588,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return ListFilesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of files.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFilesRequest
         /// </param>
@@ -34116,7 +34248,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the directed acyclic graph (DAG). You can set this parameter to the value of the DagId parameter returned by the <a href="https://help.aliyun.com/document_detail/212961.html">RunCycleDagNodes</a>, <a href="https://help.aliyun.com/document_detail/212949.html">RunSmokeTest</a>, or <a href="https://help.aliyun.com/document_detail/212830.html">RunManualDagNodes</a> operation based on your business requirements. The RunManualDagNodes operation is used to backfill data, the RunSmokeTest operation is used to perform smoke testing, and the RunManualDagNodes operation is used to run nodes in a manually triggered workflow.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34221,7 +34353,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the directed acyclic graph (DAG). You can set this parameter to the value of the DagId parameter returned by the <a href="https://help.aliyun.com/document_detail/212961.html">RunCycleDagNodes</a>, <a href="https://help.aliyun.com/document_detail/212949.html">RunSmokeTest</a>, or <a href="https://help.aliyun.com/document_detail/212830.html">RunManualDagNodes</a> operation based on your business requirements. The RunManualDagNodes operation is used to backfill data, the RunSmokeTest operation is used to perform smoke testing, and the RunManualDagNodes operation is used to run nodes in a manually triggered workflow.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34326,7 +34458,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the directed acyclic graph (DAG). You can set this parameter to the value of the DagId parameter returned by the <a href="https://help.aliyun.com/document_detail/212961.html">RunCycleDagNodes</a>, <a href="https://help.aliyun.com/document_detail/212949.html">RunSmokeTest</a>, or <a href="https://help.aliyun.com/document_detail/212830.html">RunManualDagNodes</a> operation based on your business requirements. The RunManualDagNodes operation is used to backfill data, the RunSmokeTest operation is used to perform smoke testing, and the RunManualDagNodes operation is used to run nodes in a manually triggered workflow.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34344,7 +34476,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the directed acyclic graph (DAG). You can set this parameter to the value of the DagId parameter returned by the <a href="https://help.aliyun.com/document_detail/212961.html">RunCycleDagNodes</a>, <a href="https://help.aliyun.com/document_detail/212949.html">RunSmokeTest</a>, or <a href="https://help.aliyun.com/document_detail/212830.html">RunManualDagNodes</a> operation based on your business requirements. The RunManualDagNodes operation is used to backfill data, the RunSmokeTest operation is used to perform smoke testing, and the RunManualDagNodes operation is used to run nodes in a manually triggered workflow.</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46988,7 +47120,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群的配置信息</para>
+        /// <para>Updates the configurations of submodules in a workspace. You can configure SPARK parameters.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -47057,7 +47189,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群的配置信息</para>
+        /// <para>Updates the configurations of submodules in a workspace. You can configure SPARK parameters.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -47126,7 +47258,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群的配置信息</para>
+        /// <para>Updates the configurations of submodules in a workspace. You can configure SPARK parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47144,7 +47276,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群的配置信息</para>
+        /// <para>Updates the configurations of submodules in a workspace. You can configure SPARK parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48614,6 +48746,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["IgnoreParentSkipRunningProperty"] = request.IgnoreParentSkipRunningProperty;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputList))
             {
                 body["InputList"] = request.InputList;
@@ -48791,6 +48927,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreParentSkipRunningProperty))
             {
                 body["IgnoreParentSkipRunningProperty"] = request.IgnoreParentSkipRunningProperty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputList))
             {

@@ -69,6 +69,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The description of the system defense rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Verify table rules</para>
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
@@ -281,6 +284,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the monitoring template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Number of SQL task table rows, 1, 7, and 30 days wave detection</para>
                 /// </summary>
                 [NameInMap("TemplateName")]
                 [Validation(Required=false)]

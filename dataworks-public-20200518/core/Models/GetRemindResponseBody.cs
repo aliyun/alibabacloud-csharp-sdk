@@ -27,21 +27,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? AlertInterval { get; set; }
 
             /// <summary>
-            /// <para>The alert notification method.</para>
+            /// <para>The notification method.</para>
             /// </summary>
             [NameInMap("AlertMethods")]
             [Validation(Required=false)]
             public List<string> AlertMethods { get; set; }
 
             /// <summary>
-            /// <para>The description of the alert recipient.</para>
+            /// <para>The description of the alert recipient. For more information about alert recipients, see the Receivers parameter.</para>
             /// </summary>
             [NameInMap("AlertTargets")]
             [Validation(Required=false)]
             public List<string> AlertTargets { get; set; }
 
             /// <summary>
-            /// <para>The recipient of the alert. Valid values: OWNER and OTHER. The value OWNER indicates the node owner. The value OTHER indicates a specified user.</para>
+            /// <para>The type of the alert recipient. For more information about alert recipient types, see the Receivers parameter. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>OWNER: the task owner</description></item>
+            /// <item><description>OTHER: specified personnel</description></item>
+            /// <item><description>SHIFT_SCHEDULE: personnel in a shift schedule</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>OWNER</para>
@@ -50,6 +55,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public string AlertUnit { get; set; }
 
+            /// <summary>
+            /// <para>The IDs of the nodes that are added to a whitelist.</para>
+            /// </summary>
             [NameInMap("AllowNodes")]
             [Validation(Required=false)]
             public List<long?> AllowNodes { get; set; }
@@ -73,6 +81,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the baseline.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Baseline name</para>
                 /// </summary>
                 [NameInMap("BaselineName")]
                 [Validation(Required=false)]
@@ -99,6 +110,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the workflow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Business process name</para>
                 /// </summary>
                 [NameInMap("BizProcessName")]
                 [Validation(Required=false)]
@@ -181,6 +195,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Node name</para>
                 /// </summary>
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]
@@ -227,15 +244,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             }
 
+            /// <summary>
+            /// <para>The information about the alert recipients.</para>
+            /// </summary>
             [NameInMap("Receivers")]
             [Validation(Required=false)]
             public List<GetRemindResponseBodyDataReceivers> Receivers { get; set; }
             public class GetRemindResponseBodyDataReceivers : TeaModel {
+                /// <summary>
+                /// <para>The alert recipient.</para>
+                /// </summary>
                 [NameInMap("AlertTargets")]
                 [Validation(Required=false)]
                 public List<string> AlertTargets { get; set; }
 
                 /// <summary>
+                /// <para>The type of the alert recipient. For more information about alert recipients, see the Receivers parameter. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>OWNER: indicate the task owner.</description></item>
+                /// <item><description>OTHER: indicates specified personnel.</description></item>
+                /// <item><description>SHIFT_SCHEDULE: indicates personnel in a shift schedule.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>OWNER</para>
                 /// </summary>
@@ -257,6 +287,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The name of the rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Rule name</para>
             /// </summary>
             [NameInMap("RemindName")]
             [Validation(Required=false)]
@@ -322,7 +355,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public bool? Useflag { get; set; }
 
             /// <summary>
-            /// <para>The information about the webhook URL.</para>
+            /// <para>WebHook URL</para>
             /// </summary>
             [NameInMap("Webhooks")]
             [Validation(Required=false)]
@@ -361,7 +394,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFGH-IJKLMNOPQ</para>

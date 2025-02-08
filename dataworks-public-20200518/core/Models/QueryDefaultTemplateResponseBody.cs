@@ -12,6 +12,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The returned data about the default data category and data sensitivity level template. The data is in the JSON array format.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;gmtModified&quot;:1709022365000,&quot;fileName&quot;:&quot;default file&quot;,&quot;isDelete&quot;:false,&quot;isDefaultTemplate&quot;:true}]</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,6 +34,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The error message.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Parameter error</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

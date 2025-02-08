@@ -42,6 +42,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public class TestNetworkConnectionResponseBodyTaskList : TeaModel {
             /// <summary>
             /// <para>The reason why the data source and resource group failed the connectivity test. If data source and the resource group passed the connectivity test, this parameter is left empty.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Connectable</para>
             /// </summary>
             [NameInMap("ConnectMessage")]
             [Validation(Required=false)]

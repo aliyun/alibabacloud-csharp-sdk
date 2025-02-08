@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the baseline.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Baseline name</para>
                 /// </summary>
                 [NameInMap("BaselineName")]
                 [Validation(Required=false)]

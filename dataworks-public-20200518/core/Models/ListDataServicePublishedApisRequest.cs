@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class ListDataServicePublishedApisRequest : TeaModel {
         /// <summary>
         /// <para>The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>My API name</para>
         /// </summary>
         [NameInMap("ApiNameKeyword")]
         [Validation(Required=false)]

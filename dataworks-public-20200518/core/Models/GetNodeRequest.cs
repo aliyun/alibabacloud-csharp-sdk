@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// <para>The priority of the node. Valid values: 1, 3, 5, 7, and 8.</para>
+        /// <para>The environment of the workspace. Valid values: PROD and DEV.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

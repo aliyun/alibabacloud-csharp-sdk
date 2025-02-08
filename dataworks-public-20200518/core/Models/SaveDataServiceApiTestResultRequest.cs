@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The sample failure response of the API. This parameter is optional.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;apiLog&quot;: null, &quot;data&quot;: null, &quot;errCode&quot;: 1108110622, &quot;errMsg&quot;: &quot;data Source query failed&quot;, &quot;requestId&quot;: &quot;0 bc14a **** 5902762031 ****&quot;}</para>
         /// </summary>
         [NameInMap("FailResultSample")]
         [Validation(Required=false)]

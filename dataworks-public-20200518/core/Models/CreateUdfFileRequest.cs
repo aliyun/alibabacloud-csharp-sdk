@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CmdDescription { get; set; }
 
         /// <summary>
-        /// <para>If the directory specified in the parameter (FileFolderPath) does not exist in the system, whether the directory is automatically created. The values are as follows:</para>
+        /// <para>Specifies whether to automatically create the directory that is specified by the FileFolderPath parameter if the directory does not exist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: If the directory does not exist, the directory is automatically created.</description></item>
-        /// <item><description>false: If the directory does not exist, the call fails.</description></item>
+        /// <item><description>true: The system automatically creates the directory if the directory does not exist.</description></item>
+        /// <item><description>false: The system does not automatically create the directory if the directory does not exist. In this case, the call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ReturnValue { get; set; }
 
         /// <summary>
-        /// <para>The description of the function. This parameter corresponds to the Description parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</para>
+        /// <para>The description of the function. This parameter corresponds to the Description parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Concatenate several strings to generate a new string</para>

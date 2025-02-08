@@ -12,6 +12,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The name of the sensitive field. To obtain the name of the sensitive field, call the <a href="https://help.aliyun.com/document_detail/2747189.html">QuerySensNodeInfo</a> operation or log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Data Category and Sensitivity Level page.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Name</para>
         /// </summary>
         [NameInMap("SensitiveName")]
         [Validation(Required=false)]

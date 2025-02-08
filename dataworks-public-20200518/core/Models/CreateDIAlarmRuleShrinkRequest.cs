@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// <para>The description of the alert rule.</para>
+        /// <para>The description of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql synchronizes to hologres heartbeat alert</para>

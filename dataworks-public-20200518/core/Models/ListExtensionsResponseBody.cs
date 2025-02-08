@@ -42,6 +42,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                     /// <summary>
                     /// <para>The name of the event.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>File submission pre-event</para>
                     /// </summary>
                     [NameInMap("EventName")]
                     [Validation(Required=false)]
@@ -51,6 +54,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The unique code of the extension.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Extension Code</para>
                 /// </summary>
                 [NameInMap("ExtensionCode")]
                 [Validation(Required=false)]
@@ -58,6 +64,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The description of the extension.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>This is a description</para>
                 /// </summary>
                 [NameInMap("ExtensionDesc")]
                 [Validation(Required=false)]
@@ -65,6 +74,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the extension.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Extension name</para>
                 /// </summary>
                 [NameInMap("ExtensionName")]
                 [Validation(Required=false)]

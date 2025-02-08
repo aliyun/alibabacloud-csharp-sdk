@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetTopicInfluenceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the event.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

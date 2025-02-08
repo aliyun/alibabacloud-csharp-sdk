@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateFolderRequest : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The path of the folder.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

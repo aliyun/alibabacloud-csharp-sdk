@@ -90,10 +90,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>If the directory specified in the parameter (FileFolderPath) does not exist in the system, whether the directory is automatically created. The values are as follows:</para>
+        /// <para>Specifies whether to automatically create the directory that is specified by the FileFolderPath parameter if the directory does not exist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: If the directory does not exist, the directory is automatically created.</description></item>
-        /// <item><description>false: If the directory does not exist, the call fails.</description></item>
+        /// <item><description>true: The system automatically creates the directory if the directory does not exist.</description></item>
+        /// <item><description>false: The system does not automatically create the directory if the directory does not exist. In this case, the call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -234,6 +234,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("IgnoreParentSkipRunningProperty")]
         [Validation(Required=false)]
         public bool? IgnoreParentSkipRunningProperty { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
 
         /// <summary>
         /// <para>The output name of the parent file on which the current file depends. If you specify multiple output names, separate them with commas (,).</para>

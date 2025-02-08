@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class SubmitFileRequest : TeaModel {
         /// <summary>
         /// <para>The description of the commit operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Submit a task for the first time</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]

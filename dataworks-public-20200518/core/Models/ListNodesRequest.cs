@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The page number. Minimum value: 1. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProgramType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The environment in which the node runs. Valid values: DEV and PROD.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,6 +91,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        /// <summary>
+        /// <para>The scheduling type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NORMAL: Nodes are scheduled as expected.</description></item>
+        /// <item><description>PAUSE: Nodes are paused.</description></item>
+        /// <item><description>SKIP: Nodes are dry-run. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
+        /// </summary>
         [NameInMap("SchedulerType")]
         [Validation(Required=false)]
         public string SchedulerType { get; set; }

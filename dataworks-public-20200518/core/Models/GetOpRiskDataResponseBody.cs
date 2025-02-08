@@ -29,6 +29,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <item><description>opAccount: the account that is used to perform the operation</description></item>
         /// <item><description>opTime: the time when the operation was performed</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///       &quot;opRiskDatas&quot;: [
+        ///             {
+        ///                   &quot;riskType&quot;: &quot;Hierarchical dimension, EMR engine dimension and project dimension, EMR engine project dimension operation data, export method dimension, EMR engine&quot;,
+        ///                   &quot;opTime&quot;: &quot;2021-01-04 23:39:13&quot;,
+        ///                   &quot;opType&quot;: &quot;SQL_SELECT&quot;,
+        ///                   &quot;opAccount&quot;: &quot;user&quot;,
+        ///                   &quot;sensType&quot;: &quot;Email/name/mobile phone number&quot;,
+        ///                   &quot;sql&quot;: &quot;SELECT * FROM default.jiade_1219_test_create LIMIT 20&quot;
+        ///             }
+        ///       ],
+        ///       &quot;totalCount&quot;: 499
+        /// }</para>
         /// </summary>
         [NameInMap("RiskData")]
         [Validation(Required=false)]

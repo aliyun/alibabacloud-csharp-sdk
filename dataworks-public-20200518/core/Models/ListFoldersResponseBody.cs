@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The path of the folder.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Business_process/my_first_business_process/MaxCompute/ods_layer</para>
                 /// </summary>
                 [NameInMap("FolderPath")]
                 [Validation(Required=false)]

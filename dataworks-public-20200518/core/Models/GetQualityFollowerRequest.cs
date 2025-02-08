@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetQualityFollowerRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the partition filter expression.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? EntityId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the DataWorks workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>27</para>
+        /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The name of the engine or data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

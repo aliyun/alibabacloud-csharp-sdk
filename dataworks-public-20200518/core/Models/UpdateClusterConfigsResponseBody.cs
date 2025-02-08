@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>101011005</para>
         /// </summary>
@@ -32,6 +34,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Invalid.Cluster.ClusterNotFound</para>
         /// </summary>
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -48,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request. It is used to locate logs and troubleshoot problems.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-E****</para>
         /// </summary>

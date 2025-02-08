@@ -65,6 +65,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the on-duty engineer.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("ShiftPersonName")]
                 [Validation(Required=false)]

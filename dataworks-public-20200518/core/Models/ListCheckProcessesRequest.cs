@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListCheckProcessesRequest : TeaModel {
         /// <summary>
+        /// <para>Extension point event encoding.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +20,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string EventCode { get; set; }
 
+        /// <summary>
+        /// <para>The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>03400b03-b721-4c34-8727-2****1</para>
+        /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]
         public string MessageId { get; set; }
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Operator { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +51,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -50,6 +61,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123465</para>
         /// </summary>
@@ -58,6 +71,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The check status of the extension. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CHECKING</description></item>
+        /// <item><description>PASSED</description></item>
+        /// <item><description>BLOCKED</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

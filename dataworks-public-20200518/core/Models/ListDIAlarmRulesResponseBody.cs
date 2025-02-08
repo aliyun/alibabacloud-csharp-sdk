@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The description of the alert rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mysql synchronizes to hologres heartbeat alert</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

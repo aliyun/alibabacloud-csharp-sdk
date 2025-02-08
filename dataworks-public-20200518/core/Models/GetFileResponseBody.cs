@@ -378,7 +378,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? EndEffectDate { get; set; }
 
                 /// <summary>
-                /// <para>Scheduling configuration-&gt; previous cycle-&gt; whether to skip the upstream empty run attribute</para>
+                /// <para>Indicates whether to skip the dry-run property of the ancestor nodes of the node that corresponds to the file. This parameter corresponds to the Skip the dry-run property of the ancestor node parameter that is displayed after you configure the Depend On parameter in the Dependencies section of the Properties tab in the DataWorks console.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -386,6 +386,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [NameInMap("IgnoreParentSkipRunningProperty")]
                 [Validation(Required=false)]
                 public string IgnoreParentSkipRunningProperty { get; set; }
+
+                [NameInMap("ImageId")]
+                [Validation(Required=false)]
+                public string ImageId { get; set; }
 
                 /// <summary>
                 /// <para>The output names of the parent files on which the current file depends.</para>
@@ -634,7 +638,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? Stop { get; set; }
 
                 /// <summary>
-                /// <para>Scheduling configuration timeout definition</para>
+                /// <para>The timeout period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -646,14 +650,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>Resource download address</para>
+            /// <para>The download URL of the resource.</para>
             /// </summary>
             [NameInMap("ResourceDownloadLink")]
             [Validation(Required=false)]
             public GetFileResponseBodyDataResourceDownloadLink ResourceDownloadLink { get; set; }
             public class GetFileResponseBodyDataResourceDownloadLink : TeaModel {
                 /// <summary>
-                /// <para>Resource download address link</para>
+                /// <para>The download URL of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://xx">http://xx</a></para>

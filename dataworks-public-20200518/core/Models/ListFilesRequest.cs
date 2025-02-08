@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListFilesRequest : TeaModel {
         /// <summary>
+        /// <para>The exact matching file name. The file name of the query result is exactly the same as this parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ods_create.sql</para>
         /// </summary>
@@ -19,12 +21,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The path of the files.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Business_process/my_first_business_process/MaxCompute/ods_layer</para>
         /// </summary>
         [NameInMap("FileFolderPath")]
         [Validation(Required=false)]
         public string FileFolderPath { get; set; }
 
         /// <summary>
+        /// <para>The file ID list. The File ID set of the query result can only be a subset of the list. You can specify up to 50 fileids at a time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>78237,816123</para>
         /// </summary>
@@ -54,6 +61,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>Whether the query result contains the path of the folder where the file is located.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -62,6 +71,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? NeedAbsoluteFolderPath { get; set; }
 
         /// <summary>
+        /// <para>Whether the query results contain file content (for files with more content, there may be a long network transmission delay).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

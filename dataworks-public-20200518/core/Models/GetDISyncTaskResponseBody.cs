@@ -16,70 +16,171 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public GetDISyncTaskResponseBodyData Data { get; set; }
         public class GetDISyncTaskResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Array of alarm rules associated with real-time tasks.</para>
+            /// </summary>
             [NameInMap("AlarmList")]
             [Validation(Required=false)]
             public List<GetDISyncTaskResponseBodyDataAlarmList> AlarmList { get; set; }
             public class GetDISyncTaskResponseBodyDataAlarmList : TeaModel {
+                /// <summary>
+                /// <para>Alarm Notification configuration array.</para>
+                /// </summary>
                 [NameInMap("AlarmRuleList")]
                 [Validation(Required=false)]
                 public List<GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList> AlarmRuleList { get; set; }
                 public class GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList : TeaModel {
+                    /// <summary>
+                    /// <para>The calculation method of indicators,</para>
+                    /// <list type="bullet">
+                    /// <item><description>avg interval average</description></item>
+                    /// <item><description>max interval takes the maximum value</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>avg</para>
+                    /// </summary>
                     [NameInMap("Aggregator")]
                     [Validation(Required=false)]
                     public string Aggregator { get; set; }
 
+                    /// <summary>
+                    /// <para>Comparison method of comparison symbols, indicators and alarm rules</para>
+                    /// <list type="bullet">
+                    /// <item><description>\&quot;=\&quot;</description></item>
+                    /// <item><description>\&quot;&lt;\&quot;</description></item>
+                    /// <item><description>\&quot;&gt;\&quot;</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>=</para>
+                    /// </summary>
                     [NameInMap("Comparator")]
                     [Validation(Required=false)]
                     public string Comparator { get; set; }
 
+                    /// <summary>
+                    /// <para>Duration: How long does this condition last before an alarm is triggered, in minutes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3</para>
+                    /// </summary>
                     [NameInMap("Duration")]
                     [Validation(Required=false)]
                     public long? Duration { get; set; }
 
+                    /// <summary>
+                    /// <list type="bullet">
+                    /// <item><description>WARNING WARNING: alert</description></item>
+                    /// <item><description>CRITICAL CRITICAL: alarm</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>WARNING</para>
+                    /// </summary>
                     [NameInMap("Level")]
                     [Validation(Required=false)]
                     public string Level { get; set; }
 
+                    /// <summary>
+                    /// <para>Comparison threshold between metrics and alarm rules.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("Threshold")]
                     [Validation(Required=false)]
                     public long? Threshold { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>Alarm rule description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Description</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>Whether alarm rules are enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("Enabled")]
                 [Validation(Required=false)]
                 public bool? Enabled { get; set; }
 
+                /// <summary>
+                /// <para>Alarm rule id.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>45242</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                /// <summary>
+                /// <para>Alarm Type:</para>
+                /// <list type="bullet">
+                /// <item><description>taskStatus: task status</description></item>
+                /// <item><description>bizDelay: business latency</description></item>
+                /// <item><description>taskFailoverCount: monitoring Failover</description></item>
+                /// <item><description>ddlUnsupport: DDL is not supported</description></item>
+                /// <item><description>ddlReport: DDL notifications</description></item>
+                /// <item><description>totalDirtyRecordWriteInLines: dirty data</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>taskStatus</para>
+                /// </summary>
                 [NameInMap("Metric")]
                 [Validation(Required=false)]
                 public string Metric { get; set; }
 
+                /// <summary>
+                /// <para>Alert notification rule array.</para>
+                /// </summary>
                 [NameInMap("NotifyRule")]
                 [Validation(Required=false)]
                 public GetDISyncTaskResponseBodyDataAlarmListNotifyRule NotifyRule { get; set; }
                 public class GetDISyncTaskResponseBodyDataAlarmListNotifyRule : TeaModel {
+                    /// <summary>
+                    /// <para>Critical-level alert notification list.</para>
+                    /// </summary>
                     [NameInMap("Critical")]
                     [Validation(Required=false)]
                     public List<string> Critical { get; set; }
 
+                    /// <summary>
+                    /// <para>Alarm interval, in minutes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5</para>
+                    /// </summary>
                     [NameInMap("Interval")]
                     [Validation(Required=false)]
                     public long? Interval { get; set; }
 
+                    /// <summary>
+                    /// <para>Warning-level alert notification list.</para>
+                    /// </summary>
                     [NameInMap("Warning")]
                     [Validation(Required=false)]
                     public List<string> Warning { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>Alarm rule name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Delay alert rule name 1</para>
+                /// </summary>
                 [NameInMap("RuleName")]
                 [Validation(Required=false)]
                 public string RuleName { get; set; }

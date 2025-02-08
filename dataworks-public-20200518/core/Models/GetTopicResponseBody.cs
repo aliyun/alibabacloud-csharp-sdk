@@ -78,6 +78,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The name of the baseline to which the worst baseline instance belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Baseline name</para>
             /// </summary>
             [NameInMap("BaselineName")]
             [Validation(Required=false)]
@@ -175,6 +178,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The name of the node that triggered the event.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Node name</para>
             /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
@@ -212,6 +218,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The name of the event.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234 error</para>
             /// </summary>
             [NameInMap("TopicName")]
             [Validation(Required=false)]

@@ -125,6 +125,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         public class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList : TeaModel {
                             /// <summary>
                             /// <para>The description of the column on which you request permissions.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Field description</para>
                             /// </summary>
                             [NameInMap("ColumnComment")]
                             [Validation(Required=false)]

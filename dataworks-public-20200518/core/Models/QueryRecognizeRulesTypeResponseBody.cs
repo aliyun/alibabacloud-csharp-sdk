@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Missing parameter</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the API.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>My API name</para>
                 /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
@@ -82,6 +85,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The description of the API.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test API description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

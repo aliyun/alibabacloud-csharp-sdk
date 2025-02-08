@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class QuerySensNodeInfoResponseBody : TeaModel {
         /// <summary>
         /// <para>The returned business data in the JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;success&quot;: true, &quot;httpStatusCode&quot;: 200, &quot;data&quot;: { &quot;result&quot;: [ { &quot;sensitiveName&quot;: &quot;certificate expiration date&quot;, &quot;sensitiveId&quot;: &quot;fd4ff5a2-9537-43d1-8e4f-1d0b5ffaac12&quot;, &quot;status&quot;: 0, &quot;templateName&quot;: &quot;built-in classification and grading template&quot;, &quot;keyRuleId&quot;: &quot;228248921215042 certificate expiration date&quot;} ], &quot;totalCount&quot;: 1, &quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10 }, &quot;requestId&quot;: 10000001}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -28,6 +31,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Missing parameter</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

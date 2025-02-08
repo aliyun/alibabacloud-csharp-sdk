@@ -35,6 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ConfigType { get; set; }
 
         /// <summary>
+        /// <para>The configuration information of the cluster submodule.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ConfigValues")]
@@ -42,6 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public List<ClusterConfig> ConfigValues { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

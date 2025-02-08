@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The keyword used to perform a fuzzy search on shift schedules.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Duty table name keyword</para>
         /// </summary>
         [NameInMap("ShiftScheduleName")]
         [Validation(Required=false)]

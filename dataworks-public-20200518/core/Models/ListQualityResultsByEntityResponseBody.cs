@@ -154,6 +154,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The description of the monitoring rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>The description of the rule.</para>
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
@@ -423,6 +426,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the monitoring rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>The name of the rule.</para>
                 /// </summary>
                 [NameInMap("RuleName")]
                 [Validation(Required=false)]
@@ -499,6 +505,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the monitoring template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Expected value verification</para>
                 /// </summary>
                 [NameInMap("TemplateName")]
                 [Validation(Required=false)]

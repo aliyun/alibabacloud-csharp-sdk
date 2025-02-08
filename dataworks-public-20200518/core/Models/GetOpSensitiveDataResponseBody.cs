@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <item><description>opAccount: the account that is used to perform the operation.</description></item>
         /// <item><description>opTime: the time when the operation was performed.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;opSensDatas&quot;: [       {         &quot;sensLevel&quot;: &quot;L4&quot;,         &quot;opTime&quot;: &quot;2021-02-07 00:14:51&quot;,         &quot;opAccount&quot;: &quot;ALIYUN$dsg_test&quot;,         &quot;sensType&quot;: &quot;Mobile phone number&quot;,         &quot;sql&quot;: &quot;select * from dsg_demo.tbl_phonebook where phone_no = &#39;1331111****&#39;;&quot;       }     ],     &quot;totalCount&quot;: 6</para>
         /// </summary>
         [NameInMap("OpSensitiveData")]
         [Validation(Required=false)]

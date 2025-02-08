@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The details of the deployment task.</para>
+            /// <para>The details of the deployment package.</para>
             /// </summary>
             [NameInMap("Deployment")]
             [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CreatorId { get; set; }
 
                 /// <summary>
-                /// <para>The error message that was returned when the deployment task failed. In this case, the value of the Status parameter is 2.</para>
+                /// <para>The error message that was returned when the deployment package failed. In this case, the value of the Status parameter is 2.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>

@@ -46,6 +46,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public string Connection { get; set; }
 
+            /// <summary>
+            /// <para>The creation time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1727280000000</para>
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
@@ -60,6 +66,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public string CronExpress { get; set; }
 
+            /// <summary>
+            /// <para>The deployment date.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1727280000000</para>
+            /// </summary>
             [NameInMap("DeployDate")]
             [Validation(Required=false)]
             public long? DeployDate { get; set; }
@@ -94,18 +106,42 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public int? DqcType { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
             [NameInMap("FileId")]
             [Validation(Required=false)]
             public long? FileId { get; set; }
 
+            /// <summary>
+            /// <para>The file type. Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node collection</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("FileType")]
             [Validation(Required=false)]
             public int? FileType { get; set; }
 
+            /// <summary>
+            /// <para>The version of the file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("FileVersion")]
             [Validation(Required=false)]
             public int? FileVersion { get; set; }
 
+            /// <summary>
+            /// <para>The modification time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1727280000000</para>
+            /// </summary>
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
             public long? ModifyTime { get; set; }
@@ -206,6 +242,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public long? RepeatInterval { get; set; }
 
+            /// <summary>
+            /// <para>Rerun mode. 0 indicates that you can rerun only if you fail, 1 indicates that you can rerun in all cases, and 2 indicates that you cannot rerun in all cases.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("RepeatMode")]
             [Validation(Required=false)]
             public int? RepeatMode { get; set; }
@@ -220,6 +262,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public string Repeatability { get; set; }
 
+            /// <summary>
+            /// <para>The unique identifier of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>group_123</para>
+            /// </summary>
             [NameInMap("ResGroupIdentifier")]
             [Validation(Required=false)]
             public string ResGroupIdentifier { get; set; }

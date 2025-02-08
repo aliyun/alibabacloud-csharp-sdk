@@ -75,6 +75,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The content of the alert.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Node error</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
@@ -109,6 +112,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                     /// <summary>
                     /// <para>The name of the node.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Node name</para>
                     /// </summary>
                     [NameInMap("NodeName")]
                     [Validation(Required=false)]
@@ -159,6 +165,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                     /// <summary>
                     /// <para>The name of the node.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Node name</para>
                     /// </summary>
                     [NameInMap("NodeName")]
                     [Validation(Required=false)]
@@ -198,6 +207,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Custom monitoring rule name</para>
                 /// </summary>
                 [NameInMap("RemindName")]
                 [Validation(Required=false)]
@@ -222,6 +234,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                     /// <summary>
                     /// <para>The name of the baseline.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Baseline name</para>
                     /// </summary>
                     [NameInMap("BaselineName")]
                     [Validation(Required=false)]
@@ -328,6 +343,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                     /// <summary>
                     /// <para>The name of the event.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>9527 error</para>
                     /// </summary>
                     [NameInMap("TopicName")]
                     [Validation(Required=false)]

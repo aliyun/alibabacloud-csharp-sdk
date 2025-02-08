@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? Checker { get; set; }
 
         /// <summary>
-        /// <para>The description of the monitoring rule.</para>
+        /// <para>The description of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Verification</para>

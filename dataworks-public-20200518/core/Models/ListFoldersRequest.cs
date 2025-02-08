@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The path of the parent folder.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Business_process/my_first_business_process/MaxCompute</para>
         /// </summary>
         [NameInMap("ParentFolderPath")]
         [Validation(Required=false)]

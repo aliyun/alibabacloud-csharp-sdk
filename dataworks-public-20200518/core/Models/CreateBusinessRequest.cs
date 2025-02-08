@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The module to which the business process belongs. Valid values:</para>
+        /// <para>The module to which the workflow belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL: The business process is initiated automatically.</description></item>
-        /// <item><description>MANUAL_BIZ: The business process requires manual initiation.</description></item>
+        /// <item><description>NORMAL: The workflow belongs to auto triggered workflows.</description></item>
+        /// <item><description>MANUAL_BIZ: The workflow belongs to manually triggered workflows.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -62,11 +62,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The method that you use to identify risks. Valid values:</para>
+        /// <para>The method that you use to identify risks.</para>
         /// <list type="bullet">
         /// <item><description>You can manually identify risks.</description></item>
         /// <item><description>You can also use a sensitive data identification rule to identify risks. You can log on to the DataWorks console and go to the Risk Identification Rules page in Data Security Guard to obtain the name of the rule.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Manual identification</para>
         /// </summary>
         [NameInMap("RiskType")]
         [Validation(Required=false)]

@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The description of the synchronization task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Synchronize mysql to hologres</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TableMappingsShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</para>
+        /// <para>The list of transformation rules that you want to apply to the synchronization objects selected from the source. Each entry in the list defines a transformation rule.</para>
         /// </summary>
         [NameInMap("TransformationRules")]
         [Validation(Required=false)]

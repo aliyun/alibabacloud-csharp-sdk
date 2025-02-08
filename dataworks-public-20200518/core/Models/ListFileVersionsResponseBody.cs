@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The description of the file version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Second version submission</para>
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
