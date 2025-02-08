@@ -36,6 +36,20 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            [NameInMap("DlqPolicy")]
+            [Validation(Required=false)]
+            public GetSubscriptionAttributesResponseBodyDataDlqPolicy DlqPolicy { get; set; }
+            public class GetSubscriptionAttributesResponseBodyDataDlqPolicy : TeaModel {
+                [NameInMap("DeadLetterTargetQueue")]
+                [Validation(Required=false)]
+                public string DeadLetterTargetQueue { get; set; }
+
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The endpoint to which the messages are pushed.</para>
             /// 

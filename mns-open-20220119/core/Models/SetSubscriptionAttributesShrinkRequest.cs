@@ -8,20 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
-    public class SetSubscriptionAttributesRequest : TeaModel {
+    public class SetSubscriptionAttributesShrinkRequest : TeaModel {
         [NameInMap("DlqPolicy")]
         [Validation(Required=false)]
-        public SetSubscriptionAttributesRequestDlqPolicy DlqPolicy { get; set; }
-        public class SetSubscriptionAttributesRequestDlqPolicy : TeaModel {
-            [NameInMap("DeadLetterTargetQueue")]
-            [Validation(Required=false)]
-            public string DeadLetterTargetQueue { get; set; }
-
-            [NameInMap("Enabled")]
-            [Validation(Required=false)]
-            public bool? Enabled { get; set; }
-
-        }
+        public string DlqPolicyShrink { get; set; }
 
         /// <summary>
         /// <para>The retry policy that is applied if an error occurs when Message Service (MNS) pushes messages to the endpoint. Valid values:</para>

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
-    public class CreateQueueRequest : TeaModel {
+    public class CreateQueueShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The period after which all messages sent to the queue are consumed. Valid values: 0 to 604800. Unit: seconds. Default value: 0</para>
         /// 
@@ -21,21 +21,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 
         [NameInMap("DlqPolicy")]
         [Validation(Required=false)]
-        public CreateQueueRequestDlqPolicy DlqPolicy { get; set; }
-        public class CreateQueueRequestDlqPolicy : TeaModel {
-            [NameInMap("DeadLetterTargetQueue")]
-            [Validation(Required=false)]
-            public string DeadLetterTargetQueue { get; set; }
-
-            [NameInMap("Enabled")]
-            [Validation(Required=false)]
-            public bool? Enabled { get; set; }
-
-            [NameInMap("MaxReceiveCount")]
-            [Validation(Required=false)]
-            public int? MaxReceiveCount { get; set; }
-
-        }
+        public string DlqPolicyShrink { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to enable the log management feature. Valid values:</para>
@@ -95,8 +81,8 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<CreateQueueRequestTag> Tag { get; set; }
-        public class CreateQueueRequestTag : TeaModel {
+        public List<CreateQueueShrinkRequestTag> Tag { get; set; }
+        public class CreateQueueShrinkRequestTag : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>tag1</para>

@@ -8,20 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
-    public class SubscribeRequest : TeaModel {
+    public class SubscribeShrinkRequest : TeaModel {
         [NameInMap("DlqPolicy")]
         [Validation(Required=false)]
-        public SubscribeRequestDlqPolicy DlqPolicy { get; set; }
-        public class SubscribeRequestDlqPolicy : TeaModel {
-            [NameInMap("DeadLetterTargetQueue")]
-            [Validation(Required=false)]
-            public string DeadLetterTargetQueue { get; set; }
-
-            [NameInMap("Enabled")]
-            [Validation(Required=false)]
-            public bool? Enabled { get; set; }
-
-        }
+        public string DlqPolicyShrink { get; set; }
 
         /// <summary>
         /// <para>The receiver endpoint. The format of the endpoint varies based on the terminal type.</para>

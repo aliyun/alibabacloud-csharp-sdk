@@ -19,6 +19,24 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public long? DelaySeconds { get; set; }
 
+        [NameInMap("DlqPolicy")]
+        [Validation(Required=false)]
+        public SetQueueAttributesRequestDlqPolicy DlqPolicy { get; set; }
+        public class SetQueueAttributesRequestDlqPolicy : TeaModel {
+            [NameInMap("DeadLetterTargetQueue")]
+            [Validation(Required=false)]
+            public string DeadLetterTargetQueue { get; set; }
+
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("MaxReceiveCount")]
+            [Validation(Required=false)]
+            public int? MaxReceiveCount { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Specifies whether to enable the log management feature. Valid values:</para>
         /// <list type="bullet">

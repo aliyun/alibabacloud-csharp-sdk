@@ -73,6 +73,24 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 [Validation(Required=false)]
                 public long? DelaySeconds { get; set; }
 
+                [NameInMap("DlqPolicy")]
+                [Validation(Required=false)]
+                public ListQueueResponseBodyDataPageDataDlqPolicy DlqPolicy { get; set; }
+                public class ListQueueResponseBodyDataPageDataDlqPolicy : TeaModel {
+                    [NameInMap("DeadLetterTargetQueue")]
+                    [Validation(Required=false)]
+                    public string DeadLetterTargetQueue { get; set; }
+
+                    [NameInMap("Enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                    [NameInMap("MaxReceiveCount")]
+                    [Validation(Required=false)]
+                    public string MaxReceiveCount { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The total number of messages that are in the Inactive state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</para>
                 /// 

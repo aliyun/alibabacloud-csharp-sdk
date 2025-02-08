@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
-    public class CreateQueueRequest : TeaModel {
+    public class SetQueueAttributesShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The period after which all messages sent to the queue are consumed. Valid values: 0 to 604800. Unit: seconds. Default value: 0</para>
         /// 
@@ -21,32 +21,17 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 
         [NameInMap("DlqPolicy")]
         [Validation(Required=false)]
-        public CreateQueueRequestDlqPolicy DlqPolicy { get; set; }
-        public class CreateQueueRequestDlqPolicy : TeaModel {
-            [NameInMap("DeadLetterTargetQueue")]
-            [Validation(Required=false)]
-            public string DeadLetterTargetQueue { get; set; }
-
-            [NameInMap("Enabled")]
-            [Validation(Required=false)]
-            public bool? Enabled { get; set; }
-
-            [NameInMap("MaxReceiveCount")]
-            [Validation(Required=false)]
-            public int? MaxReceiveCount { get; set; }
-
-        }
+        public string DlqPolicyShrink { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to enable the log management feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: enabled.</description></item>
-        /// <item><description>false: disabled.</description></item>
+        /// <item><description>false: disabled. Default value: false.</description></item>
         /// </list>
-        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("EnableLogging")]
         [Validation(Required=false)]
@@ -56,7 +41,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         /// <para>The maximum length of the message that is sent to the queue. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>65536</para>
+        /// <para>1024</para>
         /// </summary>
         [NameInMap("MaximumMessageSize")]
         [Validation(Required=false)]
@@ -66,7 +51,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         /// <para>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>345600</para>
+        /// <para>120</para>
         /// </summary>
         [NameInMap("MessageRetentionPeriod")]
         [Validation(Required=false)]
@@ -87,33 +72,11 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>06273500-249F-5863-121D-74D51123****</para>
+        /// <para>testqueue</para>
         /// </summary>
         [NameInMap("QueueName")]
         [Validation(Required=false)]
         public string QueueName { get; set; }
-
-        [NameInMap("Tag")]
-        [Validation(Required=false)]
-        public List<CreateQueueRequestTag> Tag { get; set; }
-        public class CreateQueueRequestTag : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>tag1</para>
-            /// </summary>
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>test</para>
-            /// </summary>
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
 
         /// <summary>
         /// <para>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</para>
