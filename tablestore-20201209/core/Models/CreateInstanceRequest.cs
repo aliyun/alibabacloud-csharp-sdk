@@ -11,10 +11,6 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
         /// <para>The type of the instance.</para>
-        /// <list type="bullet">
-        /// <item><description>SSD: high-performance instance</description></item>
-        /// <item><description>HYBRID: capacity instance</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

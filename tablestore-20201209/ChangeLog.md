@@ -1,3 +1,8 @@
+2025-02-08 Version: 1.1.2
+- Update API GetInstance: update response param.
+- Update API ListInstances: add param Tag.
+
+
 2024-12-23 Version: 1.1.0
 - Support API CheckInstancePolicy.
 - Support API DeleteInstancePolicy.

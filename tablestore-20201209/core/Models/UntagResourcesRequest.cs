@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags from the resources. Default value: false. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: removes all tags from the resources.</description></item>
-        /// <item><description>false: removes the tags that are specified by the TagKeys parameter from the resources.</description></item>
-        /// </list>
+        /// <para>Specifies whether to remove all tags from the resources. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -58,11 +58,6 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 
         /// <summary>
         /// <para>The instance status.</para>
-        /// <list type="bullet">
-        /// <item><description>normal: The instance is running as expected.</description></item>
-        /// <item><description>forbidden: The instance is disabled.</description></item>
-        /// <item><description>Deleting: The instance is being deleted.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -70,6 +65,20 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<ListInstancesRequestTag> Tag { get; set; }
+        public class ListInstancesRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

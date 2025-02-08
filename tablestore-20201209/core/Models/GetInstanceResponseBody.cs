@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class GetInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The alias of the instance.</para>
+        /// <para>The instance alias.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance-test</para>
@@ -28,6 +28,16 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
+
+        /// <summary>
+        /// <para>The upper limit for the VCUs of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6</para>
+        /// </summary>
+        [NameInMap("ElasticVCUUpperLimit")]
+        [Validation(Required=false)]
+        public float? ElasticVCUUpperLimit { get; set; }
 
         /// <summary>
         /// <para>The description of the instance.</para>
@@ -78,6 +88,16 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
         [Validation(Required=false)]
         public string InstanceStatus { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether zone-redundant storage (ZRS) is enabled for the instance.</para>
+        /// <list type="bullet">
+        /// <item><description>true: ZRS is enabled for the instance.</description></item>
+        /// <item><description>false: Locally redundant storage (LRS) is enabled for the instance.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IsMultiAZ")]
         [Validation(Required=false)]
         public bool? IsMultiAZ { get; set; }

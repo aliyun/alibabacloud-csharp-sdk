@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instances.</para>
+        /// <para>The details about the instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -72,6 +72,11 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
 
             /// <summary>
             /// <para>The instance status.</para>
+            /// <list type="bullet">
+            /// <item><description>normal: The instance works as expected.</description></item>
+            /// <item><description>forbidden: The instance is disabled.</description></item>
+            /// <item><description>deleting: The instance is being deleted.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -80,6 +85,16 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             [Validation(Required=false)]
             public string InstanceStatus { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether zone-redundant storage (ZRS) is enabled for the instance.</para>
+            /// <list type="bullet">
+            /// <item><description>true: ZRS is enabled for the instance.</description></item>
+            /// <item><description>false: Locally redundant storage (LRS) is enabled for the instance.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsMultiAZ")]
             [Validation(Required=false)]
             public bool? IsMultiAZ { get; set; }
@@ -119,7 +134,7 @@ namespace AlibabaCloud.SDK.Tablestore20201209.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ots_standard_public_cn-g4t3igqjj002</para>
