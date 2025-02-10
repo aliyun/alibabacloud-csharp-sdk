@@ -10,51 +10,67 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class ListVpcEndpointServiceUsersRequest : TeaModel {
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1 to 50**. Default value: **50**.
+        /// <para>The number of entries to return on each page. Valid values: <b>1 to 50</b>. Default value: <b>50</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</description></item>
+        /// <item><description>If a next request is to be performed, set the value to the value of <b>NextToken</b> that is returned from the last call.</description></item>
+        /// </list>
         /// 
-        /// *   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.
-        /// *   If a next request is to be performed, set the value to the value of **NextToken** that is returned from the last call.
+        /// <b>Example:</b>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID of the endpoint service that you want to query.
+        /// <para>The region ID of the endpoint service that you want to query.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/120468.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-huhehaote</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The endpoint service ID.
+        /// <para>The endpoint service ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>epsrv-hp3vpx8yqxblby3i****</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud account in the whitelist of the endpoint service.
+        /// <para>The ID of the Alibaba Cloud account in the whitelist of the endpoint service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345678</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public long? UserId { get; set; }
 
         /// <summary>
-        /// The type of the user list in the whitelist of the endpoint service.
+        /// <para>The type of the user list in the whitelist of the endpoint service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Users</para>
         /// </summary>
         [NameInMap("UserListType")]
         [Validation(Required=false)]

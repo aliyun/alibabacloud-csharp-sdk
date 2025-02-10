@@ -10,11 +10,18 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ServiceResourceType")]
+        [Validation(Required=false)]
+        public string ServiceResourceType { get; set; }
 
     }
 

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class DetachSecurityGroupFromVpcEndpointResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8D778FF9-7640-4C13-BCD6-9265CA9A2F81</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

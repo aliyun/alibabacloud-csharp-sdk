@@ -10,83 +10,106 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class ListVpcEndpointServicesByEndUserRequest : TeaModel {
         /// <summary>
-        /// The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>50</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</description></item>
+        /// <item><description>If a next request is to be performed, set the value to the value of <b>NextToken</b> that is returned from the last call.</description></item>
+        /// </list>
         /// 
-        /// *   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.
-        /// *   If a next request is to be performed, set the value to the value of **NextToken** that is returned from the last call.
+        /// <b>Example:</b>
+        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The region ID of the endpoint.
+        /// <para>The region ID of the endpoint.</para>
+        /// <para>You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-huhehaote</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy*****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The ID of the endpoint service that you want to query.
+        /// <para>The ID of the endpoint service that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>epsrv-hp3vpx8yqxblby3i****</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// The name of the endpoint service that you want to query.
+        /// <para>The name of the endpoint service that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3xdsq46ael67lo****</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The type of the endpoint service.
+        /// <para>The type of the endpoint service.</para>
+        /// <para>Set the value to <b>Interface</b>. You can specify CLB and ALB instances as service resources for the endpoint service.</para>
         /// 
-        /// Set the value to **Interface**. You can specify CLB and ALB instances as service resources for the endpoint service.
+        /// <b>Example:</b>
+        /// <para>Interface</para>
         /// </summary>
         [NameInMap("ServiceType")]
         [Validation(Required=false)]
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// The list of tags.
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListVpcEndpointServicesByEndUserRequestTag> Tag { get; set; }
         public class ListVpcEndpointServicesByEndUserRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+            /// <para>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key must be 1 to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
-            /// The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>FinanceDept</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
+            /// <para>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
-            /// The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>FinanceJoshua</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

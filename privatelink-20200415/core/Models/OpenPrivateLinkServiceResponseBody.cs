@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class OpenPrivateLinkServiceResponseBody : TeaModel {
         /// <summary>
-        /// The order ID.
+        /// <para>The order ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3245****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

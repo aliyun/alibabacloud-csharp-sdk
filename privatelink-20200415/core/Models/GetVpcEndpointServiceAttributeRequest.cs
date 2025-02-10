@@ -10,20 +10,23 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class GetVpcEndpointServiceAttributeRequest : TeaModel {
         /// <summary>
-        /// The region ID of the endpoint service.
+        /// <para>The region ID of the endpoint service.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [DescribeRegions](https://help.aliyun.com/document_detail/120468.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-huhehaote</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The endpoint service ID.
+        /// <para>The endpoint service ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>epsrv-hp3vpx8yqxblby3i****</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]

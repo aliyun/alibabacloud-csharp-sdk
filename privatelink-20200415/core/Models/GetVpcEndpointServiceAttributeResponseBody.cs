@@ -9,167 +9,237 @@ using Tea;
 namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class GetVpcEndpointServiceAttributeResponseBody : TeaModel {
+        [NameInMap("AddressIpVersion")]
+        [Validation(Required=false)]
+        public string AddressIpVersion { get; set; }
+
         /// <summary>
-        /// Indicates whether endpoint connection requests are automatically accepted. Valid values:
+        /// <para>Indicates whether endpoint connection requests are automatically accepted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoAcceptEnabled")]
         [Validation(Required=false)]
         public bool? AutoAcceptEnabled { get; set; }
 
         /// <summary>
-        /// The default maximum bandwidth of the endpoint connection. Unit: Mbit/s. Valid values: **100** to 10240.
+        /// <para>The default maximum bandwidth of the endpoint connection. Unit: Mbit/s. Valid values: <b>100</b> to 10240.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1024</para>
         /// </summary>
         [NameInMap("ConnectBandwidth")]
         [Validation(Required=false)]
         public int? ConnectBandwidth { get; set; }
 
         /// <summary>
-        /// The time when the endpoint service was created.
+        /// <para>The time when the endpoint service was created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020-01-02T19:11:12Z</para>
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// The maximum bandwidth of the endpoint connection. Unit: Mbit/s.
+        /// <para>The maximum bandwidth of the endpoint connection. Unit: Mbit/s.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1024</para>
         /// </summary>
         [NameInMap("MaxBandwidth")]
         [Validation(Required=false)]
         public int? MaxBandwidth { get; set; }
 
         /// <summary>
-        /// The minimum bandwidth of the endpoint connection. Unit: Mbit/s.
+        /// <para>The minimum bandwidth of the endpoint connection. Unit: Mbit/s.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("MinBandwidth")]
         [Validation(Required=false)]
         public int? MinBandwidth { get; set; }
 
         /// <summary>
-        /// The payer of the endpoint service. Valid values:
+        /// <para>The payer of the endpoint service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Endpoint</b>: the service consumer.</description></item>
+        /// <item><description><b>EndpointService</b>: the service provider.</description></item>
+        /// </list>
         /// 
-        /// *   **Endpoint**: the service consumer.
-        /// *   **EndpointService**: the service provider.
+        /// <b>Example:</b>
+        /// <para>Endpoint</para>
         /// </summary>
         [NameInMap("Payer")]
         [Validation(Required=false)]
         public string Payer { get; set; }
 
         /// <summary>
-        /// The region ID of the endpoint service.
+        /// <para>The region ID of the endpoint service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-huhehaote</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8D8992C1-6712-423C-BAC5-E5E817484C6B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The resource group ID.
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmy*****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The service state of the endpoint service. Valid values:
+        /// <para>The service status of the endpoint service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Normal</b>: The endpoint service runs as expected.</description></item>
+        /// <item><description><b>FinancialLocked</b>: The endpoint service is locked due to overdue payments.</description></item>
+        /// </list>
         /// 
-        /// *   **Normal**: The endpoint service runs as expected.
-        /// *   **FinacialLocked**: The endpoint service is locked due to overdue payments.
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("ServiceBusinessStatus")]
         [Validation(Required=false)]
         public string ServiceBusinessStatus { get; set; }
 
         /// <summary>
-        /// The description of the endpoint service.
+        /// <para>The description of the endpoint service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is my EndpointService.</para>
         /// </summary>
         [NameInMap("ServiceDescription")]
         [Validation(Required=false)]
         public string ServiceDescription { get; set; }
 
         /// <summary>
-        /// The domain name of the endpoint service.
+        /// <para>The domain name of the endpoint service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>epsrv-hp3vpx8yqxblby3i****.cn-huhehaote.privatelink.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ServiceDomain")]
         [Validation(Required=false)]
         public string ServiceDomain { get; set; }
 
         /// <summary>
-        /// The endpoint service ID.
+        /// <para>The endpoint service ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>epsrv-hp3vpx8yqxblby3i****</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// The name of the endpoint service.
+        /// <para>The name of the endpoint service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3vpx8yqxblby3i****</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// The type of the service resource. Valid values:
+        /// <para>The type of the service resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>slb</b>: a CLB instance.</description></item>
+        /// <item><description><b>alb</b>: an ALB instance.</description></item>
+        /// </list>
         /// 
-        /// *   **slb**: a CLB instance.
-        /// *   **alb**: an ALB instance.
+        /// <b>Example:</b>
+        /// <para>slb</para>
         /// </summary>
         [NameInMap("ServiceResourceType")]
         [Validation(Required=false)]
         public string ServiceResourceType { get; set; }
 
         /// <summary>
-        /// The state of the endpoint service. Valid values:
+        /// <para>The state of the endpoint service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Creating</b>: The endpoint service is being created.</description></item>
+        /// <item><description><b>Pending</b>: The endpoint service is being modified.</description></item>
+        /// <item><description><b>Active</b>: The endpoint service is available.</description></item>
+        /// <item><description><b>Deleting</b>: The endpoint service is being deleted.</description></item>
+        /// <item><description><b>Inactive</b>: The endpoint service is unavailable.</description></item>
+        /// </list>
         /// 
-        /// *   **Creating**: The endpoint service is being created.
-        /// *   **Pending**: The endpoint service is being modified.
-        /// *   **Active**: The endpoint service is available.
-        /// *   **Deleting**: The endpoint service is being deleted.
-        /// *   **Inactive**: The endpoint service is unavailable.
+        /// <b>Example:</b>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("ServiceStatus")]
         [Validation(Required=false)]
         public string ServiceStatus { get; set; }
 
-        /// <summary>
-        /// Indicates whether IPv6 is enabled for the endpoint service. Valid values:
+        /// <term><b>Obsolete</b></term>
         /// 
-        /// *   **true**
-        /// *   **false** (default)
+        /// <summary>
+        /// <para>Specifies whether the endpoint service supports IPv6. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ServiceSupportIPv6")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? ServiceSupportIPv6 { get; set; }
 
         /// <summary>
-        /// The type of the endpoint.
+        /// <para>The type of the endpoint.</para>
+        /// <para>Only <b>Interface</b> is returned. The value indicates the interface endpoint. Then, you can specify ALB and CLB instances as service resources for the endpoint service.</para>
         /// 
-        /// Only **Interface** is returned. The value indicates the interface endpoint. Then, you can specify ALB and CLB instances as service resources for the endpoint service.
+        /// <b>Example:</b>
+        /// <para>Interface</para>
         /// </summary>
         [NameInMap("ServiceType")]
         [Validation(Required=false)]
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:
+        /// <para>Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default)</description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
         /// 
-        /// *   **true** (default)
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ZoneAffinityEnabled")]
         [Validation(Required=false)]
         public bool? ZoneAffinityEnabled { get; set; }
 
         /// <summary>
-        /// The zones to which the service resources belong.
+        /// <para>The zones to which the service resources belong.</para>
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]

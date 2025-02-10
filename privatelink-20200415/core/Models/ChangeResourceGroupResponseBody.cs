@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class ChangeResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8D8992C1-6712-423C-BAC5-E5E817484C6B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
