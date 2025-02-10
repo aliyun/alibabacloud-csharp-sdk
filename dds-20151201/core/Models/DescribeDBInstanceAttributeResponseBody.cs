@@ -535,6 +535,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         [Validation(Required=false)]
                         public string ConnectSting { get; set; }
 
+                        [NameInMap("ConnectString")]
+                        [Validation(Required=false)]
+                        public string ConnectString { get; set; }
+
                         /// <summary>
                         /// <para>The minor version of the current MongoDB kernel.</para>
                         /// 

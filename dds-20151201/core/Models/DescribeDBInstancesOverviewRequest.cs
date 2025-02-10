@@ -149,6 +149,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("ShowTags")]
+        [Validation(Required=false)]
+        public bool? ShowTags { get; set; }
+
         /// <summary>
         /// <para>The ID of the vSwitch to which the instance is connected.</para>
         /// 

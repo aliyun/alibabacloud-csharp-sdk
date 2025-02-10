@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupMode { get; set; }
 
                 /// <summary>
-                /// <para>The name of the backup set (invalid now).</para>
+                /// <para>The name of the backup set. The parameter is invalid.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345678.tar.gz</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupName { get; set; }
 
                 /// <summary>
-                /// <para>The scale of the backup set (invalid now).</para>
+                /// <para>The backup granularity. The parameter is invalid.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DBInstance</para>
@@ -174,6 +174,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [Validation(Required=false)]
                 public string BackupType { get; set; }
 
+                /// <summary>
+                /// <para>Version of the backuped instance.</para>
+                /// <list type="bullet">
+                /// <item><description><b>6.0</b></description></item>
+                /// <item><description><b>5.0</b></description></item>
+                /// <item><description><b>4.4</b></description></item>
+                /// <item><description><b>4.2</b></description></item>
+                /// <item><description><b>4.0</b></description></item>
+                /// <item><description><b>3.4</b></description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4.2</para>
+                /// </summary>
                 [NameInMap("EngineVersion")]
                 [Validation(Required=false)]
                 public string EngineVersion { get; set; }

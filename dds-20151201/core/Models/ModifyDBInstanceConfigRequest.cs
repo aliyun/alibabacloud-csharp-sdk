@@ -8,13 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
-    public class UpgradeDBInstanceKernelVersionRequest : TeaModel {
+    public class ModifyDBInstanceConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dds-bp2235****</para>
+        /// <para>manual_check</para>
+        /// </summary>
+        [NameInMap("ConfigName")]
+        [Validation(Required=false)]
+        public string ConfigName { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("ConfigValue")]
+        [Validation(Required=false)]
+        public string ConfigValue { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dds-bp1ea17b41ab****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -35,20 +54,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
-
-        /// <summary>
-        /// <para>The time when to perform the upgrade. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>0</b>: immediately performs the upgrade.</description></item>
-        /// <item><description><b>1</b>: performs the upgrade during the maintenance window.</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("SwitchMode")]
-        [Validation(Required=false)]
-        public string SwitchMode { get; set; }
 
     }
 

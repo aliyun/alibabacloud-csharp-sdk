@@ -50,6 +50,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The time when to perform the upgrade. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: immediately performs the upgrade.</description></item>
+        /// <item><description><b>1</b>: performs the upgrade during the maintenance window.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("SwitchMode")]
         [Validation(Required=false)]
         public int? SwitchMode { get; set; }

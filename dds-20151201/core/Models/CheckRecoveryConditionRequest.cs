@@ -52,6 +52,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DestRegion { get; set; }
 
+        /// <summary>
+        /// <para>The database engine version of the instance.</para>
+        /// <list type="bullet">
+        /// <item><description><b>6.0</b></description></item>
+        /// <item><description><b>5.0</b></description></item>
+        /// <item><description><b>4.4</b></description></item>
+        /// <item><description><b>4.2</b></description></item>
+        /// <item><description><b>4.0</b></description></item>
+        /// <item><description><b>3.4</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4.2</para>
+        /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }

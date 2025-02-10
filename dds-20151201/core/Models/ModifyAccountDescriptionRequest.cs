@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        [NameInMap("CharacterType")]
+        [Validation(Required=false)]
+        public string CharacterType { get; set; }
+
         /// <summary>
         /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
