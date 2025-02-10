@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey> SslVpnClientCertKey { get; set; }
             public class DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey : TeaModel {
                 /// <summary>
-                /// <para>The timestamp that indicates when the SSL client certificate was created. Unit: millisecond.</para>
-                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The timestamp generated when the SSL client certificate was created. Unit: milliseconds.</para>
+                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1492747187000</para>
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp that indicates when the SSL client certificate expires. Unit: millisecond.</para>
-                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The timestamp generated when the SSL client certificate expires. Unit: milliseconds.</para>
+                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1494966335000</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The region where the SSL client certificate is created.</para>
+                /// <para>The region ID of the SSL client certificate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 /// <summary>
                 /// <para>The ID of the resource group to which the SSL client certificate belongs.</para>
-                /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group information.</para>
+                /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-acfmzs372yg****</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The status of the SSL client certificate. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>expiring-soon</b></description></item>
+                /// <item><description><b>expiring-soon</b>: The certificate expires in one week.</description></item>
                 /// <item><description><b>normal</b></description></item>
                 /// <item><description><b>expired</b></description></item>
                 /// </list>

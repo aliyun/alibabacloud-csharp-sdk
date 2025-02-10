@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of routes.</para>
+        /// <para>The list of route entries.</para>
         /// </summary>
         [NameInMap("VcoRouteEntries")]
         [Validation(Required=false)]
@@ -97,6 +97,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string NextHop { get; set; }
 
+            /// <summary>
+            /// <para>The list of next hops.</para>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>This parameter is returned only by dual-tunnel IPsec connections.</description></item>
+            /// <item><description>This parameter is returned only when the tunnel status is <b>Phase 2 Negotiation Successful</b>.</description></item>
+            /// </list>
+            /// </remarks>
+            /// </summary>
             [NameInMap("NextHopTunnelIdList")]
             [Validation(Required=false)]
             public List<string> NextHopTunnelIdList { get; set; }
@@ -164,11 +173,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string VpnConnectionId { get; set; }
 
             /// <summary>
-            /// <para>The weight of the destination-based route. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>0</b>: a low priority</description></item>
-            /// <item><description><b>100</b>: a high priority</description></item>
-            /// </list>
+            /// <para>The weight of the destination-based route.</para>
+            /// <remarks>
+            /// <para> The current parameter has no effect.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -179,18 +187,50 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        /// <summary>
+        /// <para>The information on route entries of the dual-tunnel IPsec connection.</para>
+        /// <remarks>
+        /// <para> This parameter is returned only for IPsec connections in dual-tunnel mode.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("VpnRouteCounts")]
         [Validation(Required=false)]
         public List<DescribeVcoRouteEntriesResponseBodyVpnRouteCounts> VpnRouteCounts { get; set; }
         public class DescribeVcoRouteEntriesResponseBodyVpnRouteCounts : TeaModel {
+            /// <summary>
+            /// <para>The number of route entries.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("RouteCount")]
             [Validation(Required=false)]
             public int? RouteCount { get; set; }
 
+            /// <summary>
+            /// <para>The route type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>custom</b>: destination-based route.</description></item>
+            /// <item><description><b>bgp</b>: BGP route.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bgp</para>
+            /// </summary>
             [NameInMap("RouteEntryType")]
             [Validation(Required=false)]
             public string RouteEntryType { get; set; }
 
+            /// <summary>
+            /// <para>The source of the BGP route. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>CLOUD</b>: The current BGP route is learned by the IPsec connection from the transit router.</description></item>
+            /// <item><description><b>VPN_BGP</b>: The current BGP route is learned by the IPsec connection from the data center.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VPN_BGP</para>
+            /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }

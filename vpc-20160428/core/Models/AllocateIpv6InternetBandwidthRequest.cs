@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateIpv6InternetBandwidthRequest : TeaModel {
         /// <summary>
-        /// <para>The Internet bandwidth of the IPv6 gateway. Unit: Mbit/s. Valid values: <b>1 to 5000</b>.</para>
+        /// <para>The Internet bandwidth of the IPv6 address. Unit: Mbit/s.</para>
+        /// <list type="bullet">
+        /// <item><description>If you set <b>InternetChargeType</b> to <b>PayByTraffic</b>, valid values are <b>1</b> to <b>1000</b>.</description></item>
+        /// <item><description>If you set <b>InternetChargeType</b> to <b>PayByBandwidth</b>, valid values are <b>1</b> to <b>2000</b>.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

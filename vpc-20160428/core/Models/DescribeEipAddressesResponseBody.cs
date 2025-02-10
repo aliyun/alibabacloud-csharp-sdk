@@ -476,6 +476,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string SegmentInstanceId { get; set; }
 
+                [NameInMap("ServiceID")]
+                [Validation(Required=false)]
+                public long? ServiceID { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether the resource is created by the service account. Valid values:</para>
                 /// <list type="bullet">

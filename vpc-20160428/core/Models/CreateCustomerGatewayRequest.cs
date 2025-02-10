@@ -10,9 +10,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateCustomerGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The autonomous system number (ASN) of the gateway device in the data center.</para>
-        /// <para><b>Asn</b> is a 4-byte number. You can enter the number in two segments and separate the first 16 bits from the following 16 bits with a period (.). Enter the number in each segment in the decimal format.</para>
-        /// <para>For example, if you enter 123.456, the ASN is: 123 × 65536 + 456 = 8061384.</para>
+        /// <para>The autonomous system number (ASN) of the gateway device in your data center. This parameter is required If you want to use Border Gateway Protocol (BGP) for the IPsec-VPN connection. Valid values: 1 to 4294967295. 45104 is not supported.</para>
+        /// <para><b>Asn</b> is a 4-byte number. You can enter it in two segments and separate the first 16 bits from the following 16 bits with a period (.). Enter the number in each segment in decimal format.</para>
+        /// <para>For example, if you enter 123.456, the ASN is 8061384. The ASN is calculated by using the following formula: 123 × 65536 + 456 = 8061384.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you use a private ASN to establish BGP connections to Alibaba Cloud. For information about the range of private ASNs, see the relevant documentation.</description></item>
+        /// <item><description>45104 is a unique identifier assigned by IANA to Alibaba Cloud. It is used to identify Alibaba Cloud during route selection and data transmission over the Internet.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>65530</para>
@@ -58,7 +64,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the gateway device in the data center.</para>
+        /// <para>The static IP address of the gateway device in the data center.</para>
+        /// <list type="bullet">
+        /// <item><description>If you want to create a public IPsec-VPN connection, enter a public IP address.</description></item>
+        /// <item><description>If you want to create a private IPsec-VPN connection, enter a private IP address.</description></item>
+        /// </list>
+        /// <para>You cannot use the following IP addresses. Otherwise, a IPsec-VPN connection cannot be established:</para>
+        /// <list type="bullet">
+        /// <item><description>100.64.0.0~100.127.255.255</description></item>
+        /// <item><description>127.0.0.0~127.255.255.255</description></item>
+        /// <item><description>169.254.0.0~169.254.255.255</description></item>
+        /// <item><description>224.0.0.0~239.255.255.255</description></item>
+        /// <item><description>255.0.0.0~255.255.255.255</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The detailed information about the SSL-VPN server.</para>
+        /// <para>The detailed information about the SSL-VPN servers.</para>
         /// </summary>
         [NameInMap("SslVpnServers")]
         [Validation(Required=false)]
@@ -119,6 +119,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public bool? EnableMultiFactorAuth { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the IDaaS application.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>app_my6g4qmvnwxzj2f****</para>
                 /// </summary>
@@ -127,7 +129,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IDaaSApplicationId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the IDaaS instance.</para>
+                /// <para>The ID of the IDaaS EIAM instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>idaas-cn-hangzhou-****</para>
@@ -137,6 +139,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IDaaSInstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The version of the IDaaS EIAM instance.</para>
+                /// <list type="bullet">
+                /// <item><description>This parameter is returned only if the SSL server is associated with an IDaaS EIAM 2.0 instance. Only <b>EIAM 2.0</b> is returned.</description></item>
+                /// <item><description>If the SSL server is associated with an IDaaS EIAM 1.0 instance, no value is returned.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>EIAM 2.0</para>
                 /// </summary>
@@ -145,7 +153,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IDaaSInstanceVersion { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the IDaaS instance.</para>
+                /// <para>The region ID of the IDaaS EIAM instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -185,7 +193,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public int? MaxConnections { get; set; }
 
                 /// <summary>
-                /// <para>The name of the SSL-VPN server.</para>
+                /// <para>The name of the SSL server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -205,7 +213,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The protocol that is used by the SSL-VPN server.</para>
+                /// <para>The protocol that is used by the SSL server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UDP</para>
@@ -215,7 +223,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Proto { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the SSL-VPN server.</para>
+                /// <para>The region ID of the SSL server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -225,7 +233,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The resource group ID of the SSL-VPN server.</para>
+                /// <para>The resource group ID of the SSL server.</para>
                 /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</para>
                 /// 
                 /// <b>Example:</b>
@@ -236,7 +244,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the SSL-VPN server.</para>
+                /// <para>The ID of the SSL server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vss-bp15j3du13gq1dgey****</para>

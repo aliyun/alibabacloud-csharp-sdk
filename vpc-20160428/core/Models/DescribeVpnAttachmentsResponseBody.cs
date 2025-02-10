@@ -110,18 +110,45 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The system tags of the IPsec-VPN connection.</para>
+            /// <para>You can check whether an IPsec-VPN connection supports BGP based on the system tags.</para>
+            /// <para><b>BGPSupport</b>: indicates whether the IPsec-VPN connection supports BGP.</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;description\&quot;:\&quot;forwarding 1.7.22\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;BGPSupport\&quot;:\&quot;true\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</para>
+            /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
 
+            /// <summary>
+            /// <para>The list of tags to be added to the IPsec-VPN connection.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags> Tags { get; set; }
             public class DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key of the IPsec-VPN connection.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TagKey</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag value of the IPsec-VPN connection.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TagValue</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

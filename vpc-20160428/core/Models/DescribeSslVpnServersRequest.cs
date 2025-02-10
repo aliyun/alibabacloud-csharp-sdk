@@ -61,9 +61,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the SSL server belongs.</para>
-        /// <para>The SSL server has the same resource group as its associated VPN gateway instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the ID of the resource group to which the VPN gateway instance belongs.</para>
+        /// <para>The resource group ID of the SSL server.</para>
+        /// <para>The SSL server and its associated VPN gateway belong to the same resource group. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the ID of the resource group to which the VPN gateway belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzs372yg****</para>

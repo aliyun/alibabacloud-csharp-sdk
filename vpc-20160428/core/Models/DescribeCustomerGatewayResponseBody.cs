@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the gateway device in the data center.</para>
+        /// <para>The IP address of the gateway device in the data center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>139.32.XX.XX</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeCustomerGatewayResponseBodyTagsTag> Tag { get; set; }
             public class DescribeCustomerGatewayResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// <para>The key of tag N.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TagKey</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of tag N.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TagValue</para>

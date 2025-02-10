@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The IP address of the VPN gateway.</para>
-        /// <para>This parameter is returned only when the VPN gateway is a private VPN gateway and supports only the single-tunnel mode.</para>
+        /// <para>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in single-tunnel mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.27.30.24</para>
@@ -153,9 +153,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>VPN网关实例所属的资源组ID。</para>
-        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>接口查询资源组信息。</para>
-        /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzs372yg****</para>
         /// </summary>

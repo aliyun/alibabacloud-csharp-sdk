@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The new description of the VPN gateway.</para>
-        /// <para>The description must be 1 to 100 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The new description of the VPN connection.</para>
+        /// <para>The description must be 1 to 100 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

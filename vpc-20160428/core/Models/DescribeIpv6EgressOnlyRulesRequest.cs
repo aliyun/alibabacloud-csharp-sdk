@@ -20,8 +20,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance to which you want to apply the egress-only rule. Set the value to</para>
-        /// <para><b>Ipv6Address</b>, which specifies that the egress-only rule applies to an IPv6 address.</para>
+        /// <para>The type of the instance to which you want to apply the egress-only rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>IPv6Address (default)</description></item>
+        /// <item><description>IPv6Prefix</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Ipv6Address</para>
@@ -70,7 +73,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -80,7 +83,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

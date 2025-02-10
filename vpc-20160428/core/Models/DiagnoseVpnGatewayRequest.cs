@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The configuration when you check the connectivity of the IPsec-VPN connection. Valid values:</para>
+        /// <para>Check the connectivity of the destination address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrivateSourceIp</b>: the source IP address used when you check the connectivity of the IPsec-VPN connection. The source IP address must be on the VPC side.</description></item>
-        /// <item><description><b>PrivateDestinationIp</b>: the destination IP address used when you check the connectivity of the IPsec-VPN connection. The destination IP address must be on the data center side.</description></item>
+        /// <item><description><b>PrivateSourceIp</b>: the source IP address. The source IP address must be on the VPC side.</description></item>
+        /// <item><description><b>PrivateDestinationIp</b>: the destination IP address. The destination IP address must be on the data center side.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

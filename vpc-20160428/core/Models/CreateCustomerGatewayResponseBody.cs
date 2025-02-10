@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the gateway device in the data center.</para>
+        /// <para>The static IP address of the gateway device in the on-premises data center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101.12.XX.XX</para>

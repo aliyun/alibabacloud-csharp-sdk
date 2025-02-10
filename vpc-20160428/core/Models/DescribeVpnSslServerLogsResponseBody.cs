@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>An array of strings.</para>
-        /// <para>Each item in the array is a log entry.</para>
+        /// <para>Log information list.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

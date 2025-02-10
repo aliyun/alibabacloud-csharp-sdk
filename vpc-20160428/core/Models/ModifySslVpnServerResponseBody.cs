@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Cipher { get; set; }
 
         /// <summary>
-        /// <para>The client IP address pool.</para>
+        /// <para>The client CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.30.30.0/24</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block of the client.</para>
+        /// <para>The local CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.20.20.0/24</para>

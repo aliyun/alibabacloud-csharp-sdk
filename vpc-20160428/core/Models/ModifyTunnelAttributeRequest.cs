@@ -68,14 +68,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public ModifyTunnelAttributeRequestTunnelOptionsSpecification TunnelOptionsSpecification { get; set; }
         public class ModifyTunnelAttributeRequestTunnelOptionsSpecification : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cgw-1nmwbpgrp7ssqm1yn****</para>
+            /// </summary>
             [NameInMap("CustomerGatewayId")]
             [Validation(Required=false)]
             public string CustomerGatewayId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the dead peer detection (DPD) feature. Valid values:</para>
+            /// <para>Specifies whether to enable dead peer detection (DPD). Valid values: Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: DPD is enabled. The IPsec initiator sends DPD packets to verify the existence and availability of the IPsec peer. If no response is received from the peer within a specified period of time, the IPsec peer is considered disconnected. Then, the ISAKMP SA, IPsec SA, and IPsec tunnel are deleted.</description></item>
+            /// <item><description><b>true</b> The IPsec initiator sends DPD packets to verify the existence and availability of the IPsec peer. If no response is received from the peer within a specified period of time, the IPsec peer is considered disconnected. Then, the ISAKMP SA, IPsec SA, and IPsec tunnel are deleted.</description></item>
             /// <item><description><b>false</b>: DPD is disabled. The IPsec initiator does not send DPD packets.</description></item>
             /// </list>
             /// 
@@ -89,8 +93,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>Specifies whether to enable NAT traversal. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: NAT traversal is enabled. After NAT traversal is enabled, the initiator does not check the UDP ports during Internet Key Exchange (IKE) negotiations and can automatically discover NAT gateway devices along the IPsec-VPN tunnel.</description></item>
-            /// <item><description><b>false</b>: NAT traversal is disabled.</description></item>
+            /// <item><description><b>true</b>: enables NAT traversal. After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec-VPN tunnel.</description></item>
+            /// <item><description><b>false</b>: disables NAT traversal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,7 +144,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 /// <summary>
                 /// <para>The CIDR block of the tunnel.</para>
-                /// <para>The CIDR block must fall into 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.</para>
+                /// <para>The CIDR block must fall within the 169.254.0.0/16 range. The subnet mask of the CIDR block must be 30 bits in length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>169.254.11.0/30</para>
@@ -175,8 +179,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The encryption algorithm that is used in IKE Phase 1 negotiations.</para>
                 /// <list type="bullet">
-                /// <item><description>Valid values when the IPsec connection is attached to a standard VPN gateway: <b>aes</b>, <b>aes192</b>, <b>sha256</b>, <b>des</b>, and <b>3des</b>.</description></item>
-                /// <item><description>Valid values when the IPsec connection is attached to a VPN gateway that uses an SM certificate: <b>sm4</b>.</description></item>
+                /// <item><description>Valid values when the IPsec connection is attached to a standard VPN gateway: <b>aes</b>, <b>aes192</b>, <b>aes256</b>, <b>des</b>, and <b>3des</b>.</description></item>
+                /// <item><description>If the IPsec connection is attached to a VPN gateway that uses an SM certificate, set the value to <b>sm4</b>.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -187,7 +191,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeEncAlg { get; set; }
 
                 /// <summary>
-                /// <para>The SA lifetime that is used in IKE Phase 1 negotiations. Unit: seconds. Valid values: <b>0 to 86400</b>.</para>
+                /// <para>The SA lifetime as a result of Phase 1 negotiations. Unit: seconds. Valid values: <b>0 to 86400</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86400</para>
@@ -197,10 +201,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? IkeLifetime { get; set; }
 
                 /// <summary>
-                /// <para>The IKE negotiation mode. Valid values:</para>
+                /// <para>The negotiation mode of IKE. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>main:</b> This mode offers higher security during negotiations.</description></item>
-                /// <item><description><b>aggressive:</b> This mode is faster and has a higher success rate.</description></item>
+                /// <item><description><b>aggressive</b>: This mode is faster and has a higher success rate.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -211,7 +215,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeMode { get; set; }
 
                 /// <summary>
-                /// <para>The Diffie-Hellman (DH) key exchange algorithm that is used in IKE Phase 1 negotiations. Valid values: <b>group1</b>, <b>group2</b>, <b>group5</b>, and <b>group14</b>.</para>
+                /// <para>The Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. Valid values: <b>group1</b>, <b>group2</b>, <b>group5</b>, and <b>group14</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group2</para>
@@ -221,7 +225,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkePfs { get; set; }
 
                 /// <summary>
-                /// <para>The IKE version. Valid values: <b>ikev1</b> and <b>ikev2</b>.</para>
+                /// <para>The version of the IKE protocol. Valid values: <b>ikev1</b> and <b>ikev2</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ikev2</para>
@@ -231,7 +235,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeVersion { get; set; }
 
                 /// <summary>
-                /// <para>The tunnel identifier. The identifier can be up to 100 characters in length, and supports fully qualified domain names (FQDNs) and IP addresses. The default identifier is the tunnel IP address.</para>
+                /// <para>The tunnel identifier. The identifier can be up to 100 characters in length, and supports FQDNs and IP addresses. The default value is the IP address of the tunnel.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.XX.XX.87</para>
@@ -243,11 +247,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The pre-shared key that is used to verify identities between the tunnel and peer.</para>
                 /// <list type="bullet">
-                /// <item><description>It must be 1 to 100 characters in length, and can contain letters, digits, and the following characters: <c>~!`@#$%^&amp;*()_-+={}[]|;:\\&quot;,.&lt;&gt;/?</c></description></item>
-                /// <item><description>If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the <a href="https://help.aliyun.com/document_detail/120374.html">DescribeVpnConnection</a> operation to query the pre-shared key that is generated by the system.</description></item>
+                /// <item><description>The key must be 1 to 100 characters in length and can contain digits, letters, and the following special characters: <c>~!`@#$%^&amp;*()_-+={}[]|;:\\&quot;,.&lt;&gt;/?</c></description></item>
+                /// <item><description>If you do not specify a pre-shared key, the system randomly generates a 16-bit string as the pre-shared key. You can call the <a href="https://help.aliyun.com/document_detail/120374.html">DescribeVpnConnection</a> operation to query the pre-shared key that is automatically generated by the system.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> The pre-shared key that is configured for the tunnel and the tunnel peer must be the same. Otherwise, the system cannot establish the tunnel.</para>
+                /// <para>The pre-shared key that is configured for the tunnel and the tunnel peer must be the same. Otherwise, the system cannot establish the tunnel.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -293,8 +297,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The encryption algorithm that is used in IPsec Phase 2 negotiations.</para>
                 /// <list type="bullet">
-                /// <item><description>Valid values when the IPsec connection is attached to a standard VPN gateway: <b>aes</b>, <b>aes192</b>, <b>sha256</b>, <b>des</b>, and <b>3des</b>.</description></item>
-                /// <item><description>Valid values when the IPsec connection is attached to a VPN gateway that uses an SM certificate: <b>sm4</b>.</description></item>
+                /// <item><description>Valid values when the IPsec connection is attached to a standard VPN gateway: <b>aes</b>, <b>aes192</b>, <b>aes256</b>, <b>des</b>, and <b>3des</b>.</description></item>
+                /// <item><description>If the IPsec connection is attached to a VPN gateway that uses an SM certificate, set the value to <b>sm4</b>.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -305,7 +309,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IpsecEncAlg { get; set; }
 
                 /// <summary>
-                /// <para>The SA lifetime that is used in IPsec Phase 2 negotiations. Unit: seconds. Valid values: <b>0 to 86400</b>.</para>
+                /// <para>The SA lifetime as a result of Phase 2 negotiations. Unit: seconds. Valid values: <b>0 to 86400</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86400</para>
@@ -315,7 +319,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? IpsecLifetime { get; set; }
 
                 /// <summary>
-                /// <para>The DH key exchange algorithm that is used in IPsec Phase 2 negotiations. Valid values: <b>disabled</b>, <b>group1</b>, <b>group2</b>, <b>group5</b>, and <b>group14</b>.</para>
+                /// <para>The Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiations. Valid values: <b>disabled</b>, <b>group1</b>, <b>group2</b>, <b>group5</b>, and <b>group14</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group2</para>

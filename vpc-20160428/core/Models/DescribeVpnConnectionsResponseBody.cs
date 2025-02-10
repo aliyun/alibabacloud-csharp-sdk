@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The information about the IPsec-VPN connection.</para>
+        /// <para>The information about the IPsec-VPN connections.</para>
         /// </summary>
         [NameInMap("VpnConnections")]
         [Validation(Required=false)]
@@ -523,8 +523,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string TransitRouterName { get; set; }
 
                 /// <summary>
-                /// <para>The tunnel configuration of the IPsec-VPN connection.</para>
-                /// <para>Parameters in <b>TunnelOptionsSpecification</b> are returned only if you query IPsec-VPN connections in dual-tunnel mode.</para>
+                /// <para>The tunnel configurations of the IPsec-VPN connection.</para>
+                /// <para>Parameters in <b>TunnelOptionsSpecification</b> are returned only if you query an IPsec-VPN connection in dual-tunnel mode.</para>
                 /// </summary>
                 [NameInMap("TunnelOptionsSpecification")]
                 [Validation(Required=false)]
@@ -824,6 +824,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                         }
 
+                        /// <summary>
+                        /// <para>The order in which the tunnel is created.</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>1</b>: Tunnel 1.</description></item>
+                        /// <item><description><b>2</b>: Tunnel 2.</description></item>
+                        /// </list>
+                        /// <remarks>
+                        /// <para> This parameter is returned only if the IPsec-VPN connection is associated with a transit router.</para>
+                        /// </remarks>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1</para>
+                        /// </summary>
                         [NameInMap("TunnelIndex")]
                         [Validation(Required=false)]
                         public int? TunnelIndex { get; set; }

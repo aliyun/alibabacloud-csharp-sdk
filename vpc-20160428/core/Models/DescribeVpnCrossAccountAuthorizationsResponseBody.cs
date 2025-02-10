@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string BindInstance { get; set; }
 
             /// <summary>
-            /// <para>The resource type of the authorization.</para>
-            /// <para>The value is set to <b>CEN</b>, which indicates that the IPsec-VPN connection can be associated with a transit router of a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.</para>
+            /// <para>The type of resource that can be associated with the IPsec-VPN connection.</para>
+            /// <para>Only <b>CEN</b> can be returned, which indicates that the IPsec-VPN connection is authorized to be associated with the transit router of a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CEN</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string BindProduct { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account whose resource the IPsec-VPN connection can be associated with.</para>
+            /// <para>The ID of the Alibaba Cloud account whose resources the IPsec-VPN connection is authorized to be associated with.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1210123456123456</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? BindUid { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the authorization for the IPsec-VPN connection was created.</para>
+            /// <para>The time when the authorization for the IPsec-VPN connection was created.</para>
             /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DB04E39A-6F0C-36AC-BCA0-B6D371B90062</para>
