@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.VpcPeer20220101.Models
 {
     public class GetVpcPeerConnectionAttributeRequest : TeaModel {
         /// <summary>
-        /// The ID of the VPC peering connection that you want to query.
+        /// <para>The ID of the VPC peering connection.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pcc-lnk0m24khwvtkm****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
