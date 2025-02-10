@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        [NameInMap("TagKeys")]
+        [Validation(Required=false)]
+        public List<string> TagKeys { get; set; }
+
         /// <summary>
         /// <para>The ID of the object.</para>
         /// <remarks>

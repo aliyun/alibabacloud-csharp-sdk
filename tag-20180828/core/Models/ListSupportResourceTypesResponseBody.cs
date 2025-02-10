@@ -40,6 +40,12 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public List<ListSupportResourceTypesResponseBodySupportResourceTypes> SupportResourceTypes { get; set; }
         public class ListSupportResourceTypesResponseBodySupportResourceTypes : TeaModel {
+            /// <summary>
+            /// <para>The resource ARN template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:ecs:<em>:</em>:instance/${ResourceId}</para>
+            /// </summary>
             [NameInMap("ArnTemplate")]
             [Validation(Required=false)]
             public string ArnTemplate { get; set; }

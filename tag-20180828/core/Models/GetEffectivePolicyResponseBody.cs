@@ -19,6 +19,50 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         [Validation(Required=false)]
         public string EffectivePolicy { get; set; }
 
+        [NameInMap("PolicyAttachments")]
+        [Validation(Required=false)]
+        public List<GetEffectivePolicyResponseBodyPolicyAttachments> PolicyAttachments { get; set; }
+        public class GetEffectivePolicyResponseBodyPolicyAttachments : TeaModel {
+            [NameInMap("PolicyList")]
+            [Validation(Required=false)]
+            public List<GetEffectivePolicyResponseBodyPolicyAttachmentsPolicyList> PolicyList { get; set; }
+            public class GetEffectivePolicyResponseBodyPolicyAttachmentsPolicyList : TeaModel {
+                [NameInMap("AttachSeq")]
+                [Validation(Required=false)]
+                public int? AttachSeq { get; set; }
+
+                [NameInMap("AttachTime")]
+                [Validation(Required=false)]
+                public string AttachTime { get; set; }
+
+                [NameInMap("PolicyId")]
+                [Validation(Required=false)]
+                public string PolicyId { get; set; }
+
+                [NameInMap("PolicyName")]
+                [Validation(Required=false)]
+                public string PolicyName { get; set; }
+
+                [NameInMap("TargetId")]
+                [Validation(Required=false)]
+                public string TargetId { get; set; }
+
+                [NameInMap("TargetType")]
+                [Validation(Required=false)]
+                public string TargetType { get; set; }
+
+            }
+
+            [NameInMap("PolicyType")]
+            [Validation(Required=false)]
+            public string PolicyType { get; set; }
+
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 

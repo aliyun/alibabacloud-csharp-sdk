@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 
             /// <summary>
             /// <para>The tag value. This parameter specifies a filter condition for the query.</para>
-            /// <para>The tag value can be a maximum of 128 characters in length. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>

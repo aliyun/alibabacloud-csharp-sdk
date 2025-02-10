@@ -18,51 +18,40 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._productId = "Tag";
-            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
-            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"cn-qingdao", "tag.aliyuncs.com"},
-                {"cn-beijing", "tag.aliyuncs.com"},
-                {"cn-hangzhou", "tag.aliyuncs.com"},
-                {"cn-shanghai", "tag.aliyuncs.com"},
-                {"cn-shenzhen", "tag.aliyuncs.com"},
-                {"cn-hongkong", "tag.aliyuncs.com"},
-                {"ap-southeast-1", "tag.aliyuncs.com"},
-                {"us-west-1", "tag.aliyuncs.com"},
-                {"us-east-1", "tag.aliyuncs.com"},
-                {"cn-hangzhou-finance", "tag.aliyuncs.com"},
+                {"us-west-1", "tag.us-east-1.aliyuncs.com"},
+                {"cn-hangzhou-finance", "tag.cn-hangzhou.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "tag.aliyuncs.com"},
                 {"ap-northeast-2-pop", "tag.aliyuncs.com"},
                 {"cn-beijing-finance-pop", "tag.aliyuncs.com"},
                 {"cn-beijing-gov-1", "tag.aliyuncs.com"},
-                {"cn-beijing-nu16-b01", "tag.aliyuncs.com"},
+                {"cn-beijing-nu16-b01", "tag.cn-hangzhou.aliyuncs.com"},
                 {"cn-edge-1", "tag.aliyuncs.com"},
-                {"cn-fujian", "tag.aliyuncs.com"},
-                {"cn-haidian-cm12-c01", "tag.aliyuncs.com"},
+                {"cn-fujian", "tag.cn-hangzhou.aliyuncs.com"},
+                {"cn-haidian-cm12-c01", "tag.cn-north-2-gov-1.aliyuncs.com"},
                 {"cn-hangzhou-bj-b01", "tag.aliyuncs.com"},
                 {"cn-hangzhou-internal-prod-1", "tag.aliyuncs.com"},
                 {"cn-hangzhou-internal-test-1", "tag.aliyuncs.com"},
-                {"cn-hangzhou-internal-test-2", "tag.aliyuncs.com"},
-                {"cn-hangzhou-internal-test-3", "tag.aliyuncs.com"},
-                {"cn-hangzhou-test-306", "tag.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-2", "tag.cn-hangzhou.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-3", "tag.cn-hangzhou.aliyuncs.com"},
+                {"cn-hangzhou-test-306", "tag.cn-hangzhou.aliyuncs.com"},
                 {"cn-hongkong-finance-pop", "tag.aliyuncs.com"},
-                {"cn-huhehaote-nebula-1", "tag.aliyuncs.com"},
-                {"cn-shanghai-et15-b01", "tag.aliyuncs.com"},
+                {"cn-huhehaote-nebula-1", "tag.cn-qingdao-nebula.aliyuncs.com"},
+                {"cn-shanghai-et15-b01", "tag.cn-hangzhou.aliyuncs.com"},
                 {"cn-shanghai-et2-b01", "tag.aliyuncs.com"},
                 {"cn-shanghai-inner", "tag.aliyuncs.com"},
                 {"cn-shanghai-internal-test-1", "tag.aliyuncs.com"},
                 {"cn-shenzhen-inner", "tag.aliyuncs.com"},
-                {"cn-shenzhen-st4-d01", "tag.aliyuncs.com"},
+                {"cn-shenzhen-st4-d01", "tag.cn-hangzhou.aliyuncs.com"},
                 {"cn-shenzhen-su18-b01", "tag.aliyuncs.com"},
                 {"cn-wuhan", "tag.aliyuncs.com"},
                 {"cn-yushanfang", "tag.aliyuncs.com"},
                 {"cn-zhangbei", "tag.aliyuncs.com"},
-                {"cn-zhangbei-na61-b01", "tag.aliyuncs.com"},
+                {"cn-zhangbei-na61-b01", "tag.cn-hangzhou.aliyuncs.com"},
                 {"cn-zhangjiakou-na62-a01", "tag.aliyuncs.com"},
-                {"cn-zhengzhou-nebula-1", "tag.aliyuncs.com"},
+                {"cn-zhengzhou-nebula-1", "tag.cn-qingdao-nebula.aliyuncs.com"},
                 {"eu-west-1-oxs", "tag.cn-shenzhen-cloudstone.aliyuncs.com"},
                 {"rus-west-1-pop", "tag.aliyuncs.com"},
             };
@@ -846,7 +835,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates preset tags.</para>
+        /// <para>Creates predefined tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -918,7 +907,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates preset tags.</para>
+        /// <para>Creates predefined tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -990,7 +979,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates preset tags.</para>
+        /// <para>Creates predefined tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1015,7 +1004,7 @@ namespace AlibabaCloud.SDK.Tag20180828
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates preset tags.</para>
+        /// <para>Creates predefined tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2620,6 +2609,10 @@ namespace AlibabaCloud.SDK.Tag20180828
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeys))
+            {
+                query["TagKeys"] = request.TagKeys;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
             {
                 query["TargetId"] = request.TargetId;
@@ -2695,6 +2688,10 @@ namespace AlibabaCloud.SDK.Tag20180828
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKeys))
+            {
+                query["TagKeys"] = request.TagKeys;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
             {
@@ -4083,7 +4080,7 @@ namespace AlibabaCloud.SDK.Tag20180828
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Call examples</h3>
+        /// <h3><a href="#"></a>Call example</h3>
         /// <list type="bullet">
         /// <item><description>Query a list of resource types supported by TagResources or UntagResources. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</description></item>
         /// <item><description>Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D">Example</a>.</description></item>
@@ -4178,7 +4175,7 @@ namespace AlibabaCloud.SDK.Tag20180828
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Call examples</h3>
+        /// <h3><a href="#"></a>Call example</h3>
         /// <list type="bullet">
         /// <item><description>Query a list of resource types supported by TagResources or UntagResources. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</description></item>
         /// <item><description>Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D">Example</a>.</description></item>
@@ -4273,7 +4270,7 @@ namespace AlibabaCloud.SDK.Tag20180828
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Call examples</h3>
+        /// <h3><a href="#"></a>Call example</h3>
         /// <list type="bullet">
         /// <item><description>Query a list of resource types supported by TagResources or UntagResources. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</description></item>
         /// <item><description>Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D">Example</a>.</description></item>
@@ -4301,7 +4298,7 @@ namespace AlibabaCloud.SDK.Tag20180828
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Call examples</h3>
+        /// <h3><a href="#"></a>Call example</h3>
         /// <list type="bullet">
         /// <item><description>Query a list of resource types supported by TagResources or UntagResources. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22,%22SupportCode%22:%22TAG_CONSOLE_SUPPORT%22%7D">Example</a>.</description></item>
         /// <item><description>Query a list of resource types supported by ListTagResources or ListResourcesByTag. For more information, see <a href="https://api.alibabacloud.com/api/Tag/2018-08-28/ListSupportResourceTypes?tab=DEBUG%5C&params=%7B%22RegionId%22:%22cn-hangzhou%22%7D">Example</a>.</description></item>

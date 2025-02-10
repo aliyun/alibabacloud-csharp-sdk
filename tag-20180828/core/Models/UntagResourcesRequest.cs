@@ -48,7 +48,8 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>A tag key.</para>
+        /// <para>The key of tag N.</para>
+        /// <para>Valid values of N: 1 to 10.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

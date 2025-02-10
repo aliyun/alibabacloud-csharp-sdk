@@ -55,8 +55,8 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The key of tag N.</para>
-            /// <para>The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The value of tag N.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <para>Valid values of N: 1 to 10.</para>
             /// <para>This parameter is required.</para>
             /// 
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The information about the tag value.</para>
+            /// <para>The information about the tag values.</para>
             /// </summary>
             [NameInMap("TagValueParamList")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
 
                 /// <summary>
                 /// <para>The value of tag N.</para>
-                /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. </para>
+                /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// <para>Valid values of N: 1 to 10.</para>
                 /// 
                 /// <b>Example:</b>

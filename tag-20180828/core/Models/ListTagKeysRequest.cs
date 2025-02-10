@@ -14,11 +14,8 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         public ListTagKeysRequestTagFilter TagFilter { get; set; }
         public class ListTagKeysRequestTagFilter : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tag key for a fuzzy query.</para>
             /// <para>This parameter is used together with the <c>FuzzyType</c> parameter.</para>
-            /// <remarks>
-            /// <para> This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>team</para>
@@ -50,12 +47,9 @@ namespace AlibabaCloud.SDK.Tag20180828.Models
         /// <summary>
         /// <para>The type of the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EQUAL: exact match. This is the default value.</description></item>
-        /// <item><description>PREFIX: prefix-based fuzzy match.</description></item>
+        /// <item><description>EQUAL (default): exact match</description></item>
+        /// <item><description>PREFIX: prefix-based fuzzy match</description></item>
         /// </list>
-        /// <remarks>
-        /// <para> This parameter is available only in the China (Shenzhen) and China (Hong Kong) regions.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>EQUAL</para>
