@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? AttackType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF rule, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850237.html">ListWafRules</a> operation.</para>
+        /// <para>The ID of the WAF rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -212,6 +212,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string VerifyCode { get; set; }
 
             /// <summary>
+            /// <para>null</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-12-24T02:01:11Z</para>
             /// </summary>

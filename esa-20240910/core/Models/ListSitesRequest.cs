@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The service location. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>domestic</b>: the Chinese mainland</description></item>
-        /// <item><description><b>global</b>: global</description></item>
-        /// <item><description><b>overseas</b>: outside the Chinese mainland</description></item>
+        /// <item><description><b>domestic</b>: the Chinese Mainland</description></item>
+        /// <item><description><b>global</b>: global (including the Chinese Mainland)</description></item>
+        /// <item><description><b>overseas</b>: outside the Chinese Mainland</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,6 +49,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? OnlyEnterprise { get; set; }
 
         /// <summary>
+        /// <para>null</para>
+        /// <list type="bullet">
+        /// <item><description>null</description></item>
+        /// <item><description>null</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>visitTime</para>
         /// </summary>
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>500</b>.</para>
+        /// <para>The number of entries per page. Default value: 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -79,7 +85,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The plan type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>basicplan</b>: Entrance (coming soon)</description></item>
+        /// <item><description><b>basicplan</b>: Entrance</description></item>
         /// <item><description><b>standardplan</b>: Pro</description></item>
         /// <item><description><b>advancedplan</b>: Premium</description></item>
         /// <item><description><b>enterpriseplan</b>: Enterprise</description></item>
@@ -117,7 +123,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <list type="bullet">
         /// <item><description><b>prefix</b>: match by prefix.</description></item>
         /// <item><description><b>suffix</b>: match by suffix.</description></item>
-        /// <item><description><b>exact</b>: exact match.</description></item>
+        /// <item><description><b>null</b></description></item>
         /// <item><description><b>fuzzy</b>: fuzzy match.</description></item>
         /// </list>
         /// 

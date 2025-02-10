@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string BotInstanceLevel { get; set; }
 
+            [NameInMap("BotRequest")]
+            [Validation(Required=false)]
+            public string BotRequest { get; set; }
+
             /// <summary>
             /// <para>The service locations for the websites that can be associated with the plan. Multiple values are separated by commas (,). Valid values:</para>
             /// <list type="bullet">

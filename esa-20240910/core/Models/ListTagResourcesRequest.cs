@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The website information. Valid values of he number of website IDs: <b>1</b> to <b>50</b>.</para>
+        /// <para>The website ID.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

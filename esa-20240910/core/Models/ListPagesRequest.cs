@@ -29,6 +29,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("QueryArgs")]
+        [Validation(Required=false)]
+        public ListPagesRequestQueryArgs QueryArgs { get; set; }
+        public class ListPagesRequestQueryArgs : TeaModel {
+            [NameInMap("NameDescriptionLike")]
+            [Validation(Required=false)]
+            public string NameDescriptionLike { get; set; }
+
+        }
+
     }
 
 }
