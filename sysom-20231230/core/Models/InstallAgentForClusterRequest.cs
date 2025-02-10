@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("grayscale_config")]
+        [Validation(Required=false)]
+        public string GrayscaleConfig { get; set; }
+
     }
 
 }

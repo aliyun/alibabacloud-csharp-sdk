@@ -3975,6 +3975,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             {
                 body["cluster_id"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayscaleConfig))
+            {
+                body["grayscale_config"] = request.GrayscaleConfig;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4035,6 +4039,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 body["cluster_id"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayscaleConfig))
+            {
+                body["grayscale_config"] = request.GrayscaleConfig;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
