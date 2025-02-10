@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<DescribeSupportLinesResponseBodyRecordLinesRecordLine> RecordLine { get; set; }
             public class DescribeSupportLinesResponseBodyRecordLinesRecordLine : TeaModel {
                 /// <summary>
-                /// <para>The code of the parent line. This parameter is not returned if the line has no parent line.</para>
+                /// <para>The code of the parent line. Currently, no data is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>unicom</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string FatherCode { get; set; }
 
                 /// <summary>
-                /// <para>The code of the line.</para>
+                /// <para>The code of the child line.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn_unicom_shanxi</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string LineCode { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the parent line.</para>
+                /// <para>The display name of the line.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>China Unicom</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string LineDisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the line.</para>
+                /// <para>The name of the child line.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>China Unicom_Shanxi</para>

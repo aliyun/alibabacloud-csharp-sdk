@@ -22,6 +22,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// <para>The top-level domain name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>com</para>
+        /// </summary>
         [NameInMap("ParentDomainName")]
         [Validation(Required=false)]
         public string ParentDomainName { get; set; }

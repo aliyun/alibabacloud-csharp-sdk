@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Modified IP address or domain name.</para>
+        /// <para>The IP address or domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>223.5.XX.XX</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The condition for determining the health status of the address. This parameter is required when HealthTasks is specified. Valid values:</para>
+        /// <para>The new condition for determining the health state of the address. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>any_ok: The health check results of at least one health check template are normal.</description></item>
         /// <item><description>p30_ok: The health check results of at least 30% of health check templates are normal.</description></item>
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public List<UpdateCloudGtmAddressRequestHealthTasks> HealthTasks { get; set; }
         public class UpdateCloudGtmAddressRequestHealthTasks : TeaModel {
             /// <summary>
-            /// <para>The target service port for health checks. When the Ping protocol is selected for health checks, configuration of the service port is not supported.</para>
+            /// <para>The service port of the address on which health check tasks are performed. If the ping protocol is used for health checks, the configuration of the service port is not supported.</para>
             /// <list type="bullet">
-            /// <item><description>If the input parameter is empty: Delete the currently configured port number;</description></item>
-            /// <item><description>If the input parameter is not empty: Update the port number based on the input parameter;</description></item>
+            /// <item><description>If you leave this parameter empty, the existing service port is deleted.</description></item>
+            /// <item><description>If you specify this parameter, the existing service port is updated based on the value of this parameter.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,10 +103,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>ID of the health check template associated with the address. This parameter is required if a health check port is configured.</para>
+            /// <para>The ID of the health check template that is associated with the address. This parameter is required if you specify a service port of the address for health check tasks.</para>
             /// <list type="bullet">
-            /// <item><description>If the input parameter is empty: Delete the currently configured detection template;</description></item>
-            /// <item><description>If the input parameter is not empty: Update the detection template based on the input parameter;</description></item>
+            /// <item><description>If you leave this parameter empty, the associated health check template is disassociated from the address.</description></item>
+            /// <item><description>If you specify this parameter, the associated health check template is updated based on the value of this parameter.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Modified address name.</para>
+        /// <para>The name of the address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Address-1</para>

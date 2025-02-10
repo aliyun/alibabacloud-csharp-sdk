@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public DescribePdnsUserInfoResponseBodyUserInfo UserInfo { get; set; }
         public class DescribePdnsUserInfoResponseBodyUserInfo : TeaModel {
+            [NameInMap("AvailableAccessSecurityType")]
+            [Validation(Required=false)]
+            public string AvailableAccessSecurityType { get; set; }
+
             [NameInMap("AvailableService")]
             [Validation(Required=false)]
             public string AvailableService { get; set; }

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Modified IP address or domain name.</para>
+        /// <para>The IP address or domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>223.5.XX.XX</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The condition for determining the health status of the address. This parameter is required when HealthTasks is specified. Valid values:</para>
+        /// <para>The new condition for determining the health state of the address. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>any_ok: The health check results of at least one health check template are normal.</description></item>
         /// <item><description>p30_ok: The health check results of at least 30% of health check templates are normal.</description></item>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string HealthTasksShrink { get; set; }
 
         /// <summary>
-        /// <para>Modified address name.</para>
+        /// <para>The name of the address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Address-1</para>

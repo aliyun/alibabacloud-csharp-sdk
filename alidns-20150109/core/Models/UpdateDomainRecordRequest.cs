@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RecordId { get; set; }
 
         /// <summary>
-        /// <para>The time to live (TTL) value of the Domain Name System (DNS) record. Default value: 600. Unit: seconds.</para>
+        /// <para>The time to live (TTL) period of the Alibaba Cloud DNS (DNS) record. Default value: 600. Unit: seconds.</para>
         /// <para>For more information, see</para>
         /// <para><a href="https://www.alibabacloud.com/help/zh/doc-detail/29806.htm">TTL definition</a>.</para>
         /// 
