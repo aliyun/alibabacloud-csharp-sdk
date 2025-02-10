@@ -16,6 +16,20 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public PurgeCachesRequestContent Content { get; set; }
         public class PurgeCachesRequestContent : TeaModel {
+            [NameInMap("CacheKeys")]
+            [Validation(Required=false)]
+            public List<PurgeCachesRequestContentCacheKeys> CacheKeys { get; set; }
+            public class PurgeCachesRequestContentCacheKeys : TeaModel {
+                [NameInMap("Headers")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> Headers { get; set; }
+
+                [NameInMap("Url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The cache tags that are used to purge the cache. This parameter is required if Type is set to cachetag.</para>
             /// </summary>
