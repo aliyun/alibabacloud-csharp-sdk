@@ -285,6 +285,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         }
 
+        [NameInMap("Ipv6Enabled")]
+        [Validation(Required=false)]
+        public bool? Ipv6Enabled { get; set; }
+
         /// <summary>
         /// <para>The backend protocol. Valid values:</para>
         /// <list type="bullet">
