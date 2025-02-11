@@ -49,6 +49,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 
         /// <summary>
         /// <para>The number of entries per page. Valid values: 30 to 100.</para>
+        /// <para>Maximum value: 100.</para>
         /// <para>Default value: 30.</para>
         /// 
         /// <b>Example:</b>

@@ -144,6 +144,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The size of the image data disk. Unit: GiB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -152,6 +154,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public int? RequiredDataDiskSize { get; set; }
 
             /// <summary>
+            /// <para>The size of the image system disk. Unit: GiB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -170,6 +174,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
+            /// <para>The name of the source image that is used to create the simple application server.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CentOS</para>
             /// </summary>
@@ -178,6 +184,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string SourceImageName { get; set; }
 
             /// <summary>
+            /// <para>The version of the source image that is used to create the simple application server.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8.0</para>
             /// </summary>

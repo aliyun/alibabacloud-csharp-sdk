@@ -35,13 +35,13 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>Remote login instance port number:</para>
+        /// <para>The port number that is used to log on to the simple application server by using Workbench.</para>
         /// <list type="bullet">
-        /// <item><description>Linux Server: Default is 22.</description></item>
-        /// <item><description>Windows Server: Default is 3389.</description></item>
+        /// <item><description>Linux servers: The default value is 22.</description></item>
+        /// <item><description>Windows servers: The default value is 3389.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you need to connect to the server using a custom port, you must first modify the server\&quot;s default remote port. For more information, see <a href="https://help.aliyun.com/document_detail/2807402.html">Set a custom port to connect to a simple application server</a>.</para>
+        /// <para> If you want to connect to a server by using a custom port, you must modify the default remote connection port. For more information, see <a href="https://help.aliyun.com/document_detail/2807402.html">Configure a custom remote connection port</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

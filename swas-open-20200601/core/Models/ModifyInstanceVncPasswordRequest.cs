@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The existing VNC password.</para>
+        /// <para>The VNC connection password.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>

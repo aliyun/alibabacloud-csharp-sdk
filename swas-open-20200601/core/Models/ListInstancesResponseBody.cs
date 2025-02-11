@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>System</para>
+                /// <para>system</para>
                 /// </summary>
                 [NameInMap("DiskType")]
                 [Validation(Required=false)]
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The disk size. Unit: GB.</para>
+                /// <para>The disk size. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -448,7 +448,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public ListInstancesResponseBodyInstancesResourceSpec ResourceSpec { get; set; }
             public class ListInstancesResponseBodyInstancesResourceSpec : TeaModel {
                 /// <summary>
-                /// <para>The bandwidth of the server.</para>
+                /// <para>The bandwidth of the server. Unit: Mbps.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -483,7 +483,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string DiskCategory { get; set; }
 
                 /// <summary>
-                /// <para>The disk size.</para>
+                /// <para>The disk size. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -507,7 +507,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public double? Flow { get; set; }
 
                 /// <summary>
-                /// <para>The memory size of the server.</para>
+                /// <para>The memory size of the server. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>

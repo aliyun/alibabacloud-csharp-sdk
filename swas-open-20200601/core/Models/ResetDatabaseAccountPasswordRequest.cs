@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ResetDatabaseAccountPasswordRequest : TeaModel {
         /// <summary>
-        /// <para>The password of the database administrator account.</para>
+        /// <para>The password of the administrator account of the Simple Database Service instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

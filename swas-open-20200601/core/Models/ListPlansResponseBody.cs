@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListPlansResponseBody : TeaModel {
         /// <summary>
-        /// <para>The operating system types supported by the plan.</para>
+        /// <para>Details about the plans.</para>
         /// </summary>
         [NameInMap("Plans")]
         [Validation(Required=false)]

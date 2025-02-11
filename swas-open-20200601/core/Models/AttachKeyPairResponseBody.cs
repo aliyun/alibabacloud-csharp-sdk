@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The results.</para>
+        /// <para>The request results.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]

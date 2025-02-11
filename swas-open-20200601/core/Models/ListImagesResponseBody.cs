@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListImagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The OS type of the image. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Linux</description></item>
-        /// <item><description>Windows</description></item>
-        /// </list>
+        /// <para>The information of the image.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
@@ -22,6 +18,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public class ListImagesResponseBodyImages : TeaModel {
             /// <summary>
             /// <para>The description of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Apps ImageOS ImageCustom Images
+            /// WordPress is a popular and powerful platform that allows you to build blogs and content management websites and implement custom features by using third-party templates and plug-ins. This WordPress image is built based on CentOS 7.9, PHP 7.4, MySQL 5.7, and Apache 2.4.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

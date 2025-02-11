@@ -92,10 +92,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The interval at which the monitoring data is queried. Valid values: 60, 300, and 900. Unit: seconds.</para>
         /// <remarks>
-        /// </remarks>
         /// <para>If MetricName is set to FLOW_USED, Period is set to 3600 (one hour). In other cases, set Period based on your business requirements.</para>
-        /// <para>**</para>
-        /// <hr>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,14 +118,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <para>The beginning of the time range to query. The following formats are supported:</para>
         /// <list type="bullet">
         /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 January 1, 1970.</description></item>
-        /// <item><description>Time format: YYYY-MM-DDThh:mm:ssZ.</description></item>
+        /// <item><description>Time format: YYYY-MM-DDThh:mm:ssZ.<remarks>
+        /// <list type="bullet">
+        /// <item><description>The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.</description></item>
+        /// <item><description>The interval between the start time and the end time is less than or equal to 31 days.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.</para>
         /// </remarks>
-        /// <para>The interval between the start time and the end time is less than or equal to 31 days.</para>
-        /// <para>**</para>
-        /// <hr>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

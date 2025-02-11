@@ -40,6 +40,20 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("LoginCredentials")]
+        [Validation(Required=false)]
+        public ResetSystemRequestLoginCredentials LoginCredentials { get; set; }
+        public class ResetSystemRequestLoginCredentials : TeaModel {
+            [NameInMap("KeyPairName")]
+            [Validation(Required=false)]
+            public string KeyPairName { get; set; }
+
+            [NameInMap("Password")]
+            [Validation(Required=false)]
+            public string Password { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>

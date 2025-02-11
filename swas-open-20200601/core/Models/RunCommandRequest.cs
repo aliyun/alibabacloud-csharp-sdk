@@ -118,8 +118,8 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The name of the password to be used to run the command on a Windows server.</para>
-        /// <para>If you want to use a username other than the default &quot;system&quot; username to run the command on a Windows server, you must specify both the WindowsPasswordName and WorkingUser parameters. To mitigate the risk of password leaks, the password is stored in plaintext in Operation Orchestration Service (OOS) Parameter Store, and only the name of the password is passed in by using WindowsPasswordName.</para>
+        /// <para>The name of the password used to run the command on a Windows simple application server.</para>
+        /// <para>If you want to use a username other than the default &quot;system&quot; username to run the command on a Windows server, you must specify both the WindowsPasswordName and WorkingUser parameters. The password is hosted in plaintext in the parameter repository of CloudOps Orchestration Service (OOS) to mitigate the risk of password leaks. Only the name of the password is passed in by using WindowsPasswordName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>axtSecretPassword</para>

@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal period. This parameter is required only when you set <c>AutoRenew</c> to true. Unit: months. Valid values: 1, 3, 6, 12, 24, and 36.</para>
+        /// <para>The auto-renewal period. This parameter is required only when you set <c>AutoRenew</c> to true. Unit: month. Valid values: 1, 3, 6, 12, 24, and 36.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

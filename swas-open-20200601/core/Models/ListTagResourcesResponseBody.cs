@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A collection of resource IDs and tags. The information includes the resource IDs, resource types, and key-value pairs.</para>
+        /// <para>A collection of resources and the tags of the resources. The information includes the resource IDs, resource types, and key-value pairs of tags.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -51,7 +51,15 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource type.</para>
+                /// <para>The type of the resource. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>instance</description></item>
+                /// <item><description>snapshot</description></item>
+                /// <item><description>customimage</description></item>
+                /// <item><description>command</description></item>
+                /// <item><description>firewallrule</description></item>
+                /// <item><description>disk</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALIYUN::SWAS::INSTANCE</para>

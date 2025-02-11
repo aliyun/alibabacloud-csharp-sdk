@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a VNC connection password is set.</para>
+        /// <para>Indicates whether a VNC connection password is set for the simple application server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

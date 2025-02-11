@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the simple application server. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the simple application server. The name must be 2 to 50 characters in length. It can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter or digit. Domain names are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-InstanceName</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The new password of the simple application server. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The password can contain the following special characters:</para>
+        /// <para>The new password of the simple application server. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</para>
         /// <pre><c>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
         /// </c></pre>
         /// <para>For Windows instances, the password cannot start with a forward slash (/).</para>
