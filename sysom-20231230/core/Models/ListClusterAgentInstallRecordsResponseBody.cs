@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
 
+            [NameInMap("grayscale_config")]
+            [Validation(Required=false)]
+            public string GrayscaleConfig { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>
