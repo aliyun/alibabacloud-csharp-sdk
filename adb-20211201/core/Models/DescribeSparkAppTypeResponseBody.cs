@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSparkAppTypeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The detailed reason why the access was denied.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>596AF63B-8798-501E-BA06-CD2184D48A35</para>
         /// </summary>
@@ -34,6 +38,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The type of the Spark application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>BATCH</description></item>
+        /// <item><description>SQLENGINE</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Batch</para>
         /// </summary>

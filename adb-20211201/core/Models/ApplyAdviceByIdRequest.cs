@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ApplyAdviceByIdRequest : TeaModel {
         /// <summary>
+        /// <para>The date on which you want to apply the suggestion. Format: yyyyMMdd.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20221101</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? AdviceDate { get; set; }
 
         /// <summary>
+        /// <para>The suggestion ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0baf1f52-53df-487f-8292-99a03716****</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AdviceId { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

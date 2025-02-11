@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeOperatorPermissionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The time when the permissions take effect.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-02-25T03:35:02Z</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>amv-uf6wjk5xxxxxxxxxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The time when the permissions expire.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-10T02:19:00Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
+        /// <para>The queried permissions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Control,Data</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Privileges { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>

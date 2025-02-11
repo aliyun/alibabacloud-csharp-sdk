@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateDBResourceGroupRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5m</para>
+        /// </summary>
         [NameInMap("AutoStopInterval")]
         [Validation(Required=false)]
         public string AutoStopInterval { get; set; }
@@ -58,10 +62,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public bool? EnableSpot { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SparkWarehouse</para>
+        /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{\&quot;spark.adb.version\&quot;:\&quot;3.5\&quot;}</para>
+        /// </summary>
         [NameInMap("EngineParams")]
         [Validation(Required=false)]
         public Dictionary<string, object> EngineParams { get; set; }

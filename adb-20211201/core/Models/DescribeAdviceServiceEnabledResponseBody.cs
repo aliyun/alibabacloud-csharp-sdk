@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAdviceServiceEnabledResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned message. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the request was successful, a <b>Success</b> message is returned.</description></item>
+        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E031AABF-BD56-5966-A063-4283EF18DB45</para>
         /// </summary>
@@ -26,6 +34,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the suggestion feature is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>True</b></description></item>
+        /// <item><description><b>False</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>False</para>
         /// </summary>

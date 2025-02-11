@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The engine that is used to execute the result set export job. Set the value to XIHE.</para>
+        /// <para>The engine that is used to run the result set export job. Set the value to XIHE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>XIHE</para>

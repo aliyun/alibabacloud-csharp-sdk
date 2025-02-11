@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyApsDatasoureRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The description of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceDescription { get; set; }
 
         /// <summary>
+        /// <para>The data source ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? DatasourceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sls-******</para>
         /// </summary>
@@ -60,6 +66,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public ModifyApsDatasoureRequestKafkaInfo KafkaInfo { get; set; }
         public class ModifyApsDatasoureRequestKafkaInfo : TeaModel {
             /// <summary>
+            /// <para>The ID of the Kafka instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <list type="bullet">
             /// <item><description></description></item>
@@ -70,6 +78,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string KafkaClusterId { get; set; }
 
             /// <summary>
+            /// <para>The topic of the Kafka instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-topic</para>
             /// </summary>
@@ -80,7 +90,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>Lakehouse ID。</para>
+        /// <para>The lakehouse ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -90,6 +100,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public ModifyApsDatasoureRequestLakehouseId LakehouseId { get; set; }
         public class ModifyApsDatasoureRequestLakehouseId : TeaModel {
             /// <summary>
+            /// <para>The name of the security group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sg-******</para>
             /// </summary>
@@ -98,7 +110,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SecurityGroup { get; set; }
 
             /// <summary>
-            /// <para>vpc id。</para>
+            /// <para>The virtual private cloud (VPC) ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-******</para>
@@ -108,6 +120,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string VpcId { get; set; }
 
             /// <summary>
+            /// <para>The name of the vSwitch.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vsw-******</para>
             /// </summary>
@@ -118,6 +132,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The retired data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -186,6 +202,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The retired data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -254,6 +272,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -264,6 +283,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The information about Simple Log Service (SLS).</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -274,6 +295,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public ModifyApsDatasoureRequestSlsInfo SlsInfo { get; set; }
         public class ModifyApsDatasoureRequestSlsInfo : TeaModel {
             /// <summary>
+            /// <para>Specifies whether to use a cross-account resource as the data source. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -282,6 +309,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Across { get; set; }
 
             /// <summary>
+            /// <para>The name of the cross-account role.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-role</para>
             /// </summary>
@@ -290,6 +319,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AcrossRole { get; set; }
 
             /// <summary>
+            /// <para>The cross-account UID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123456</para>
             /// </summary>
@@ -298,6 +329,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AcrossUid { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
             /// </summary>

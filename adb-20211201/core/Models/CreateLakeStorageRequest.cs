@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>用于指定和挂载到特定ADB主实例的湖存储</para>
+        /// <para>The ID of the AnalyticDB for MySQL cluster with which you want to associate the lake storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-******</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>对湖存储的描述信息</para>
+        /// <para>The description of the lake storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>设置湖存储的读/写权限和账户级别权限的数组</para>
+        /// <para>The permissions that you want to grant on the lake storage to the Alibaba Cloud account besides the permissions that are automatically granted to the Resource Access Management (RAM) user or the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<CreateLakeStorageRequestPermissions> Permissions { get; set; }
         public class CreateLakeStorageRequestPermissions : TeaModel {
             /// <summary>
-            /// <para>具有该权限的账户或RAM用户ID</para>
+            /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Account { get; set; }
 
             /// <summary>
-            /// <para>表示是否允许读取湖存储的权限</para>
+            /// <para>The read permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Read { get; set; }
 
             /// <summary>
-            /// <para>指定权限的账户类型</para>
+            /// <para>The account type.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>表示是否允许向湖存储写入数据的权限</para>
+            /// <para>The write permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>RegionId</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

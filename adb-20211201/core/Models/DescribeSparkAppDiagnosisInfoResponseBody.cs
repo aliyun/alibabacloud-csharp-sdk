@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSparkAppDiagnosisInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The information about the request denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
@@ -26,6 +28,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The application ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>s202404141952sz6a1391200****</para>
         /// </summary>
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The CPU utilization. Unit: %.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -41,11 +50,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public double? CpuUtilization { get; set; }
 
+        /// <summary>
+        /// <para>The queried diagnostic information.</para>
+        /// </summary>
         [NameInMap("DiagnosisInfoList")]
         [Validation(Required=false)]
         public List<Adb4MysqlSparkDiagnosisInfo> DiagnosisInfoList { get; set; }
 
         /// <summary>
+        /// <para>The execution duration of the application. Unit: milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>281063</para>
         /// </summary>
@@ -54,6 +68,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? DurationInMillis { get; set; }
 
         /// <summary>
+        /// <para>The amount of time consumed by the Java virtual machine to perform garbage collection operations. Unit: milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>81055</para>
         /// </summary>
@@ -62,6 +78,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? JVMGcCostInMillis { get; set; }
 
         /// <summary>
+        /// <para>The peak memory usage. Unit: bytes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4096000</para>
         /// </summary>
@@ -70,6 +88,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PeakMemoryInByte { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FB5AC339-91F6-5000-8E5A-F47065B01B87</para>
         /// </summary>
@@ -78,6 +98,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The amount of data used for shuffle reads. Unit: bytes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4096000</para>
         /// </summary>
@@ -86,6 +108,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ShuffleReadInByte { get; set; }
 
         /// <summary>
+        /// <para>The amount of data used for shuffle writes. Unit: bytes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4096000</para>
         /// </summary>
@@ -94,6 +118,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ShuffleWriteInByte { get; set; }
 
         /// <summary>
+        /// <para>The amount of data spilled to disks when the memory is insufficient. Unit: bytes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -102,6 +128,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? SpillInByte { get; set; }
 
         /// <summary>
+        /// <para>The time when the application started to be executed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1718329831000</para>
         /// </summary>
@@ -110,6 +138,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? StartedTime { get; set; }
 
         /// <summary>
+        /// <para>The status of the asynchronous import or export job. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>RUNNING</b></description></item>
+        /// <item><description><b>FINISHED</b></description></item>
+        /// <item><description><b>FAILED</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>FINISHED</para>
         /// </summary>

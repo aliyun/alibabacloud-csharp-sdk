@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeExecutorDetectionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>am-xxx</para>
         /// </summary>
@@ -17,27 +19,44 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The queried detection items and detection results.</para>
+        /// </summary>
         [NameInMap("DetectionItems")]
         [Validation(Required=false)]
         public List<DescribeExecutorDetectionResponseBodyDetectionItems> DetectionItems { get; set; }
         public class DescribeExecutorDetectionResponseBodyDetectionItems : TeaModel {
+            /// <summary>
+            /// <para>The information about the detection result.</para>
+            /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
+            /// <summary>
+            /// <para>The name of the detection item.</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The detection result items.</para>
+            /// </summary>
             [NameInMap("Results")]
             [Validation(Required=false)]
             public DescribeExecutorDetectionResponseBodyDetectionItemsResults Results { get; set; }
             public class DescribeExecutorDetectionResponseBodyDetectionItemsResults : TeaModel {
+                /// <summary>
+                /// <para>The detection result items of operator metric aggregation.</para>
+                /// </summary>
                 [NameInMap("OperatorAgg")]
                 [Validation(Required=false)]
                 public List<DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorAgg> OperatorAgg { get; set; }
                 public class DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorAgg : TeaModel {
                     /// <summary>
+                    /// <para>The name of the detection metric.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>OperatorCost</para>
                     /// </summary>
@@ -45,11 +64,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     [Validation(Required=false)]
                     public string MetricName { get; set; }
 
+                    /// <summary>
+                    /// <para>The detection result items of operator metric aggregation.</para>
+                    /// </summary>
                     [NameInMap("SearchResults")]
                     [Validation(Required=false)]
                     public List<DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorAggSearchResults> SearchResults { get; set; }
                     public class DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorAggSearchResults : TeaModel {
                         /// <summary>
+                        /// <para>The average value of the operator metric.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>234</para>
                         /// </summary>
@@ -58,6 +82,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public double? AvgValue { get; set; }
 
                         /// <summary>
+                        /// <para>The maximum value of the operator metric.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>2345</para>
                         /// </summary>
@@ -66,6 +92,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? MaxValue { get; set; }
 
                         /// <summary>
+                        /// <para>The number of occurrences of the operator.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
                         /// </summary>
@@ -74,6 +102,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? OperatorCount { get; set; }
 
                         /// <summary>
+                        /// <para>The name of the operator.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>Window</para>
                         /// </summary>
@@ -82,6 +112,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public string OperatorName { get; set; }
 
                         /// <summary>
+                        /// <para>The cumulative value of the operator metric.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>345</para>
                         /// </summary>
@@ -93,11 +125,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
                 }
 
+                /// <summary>
+                /// <para>The detection result items of abnormal operators.</para>
+                /// </summary>
                 [NameInMap("OperatorDetails")]
                 [Validation(Required=false)]
                 public List<DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorDetails> OperatorDetails { get; set; }
                 public class DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorDetails : TeaModel {
                     /// <summary>
+                    /// <para>The name of the detection metric.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>PeakMemory</para>
                     /// </summary>
@@ -105,11 +142,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     [Validation(Required=false)]
                     public string MetricName { get; set; }
 
+                    /// <summary>
+                    /// <para>The detection result items of abnormal operators.</para>
+                    /// </summary>
                     [NameInMap("SearchResults")]
                     [Validation(Required=false)]
                     public List<DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorDetailsSearchResults> SearchResults { get; set; }
                     public class DescribeExecutorDetectionResponseBodyDetectionItemsResultsOperatorDetailsSearchResults : TeaModel {
                         /// <summary>
+                        /// <para>The number of rows input by the operator.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>123</para>
                         /// </summary>
@@ -118,6 +160,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? InputRows { get; set; }
 
                         /// <summary>
+                        /// <para>The amount of data input by the operator. Unit: bytes.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>345</para>
                         /// </summary>
@@ -126,6 +170,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? InputSize { get; set; }
 
                         /// <summary>
+                        /// <para>The total CPU time consumed by all operators in the stage, which is equivalent to the total CPU time of the stage. You can use this parameter to determine which parts of the stage consume a large amount of computing resources. Unit: milliseconds.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>123</para>
                         /// </summary>
@@ -133,11 +179,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         [Validation(Required=false)]
                         public double? OperatorCost { get; set; }
 
+                        /// <summary>
+                        /// <para>The property information about the operator.</para>
+                        /// </summary>
                         [NameInMap("OperatorInfo")]
                         [Validation(Required=false)]
                         public string OperatorInfo { get; set; }
 
                         /// <summary>
+                        /// <para>The name of the operator.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>Join</para>
                         /// </summary>
@@ -146,6 +197,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public string OperatorName { get; set; }
 
                         /// <summary>
+                        /// <para>The number of rows output by the operator.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>2345</para>
                         /// </summary>
@@ -154,6 +207,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? OutputRows { get; set; }
 
                         /// <summary>
+                        /// <para>The amount of data output by the operator. Unit: bytes.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>234</para>
                         /// </summary>
@@ -162,6 +217,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? OutputSize { get; set; }
 
                         /// <summary>
+                        /// <para>The peak memory. Unit: bytes.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>234</para>
                         /// </summary>
@@ -170,6 +227,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? PeakMemory { get; set; }
 
                         /// <summary>
+                        /// <para>The query ID.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>2024080110010002102500023803151627972</para>
                         /// </summary>
@@ -178,7 +237,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public string ProcessId { get; set; }
 
                         /// <summary>
-                        /// <para>StageID。</para>
+                        /// <para>The stage ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Stage[3]</para>
@@ -194,6 +253,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
+            /// <para>The severity level of the detection result. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NORMAL</description></item>
+            /// <item><description>WARNING</description></item>
+            /// <item><description>CRITICAL</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>WARNING</para>
             /// </summary>
@@ -204,6 +270,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9DFF5F54-162B-5860-80A5-411FF550B347</para>
         /// </summary>
@@ -212,6 +280,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>566</para>
         /// </summary>

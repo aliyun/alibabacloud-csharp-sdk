@@ -20,6 +20,20 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public List<DescribeDBClustersResponseBodyItemsDBCluster> DBCluster { get; set; }
             public class DescribeDBClustersResponseBodyItemsDBCluster : TeaModel {
+                /// <summary>
+                /// <para>The mode of the cluster. This parameter is returned only for Data Warehouse Edition clusters. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>BASIC</b>: reserved mode for Basic Edition.</description></item>
+                /// <item><description><b>CLUSTER</b>: reserved mode for Cluster Edition.</description></item>
+                /// <item><description><b>MIXED_STORAGE</b>: elastic mode for Cluster Edition.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para> For more information about cluster editions, see <a href="https://help.aliyun.com/document_detail/205001.html">Editions</a>.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MIXED_STORAGE</para>
+                /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
@@ -79,7 +93,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string DBClusterDescription { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+                /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>amv-bp163885f8q21****</para>
@@ -141,14 +155,32 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string DBClusterType { get; set; }
 
+                /// <summary>
+                /// <para>The node specifications of the cluster. This parameter is returned only for Data Warehouse Edition clusters.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>E8</para>
+                /// </summary>
                 [NameInMap("DBNodeClass")]
                 [Validation(Required=false)]
                 public string DBNodeClass { get; set; }
 
+                /// <summary>
+                /// <para>The number of node groups.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("DBNodeCount")]
                 [Validation(Required=false)]
                 public long? DBNodeCount { get; set; }
 
+                /// <summary>
+                /// <para>The storage capacity of the cluster. Unit: GB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>300</para>
+                /// </summary>
                 [NameInMap("DBNodeStorage")]
                 [Validation(Required=false)]
                 public long? DBNodeStorage { get; set; }
@@ -163,14 +195,47 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string DBVersion { get; set; }
 
+                /// <summary>
+                /// <para>The disk type of the cluster. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>local_ssd</b>: local disk.</description></item>
+                /// <item><description><b>cloud</b>: basic disk.</description></item>
+                /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
+                /// <item><description><b>cloud_efficiency</b>: ultra disk.</description></item>
+                /// <item><description><b>cloud_essd</b>: PL1 Enterprise SSD (ESSD).</description></item>
+                /// <item><description><b>cloud_essd2</b>: PL2 ESSD.</description></item>
+                /// <item><description><b>cloud_essd3</b>: PL3 ESSD.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para> For more information about ESSDs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cloud_essd</para>
+                /// </summary>
                 [NameInMap("DiskType")]
                 [Validation(Required=false)]
                 public string DiskType { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the Data Transmission Service (DTS) synchronization job This parameter is returned only for MySQL analytic instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dtsb1578j90XXXX</para>
+                /// </summary>
                 [NameInMap("DtsJobId")]
                 [Validation(Required=false)]
                 public string DtsJobId { get; set; }
 
+                /// <summary>
+                /// <para>The number of elastic I/O units (EIUs). For more information, see the &quot;<a href="https://help.aliyun.com/document_detail/189505.html">EIUs</a>&quot; section of the Scale out elastic I/O resources topic.</para>
+                /// <remarks>
+                /// <para> This parameter is returned only for clusters in elastic mode.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("ElasticIOResource")]
                 [Validation(Required=false)]
                 public int? ElasticIOResource { get; set; }
@@ -185,6 +250,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
+                /// <summary>
+                /// <para>The number of compute nodes that are used by the cluster in elastic mode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("ExecutorCount")]
                 [Validation(Required=false)]
                 public string ExecutorCount { get; set; }
@@ -229,10 +300,22 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string Expired { get; set; }
 
+                /// <summary>
+                /// <para>The internal IP address of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10.1.xx.xx</para>
+                /// </summary>
                 [NameInMap("InnerIp")]
                 [Validation(Required=false)]
                 public string InnerIp { get; set; }
 
+                /// <summary>
+                /// <para>The internal port of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3306</para>
+                /// </summary>
                 [NameInMap("InnerPort")]
                 [Validation(Required=false)]
                 public string InnerPort { get; set; }
@@ -299,14 +382,40 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string Port { get; set; }
 
+                /// <summary>
+                /// <para>The service type of the cluster. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>LegacyForm</description></item>
+                /// <item><description>IntegrationForm</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>IntegrationForm</para>
+                /// </summary>
                 [NameInMap("ProductForm")]
                 [Validation(Required=false)]
                 public string ProductForm { get; set; }
 
+                /// <summary>
+                /// <para>The edition of the cluster. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>BasicVersion</b>: Basic Edition.</description></item>
+                /// <item><description><b>EnterpriseVersion</b>: Enterprise Edition.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>EnterpriseVersion</para>
+                /// </summary>
                 [NameInMap("ProductVersion")]
                 [Validation(Required=false)]
                 public string ProductVersion { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the ApsaraDB RDS instance from which data is synchronized to the cluster. This parameter is returned only for MySQL analytic instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rm-bp11q28kvl688****</para>
+                /// </summary>
                 [NameInMap("RdsInstanceId")]
                 [Validation(Required=false)]
                 public string RdsInstanceId { get; set; }
@@ -331,10 +440,22 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string ReservedACU { get; set; }
 
+                /// <summary>
+                /// <para>The number of reserved resource nodes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("ReservedNodeCount")]
                 [Validation(Required=false)]
                 public int? ReservedNodeCount { get; set; }
 
+                /// <summary>
+                /// <para>The single-node specifications of reserved resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>8ACU</para>
+                /// </summary>
                 [NameInMap("ReservedNodeSize")]
                 [Validation(Required=false)]
                 public string ReservedNodeSize { get; set; }
@@ -397,22 +518,51 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
                 }
 
+                /// <summary>
+                /// <para>The job progress.</para>
+                /// </summary>
                 [NameInMap("TaskInfo")]
                 [Validation(Required=false)]
                 public DescribeDBClustersResponseBodyItemsDBClusterTaskInfo TaskInfo { get; set; }
                 public class DescribeDBClustersResponseBodyItemsDBClusterTaskInfo : TeaModel {
+                    /// <summary>
+                    /// <para>The name of the job.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>analyticDBFlexibleScaleOut</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <para>The progress of the job. Unit: %.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10</para>
+                    /// </summary>
                     [NameInMap("Progress")]
                     [Validation(Required=false)]
                     public string Progress { get; set; }
 
+                    /// <summary>
+                    /// <para>The status of the job. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>NOT_RUN</b></description></item>
+                    /// <item><description><b>RUNNING</b></description></item>
+                    /// <item><description><b>SUCCEED</b></description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>RUNNING</para>
+                    /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
+                    /// <summary>
+                    /// <para>The job steps.</para>
+                    /// </summary>
                     [NameInMap("StepList")]
                     [Validation(Required=false)]
                     public DescribeDBClustersResponseBodyItemsDBClusterTaskInfoStepList StepList { get; set; }
@@ -421,26 +571,67 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         [Validation(Required=false)]
                         public List<DescribeDBClustersResponseBodyItemsDBClusterTaskInfoStepListStepList> StepList { get; set; }
                         public class DescribeDBClustersResponseBodyItemsDBClusterTaskInfoStepListStepList : TeaModel {
+                            /// <summary>
+                            /// <para>The end time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>2024-03-10T10:28:34Z</para>
+                            /// </summary>
                             [NameInMap("EndTime")]
                             [Validation(Required=false)]
                             public string EndTime { get; set; }
 
+                            /// <summary>
+                            /// <para>The start time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>2024-03-10T09:28:34Z</para>
+                            /// </summary>
                             [NameInMap("StartTime")]
                             [Validation(Required=false)]
                             public string StartTime { get; set; }
 
+                            /// <summary>
+                            /// <para>The description of the job step.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Apply resource</para>
+                            /// </summary>
                             [NameInMap("StepDesc")]
                             [Validation(Required=false)]
                             public string StepDesc { get; set; }
 
+                            /// <summary>
+                            /// <para>The name of the job step.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>ApplyResource</para>
+                            /// </summary>
                             [NameInMap("StepName")]
                             [Validation(Required=false)]
                             public string StepName { get; set; }
 
+                            /// <summary>
+                            /// <para>The progress of the job step. Unit: %.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>50</para>
+                            /// </summary>
                             [NameInMap("StepProgress")]
                             [Validation(Required=false)]
                             public string StepProgress { get; set; }
 
+                            /// <summary>
+                            /// <para>The status of the job step. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description><b>NOT_RUN</b></description></item>
+                            /// <item><description><b>RUNNING</b></description></item>
+                            /// <item><description><b>SUCCEED</b></description></item>
+                            /// </list>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>SUCCEED</para>
+                            /// </summary>
                             [NameInMap("StepStatus")]
                             [Validation(Required=false)]
                             public string StepStatus { get; set; }
@@ -451,6 +642,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
                 }
 
+                /// <summary>
+                /// <para>The ID of the cluster that resides in the VPC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>am-bp163885f8q21****-controller</para>
+                /// </summary>
                 [NameInMap("VPCCloudInstanceId")]
                 [Validation(Required=false)]
                 public string VPCCloudInstanceId { get; set; }

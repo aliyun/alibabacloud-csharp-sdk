@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// <para>The public endpoint of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>The public endpoint of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CurrentConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

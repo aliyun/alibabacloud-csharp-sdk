@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyApsDatasoureShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The description of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceDescription { get; set; }
 
         /// <summary>
+        /// <para>The data source ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? DatasourceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sls-******</para>
         /// </summary>
@@ -60,7 +66,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string KafkaInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>Lakehouse ID。</para>
+        /// <para>The lakehouse ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -70,6 +76,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string LakehouseIdShrink { get; set; }
 
         /// <summary>
+        /// <para>The retired data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -80,6 +88,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PolarDBMysqlInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The retired data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -90,6 +100,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RdsMysqlInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,6 +111,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The information about Simple Log Service (SLS).</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>

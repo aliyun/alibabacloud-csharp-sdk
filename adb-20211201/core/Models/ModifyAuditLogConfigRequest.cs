@@ -41,6 +41,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The type of the compute engine. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>XIHE (<b>default</b>)</description></item>
+        /// <item><description>SPARK</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>XIHE</para>
+        /// </summary>
         [NameInMap("EngineType")]
         [Validation(Required=false)]
         public string EngineType { get; set; }

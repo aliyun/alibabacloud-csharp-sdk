@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAppliedAdvicesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The queried applied optimization suggestions.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeAppliedAdvicesResponseBodyItems> Items { get; set; }
         public class DescribeAppliedAdvicesResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The suggestion ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>7417db9c-914d-43f3-a123-4d0e448f****</para>
             /// </summary>
@@ -21,11 +26,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string AdviceId { get; set; }
 
+            /// <summary>
+            /// <para>The benefit of the suggestion.</para>
+            /// </summary>
             [NameInMap("Benefit")]
             [Validation(Required=false)]
             public string Benefit { get; set; }
 
             /// <summary>
+            /// <para>The SQL statement that is used to execute the BUILD job.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>build table <c>schema1</c>.<c>table1</c></para>
             /// </summary>
@@ -34,6 +44,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string BuildSQL { get; set; }
 
             /// <summary>
+            /// <para>The status of the suggestion execution job. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>SUCCEED</b></description></item>
+            /// <item><description><b>FAILED</b></description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCEED</para>
             /// </summary>
@@ -42,6 +58,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string JobStatus { get; set; }
 
             /// <summary>
+            /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -50,6 +68,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>30</b>(Default)</description></item>
+            /// <item><description><b>50</b></description></item>
+            /// <item><description><b>100</b></description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
@@ -58,6 +83,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The SQL statement that is used to roll back the suggestion.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alter table <c>schema1</c>.<c>table1</c> add key col1_1_idx(col1)</para>
             /// </summary>
@@ -66,6 +93,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string RollbackSQL { get; set; }
 
             /// <summary>
+            /// <para>The SQL statement that is used to apply the suggestion.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alter table <c>schema1</c>.<c>table1</c> drop key col1_1_idx</para>
             /// </summary>
@@ -74,6 +103,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SQL { get; set; }
 
             /// <summary>
+            /// <para>The name of the database.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>adb_demo</para>
             /// </summary>
@@ -82,6 +113,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SchemaName { get; set; }
 
             /// <summary>
+            /// <para>The submission status of the suggestion. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>SUCCEED</b></description></item>
+            /// <item><description><b>FAILED</b></description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCEED</para>
             /// </summary>
@@ -90,6 +127,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SubmitStatus { get; set; }
 
             /// <summary>
+            /// <para>The time when the suggestion was submitted. The time follows the ISO 8601 standard in the yyMMddHHmm format. The time is displayed in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2208131600</para>
             /// </summary>
@@ -98,6 +137,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SubmitTime { get; set; }
 
             /// <summary>
+            /// <para>The name of the table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -106,6 +147,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TableName { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -116,6 +159,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -124,6 +169,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>30</b>(Default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -132,6 +184,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>84489769-3065-5A28-A4CB-977CD426F1C3</para>
         /// </summary>
@@ -139,11 +193,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the table in the DatabaseName.TableName format.</para>
+        /// </summary>
         [NameInMap("SchemaTableNames")]
         [Validation(Required=false)]
         public List<string> SchemaTableNames { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

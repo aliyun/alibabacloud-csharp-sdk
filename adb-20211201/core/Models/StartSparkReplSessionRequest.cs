@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class StartSparkReplSessionRequest : TeaModel {
         /// <summary>
+        /// <para>The configuration parameters that are used to start the Spark session, which are in the JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/471203.html">Spark application configuration parameters</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The name of the job resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

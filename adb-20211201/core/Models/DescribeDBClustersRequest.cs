@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
         /// <para>If you do not specify this parameter, the information about all clusters that reside in the region is returned.</para>
         /// 
         /// <b>Example:</b>
@@ -67,6 +67,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterStatus { get; set; }
 
+        /// <summary>
+        /// <para>The database engine version of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>3.0: Data Warehouse Edition.</description></item>
+        /// <item><description>5.0 (default): Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</description></item>
+        /// <item><description>All: Data Warehouse Edition, Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5.0</para>
+        /// </summary>
         [NameInMap("DBClusterVersion")]
         [Validation(Required=false)]
         public string DBClusterVersion { get; set; }
@@ -96,6 +107,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The edition of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>EnterpriseVersion: Enterprise Edition.</description></item>
+        /// <item><description>BasicVersion: Basic Edition.</description></item>
+        /// </list>
+        /// <para>If you leave this parameter empty, the information about clusters of all editions is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BasicVersion</para>
+        /// </summary>
         [NameInMap("ProductVersion")]
         [Validation(Required=false)]
         public string ProductVersion { get; set; }

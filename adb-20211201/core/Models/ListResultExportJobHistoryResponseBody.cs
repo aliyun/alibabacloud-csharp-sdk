@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The queried execution records.</para>
+        /// <para>The queried result set export jobs.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -126,10 +126,25 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string ExportRows { get; set; }
 
+            /// <summary>
+            /// <para>The type of the result set export job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("ExportType")]
             [Validation(Required=false)]
             public string ExportType { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the result set export job has expired. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b></description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("IsExpired")]
             [Validation(Required=false)]
             public bool? IsExpired { get; set; }

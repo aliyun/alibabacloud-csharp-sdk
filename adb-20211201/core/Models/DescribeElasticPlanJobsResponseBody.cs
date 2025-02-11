@@ -21,8 +21,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <remarks>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>If Type is set to EXECUTOR, ElasticAcu indicates the amount of elastic resources in the current resource group.</description></item>
-            /// <item><description>If Type is set to WORKER, ElasticAcu indicates the total amount of elastic storage resources in the current cluster.</description></item>
+            /// <item><description><para>If Type is set to EXECUTOR, ElasticAcu indicates the amount of elastic resources in the current resource group.</para>
+            /// </description></item>
+            /// <item><description><para>If Type is set to WORKER, ElasticAcu indicates the total amount of elastic storage resources in the current cluster.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,8 +62,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <remarks>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>If Type is set to EXECUTOR, InstanceSize indicates the number of compute nodes in the cluster.</description></item>
-            /// <item><description>If Type is set to EXECUTOR, InstanceSize indicates the number of storage replica sets in the cluster.</description></item>
+            /// <item><description><para>If Type is set to EXECUTOR, InstanceSize indicates the number of compute nodes in the cluster.</para>
+            /// </description></item>
+            /// <item><description><para>If Type is set to EXECUTOR, InstanceSize indicates the number of storage replica sets in the cluster.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,8 +80,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <remarks>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>If Type is set to EXECUTOR, ReserveAcu indicates the amount of reserved resources in the current resource group.</description></item>
-            /// <item><description>If Type is set to WORKER, ReserveAcu indicates the total amount of reserved storage resources in the current cluster.</description></item>
+            /// <item><description><para>If Type is set to EXECUTOR, ReserveAcu indicates the amount of reserved resources in the current resource group.</para>
+            /// </description></item>
+            /// <item><description><para>If Type is set to WORKER, ReserveAcu indicates the total amount of reserved storage resources in the current cluster.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,8 +146,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <remarks>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>If Type is set to EXECUTOR, TotalAcu indicates the total amount of computing resources in the current resource group.</description></item>
-            /// <item><description>If Type is set to WORKER, TotalAcu indicates the total amount of storage resources in the cluster.</description></item>
+            /// <item><description><para>If Type is set to EXECUTOR, TotalAcu indicates the total amount of computing resources in the current resource group.</para>
+            /// </description></item>
+            /// <item><description><para>If Type is set to WORKER, TotalAcu indicates the total amount of storage resources in the cluster.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

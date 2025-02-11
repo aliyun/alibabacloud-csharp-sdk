@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeTableDetailResponseBody : TeaModel {
         /// <summary>
+        /// <para>The detailed reason why the access was denied.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The average number of rows in a shard.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>160</para>
         /// </summary>
@@ -33,15 +37,23 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string AvgSize { get; set; }
 
+        /// <summary>
+        /// <para>The queried data distribution.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeTableDetailResponseBodyItems Items { get; set; }
         public class DescribeTableDetailResponseBodyItems : TeaModel {
+            /// <summary>
+            /// <para>The queried shards.</para>
+            /// </summary>
             [NameInMap("Shard")]
             [Validation(Required=false)]
             public List<DescribeTableDetailResponseBodyItemsShard> Shard { get; set; }
             public class DescribeTableDetailResponseBodyItemsShard : TeaModel {
                 /// <summary>
+                /// <para>The shard ID. Only the numeric part of the shard name is returned.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -50,6 +62,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public int? Id { get; set; }
 
                 /// <summary>
+                /// <para>The number of rows in the table.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>9484858</para>
                 /// </summary>
@@ -62,6 +76,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -70,6 +86,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -78,6 +96,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
@@ -86,6 +106,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9</para>
         /// </summary>

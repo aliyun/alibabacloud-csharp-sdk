@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DownloadInstanceCACertificateRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The database engine of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>AnalyticDB</b> (default): the AnalyticDB for MySQL engine.</description></item>
+        /// <item><description><b>Clickhouse</b>: the wide table engine.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Clickhouse</para>
         /// </summary>
@@ -32,6 +39,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

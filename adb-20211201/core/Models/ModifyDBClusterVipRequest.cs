@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
     public class ModifyDBClusterVipRequest : TeaModel {
         /// <summary>
         /// <para>The endpoint of the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>amv-2ze8mbuai974s4y2500000169.ads.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ConnectString")]
         [Validation(Required=false)]

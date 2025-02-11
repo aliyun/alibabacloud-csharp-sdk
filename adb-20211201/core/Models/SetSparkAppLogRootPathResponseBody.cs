@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public SetSparkAppLogRootPathResponseBodyData Data { get; set; }
         public class SetSparkAppLogRootPathResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The recommended default OSS log path.</para>
+            /// <para>The default log path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://path/to/log</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DefaultLogPath { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether an OSS log path exists.</para>
+            /// <para>Indicates whether a log path exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? IsLogPathExists { get; set; }
 
             /// <summary>
-            /// <para>The time when the modification was last modified.</para>
+            /// <para>The last modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1675236908</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ModifiedUid { get; set; }
 
             /// <summary>
-            /// <para>The OSS log path.</para>
+            /// <para>The recorded log path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://path/to/log</para>

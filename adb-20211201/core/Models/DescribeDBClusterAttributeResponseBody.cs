@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClusterAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried information about the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>The queried cluster.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -456,14 +456,26 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo TaskInfo { get; set; }
                 public class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>ScaleUpDBCluster</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>10</para>
+                    /// </summary>
                     [NameInMap("Progress")]
                     [Validation(Required=false)]
                     public string Progress { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>RUNNING</para>
+                    /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
@@ -476,26 +488,50 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         [Validation(Required=false)]
                         public List<DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList> StepList { get; set; }
                         public class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>2024-03-10T10:28:34Z</para>
+                            /// </summary>
                             [NameInMap("EndTime")]
                             [Validation(Required=false)]
                             public string EndTime { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>2024-03-10T09:28:34Z</para>
+                            /// </summary>
                             [NameInMap("StartTime")]
                             [Validation(Required=false)]
                             public string StartTime { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>Prepare resources</para>
+                            /// </summary>
                             [NameInMap("StepDesc")]
                             [Validation(Required=false)]
                             public string StepDesc { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>PrepareResources</para>
+                            /// </summary>
                             [NameInMap("StepName")]
                             [Validation(Required=false)]
                             public string StepName { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>50</para>
+                            /// </summary>
                             [NameInMap("StepProgress")]
                             [Validation(Required=false)]
                             public string StepProgress { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>RUNNING</para>
+                            /// </summary>
                             [NameInMap("StepStatus")]
                             [Validation(Required=false)]
                             public string StepStatus { get; set; }
@@ -520,14 +556,26 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public bool? UserENIStatus { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>vsw-rj9ixufmywqq98z******,vsw-rj95ij6wcz656v7******</para>
+                /// </summary>
                 [NameInMap("UserENIVSwitchOptions")]
                 [Validation(Required=false)]
                 public string UserENIVSwitchOptions { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>vpc-rj9hnedlfm645uj******</para>
+                /// </summary>
                 [NameInMap("UserENIVpcId")]
                 [Validation(Required=false)]
                 public string UserENIVpcId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-k,cn-hangzhou-h</para>
+                /// </summary>
                 [NameInMap("UserENIZoneOptions")]
                 [Validation(Required=false)]
                 public string UserENIZoneOptions { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeControllerDetectionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>amv-xxx</para>
         /// </summary>
@@ -17,19 +19,35 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The queried detection items and detection results.</para>
+        /// </summary>
         [NameInMap("DetectionItems")]
         [Validation(Required=false)]
         public List<DescribeControllerDetectionResponseBodyDetectionItems> DetectionItems { get; set; }
         public class DescribeControllerDetectionResponseBodyDetectionItems : TeaModel {
+            /// <summary>
+            /// <para>The information about the detection result.</para>
+            /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
+            /// <summary>
+            /// <para>The name of the detection item.</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The severity level of the detection result. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NORMAL</description></item>
+            /// <item><description>WARNING</description></item>
+            /// <item><description>CRITICAL</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>NORMAL
             /// WARNING
@@ -42,6 +60,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>257FAE29-ED5F-586C-94E4-43BD1392F238</para>
         /// </summary>
@@ -50,6 +70,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

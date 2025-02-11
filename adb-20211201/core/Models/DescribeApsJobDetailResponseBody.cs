@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsJobDetailResponseBody : TeaModel {
         /// <summary>
+        /// <para>The queried job.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public DescribeApsJobDetailResponseBodyAPSJobDetail APSJobDetail { get; set; }
         public class DescribeApsJobDetailResponseBodyAPSJobDetail : TeaModel {
             /// <summary>
+            /// <para>The objects that are synchronized.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DbList { get; set; }
 
             /// <summary>
+            /// <para>The ID of the destination cluster.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>amv-******</para>
             /// </summary>
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DestinationEndpointInstanceID { get; set; }
 
             /// <summary>
+            /// <para>The region of the destination cluster.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
             /// </summary>
@@ -44,6 +52,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DestinationEndpointRegion { get; set; }
 
             /// <summary>
+            /// <para>The partitions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -52,6 +62,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string PartitionList { get; set; }
 
             /// <summary>
+            /// <para>The ID of the source instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pc-*******</para>
             /// </summary>
@@ -60,6 +72,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SourceEndpointInstanceID { get; set; }
 
             /// <summary>
+            /// <para>The region of the source instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
             /// </summary>
@@ -68,6 +82,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SourceEndpointRegion { get; set; }
 
             /// <summary>
+            /// <para>The status of the job.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Running</para>
             /// </summary>
@@ -76,6 +92,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The mode of the destination table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -86,6 +104,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>-E606-4A42-BF6D-</b></b></b></para>
         /// </summary>

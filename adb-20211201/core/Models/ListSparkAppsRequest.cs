@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("Filters")]
+        [Validation(Required=false)]
+        public string Filters { get; set; }
+
         /// <summary>
         /// <para>The number of the page to return. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
         /// <para>This parameter is required.</para>

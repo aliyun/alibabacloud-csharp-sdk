@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeOversizeNonPartitionTableInfosResponseBody : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>am-bp16t5ci7r74s****</para>
         /// </summary>
@@ -17,19 +19,30 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The queried detection items and detection results.</para>
+        /// </summary>
         [NameInMap("DetectionItems")]
         [Validation(Required=false)]
         public List<DescribeOversizeNonPartitionTableInfosResponseBodyDetectionItems> DetectionItems { get; set; }
         public class DescribeOversizeNonPartitionTableInfosResponseBodyDetectionItems : TeaModel {
+            /// <summary>
+            /// <para>The information about the detection result.</para>
+            /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
+            /// <summary>
+            /// <para>The name of the detection item.</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The severity level of the detection result.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>NORMAL
             /// WARNING
@@ -42,6 +55,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +65,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -58,6 +80,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
@@ -65,11 +89,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The queried oversized non-partitioned tables.</para>
+        /// </summary>
         [NameInMap("Tables")]
         [Validation(Required=false)]
         public List<DescribeOversizeNonPartitionTableInfosResponseBodyTables> Tables { get; set; }
         public class DescribeOversizeNonPartitionTableInfosResponseBodyTables : TeaModel {
             /// <summary>
+            /// <para>The data size of the table. Unit: bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2921132457984</para>
             /// </summary>
@@ -78,6 +107,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? DataSize { get; set; }
 
             /// <summary>
+            /// <para>The data size of regular indexes. Unit: bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -86,6 +117,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? IndexSize { get; set; }
 
             /// <summary>
+            /// <para>The size of hot data. Unit: bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1223</para>
             /// </summary>
@@ -94,6 +127,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? LocalDataSize { get; set; }
 
             /// <summary>
+            /// <para>The data size of the primary key index. Unit: bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -102,6 +137,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PrimaryKeySize { get; set; }
 
             /// <summary>
+            /// <para>The size of cold data. Unit: bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>122</para>
             /// </summary>
@@ -110,6 +147,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? RemoteDataSize { get; set; }
 
             /// <summary>
+            /// <para>The number of rows in the table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1222</para>
             /// </summary>
@@ -118,6 +157,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? RowCount { get; set; }
 
             /// <summary>
+            /// <para>The name of the database.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>adb_demo</para>
             /// </summary>
@@ -126,6 +167,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SchemaName { get; set; }
 
             /// <summary>
+            /// <para>The percentage of the table size. Unit: %.</para>
+            /// <remarks>
+            /// <para> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>0.3</para>
             /// </summary>
@@ -134,6 +180,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public double? SpaceRatio { get; set; }
 
             /// <summary>
+            /// <para>The name of the table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -144,6 +192,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

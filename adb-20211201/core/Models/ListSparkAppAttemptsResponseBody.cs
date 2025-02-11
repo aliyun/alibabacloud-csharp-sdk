@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public ListSparkAppAttemptsResponseBodyData Data { get; set; }
         public class ListSparkAppAttemptsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the attempts. Fields in the response parameter:</para>
+            /// <para>The queried attempts. Fields in the response parameter:</para>
             /// <list type="bullet">
             /// <item><description><para><b>AttemptId</b>: the attempt ID.</para>
             /// </description></item>
@@ -38,15 +38,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// </description></item>
             /// <item><description><para><b>Message</b>: the alert message that is returned. If no alert is generated, null is returned.</para>
             /// </description></item>
-            /// <item><description><para><b>Data</b>: the data of the Spark application template.</para>
+            /// <item><description><para><b>Data</b> the data of the Spark application template.</para>
             /// </description></item>
-            /// <item><description><para><b>EstimateExecutionCpuTimeInSeconds</b>: the amount of time it takes to consume CPU resources for running the Spark application. Unit: milliseconds.</para>
+            /// <item><description><para><b>EstimateExecutionCpuTimeInSeconds</b>: the amount of time that is required to consume CPU resources for running the Spark application. Unit: milliseconds.</para>
             /// </description></item>
             /// <item><description><para><b>LogRootPath</b>: the storage path of log files.</para>
             /// </description></item>
             /// <item><description><para><b>LastAttemptId</b>: the ID of the last attempt.</para>
             /// </description></item>
-            /// <item><description><para><b>WebUiAddress</b>: the web UI address.</para>
+            /// <item><description><para><b>WebUiAddress</b>: the web UI URL.</para>
             /// </description></item>
             /// <item><description><para><b>SubmittedTimeInMillis</b>: the time when the Spark application was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// </description></item>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// </description></item>
             /// <item><description><para><b>ResourceGroupName</b>: the name of the job resource group.</para>
             /// </description></item>
-            /// <item><description><para><b>DurationInMillis</b>: the amount of time it takes to run the Spark application. Unit: milliseconds.</para>
+            /// <item><description><para><b>DurationInMillis</b>: the amount of time that is required to run the Spark application. Unit: milliseconds.</para>
             /// </description></item>
             /// </list>
             /// </summary>

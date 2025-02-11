@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class UpdateLakeStorageResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. A value of 200 indicates that the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The returned data.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -28,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public UpdateLakeStorageResponseBodyData Data { get; set; }
         public class UpdateLakeStorageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>湖存储被创建的时间</para>
+            /// <para>The time when the lake storage was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-15T07:24:58Z</para>
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>创建湖存储的用户账号的唯一标识符</para>
+            /// <para>The creator UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreatorUid { get; set; }
 
             /// <summary>
-            /// <para>用于指定和挂载到特定ADB主实例的湖存储</para>
+            /// <para>The ID of the AnalyticDB for MySQL cluster that is associated with the lake storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>amv-23xxxx</para>
@@ -58,7 +62,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// <para>对湖存储的描述信息</para>
+            /// <para>The description of the lake storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -68,7 +72,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>湖存储中数据的总存储量</para>
+            /// <para>The total storage size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>142</para>
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string FileSize { get; set; }
 
             /// <summary>
-            /// <para>用于识别特定湖存储的唯一标识符</para>
+            /// <para>The unique identifier of the lake storage.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -90,7 +94,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string LakeStorageId { get; set; }
 
             /// <summary>
-            /// <para>最后操作湖存储的用户账号的唯一标识符</para>
+            /// <para>The operator UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -100,7 +104,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string OperatorUid { get; set; }
 
             /// <summary>
-            /// <para>拥有湖存储资源的用户账号的唯一标识符</para>
+            /// <para>The owner UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -110,6 +114,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string OwnerUid { get; set; }
 
             /// <summary>
+            /// <para>The number of partitions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -118,7 +124,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string PartitionCount { get; set; }
 
             /// <summary>
-            /// <para>设置湖存储的读/写权限和账户级别权限的数组</para>
+            /// <para>The permissions on the lake storage.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -130,7 +136,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<UpdateLakeStorageResponseBodyDataPermissions> Permissions { get; set; }
             public class UpdateLakeStorageResponseBodyDataPermissions : TeaModel {
                 /// <summary>
-                /// <para>具有该权限的账户或RAM用户ID</para>
+                /// <para>The account ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -140,7 +146,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Account { get; set; }
 
                 /// <summary>
-                /// <para>表示是否允许读取湖存储的权限</para>
+                /// <para>The read permissions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -150,7 +156,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public bool? Read { get; set; }
 
                 /// <summary>
-                /// <para>指定权限的账户类型</para>
+                /// <para>The account type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUB</para>
@@ -160,7 +166,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>表示是否允许向湖存储写入数据的权限</para>
+                /// <para>The write permissions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -172,7 +178,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>指定要操作的湖存储所在区域的ID</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -182,7 +188,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>湖存储中所有库表的总数据行数</para>
+            /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <remarks>
@@ -194,7 +200,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? RowCount { get; set; }
 
             /// <summary>
-            /// <para>湖存储中库表的总数量</para>
+            /// <para>The number of tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -204,7 +210,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? TableCount { get; set; }
 
             /// <summary>
-            /// <para>湖存储最后一次更新的时间</para>
+            /// <para>The time when the lake storage was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-01T09:22:17Z</para>
@@ -216,6 +222,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code. A value of 200 indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -224,6 +232,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The returned message. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the request was successful, an OK message is returned.</description></item>
+        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -232,6 +246,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>-3EEC-</b></b></b>-9F06-******</para>
         /// </summary>
@@ -240,6 +256,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

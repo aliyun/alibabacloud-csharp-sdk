@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <item><description><b>CREATE</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can query only a single type of SQL statements at a time. If you leave this parameter empty, the <b>SELECT</b> statements are queried.</para>
+        /// <para> You can query only a single type of SQL statements at a time. If you leave this parameter empty, all types of SQL statements are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

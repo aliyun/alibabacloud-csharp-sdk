@@ -19,6 +19,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<DescribeApsMigrationWorkloadsResponseBodyMigrationWorkloads> MigrationWorkloads { get; set; }
         public class DescribeApsMigrationWorkloadsResponseBodyMigrationWorkloads : TeaModel {
             /// <summary>
+            /// <para>The number of AnalyticDB compute units (ACUs).</para>
+            /// 
             /// <b>Example:</b>
             /// <list type="bullet">
             /// <item><description></description></item>
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? AcuCount { get; set; }
 
             /// <summary>
+            /// <para>The time when the job was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-06-21T02:15:16Z</para>
             /// </summary>
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <list type="bullet">
             /// <item><description></description></item>
@@ -47,6 +53,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string FailedMsg { get; set; }
 
             /// <summary>
+            /// <para>The job ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -55,6 +63,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The maximum response time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -63,6 +73,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MaxRT { get; set; }
 
             /// <summary>
+            /// <para>The time when the migration job was modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-06-21T02:15:16Z</para>
             /// </summary>
@@ -71,6 +83,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>The name of the workload.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TEST-001</para>
             /// </summary>
@@ -79,6 +93,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The OSS URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>oss://******</para>
             /// </summary>
@@ -87,6 +103,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string OssLocation { get; set; }
 
             /// <summary>
+            /// <para>The status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>
             /// </summary>
@@ -95,6 +113,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string State { get; set; }
 
             /// <summary>
+            /// <para>The destination type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>OSS</para>
             /// </summary>
@@ -103,6 +123,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TargetType { get; set; }
 
             /// <summary>
+            /// <para>The sub-type of the workload.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -113,6 +135,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -121,6 +145,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -129,6 +155,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>-3EEC-57F0-9F06-</b></b></b></para>
         /// </summary>
@@ -137,6 +165,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

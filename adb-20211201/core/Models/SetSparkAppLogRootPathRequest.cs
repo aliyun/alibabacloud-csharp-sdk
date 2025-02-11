@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class SetSparkAppLogRootPathRequest : TeaModel {
         /// <summary>
-        /// <para>The database ID.</para>
+        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The Object Storage Service (OSS) log path.</para>
+        /// <para>The path of Object Storage Service (OSS) logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://path/to/log</para>
