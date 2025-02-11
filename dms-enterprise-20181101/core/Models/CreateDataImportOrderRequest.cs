@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
             }
 
+            [NameInMap("ExecMode")]
+            [Validation(Required=false)]
+            public string ExecMode { get; set; }
+
             /// <summary>
             /// <para>The encoding algorithm to be used by the destination database. Valid values:</para>
             /// <list type="bullet">

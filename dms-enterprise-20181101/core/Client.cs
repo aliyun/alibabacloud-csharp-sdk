@@ -5915,6 +5915,588 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>用于创建DIFY实例及相关资源，支持自定义配置。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>workspaceOption</c> 参数指示是否新建工作空间，默认使用已有工作空间。</description></item>
+        /// <item><description>如果选择新建工作空间 (<c>CreateNewInstance</c>)，则必须提供 <c>workspaceName</c> 和 <c>workspaceDescription</c>。</description></item>
+        /// <item><description><c>vpcId</c>, <c>VSwitchID</c>, <c>zoneId</c>, <c>regionCode</c>, <c>ResourceQuota</c>, <c>Replicas</c>, <c>storageType</c>, <c>dbInstanceClass</c>, <c>dbEngineVersion</c>, <c>kvstoreEngineVersion</c> 是必填项。</description></item>
+        /// <item><description>当 <c>storageType</c> 为 <c>oss</c> 时，需要指定 <c>ossBucketResourceId</c> 和 <c>ossPath</c>。</description></item>
+        /// <item><description>如果需要新建数据库实例，则必须提供 <c>instanceAccount</c> 和 <c>instancePassword</c>。</description></item>
+        /// <item><description>预付费模式下，<c>PayPeriodType</c> 和 <c>PayPeriod</c> 必须填写。</description></item>
+        /// <item><description>可以通过设置 <c>dryRun</c> 为 <c>true</c> 来执行预检查而不实际创建实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDifyInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDifyInstanceResponse
+        /// </returns>
+        public CreateDifyInstanceResponse CreateDifyInstanceWithOptions(CreateDifyInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdbpgInstanceMode))
+            {
+                query["AdbpgInstanceMode"] = request.AdbpgInstanceMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRegion))
+            {
+                query["DataRegion"] = request.DataRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseOption))
+            {
+                query["DatabaseOption"] = request.DatabaseOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEngineType))
+            {
+                query["DbEngineType"] = request.DbEngineType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEngineVersion))
+            {
+                query["DbEngineVersion"] = request.DbEngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstanceAccount))
+            {
+                query["DbInstanceAccount"] = request.DbInstanceAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstanceCategory))
+            {
+                query["DbInstanceCategory"] = request.DbInstanceCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstanceClass))
+            {
+                query["DbInstanceClass"] = request.DbInstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstancePassword))
+            {
+                query["DbInstancePassword"] = request.DbInstancePassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbResourceId))
+            {
+                query["DbResourceId"] = request.DbResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbStorageSize))
+            {
+                query["DbStorageSize"] = request.DbStorageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbStorageType))
+            {
+                query["DbStorageType"] = request.DbStorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreAccount))
+            {
+                query["KvStoreAccount"] = request.KvStoreAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreEngineVersion))
+            {
+                query["KvStoreEngineVersion"] = request.KvStoreEngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreInstanceClass))
+            {
+                query["KvStoreInstanceClass"] = request.KvStoreInstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreNodeType))
+            {
+                query["KvStoreNodeType"] = request.KvStoreNodeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreOption))
+            {
+                query["KvStoreOption"] = request.KvStoreOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStorePassword))
+            {
+                query["KvStorePassword"] = request.KvStorePassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreResourceId))
+            {
+                query["KvStoreResourceId"] = request.KvStoreResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreType))
+            {
+                query["KvStoreType"] = request.KvStoreType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssPath))
+            {
+                query["OssPath"] = request.OssPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssResourceId))
+            {
+                query["OssResourceId"] = request.OssResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayPeriod))
+            {
+                query["PayPeriod"] = request.PayPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayPeriodType))
+            {
+                query["PayPeriodType"] = request.PayPeriodType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
+            {
+                query["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceQuota))
+            {
+                query["ResourceQuota"] = request.ResourceQuota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SegDiskPerformanceLevel))
+            {
+                query["SegDiskPerformanceLevel"] = request.SegDiskPerformanceLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SegNodeNum))
+            {
+                query["SegNodeNum"] = request.SegNodeNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbAccount))
+            {
+                query["VectordbAccount"] = request.VectordbAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbCategory))
+            {
+                query["VectordbCategory"] = request.VectordbCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbEngineVersion))
+            {
+                query["VectordbEngineVersion"] = request.VectordbEngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbInstanceSpec))
+            {
+                query["VectordbInstanceSpec"] = request.VectordbInstanceSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbOption))
+            {
+                query["VectordbOption"] = request.VectordbOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbPassword))
+            {
+                query["VectordbPassword"] = request.VectordbPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbResourceId))
+            {
+                query["VectordbResourceId"] = request.VectordbResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbStorageSize))
+            {
+                query["VectordbStorageSize"] = request.VectordbStorageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbStorageType))
+            {
+                query["VectordbStorageType"] = request.VectordbStorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbType))
+            {
+                query["VectordbType"] = request.VectordbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceDescription))
+            {
+                query["WorkspaceDescription"] = request.WorkspaceDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                query["WorkspaceName"] = request.WorkspaceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceOption))
+            {
+                query["WorkspaceOption"] = request.WorkspaceOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDifyInstance",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateDifyInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateDifyInstanceResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建DIFY实例及相关资源，支持自定义配置。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>workspaceOption</c> 参数指示是否新建工作空间，默认使用已有工作空间。</description></item>
+        /// <item><description>如果选择新建工作空间 (<c>CreateNewInstance</c>)，则必须提供 <c>workspaceName</c> 和 <c>workspaceDescription</c>。</description></item>
+        /// <item><description><c>vpcId</c>, <c>VSwitchID</c>, <c>zoneId</c>, <c>regionCode</c>, <c>ResourceQuota</c>, <c>Replicas</c>, <c>storageType</c>, <c>dbInstanceClass</c>, <c>dbEngineVersion</c>, <c>kvstoreEngineVersion</c> 是必填项。</description></item>
+        /// <item><description>当 <c>storageType</c> 为 <c>oss</c> 时，需要指定 <c>ossBucketResourceId</c> 和 <c>ossPath</c>。</description></item>
+        /// <item><description>如果需要新建数据库实例，则必须提供 <c>instanceAccount</c> 和 <c>instancePassword</c>。</description></item>
+        /// <item><description>预付费模式下，<c>PayPeriodType</c> 和 <c>PayPeriod</c> 必须填写。</description></item>
+        /// <item><description>可以通过设置 <c>dryRun</c> 为 <c>true</c> 来执行预检查而不实际创建实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDifyInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDifyInstanceResponse
+        /// </returns>
+        public async Task<CreateDifyInstanceResponse> CreateDifyInstanceWithOptionsAsync(CreateDifyInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdbpgInstanceMode))
+            {
+                query["AdbpgInstanceMode"] = request.AdbpgInstanceMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRegion))
+            {
+                query["DataRegion"] = request.DataRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseOption))
+            {
+                query["DatabaseOption"] = request.DatabaseOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEngineType))
+            {
+                query["DbEngineType"] = request.DbEngineType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEngineVersion))
+            {
+                query["DbEngineVersion"] = request.DbEngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstanceAccount))
+            {
+                query["DbInstanceAccount"] = request.DbInstanceAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstanceCategory))
+            {
+                query["DbInstanceCategory"] = request.DbInstanceCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstanceClass))
+            {
+                query["DbInstanceClass"] = request.DbInstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbInstancePassword))
+            {
+                query["DbInstancePassword"] = request.DbInstancePassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbResourceId))
+            {
+                query["DbResourceId"] = request.DbResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbStorageSize))
+            {
+                query["DbStorageSize"] = request.DbStorageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbStorageType))
+            {
+                query["DbStorageType"] = request.DbStorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreAccount))
+            {
+                query["KvStoreAccount"] = request.KvStoreAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreEngineVersion))
+            {
+                query["KvStoreEngineVersion"] = request.KvStoreEngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreInstanceClass))
+            {
+                query["KvStoreInstanceClass"] = request.KvStoreInstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreNodeType))
+            {
+                query["KvStoreNodeType"] = request.KvStoreNodeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreOption))
+            {
+                query["KvStoreOption"] = request.KvStoreOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStorePassword))
+            {
+                query["KvStorePassword"] = request.KvStorePassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreResourceId))
+            {
+                query["KvStoreResourceId"] = request.KvStoreResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreType))
+            {
+                query["KvStoreType"] = request.KvStoreType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssPath))
+            {
+                query["OssPath"] = request.OssPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssResourceId))
+            {
+                query["OssResourceId"] = request.OssResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayPeriod))
+            {
+                query["PayPeriod"] = request.PayPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayPeriodType))
+            {
+                query["PayPeriodType"] = request.PayPeriodType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
+            {
+                query["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceQuota))
+            {
+                query["ResourceQuota"] = request.ResourceQuota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SegDiskPerformanceLevel))
+            {
+                query["SegDiskPerformanceLevel"] = request.SegDiskPerformanceLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SegNodeNum))
+            {
+                query["SegNodeNum"] = request.SegNodeNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbAccount))
+            {
+                query["VectordbAccount"] = request.VectordbAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbCategory))
+            {
+                query["VectordbCategory"] = request.VectordbCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbEngineVersion))
+            {
+                query["VectordbEngineVersion"] = request.VectordbEngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbInstanceSpec))
+            {
+                query["VectordbInstanceSpec"] = request.VectordbInstanceSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbOption))
+            {
+                query["VectordbOption"] = request.VectordbOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbPassword))
+            {
+                query["VectordbPassword"] = request.VectordbPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbResourceId))
+            {
+                query["VectordbResourceId"] = request.VectordbResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbStorageSize))
+            {
+                query["VectordbStorageSize"] = request.VectordbStorageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbStorageType))
+            {
+                query["VectordbStorageType"] = request.VectordbStorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VectordbType))
+            {
+                query["VectordbType"] = request.VectordbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceDescription))
+            {
+                query["WorkspaceDescription"] = request.WorkspaceDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                query["WorkspaceName"] = request.WorkspaceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceOption))
+            {
+                query["WorkspaceOption"] = request.WorkspaceOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDifyInstance",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateDifyInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateDifyInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建DIFY实例及相关资源，支持自定义配置。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>workspaceOption</c> 参数指示是否新建工作空间，默认使用已有工作空间。</description></item>
+        /// <item><description>如果选择新建工作空间 (<c>CreateNewInstance</c>)，则必须提供 <c>workspaceName</c> 和 <c>workspaceDescription</c>。</description></item>
+        /// <item><description><c>vpcId</c>, <c>VSwitchID</c>, <c>zoneId</c>, <c>regionCode</c>, <c>ResourceQuota</c>, <c>Replicas</c>, <c>storageType</c>, <c>dbInstanceClass</c>, <c>dbEngineVersion</c>, <c>kvstoreEngineVersion</c> 是必填项。</description></item>
+        /// <item><description>当 <c>storageType</c> 为 <c>oss</c> 时，需要指定 <c>ossBucketResourceId</c> 和 <c>ossPath</c>。</description></item>
+        /// <item><description>如果需要新建数据库实例，则必须提供 <c>instanceAccount</c> 和 <c>instancePassword</c>。</description></item>
+        /// <item><description>预付费模式下，<c>PayPeriodType</c> 和 <c>PayPeriod</c> 必须填写。</description></item>
+        /// <item><description>可以通过设置 <c>dryRun</c> 为 <c>true</c> 来执行预检查而不实际创建实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDifyInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDifyInstanceResponse
+        /// </returns>
+        public CreateDifyInstanceResponse CreateDifyInstance(CreateDifyInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDifyInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建DIFY实例及相关资源，支持自定义配置。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>workspaceOption</c> 参数指示是否新建工作空间，默认使用已有工作空间。</description></item>
+        /// <item><description>如果选择新建工作空间 (<c>CreateNewInstance</c>)，则必须提供 <c>workspaceName</c> 和 <c>workspaceDescription</c>。</description></item>
+        /// <item><description><c>vpcId</c>, <c>VSwitchID</c>, <c>zoneId</c>, <c>regionCode</c>, <c>ResourceQuota</c>, <c>Replicas</c>, <c>storageType</c>, <c>dbInstanceClass</c>, <c>dbEngineVersion</c>, <c>kvstoreEngineVersion</c> 是必填项。</description></item>
+        /// <item><description>当 <c>storageType</c> 为 <c>oss</c> 时，需要指定 <c>ossBucketResourceId</c> 和 <c>ossPath</c>。</description></item>
+        /// <item><description>如果需要新建数据库实例，则必须提供 <c>instanceAccount</c> 和 <c>instancePassword</c>。</description></item>
+        /// <item><description>预付费模式下，<c>PayPeriodType</c> 和 <c>PayPeriod</c> 必须填写。</description></item>
+        /// <item><description>可以通过设置 <c>dryRun</c> 为 <c>true</c> 来执行预检查而不实际创建实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateDifyInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDifyInstanceResponse
+        /// </returns>
+        public async Task<CreateDifyInstanceResponse> CreateDifyInstanceAsync(CreateDifyInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDifyInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建无锁变更工单</para>
         /// </summary>
         /// 
@@ -11881,6 +12463,212 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建DIFY实例及相关资源，支持自定义配置。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>workspaceOption</c> 参数指示是否新建工作空间，默认使用已有工作空间。</description></item>
+        /// <item><description>如果选择新建工作空间 (<c>CreateNewInstance</c>)，则必须提供 <c>workspaceName</c> 和 <c>workspaceDescription</c>。</description></item>
+        /// <item><description><c>vpcId</c>, <c>VSwitchID</c>, <c>zoneId</c>, <c>regionCode</c>, <c>ResourceQuota</c>, <c>Replicas</c>, <c>storageType</c>, <c>dbInstanceClass</c>, <c>dbEngineVersion</c>, <c>kvstoreEngineVersion</c> 是必填项。</description></item>
+        /// <item><description>当 <c>storageType</c> 为 <c>oss</c> 时，需要指定 <c>ossBucketResourceId</c> 和 <c>ossPath</c>。</description></item>
+        /// <item><description>如果需要新建数据库实例，则必须提供 <c>instanceAccount</c> 和 <c>instancePassword</c>。</description></item>
+        /// <item><description>预付费模式下，<c>PayPeriodType</c> 和 <c>PayPeriod</c> 必须填写。</description></item>
+        /// <item><description>可以通过设置 <c>dryRun</c> 为 <c>true</c> 来执行预检查而不实际创建实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDifyDefaultVpcRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDifyDefaultVpcResponse
+        /// </returns>
+        public DescribeDifyDefaultVpcResponse DescribeDifyDefaultVpcWithOptions(DescribeDifyDefaultVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRegion))
+            {
+                query["DataRegion"] = request.DataRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDifyDefaultVpc",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDifyDefaultVpcResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDifyDefaultVpcResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建DIFY实例及相关资源，支持自定义配置。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>workspaceOption</c> 参数指示是否新建工作空间，默认使用已有工作空间。</description></item>
+        /// <item><description>如果选择新建工作空间 (<c>CreateNewInstance</c>)，则必须提供 <c>workspaceName</c> 和 <c>workspaceDescription</c>。</description></item>
+        /// <item><description><c>vpcId</c>, <c>VSwitchID</c>, <c>zoneId</c>, <c>regionCode</c>, <c>ResourceQuota</c>, <c>Replicas</c>, <c>storageType</c>, <c>dbInstanceClass</c>, <c>dbEngineVersion</c>, <c>kvstoreEngineVersion</c> 是必填项。</description></item>
+        /// <item><description>当 <c>storageType</c> 为 <c>oss</c> 时，需要指定 <c>ossBucketResourceId</c> 和 <c>ossPath</c>。</description></item>
+        /// <item><description>如果需要新建数据库实例，则必须提供 <c>instanceAccount</c> 和 <c>instancePassword</c>。</description></item>
+        /// <item><description>预付费模式下，<c>PayPeriodType</c> 和 <c>PayPeriod</c> 必须填写。</description></item>
+        /// <item><description>可以通过设置 <c>dryRun</c> 为 <c>true</c> 来执行预检查而不实际创建实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDifyDefaultVpcRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDifyDefaultVpcResponse
+        /// </returns>
+        public async Task<DescribeDifyDefaultVpcResponse> DescribeDifyDefaultVpcWithOptionsAsync(DescribeDifyDefaultVpcRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRegion))
+            {
+                query["DataRegion"] = request.DataRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDifyDefaultVpc",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDifyDefaultVpcResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDifyDefaultVpcResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建DIFY实例及相关资源，支持自定义配置。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>workspaceOption</c> 参数指示是否新建工作空间，默认使用已有工作空间。</description></item>
+        /// <item><description>如果选择新建工作空间 (<c>CreateNewInstance</c>)，则必须提供 <c>workspaceName</c> 和 <c>workspaceDescription</c>。</description></item>
+        /// <item><description><c>vpcId</c>, <c>VSwitchID</c>, <c>zoneId</c>, <c>regionCode</c>, <c>ResourceQuota</c>, <c>Replicas</c>, <c>storageType</c>, <c>dbInstanceClass</c>, <c>dbEngineVersion</c>, <c>kvstoreEngineVersion</c> 是必填项。</description></item>
+        /// <item><description>当 <c>storageType</c> 为 <c>oss</c> 时，需要指定 <c>ossBucketResourceId</c> 和 <c>ossPath</c>。</description></item>
+        /// <item><description>如果需要新建数据库实例，则必须提供 <c>instanceAccount</c> 和 <c>instancePassword</c>。</description></item>
+        /// <item><description>预付费模式下，<c>PayPeriodType</c> 和 <c>PayPeriod</c> 必须填写。</description></item>
+        /// <item><description>可以通过设置 <c>dryRun</c> 为 <c>true</c> 来执行预检查而不实际创建实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDifyDefaultVpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDifyDefaultVpcResponse
+        /// </returns>
+        public DescribeDifyDefaultVpcResponse DescribeDifyDefaultVpc(DescribeDifyDefaultVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDifyDefaultVpcWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建DIFY实例及相关资源，支持自定义配置。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>workspaceOption</c> 参数指示是否新建工作空间，默认使用已有工作空间。</description></item>
+        /// <item><description>如果选择新建工作空间 (<c>CreateNewInstance</c>)，则必须提供 <c>workspaceName</c> 和 <c>workspaceDescription</c>。</description></item>
+        /// <item><description><c>vpcId</c>, <c>VSwitchID</c>, <c>zoneId</c>, <c>regionCode</c>, <c>ResourceQuota</c>, <c>Replicas</c>, <c>storageType</c>, <c>dbInstanceClass</c>, <c>dbEngineVersion</c>, <c>kvstoreEngineVersion</c> 是必填项。</description></item>
+        /// <item><description>当 <c>storageType</c> 为 <c>oss</c> 时，需要指定 <c>ossBucketResourceId</c> 和 <c>ossPath</c>。</description></item>
+        /// <item><description>如果需要新建数据库实例，则必须提供 <c>instanceAccount</c> 和 <c>instancePassword</c>。</description></item>
+        /// <item><description>预付费模式下，<c>PayPeriodType</c> 和 <c>PayPeriod</c> 必须填写。</description></item>
+        /// <item><description>可以通过设置 <c>dryRun</c> 为 <c>true</c> 来执行预检查而不实际创建实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeDifyDefaultVpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDifyDefaultVpcResponse
+        /// </returns>
+        public async Task<DescribeDifyDefaultVpcResponse> DescribeDifyDefaultVpcAsync(DescribeDifyDefaultVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDifyDefaultVpcWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -1,3 +1,9 @@
+2025-02-11 Version: 1.67.0
+- Support API CreateDifyInstance.
+- Support API DescribeDifyDefaultVpc.
+- Update API CreateDataImportOrder: update param Param.
+
+
 2025-01-20 Version: 1.66.2
 - Update API CreateDataCorrectOrder: update param Param.
 
