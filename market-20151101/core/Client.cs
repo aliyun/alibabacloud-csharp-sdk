@@ -18,9 +18,6 @@ namespace AlibabaCloud.SDK.Market20151101
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._productId = "Market";
-            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
-            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -1132,6 +1129,148 @@ namespace AlibabaCloud.SDK.Market20151101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDistributionProductsLinkWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商侧查询镜像实例信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeImageInstanceForIsvRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeImageInstanceForIsvResponse
+        /// </returns>
+        public DescribeImageInstanceForIsvResponse DescribeImageInstanceForIsvWithOptions(DescribeImageInstanceForIsvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerPk))
+            {
+                query["CustomerPk"] = request.CustomerPk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsInstanceId))
+            {
+                query["EcsInstanceId"] = request.EcsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeImageInstanceForIsv",
+                Version = "2015-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeImageInstanceForIsvResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeImageInstanceForIsvResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商侧查询镜像实例信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeImageInstanceForIsvRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeImageInstanceForIsvResponse
+        /// </returns>
+        public async Task<DescribeImageInstanceForIsvResponse> DescribeImageInstanceForIsvWithOptionsAsync(DescribeImageInstanceForIsvRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerPk))
+            {
+                query["CustomerPk"] = request.CustomerPk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsInstanceId))
+            {
+                query["EcsInstanceId"] = request.EcsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeImageInstanceForIsv",
+                Version = "2015-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeImageInstanceForIsvResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeImageInstanceForIsvResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商侧查询镜像实例信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeImageInstanceForIsvRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeImageInstanceForIsvResponse
+        /// </returns>
+        public DescribeImageInstanceForIsvResponse DescribeImageInstanceForIsv(DescribeImageInstanceForIsvRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeImageInstanceForIsvWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商侧查询镜像实例信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeImageInstanceForIsvRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeImageInstanceForIsvResponse
+        /// </returns>
+        public async Task<DescribeImageInstanceForIsvResponse> DescribeImageInstanceForIsvAsync(DescribeImageInstanceForIsvRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeImageInstanceForIsvWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
