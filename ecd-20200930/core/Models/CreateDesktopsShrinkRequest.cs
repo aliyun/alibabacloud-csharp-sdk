@@ -543,6 +543,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("SavingPlanId")]
+        [Validation(Required=false)]
+        public string SavingPlanId { get; set; }
+
         [NameInMap("SnapshotPolicyId")]
         [Validation(Required=false)]
         public string SnapshotPolicyId { get; set; }

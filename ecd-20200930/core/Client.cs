@@ -7298,6 +7298,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SavingPlanId))
+            {
+                query["SavingPlanId"] = request.SavingPlanId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotPolicyId))
             {
                 query["SnapshotPolicyId"] = request.SnapshotPolicyId;
@@ -7491,6 +7495,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SavingPlanId))
+            {
+                query["SavingPlanId"] = request.SavingPlanId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotPolicyId))
             {
