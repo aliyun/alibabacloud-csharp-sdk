@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [Validation(Required=false)]
                     public double? AvgCPUTime { get; set; }
 
+                    [NameInMap("AvgCPUTimeSeconds")]
+                    [Validation(Required=false)]
+                    public double? AvgCPUTimeSeconds { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>10000</para>
@@ -89,6 +93,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [NameInMap("AvgDocExamined")]
                     [Validation(Required=false)]
                     public double? AvgDocExamined { get; set; }
+
+                    [NameInMap("AvgFrows")]
+                    [Validation(Required=false)]
+                    public double? AvgFrows { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -174,6 +182,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [Validation(Required=false)]
                     public double? AvgReturnNum { get; set; }
 
+                    [NameInMap("AvgRows")]
+                    [Validation(Required=false)]
+                    public double? AvgRows { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>1000</para>
@@ -198,6 +210,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [Validation(Required=false)]
                     public double? AvgRowsSent { get; set; }
 
+                    [NameInMap("AvgScnt")]
+                    [Validation(Required=false)]
+                    public double? AvgScnt { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -207,6 +223,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [NameInMap("CPUTime")]
                     [Validation(Required=false)]
                     public double? CPUTime { get; set; }
+
+                    [NameInMap("CPUTimeSeconds")]
+                    [Validation(Required=false)]
+                    public double? CPUTimeSeconds { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -271,6 +291,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [NameInMap("DocsExamined")]
                     [Validation(Required=false)]
                     public long? DocsExamined { get; set; }
+
+                    [NameInMap("Frows")]
+                    [Validation(Required=false)]
+                    public long? Frows { get; set; }
 
                     [NameInMap("Histogram")]
                     [Validation(Required=false)]
@@ -456,6 +480,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [Validation(Required=false)]
                     public double? MaxCPUTime { get; set; }
 
+                    [NameInMap("MaxCPUTimeSeconds")]
+                    [Validation(Required=false)]
+                    public double? MaxCPUTimeSeconds { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>1000000</para>
@@ -463,6 +491,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [NameInMap("MaxDocExamined")]
                     [Validation(Required=false)]
                     public long? MaxDocExamined { get; set; }
+
+                    [NameInMap("MaxFrows")]
+                    [Validation(Required=false)]
+                    public long? MaxFrows { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -548,6 +580,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [Validation(Required=false)]
                     public long? MaxReturnNum { get; set; }
 
+                    [NameInMap("MaxRows")]
+                    [Validation(Required=false)]
+                    public long? MaxRows { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>1000</para>
@@ -571,6 +607,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [NameInMap("MaxRowsSent")]
                     [Validation(Required=false)]
                     public long? MaxRowsSent { get; set; }
+
+                    [NameInMap("MaxScnt")]
+                    [Validation(Required=false)]
+                    public long? MaxScnt { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -672,6 +712,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [Validation(Required=false)]
                     public long? ReturnNum { get; set; }
 
+                    [NameInMap("Rows")]
+                    [Validation(Required=false)]
+                    public long? Rows { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>1000</para>
@@ -711,6 +755,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [NameInMap("Scheme")]
                     [Validation(Required=false)]
                     public string Scheme { get; set; }
+
+                    [NameInMap("Scnt")]
+                    [Validation(Required=false)]
+                    public long? Scnt { get; set; }
 
                     /// <summary>
                     /// <para>SQL ID。</para>

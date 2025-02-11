@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSlowLogHistogramAsyncRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1662518540764</para>
         /// </summary>
@@ -40,6 +42,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-2ze8g2am97624****</para>
         /// </summary>
@@ -56,6 +60,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1596177993000</para>
         /// </summary>

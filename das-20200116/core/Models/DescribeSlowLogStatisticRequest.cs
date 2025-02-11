@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public bool? Asc { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1608888296000</para>
         /// </summary>
@@ -48,6 +50,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1jdv45i7l6****</para>
         /// </summary>
@@ -88,6 +92,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1568269711000</para>
         /// </summary>

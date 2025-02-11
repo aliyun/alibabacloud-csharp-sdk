@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<double?> AvgDocExamined { get; set; }
 
+                [NameInMap("AvgFrows")]
+                [Validation(Required=false)]
+                public List<double?> AvgFrows { get; set; }
+
                 [NameInMap("AvgIOWrites")]
                 [Validation(Required=false)]
                 public List<double?> AvgIOWrites { get; set; }
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<double?> AvgReturnNum { get; set; }
 
+                [NameInMap("AvgRows")]
+                [Validation(Required=false)]
+                public List<double?> AvgRows { get; set; }
+
                 [NameInMap("AvgRowsCountAffected")]
                 [Validation(Required=false)]
                 public List<double?> AvgRowsCountAffected { get; set; }
@@ -80,6 +88,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<double?> AvgRt { get; set; }
 
+                [NameInMap("AvgScnt")]
+                [Validation(Required=false)]
+                public List<double?> AvgScnt { get; set; }
+
                 [NameInMap("CPUTime")]
                 [Validation(Required=false)]
                 public List<double?> CPUTime { get; set; }
@@ -91,6 +103,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [NameInMap("DocExamined")]
                 [Validation(Required=false)]
                 public List<long?> DocExamined { get; set; }
+
+                [NameInMap("Frows")]
+                [Validation(Required=false)]
+                public List<long?> Frows { get; set; }
 
                 [NameInMap("IOWrites")]
                 [Validation(Required=false)]
@@ -164,6 +180,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<long?> MaxDocExamined { get; set; }
 
+                [NameInMap("MaxFrows")]
+                [Validation(Required=false)]
+                public List<long?> MaxFrows { get; set; }
+
                 [NameInMap("MaxIOWrites")]
                 [Validation(Required=false)]
                 public List<long?> MaxIOWrites { get; set; }
@@ -192,6 +212,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<long?> MaxReturnNum { get; set; }
 
+                [NameInMap("MaxRows")]
+                [Validation(Required=false)]
+                public List<long?> MaxRows { get; set; }
+
                 [NameInMap("MaxRowsCountAffected")]
                 [Validation(Required=false)]
                 public List<long?> MaxRowsCountAffected { get; set; }
@@ -208,6 +232,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public List<double?> MaxRt { get; set; }
 
+                [NameInMap("MaxScnt")]
+                [Validation(Required=false)]
+                public List<long?> MaxScnt { get; set; }
+
                 [NameInMap("PhysicalIOReads")]
                 [Validation(Required=false)]
                 public List<long?> PhysicalIOReads { get; set; }
@@ -215,6 +243,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [NameInMap("ReturnNum")]
                 [Validation(Required=false)]
                 public List<long?> ReturnNum { get; set; }
+
+                [NameInMap("Rows")]
+                [Validation(Required=false)]
+                public List<long?> Rows { get; set; }
 
                 [NameInMap("RowsCountAffected")]
                 [Validation(Required=false)]
@@ -231,6 +263,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [NameInMap("Rt")]
                 [Validation(Required=false)]
                 public List<double?> Rt { get; set; }
+
+                [NameInMap("Scnt")]
+                [Validation(Required=false)]
+                public List<long?> Scnt { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

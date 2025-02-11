@@ -181,6 +181,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             [Validation(Required=false)]
             public bool? SqlLogEnable { get; set; }
 
+            /// <summary>
+            /// <para>A reserved parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>None</para>
+            /// </summary>
             [NameInMap("SqlLogSource")]
             [Validation(Required=false)]
             public string SqlLogSource { get; set; }
@@ -210,6 +216,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             [Validation(Required=false)]
             public long? SqlLogVisibleTime { get; set; }
 
+            /// <summary>
+            /// <para>A reserved parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>None</para>
+            /// </summary>
             [NameInMap("SupportMigration")]
             [Validation(Required=false)]
             public bool? SupportMigration { get; set; }
