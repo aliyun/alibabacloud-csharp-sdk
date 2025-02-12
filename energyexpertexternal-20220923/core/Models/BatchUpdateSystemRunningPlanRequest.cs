@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         public string EarliestStartupTime { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-08-30</para>
         /// </summary>
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -90,6 +94,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         public int? SeasonMode { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-08-21</para>
         /// </summary>
@@ -98,6 +104,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>system1</para>
         /// </summary>

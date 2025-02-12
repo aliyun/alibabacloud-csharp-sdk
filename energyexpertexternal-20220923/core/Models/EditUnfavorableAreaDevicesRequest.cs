@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class EditUnfavorableAreaDevicesRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         [Validation(Required=false)]
         public string FactoryId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("hvacDeviceConfigVOList")]
         [Validation(Required=false)]
         public List<EditUnfavorableAreaDevicesRequestHvacDeviceConfigVOList> HvacDeviceConfigVOList { get; set; }
@@ -46,6 +51,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
             public string DeviceName { get; set; }
 
             /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -78,6 +85,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
             public int? IsForbidden { get; set; }
 
             /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -88,6 +97,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>system1</para>
         /// </summary>

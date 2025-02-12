@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class BatchSaveInstructionStatusRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
