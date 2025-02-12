@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             [Validation(Required=false)]
             public string AddTime { get; set; }
 
+            /// <summary>
+            /// <para>The deployment set ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ds-8vbe4av4gededlqg****</para>
+            /// </summary>
             [NameInMap("DeploymentSetId")]
             [Validation(Required=false)]
             public string DeploymentSetId { get; set; }

@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string JobName { get; set; }
 
             /// <summary>
-            /// <para>The job state. Valid values:</para>
+            /// <para>The job status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>all: returns all jobs.</description></item>
             /// <item><description>finished: returns completed jobs.</description></item>

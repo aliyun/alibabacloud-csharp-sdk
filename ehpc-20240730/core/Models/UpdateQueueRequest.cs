@@ -173,6 +173,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             [Validation(Required=false)]
             public string RamRole { get; set; }
 
+            [NameInMap("ReservedNodePoolId")]
+            [Validation(Required=false)]
+            public string ReservedNodePoolId { get; set; }
+
             /// <summary>
             /// <para>The vSwitches available for use by compute nodes in the queue.</para>
             /// </summary>

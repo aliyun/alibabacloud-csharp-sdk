@@ -1,3 +1,9 @@
+2025-02-12 Version: 2.0.4
+- Update API CreateNodes: add param ReservedNodePoolId.
+- Update API GetQueue: update response param.
+- Update API UpdateQueue: update param Queue.
+
+
 2025-01-07 Version: 2.0.3
 - Generated csharp 2024-07-30 for EHPC.
 
