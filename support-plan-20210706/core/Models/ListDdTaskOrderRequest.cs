@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
 {
     public class ListDdTaskOrderRequest : TeaModel {
         /// <summary>
-        /// createRealName
+        /// <para>createRealName</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Tom</para>
         /// </summary>
         [NameInMap("CreateRealName")]
         [Validation(Required=false)]
         public string CreateRealName { get; set; }
 
         /// <summary>
-        /// endTime
+        /// <para>endTime</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2024-08-20 14:09:16</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -28,37 +34,51 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
         public bool? IsUrgent { get; set; }
 
         /// <summary>
-        /// openGroupId
+        /// <para>openGroupId</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>DAWNN14N</para>
         /// </summary>
         [NameInMap("OpenGroupId")]
         [Validation(Required=false)]
         public string OpenGroupId { get; set; }
 
         /// <summary>
-        /// pageNo
+        /// <para>pageNo</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// pageSize
+        /// <para>pageSize</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// startTime
+        /// <para>startTime</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2024-08-01 14:09:11</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// taskStatus
+        /// <para>taskStatus</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dealingNode</para>
         /// </summary>
         [NameInMap("TaskStatus")]
         [Validation(Required=false)]

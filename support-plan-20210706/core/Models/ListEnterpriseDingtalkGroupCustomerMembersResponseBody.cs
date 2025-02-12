@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Support_plan20210706.Models
 {
     public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -31,14 +35,26 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Invalid data</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

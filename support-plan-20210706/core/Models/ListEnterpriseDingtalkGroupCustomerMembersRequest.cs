@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Support_plan20210706.Models
 {
     public class ListEnterpriseDingtalkGroupCustomerMembersRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DAWNN14N</para>
         /// </summary>
         [NameInMap("OpenGroupId")]
         [Validation(Required=false)]
