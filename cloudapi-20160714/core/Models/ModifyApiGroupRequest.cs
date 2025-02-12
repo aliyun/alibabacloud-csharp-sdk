@@ -130,6 +130,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string RpcPattern { get; set; }
 
+        [NameInMap("RpsLimitForServerless")]
+        [Validation(Required=false)]
+        public string RpsLimitForServerless { get; set; }
+
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
