@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class CreateTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the instance. Set the value to <b>cn-hangzhou</b>, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// <para>The region ID of the Anti-DDoS Proxy instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the Anti-DDoS Proxy (Chinese Mainland) instances to which you want to add the tag.</para>
+        /// <para>The IDs of the Anti-DDoS Proxy instances to which you want to add tags.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

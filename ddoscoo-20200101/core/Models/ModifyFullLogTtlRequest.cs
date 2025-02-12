@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The log storage duration of a website. Valid values: <b>30</b> to <b>180</b>. Unit: days.</para>
+        /// <para>The log storage duration of a website. Valid values: <b>7</b> to <b>180</b>. Unit: days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

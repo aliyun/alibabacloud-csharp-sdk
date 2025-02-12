@@ -8,12 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
-    public class ModifyFullLogTtlResponseBody : TeaModel {
+    public class ModifyInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</para>
+        /// <para>242461444340562</para>
+        /// </summary>
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public long? OrderId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0018DF77-7189-5D33-947B-E5B34BFCE07E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

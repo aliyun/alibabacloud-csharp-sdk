@@ -13,11 +13,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <para>The key-value pair of the custom header. The key specifies the header name, and the value specifies the header value. You can specify up to five key-value pairs. The key-value pairs can be up to 200 characters in length.</para>
         /// <para>Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Do not use X-Forwarded-ClientSrcPort as a custom header.</description></item>
-        /// <item><description>Do not use a standard HTTP header such as User-Agent. Otherwise, the original header may be overwritten.</description></item>
+        /// <item><description><para>Do not use the following default HTTP headers:</para>
+        /// <list type="bullet">
+        /// <item><description>X-Forwarded-ClientSrcPort: This header is used to obtain the source ports of clients that access Anti-DDoS Proxy (a Layer 7 proxy).</description></item>
+        /// <item><description>X-Forwarded-ProxyPort: This header is used to obtain the ports of listeners that access Anti-DDoS Proxy (a Layer 7 proxy).</description></item>
+        /// <item><description>X-Forwarded-For: This header is used to obtain the IP addresses of clients that access Anti-DDoS Proxy (a Layer 7 proxy).</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Do not use standard HTTP headers or specific widely used custom HTTP headers. The standard HTTP headers include Host, User-Agent, Connection, and Upgrade, and the widely used custom HTTP headers include X-Real-IP, X-True-IP, X-Client-IP, Web-Server-Type, WL-Proxy-Client-IP, eEagleEye-RpcID, EagleEye-TraceID, X-Forwarded-Cluster, and X-Forwarded-Proto. If the preceding headers are used, the original content of the headers is overwritten.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you specify a key of X-Forwarded-ClientSrcPort, the system obtains the originating port of the client that accesses Anti-DDoS Proxy (a Layer 7 proxy). In this case, the value is an empty string.</para>
+        /// <para> If you specify a key of X-Forwarded-ClientSrcPort, the system obtains the originating ports of clients that access Anti-DDoS Proxy (a Layer 7 proxy). In this case, the value is an empty string.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

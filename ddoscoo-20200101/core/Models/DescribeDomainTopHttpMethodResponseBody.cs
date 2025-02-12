@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDomainTopHttpMethodResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about top HTTP methods.</para>
+        /// </summary>
         [NameInMap("DomainTopMethod")]
         [Validation(Required=false)]
         public List<DescribeDomainTopHttpMethodResponseBodyDomainTopMethod> DomainTopMethod { get; set; }
         public class DescribeDomainTopHttpMethodResponseBodyDomainTopMethod : TeaModel {
             /// <summary>
+            /// <para>The domain name of the website.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example.aliyundoc.com</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public string Domain { get; set; }
 
             /// <summary>
+            /// <para>The HTTP method.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>GET</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             public string HttpMethod { get; set; }
 
             /// <summary>
+            /// <para>The page views.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>22121</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CF33B4C3-196E-4015-AADD-5CAD00057B80</para>
         /// </summary>

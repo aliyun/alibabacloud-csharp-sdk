@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("QueryType")]
+        [Validation(Required=false)]
+        public string QueryType { get; set; }
+
     }
 
 }

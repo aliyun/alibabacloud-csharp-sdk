@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeL7RsPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the parameters for back-to-origin processing.</para>
+        /// <para>The details about the parameters for back-to-origin settings.</para>
         /// </summary>
         [NameInMap("Attributes")]
         [Validation(Required=false)]
         public List<DescribeL7RsPolicyResponseBodyAttributes> Attributes { get; set; }
         public class DescribeL7RsPolicyResponseBodyAttributes : TeaModel {
             /// <summary>
-            /// <para>The parameter for back-to-origin processing.</para>
+            /// <para>The parameters for back-to-origin settings.</para>
             /// </summary>
             [NameInMap("Attribute")]
             [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
                 public int? SendTimeout { get; set; }
 
                 /// <summary>
-                /// <para>The weight of the origin server. This parameter takes effect only when <b>ProxyMode</b> is set to <b>rr</b>.</para>
+                /// <para>The weight of the origin server. This parameter takes effect only if the value of <b>ProxyMode</b> is <b>rr</b> or <b>ip_hash</b>.****</para>
                 /// <para>Valid values: <b>1</b> to <b>100</b>. Default value: <b>100</b>. A server with a higher weight receives more requests.</para>
                 /// 
                 /// <b>Example:</b>
@@ -152,6 +152,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The timeout period for a read or write connection.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>300</para>
         /// </summary>
