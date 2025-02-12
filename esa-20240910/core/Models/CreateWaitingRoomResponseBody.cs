@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("WaitingRoomId")]
+        [Validation(Required=false)]
+        public string WaitingRoomId { get; set; }
+
     }
 
 }

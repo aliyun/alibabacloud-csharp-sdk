@@ -2219,6 +2219,114 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>检查实时日志slr角色是否已创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckAssumeSlrRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAssumeSlrRoleResponse
+        /// </returns>
+        public CheckAssumeSlrRoleResponse CheckAssumeSlrRoleWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckAssumeSlrRole",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CheckAssumeSlrRoleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CheckAssumeSlrRoleResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查实时日志slr角色是否已创建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckAssumeSlrRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAssumeSlrRoleResponse
+        /// </returns>
+        public async Task<CheckAssumeSlrRoleResponse> CheckAssumeSlrRoleWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckAssumeSlrRole",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CheckAssumeSlrRoleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CheckAssumeSlrRoleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查实时日志slr角色是否已创建</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// CheckAssumeSlrRoleResponse
+        /// </returns>
+        public CheckAssumeSlrRoleResponse CheckAssumeSlrRole()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckAssumeSlrRoleWithOptions(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查实时日志slr角色是否已创建</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// CheckAssumeSlrRoleResponse
+        /// </returns>
+        public async Task<CheckAssumeSlrRoleResponse> CheckAssumeSlrRoleAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckAssumeSlrRoleWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Checks whether a specified website name is available.</para>
         /// </summary>
         /// 
@@ -3280,6 +3388,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["SiteVersion"] = request.SiteVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Zstd))
+            {
+                query["Zstd"] = request.Zstd;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3352,6 +3464,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
             {
                 query["SiteVersion"] = request.SiteVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Zstd))
+            {
+                query["Zstd"] = request.Zstd;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8765,6 +8881,114 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSiteDeliveryTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个实时日志slr角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlrRoleForRealtimeLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlrRoleForRealtimeLogResponse
+        /// </returns>
+        public CreateSlrRoleForRealtimeLogResponse CreateSlrRoleForRealtimeLogWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSlrRoleForRealtimeLog",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateSlrRoleForRealtimeLogResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateSlrRoleForRealtimeLogResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个实时日志slr角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlrRoleForRealtimeLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlrRoleForRealtimeLogResponse
+        /// </returns>
+        public async Task<CreateSlrRoleForRealtimeLogResponse> CreateSlrRoleForRealtimeLogWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSlrRoleForRealtimeLog",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateSlrRoleForRealtimeLogResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateSlrRoleForRealtimeLogResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个实时日志slr角色</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// CreateSlrRoleForRealtimeLogResponse
+        /// </returns>
+        public CreateSlrRoleForRealtimeLogResponse CreateSlrRoleForRealtimeLog()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSlrRoleForRealtimeLogWithOptions(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个实时日志slr角色</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// CreateSlrRoleForRealtimeLogResponse
+        /// </returns>
+        public async Task<CreateSlrRoleForRealtimeLogResponse> CreateSlrRoleForRealtimeLogAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSlrRoleForRealtimeLogWithOptionsAsync(runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -35498,6 +35722,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["SiteId"] = request.SiteId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Zstd))
+            {
+                query["Zstd"] = request.Zstd;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -35570,6 +35798,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
             {
                 query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Zstd))
+            {
+                query["Zstd"] = request.Zstd;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

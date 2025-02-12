@@ -231,6 +231,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("SubscribeType")]
+            [Validation(Required=false)]
+            public string SubscribeType { get; set; }
+
         }
 
         /// <summary>
