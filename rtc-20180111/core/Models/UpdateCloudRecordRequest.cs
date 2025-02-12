@@ -621,6 +621,20 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             }
 
+            [NameInMap("Whiteboard")]
+            [Validation(Required=false)]
+            public UpdateCloudRecordRequestPanesWhiteboard Whiteboard { get; set; }
+            public class UpdateCloudRecordRequestPanesWhiteboard : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>default</para>
+                /// </summary>
+                [NameInMap("WhiteboardId")]
+                [Validation(Required=false)]
+                public string WhiteboardId { get; set; }
+
+            }
+
         }
 
         /// <summary>

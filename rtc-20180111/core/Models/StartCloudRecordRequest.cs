@@ -636,6 +636,20 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             }
 
+            [NameInMap("Whiteboard")]
+            [Validation(Required=false)]
+            public StartCloudRecordRequestPanesWhiteboard Whiteboard { get; set; }
+            public class StartCloudRecordRequestPanesWhiteboard : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>default</para>
+                /// </summary>
+                [NameInMap("WhiteboardId")]
+                [Validation(Required=false)]
+                public string WhiteboardId { get; set; }
+
+            }
+
         }
 
         [NameInMap("RegionColor")]
