@@ -98,6 +98,26 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                 [Validation(Required=false)]
                 public string PolicyType { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public ListControlPoliciesResponseBodyControlPoliciesControlPolicyTags Tags { get; set; }
+                public class ListControlPoliciesResponseBodyControlPoliciesControlPolicyTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag> Tag { get; set; }
+                    public class ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag : TeaModel {
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>The time when the access control policy was updated.</para>
                 /// 

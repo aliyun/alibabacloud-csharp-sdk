@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             [Validation(Required=false)]
             public string MasterAccountName { get; set; }
 
+            [NameInMap("MemberAccountDisplayNameSyncStatus")]
+            [Validation(Required=false)]
+            public string MemberAccountDisplayNameSyncStatus { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Enabled</para>
