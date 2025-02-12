@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public List<ListExecutorsResponseBodyExecutors> Executors { get; set; }
         public class ListExecutorsResponseBodyExecutors : TeaModel {
+            [NameInMap("AppName")]
+            [Validation(Required=false)]
+            public string AppName { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>0</para>
@@ -44,6 +48,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [NameInMap("ExecutorId")]
             [Validation(Required=false)]
             public string ExecutorId { get; set; }
+
+            [NameInMap("ExpirationTime")]
+            [Validation(Required=false)]
+            public string ExpirationTime { get; set; }
 
             [NameInMap("ExternalIpAddress")]
             [Validation(Required=false)]
@@ -167,7 +175,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string PageNumber { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -175,7 +183,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string PageSize { get; set; }
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string PageNumber { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string PageSize { get; set; }
+        public int? PageSize { get; set; }
 
         [NameInMap("SortBy")]
         [Validation(Required=false)]

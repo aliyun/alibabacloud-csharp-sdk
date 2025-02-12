@@ -76,6 +76,22 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string JobScheduler { get; set; }
 
+        [NameInMap("SecurityPolicy")]
+        [Validation(Required=false)]
+        public CreateJobRequestSecurityPolicy SecurityPolicy { get; set; }
+        public class CreateJobRequestSecurityPolicy : TeaModel {
+            [NameInMap("SecurityGroup")]
+            [Validation(Required=false)]
+            public CreateJobRequestSecurityPolicySecurityGroup SecurityGroup { get; set; }
+            public class CreateJobRequestSecurityPolicySecurityGroup : TeaModel {
+                [NameInMap("SecurityGroupIds")]
+                [Validation(Required=false)]
+                public List<string> SecurityGroupIds { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>

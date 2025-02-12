@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public List<ListJobsResponseBodyJobList> JobList { get; set; }
         public class ListJobsResponseBodyJobList : TeaModel {
+            [NameInMap("AppName")]
+            [Validation(Required=false)]
+            public string AppName { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2024-01-25 12:29:21</para>

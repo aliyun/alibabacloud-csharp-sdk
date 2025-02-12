@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string JobScheduler { get; set; }
 
+        [NameInMap("SecurityPolicy")]
+        [Validation(Required=false)]
+        public string SecurityPolicyShrink { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
