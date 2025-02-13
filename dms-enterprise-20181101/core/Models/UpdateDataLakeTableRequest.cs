@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public OpenStructDLTableInput TableInput { get; set; }
 
+        [NameInMap("TableName")]
+        [Validation(Required=false)]
+        public string TableName { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>3***</para>

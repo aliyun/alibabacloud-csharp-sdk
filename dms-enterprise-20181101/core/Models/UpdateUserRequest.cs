@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? Uid { get; set; }
 
+        [NameInMap("UidString")]
+        [Validation(Required=false)]
+        public string UidString { get; set; }
+
         /// <summary>
         /// <para>The nickname of the user.</para>
         /// 

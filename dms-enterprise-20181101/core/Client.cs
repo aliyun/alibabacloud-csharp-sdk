@@ -42540,6 +42540,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["DbName"] = request.DbName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
                 query["Tid"] = request.Tid;
@@ -42612,6 +42616,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
@@ -45968,6 +45976,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["Uid"] = request.Uid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidString))
+            {
+                query["UidString"] = request.UidString;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserNick))
             {
                 query["UserNick"] = request.UserNick;
@@ -46040,6 +46052,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
             {
                 query["Uid"] = request.Uid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidString))
+            {
+                query["UidString"] = request.UidString;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserNick))
             {
