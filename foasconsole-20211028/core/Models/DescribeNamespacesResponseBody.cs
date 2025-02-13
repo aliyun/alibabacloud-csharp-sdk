@@ -13,6 +13,20 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public List<DescribeNamespacesResponseBodyNamespaces> Namespaces { get; set; }
         public class DescribeNamespacesResponseBodyNamespaces : TeaModel {
+            [NameInMap("ElasticResourceSpec")]
+            [Validation(Required=false)]
+            public DescribeNamespacesResponseBodyNamespacesElasticResourceSpec ElasticResourceSpec { get; set; }
+            public class DescribeNamespacesResponseBodyNamespacesElasticResourceSpec : TeaModel {
+                [NameInMap("Cpu")]
+                [Validation(Required=false)]
+                public int? Cpu { get; set; }
+
+                [NameInMap("MemoryGB")]
+                [Validation(Required=false)]
+                public int? MemoryGB { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1629879567394</para>
@@ -28,6 +42,20 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
+
+            [NameInMap("GuaranteedResourceSpec")]
+            [Validation(Required=false)]
+            public DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec GuaranteedResourceSpec { get; set; }
+            public class DescribeNamespacesResponseBodyNamespacesGuaranteedResourceSpec : TeaModel {
+                [NameInMap("Cpu")]
+                [Validation(Required=false)]
+                public int? Cpu { get; set; }
+
+                [NameInMap("MemoryGB")]
+                [Validation(Required=false)]
+                public int? MemoryGB { get; set; }
+
+            }
 
             [NameInMap("Ha")]
             [Validation(Required=false)]

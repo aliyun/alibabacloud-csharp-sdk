@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public List<DescribeInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeInstancesResponseBodyInstances : TeaModel {
+            [NameInMap("Ansm")]
+            [Validation(Required=false)]
+            public bool? Ansm { get; set; }
+
             [NameInMap("ArchitectureType")]
             [Validation(Required=false)]
             public string ArchitectureType { get; set; }
@@ -145,11 +149,35 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
             [NameInMap("ClusterUsedResources")]
             [Validation(Required=false)]
-            public List<DescribeInstancesResponseBodyInstancesClusterUsedResources> ClusterUsedResources { get; set; }
+            public DescribeInstancesResponseBodyInstancesClusterUsedResources ClusterUsedResources { get; set; }
             public class DescribeInstancesResponseBodyInstancesClusterUsedResources : TeaModel {
                 [NameInMap("ClusterId")]
                 [Validation(Required=false)]
                 public string ClusterId { get; set; }
+
+                [NameInMap("ElasticUsedCpu")]
+                [Validation(Required=false)]
+                public float? ElasticUsedCpu { get; set; }
+
+                [NameInMap("ElasticUsedMemory")]
+                [Validation(Required=false)]
+                public float? ElasticUsedMemory { get; set; }
+
+                [NameInMap("ElasticUsedResource")]
+                [Validation(Required=false)]
+                public float? ElasticUsedResource { get; set; }
+
+                [NameInMap("GuaranteedUsedCpu")]
+                [Validation(Required=false)]
+                public float? GuaranteedUsedCpu { get; set; }
+
+                [NameInMap("GuaranteedUsedMemory")]
+                [Validation(Required=false)]
+                public float? GuaranteedUsedMemory { get; set; }
+
+                [NameInMap("GuaranteedUsedResource")]
+                [Validation(Required=false)]
+                public float? GuaranteedUsedResource { get; set; }
 
                 [NameInMap("Ha")]
                 [Validation(Required=false)]
@@ -192,6 +220,28 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 [NameInMap("UsedStorage")]
                 [Validation(Required=false)]
                 public float? UsedStorage { get; set; }
+
+            }
+
+            [NameInMap("Elastic")]
+            [Validation(Required=false)]
+            public bool? Elastic { get; set; }
+
+            [NameInMap("ElasticOrderState")]
+            [Validation(Required=false)]
+            public string ElasticOrderState { get; set; }
+
+            [NameInMap("ElasticResourceSpec")]
+            [Validation(Required=false)]
+            public DescribeInstancesResponseBodyInstancesElasticResourceSpec ElasticResourceSpec { get; set; }
+            public class DescribeInstancesResponseBodyInstancesElasticResourceSpec : TeaModel {
+                [NameInMap("Cpu")]
+                [Validation(Required=false)]
+                public int? Cpu { get; set; }
+
+                [NameInMap("MemoryGB")]
+                [Validation(Required=false)]
+                public int? MemoryGB { get; set; }
 
             }
 

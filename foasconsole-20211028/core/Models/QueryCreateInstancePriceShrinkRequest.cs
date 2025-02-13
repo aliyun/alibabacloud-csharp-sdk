@@ -113,14 +113,6 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou-i</para>
-        /// </summary>
-        [NameInMap("ZoneId")]
-        [Validation(Required=false)]
-        public string ZoneId { get; set; }
-
     }
 
 }

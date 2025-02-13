@@ -30,14 +30,6 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string HaVSwitchIdsShrink { get; set; }
 
         /// <summary>
-        /// <b>if can be null:</b>
-        /// <c>true</c>
-        /// </summary>
-        [NameInMap("HaZoneId")]
-        [Validation(Required=false)]
-        public string HaZoneId { get; set; }
-
-        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
