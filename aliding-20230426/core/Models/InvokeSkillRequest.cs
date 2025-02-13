@@ -1,0 +1,30 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Aliding20230426.Models
+{
+    public class InvokeSkillRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("Params")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Params { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>a1d033dd-xxxx-49cf-b49b-2068081bb551</para>
+        /// </summary>
+        [NameInMap("SkillId")]
+        [Validation(Required=false)]
+        public string SkillId { get; set; }
+
+    }
+
+}
