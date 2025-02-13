@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
-    public class SearchImageByPicResponse : TeaModel {
+    public class CompareSimilarByImageResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public SearchImageByPicResponseBody Body { get; set; }
+        public CompareSimilarByImageResponseBody Body { get; set; }
 
     }
 

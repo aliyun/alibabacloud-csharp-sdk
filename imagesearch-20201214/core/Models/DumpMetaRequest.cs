@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
     public class DumpMetaRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>imagesearchName</para>
+        /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
