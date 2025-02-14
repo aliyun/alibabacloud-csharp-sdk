@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiGroupsRequest : TeaModel {
+        /// <summary>
+        /// <para>The root path of the API.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/edmdgp/service20250116management01/v1</para>
+        /// </summary>
         [NameInMap("BasePath")]
         [Validation(Required=false)]
         public string BasePath { get; set; }

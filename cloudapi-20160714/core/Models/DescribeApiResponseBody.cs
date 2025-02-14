@@ -1063,6 +1063,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
+                /// <summary>
+                /// <para>The name of the trigger.</para>
+                /// <para>You can specify the TriggerName or TriggerUrl parameter. The TriggerName parameter is optional.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test1</para>
+                /// </summary>
                 [NameInMap("TriggerName")]
                 [Validation(Required=false)]
                 public string TriggerName { get; set; }
