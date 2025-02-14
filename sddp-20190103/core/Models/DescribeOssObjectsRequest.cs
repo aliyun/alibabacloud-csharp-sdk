@@ -76,6 +76,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public long? LastScanTimeStart { get; set; }
 
+        /// <summary>
+        /// <para>When you query data by page, use the <c>Marker</c> parameter to query the data that follows the <c>Marker</c> value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1754786235714378752</para>
+        /// </summary>
         [NameInMap("Marker")]
         [Validation(Required=false)]
         public long? Marker { get; set; }

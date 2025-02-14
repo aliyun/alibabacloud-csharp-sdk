@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>A list of columns.</para>
+        /// <para>The columns.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("DataType")]
             [Validation(Required=false)]
             public string DataType { get; set; }
+
+            [NameInMap("EngineType")]
+            [Validation(Required=false)]
+            public string EngineType { get; set; }
 
             /// <summary>
             /// <para>The ID of the column of the table.</para>
@@ -75,6 +79,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
+
+            [NameInMap("MaskingStatus")]
+            [Validation(Required=false)]
+            public int? MaskingStatus { get; set; }
 
             /// <summary>
             /// <para>A list of tags for data that hits the recognition model.</para>
@@ -169,6 +177,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
+            [NameInMap("ProductId")]
+            [Validation(Required=false)]
+            public long? ProductId { get; set; }
+
+            /// <summary>
+            /// <para>The region in which the asset resides.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-***</para>
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }

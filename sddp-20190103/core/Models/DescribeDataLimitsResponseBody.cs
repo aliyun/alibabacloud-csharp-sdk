@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>A list of data assets.</para>
+        /// <para>The data assets.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -217,6 +217,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public long? LastFinishedTime { get; set; }
 
+            /// <summary>
+            /// <para>The last scan start time of data assets, in milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>145600000</para>
+            /// </summary>
             [NameInMap("LastStartTime")]
             [Validation(Required=false)]
             public long? LastStartTime { get; set; }

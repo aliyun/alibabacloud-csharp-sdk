@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("EngineType")]
+        [Validation(Required=false)]
+        public string EngineType { get; set; }
+
         /// <summary>
         /// <para>The ID of the instance to which data in the column of the table belongs.</para>
         /// <remarks>

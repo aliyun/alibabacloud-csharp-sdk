@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Sddp20190103</AssemblyName>
-    <Version>1.4.2</Version>
+    <Version>1.4.3</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud Sensitive Data Discovery and Protection (20190103) SDK Library for .NET</Description>

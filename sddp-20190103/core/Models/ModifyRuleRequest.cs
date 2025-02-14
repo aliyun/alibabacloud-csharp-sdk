@@ -75,6 +75,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? MatchType { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the models for sensitive data audit.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1452</para>
+        /// </summary>
         [NameInMap("ModelRuleIds")]
         [Validation(Required=false)]
         public string ModelRuleIds { get; set; }
@@ -158,6 +164,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? SupportForm { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the templates that are used to audit sensitive data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("TemplateRuleIds")]
         [Validation(Required=false)]
         public string TemplateRuleIds { get; set; }

@@ -19,6 +19,19 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>The engine type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>MySQL</b></description></item>
+        /// <item><description><b>MariaDB</b></description></item>
+        /// <item><description><b>Oracle</b></description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><b>SQLServer</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL</para>
+        /// </summary>
         [NameInMap("EngineType")]
         [Validation(Required=false)]
         public string EngineType { get; set; }
@@ -60,6 +73,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>The data tag.</para>
+        /// <list type="bullet">
+        /// <item><description>101: personal sensitive information</description></item>
+        /// <item><description>102: personal information</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>101</para>
+        /// </summary>
         [NameInMap("ModelTagId")]
         [Validation(Required=false)]
         public string ModelTagId { get; set; }
@@ -95,6 +118,26 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the service to which the data object belongs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: MaxCompute</description></item>
+        /// <item><description><b>2</b>: Object Storage Service (OSS)</description></item>
+        /// <item><description><b>3</b>: AnalyticDB for MySQL</description></item>
+        /// <item><description><b>4</b>: Tablestore (OTS)</description></item>
+        /// <item><description><b>5</b>: ApsaraDB RDS</description></item>
+        /// <item><description><b>6</b>: self-managed database</description></item>
+        /// <item><description><b>7</b>: PolarDB for Xscale (PolarDB-X)</description></item>
+        /// <item><description><b>8</b>: PolarDB</description></item>
+        /// <item><description><b>9</b>: AnalyticDB for PostgreSQL</description></item>
+        /// <item><description><b>10</b>: ApsaraDB for OceanBase</description></item>
+        /// <item><description><b>11</b>: ApsaraDB for MongoDB</description></item>
+        /// <item><description><b>25</b>: ApsaraDB for Redis</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
         [NameInMap("ProductId")]
         [Validation(Required=false)]
         public string ProductId { get; set; }
@@ -179,10 +222,28 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string TableName { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the industry-specific classification template.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> operation to obtain the IDs of industry-specific classification templates.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the template rule that is hit.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/410143.html">DescribeCategoryTemplateRuleList</a> operation to obtain the IDs of hit template rules.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1542</para>
+        /// </summary>
         [NameInMap("TemplateRuleId")]
         [Validation(Required=false)]
         public string TemplateRuleId { get; set; }

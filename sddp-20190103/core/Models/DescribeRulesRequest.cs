@@ -33,6 +33,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? ContentCategory { get; set; }
 
+        /// <summary>
+        /// <para>The external cooperation channel. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DAS</description></item>
+        /// <item><description>YAOCHI</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DAS</para>
+        /// </summary>
         [NameInMap("CooperationChannel")]
         [Validation(Required=false)]
         public string CooperationChannel { get; set; }
@@ -199,6 +209,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? RuleType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to query a simplified rule. The simplified rule contains only the rule name. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Simplify")]
         [Validation(Required=false)]
         public bool? Simplify { get; set; }

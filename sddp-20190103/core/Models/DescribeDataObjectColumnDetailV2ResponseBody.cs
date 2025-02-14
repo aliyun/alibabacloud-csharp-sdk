@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string DataType { get; set; }
 
+            [NameInMap("EngineType")]
+            [Validation(Required=false)]
+            public string EngineType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1392973973691383808</para>
@@ -56,6 +60,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
+            [NameInMap("MaskingStatus")]
+            [Validation(Required=false)]
+            public int? MaskingStatus { get; set; }
 
             [NameInMap("ModelTags")]
             [Validation(Required=false)]
@@ -86,6 +98,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("PrimaryKey")]
             [Validation(Required=false)]
             public bool? PrimaryKey { get; set; }
+
+            [NameInMap("ProductId")]
+            [Validation(Required=false)]
+            public long? ProductId { get; set; }
+
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -118,6 +138,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
+
+            [NameInMap("TableName")]
+            [Validation(Required=false)]
+            public string TableName { get; set; }
 
         }
 

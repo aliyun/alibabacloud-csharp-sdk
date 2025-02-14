@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the data assets.</para>
+        /// <para>The data assets.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -90,6 +90,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public long? LastFinishTime { get; set; }
 
+            /// <summary>
+            /// <para>If the management account has opened multiple accounts and the asset belongs to other member accounts, this field displays the UID of the member accounts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12567890126</para>
+            /// </summary>
             [NameInMap("MemberAliUid")]
             [Validation(Required=false)]
             public string MemberAliUid { get; set; }

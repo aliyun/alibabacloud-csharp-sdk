@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the sensitive data detection rules.</para>
+        /// <para>The sensitive data detection rules.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -191,6 +191,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public int? MatchType { get; set; }
 
+            /// <summary>
+            /// <para>The IDs of the models for sensitive data audit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1452</para>
+            /// </summary>
             [NameInMap("ModelRuleIds")]
             [Validation(Required=false)]
             public string ModelRuleIds { get; set; }
@@ -308,6 +314,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string Target { get; set; }
 
+            /// <summary>
+            /// <para>The IDs of the templates that are used to audit sensitive data.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("TemplateRuleIds")]
             [Validation(Required=false)]
             public string TemplateRuleIds { get; set; }

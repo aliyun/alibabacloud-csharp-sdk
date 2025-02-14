@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>A list of OSS objects.</para>
+        /// <para>The OSS objects.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? RuleCount { get; set; }
 
             /// <summary>
-            /// <para>A list of rules.</para>
+            /// <para>The rules.</para>
             /// </summary>
             [NameInMap("RuleList")]
             [Validation(Required=false)]
@@ -241,10 +241,25 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         }
 
+        /// <summary>
+        /// <para>This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-1</para>
+        /// </summary>
         [NameInMap("Marker")]
         [Validation(Required=false)]
         public string Marker { get; set; }
 
+        /// <summary>
+        /// <para>The ID value from which the next page of results starts.</para>
+        /// <remarks>
+        /// <para> This parameter is returned only when the <c>Truncated</c> parameter is set to <c>true</c>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1754786235714378752</para>
+        /// </summary>
         [NameInMap("NextMarker")]
         [Validation(Required=false)]
         public string NextMarker { get; set; }
@@ -279,6 +294,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the queried entries are truncated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Truncated")]
         [Validation(Required=false)]
         public bool? Truncated { get; set; }

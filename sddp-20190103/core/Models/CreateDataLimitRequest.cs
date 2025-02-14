@@ -109,6 +109,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public int? FeatureType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to immediately scan the authorized asset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("InstantlyScan")]
         [Validation(Required=false)]
         public bool? InstantlyScan { get; set; }
@@ -158,7 +168,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? OcrStatus { get; set; }
 
         /// <summary>
-        /// <para>The name of the data asset.</para>
+        /// <para>The name of the asset. The value is a connection string. It consists of an instance ID and a database name, which are separated by a comma (,). This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-11**</para>
