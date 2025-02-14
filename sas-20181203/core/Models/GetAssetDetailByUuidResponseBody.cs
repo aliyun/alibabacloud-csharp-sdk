@@ -426,6 +426,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Uuid { get; set; }
 
+            /// <summary>
+            /// <para>The account to which the AccessKey pair belongs.</para>
+            /// <remarks>
+            /// <para> This parameter is returned only by third-party cloud servers. If the parameter value is empty, it will not be returned.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("VendorAuthAlias")]
             [Validation(Required=false)]
             public string VendorAuthAlias { get; set; }

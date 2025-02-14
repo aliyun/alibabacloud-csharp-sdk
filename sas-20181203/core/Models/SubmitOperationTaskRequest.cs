@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>提交操作关联的跨页选择关联Key。</para>
+        /// <para>The key linked to cross-page selections during task submission.</para>
         /// <remarks>
-        /// <para>您可调用<a href="~~CreateAssetSelectionConfig~~">CreateAssetSelectionConfig</a>接口BusinessType字段获取关联Key。</para>
+        /// <para> You can call the <a href="~~CreateAssetSelectionConfig~~">CreateAssetSelectionConfig</a> operation to query the associated key from the BusinessType field.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

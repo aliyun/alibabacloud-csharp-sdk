@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeOnceTaskLeafRecordPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the sub-task.</para>
+        /// <para>The details of tasks.</para>
         /// </summary>
         [NameInMap("OnceTasks")]
         [Validation(Required=false)]
@@ -279,6 +279,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// <para>The type of the image repository. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>acr</b></description></item>
+                /// <item><description><b>harbor</b></description></item>
+                /// <item><description><b>quay</b></description></item>
+                /// <item><description><b>CI/CD</b></description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>acr</para>
+                /// </summary>
                 [NameInMap("RegistryType")]
                 [Validation(Required=false)]
                 public string RegistryType { get; set; }

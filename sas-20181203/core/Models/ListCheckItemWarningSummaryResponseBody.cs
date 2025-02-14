@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckItemWarningSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The risk statistics of check items.</para>
+        /// <para>List of check item risk statistics.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
@@ -137,11 +137,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskType { get; set; }
 
             /// <summary>
-            /// <para>The risk status of the check item. Valid values:</para>
+            /// <para>Risk status of check items. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: failed</description></item>
             /// <item><description><b>3</b>: passed</description></item>
-            /// <item><description><b>6</b>: Added to Whitelist</description></item>
+            /// <item><description><b>6</b>: whitelisted</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

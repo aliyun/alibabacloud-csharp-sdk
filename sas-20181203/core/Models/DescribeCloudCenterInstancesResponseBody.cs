@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCloudCenterInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the details about the assets.</para>
+        /// <para>The details about the assets.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -160,6 +160,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ClientStatus { get; set; }
 
+            /// <summary>
+            /// <para>The sub-status of the Security Center agent installed on the asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>online</b>: The Security Center agent is <b>enabled</b>.</description></item>
+            /// <item><description><b>offline</b>: The Security Center agent is <b>disabled</b>.</description></item>
+            /// <item><description><b>pause</b>: The Security Center agent is <b>suspended</b>.</description></item>
+            /// <item><description><b>uninstalled</b>: The Security Center agent is <b>uninstalled</b>.</description></item>
+            /// <item><description><b>stopped</b>: The Security Center agent is <b>stopped</b>.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>online</para>
+            /// </summary>
             [NameInMap("ClientSubStatus")]
             [Validation(Required=false)]
             public string ClientSubStatus { get; set; }
@@ -596,6 +609,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string TagId { get; set; }
 
+            /// <summary>
+            /// <para>The custom tag added to the Lingjun node. This parameter is returned only for LINGJUN GPU-accelerated instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>app:test,type:lingjun</para>
+            /// </summary>
             [NameInMap("TagResources")]
             [Validation(Required=false)]
             public string TagResources { get; set; }

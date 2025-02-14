@@ -23,6 +23,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>The source of the check rules. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>image</b>: image.</description></item>
+        /// <item><description><b>agentless</b>: agentless detection.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>image</para>
+        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }

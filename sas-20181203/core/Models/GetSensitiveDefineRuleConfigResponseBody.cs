@@ -20,12 +20,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSensitiveDefineRuleConfigResponseBodyData Data { get; set; }
         public class GetSensitiveDefineRuleConfigResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether the new rule is enabled for automatic check only on agentless detection. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: disabled.</description></item>
+            /// <item><description><b>1</b>: enabled.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("EnableNewRule")]
             [Validation(Required=false)]
             public int? EnableNewRule { get; set; }

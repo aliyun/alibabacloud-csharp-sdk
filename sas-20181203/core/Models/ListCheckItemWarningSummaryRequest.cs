@@ -45,11 +45,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CheckType { get; set; }
 
         /// <summary>
-        /// <para>The risk status. Default value: null, which indicates that check items in all states are queried.Valid values:</para>
+        /// <para>The risk status. Default value is null, meaning check items in all states are queried. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: failed</description></item>
         /// <item><description><b>3</b>: passed</description></item>
-        /// <item><description><b>6</b>: Added to Whitelist</description></item>
+        /// <item><description><b>6</b>: whitelisted</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,6 +59,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CheckWarningStatus { get; set; }
 
+        /// <summary>
+        /// <para>The list of risk levels. If the CheckWarningStatus parameter is specified, only it takes effect.</para>
+        /// </summary>
         [NameInMap("CheckWarningStatusList")]
         [Validation(Required=false)]
         public List<int?> CheckWarningStatusList { get; set; }
@@ -157,6 +160,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        /// <summary>
+        /// <para>Start of time range for filtering alerts, effective only for querying historically handled alerts.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1732793158366</para>
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }

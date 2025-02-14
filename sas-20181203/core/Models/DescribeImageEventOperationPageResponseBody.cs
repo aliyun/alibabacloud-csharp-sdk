@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -91,6 +91,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                /// <summary>
+                /// <para>The remarks.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xxx</para>
+                /// </summary>
                 [NameInMap("Note")]
                 [Validation(Required=false)]
                 public string Note { get; set; }
@@ -121,6 +127,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 [NameInMap("Scenarios")]
                 [Validation(Required=false)]
                 public string Scenarios { get; set; }
+
+                /// <summary>
+                /// <para>The source of the whitelist. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>image</b>: image.</description></item>
+                /// <item><description><b>agentless</b>: agentless detection.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>agentless</para>
+                /// </summary>
+                [NameInMap("Source")]
+                [Validation(Required=false)]
+                public string Source { get; set; }
 
             }
 

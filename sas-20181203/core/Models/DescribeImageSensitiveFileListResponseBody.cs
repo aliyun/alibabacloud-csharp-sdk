@@ -334,6 +334,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string SensitiveFileName { get; set; }
 
+            /// <summary>
+            /// <para>The status of the sensitive file. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: unhandled.</description></item>
+            /// <item><description><b>1</b>: handled.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }

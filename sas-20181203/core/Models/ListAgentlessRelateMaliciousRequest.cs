@@ -30,6 +30,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? EventId { get; set; }
 
+        /// <summary>
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
@@ -45,6 +55,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The scenarios of batch handling. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>same_file_md5: the same MD5 hash value.</description></item>
+        /// <item><description>default: the same alert type. This is the default value.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
         [NameInMap("Scenario")]
         [Validation(Required=false)]
         public string Scenario { get; set; }

@@ -23,10 +23,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Config { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable the new ruled for automatic check only on agentless detection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: no.</description></item>
+        /// <item><description><b>1</b>: yes.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("EnableNewRule")]
         [Validation(Required=false)]
         public int? EnableNewRule { get; set; }
 
+        /// <summary>
+        /// <para>The source of the check rules. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>image</b>: image.</description></item>
+        /// <item><description><b>agentless</b>: agentless detection.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agentless</para>
+        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }

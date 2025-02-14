@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the content in the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -61,6 +61,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The regions that are examined during AccessKey pair authentication. This parameter takes effect only when Vendor is set to AWS.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to query regions.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -150,6 +153,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Vendor { get; set; }
 
+        /// <summary>
+        /// <para>The name of the AccessKey pair.</para>
+        /// <remarks>
+        /// <para> The account information of the third-party cloud servers.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("VendorAuthAlias")]
         [Validation(Required=false)]
         public string VendorAuthAlias { get; set; }

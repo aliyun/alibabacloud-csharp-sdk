@@ -75,6 +75,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeAgentlessSensitiveFileByKeyResponseBodySensitiveFileList> SensitiveFileList { get; set; }
         public class DescribeAgentlessSensitiveFileByKeyResponseBodySensitiveFileList : TeaModel {
+            /// <summary>
+            /// <para>The path to the sensitive file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/usr/lib/abc.txt</para>
+            /// </summary>
             [NameInMap("FilePath")]
             [Validation(Required=false)]
             public string FilePath { get; set; }
@@ -89,6 +95,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? FirstScanTime { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the alert for the sensitive file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>423505573</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
@@ -133,10 +145,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? LastScanTime { get; set; }
 
+            /// <summary>
+            /// <para>The MD5 hash value of the sensitive file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>b484b0dff093f358897486b58266****</para>
+            /// </summary>
             [NameInMap("Md5")]
             [Validation(Required=false)]
             public string Md5 { get; set; }
 
+            /// <summary>
+            /// <para>The content of the sensitive file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mysql -u -p****</para>
+            /// </summary>
             [NameInMap("Prompt")]
             [Validation(Required=false)]
             public string Prompt { get; set; }

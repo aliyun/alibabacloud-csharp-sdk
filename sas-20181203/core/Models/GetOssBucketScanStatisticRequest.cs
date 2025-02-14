@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> BucketNameList { get; set; }
 
         /// <summary>
-        /// <para>The source of the data. Valid values:</para>
+        /// <para>The data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>API</b></description></item>
-        /// <item><description><b>OSS</b></description></item>
+        /// <item><description><b>API</b>: API operations.</description></item>
+        /// <item><description><b>OSS</b>: Object Storage Service (OSS) file check.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

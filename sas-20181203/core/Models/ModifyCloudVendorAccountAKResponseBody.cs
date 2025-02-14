@@ -190,6 +190,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Vendor { get; set; }
 
+            /// <summary>
+            /// <para>The name of the AccessKey pair.</para>
+            /// <remarks>
+            /// <para> The account information of the third-party cloud servers.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("VendorAuthAlias")]
             [Validation(Required=false)]
             public string VendorAuthAlias { get; set; }

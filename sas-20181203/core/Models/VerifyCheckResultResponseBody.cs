@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string OperateCode { get; set; }
 
+            /// <summary>
+            /// <para>The task ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8eded533-5348-468c-aa1d-0aa2934a7***</para>
+            /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }

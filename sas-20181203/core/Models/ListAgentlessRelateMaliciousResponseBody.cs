@@ -16,28 +16,61 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<ListAgentlessRelateMaliciousResponseBodyList> List { get; set; }
         public class ListAgentlessRelateMaliciousResponseBodyList : TeaModel {
+            /// <summary>
+            /// <para>The details of the alert events.</para>
+            /// </summary>
             [NameInMap("Details")]
             [Validation(Required=false)]
             public List<ListAgentlessRelateMaliciousResponseBodyListDetails> Details { get; set; }
             public class ListAgentlessRelateMaliciousResponseBodyListDetails : TeaModel {
+                /// <summary>
+                /// <para>The name of the detailed item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MD5</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The name key of the detailed item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>${suspicious.mp.db.maliciousfilemd5}</para>
+                /// </summary>
                 [NameInMap("NameKey")]
                 [Validation(Required=false)]
                 public string NameKey { get; set; }
 
+                /// <summary>
+                /// <para>The type of the detailed item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>text</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
+                /// <summary>
+                /// <para>The value of the detailed item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1f2e13a7c51ee89316ae50066515****</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The URL to download the malicious image sample.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/">https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/</a>***</para>
+            /// </summary>
             [NameInMap("DownloadUrl")]
             [Validation(Required=false)]
             public string DownloadUrl { get; set; }
@@ -62,10 +95,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? FirstScanTimestamp { get; set; }
 
+            /// <summary>
+            /// <para>The highlighted JSON string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;highlight\&quot;:{\&quot;ruleVersion\&quot;:\&quot;20230223\&quot;,\&quot;ruleId\&quot;:600139,\&quot;events\&quot;:[[207,284]]}}</para>
+            /// </summary>
             [NameInMap("HighLight")]
             [Validation(Required=false)]
             public string HighLight { get; set; }
 
+            /// <summary>
+            /// <para>The event ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8012</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
@@ -110,42 +155,111 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? LatestScanTimestamp { get; set; }
 
+            /// <summary>
+            /// <para>The severity of the malicious file. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>serious</description></item>
+            /// <item><description>suspicious</description></item>
+            /// <item><description>remind</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>serious</para>
+            /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
             public string Level { get; set; }
 
+            /// <summary>
+            /// <para>The MD5 hash value of the malicious file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1f2e13a7c51ee89316ae50066515****</para>
+            /// </summary>
             [NameInMap("MaliciousMd5")]
             [Validation(Required=false)]
             public string MaliciousMd5 { get; set; }
 
+            /// <summary>
+            /// <para>The name of the malicious file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>WebShell</para>
+            /// </summary>
             [NameInMap("MaliciousName")]
             [Validation(Required=false)]
             public string MaliciousName { get; set; }
 
+            /// <summary>
+            /// <para>The type of the virus.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>WebShell</para>
+            /// </summary>
             [NameInMap("MaliciousType")]
             [Validation(Required=false)]
             public string MaliciousType { get; set; }
 
+            /// <summary>
+            /// <para>The handling result of the alert.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>addWhitelist.USER.Success</para>
+            /// </summary>
             [NameInMap("OperateResult")]
             [Validation(Required=false)]
             public string OperateResult { get; set; }
 
+            /// <summary>
+            /// <para>The timestamp when the alert is handled. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>168257753****</para>
+            /// </summary>
             [NameInMap("OperateTimestamp")]
             [Validation(Required=false)]
             public string OperateTimestamp { get; set; }
 
+            /// <summary>
+            /// <para>The partition of the disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/dev/xvda1</para>
+            /// </summary>
             [NameInMap("Partition")]
             [Validation(Required=false)]
             public string Partition { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the task object.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>m-****</para>
+            /// </summary>
             [NameInMap("TargetId")]
             [Validation(Required=false)]
             public string TargetId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the task object.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>image_***</para>
+            /// </summary>
             [NameInMap("TargetName")]
             [Validation(Required=false)]
             public string TargetName { get; set; }
 
+            /// <summary>
+            /// <para>The type of the task object. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: snapshot.</description></item>
+            /// <item><description><b>2</b>: image.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("TargetType")]
             [Validation(Required=false)]
             public string TargetType { get; set; }

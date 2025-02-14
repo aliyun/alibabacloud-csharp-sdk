@@ -57,6 +57,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string EventType { get; set; }
 
+        /// <summary>
+        /// <para>The remarks that you want to add.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("Note")]
         [Validation(Required=false)]
         public string Note { get; set; }
@@ -88,6 +94,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Scenarios { get; set; }
 
+        /// <summary>
+        /// <para>The source of the whitelist. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>image</b>: image.</description></item>
+        /// <item><description><b>agentless</b>: agentless detection.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agentless</para>
+        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }

@@ -77,6 +77,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SubAccountName { get; set; }
 
+        /// <summary>
+        /// <para>The name of the AccessKey pair.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("VendorAuthAlias")]
         [Validation(Required=false)]
         public string VendorAuthAlias { get; set; }

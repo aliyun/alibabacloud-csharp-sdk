@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateImageEventOperationResponseBodyData Data { get; set; }
         public class UpdateImageEventOperationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the alert handling rule.</para>
+            /// <para>The ID of the alert handling rule, which is the same as the value of the Id request parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>67429</para>

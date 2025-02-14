@@ -177,30 +177,69 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Historical check item statistics.</para>
+        /// </summary>
         [NameInMap("Summary")]
         [Validation(Required=false)]
         public GetCheckRiskStatisticsResponseBodySummary Summary { get; set; }
         public class GetCheckRiskStatisticsResponseBodySummary : TeaModel {
+            /// <summary>
+            /// <para>Check items handled today.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("HandledCheckToday")]
             [Validation(Required=false)]
             public int? HandledCheckToday { get; set; }
 
+            /// <summary>
+            /// <para>A risk item exists.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("HandledCheckTotal")]
             [Validation(Required=false)]
             public int? HandledCheckTotal { get; set; }
 
+            /// <summary>
+            /// <para>Total days since check items were handled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>365</para>
+            /// </summary>
             [NameInMap("HandledDays")]
             [Validation(Required=false)]
             public int? HandledDays { get; set; }
 
+            /// <summary>
+            /// <para>Check items that failed to pass the check.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("RiskCheckCnt")]
             [Validation(Required=false)]
             public int? RiskCheckCnt { get; set; }
 
+            /// <summary>
+            /// <para>Days since check items failed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
             [NameInMap("RiskDays")]
             [Validation(Required=false)]
             public int? RiskDays { get; set; }
 
+            /// <summary>
+            /// <para>Risks to be handled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("RiskWarningCnt")]
             [Validation(Required=false)]
             public int? RiskWarningCnt { get; set; }
