@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.IQS20240712
             {
                 query["originLongitude"] = request.OriginLongitude;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowPolyline))
+            {
+                query["showPolyline"] = request.ShowPolyline;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -139,6 +143,10 @@ namespace AlibabaCloud.SDK.IQS20240712
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
             {
                 query["originLongitude"] = request.OriginLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowPolyline))
+            {
+                query["showPolyline"] = request.ShowPolyline;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -553,6 +561,10 @@ namespace AlibabaCloud.SDK.IQS20240712
             {
                 query["plate"] = request.Plate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowPolyline))
+            {
+                query["showPolyline"] = request.ShowPolyline;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -625,6 +637,10 @@ namespace AlibabaCloud.SDK.IQS20240712
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Plate))
             {
                 query["plate"] = request.Plate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowPolyline))
+            {
+                query["showPolyline"] = request.ShowPolyline;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -729,6 +745,10 @@ namespace AlibabaCloud.SDK.IQS20240712
             {
                 query["originLongitude"] = request.OriginLongitude;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowPolyline))
+            {
+                query["showPolyline"] = request.ShowPolyline;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -793,6 +813,10 @@ namespace AlibabaCloud.SDK.IQS20240712
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
             {
                 query["originLongitude"] = request.OriginLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowPolyline))
+            {
+                query["showPolyline"] = request.ShowPolyline;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2405,6 +2429,10 @@ namespace AlibabaCloud.SDK.IQS20240712
             {
                 query["originLongitude"] = request.OriginLongitude;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowPolyline))
+            {
+                query["showPolyline"] = request.ShowPolyline;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2477,6 +2505,10 @@ namespace AlibabaCloud.SDK.IQS20240712
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
             {
                 query["originLongitude"] = request.OriginLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowPolyline))
+            {
+                query["showPolyline"] = request.ShowPolyline;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2581,6 +2613,10 @@ namespace AlibabaCloud.SDK.IQS20240712
             {
                 query["originLongitude"] = request.OriginLongitude;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowPolyline))
+            {
+                query["showPolyline"] = request.ShowPolyline;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2645,6 +2681,10 @@ namespace AlibabaCloud.SDK.IQS20240712
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginLongitude))
             {
                 query["originLongitude"] = request.OriginLongitude;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowPolyline))
+            {
+                query["showPolyline"] = request.ShowPolyline;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

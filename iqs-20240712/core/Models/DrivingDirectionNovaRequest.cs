@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
         [Validation(Required=false)]
         public string Plate { get; set; }
 
+        [NameInMap("showPolyline")]
+        [Validation(Required=false)]
+        public bool? ShowPolyline { get; set; }
+
     }
 
 }
