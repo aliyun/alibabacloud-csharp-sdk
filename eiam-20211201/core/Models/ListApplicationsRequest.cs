@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>enabled</para>
+        /// </summary>
+        [NameInMap("M2MClientStatus")]
+        [Validation(Required=false)]
+        public string M2MClientStatus { get; set; }
+
+        /// <summary>
         /// <para>The number of the page to return.</para>
         /// 
         /// <b>Example:</b>
@@ -73,6 +81,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>enabled</para>
+        /// </summary>
+        [NameInMap("ResourceServerStatus")]
+        [Validation(Required=false)]
+        public string ResourceServerStatus { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>oauth2/m2m</para>
+        /// </summary>
+        [NameInMap("SsoType")]
+        [Validation(Required=false)]
+        public string SsoType { get; set; }
 
         /// <summary>
         /// <para>The status of the application. Valid values:</para>

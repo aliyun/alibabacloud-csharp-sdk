@@ -143,6 +143,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string LockReason { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="https://cdn-cn-hangzhou.aliyunidaas.com/xx/logos/xx">https://cdn-cn-hangzhou.aliyunidaas.com/xx/logos/xx</a></para>
+            /// </summary>
             [NameInMap("LogoUrl")]
             [Validation(Required=false)]
             public string LogoUrl { get; set; }

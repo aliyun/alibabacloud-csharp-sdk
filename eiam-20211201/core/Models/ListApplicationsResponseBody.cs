@@ -122,6 +122,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string LogoUrl { get; set; }
 
+            [NameInMap("M2MClientStatus")]
+            [Validation(Required=false)]
+            public string M2MClientStatus { get; set; }
+
             /// <summary>
             /// <para>The service code of the cloud service that manages the application template.</para>
             /// 
@@ -131,6 +135,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("ManagedServiceCode")]
             [Validation(Required=false)]
             public string ManagedServiceCode { get; set; }
+
+            [NameInMap("ResourceServerIdentifier")]
+            [Validation(Required=false)]
+            public string ResourceServerIdentifier { get; set; }
+
+            [NameInMap("ResourceServerStatus")]
+            [Validation(Required=false)]
+            public string ResourceServerStatus { get; set; }
 
             /// <summary>
             /// <para>Indicates whether the application template is managed by a cloud service.</para>
