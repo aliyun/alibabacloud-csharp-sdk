@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20240712.Models
 {
     public class DrivingDirectionNovaResponseBody : TeaModel {
-        [NameInMap("code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
         [NameInMap("data")]
         [Validation(Required=false)]
         public DrivingDirectionNovaResponseBodyData Data { get; set; }
@@ -210,26 +206,6 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
             public string TaxiCost { get; set; }
 
         }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>success</para>
-        /// </summary>
-        [NameInMap("errorCode")]
-        [Validation(Required=false)]
-        public int? ErrorCode { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>Access was denied, message: No such namespace namespaces/general-perf-cn-shenzhen-e-default.</para>
-        /// </summary>
-        [NameInMap("errorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
 
         [NameInMap("requestId")]
         [Validation(Required=false)]

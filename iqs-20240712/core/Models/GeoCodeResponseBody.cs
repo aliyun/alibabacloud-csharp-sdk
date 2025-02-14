@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20240712.Models
 {
     public class GeoCodeResponseBody : TeaModel {
-        [NameInMap("code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<GeoCodeResponseBodyData> Data { get; set; }
@@ -84,26 +80,6 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
             public string Street { get; set; }
 
         }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>success</para>
-        /// </summary>
-        [NameInMap("errorCode")]
-        [Validation(Required=false)]
-        public int? ErrorCode { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>Pop sign mismatch, please check log.</para>
-        /// </summary>
-        [NameInMap("errorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
 
         [NameInMap("requestId")]
         [Validation(Required=false)]

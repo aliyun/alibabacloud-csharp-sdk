@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20240712.Models
 {
     public class NearbySearchNovaResponseBody : TeaModel {
-        [NameInMap("code")]
-        [Validation(Required=false)]
-        public string Code { get; set; }
-
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<NearbySearchNovaResponseBodyData> Data { get; set; }
@@ -178,26 +174,6 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
             public string Types { get; set; }
 
         }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>success</para>
-        /// </summary>
-        [NameInMap("errorCode")]
-        [Validation(Required=false)]
-        public int? ErrorCode { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <title>502 Bad Gateway</title>
-        /// </summary>
-        [NameInMap("errorMessage")]
-        [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
-
-        [NameInMap("message")]
-        [Validation(Required=false)]
-        public string Message { get; set; }
 
         [NameInMap("requestId")]
         [Validation(Required=false)]
