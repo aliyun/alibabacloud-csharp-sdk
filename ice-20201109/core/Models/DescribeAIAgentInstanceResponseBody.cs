@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public AIAgentRuntimeConfig RuntimeConfig { get; set; }
 
+            [NameInMap("SessionId")]
+            [Validation(Required=false)]
+            public string SessionId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Finished</para>

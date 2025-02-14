@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AddMediaConnectFlowInputRequest : TeaModel {
         /// <summary>
+        /// <para>IP whitelist, in CIDR format, separated by commas if multiple IP ranges are specified</para>
+        /// 
         /// <b>Example:</b>
         /// <para>19.168.1.1/32,18.168.1.1/16</para>
         /// </summary>
@@ -18,6 +20,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Cidrs { get; set; }
 
         /// <summary>
+        /// <para>Flow instance ID</para>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34900dc6-90ec-4968-af3c-fcd87f231a5f</para>
         /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FlowId { get; set; }
 
         /// <summary>
+        /// <para>Input URL, required when the input type is RTMP-PULL/SRT-Listener</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rtmp://pull.test.alivecdn.com/live/alitest</para>
         /// </summary>
@@ -34,6 +41,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputFromUrl { get; set; }
 
         /// <summary>
+        /// <para>Input name</para>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AliTestInput</para>
         /// </summary>
@@ -42,6 +52,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputName { get; set; }
 
         /// <summary>
+        /// <para>Input type</para>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RTMP-PUSH</para>
         /// </summary>
@@ -50,6 +63,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputProtocol { get; set; }
 
         /// <summary>
+        /// <para>Input bitrate, in bps</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2000000</para>
         /// </summary>
@@ -58,6 +73,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MaxBitrate { get; set; }
 
         /// <summary>
+        /// <para>Paired Flow ID, required when the input type is Flow</para>
+        /// 
         /// <b>Example:</b>
         /// <para>805fbdd0-575e-4146-b35d-ec7f63937b20</para>
         /// </summary>
@@ -66,6 +83,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PairFlowId { get; set; }
 
         /// <summary>
+        /// <para>Output name of the paired Flow, required when the input type is Flow</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AliTestOutput</para>
         /// </summary>
@@ -74,6 +93,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PairOutputName { get; set; }
 
         /// <summary>
+        /// <para>SRT latency, required when the input type is SRT-Listener/SRT-Caller</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -82,6 +103,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? SrtLatency { get; set; }
 
         /// <summary>
+        /// <para>SRT encryption key, required when the input type is SRT-Listener/SRT-Caller</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BETTERG08S01</para>
         /// </summary>
@@ -90,28 +113,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SrtPassphrase { get; set; }
 
         /// <summary>
+        /// <para>SRT encryption length, required when the input type is SRT-Listener/SRT-Caller</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32</para>
         /// </summary>
         [NameInMap("SrtPbkeyLen")]
         [Validation(Required=false)]
         public string SrtPbkeyLen { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>32</para>
-        /// </summary>
-        [NameInMap("SrtPbkeylen")]
-        [Validation(Required=false)]
-        public string SrtPbkeylen { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>BETTERG08S01</para>
-        /// </summary>
-        [NameInMap("SrtPbkeyssen")]
-        [Validation(Required=false)]
-        public string SrtPbkeyssen { get; set; }
 
     }
 

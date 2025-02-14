@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentTemplateConfigAvatarChat3D AvatarChat3D { get; set; }
         public class AIAgentTemplateConfigAvatarChat3D : TeaModel {
+            [NameInMap("AsrLanguageId")]
+            [Validation(Required=false)]
+            public string AsrLanguageId { get; set; }
+
             [NameInMap("AsrMaxSilence")]
             [Validation(Required=false)]
             public int? AsrMaxSilence { get; set; }
@@ -109,6 +113,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentTemplateConfigVisionChat VisionChat { get; set; }
         public class AIAgentTemplateConfigVisionChat : TeaModel {
+            [NameInMap("AsrLanguageId")]
+            [Validation(Required=false)]
+            public string AsrLanguageId { get; set; }
+
             [NameInMap("AsrMaxSilence")]
             [Validation(Required=false)]
             public int? AsrMaxSilence { get; set; }
@@ -201,6 +209,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentTemplateConfigVoiceChat VoiceChat { get; set; }
         public class AIAgentTemplateConfigVoiceChat : TeaModel {
+            [NameInMap("AsrLanguageId")]
+            [Validation(Required=false)]
+            public string AsrLanguageId { get; set; }
+
             [NameInMap("AsrMaxSilence")]
             [Validation(Required=false)]
             public int? AsrMaxSilence { get; set; }

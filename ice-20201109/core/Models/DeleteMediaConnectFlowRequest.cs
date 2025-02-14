@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteMediaConnectFlowRequest : TeaModel {
         /// <summary>
+        /// <para>Flow instance ID</para>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0381f478-7d53-4076-9d5f-27680a6f73e7</para>
         /// </summary>

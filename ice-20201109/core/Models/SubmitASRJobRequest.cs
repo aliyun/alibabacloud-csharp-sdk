@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Duration { get; set; }
 
+        [NameInMap("EditingConfig")]
+        [Validation(Required=false)]
+        public string EditingConfig { get; set; }
+
         /// <summary>
         /// <para>The input file. You can specify an Object Storage Service (OSS) URL or the ID of a media asset in the media asset library.</para>
         /// 

@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string FeatureIds { get; set; }
 
+            [NameInMap("IsTrial")]
+            [Validation(Required=false)]
+            public bool? IsTrial { get; set; }
+
             [NameInMap("SdkId")]
             [Validation(Required=false)]
             public int? SdkId { get; set; }

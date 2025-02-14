@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateMediaConnectFlowStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response body</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>Description of the API call</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ok</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20B3A1B6-4BD2-5DE6-BCBC-098C9B4F4E91</para>
         /// </summary>
@@ -34,12 +40,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>返回的错误码，0表示成功</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
         [NameInMap("RetCode")]
         [Validation(Required=false)]
-        public string RetCode { get; set; }
+        public int? RetCode { get; set; }
 
     }
 

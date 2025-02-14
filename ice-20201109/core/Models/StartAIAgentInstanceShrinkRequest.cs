@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RuntimeConfigShrink { get; set; }
 
+        [NameInMap("SessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
+
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
         public string TemplateConfigShrink { get; set; }

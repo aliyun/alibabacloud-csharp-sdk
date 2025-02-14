@@ -67,6 +67,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string OutputConfig { get; set; }
 
+        [NameInMap("Signature")]
+        [Validation(Required=false)]
+        public string Signature { get; set; }
+
+        [NameInMap("SignatureMehtod")]
+        [Validation(Required=false)]
+        public string SignatureMehtod { get; set; }
+
+        [NameInMap("SignatureNonce")]
+        [Validation(Required=false)]
+        public string SignatureNonce { get; set; }
+
+        [NameInMap("SignatureType")]
+        [Validation(Required=false)]
+        public string SignatureType { get; set; }
+
+        [NameInMap("SignatureVersion")]
+        [Validation(Required=false)]
+        public string SignatureVersion { get; set; }
+
         /// <summary>
         /// <list type="bullet">
         /// <item><description>The job title.</description></item>
