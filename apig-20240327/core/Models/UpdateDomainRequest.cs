@@ -9,25 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateDomainRequest : TeaModel {
-        /// <summary>
-        /// <para>Cloud Shield CA certificate identifier.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123455-cn-hangzhou</para>
-        /// </summary>
-        [NameInMap("caCertIndentifier")]
+        [NameInMap("caCertIdentifier")]
         [Validation(Required=false)]
-        public string CaCertIndentifier { get; set; }
+        public string CaCertIdentifier { get; set; }
 
-        /// <summary>
-        /// <para>Cloud Shield certificate identifier.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123458-cn-hangzhou</para>
-        /// </summary>
-        [NameInMap("certIndentifier")]
+        [NameInMap("certIdentifier")]
         [Validation(Required=false)]
-        public string CertIndentifier { get; set; }
+        public string CertIdentifier { get; set; }
 
         /// <summary>
         /// <para>Set the HTTPS protocol type, whether to enable forced HTTPS redirection.</para>
@@ -64,6 +52,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Protocol { get; set; }
 
+        /// <summary>
+        /// <para>TLS Cipher Suite Configuration.</para>
+        /// </summary>
         [NameInMap("tlsCipherSuitesConfig")]
         [Validation(Required=false)]
         public TlsCipherSuitesConfig TlsCipherSuitesConfig { get; set; }

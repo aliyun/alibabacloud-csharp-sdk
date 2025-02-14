@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewaysShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Query exactly by gateway ID.</para>
+        /// <para>Query exactly by Gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cpv4sqdl****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Query exactly by gateway name.</para>
+        /// <para>Query exactly by Gateway name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>itemcenter-gateway</para>
@@ -59,13 +59,22 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekz3wes3hnre5a</para>
+        /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("tags")]
+        /// <summary>
+        /// <para>Filter list by tags</para>
+        /// </summary>
+        [NameInMap("tag")]
         [Validation(Required=false)]
-        public string TagsShrink { get; set; }
+        public string TagShrink { get; set; }
 
     }
 

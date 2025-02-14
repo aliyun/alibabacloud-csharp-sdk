@@ -9,9 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateHttpApiRequest : TeaModel {
+        /// <summary>
+        /// <para>List of AI protocols.</para>
+        /// </summary>
         [NameInMap("aiProtocols")]
         [Validation(Required=false)]
         public List<string> AiProtocols { get; set; }
+
+        [NameInMap("authConfig")]
+        [Validation(Required=false)]
+        public AuthConfig AuthConfig { get; set; }
 
         /// <summary>
         /// <para>Base path of the API, which must start with a \&quot;/\&quot;.</para>
@@ -24,6 +31,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string BasePath { get; set; }
 
+        /// <summary>
+        /// <para>List of API deployment configurations.</para>
+        /// </summary>
         [NameInMap("deployConfigs")]
         [Validation(Required=false)]
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
@@ -37,6 +47,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("enableAuth")]
+        [Validation(Required=false)]
+        public bool? EnableAuth { get; set; }
 
         /// <summary>
         /// <para>Configuration information for the HTTP Ingress API.</para>

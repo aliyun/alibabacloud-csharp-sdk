@@ -9,10 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class TlsCipherSuitesConfig : TeaModel {
-        [NameInMap("cipherSuites")]
+        [NameInMap("configType")]
         [Validation(Required=false)]
-        public List<TlsCipherSuitesConfigCipherSuites> CipherSuites { get; set; }
-        public class TlsCipherSuitesConfigCipherSuites : TeaModel {
+        public string ConfigType { get; set; }
+
+        [NameInMap("tlsCipherSuite")]
+        [Validation(Required=false)]
+        public List<TlsCipherSuitesConfigTlsCipherSuite> TlsCipherSuite { get; set; }
+        public class TlsCipherSuitesConfigTlsCipherSuite : TeaModel {
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -22,10 +26,6 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> SupportVersions { get; set; }
 
         }
-
-        [NameInMap("configType")]
-        [Validation(Required=false)]
-        public string ConfigType { get; set; }
 
     }
 

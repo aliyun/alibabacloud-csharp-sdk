@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewaysRequest : TeaModel {
         /// <summary>
-        /// <para>Query exactly by gateway ID.</para>
+        /// <para>Query exactly by Gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cpv4sqdl****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Query exactly by gateway name.</para>
+        /// <para>Query exactly by Gateway name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>itemcenter-gateway</para>
@@ -59,18 +59,39 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekz3wes3hnre5a</para>
+        /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("tags")]
+        /// <summary>
+        /// <para>Filter list by tags</para>
+        /// </summary>
+        [NameInMap("tag")]
         [Validation(Required=false)]
-        public List<ListGatewaysRequestTags> Tags { get; set; }
-        public class ListGatewaysRequestTags : TeaModel {
+        public List<ListGatewaysRequestTag> Tag { get; set; }
+        public class ListGatewaysRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>owner</para>
+            /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>zhangsan</para>
+            /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
             public string Value { get; set; }

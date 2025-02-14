@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiOperation : TeaModel {
+        [NameInMap("authConfig")]
+        [Validation(Required=false)]
+        public AuthConfig AuthConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>获取用户信息</para>
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("enableAuth")]
+        [Validation(Required=false)]
+        public bool? EnableAuth { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

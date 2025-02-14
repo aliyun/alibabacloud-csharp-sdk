@@ -93,18 +93,36 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-aekzzzntl5njbpi</para>
+            /// </summary>
             [NameInMap("resourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <para>Related resource information.</para>
+            /// </summary>
             [NameInMap("statisticsInfo")]
             [Validation(Required=false)]
             public GetEnvironmentResponseBodyDataStatisticsInfo StatisticsInfo { get; set; }
             public class GetEnvironmentResponseBodyDataStatisticsInfo : TeaModel {
+                /// <summary>
+                /// <para>The array of related resource information.</para>
+                /// </summary>
                 [NameInMap("resourceStatistics")]
                 [Validation(Required=false)]
                 public List<ResourceStatistic> ResourceStatistics { get; set; }
 
+                /// <summary>
+                /// <para>The total number of entries returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4</para>
+                /// </summary>
                 [NameInMap("totalCount")]
                 [Validation(Required=false)]
                 public int? TotalCount { get; set; }

@@ -36,25 +36,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string Algorithm { get; set; }
 
-            /// <summary>
-            /// <para>Cloud Shield CA certificate identity.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>223576-cn-hangzhou</para>
-            /// </summary>
-            [NameInMap("caCertIndentifier")]
+            [NameInMap("caCertIdentifier")]
             [Validation(Required=false)]
-            public string CaCertIndentifier { get; set; }
+            public string CaCertIdentifier { get; set; }
 
-            /// <summary>
-            /// <para>Cloud Shield certificate identity.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>123576-cn-hangzhou</para>
-            /// </summary>
-            [NameInMap("certIndentifier")]
+            [NameInMap("certIdentifier")]
             [Validation(Required=false)]
-            public string CertIndentifier { get; set; }
+            public string CertIdentifier { get; set; }
 
             /// <summary>
             /// <para>Certificate name</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetHttpApiRouteResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Route detail data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public HttpRoute Data { get; set; }
 
         /// <summary>
+        /// <para>Response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3ACFC7A7-45A9-58CF-B2D5-765B60254695</para>
         /// </summary>

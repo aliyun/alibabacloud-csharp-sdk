@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string WithEnvironmentInfoById { get; set; }
 
+        [NameInMap("withIngressInfo")]
+        [Validation(Required=false)]
+        public bool? WithIngressInfo { get; set; }
+
         [NameInMap("withPluginAttachmentByPluginId")]
         [Validation(Required=false)]
         public string WithPluginAttachmentByPluginId { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public List<string> AiProtocols { get; set; }
 
+        [NameInMap("authConfig")]
+        [Validation(Required=false)]
+        public AuthConfig AuthConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>/v1</para>
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("enabelAuth")]
+        [Validation(Required=false)]
+        public bool? EnabelAuth { get; set; }
 
         [NameInMap("environments")]
         [Validation(Required=false)]

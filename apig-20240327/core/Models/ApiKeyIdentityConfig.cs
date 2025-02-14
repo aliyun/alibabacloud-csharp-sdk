@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ApiKeyIdentityConfig : TeaModel {
-        [NameInMap("apikey")]
-        [Validation(Required=false)]
-        public string Apikey { get; set; }
-
         [NameInMap("apikeySource")]
         [Validation(Required=false)]
         public ApiKeyIdentityConfigApikeySource ApikeySource { get; set; }
@@ -27,9 +23,19 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         }
 
-        [NameInMap("generateMode")]
+        [NameInMap("credentials")]
         [Validation(Required=false)]
-        public string GenerateMode { get; set; }
+        public List<ApiKeyIdentityConfigCredentials> Credentials { get; set; }
+        public class ApiKeyIdentityConfigCredentials : TeaModel {
+            [NameInMap("apikey")]
+            [Validation(Required=false)]
+            public string Apikey { get; set; }
+
+            [NameInMap("generateMode")]
+            [Validation(Required=false)]
+            public string GenerateMode { get; set; }
+
+        }
 
         [NameInMap("type")]
         [Validation(Required=false)]

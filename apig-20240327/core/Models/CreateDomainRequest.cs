@@ -75,10 +75,19 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Protocol { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekzoiafjtr7zyq</para>
+        /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The TLS cipher suites config.</para>
+        /// </summary>
         [NameInMap("tlsCipherSuitesConfig")]
         [Validation(Required=false)]
         public TlsCipherSuitesConfig TlsCipherSuitesConfig { get; set; }

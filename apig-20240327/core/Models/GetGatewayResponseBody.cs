@@ -283,6 +283,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string Replicas { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-aek2s3cvc4jzfxi</para>
+            /// </summary>
             [NameInMap("resourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -350,14 +356,29 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The resource tags.</para>
+            /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<GetGatewayResponseBodyDataTags> Tags { get; set; }
             public class GetGatewayResponseBodyDataTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>owner</para>
+                /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag value of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>zhangsan</para>
+                /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

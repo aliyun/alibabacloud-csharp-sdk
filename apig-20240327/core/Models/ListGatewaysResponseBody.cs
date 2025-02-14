@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Result of the gateway list query.</para>
+        /// <para>Result of gateway list query.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>Expiration timestamp for the prepaid (annual or monthly) plan. Unit: milliseconds.</para>
+                /// <para>Expiration timestamp for prepaid (annual or monthly) subscriptions. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172086834548</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string LoadBalancerId { get; set; }
 
                     /// <summary>
-                    /// <para>Mode of load balancer provision for the gateway:</para>
+                    /// <para>Load balancer provision mode for the gateway:</para>
                     /// <list type="bullet">
                     /// <item><description>Managed: Managed by the Cloud Native API Gateway.</description></item>
                     /// </list>
@@ -251,6 +251,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public string Replicas { get; set; }
 
+                /// <summary>
+                /// <para>Resource group ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-xxx</para>
+                /// </summary>
                 [NameInMap("resourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
@@ -264,6 +270,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public class ListGatewaysResponseBodyDataItemsSecurityGroup : TeaModel {
                     /// <summary>
                     /// <para>The Security Group ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sg-xxxx</para>
                     /// </summary>
                     [NameInMap("securityGroupId")]
                     [Validation(Required=false)]
@@ -305,22 +314,41 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                [NameInMap("subDomainInfos")]
+                [Validation(Required=false)]
+                public List<SubDomainInfo> SubDomainInfos { get; set; }
+
+                /// <summary>
+                /// <para>Array of tags.</para>
+                /// </summary>
                 [NameInMap("tags")]
                 [Validation(Required=false)]
                 public List<ListGatewaysResponseBodyDataItemsTags> Tags { get; set; }
                 public class ListGatewaysResponseBodyDataItemsTags : TeaModel {
-                    [NameInMap("tagKey")]
+                    /// <summary>
+                    /// <para>The key of the tag.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>owner</para>
+                    /// </summary>
+                    [NameInMap("key")]
                     [Validation(Required=false)]
-                    public string TagKey { get; set; }
+                    public string Key { get; set; }
 
-                    [NameInMap("tagValue")]
+                    /// <summary>
+                    /// <para>The value of the tag.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>zhangsan</para>
+                    /// </summary>
+                    [NameInMap("value")]
                     [Validation(Required=false)]
-                    public string TagValue { get; set; }
+                    public string Value { get; set; }
 
                 }
 
                 /// <summary>
-                /// <para>Target version of the gateway. When it is inconsistent with <c>version</c>, a version upgrade can be performed.</para>
+                /// <para>Target version of the gateway. When it is inconsistent with the current <c>version</c>, an upgrade can be performed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.0.2</para>
@@ -339,6 +367,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public long? UpdateTimestamp { get; set; }
 
+                /// <summary>
+                /// <para>The vSwtich.</para>
+                /// </summary>
                 [NameInMap("vSwitch")]
                 [Validation(Required=false)]
                 public ListGatewaysResponseBodyDataItemsVSwitch VSwitch { get; set; }
@@ -365,6 +396,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public string Version { get; set; }
 
+                /// <summary>
+                /// <para>The VPC.</para>
+                /// </summary>
                 [NameInMap("vpc")]
                 [Validation(Required=false)]
                 public ListGatewaysResponseBodyDataItemsVpc Vpc { get; set; }
@@ -381,6 +415,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                 }
 
+                /// <summary>
+                /// <para>The Zones.</para>
+                /// </summary>
                 [NameInMap("zones")]
                 [Validation(Required=false)]
                 public List<ListGatewaysResponseBodyDataItemsZones> Zones { get; set; }
@@ -408,7 +445,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The ID of the current zone.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>cn-hangzhou</para>
+                    /// <para>cn-hangzhou-f</para>
                     /// </summary>
                     [NameInMap("zoneId")]
                     [Validation(Required=false)]
