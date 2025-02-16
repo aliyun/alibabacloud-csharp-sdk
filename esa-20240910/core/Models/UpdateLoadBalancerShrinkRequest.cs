@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Enabled")]
+        [Validation(Required=false)]
+        public bool? Enabled { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>96228666776****</para>
@@ -85,10 +89,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("SessionAffinity")]
         [Validation(Required=false)]
         public string SessionAffinity { get; set; }
-
-        [NameInMap("SessionAffinityAttributes")]
-        [Validation(Required=false)]
-        public string SessionAffinityAttributesShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

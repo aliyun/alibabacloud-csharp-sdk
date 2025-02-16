@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Enabled")]
+        [Validation(Required=false)]
+        public bool? Enabled { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -202,24 +206,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("SessionAffinity")]
         [Validation(Required=false)]
         public string SessionAffinity { get; set; }
-
-        [NameInMap("SessionAffinityAttributes")]
-        [Validation(Required=false)]
-        public CreateLoadBalancerRequestSessionAffinityAttributes SessionAffinityAttributes { get; set; }
-        public class CreateLoadBalancerRequestSessionAffinityAttributes : TeaModel {
-            [NameInMap("SameSite")]
-            [Validation(Required=false)]
-            public string SameSite { get; set; }
-
-            [NameInMap("Secure")]
-            [Validation(Required=false)]
-            public string Secure { get; set; }
-
-            [NameInMap("ZeroDowntimeFailover")]
-            [Validation(Required=false)]
-            public string ZeroDowntimeFailover { get; set; }
-
-        }
 
         /// <summary>
         /// <para>This parameter is required.</para>

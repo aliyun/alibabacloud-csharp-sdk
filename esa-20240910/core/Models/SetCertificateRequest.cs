@@ -103,16 +103,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
-        /// <summary>
-        /// <para>Specifies whether to update the certificate.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
-        [NameInMap("Update")]
-        [Validation(Required=false)]
-        public bool? Update { get; set; }
-
     }
 
 }

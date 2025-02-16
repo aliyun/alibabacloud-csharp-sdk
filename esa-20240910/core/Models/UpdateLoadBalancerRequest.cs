@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Enabled")]
+        [Validation(Required=false)]
+        public bool? Enabled { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>96228666776****</para>
@@ -333,36 +337,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("SessionAffinity")]
         [Validation(Required=false)]
         public string SessionAffinity { get; set; }
-
-        [NameInMap("SessionAffinityAttributes")]
-        [Validation(Required=false)]
-        public UpdateLoadBalancerRequestSessionAffinityAttributes SessionAffinityAttributes { get; set; }
-        public class UpdateLoadBalancerRequestSessionAffinityAttributes : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>Lax</para>
-            /// </summary>
-            [NameInMap("SameSite")]
-            [Validation(Required=false)]
-            public string SameSite { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>Always</para>
-            /// </summary>
-            [NameInMap("Secure")]
-            [Validation(Required=false)]
-            public string Secure { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>sticky</para>
-            /// </summary>
-            [NameInMap("ZeroDowntimeFailover")]
-            [Validation(Required=false)]
-            public string ZeroDowntimeFailover { get; set; }
-
-        }
 
         /// <summary>
         /// <para>This parameter is required.</para>
