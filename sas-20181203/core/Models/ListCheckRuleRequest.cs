@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the check item.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> API to get the check item ID.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>58</para>
         /// </summary>
@@ -18,6 +23,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
+        /// <para>The name of the check item.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>checkName</para>
         /// </summary>
@@ -26,6 +33,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CheckName { get; set; }
 
         /// <summary>
+        /// <para>The page number displayed in a paginated query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +43,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>Set the language type for the request and response messages. The default is <b>zh</b>. Values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -42,6 +57,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The number of check items displayed per page in a paginated query. The default value is <b>20</b>, indicating 20 check items per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -50,6 +67,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The type of rule. Default is <b>WHITE</b>. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>WHITE</b>: Add to whitelist</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>WHITE</para>
         /// </summary>
@@ -58,6 +80,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleType { get; set; }
 
         /// <summary>
+        /// <para>The scope where the rule applies. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>INSTNACE</b>: Instance</description></item>
+        /// <item><description><b>ITEM</b>: Check item</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>INSTANCE</para>
         /// </summary>

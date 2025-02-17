@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The source of the alert handling rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>image</b>: image.</description></item>
+        /// <item><description><b>default</b>: image.</description></item>
         /// <item><description><b>agentless</b>: agentless detection.</description></item>
         /// </list>
         /// 

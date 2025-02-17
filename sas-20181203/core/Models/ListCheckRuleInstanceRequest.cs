@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckRuleInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The page number of the current page when performing a paginated query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>Instance list.</para>
+        /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public List<ListCheckRuleInstanceRequestInstanceList> InstanceList { get; set; }
         public class ListCheckRuleInstanceRequestInstanceList : TeaModel {
             /// <summary>
+            /// <para>Asset instance ID.</para>
+            /// <remarks>
+            /// <para>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> interface to get this parameter.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>i-wz9fdluqx20mp2x7****</para>
             /// </summary>
@@ -30,6 +40,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The region where the asset is located.</para>
+            /// <remarks>
+            /// <para>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> interface to get this parameter.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hongkong</para>
             /// </summary>
@@ -40,6 +55,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of items per page in a paginated query. The default value is <b>20</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -48,6 +65,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Rule ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">LisCheckRule</a> interface to get this parameter.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

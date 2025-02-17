@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetServerlessAuthSummaryRequest : TeaModel {
         /// <summary>
+        /// <para>Application region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AppRegionId { get; set; }
 
         /// <summary>
+        /// <para>Server type: </para>
+        /// <list type="bullet">
+        /// <item><description><b>RunD</b></description></item>
+        /// <item><description><b>ECI</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>RunD</para>
         /// </summary>
@@ -26,6 +34,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MachineType { get; set; }
 
         /// <summary>
+        /// <para>Cloud product: </para>
+        /// <list type="bullet">
+        /// <item><description><b>ASK</b></description></item>
+        /// <item><description><b>SAE</b></description></item>
+        /// <item><description><b>ACS</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>SAE</para>
         /// </summary>

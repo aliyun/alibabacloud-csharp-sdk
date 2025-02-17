@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyCheckRuleRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of instances to be added in this rule update. This parameter does not need to be passed if there are no instances to add.</para>
+        /// </summary>
         [NameInMap("AddInstanceList")]
         [Validation(Required=false)]
         public List<ModifyCheckRuleRequestAddInstanceList> AddInstanceList { get; set; }
         public class ModifyCheckRuleRequestAddInstanceList : TeaModel {
             /// <summary>
+            /// <para>The instance ID of the asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>i-wz9g8ljygfqs1ez3****</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The region ID of the asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
             /// </summary>
@@ -31,11 +38,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// <para>The list of instances to be removed in this rule update. This parameter does not need to be passed if there are no instances to remove.</para>
+        /// </summary>
         [NameInMap("DeleteInstanceList")]
         [Validation(Required=false)]
         public List<ModifyCheckRuleRequestDeleteInstanceList> DeleteInstanceList { get; set; }
         public class ModifyCheckRuleRequestDeleteInstanceList : TeaModel {
             /// <summary>
+            /// <para>The instance ID of the asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>i-8vb0e8qdaj0yyxjo****</para>
             /// </summary>
@@ -44,6 +56,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The region ID of the asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
             /// </summary>
@@ -54,6 +68,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
+        /// <para>Remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testRemark</para>
         /// </summary>
@@ -62,6 +78,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
+        /// <para>Rule ID.</para>
+        /// <remarks>
+        /// <para>You can obtain this parameter by calling the <a href="https://help.aliyun.com/document_detail/2590599.html">ListCheckRule</a> API.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +92,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RuleId { get; set; }
 
         /// <summary>
+        /// <para>Rule type. Default is <b>WHITE</b>. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>WHITE</b>: Add to whitelist</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>WHITE</para>
         /// </summary>
@@ -80,6 +105,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleType { get; set; }
 
         /// <summary>
+        /// <para>The scope of effect for modifying the rule:</para>
+        /// <list type="bullet">
+        /// <item><description><b>INSTANCE</b>: Instance</description></item>
+        /// <item><description><b>ITEM</b>: Check item</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>INSTANCE</para>
         /// </summary>
