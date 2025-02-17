@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
 
         [NameInMap("userParams")]
         [Validation(Required=false)]
-        public Dictionary<string, object> UserParams { get; set; }
+        public object UserParams { get; set; }
 
     }
 
