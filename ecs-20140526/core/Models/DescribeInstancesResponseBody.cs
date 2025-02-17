@@ -867,8 +867,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 public bool? Primary { get; set; }
 
                                 /// <summary>
+                                /// <para>The private domain name of the instance.</para>
                                 /// <remarks>
-                                /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                                /// <para> This parameter has a value in a specific format only if <c>HostnameType</c> is set to <c>IpBased</c> or <c>InstanceIdBased</c>.</para>
                                 /// </remarks>
                                 /// 
                                 /// <b>Example:</b>
@@ -987,18 +988,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <remarks>
-                /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                /// </remarks>
+                /// <para>The private domain name options of the instance.</para>
+                /// <para>For information about the resolution of ECS private domain names, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private DNS resolution</a>.</para>
                 /// </summary>
                 [NameInMap("PrivateDnsNameOptions")]
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions PrivateDnsNameOptions { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstancePrivateDnsNameOptions : TeaModel {
                     /// <summary>
-                    /// <remarks>
-                    /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                    /// </remarks>
+                    /// <para>Indicates whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv6 Address (AAAA Record) is enabled. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true</description></item>
+                    /// <item><description>false</description></item>
+                    /// </list>
+                    /// <para>Default value: false.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -1008,9 +1011,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public bool? EnableInstanceIdDnsAAAARecord { get; set; }
 
                     /// <summary>
-                    /// <remarks>
-                    /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                    /// </remarks>
+                    /// <para>Indicates whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true</description></item>
+                    /// <item><description>false</description></item>
+                    /// </list>
+                    /// <para>Default value: false.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -1020,9 +1026,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public bool? EnableInstanceIdDnsARecord { get; set; }
 
                     /// <summary>
-                    /// <remarks>
-                    /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                    /// </remarks>
+                    /// <para>Indicates whether DNS Resolution from the IP Address-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true</description></item>
+                    /// <item><description>false</description></item>
+                    /// </list>
+                    /// <para>Default value: false.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -1032,9 +1041,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public bool? EnableIpDnsARecord { get; set; }
 
                     /// <summary>
-                    /// <remarks>
-                    /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                    /// </remarks>
+                    /// <para>Indicates whether Reverse DNS Resolution from the Instance Primary Private IPv4 Address to the IP Address-based Hostname (PTR Record) is enabled. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true</description></item>
+                    /// <item><description>false</description></item>
+                    /// </list>
+                    /// <para>Default value: false.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -1044,9 +1056,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public bool? EnableIpDnsPtrRecord { get; set; }
 
                     /// <summary>
-                    /// <remarks>
-                    /// <para> This parameter is in invitational preview and is not publicly available.</para>
-                    /// </remarks>
+                    /// <para>The type of hostname. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Custom: custom hostname</description></item>
+                    /// <item><description>IpBased: IP address-based hostname</description></item>
+                    /// <item><description>InstanceIdBased: instance ID-based hostname</description></item>
+                    /// </list>
+                    /// <para>Default value: Custom.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Custom</para>

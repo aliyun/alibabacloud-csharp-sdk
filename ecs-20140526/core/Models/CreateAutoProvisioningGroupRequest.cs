@@ -734,6 +734,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string UserData { get; set; }
 
+            [NameInMap("AutoRenew")]
+            [Validation(Required=false)]
+            public bool? AutoRenew { get; set; }
+
+            [NameInMap("AutoRenewPeriod")]
+            [Validation(Required=false)]
+            public int? AutoRenewPeriod { get; set; }
+
+            [NameInMap("Period")]
+            [Validation(Required=false)]
+            public int? Period { get; set; }
+
+            [NameInMap("PeriodUnit")]
+            [Validation(Required=false)]
+            public string PeriodUnit { get; set; }
+
         }
 
         /// <summary>
@@ -1076,6 +1092,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PayAsYouGoTargetCapacity")]
         [Validation(Required=false)]
         public string PayAsYouGoTargetCapacity { get; set; }
+
+        [NameInMap("PrePaidOptions")]
+        [Validation(Required=false)]
+        public CreateAutoProvisioningGroupRequestPrePaidOptions PrePaidOptions { get; set; }
+        public class CreateAutoProvisioningGroupRequestPrePaidOptions : TeaModel {
+            [NameInMap("SpecifyCapacityDistribution")]
+            [Validation(Required=false)]
+            public List<CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution> SpecifyCapacityDistribution { get; set; }
+            public class CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution : TeaModel {
+                [NameInMap("InstanceTypes")]
+                [Validation(Required=false)]
+                public List<string> InstanceTypes { get; set; }
+
+                [NameInMap("MinTargetCapacity")]
+                [Validation(Required=false)]
+                public int? MinTargetCapacity { get; set; }
+
+            }
+
+        }
 
         /// <summary>
         /// <para>The ID of the region in which to create the auto provisioning group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>

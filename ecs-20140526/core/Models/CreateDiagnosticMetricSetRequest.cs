@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDiagnosticMetricSetRequest : TeaModel {
         /// <summary>
-        /// <para>testDescription</para>
+        /// <para>The description of the diagnostic metric set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The ID of the request.</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of diagnostic metric.</para>
+        /// <para>The IDs of diagnostic metrics. You can specify up to 100 diagnostic metric IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MetricIds")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> MetricIds { get; set; }
 
         /// <summary>
-        /// <para>my_dms</para>
+        /// <para>The name of the diagnostic metric set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The IDs of diagnostic metrics. You can specify up to 100 diagnostic metric IDs.</para>
@@ -38,8 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MetricSetName { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
-        /// <para>Default value: instance.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +49,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the diagnostic metric set.</para>
+        /// <para>The type of the resource.</para>
+        /// <para>Default value: instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

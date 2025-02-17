@@ -96,13 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The state of SCUs. You can specify 1 to 4 types of state. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Creating: The SCUs are being created.</description></item>
-        /// <item><description>Active: The SCUs are in effect.</description></item>
-        /// <item><description>Expired: The SCUs have expired.</description></item>
-        /// <item><description>Pending: The SCUs have not taken effect.</description></item>
-        /// </list>
+        /// <para>The states of SCUs. The array is 1 to 4 in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -112,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>One or multiple SCU IDs. You can specify 1 to 100 SCU IDs.</para>
+        /// <para>The IDs of the SCUs. You can specify 1 to 100 SCU IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scu-bp67acfmxazb4p****</para>
@@ -122,14 +116,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> StorageCapacityUnitId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the SCUs.</para>
+        /// <para>The tags to add to the SCU. You can add up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeStorageCapacityUnitsRequestTag> Tag { get; set; }
         public class DescribeStorageCapacityUnitsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.</para>
+            /// <para>The key of tag N to be added to the SCU.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -139,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. The value of N must coincide with <c>Tag.N.Key</c>. Valid values of N: 1 to 20.</para>
+            /// <para>The value of tag N to be added to the SCU.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

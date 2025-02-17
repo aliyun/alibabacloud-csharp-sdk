@@ -12,12 +12,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The payment is automatically completed. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and will be canceled.</description></item>
+        /// <item><description>true: The payment is automatically completed. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled.</description></item>
         /// <item><description>false: An order is generated but no payment is made.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// <remarks>
-        /// <para>If you do not have sufficient balance in your account, you can set <c>AutoPay</c> to <c>false</c> to generate an unpaid order. Then, you can pay for the order.</para>
+        /// <para> If you do not have sufficient balance in your account, you can set <c>AutoPay</c> to <c>false</c> to generate an unpaid order. Then, you can pay for the order.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The new billing method of the dedicated hosts. Valid values:</para>
+        /// <para>The new billing method for the dedicated host. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PrePaid: changes the billing method from pay-as-you-go to subscription.</description></item>
         /// <item><description>PostPaid: changes the billing method from subscription to pay-as-you-go.</description></item>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// <item><description>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
         /// </list>
         /// <para>Default value: false.</para>

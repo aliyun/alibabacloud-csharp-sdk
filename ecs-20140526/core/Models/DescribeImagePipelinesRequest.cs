@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> ImagePipelineId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 500</para>
+        /// <para>The maximum number of entries per page. Valid values: 1 to 500.</para>
         /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>

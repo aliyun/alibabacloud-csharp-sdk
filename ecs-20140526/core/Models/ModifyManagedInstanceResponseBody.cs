@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyManagedInstanceResponseBodyInstance Instance { get; set; }
         public class ModifyManagedInstanceResponseBodyInstance : TeaModel {
             /// <summary>
+            /// <para>The managed instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mi-hz01nmcf****</para>
             /// </summary>

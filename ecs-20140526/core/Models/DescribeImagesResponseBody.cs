@@ -176,6 +176,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string Device { get; set; }
 
                         /// <summary>
+                        /// <remarks>
+                        /// <para> This parameter is in invitational preview.</para>
+                        /// </remarks>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -283,6 +287,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string CpuOnlineUpgrade { get; set; }
 
                     /// <summary>
+                    /// <para>The image metadata access mode. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>v1: You cannot set the image metadata access mode to security hardening when you create instances from the image.</description></item>
+                    /// <item><description>v2: You can set the image metadata access mode to security hardening when you create instances from the image.</description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>v2</para>
                     /// </summary>

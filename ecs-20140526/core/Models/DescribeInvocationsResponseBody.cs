@@ -465,6 +465,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <item><description>Period: The command is run on a schedule.</description></item>
                 /// <item><description>NextRebootOnly: The command is run the next time the instances start.</description></item>
                 /// <item><description>EveryReboot: The command is run every time the instances start.</description></item>
+                /// <item><description>DryRun: The system performs only a dry run, without running the actual command. The system checks the request parameters, the execution environments on the instances, and the status of Cloud Assistant Agent.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

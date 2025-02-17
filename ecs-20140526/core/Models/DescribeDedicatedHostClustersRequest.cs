@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of dedicated host clusters. The value can be a JSON array that consists of up to 100 dedicated host cluster IDs in the format of <c>[&quot;dc-xxxxxxxxx&quot;, &quot;dc-yyyyyyyyy&quot;, ... &quot;dc-zzzzzzzzz&quot;]</c>. Separate the IDs with commas (,).</para>
+        /// <para>The list of host group IDs. The value can be a JSON array consisting of multiple IDs in the <c>[&quot;dc-xxxxxxxxx&quot;, &quot;dc-yyyyyyyyy&quot;,..., &quot;dc-zzzzzzzzz&quot;]</c> format. Separate the IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;dc-bp12wlf6am0vz9v2****&quot;, &quot;dc-bp12wlf6am0vz9v3****&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostClusterIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the dedicated host cluster.</para>
+        /// <para>The name of the host group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myDDHCluster</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The page number.</para>
         /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>Default value: 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,9 +85,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the dedicated host cluster belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</para>
+        /// <para>The resource group ID of the host group. You can use a resource group ID to filter no more than 1,000 host groups.</para>
         /// <remarks>
-        /// <para> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</para>
+        /// <para> A default resource group is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,15 +118,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags of the dedicated host cluster.</para>
+        /// <para>The tags of the host group.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDedicatedHostClustersRequestTag> Tag { get; set; }
         public class DescribeDedicatedHostClustersRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the dedicated host cluster. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
-            /// <para>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
+            /// <para>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 64 characters in length, and can neither contain <c>http://</c> or <c>https://</c> nor <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>You can filter no more than 1,000 host groups, regardless of how many tags are used. To query more than 1,000 host groups, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> API operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The tag value. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The zone ID of the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// <para>The zone ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-f</para>

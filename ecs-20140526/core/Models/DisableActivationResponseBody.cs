@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DisableActivationResponseBodyActivation Activation { get; set; }
         public class DisableActivationResponseBodyActivation : TeaModel {
             /// <summary>
+            /// <para>The ID of the activation code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4ECEEE12-56F1-4FBC-9AB1-890F1234****</para>
             /// </summary>

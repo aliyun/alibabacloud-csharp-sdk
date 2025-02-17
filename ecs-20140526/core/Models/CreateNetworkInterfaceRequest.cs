@@ -32,17 +32,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
-        /// </remarks>
+        /// <para>The connection tracking configurations of the ENI.</para>
+        /// <para>Before you use this parameter, learn about how to manage connection timeout periods. For more information, see <a href="https://help.aliyun.com/document_detail/2865958.html">Manage connection timeout periods</a>.</para>
         /// </summary>
         [NameInMap("ConnectionTrackingConfiguration")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceRequestConnectionTrackingConfiguration ConnectionTrackingConfiguration { get; set; }
         public class CreateNetworkInterfaceRequestConnectionTrackingConfiguration : TeaModel {
             /// <summary>
+            /// <para>The timeout period for TCP connections in the TIME_WAIT or CLOSE_WAIT state. Unit: seconds. Valid values: integers from 3 to 15.</para>
+            /// <para>Default value: 3.</para>
             /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
+            /// <para> If the associated Elastic Compute Service (ECS) instance is used with a Network Load Balancer (NLB) or Classic Load Balancer (CLB) instance, the default timeout period for TCP connections in the <c>TIME_WAIT</c> state is 15 seconds.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -53,9 +54,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpClosedAndTimeWaitTimeout { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
-            /// </remarks>
+            /// <para>The timeout period for TCP connections in the ESTABLISHED state. Unit: seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</para>
+            /// <para>Default value: 910.</para>
             /// 
             /// <b>Example:</b>
             /// <para>910</para>
@@ -65,8 +65,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpEstablishedTimeout { get; set; }
 
             /// <summary>
+            /// <para>The timeout period for UDP flows. Unit: seconds. Valid values: 10, 20, 30, 60, 80, and 100.</para>
+            /// <para>Default value: 30.</para>
             /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
+            /// <para> If the associated ECS instance is used with an NLB or CLB instance, the default timeout period for UDP flows is 100 seconds.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -105,13 +107,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is unavailable.</para>
+        /// <para> This parameter is not publicly available.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("EnhancedNetwork")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceRequestEnhancedNetwork EnhancedNetwork { get; set; }
         public class CreateNetworkInterfaceRequestEnhancedNetwork : TeaModel {
+            /// <summary>
+            /// <remarks>
+            /// <para> This parameter is not publicly available.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("EnableRss")]
             [Validation(Required=false)]
             public bool? EnableRss { get; set; }
@@ -257,7 +267,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? QueueNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of queues supported by the elastic RDMA interface (ERI).</para>
+            /// <para>The number of queues supported by the ERI.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -267,7 +277,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? QueuePairNumber { get; set; }
 
             /// <summary>
-            /// <para>The receive (Rx) queue depth of the ENI.</para>
+            /// <para>The Rx queue depth of the ENI.</para>
+            /// <remarks>
+            /// <para> This parameter is not publicly available.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>8192</para>
@@ -277,7 +290,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? RxQueueSize { get; set; }
 
             /// <summary>
-            /// <para>The transmit (Tx) queue depth of the ENI.</para>
+            /// <para>The Tx queue depth of the ENI.</para>
+            /// <remarks>
+            /// <para> This parameter is not publicly available.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>8192</para>
@@ -351,8 +367,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? QueueNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of queue pair (QP) queues supported by the elastic RDMA interface (ERI).</para>
+        /// <para>If you want to attach multiple ERIs to an instance, we recommend that you specify QueuePairNumber for each ERI based on the value of <c>QueuePairNumber</c> supported by the instance type and the number of ERIs that you want to use. Make sure that the total number of QP queues of all ERIs does not exceed the maximum number of QP queues supported by the instance type. For information about the maximum number of QP queues supported by an instance type, see <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>.</para>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <para> If you do not specify QueuePairNumber for an ERI, the maximum number of QP queues supported by the instance type may be used as the number of QP queues supported by the ERI. In this case, you cannot attach an additional ERI to the instance. However, you can attach other types of ENIs to the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -393,11 +411,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The receive (Rx) queue depth of the ENI.</para>
-        /// <para>Take note of the following items:</para>
+        /// <para>When you specify this parameter, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The Rx queue depth of an ENI must be the same as the Tx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</description></item>
         /// <item><description>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> This parameter is not publicly available.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>8192</para>
@@ -485,11 +506,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The transmit (Tx) queue depth of the ENI.</para>
-        /// <para>Take note of the following items:</para>
+        /// <para>When you specify this parameter, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</description></item>
         /// <item><description>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> This parameter is not publicly available.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>8192</para>
@@ -499,7 +523,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? TxQueueSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch with which to associate the ENI. Private IP addresses are assigned to the ENI from within the CIDR block of the vSwitch.</para>
+        /// <para>The ID of the vSwitch to which to connect the ENI. Private IP addresses are assigned to the ENI from within the CIDR block of the vSwitch.</para>
+        /// <remarks>
+        /// <para> A secondary ENI can be attached to only an instance that is in the same zone as the ENI. The instance and the ENI can be connected to different vSwitches.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

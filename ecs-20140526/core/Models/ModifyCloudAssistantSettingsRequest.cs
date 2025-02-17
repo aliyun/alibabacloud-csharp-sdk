@@ -166,8 +166,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The Cloud Assistant feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SessionManagerDelivery: the Session Record Delivery feature</description></item>
-        /// <item><description>InvocationDelivery: the Operation Content and Result Delivery feature</description></item>
+        /// <item><description>SessionManagerDelivery: the Session Record Delivery configurations.</description></item>
+        /// <item><description>InvocationDelivery: the Operation Content and Result Delivery configurations.</description></item>
+        /// <item><description>AgentUpgradeConfig: the Cloud Assistant Agent Upgrade configurations.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Additional instance attributes.</para>
+        /// <para>The additional instance attributes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>META_OPTIONS</para>

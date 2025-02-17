@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the regions.</para>
+        /// <para>The name of the region.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,41 +21,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// <para>The name of the region.</para>
+                /// <para>cn-qingdao-et2-bo1</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>China (Qingdao)</para>
+                /// <para>DescribeRegions</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// <para>The endpoint of the region.</para>
+                /// <para>The ID of the region.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ecs.aliyuncs.com</para>
+                /// <para>ecs.cn-qingdao.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("RegionEndpoint")]
                 [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region.</para>
-                /// 
                 /// <b>Example:</b>
-                /// <para>cn-qingdao-et2-bo1</para>
+                /// <para>cn-qingdao</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether clusters are sold out. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>available</description></item>
-                /// <item><description>soldOut</description></item>
-                /// </list>
+                /// <para>China (Qingdao)</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>available</para>
@@ -69,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>ecs.aliyuncs.com</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

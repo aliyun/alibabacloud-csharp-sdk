@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>When the PeriodUnit parameter is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
         /// <item><description>When the PeriodUnit parameter is set to Year, valid values are 1, 2, 3, 4, and 5.</description></item>
         /// </list>
-        /// <para>Default value: 1.</para>
+        /// <para>Default value: 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region in which to purchase the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

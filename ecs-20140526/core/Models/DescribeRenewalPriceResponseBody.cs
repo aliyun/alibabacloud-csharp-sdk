@@ -42,10 +42,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos DetailInfos { get; set; }
                 public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfos : TeaModel {
-                    [NameInMap("ResourcePriceModel")]
+                    [NameInMap("DetailInfo")]
                     [Validation(Required=false)]
-                    public List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel> ResourcePriceModel { get; set; }
-                    public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModel : TeaModel {
+                    public List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo> DetailInfo { get; set; }
+                    public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo : TeaModel {
                         /// <summary>
                         /// <para>The discount.</para>
                         /// 
@@ -81,12 +81,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         /// </summary>
                         [NameInMap("SubRules")]
                         [Validation(Required=false)]
-                        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules SubRules { get; set; }
-                        public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRules : TeaModel {
+                        public DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules SubRules { get; set; }
+                        public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules : TeaModel {
                             [NameInMap("Rule")]
                             [Validation(Required=false)]
-                            public List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule> Rule { get; set; }
-                            public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosResourcePriceModelSubRulesRule : TeaModel {
+                            public List<DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule> Rule { get; set; }
+                            public class DescribeRenewalPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule : TeaModel {
                                 /// <summary>
                                 /// <para>The description of the pricing rule.</para>
                                 /// 

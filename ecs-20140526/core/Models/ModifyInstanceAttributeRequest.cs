@@ -184,18 +184,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <remarks>
-        /// <para> This parameter is in invitational preview and is not publicly available.</para>
-        /// </remarks>
+        /// <para>The private domain name options of the ECS instance.</para>
+        /// <para>For information about private domain name resolution, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private DNS resolution</a>.</para>
         /// </summary>
         [NameInMap("PrivateDnsNameOptions")]
         [Validation(Required=false)]
         public ModifyInstanceAttributeRequestPrivateDnsNameOptions PrivateDnsNameOptions { get; set; }
         public class ModifyInstanceAttributeRequestPrivateDnsNameOptions : TeaModel {
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
+            /// <para>Specifies whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv6 Address (AAAA Record) is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -205,9 +207,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableInstanceIdDnsAAAARecord { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
+            /// <para>Specifies whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -217,9 +222,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableInstanceIdDnsARecord { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
+            /// <para>Specifies whether DNS Resolution from the IP Address-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -229,9 +237,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableIpDnsARecord { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
+            /// <para>Specifies whether Reverse DNS Resolution from the Instance Primary Private IPv4 Address to the IP Address-based Hostname (PTR Record) is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -241,9 +252,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableIpDnsPtrRecord { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
+            /// <para>The type of the hostname. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Custom: custom hostname.</description></item>
+            /// <item><description>IpBased: IP address-based hostname.</description></item>
+            /// <item><description>InstanceIdBased: instance ID-based hostname.</description></item>
+            /// </list>
+            /// <para>Default value: Custom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom</para>

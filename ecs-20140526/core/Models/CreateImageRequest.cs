@@ -146,11 +146,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// <para>The attributes of the custom image.</para>
+        /// </summary>
         [NameInMap("Features")]
         [Validation(Required=false)]
         public CreateImageRequestFeatures Features { get; set; }
         public class CreateImageRequestFeatures : TeaModel {
             /// <summary>
+            /// <para>The image metadata access mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>v1: You cannot set the image metadata access mode to security hardening when you create instances from the image.</description></item>
+            /// <item><description>v2: You can set the image metadata access mode to security hardening when you create instances from the image.</description></item>
+            /// </list>
+            /// <para>When you use a snapshot to create instances, the default value is set to 1. If you use an instance to create an image, the value of the ImdsSupport parameter is used by default.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>v2</para>
             /// </summary>

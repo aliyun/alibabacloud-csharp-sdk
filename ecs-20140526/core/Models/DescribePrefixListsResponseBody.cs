@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePrefixListsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query token returned in this call. If the return value is empty, no more data is returned.</para>
+        /// <para>The query token that is returned in this call. If the return value is empty, no more data is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>38793DB8-A4B2-4AEC-BFD3-111234E9188D</para>

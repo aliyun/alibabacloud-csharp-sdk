@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiagnosticMetricSetRequest : TeaModel {
         /// <summary>
-        /// <para>The new description of the diagnostic metric set.</para>
+        /// <para>The description of the diagnostic metric set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>connection diagnostics</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of diagnostic metric N.</para>
+        /// <para>The IDs of diagnostic metrics.</para>
         /// </summary>
         [NameInMap("MetricIds")]
         [Validation(Required=false)]
         public List<string> MetricIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the diagnostic metric set.</para>
+        /// <para>The IDs of the diagnostic metric sets.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MetricSetId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the diagnostic metric set.</para>
+        /// <para>The name of the diagnostic metric set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>remoteConnectError</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MetricSetName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the diagnostic metric set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance</para>

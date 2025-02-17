@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePrefixListsRequest : TeaModel {
         /// <summary>
-        /// <para>The IP address family of the prefix list. Valid values:</para>
+        /// <para>The IP address family. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>IPv4</description></item>
         /// <item><description>IPv6</description></item>
@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AddressFamily { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Maximum value: 100.</para>
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the <c>NextToken</c> value returned in the previous call to the DescribePrefixLists operation. Leave this parameter empty the first time you call this operation.</para>
+        /// <para>The pagination token that is used in the request to retrieve a new page of results. Set the value to the <c>NextToken</c> value returned in the last call to this operation. Leave this parameter empty the first time you call this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of prefix list.</para>
+        /// <para>The IDs of prefix lists. Valid values of N: 0 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-x1j1k5ykzqlixdcy****</para>

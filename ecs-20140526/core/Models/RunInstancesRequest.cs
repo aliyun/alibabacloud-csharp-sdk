@@ -1319,7 +1319,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <list type="bullet">
             /// <item><description>You can specify network card indexes only for instances of specific instance types.</description></item>
             /// <item><description>If you set NetworkInterface.N.InstanceType to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</description></item>
-            /// <item><description>If you set NetworkInterface.N.InstanceType to Secondary or leave the parameter empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
+            /// <item><description>If you set NetworkInterface.N.InstanceType to Secondary or leave NetworkInterface.N.InstanceType empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1330,7 +1330,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? NetworkCardIndex { get; set; }
 
             /// <summary>
-            /// <para>The ID of ENI N to attach to the instance.</para>
+            /// <para>The ID of the ENI to attach to the instance.</para>
+            /// <para>If you specify this parameter, you must set <c>Amount</c> to 1.</para>
             /// <remarks>
             /// <para> This parameter takes effect only for secondary ENIs. After you specify an existing secondary ENI, you cannot specify other ENI creation parameters.</para>
             /// </remarks>
@@ -1385,7 +1386,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>If you specify this parameter, set <c>Amount</c> to a numeric value greater than 1, and set NetworkInterface.N.InstanceType to Primary, you cannot set <c>NetworkInterface.2.InstanceType</c> to Secondary to attach a secondary ENI.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, this parameter is equivalent to <c>PrivateIpAddress</c>. You cannot specify both this parameter and <c>PrivateIpAddress</c> in the same request.</para>
+            /// <item><description><para>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, this parameter is equivalent to <c>PrivateIpAddress</c>. You cannot specify this parameter and <c>PrivateIpAddress</c> in the same request.</para>
             /// </description></item>
             /// <item><description><para>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.</para>
             /// </description></item>
@@ -1421,7 +1422,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? QueueNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of queues supported by the ERI.</para>
+            /// <para>The number of queue pairs (QPs) supported by the ERI.</para>
+            /// <para>If you want to attach multiple ERIs to a created instance, we recommend that you specify QueuePairNumber for each ERI based on the value of <c>QueuePairNumber</c> supported by the instance type and the number of ERIs that you want to use. Make sure that the total number of QPs of all ERIs does not exceed the maximum number of QPs supported by the instance type. For information about the maximum number of QPs supported by an instance type, see <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>.</para>
+            /// <remarks>
+            /// <para> If you do not specify QueuePairNumber for an ERI, the maximum number of QPs supported by the instance type is used as the number of QPs supported by the ERI. In this case, you cannot attach an additional ERI to the instance. However, you can attach other types of ENIs to the instance.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -1464,8 +1469,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The IDs of security groups to which to assign ENI N.</para>
             /// <list type="bullet">
-            /// <item><description>The value of the first N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
-            /// <item><description>The second N indicates that one or more security group IDs can be specified. The valid values of the second N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</description></item>
+            /// <item><description>The value of the first N in this parameter cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
+            /// <item><description>The second N in this parameter indicates that one or more security group IDs can be specified. The valid values of the second N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</description></item>
             /// </list>
             /// <para>When you specify this parameter, take note of the following items:</para>
             /// <list type="bullet">
@@ -1480,6 +1485,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
+            /// <summary>
+            /// <remarks>
+            /// <para> This parameter is in invitational preview and is not publicly available.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("SourceDestCheck")]
             [Validation(Required=false)]
             public bool? SourceDestCheck { get; set; }

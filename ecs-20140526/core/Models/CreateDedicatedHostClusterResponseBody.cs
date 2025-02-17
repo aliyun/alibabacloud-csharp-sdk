@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDedicatedHostClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the dedicated host cluster.</para>
+        /// <para>The ID of the host group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dc-bp12wlf6bw0vz9v2****</para>

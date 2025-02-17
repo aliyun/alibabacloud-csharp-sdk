@@ -51,6 +51,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string AssuranceTimes { get; set; }
 
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
+        [NameInMap("AutoRenewPeriod")]
+        [Validation(Required=false)]
+        public int? AutoRenewPeriod { get; set; }
+
         /// <summary>
         /// <para>The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <c>token</c> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 

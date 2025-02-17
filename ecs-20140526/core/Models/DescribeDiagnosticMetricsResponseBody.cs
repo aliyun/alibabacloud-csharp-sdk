@@ -10,29 +10,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiagnosticMetricsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the diagnostic metric.</para>
+        /// <para>The diagnostic metrics.</para>
         /// </summary>
         [NameInMap("Metrics")]
         [Validation(Required=false)]
         public List<DescribeDiagnosticMetricsResponseBodyMetrics> Metrics { get; set; }
         public class DescribeDiagnosticMetricsResponseBodyMetrics : TeaModel {
             /// <summary>
-            /// <para>CPU diagnostic</para>
+            /// <para>The description of the diagnostic metric.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The resource type supported by the diagnostic metric.</para>
+            /// <para>CPU diagnostic</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The operating system type supported by the diagnostic metric. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Windows</description></item>
-            /// <item><description>Linux</description></item>
-            /// <item><description>All: both Windows and Linux</description></item>
-            /// </list>
+            /// <para>Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -42,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? GuestMetric { get; set; }
 
             /// <summary>
-            /// <para>The description of the diagnostic metric.</para>
+            /// <para>The category of the diagnostic metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CPU</para>
@@ -52,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MetricCategory { get; set; }
 
             /// <summary>
-            /// <para>The name of the diagnostic metric.</para>
+            /// <para>The ID of the diagnostic metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GuestOS.WinFirewall</para>
@@ -62,17 +57,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MetricId { get; set; }
 
             /// <summary>
-            /// <para>CPU diagnostic</para>
+            /// <para>The name of the diagnostic metric.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The category of the diagnostic metric.</para>
+            /// <para>CPU diagnostic</para>
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.</para>
+            /// <para>The resource type supported by the diagnostic metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -82,6 +77,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceType { get; set; }
 
             /// <summary>
+            /// <para>The operating system type supported by the diagnostic metric. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Windows</description></item>
+            /// <item><description>Linux</description></item>
+            /// <item><description>All: Windows and Linux</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
             /// </summary>
@@ -92,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The list of diagnostic metrics.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The query token returned in this call.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</para>

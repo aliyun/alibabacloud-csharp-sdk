@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiagnosticMetricSetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A collection of diagnostic metrics.</para>
+        /// <para>The diagnostic metric sets.</para>
         /// </summary>
         [NameInMap("MetricSets")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The query token returned in this call.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</para>

@@ -191,8 +191,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
+        /// <para>The connection tracking configurations of the ENI.</para>
+        /// <para>Before you use this parameter, learn about how to manage connection timeout periods. For more information, see <a href="https://help.aliyun.com/document_detail/2865958.html">Manage connection timeout periods</a>.</para>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para> This parameter is returned only if <c>Attribute</c> is set to <c>connectionTrackingConfiguration</c>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ConnectionTrackingConfiguration")]
@@ -200,8 +202,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration ConnectionTrackingConfiguration { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration : TeaModel {
             /// <summary>
+            /// <para>The timeout period for TCP connections in the TIME_WAIT or CLOSE_WAIT state. Unit: seconds. Valid values: integers from 3 to 15.</para>
             /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
+            /// <para> If the associated Elastic Compute Service (ECS) instance is used with a Network Load Balancer (NLB) or Classic Load Balancer (CLB) instance, the default timeout period for TCP connections in the <c>TIME_WAIT</c> state is 15 seconds.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -212,9 +215,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpClosedAndTimeWaitTimeout { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
-            /// </remarks>
+            /// <para>The timeout period for TCP connections in the ESTABLISHED state. Unit: seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</para>
             /// 
             /// <b>Example:</b>
             /// <para>910</para>
@@ -224,8 +225,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpEstablishedTimeout { get; set; }
 
             /// <summary>
+            /// <para>The timeout period for UDP flows. Unit: seconds. Valid values: 10, 20, 30, 60, 80, and 100.</para>
             /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
+            /// <para> If the associated ECS instance is used with an NLB or CLB instance, the default timeout period for UDP flows is 100 seconds.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -278,6 +280,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork EnhancedNetwork { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork : TeaModel {
+            /// <summary>
+            /// <remarks>
+            /// <para> This parameter is not publicly available.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("EnableRss")]
             [Validation(Required=false)]
             public bool? EnableRss { get; set; }

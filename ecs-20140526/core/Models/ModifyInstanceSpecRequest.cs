@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to allow cross-cluster instance type upgrade.</para>
+        /// <para>Specifies whether to allow cross-cluster instance type upgrade. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -220,11 +220,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <remarks>
         /// <para> This parameter is not publicly available.</para>
         /// </remarks>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Online</description></item>
-        /// <item><description>Offline</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

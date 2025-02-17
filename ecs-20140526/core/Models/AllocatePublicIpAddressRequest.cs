@@ -21,7 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the instance.</para>
+        /// <para>The static public IP address that you want to assign to the instance. This parameter is empty by default, which indicates that a static public IP address is randomly assigned by the system.</para>
+        /// <remarks>
+        /// <para> Only users in the whitelist can specify this parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para><c>112.124.**.**</c></para>

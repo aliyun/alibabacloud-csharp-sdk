@@ -174,19 +174,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The mode in which you want to run the command. Valid values:</para>
+        /// <para>Specifies how to run the command. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Once: runs the command immediately.</description></item>
+        /// <item><description>Once: immediately runs the command.</description></item>
         /// <item><description>Period: runs the command based on a schedule. If you set this parameter to <c>Period</c>, you must also configure the <c>Frequency</c> parameter.</description></item>
         /// <item><description>NextRebootOnly: runs the command the next time the instance is started.</description></item>
-        /// <item><description>EveryReboot: runs the command every time the instance is started.</description></item>
+        /// <item><description>EveryReboot: The command is run every time the instances start.</description></item>
+        /// <item><description>DryRun: Specifies whether to perform only a dry run, without performing the actual request. The command does not take effect. The system checks the request, including the request parameters, instance execution environment, and Cloud Assistant Agent running status.</description></item>
         /// </list>
-        /// <para>Default values:</para>
+        /// <para>Default value:</para>
         /// <list type="bullet">
         /// <item><description>If you do not specify <c>Frequency</c>, the default value is <c>Once</c>.</description></item>
-        /// <item><description>If you specify <c>Frequency</c>, <c>Period</c> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</description></item>
+        /// <item><description>If you specify the <c>Frequency</c> parameter, <c>Period</c> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</description></item>
         /// </list>
-        /// <para>Take note of the following items:</para>
+        /// <para>Take note of the following items when you specify this property:</para>
         /// <list type="bullet">
         /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> operation to stop the pending or scheduled executions of the command.</description></item>
         /// <item><description>If you set this parameter to <c>Period</c> or <c>EveryReboot</c>, you can call the <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with <c>IncludeHistory</c> set to true to query the results of historical scheduled executions.</description></item>

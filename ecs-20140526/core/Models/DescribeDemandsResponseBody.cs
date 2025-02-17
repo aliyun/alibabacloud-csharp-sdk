@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public int? Amount { get; set; }
 
                         /// <summary>
-                        /// <para>需求单对应的私有池ID。</para>
+                        /// <para>The ID of the private pool that corresponds to the demand.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>crp-bp1fv8sbhelbzjwx****</para>

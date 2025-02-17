@@ -267,11 +267,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies how to run the command. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Once: immediately runs the command.</description></item>
-        /// <item><description>Period: runs the command on a schedule. If you set this parameter to <c>Period</c>, you must specify <c>Frequency</c>.</description></item>
-        /// <item><description>NextRebootOnly: runs the command the next time the instance is started.</description></item>
-        /// <item><description>EveryReboot: runs the command every time the instance is started.</description></item>
+        /// <item><description>Period: runs the command on a schedule. If you set this parameter to <c>Period</c>, you must also configure the <c>Frequency</c> parameter.</description></item>
+        /// <item><description>NextRebootOnly: runs the command the next time the instances start.</description></item>
+        /// <item><description>EveryReboot: runs the command every time the instances start. Specifies how to run the command. Valid values:</description></item>
+        /// <item><description>Once: immediately runs the command.</description></item>
+        /// <item><description>Period: runs the command on a schedule. If you set this parameter to <c>Period</c>, you must also configure the <c>Frequency</c> parameter.</description></item>
+        /// <item><description>NextRebootOnly: runs the command the next time the instances start.</description></item>
+        /// <item><description>EveryReboot: runs the command every time the instances start.</description></item>
+        /// <item><description>DryRun: performs only a dry run, without running the actual command. The system checks the request parameters, the execution environments on the instances, and the status of Cloud Assistant Agent.</description></item>
         /// </list>
-        /// <para>Default values:</para>
+        /// <para>Default value:</para>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify the <c>Frequency</c> parameter, the default value is <c>Once</c>.</description></item>
+        /// <item><description>If you specify the <c>Frequency</c> parameter, <c>Period</c> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</description></item>
+        /// </list>
+        /// <para>Take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> operation to stop the pending or scheduled executions of the command.</description></item>
+        /// <item><description>If you set this parameter to <c>Period</c> or <c>EveryReboot</c>, you can call the <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with <c>IncludeHistory</c> set to true to query the results of historical scheduled executions.</description></item>
+        /// </list>
+        /// <para>Default value:</para>
         /// <list type="bullet">
         /// <item><description>If you do not specify the <c>Frequency</c> parameter, the default value is <c>Once</c>.</description></item>
         /// <item><description>If you specify the <c>Frequency</c> parameter, <c>Period</c> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</description></item>

@@ -61,14 +61,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions CpuOptions { get; set; }
                 public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions : TeaModel {
+                    /// <summary>
+                    /// <para>CPU core.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2</para>
+                    /// </summary>
                     [NameInMap("Core")]
                     [Validation(Required=false)]
                     public int? Core { get; set; }
 
+                    /// <summary>
+                    /// <para>CPU core factor.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2</para>
+                    /// </summary>
                     [NameInMap("CoreFactor")]
                     [Validation(Required=false)]
                     public int? CoreFactor { get; set; }
 
+                    /// <summary>
+                    /// <para>Indicates whether Hyper-Threading is adjustable.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("HyperThreadingAdjustable")]
                     [Validation(Required=false)]
                     public bool? HyperThreadingAdjustable { get; set; }
@@ -86,6 +104,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>CPU threads per core.</para>
+                    /// <remarks>
+                    /// <para><c>CpuOptions.ThreadsPerCore=1</c> indicates the shutdown of CPU Hyper-Threading.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2</para>
+                    /// </summary>
                     [NameInMap("ThreadsPerCore")]
                     [Validation(Required=false)]
                     public int? ThreadsPerCore { get; set; }
@@ -131,6 +158,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork EnhancedNetwork { get; set; }
                 public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork : TeaModel {
+                    /// <summary>
+                    /// <remarks>
+                    /// <para> This parameter is not publicly available.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("RssSupport")]
                     [Validation(Required=false)]
                     public bool? RssSupport { get; set; }
@@ -373,6 +408,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string InstanceTypeId { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether jumbo frames are supported.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("JumboFrameSupport")]
                 [Validation(Required=false)]
                 public bool? JumboFrameSupport { get; set; }

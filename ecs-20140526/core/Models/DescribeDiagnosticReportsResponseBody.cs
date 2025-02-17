@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiagnosticReportsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query token returned in this call.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The list of reports.</para>
+        /// <para>The diagnostic reports.</para>
         /// </summary>
         [NameInMap("Reports")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</para>
+                /// <para>The end of the time range during which data was queried. The value is the EndTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-07-11T14:00:00Z</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string FinishedTime { get; set; }
 
                 /// <summary>
-                /// <para>The list of issues.</para>
+                /// <para>The diagnosed issues.</para>
                 /// </summary>
                 [NameInMap("Issues")]
                 [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue> Issue { get; set; }
                     public class DescribeDiagnosticReportsResponseBodyReportsReportIssuesIssue : TeaModel {
                         /// <summary>
-                        /// <para>The unique ID of the diagnosed issue.</para>
+                        /// <para>The ID of the diagnosed issue, which is the unique identifier of the issue.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>GuestOS.CPU.HighUtiliz*****</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The severity level of the diagnostic report. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</description></item>
+                /// <item><description>Unknown: The diagnostic did not start, failed to run, or unexpectedly exited without a diagnosis.</description></item>
                 /// <item><description>Normal: No exceptions were detected.</description></item>
                 /// <item><description>Info: Diagnostic information was recorded and may be related to exceptions.</description></item>
                 /// <item><description>Warn: Diagnostic information was recorded and may indicate exceptions.</description></item>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Severity { get; set; }
 
                 /// <summary>
-                /// <para>The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</para>
+                /// <para>The beginning of the time range during which data was queried. The value is the StartTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-07-11T12:00:00Z</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The state of the diagnostic report.</para>
+                /// <para>The status of the diagnostic report.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Finished</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</para>

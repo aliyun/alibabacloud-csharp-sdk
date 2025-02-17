@@ -358,8 +358,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public bool? Primary { get; set; }
 
                         /// <summary>
+                        /// <para>The private domain name of the ECS instance.</para>
                         /// <remarks>
-                        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                        /// <para> A private domain name can be returned in a specific format only when <c>HostnameType</c> is set to <c>IP</c> or <c>InstanceId</c>.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>

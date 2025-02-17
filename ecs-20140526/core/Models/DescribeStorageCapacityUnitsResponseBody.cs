@@ -135,7 +135,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The state of the SCU.</para>
+                /// <para>The status of the SCU. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Creating: The SCUs are being created.</description></item>
+                /// <item><description>Active: The SCUs are in effect.</description></item>
+                /// <item><description>Expired: The SCUs have expired.</description></item>
+                /// <item><description>Pending: The SCUs have not taken effect.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Active</para>

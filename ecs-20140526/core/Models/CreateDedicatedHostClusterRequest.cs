@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDedicatedHostClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the dedicated host cluster. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the host group. It must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <para>This parameter is left empty by default.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostClusterName { get; set; }
 
         /// <summary>
-        /// <para>The description of the dedicated host cluster. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the host group. It must be 2 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// <para>This parameter is left empty by default.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which to create the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which to assign the dedicated host cluster.</para>
+        /// <para>The resource group ID of the host group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the dedicated host cluster.</para>
+        /// <para>The tags of the host group.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDedicatedHostClusterRequestTag> Tag { get; set; }
         public class CreateDedicatedHostClusterRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the dedicated host cluster. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be no more than 64 characters in length, and can neither contain <c>http://</c> or <c>https://</c> nor start with <c>acs:</c> or <c>aliyun</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be no more than 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the zone in which to create the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// <para>The zone ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

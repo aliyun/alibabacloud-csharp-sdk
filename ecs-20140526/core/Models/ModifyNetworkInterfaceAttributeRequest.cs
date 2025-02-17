@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyNetworkInterfaceAttributeRequest : TeaModel {
         /// <summary>
-        /// <remarks>
-        /// <para> This parameter is in invitational preview and is not publicly available.</para>
-        /// </remarks>
+        /// <para>The connection tracking configuration of the ENI.</para>
         /// </summary>
         [NameInMap("ConnectionTrackingConfiguration")]
         [Validation(Required=false)]
         public ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration ConnectionTrackingConfiguration { get; set; }
         public class ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration : TeaModel {
             /// <summary>
+            /// <para>The timeout period for TCP connections in the TIME_WAIT or CLOSE_WAIT state. Unit: seconds. Valid values: integers from 3 to 15.</para>
+            /// <para>Default value: 3.</para>
             /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
+            /// <para> If the associated ECS instance is used together with a Network Load Balancer (NLB) or Classic Load Balancer (CLB) instance, the default timeout period for TCP connections in the <c>TIME_WAIT</c> state is 15 seconds.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -31,9 +31,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpClosedAndTimeWaitTimeout { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
+            /// <para>The timeout period for TCP connections in the ESTABLISHED state. Unit: seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</para>
+            /// <para>Default value: 910.</para>
             /// 
             /// <b>Example:</b>
             /// <para>910</para>
@@ -43,8 +42,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpEstablishedTimeout { get; set; }
 
             /// <summary>
+            /// <para>The timeout period for UDP flows. Unit: seconds. Valid values: 10, 20, 30, 60, 80, and 100.</para>
+            /// <para>Default value: 30.</para>
             /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
+            /// <para> If the associated ECS instance is used together with an NLB or CLB instance, the default timeout period for UDP flows is 100 seconds.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -88,6 +89,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork EnhancedNetwork { get; set; }
         public class ModifyNetworkInterfaceAttributeRequestEnhancedNetwork : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("EnableRss")]
             [Validation(Required=false)]
             public bool? EnableRss { get; set; }
@@ -236,9 +241,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The number of queues supported by the ENI. Valid values: 1 to 2048.</para>
         /// <list type="bullet">
-        /// <item><description>You can change only the number of queues supported by the secondary ENI.</description></item>
-        /// <item><description>You can change the number of queues supported by the secondary ENI only when the ENI is in the <c>Available</c> state or the ENI is attached (<c>InUse</c>) to an instance that is in the <c>Stopped</c> state.</description></item>
-        /// <item><description>The number of queues supported by the secondary ENI cannot exceed the maximum number of queues that the instance allows for each ENI. The total number of queues for all ENIs on the instance cannot exceed the queue quota that the instance allows. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the values of <c>MaximumQueueNumberPerEni</c> and <c>TotalEniQueueQuantity</c> in the response.</description></item>
+        /// <item><description>You can change the number of queues supported by an ENI only when the ENI is in the <c>Available</c> state or the ENI is attached (<c>InUse</c>) to an instance that is in the <c>Stopped</c> state.</description></item>
+        /// <item><description>The number of queues supported by the ENI cannot exceed the maximum number of queues that the instance type allows for each ENI. The total number of queues on all ENIs on an instance cannot exceed the queue quota that the instance type supports. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <c>MaximumQueueNumberPerEni</c> and <c>TotalEniQueueQuantity</c> values in the response.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

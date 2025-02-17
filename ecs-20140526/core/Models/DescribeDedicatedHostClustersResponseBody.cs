@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDedicatedHostClustersResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the dedicated host clusters.</para>
+        /// <para>An array consisting of host group information.</para>
         /// </summary>
         [NameInMap("DedicatedHostClusters")]
         [Validation(Required=false)]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster> DedicatedHostCluster { get; set; }
             public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster : TeaModel {
                 /// <summary>
-                /// <para>The capacity of the dedicated host cluster.</para>
+                /// <para>The capacity of the host group.</para>
                 /// </summary>
                 [NameInMap("DedicatedHostClusterCapacity")]
                 [Validation(Required=false)]
                 public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity DedicatedHostClusterCapacity { get; set; }
                 public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity : TeaModel {
                     /// <summary>
-                    /// <para>The available capacity of the Elastic Compute Service (ECS) instance types in the dedicated host cluster.</para>
+                    /// <para>The available capacity of ECS instances in the host group.</para>
                     /// </summary>
                     [NameInMap("AvailableInstanceTypes")]
                     [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the dedicated host cluster.</para>
+                /// <para>The ID of the host group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dc-bp12wlf6am0vz9v2****</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string DedicatedHostClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the dedicated host cluster.</para>
+                /// <para>The name of the host group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>myDDHCluster</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string DedicatedHostClusterName { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of dedicated hosts in the dedicated host cluster.</para>
+                /// <para>The IDs of dedicated hosts in the host group.</para>
                 /// </summary>
                 [NameInMap("DedicatedHostIds")]
                 [Validation(Required=false)]
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The description of the dedicated host cluster.</para>
+                /// <para>The description of the host group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This-is-my-DDHCluster</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the dedicated host cluster.</para>
+                /// <para>The region ID of the host group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group to which the dedicated host cluster belongs.</para>
+                /// <para>The resource group ID of the host group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-bp67acfmxazb4p****</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the dedicated host cluster.</para>
+                /// <para>The tags of the host group.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTagsTag> Tag { get; set; }
                     public class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTagsTag : TeaModel {
                         /// <summary>
-                        /// <para>The tag key of the dedicated host cluster.</para>
+                        /// <para>The tag key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TestKey</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag value of the dedicated host cluster.</para>
+                        /// <para>The tag value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TestValue</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The zone ID of the dedicated host cluster.</para>
+                /// <para>The zone ID of the host group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-f</para>

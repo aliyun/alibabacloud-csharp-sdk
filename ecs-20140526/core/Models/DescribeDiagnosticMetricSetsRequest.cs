@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiagnosticMetricSetsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return on each page. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
         /// <item><description>If this parameter is left empty, the default value is 10.</description></item>
-        /// <item><description>If this parameter is set to a value greater than 100, the default value is 100.</description></item>
+        /// <item><description>If you set this parameter to a value that is greater than 100, the default value is 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The ID of diagnostic metric set N.</para>
+        /// <para>The IDs of diagnostic metric sets.</para>
         /// </summary>
         [NameInMap("MetricSetIds")]
         [Validation(Required=false)]
         public List<string> MetricSetIds { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the <c>NextToken</c> value returned in the last call to the DescribeDiagnosticMetricSets operation. Leave this parameter empty the first time you call this operation.</para>
+        /// <para>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>User: user-defined diagnostic metric set</description></item>
         /// <item><description>Common: common diagnostic metric set</description></item>
         /// </list>
-        /// <para>Default value: user.</para>
+        /// <para>Default value: User.</para>
         /// 
         /// <b>Example:</b>
         /// <para>User</para>

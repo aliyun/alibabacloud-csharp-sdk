@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDiagnosticReportRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the reporting period. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</para>
+        /// <para>The end time. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-11T14:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MetricSetId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which to create a diagnostic report. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource.</para>
+        /// <para>The ID of resource N.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the reporting period. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</para>
+        /// <para>The start time. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-11T12:00:00Z</para>

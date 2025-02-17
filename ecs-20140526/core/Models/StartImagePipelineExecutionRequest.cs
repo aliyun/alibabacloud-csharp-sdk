@@ -57,11 +57,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<StartImagePipelineExecutionRequestTag> Tag { get; set; }
         public class StartImagePipelineExecutionRequestTag : TeaModel {
             /// <summary>
+            /// <para>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
             /// </summary>
@@ -70,6 +75,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. The tag value cannot start with <c>acs:</c> or contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
             /// </summary>

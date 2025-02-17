@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The validity period of the activation code. After the validity period ends, you can no longer use the activation code to register managed instances. Unit: hours. Valid values: 1 to 876576. 876576 hours is equal to 100 years.</para>
+        /// <para>The validity period of the activation code. After the validity period ends, you can no longer use the activation code to register managed instances. Unit: hours.</para>
         /// <para>Default value: 4.</para>
         /// 
         /// <b>Example:</b>

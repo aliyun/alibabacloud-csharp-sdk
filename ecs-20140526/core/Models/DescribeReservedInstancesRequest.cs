@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the reserved instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
