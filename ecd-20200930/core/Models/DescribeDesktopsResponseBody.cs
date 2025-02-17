@@ -825,6 +825,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string SnapshotPolicyName { get; set; }
 
+            [NameInMap("StandardStartTime")]
+            [Validation(Required=false)]
+            public string StandardStartTime { get; set; }
+
             /// <summary>
             /// <para>The time when the cloud desktop was first started.</para>
             /// 
