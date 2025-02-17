@@ -9,29 +9,72 @@ using Tea;
 namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 {
     public class ModifyExpressConnectRouterInterRegionTransitModeRequest : TeaModel {
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FF9nMec/RZ6H9oqFn1pvyir/SLRlxCCyHJonbGzqL01hiM6Jb3wJowdHvjCfog7ww1b9rSHMRFJnrUBfVba68TJg==</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs only a dry run.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>The ECR ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecr-mezk2idmsd0vx2****</para>
         /// </summary>
         [NameInMap("EcrId")]
         [Validation(Required=false)]
         public string EcrId { get; set; }
 
+        /// <summary>
+        /// <para>The cross-region forwarding modes.</para>
+        /// </summary>
         [NameInMap("TransitModeList")]
         [Validation(Required=false)]
         public List<ModifyExpressConnectRouterInterRegionTransitModeRequestTransitModeList> TransitModeList { get; set; }
         public class ModifyExpressConnectRouterInterRegionTransitModeRequestTransitModeList : TeaModel {
+            /// <summary>
+            /// <para>The cross-domain forwarding mode of the ECR. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ECMP</b>: the load balancing mode.</description></item>
+            /// <item><description><b>NearBy</b>: the nearby forwarding mode.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ECMP</para>
+            /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }
 
+            /// <summary>
+            /// <para>The region ID of the ECR.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
