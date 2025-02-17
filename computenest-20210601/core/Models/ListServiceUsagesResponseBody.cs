@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 
         }
 
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
     }
 
 }

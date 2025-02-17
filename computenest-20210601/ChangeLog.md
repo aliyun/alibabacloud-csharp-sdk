@@ -1,3 +1,10 @@
+2025-02-17 Version: 2.7.0
+- Support API DeployServiceInstance.
+- Support API GetServiceInstanceSubscriptionEstimateCost.
+- Support API RenewServiceInstanceResources.
+- Update API ListServiceUsages: update response param.
+
+
 2025-01-16 Version: 2.6.0
 - Support API DescribeRegions.
 - Update API GetService: update param ServiceVersion.
