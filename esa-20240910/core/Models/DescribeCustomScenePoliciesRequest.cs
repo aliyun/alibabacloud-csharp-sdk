@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeCustomScenePoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Valid values: 1 to 100000.</para>
+        /// <para>The number of the page to return. Valid values: <b>1 to 100000</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Valid values: 5, 10, and 20.</para>
+        /// <para>The number of entries per page. Default value: <b>10</b>. Valid values: <b>5</b>, <b>10</b>, or <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850233.html">ListWafRulesets</a> operation.</para>
+        /// <para>The rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234****</para>

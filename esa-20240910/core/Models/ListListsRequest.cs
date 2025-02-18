@@ -80,6 +80,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ItemLike { get; set; }
 
             /// <summary>
+            /// <para>The type of the custom list.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ip</para>
             /// </summary>

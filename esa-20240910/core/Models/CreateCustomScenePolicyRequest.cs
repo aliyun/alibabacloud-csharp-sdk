@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
     public class CreateCustomScenePolicyRequest : TeaModel {
         /// <summary>
         /// <para>The time when the policy expires.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The time when the policy takes effect.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

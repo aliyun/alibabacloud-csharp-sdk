@@ -16131,6 +16131,132 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>将天眼提供给XCDN边缘容器的监控OpenAPI适配成青蓝的OpenAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEdgeContainerAppStatsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEdgeContainerAppStatsResponse
+        /// </returns>
+        public DescribeEdgeContainerAppStatsResponse DescribeEdgeContainerAppStatsWithOptions(DescribeEdgeContainerAppStatsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEdgeContainerAppStats",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeEdgeContainerAppStatsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeEdgeContainerAppStatsResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将天眼提供给XCDN边缘容器的监控OpenAPI适配成青蓝的OpenAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEdgeContainerAppStatsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEdgeContainerAppStatsResponse
+        /// </returns>
+        public async Task<DescribeEdgeContainerAppStatsResponse> DescribeEdgeContainerAppStatsWithOptionsAsync(DescribeEdgeContainerAppStatsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEdgeContainerAppStats",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeEdgeContainerAppStatsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeEdgeContainerAppStatsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将天眼提供给XCDN边缘容器的监控OpenAPI适配成青蓝的OpenAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEdgeContainerAppStatsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEdgeContainerAppStatsResponse
+        /// </returns>
+        public DescribeEdgeContainerAppStatsResponse DescribeEdgeContainerAppStats(DescribeEdgeContainerAppStatsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeEdgeContainerAppStatsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将天眼提供给XCDN边缘容器的监控OpenAPI适配成青蓝的OpenAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEdgeContainerAppStatsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEdgeContainerAppStatsResponse
+        /// </returns>
+        public async Task<DescribeEdgeContainerAppStatsResponse> DescribeEdgeContainerAppStatsAsync(DescribeEdgeContainerAppStatsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeEdgeContainerAppStatsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the configuration of smart HTTP DDoS protection for a website.</para>
         /// </summary>
         /// 
@@ -18951,6 +19077,132 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetEdgeContainerAppWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取边缘容器应用日志采集配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEdgeContainerAppLogRiverRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEdgeContainerAppLogRiverResponse
+        /// </returns>
+        public GetEdgeContainerAppLogRiverResponse GetEdgeContainerAppLogRiverWithOptions(GetEdgeContainerAppLogRiverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEdgeContainerAppLogRiver",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetEdgeContainerAppLogRiverResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetEdgeContainerAppLogRiverResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取边缘容器应用日志采集配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEdgeContainerAppLogRiverRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEdgeContainerAppLogRiverResponse
+        /// </returns>
+        public async Task<GetEdgeContainerAppLogRiverResponse> GetEdgeContainerAppLogRiverWithOptionsAsync(GetEdgeContainerAppLogRiverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEdgeContainerAppLogRiver",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetEdgeContainerAppLogRiverResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetEdgeContainerAppLogRiverResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取边缘容器应用日志采集配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEdgeContainerAppLogRiverRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEdgeContainerAppLogRiverResponse
+        /// </returns>
+        public GetEdgeContainerAppLogRiverResponse GetEdgeContainerAppLogRiver(GetEdgeContainerAppLogRiverRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetEdgeContainerAppLogRiverWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取边缘容器应用日志采集配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEdgeContainerAppLogRiverRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEdgeContainerAppLogRiverResponse
+        /// </returns>
+        public async Task<GetEdgeContainerAppLogRiverResponse> GetEdgeContainerAppLogRiverAsync(GetEdgeContainerAppLogRiverRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetEdgeContainerAppLogRiverWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -27183,7 +27435,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP响应头规则列表</para>
+        /// <para>Queries the configuration details of an HTTP response header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27228,7 +27480,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP响应头规则列表</para>
+        /// <para>Queries the configuration details of an HTTP response header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27273,7 +27525,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP响应头规则列表</para>
+        /// <para>Queries the configuration details of an HTTP response header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27291,7 +27543,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP响应头规则列表</para>
+        /// <para>Queries the configuration details of an HTTP response header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27561,7 +27813,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多条站点图片转换配置</para>
+        /// <para>Queries the details of image conversion configurations for multiple websites.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27606,7 +27858,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多条站点图片转换配置</para>
+        /// <para>Queries the details of image conversion configurations for multiple websites.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27651,7 +27903,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多条站点图片转换配置</para>
+        /// <para>Queries the details of image conversion configurations for multiple websites.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27669,7 +27921,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多条站点图片转换配置</para>
+        /// <para>Queries the details of image conversion configurations for multiple websites.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29453,7 +29705,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询重定向规则列表</para>
+        /// <para>Queries the configuration details of a URL redirect rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29498,7 +29750,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询重定向规则列表</para>
+        /// <para>Queries the configuration details of a URL redirect rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29543,7 +29795,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询重定向规则列表</para>
+        /// <para>Queries the configuration details of a URL redirect rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29561,7 +29813,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询重定向规则列表</para>
+        /// <para>Queries the configuration details of a URL redirect rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29579,7 +29831,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询重写Url规则列表</para>
+        /// <para>Queries the details of rewrite URL configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29624,7 +29876,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询重写Url规则列表</para>
+        /// <para>Queries the details of rewrite URL configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29669,7 +29921,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询重写Url规则列表</para>
+        /// <para>Queries the details of rewrite URL configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29687,7 +29939,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询重写Url规则列表</para>
+        /// <para>Queries the details of rewrite URL configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36495,6 +36747,156 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateDevelopmentModeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新边缘容器应用日志采集配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEdgeContainerAppLogRiverRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEdgeContainerAppLogRiverResponse
+        /// </returns>
+        public UpdateEdgeContainerAppLogRiverResponse UpdateEdgeContainerAppLogRiverWithOptions(UpdateEdgeContainerAppLogRiverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stdout))
+            {
+                query["Stdout"] = request.Stdout;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEdgeContainerAppLogRiver",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateEdgeContainerAppLogRiverResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateEdgeContainerAppLogRiverResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新边缘容器应用日志采集配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEdgeContainerAppLogRiverRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEdgeContainerAppLogRiverResponse
+        /// </returns>
+        public async Task<UpdateEdgeContainerAppLogRiverResponse> UpdateEdgeContainerAppLogRiverWithOptionsAsync(UpdateEdgeContainerAppLogRiverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stdout))
+            {
+                query["Stdout"] = request.Stdout;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEdgeContainerAppLogRiver",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateEdgeContainerAppLogRiverResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateEdgeContainerAppLogRiverResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新边缘容器应用日志采集配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEdgeContainerAppLogRiverRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEdgeContainerAppLogRiverResponse
+        /// </returns>
+        public UpdateEdgeContainerAppLogRiverResponse UpdateEdgeContainerAppLogRiver(UpdateEdgeContainerAppLogRiverRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateEdgeContainerAppLogRiverWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新边缘容器应用日志采集配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEdgeContainerAppLogRiverRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEdgeContainerAppLogRiverResponse
+        /// </returns>
+        public async Task<UpdateEdgeContainerAppLogRiverResponse> UpdateEdgeContainerAppLogRiverAsync(UpdateEdgeContainerAppLogRiverRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateEdgeContainerAppLogRiverWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

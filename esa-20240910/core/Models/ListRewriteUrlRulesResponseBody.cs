@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRewriteUrlRulesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The URL rewrite configuration list.</para>
+        /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public List<ListRewriteUrlRulesResponseBodyConfigs> Configs { get; set; }
         public class ListRewriteUrlRulesResponseBodyConfigs : TeaModel {
             /// <summary>
+            /// <para>The configuration ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>39538644977****</para>
             /// </summary>
@@ -22,6 +27,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ConfigId { get; set; }
 
             /// <summary>
+            /// <para>The type of the configuration. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>global: global configuration.</description></item>
+            /// <item><description>rule: rule configuration.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>global</para>
             /// </summary>
@@ -30,6 +41,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ConfigType { get; set; }
 
             /// <summary>
+            /// <para>The desired query string to which you want to rewrite the query string in the original request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example=123</para>
             /// </summary>
@@ -38,6 +51,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string QueryString { get; set; }
 
             /// <summary>
+            /// <para>The query string rewrite method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>static</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>static</para>
             /// </summary>
@@ -46,6 +64,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RewriteQueryStringType { get; set; }
 
             /// <summary>
+            /// <para>The path rewrite method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>static</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>static</para>
             /// </summary>
@@ -54,6 +77,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RewriteUriType { get; set; }
 
             /// <summary>
+            /// <para>The rule content.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(http.host eq &quot;video.example.com&quot;)</para>
             /// </summary>
@@ -62,6 +87,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the rule is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>on</description></item>
+            /// <item><description>off</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -70,6 +101,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleEnable { get; set; }
 
             /// <summary>
+            /// <para>The rule name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rule_example</para>
             /// </summary>
@@ -78,6 +111,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
+            /// <para>The order in which the rule is executed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -86,6 +121,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Sequence { get; set; }
 
             /// <summary>
+            /// <para>The version number of the website configurations.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -94,6 +131,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? SiteVersion { get; set; }
 
             /// <summary>
+            /// <para>The desired URI to which you want to rewrite the path in the original request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/image.example.com/index.html</para>
             /// </summary>
@@ -104,6 +143,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>The page number returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -112,6 +153,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -120,6 +163,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</para>
         /// </summary>
@@ -128,6 +173,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>
@@ -136,6 +183,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
