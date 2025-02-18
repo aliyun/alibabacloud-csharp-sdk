@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
     public class ListDataQualityEvaluationTasksRequest : TeaModel {
         /// <summary>
         /// <para>The name of the data quality monitoring task. Fuzzy match is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataQualityEvaluationTaskInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the data quality monitoring instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

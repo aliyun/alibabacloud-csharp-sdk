@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string BizdateTo { get; set; }
 
         /// <summary>
+        /// <para>The earliest time when data quality verification results are generated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>
         /// </summary>
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CreateTimeFrom { get; set; }
 
         /// <summary>
+        /// <para>The latest generation time of data quality verification results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>
         /// </summary>
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CreateTimeTo { get; set; }
 
         /// <summary>
+        /// <para>The ID of the data quality verification task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200001</para>
         /// </summary>
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataQualityEvaluationTaskId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the data quality verification task instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10001</para>
         /// </summary>
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataQualityEvaluationTaskInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the data quality rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100001</para>
         /// </summary>

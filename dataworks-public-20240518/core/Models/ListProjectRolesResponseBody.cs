@@ -54,7 +54,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The name of the role in the DataWorks workspace.</para>
+                /// <para>The name of the role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Visitors</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]

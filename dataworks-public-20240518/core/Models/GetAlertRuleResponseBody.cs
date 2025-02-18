@@ -217,6 +217,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Validation(Required=false)]
                     public GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionError Error { get; set; }
                     public class GetAlertRuleResponseBodyAlertRuleTriggerConditionExtensionError : TeaModel {
+                        /// <summary>
+                        /// <para>Indicates whether an alert is triggered if a batch synchronization task is automatically rerun upon a failure.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>false</para>
+                        /// </summary>
                         [NameInMap("AutoRerunAlertEnabled")]
                         [Validation(Required=false)]
                         public bool? AutoRerunAlertEnabled { get; set; }
@@ -368,7 +374,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <list type="bullet">
                     /// <item><description>Task: node</description></item>
                     /// <item><description>Baseline: baseline</description></item>
-                    /// <item><description>Project: workspace</description></item>
+                    /// <item><description>project: workspace</description></item>
                     /// <item><description>BizProcess: workflow</description></item>
                     /// </list>
                     /// 

@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The name of the UDF.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Function name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -75,6 +78,39 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The FlowSpec field information about the UDF. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///     &quot;version&quot;: &quot;1.1.0&quot;,
+            ///     &quot;kind&quot;: &quot;Function&quot;,
+            ///     &quot;spec&quot;: {
+            ///         &quot;functions&quot;: [
+            ///             {
+            ///                 &quot;name&quot;: &quot;Function_Name&quot;,
+            ///                 &quot;id&quot;: &quot;580667964888595XXXX&quot;,
+            ///                 &quot;script&quot;: {
+            ///                     &quot;content&quot;: &quot;{  \&quot;uuid\&quot;: \&quot;580667964888595XXXX\&quot;,  \&quot;name\&quot;: \&quot;Function_Name\&quot;,  \&quot;datasource\&quot;: {    \&quot;type\&quot;: \&quot;odps\&quot;,    \&quot;name\&quot;: \&quot;odps_first\&quot;  },  \&quot;runtimeResource\&quot;: {    \&quot;resourceGroup\&quot;: \&quot;S_res_group_XXXX_XXXX\&quot;,    \&quot;resourceGroupId\&quot;: 6591XXXX  }}&quot;,
+            ///                     &quot;path&quot;: &quot;XXX/OpenAPI/Function/Function_Name&quot;,
+            ///                     &quot;runtime&quot;: {
+            ///                         &quot;command&quot;: &quot;ODPS_FUNCTION&quot;
+            ///                     }
+            ///                 },
+            ///                 &quot;datasource&quot;: {
+            ///                     &quot;name&quot;: &quot;odps_first&quot;,
+            ///                     &quot;type&quot;: &quot;odps&quot;
+            ///                 },
+            ///                 &quot;runtimeResource&quot;: {
+            ///                     &quot;resourceGroup&quot;: &quot;S_res_group_XXXX_XXXX&quot;,
+            ///                     &quot;id&quot;: &quot;723932906364267XXXX&quot;,
+            ///                     &quot;resourceGroupId&quot;: &quot;6591XXXX&quot;
+            ///                 },
+            ///                 &quot;metadata&quot;: {
+            ///                     &quot;owner&quot;: &quot;110755000425XXXX&quot;
+            ///                 }
+            ///             }
+            ///         ]
+            ///     }
+            /// }</para>
             /// </summary>
             [NameInMap("Spec")]
             [Validation(Required=false)]

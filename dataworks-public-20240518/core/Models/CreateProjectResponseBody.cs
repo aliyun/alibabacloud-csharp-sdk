@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateProjectResponseBody : TeaModel {
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>
@@ -20,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The workspace ID. Note: This parameter is deprecated and is replaced by the Id parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>

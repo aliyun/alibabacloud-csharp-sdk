@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>19715</para>
         /// </summary>

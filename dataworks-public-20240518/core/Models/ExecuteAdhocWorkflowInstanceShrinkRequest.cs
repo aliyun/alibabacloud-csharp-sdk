@@ -10,13 +10,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ExecuteAdhocWorkflowInstanceShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>业务日期。</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1710239005403</para>
         /// </summary>
         [NameInMap("BizDate")]
         [Validation(Required=false)]
         public long? BizDate { get; set; }
 
         /// <summary>
+        /// <para>The environment of the workspace. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Prod: production environment</description></item>
+        /// <item><description>Dev: development environment</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Prod</para>
         /// </summary>
@@ -25,6 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EnvType { get; set; }
 
         /// <summary>
+        /// <para>The name of the workflow instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,6 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The account ID of the owner.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,6 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,6 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The tasks.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tasks")]

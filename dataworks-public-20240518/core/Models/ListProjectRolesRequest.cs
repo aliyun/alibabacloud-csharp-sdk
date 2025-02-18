@@ -56,8 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The type of the role in the DataWorks workspace.</para>
-        /// <para>Valid values:</para>
+        /// <para>The type of the role. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>UserCustom: user-defined role</description></item>
         /// <item><description>System: system role</description></item>

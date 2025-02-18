@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDIJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The destination type. If you do not configure this parameter, no limits are imposed on the tasks.</para>
+        /// <para>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, Datahub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive. If you do not configure this parameter, the API operation queries synchronization tasks that use all type of destinations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hologres</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The source type. If you do not configure this parameter, no limits are imposed on the tasks.</para>
+        /// <para>The source type. Valid values: PolarDB, MySQL, Kafka, Loghub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SqlServer, Doris, and ClickHouse. If you do not configure this parameter, the API operation queries synchronization tasks that use all types of sources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>

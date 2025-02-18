@@ -52,6 +52,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? InstanceId { get; set; }
 
+        [NameInMap("NodeType")]
+        [Validation(Required=false)]
+        public string NodeType { get; set; }
+
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
     }
 
 }

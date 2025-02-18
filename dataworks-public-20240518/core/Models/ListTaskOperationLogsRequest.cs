@@ -51,8 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace.</para>
-        /// <para>Valid values:</para>
+        /// <para>The environment of the workspace. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Prod: production environment</description></item>
         /// <item><description>Dev: development environment</description></item>

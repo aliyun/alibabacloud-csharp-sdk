@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/ods/order_data</para>
         /// </summary>
         [NameInMap("DirectoryPath")]
         [Validation(Required=false)]
@@ -26,6 +29,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The name of the template. The name can be up to 512 characters in length and can contain digits, letters, and punctuation marks.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Table row Count Verification</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

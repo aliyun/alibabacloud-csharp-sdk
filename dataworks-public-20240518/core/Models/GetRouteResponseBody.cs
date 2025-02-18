@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetRouteResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>
         /// </summary>
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public GetRouteResponseBodyRoute Route { get; set; }
         public class GetRouteResponseBodyRoute : TeaModel {
             /// <summary>
+            /// <para>The time when the route was created. The value is a 64-bit timestamp.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1727055811000</para>
             /// </summary>
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The CIDR block of the destination-based route.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192.168.0.0/16</para>
             /// </summary>
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string DestinationCidr { get; set; }
 
             /// <summary>
+            /// <para>The route ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -59,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? NetworkId { get; set; }
 
             /// <summary>
+            /// <para>The resource group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
             /// </summary>
@@ -67,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
+            /// <para>The network resource ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ns-679XXXXX</para>
             /// </summary>

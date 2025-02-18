@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? DIJobId { get; set; }
 
                 /// <summary>
-                /// <para>The destination type. Valid values: Hologres and Hive.</para>
+                /// <para>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, Datahub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive. If you do not configure this parameter, the API operation returns synchronization tasks that use all type of destinations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Hologres</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The source type. The value MySQL is returned.</para>
+                /// <para>The source type. Valid values: PolarDB, MySQL, Kafka, Loghub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SqlServer, Doris, and ClickHouse. If you do not configure this parameter, the API operation returns synchronization tasks that use all types of sources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Mysql</para>

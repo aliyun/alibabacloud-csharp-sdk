@@ -47,6 +47,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? DataSourceId { get; set; }
 
             /// <summary>
+            /// <para>The environment to which the target data source belongs. The values are as follows:</para>
+            /// <list type="bullet">
+            /// <item><description>Dev: the development environment.</description></item>
+            /// <item><description>Prod: the production environment.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Dev</para>
             /// </summary>

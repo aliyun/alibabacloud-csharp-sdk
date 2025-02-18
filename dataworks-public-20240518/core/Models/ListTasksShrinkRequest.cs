@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListTasksShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the task.</para>
+        /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string IdsShrink { get; set; }
 
         /// <summary>
         /// <para>The name of the task. Fuzzy match is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SQL node</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

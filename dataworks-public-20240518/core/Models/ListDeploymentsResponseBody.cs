@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListDeploymentsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListDeploymentsResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The deployment processes.</para>
+            /// <para>The processes.</para>
             /// </summary>
             [NameInMap("Deployments")]
             [Validation(Required=false)]
@@ -55,6 +55,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The error message returned if the process fails.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Error message</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -99,6 +102,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The description of the stage.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Check before going online to development</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -113,6 +119,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The error message returned during the stage.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Error message</para>
                     /// </summary>
                     [NameInMap("Message")]
                     [Validation(Required=false)]
@@ -120,6 +129,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The name of the stage.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Check before going online to development</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]

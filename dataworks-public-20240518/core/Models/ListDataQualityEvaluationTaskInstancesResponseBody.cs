@@ -153,8 +153,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the task.</para>
+                    /// <para>The name of the monitor.</para>
                     /// <para>This parameter is required.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Quality verification task</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]

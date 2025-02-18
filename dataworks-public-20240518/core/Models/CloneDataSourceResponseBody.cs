@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request. It is used to locate logs and troubleshoot problems.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FCD583B9-346B-5E75-82C1-4A7C192C48DB</para>
         /// </summary>

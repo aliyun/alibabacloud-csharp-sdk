@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The new name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Rename</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

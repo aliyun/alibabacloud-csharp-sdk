@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class TagDataAssetsRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable lineage-based automatic backtracking.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? AutoTraceEnabled { get; set; }
 
         /// <summary>
+        /// <para>The data asset IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DataAssetIds")]
@@ -25,6 +28,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<string> DataAssetIds { get; set; }
 
         /// <summary>
+        /// <para>The type of the data asset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ACS::DataWorks::Table</description></item>
+        /// <item><description>ACS::DataWorks::Task</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,6 +43,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DataAssetType { get; set; }
 
         /// <summary>
+        /// <para>The environment of the workspace to which the data asset belongs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Dev: development environment</description></item>
+        /// <item><description>Prod: production environment</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Prod</para>
         /// </summary>
@@ -43,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EnvType { get; set; }
 
         /// <summary>
+        /// <para>The DataWorks workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10000</para>
         /// </summary>
@@ -51,6 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The tags that you want to add to data assets.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tags")]
@@ -58,6 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<TagDataAssetsRequestTags> Tags { get; set; }
         public class TagDataAssetsRequestTags : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -68,6 +86,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>value</para>
             /// </summary>

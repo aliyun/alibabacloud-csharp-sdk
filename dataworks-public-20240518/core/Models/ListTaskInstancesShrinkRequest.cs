@@ -144,6 +144,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The name of the task. Fuzzy match is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SQL node</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
@@ -175,7 +178,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TriggerRecurrence { get; set; }
 
         /// <summary>
-        /// <para>The trigger type. Valid values:</para>
+        /// <para>The trigger type.</para>
         /// <list type="bullet">
         /// <item><description>Scheduler: scheduling cycle-based trigger</description></item>
         /// <item><description>Manual: manual trigger</description></item>

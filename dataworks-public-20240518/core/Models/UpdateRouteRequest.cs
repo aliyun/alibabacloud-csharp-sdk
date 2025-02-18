@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DestinationCidr { get; set; }
 
         /// <summary>
+        /// <para>The route ID of the network resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

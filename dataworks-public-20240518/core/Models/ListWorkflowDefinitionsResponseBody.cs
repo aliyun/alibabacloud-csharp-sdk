@@ -65,6 +65,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The description of the workflow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Workflow description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -92,6 +95,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The name of the workflow.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>OpenAPI test workflow Demo</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -137,6 +143,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The script path.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>XX/OpenAPI_test/workflow_test/OpenAPI_test_workflow_Demo</para>
                     /// </summary>
                     [NameInMap("Path")]
                     [Validation(Required=false)]

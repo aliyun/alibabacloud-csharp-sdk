@@ -509,6 +509,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The name of the task for which the instance is generated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SQL node</para>
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
@@ -614,6 +617,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The name of the workflow to which the instance belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test workflow</para>
             /// </summary>
             [NameInMap("WorkflowName")]
             [Validation(Required=false)]

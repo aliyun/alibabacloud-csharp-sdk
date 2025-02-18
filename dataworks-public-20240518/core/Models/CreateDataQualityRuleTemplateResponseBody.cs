@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityRuleTemplateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The Code of the rule template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UserDefined:3001</para>
         /// </summary>

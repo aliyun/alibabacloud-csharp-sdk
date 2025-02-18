@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
     public class UpdateProjectRequest : TeaModel {
         /// <summary>
         /// <para>The description of the workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Financial analysis group project data development</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -47,12 +50,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The display name of the workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sora financial analysis Space</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the workspace management page to obtain the ID.</para>
+        /// <para>This parameter is used to determine the DataWorks workspaces used for this API call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

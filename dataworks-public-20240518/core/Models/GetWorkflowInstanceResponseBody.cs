@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public GetWorkflowInstanceResponseBodyWorkflowInstance WorkflowInstance { get; set; }
         public class GetWorkflowInstanceResponseBodyWorkflowInstance : TeaModel {
             /// <summary>
+            /// <para>The data timestamp.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1710239005403</para>
             /// </summary>
@@ -159,7 +161,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>工作流类型</para>
+            /// <para>The type of the workflow instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Normal</description></item>
+            /// <item><description>Manual</description></item>
+            /// <item><description>SmokeTest</description></item>
+            /// <item><description>SupplementData</description></item>
+            /// <item><description>ManualWorkflow</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>

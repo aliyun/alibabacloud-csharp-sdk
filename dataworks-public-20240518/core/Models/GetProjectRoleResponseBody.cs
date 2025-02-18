@@ -18,19 +18,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public class GetProjectRoleResponseBodyProjectRole : TeaModel {
             /// <summary>
             /// <para>The code of the role in the DataWorks workspace.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>role_project_admin: workspace administrator</description></item>
-            /// <item><description>role_project_dev: developer</description></item>
-            /// <item><description>role_project_dg_admin: data governance administrator</description></item>
-            /// <item><description>role_project_guest: visitor</description></item>
-            /// <item><description>role_project_security: security administrator</description></item>
-            /// <item><description>role_project_deploy: deployer</description></item>
-            /// <item><description>role_project_owner: workspace owner</description></item>
-            /// <item><description>role_project_data_analyst: data analyst</description></item>
-            /// <item><description>role_project_pe: O\&amp;M engineer</description></item>
-            /// <item><description>role_project_erd: model designer</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>role_project_guest</para>
@@ -41,6 +28,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The name of the role in the DataWorks workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Visitors</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -57,8 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The type of the role in the DataWorks workspace.</para>
-            /// <para>Valid values:</para>
+            /// <para>The type of the role in the DataWorks workspace. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>UserCustom: user-defined role</description></item>
             /// <item><description>System: system role</description></item>

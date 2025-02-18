@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateRouteResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>
         /// </summary>

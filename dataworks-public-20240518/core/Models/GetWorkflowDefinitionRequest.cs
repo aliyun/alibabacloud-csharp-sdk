@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("IncludeScriptContent")]
+        [Validation(Required=false)]
+        public bool? IncludeScriptContent { get; set; }
+
+        /// <summary>
         /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
         /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
         /// 

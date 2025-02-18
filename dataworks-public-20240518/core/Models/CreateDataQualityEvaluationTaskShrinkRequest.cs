@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The description of the monitor.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OpenAPI create a data quality monitoring test</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -43,6 +46,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The name of the monitor.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OpenAPI create a data quality monitoring test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

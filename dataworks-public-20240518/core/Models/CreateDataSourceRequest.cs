@@ -70,6 +70,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/overview">DataWorks console</a> and go to the workspace management page to obtain the ID.</para>
+        /// <para>This parameter is used to determine the DataWorks workspaces used for this API call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

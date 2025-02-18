@@ -47,6 +47,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Validation(Required=false)]
                     public CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical Critical { get; set; }
                     public class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical : TeaModel {
+                        /// <summary>
+                        /// <para>阈值表达式。</para>
+                        /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
+                        /// <list type="bullet">
+                        /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
+                        /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
+                        /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
+                        /// </list>
+                        /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>$checkValue &gt; 0.01</para>
+                        /// </summary>
                         [NameInMap("Expression")]
                         [Validation(Required=false)]
                         public string Expression { get; set; }
@@ -89,6 +102,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Validation(Required=false)]
                     public CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected Expected { get; set; }
                     public class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected : TeaModel {
+                        /// <summary>
+                        /// <para>阈值表达式。</para>
+                        /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
+                        /// <list type="bullet">
+                        /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
+                        /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
+                        /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
+                        /// </list>
+                        /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>$checkValue &gt; 0.01</para>
+                        /// </summary>
                         [NameInMap("Expression")]
                         [Validation(Required=false)]
                         public string Expression { get; set; }
@@ -130,6 +156,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Validation(Required=false)]
                     public CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned Warned { get; set; }
                     public class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned : TeaModel {
+                        /// <summary>
+                        /// <para>阈值表达式。</para>
+                        /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
+                        /// <list type="bullet">
+                        /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
+                        /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
+                        /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
+                        /// </list>
+                        /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>$checkValue &gt; 0.01</para>
+                        /// </summary>
                         [NameInMap("Expression")]
                         [Validation(Required=false)]
                         public string Expression { get; set; }
@@ -171,8 +210,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The threshold calculation method. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Fixed</description></item>
-                /// <item><description>Fluctuation</description></item>
-                /// <item><description>FluctuationDiscreate</description></item>
+                /// <item><description>Fluctation</description></item>
+                /// <item><description>FluctationDiscreate</description></item>
                 /// <item><description>Auto</description></item>
                 /// <item><description>Average</description></item>
                 /// </list>
@@ -188,6 +227,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The description of the monitoring rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OpenAPI test rules</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -204,7 +246,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The operations that you can perform after the rule-based check.</para>
+            /// <para>The operations that you can perform after the rule-based check fails.</para>
             /// </summary>
             [NameInMap("ErrorHandlers")]
             [Validation(Required=false)]
@@ -247,6 +289,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The name of the monitoring rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OpenAPI test rules</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -356,6 +401,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The description of the monitor.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OpenAPI create a data quality monitoring test</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -400,6 +448,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The name of the monitor.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OpenAPI create a data quality monitoring test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -431,14 +482,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<CreateDataQualityEvaluationTaskRequestNotificationsNotifications> Notifications { get; set; }
             public class CreateDataQualityEvaluationTaskRequestNotificationsNotifications : TeaModel {
                 /// <summary>
-                /// <para>The alert notification method.</para>
+                /// <para>The alert notification methods.</para>
                 /// </summary>
                 [NameInMap("NotificationChannels")]
                 [Validation(Required=false)]
                 public List<CreateDataQualityEvaluationTaskRequestNotificationsNotificationsNotificationChannels> NotificationChannels { get; set; }
                 public class CreateDataQualityEvaluationTaskRequestNotificationsNotificationsNotificationChannels : TeaModel {
                     /// <summary>
-                    /// <para>The alert notification method.</para>
+                    /// <para>The alert notification methods.</para>
                     /// </summary>
                     [NameInMap("Channels")]
                     [Validation(Required=false)]
@@ -467,8 +518,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Extension { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the alert recipient.</para>
-                    /// <para>Valid values:</para>
+                    /// <para>The type of the alert recipient. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>WebhookUrl</description></item>
                     /// <item><description>FeishuUrl</description></item>
@@ -536,7 +586,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateDataQualityEvaluationTaskRequestTarget Target { get; set; }
         public class CreateDataQualityEvaluationTaskRequestTarget : TeaModel {
             /// <summary>
-            /// <para>The type of the database to which the table belongs.</para>
+            /// <para>The type of the database to which the table belongs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>maxcompute</description></item>
+            /// <item><description>hologres</description></item>
+            /// <item><description>cdh</description></item>
+            /// <item><description>analyticdb_for_mysql</description></item>
+            /// <item><description>starrocks</description></item>
+            /// <item><description>emr</description></item>
+            /// <item><description>analyticdb_for_postgresql</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>maxcompute</para>
@@ -546,7 +605,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string DatabaseType { get; set; }
 
             /// <summary>
-            /// <para>The partition configuration of the partitioned table.</para>
+            /// <para>The configuration of the partitioned table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pt=$[yyyymmdd-1]</para>

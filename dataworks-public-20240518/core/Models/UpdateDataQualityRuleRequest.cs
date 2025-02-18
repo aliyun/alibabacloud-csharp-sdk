@@ -41,6 +41,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public UpdateDataQualityRuleRequestCheckingConfigThresholdsCritical Critical { get; set; }
                 public class UpdateDataQualityRuleRequestCheckingConfigThresholdsCritical : TeaModel {
                     /// <summary>
+                    /// <para>The threshold expression.</para>
+                    /// <para>The volatility type rule must use an expression to represent the volatility threshold. For example:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</description></item>
+                    /// <item><description>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</description></item>
+                    /// <item><description>Absolute volatility: abs($checkValue) &gt; 0.01</description></item>
+                    /// </list>
+                    /// <para>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>$checkValue &gt; 0.05</para>
                     /// </summary>
@@ -87,6 +96,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public UpdateDataQualityRuleRequestCheckingConfigThresholdsExpected Expected { get; set; }
                 public class UpdateDataQualityRuleRequestCheckingConfigThresholdsExpected : TeaModel {
                     /// <summary>
+                    /// <para>The threshold expression.</para>
+                    /// <para>The volatility type rule must use an expression to represent the volatility threshold. For example:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</description></item>
+                    /// <item><description>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</description></item>
+                    /// <item><description>Absolute volatility: abs($checkValue) &gt; 0.01</description></item>
+                    /// </list>
+                    /// <para>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>$checkValue &lt;= 0.01</para>
                     /// </summary>
@@ -133,6 +151,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public UpdateDataQualityRuleRequestCheckingConfigThresholdsWarned Warned { get; set; }
                 public class UpdateDataQualityRuleRequestCheckingConfigThresholdsWarned : TeaModel {
                     /// <summary>
+                    /// <para>The threshold expression.</para>
+                    /// <para>The volatility type rule must use an expression to represent the volatility threshold. For example:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</description></item>
+                    /// <item><description>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</description></item>
+                    /// <item><description>Absolute volatility: abs($checkValue) &gt; 0.01</description></item>
+                    /// </list>
+                    /// <para>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>$checkValue &gt; 0.01</para>
                     /// </summary>
@@ -258,6 +285,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The name of the rule. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The table cannot be empty.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

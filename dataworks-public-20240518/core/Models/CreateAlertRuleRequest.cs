@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account used by the creator of the rule.</para>
+        /// <para>The ID of the Alibaba Cloud account used by the owner of the rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -207,6 +207,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public CreateAlertRuleRequestTriggerConditionExtensionError Error { get; set; }
                 public class CreateAlertRuleRequestTriggerConditionExtensionError : TeaModel {
                     /// <summary>
+                    /// <para>Specifies whether to trigger an alert if a batch synchronization task is automatically rerun upon a failure.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
                     /// </summary>

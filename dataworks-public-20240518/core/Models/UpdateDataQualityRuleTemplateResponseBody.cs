@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateDataQualityRuleTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>691CA452-D37A-4ED0-9441</para>

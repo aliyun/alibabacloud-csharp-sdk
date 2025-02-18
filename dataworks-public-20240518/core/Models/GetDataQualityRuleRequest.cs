@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataQualityRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

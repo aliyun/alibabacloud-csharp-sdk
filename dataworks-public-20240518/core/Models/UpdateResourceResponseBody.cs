@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. You can troubleshoot issues based on the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4CDF7B72-020B-542A-8465-21CFFA81XXXX</para>

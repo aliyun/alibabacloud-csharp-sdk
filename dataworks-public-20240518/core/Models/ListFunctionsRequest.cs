@@ -52,15 +52,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The UDF type. This parameter specifies a filter condition.</para>
+        /// <para>The user-defined function (UDF) type. This parameter specifies a filter condition.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MATH: mathematical operation function</description></item>
-        /// <item><description>AGGREGATE: aggregate function</description></item>
-        /// <item><description>STRING: string processing function</description></item>
-        /// <item><description>DATE: date function</description></item>
-        /// <item><description>ANALYTIC: window function</description></item>
-        /// <item><description>OTHER: others</description></item>
+        /// <item><description>Math: mathematical operation function</description></item>
+        /// <item><description>Aggregate: aggregate function</description></item>
+        /// <item><description>String: string processing function</description></item>
+        /// <item><description>Date: date function</description></item>
+        /// <item><description>Analytic: window function</description></item>
+        /// <item><description>Other: other functions</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -34,6 +34,33 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The FlowSpec field information about the UDF. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;version&quot;: &quot;1.1.0&quot;,
+        ///     &quot;kind&quot;: &quot;Function&quot;,
+        ///     &quot;spec&quot;: {
+        ///         &quot;functions&quot;: [
+        ///             {
+        ///                 &quot;name&quot;: &quot;FunctionName&quot;,
+        ///                 &quot;script&quot;: {
+        ///                     &quot;content&quot;: &quot;{\&quot;name\&quot;: \&quot;FunctionName\&quot;, \&quot;datasource\&quot;: {\&quot;type\&quot;: \&quot;odps\&quot;, \&quot;name\&quot;: \&quot;odps_first\&quot;}, \&quot;runtimeResource\&quot;: {\&quot;resourceGroup\&quot;: \&quot;S_res_group_XXXX_XXXX\&quot;}}&quot;,
+        ///                     &quot;path&quot;: &quot;XXX/OpenAPI/Function/FunctionName&quot;,
+        ///                     &quot;runtime&quot;: {
+        ///                         &quot;command&quot;: &quot;ODPS_FUNCTION&quot;
+        ///                     }
+        ///                 },
+        ///                 &quot;datasource&quot;: {
+        ///                     &quot;name&quot;: &quot;odps_first&quot;,
+        ///                     &quot;type&quot;: &quot;odps&quot;
+        ///                 },
+        ///                 &quot;runtimeResource&quot;: {
+        ///                     &quot;resourceGroup&quot;: &quot;S_res_group_XXXX_XXXX&quot;
+        ///                 }
+        ///             }
+        ///         ]
+        ///     }
+        /// }</para>
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

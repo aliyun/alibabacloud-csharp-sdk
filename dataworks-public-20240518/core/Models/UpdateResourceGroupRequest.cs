@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the new Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2kqofrgXXXXX</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The new remarks that you want to modify for the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>创建用于普通任务的通用资源组</para>
+        /// <para>Create a common resource group for common tasks</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

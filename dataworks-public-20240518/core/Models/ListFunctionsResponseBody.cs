@@ -104,6 +104,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The overall description of the UDF.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -154,6 +157,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The description of the example.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Example description &gt;&gt;&gt; select tsetUdf(xx,yy);
+                /// abc</para>
                 /// </summary>
                 [NameInMap("ExampleDescription")]
                 [Validation(Required=false)]
@@ -191,6 +198,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The name of the UDF.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Function name</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -208,6 +218,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The description of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xx: parameter information XXX
+                /// yy: parameter information YYY</para>
                 /// </summary>
                 [NameInMap("ParameterDescription")]
                 [Validation(Required=false)]
@@ -225,6 +239,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The description of the return value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>The return value is a string.</para>
                 /// </summary>
                 [NameInMap("ReturnValueDescription")]
                 [Validation(Required=false)]
@@ -268,6 +285,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The script path.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>XXX/OpenAPI/function/function_name</para>
                     /// </summary>
                     [NameInMap("Path")]
                     [Validation(Required=false)]

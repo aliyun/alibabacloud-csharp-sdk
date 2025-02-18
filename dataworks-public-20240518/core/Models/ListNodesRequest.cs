@@ -51,6 +51,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The scheduling type. This parameter specifies a filter condition.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Normal: Nodes are scheduled as expected.</description></item>
+        /// <item><description>Pause: Nodes are paused, and the running of their descendant nodes is blocked.</description></item>
+        /// <item><description>Skip: Nodes are dry run. The system does not actually run the nodes but directly prompts that the nodes are successfully run. The running duration of the nodes is 0 seconds. In addition, the nodes do not occupy resources or block the running of their descendant nodes.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Normal</para>
         /// </summary>
@@ -74,12 +82,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RerunMode { get; set; }
 
         /// <summary>
-        /// <para>The scene of nodes. This parameter specifies a filter condition.</para>
+        /// <para>The scene of the node. This parameter determines the location of the node.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DATAWORKS_PROJECT</description></item>
-        /// <item><description>MANUAL_WORKFLOW</description></item>
-        /// <item><description>MANUAL_NODE</description></item>
+        /// <item><description>DataworksProject</description></item>
+        /// <item><description>DataworksManualWorkflow</description></item>
+        /// <item><description>DataworksManualTask</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

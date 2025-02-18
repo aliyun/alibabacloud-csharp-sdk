@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the data source has been modified:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Yes</description></item>
+        /// <item><description>false: no</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

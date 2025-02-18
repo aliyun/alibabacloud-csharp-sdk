@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateRouteRequest : TeaModel {
         /// <summary>
+        /// <para>The CIDR blocks of the destination-based route.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DestinationCidr { get; set; }
 
         /// <summary>
+        /// <para>The network ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

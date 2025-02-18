@@ -55,12 +55,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The status of the processes. This parameter specifies a filter condition.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>INIT</description></item>
-        /// <item><description>RUNNING</description></item>
-        /// <item><description>SUCCESS</description></item>
-        /// <item><description>FAIL</description></item>
-        /// <item><description>TERMINATION</description></item>
-        /// <item><description>CANCEL</description></item>
+        /// <item><description>Init</description></item>
+        /// <item><description>Running</description></item>
+        /// <item><description>Success</description></item>
+        /// <item><description>Fail</description></item>
+        /// <item><description>Termination</description></item>
+        /// <item><description>Cancel</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -58,6 +58,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The name of the file resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OpenAPI_Test_Resource. py</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -85,6 +88,38 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The FlowSpec field information about the file resource. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow">FlowSpec</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///     &quot;version&quot;: &quot;1.1.0&quot;,
+            ///     &quot;kind&quot;: &quot;Resource&quot;,
+            ///     &quot;spec&quot;: {
+            ///         &quot;fileResources&quot;: [
+            ///             {
+            ///                 &quot;name&quot;: &quot;OpenAPI_Test_Resource.py&quot;,
+            ///                 &quot;id&quot;: &quot;631478864897630XXXX&quot;,
+            ///                 &quot;script&quot;: {
+            ///                     &quot;content&quot;: &quot;&quot;,
+            ///                     &quot;path&quot;: &quot;XX/OpenAPI_Test/Resource_Test/OpenAPI_Test_Resource.py&quot;,
+            ///                     &quot;runtime&quot;: {
+            ///                         &quot;command&quot;: &quot;ODPS_PYTHON&quot;
+            ///                     }
+            ///                 },
+            ///                 &quot;type&quot;: &quot;python&quot;,
+            ///                 &quot;file&quot;: {
+            ///                     &quot;storage&quot;: {}
+            ///                 },
+            ///                 &quot;datasource&quot;: {
+            ///                     &quot;name&quot;: &quot;odps_first&quot;,
+            ///                     &quot;type&quot;: &quot;odps&quot;
+            ///                 },
+            ///                 &quot;metadata&quot;: {
+            ///                     &quot;owner&quot;: &quot;110755000425XXXX&quot;
+            ///                 }
+            ///             }
+            ///         ]
+            ///     }
+            /// }</para>
             /// </summary>
             [NameInMap("Spec")]
             [Validation(Required=false)]

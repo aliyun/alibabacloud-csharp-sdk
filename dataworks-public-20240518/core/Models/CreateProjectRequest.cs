@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
     public class CreateProjectRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the Alibaba Cloud resource group to which the workspace belongs. You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> and go to the Resource Group page to query the ID.</para>
-        /// <para>You can configure this parameter to specify an Alibaba Cloud resource group that you want to use to manage the workspace.</para>
+        /// <para>You must configure this parameter to specify an Alibaba Cloud resource group for the workspace that you want to create.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzbn7pti3zff</para>
@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The description of the workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Financial analysis group project data development</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -87,6 +90,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The display name of the workspace.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sora financial analysis</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
@@ -94,6 +100,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The name of the workspace.</para>
+        /// <para>Limits:</para>
+        /// <list type="bullet">
+        /// <item><description>The workspace name must be unqiue in a region.</description></item>
+        /// <item><description>The workspace name can contain letters, digits, and underscores (_), and must start with a letter.</description></item>
+        /// <item><description>The workspace name must be 3 to 28 characters in length.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

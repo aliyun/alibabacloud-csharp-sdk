@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListResourceGroupsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Alibaba Cloud Resource Group ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-aek2kqofrgXXXXX</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string AliyunResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>Alibaba Cloud tag list</para>
+        /// </summary>
         [NameInMap("AliyunResourceTags")]
         [Validation(Required=false)]
         public string AliyunResourceTagsShrink { get; set; }
@@ -83,16 +88,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ResourceGroupTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</para>
+        /// <para>The list of fields used for sorting. Fields such as TriggerTime and StartedTime are supported. You must configure this parameter in the Sorting field + Sort by (Desc/Asc). By default, results are sorted in ascending order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Id (Desc/Asc): the resource group ID</description></item>
-        /// <item><description>Name (Desc/Asc): the name of the resource group</description></item>
-        /// <item><description>Remark (Desc/Asc): the remarks of the resource group</description></item>
-        /// <item><description>Type (Desc/Asc): the type of the resource group</description></item>
-        /// <item><description>Status (Desc/Asc): the status of the resource group</description></item>
-        /// <item><description>Spec (Desc/Asc): the specifications of the resource group</description></item>
-        /// <item><description>CreateUser (Desc/Asc): the creator of the resource group</description></item>
-        /// <item><description>CreateTime (Desc/Asc): the time when the route is created</description></item>
+        /// <item><description>Id (Desc/Asc): resource group ID</description></item>
+        /// <item><description>Name (Desc/Asc): resource group name</description></item>
+        /// <item><description>Remark (Desc/Asc): resource group remarks</description></item>
+        /// <item><description>Type (Desc/Asc): resource group type</description></item>
+        /// <item><description>Status (Desc/Asc): status of resources in a resource group</description></item>
+        /// <item><description>Spec (Desc/Asc): resource group specifications</description></item>
+        /// <item><description>CreateUser (Desc/Asc): creator</description></item>
+        /// <item><description>CreateTime (Desc/Asc): creation time</description></item>
         /// </list>
         /// <para>Default value: CreateTime Asc</para>
         /// 

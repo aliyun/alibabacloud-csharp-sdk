@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetCreateWorkflowInstancesResultRequest : TeaModel {
         /// <summary>
+        /// <para>The operation ID. This parameter is used to query the result of asynchronously creating a workflow instance. You can call the CreateWorkflowInstances operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

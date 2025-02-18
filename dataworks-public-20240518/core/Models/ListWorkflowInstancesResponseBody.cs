@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListWorkflowInstancesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListWorkflowInstancesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListWorkflowInstancesResponseBodyPagingInfo : TeaModel {
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -37,15 +46,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public int? TotalCount { get; set; }
 
+            /// <summary>
+            /// <para>The workflow instances.</para>
+            /// </summary>
             [NameInMap("WorkflowInstances")]
             [Validation(Required=false)]
             public List<ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances> WorkflowInstances { get; set; }
             public class ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances : TeaModel {
+                /// <summary>
+                /// <para>业务日期。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1710239005403</para>
+                /// </summary>
                 [NameInMap("BizDate")]
                 [Validation(Required=false)]
                 public long? BizDate { get; set; }
 
                 /// <summary>
+                /// <para>The creation time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
                 /// </summary>
@@ -54,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>The account ID of the creator.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -62,6 +84,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CreateUser { get; set; }
 
                 /// <summary>
+                /// <para>The environment of the workspace. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Prod</description></item>
+                /// <item><description>Dev</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Prod</para>
                 /// </summary>
@@ -70,6 +98,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EnvType { get; set; }
 
                 /// <summary>
+                /// <para>The time when the instance finished running.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
                 /// </summary>
@@ -78,6 +108,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? FinishedTime { get; set; }
 
                 /// <summary>
+                /// <para>The workflow instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
                 /// </summary>
@@ -86,6 +118,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>The modification time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
                 /// </summary>
@@ -94,6 +128,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
+                /// <para>The account ID of the modifier.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -102,6 +138,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ModifyUser { get; set; }
 
                 /// <summary>
+                /// <para>The name of the workflow instance.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>WorkflowInstance1</para>
                 /// </summary>
@@ -110,6 +148,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The workspace ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -118,6 +158,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
+                /// <para>The time when the instance started to run.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
                 /// </summary>
@@ -126,6 +168,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? StartedTime { get; set; }
 
                 /// <summary>
+                /// <para>The status of the workflow instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>NotRun: The instance is not run.</description></item>
+                /// <item><description>Running: The instance is running.</description></item>
+                /// <item><description>WaitTime: The instance is waiting for the scheduling time to arrive.</description></item>
+                /// <item><description>CheckingCondition: Branch conditions are being checked for the instance.</description></item>
+                /// <item><description>WaitResource: The instance is waiting for resources.</description></item>
+                /// <item><description>Failure: The instance fails to be run.</description></item>
+                /// <item><description>Success: The instance is successfully run.</description></item>
+                /// <item><description>Checking: Data quality is being checked for the instance.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
                 /// </summary>
@@ -133,11 +187,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// <para>工作流实例的类型。</para>
+                /// <list type="bullet">
+                /// <item><description>Normal：周期调度</description></item>
+                /// <item><description>Manual：手动任务</description></item>
+                /// <item><description>SmokeTest：测试</description></item>
+                /// <item><description>SupplementData：补数据</description></item>
+                /// <item><description>ManualWorkflow：手动工作流</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Normal</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the workflow to which the instance belongs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
                 /// </summary>
@@ -150,6 +219,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22C97E95-F023-56B5-8852-B1A77A17XXXX</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class StopWorkflowInstancesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22C97E95-F023-56B5-8852-B1A77A17****</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The result of the batch operation, which is in the MAP structure. The workflow instance ID serves as a key, and the result serves as a value.</para>
+        /// </summary>
         [NameInMap("SuccessInfo")]
         [Validation(Required=false)]
         public Dictionary<string, SuccessInfoValue> SuccessInfo { get; set; }

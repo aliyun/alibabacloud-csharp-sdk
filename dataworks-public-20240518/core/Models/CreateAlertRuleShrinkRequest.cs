@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account used by the creator of the rule.</para>
+        /// <para>The ID of the Alibaba Cloud account used by the owner of the rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

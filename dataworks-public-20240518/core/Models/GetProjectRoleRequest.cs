@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetProjectRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the role in the DataWorks workspace.</para>
-        /// <para>Valid values:</para>
+        /// <para>The code of the role in the DataWorks workspace. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>role_project_admin: workspace administrator</description></item>
         /// <item><description>role_project_dev: developer</description></item>

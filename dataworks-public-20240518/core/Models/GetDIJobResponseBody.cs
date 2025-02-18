@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The destination type. The value Hologres is returned.</para>
+            /// <para>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, Datahub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hologres</para>
@@ -96,7 +96,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public GetDIJobResponseBodyPagingInfoJobSettings JobSettings { get; set; }
             public class GetDIJobResponseBodyPagingInfoJobSettings : TeaModel {
                 /// <summary>
-                /// <para>The channel control settings for the synchronization task. The value of this parameter is a JSON string.</para>
+                /// <para>The channel control settings for the synchronization task. You can configure special channel control settings for the following synchronization links: data synchronization between Hologres data sources and data synchronization from Hologres to Kafka.</para>
+                /// <ol>
+                /// <item><description>Holo2Kafka</description></item>
+                /// </ol>
+                /// <list type="bullet">
+                /// <item><description>Example: {&quot;destinationChannelSettings&quot;:{&quot;kafkaClientProperties&quot;:[{&quot;key&quot;:&quot;linger.ms&quot;,&quot;value&quot;:&quot;100&quot;}],&quot;keyColumns&quot;:[&quot;col3&quot;],&quot;writeMode&quot;:&quot;canal&quot;}}</description></item>
+                /// <item><description>kafkaClientProperties: the parameters related to a Kafka producer, which are used when you write data to a Kafka data source.</description></item>
+                /// <item><description>keyColumns: the names of Kafka columns to which data is written.</description></item>
+                /// <item><description>writeMode: the writing format. Valid values: json and canal.</description></item>
+                /// </list>
+                /// <ol start="2">
+                /// <item><description>Holo2Holo</description></item>
+                /// </ol>
+                /// <list type="bullet">
+                /// <item><description>Example: {&quot;destinationChannelSettings&quot;:{&quot;conflictMode&quot;:&quot;replace&quot;,&quot;dynamicColumnAction&quot;:&quot;replay&quot;,&quot;writeMode&quot;:&quot;replay&quot;}}</description></item>
+                /// <item><description>conflictMode: the policy used to handle a conflict that occurs during data writing to Hologres. Valid values: replace and ignore.</description></item>
+                /// <item><description>writeMode: the mode in which data is written to Hologres. Valid values: replay and insert.</description></item>
+                /// <item><description>dynamicColumnAction: the mode in which data is written to dynamic columns in a Hologres table. Valid values: replay, insert, and ignore.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;structInfo&quot;:&quot;MANAGED&quot;,&quot;storageType&quot;:&quot;TEXTFILE&quot;,&quot;writeMode&quot;:&quot;APPEND&quot;,&quot;partitionColumns&quot;:[{&quot;columnName&quot;:&quot;pt&quot;,&quot;columnType&quot;:&quot;STRING&quot;,&quot;comment&quot;:&quot;&quot;}],&quot;fieldDelimiter&quot;:&quot;&quot;}</para>
@@ -113,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public List<GetDIJobResponseBodyPagingInfoJobSettingsColumnDataTypeSettings> ColumnDataTypeSettings { get; set; }
                 public class GetDIJobResponseBodyPagingInfoJobSettingsColumnDataTypeSettings : TeaModel {
                     /// <summary>
-                    /// <para>The data type of the destination field.</para>
+                    /// <para>The data type of the destination field. Valid values: bigint, boolean, string, text, datetime, timestamp, decimal, and binary. Different types of data sources support different data types.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>text</para>
@@ -123,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string DestinationDataType { get; set; }
 
                     /// <summary>
-                    /// <para>The data type of the source field.</para>
+                    /// <para>The data type of the source field. Valid values: bigint, boolean, string, text, datetime, timestamp, decimal, and binary. Different types of data sources support different data types.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>bigint</para>
@@ -227,14 +245,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The name of the configuration item. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>runtime.offline.speed.limit.mb: indicates the maximum transmission rate that is allowed for a batch synchronization task. This configuration item takes effect only when runtime.offline.speed.limit.enable is set to true.</description></item>
-                    /// <item><description>runtime.offline.speed.limit.enable: indicates whether throttling is enabled for a batch synchronization task.</description></item>
-                    /// <item><description>dst.offline.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a batch synchronization task.</description></item>
-                    /// <item><description>runtime.offline.concurrent: indicates the maximum number of parallel threads that are allowed for a batch synchronization task.</description></item>
-                    /// <item><description>dst.realtime.connection.max: indicates the maximum number of connections that are allowed for writing data to the destination of a real-time synchronization task.</description></item>
-                    /// <item><description>runtime.enable.auto.create.schema: indicates whether schemas are automatically created in the destination of a synchronization task.</description></item>
                     /// <item><description>src.offline.datasource.max.connection: indicates the maximum number of connections that are allowed for reading data from the source of a batch synchronization task.</description></item>
+                    /// <item><description>dst.offline.truncate: indicates whether to clear the destination table before data writing.</description></item>
+                    /// <item><description>runtime.offline.speed.limit.enable: indicates whether throttling is enabled for a batch synchronization task.</description></item>
+                    /// <item><description>runtime.offline.concurrent: indicates the maximum number of parallel threads that are allowed for a batch synchronization task.</description></item>
+                    /// <item><description>runtime.enable.auto.create.schema: indicates whether schemas are automatically created in the destination of a synchronization task.</description></item>
                     /// <item><description>runtime.realtime.concurrent: indicates the maximum number of parallel threads that are allowed for a real-time synchronization task.</description></item>
+                    /// <item><description>runtime.realtime.failover.minute.dataxcdc: indicates the maximum waiting duration before a synchronization task retries the next restart if the previous restart fails after failover occurs. Unit: minutes.</description></item>
+                    /// <item><description>runtime.realtime.failover.times.dataxcdc: indicates the maximum number of failures that are allowed for restarting a synchronization task after failovers occur.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -441,7 +459,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The source type. The value MySQL is returned.</para>
+            /// <para>The source type. Valid values: PolarDB, MySQL, Kafka, Loghub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SqlServer, Doris, and ClickHouse.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Mysql</para>
@@ -452,13 +470,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</para>
+            /// <remarks>
+            /// <para> [ { &quot;SourceObjectSelectionRules&quot;:[ { &quot;ObjectType&quot;:&quot;Database&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;biz_db&quot; }, { &quot;ObjectType&quot;:&quot;Schema&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;s1&quot; }, { &quot;ObjectType&quot;:&quot;Table&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;table1&quot; } ], &quot;TransformationRuleNames&quot;:[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot; } ] } ]</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("TableMappings")]
             [Validation(Required=false)]
             public List<GetDIJobResponseBodyPagingInfoTableMappings> TableMappings { get; set; }
             public class GetDIJobResponseBodyPagingInfoTableMappings : TeaModel {
                 /// <summary>
-                /// <para>The list of rules used to select synchronization objects in the source. The objects can be databases or tables.</para>
+                /// <para>The list of rules used to select synchronization objects in the source.</para>
                 /// </summary>
                 [NameInMap("SourceObjectSelectionRules")]
                 [Validation(Required=false)]
@@ -498,6 +519,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <para>The object type. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>Table</description></item>
+                    /// <item><description>Schema</description></item>
                     /// <item><description>Database</description></item>
                     /// </list>
                     /// 
@@ -548,6 +570,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <list type="bullet">
                     /// <item><description>Table</description></item>
                     /// <item><description>Schema</description></item>
+                    /// <item><description>Database</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -562,7 +585,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The list of transformation rules that are applied to the synchronization objects selected from the source. Each entry in the list defines a transformation rule.</para>
+            /// <para>The list of transformation rules that are applied to the synchronization objects selected from the source.</para>
+            /// <remarks>
+            /// <para> [ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot;, &quot;RuleExpression&quot;:&quot;{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}&quot; } ]</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("TransformationRules")]
             [Validation(Required=false)]
@@ -577,7 +603,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <item><description>HandleDml</description></item>
                 /// <item><description>DefineIncrementalCondition</description></item>
                 /// <item><description>DefineCycleScheduleSettings</description></item>
-                /// <item><description>DefineRuntimeSettings</description></item>
                 /// <item><description>DefinePartitionKey</description></item>
                 /// </list>
                 /// 
@@ -590,11 +615,63 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The expression of the rule. The expression is a JSON string.</para>
-                /// <para>Example of a renaming rule: {&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;,&quot;variables&quot;:[{&quot;variableName&quot;:&quot;srcDatabaseName&quot;,&quot;variableRules&quot;:[{&quot;from&quot;:&quot;fromdb&quot;,&quot;to&quot;:&quot;todb&quot;}]}]}.</para>
-                /// <para>expression: the expression of the renaming rule. The expression may contain the following variables: ${srcDatasourceName}, ${srcDatabaseName}, and ${srcTableName}. ${srcDatasourceName} indicates the name of the source. ${srcDatabaseName} indicates the name of a source database. ${srcTableName} indicates the name of a source table. variables: the generation rule for a variable used in the expression of the renaming rule. The default value of the specified variable is the original value of the object indicated by the variable. You can define a group of string replacement rules to change the original values based on your business requirements. variableName: the name of the variable. The variable name is not enclosed in ${}. variableRules: the string replacement rules for variables. The system runs the string replacement rules in sequence. from indicates the original string. to indicates the new string. Example of a rule used to add a specific field to the destination and assign a value to the field: {&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}.</para>
-                /// <para>If no rule of this type is configured, no fields are added to the destination and no values are assigned by default. columnName: the name of the field that is added. columnValueType: the value type of the field. Valid values: Constant and Variable. columnValue: the value of the field. If the value of the columnValueType parameter is Constant, the value of the columnValue parameter is a constant of the STRING data type. If the value of the columnValueType parameter is Variable, the value of the columnValue parameter is a built-in variable. The following built-in variables are supported: EXECUTE_TIME (LONG data type), DB_NAME_SRC (STRING data type), DATASOURCE_NAME_SRC (STRING data type), TABLE_NAME_SRC (STRING data type), DB_NAME_DEST (STRING data type), DATASOURCE_NAME_DEST (STRING data type), TABLE_NAME_DEST (STRING data type), and DB_NAME_SRC_TRANSED (STRING data type). EXECUTE_TIME indicates the execution time. DB_NAME_SRC indicates the name of a source database. DATASOURCE_NAME_SRC indicates the name of the source. TABLE_NAME_SRC indicates the name of a source table. DB_NAME_DEST indicates the name of a destination database. DATASOURCE_NAME_DEST indicates the name of the destination. TABLE_NAME_DEST indicates the name of a destination table. DB_NAME_SRC_TRANSED indicates the database name obtained after a transformation. Example of a rule used to specify primary key fields for a destination table: {&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}.</para>
-                /// <para>If no rule of this type is configured, the primary key fields in the mapped source table are used for the destination table by default. If the destination table is an existing table, Data Integration does not modify the schema of the destination table. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run. If the destination table is automatically created by the system, Data Integration automatically creates the schema of the destination table. The schema contains the primary key fields that you specify. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run. Example of a rule used to process DML messages: {&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}.</para>
-                /// <para>If no rule of this type is configured, the default processing policy for messages generated for insert, update, and delete operations is Normal. dmlType: the DML operation. Valid values: Insert, Update, and Delete. dmlAction: the processing policy for DML messages. Valid values: Normal, Ignore, Filter, and LogicalDelete. Filter indicates conditional processing. The value Filter is returned for the dmlAction parameter only when the value of the dmlType parameter is Update or Delete. filterCondition: the condition used to filter DML messages. This parameter is returned only when the value of the dmlAction parameter is Filter.</para>
+                /// <ol>
+                /// <item><description>Example of a renaming rule</description></item>
+                /// </ol>
+                /// <list type="bullet">
+                /// <item><description>Example: {&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot; }</description></item>
+                /// <item><description>expression: the expression of the renaming rule. You can use the following variables in an expression: ${srcDatasourceName}, ${srcDatabaseName}, and ${srcTableName}. ${srcDatasourceName} indicates the name of the source. ${srcDatabaseName} indicates the name of a source database. ${srcTableName} indicates the name of a source table.</description></item>
+                /// </list>
+                /// <ol start="2">
+                /// <item><description>Example of a column addition rule</description></item>
+                /// </ol>
+                /// <list type="bullet">
+                /// <item><description>Example: {&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}</description></item>
+                /// <item><description>If no rule of this type is configured, no fields are added to the destination and no values are assigned by default.</description></item>
+                /// <item><description>columnName: the name of the field that is added.</description></item>
+                /// <item><description>columnValueType: the value type of the field. Valid values: Constant and Variable.</description></item>
+                /// <item><description>columnValue: the value of the field. If the columnValueType parameter is set to Constant, the value of the columnValue parameter is a constant of the STRING data type. If the columnValueType parameter is set to Variable, the value of the columnValue parameter is a built-in variable. The following built-in variables are supported: EXECUTE_TIME (LONG data type), DB_NAME_SRC (STRING data type), DATASOURCE_NAME_SRC (STRING data type), TABLE_NAME_SRC (STRING data type), DB_NAME_DEST (STRING data type), DATASOURCE_NAME_DEST (STRING data type), TABLE_NAME_DEST (STRING data type), and DB_NAME_SRC_TRANSED (STRING data type). EXECUTE_TIME indicates the execution time. DB_NAME_SRC indicates the name of a source database. DATASOURCE_NAME_SRC indicates the name of the source. TABLE_NAME_SRC indicates the name of a source table. DB_NAME_DEST indicates the name of a destination database. DATASOURCE_NAME_DEST indicates the name of the destination. TABLE_NAME_DEST indicates the name of a destination table. DB_NAME_SRC_TRANSED indicates the database name obtained after a transformation.</description></item>
+                /// </list>
+                /// <ol start="3">
+                /// <item><description>Example of a rule used to specify primary key fields for a destination table</description></item>
+                /// </ol>
+                /// <list type="bullet">
+                /// <item><description>Example: {&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}</description></item>
+                /// <item><description>If no rule of this type is configured, the primary key fields in the mapped source table are used for the destination table by default.</description></item>
+                /// <item><description>If the destination table is an existing table, Data Integration does not modify the schema of the destination table. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run.</description></item>
+                /// <item><description>If the destination table is automatically created by the system, Data Integration automatically creates the schema of the destination table. The schema contains the primary key fields that you specify. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run.</description></item>
+                /// </list>
+                /// <ol start="4">
+                /// <item><description>Example of a rule used to process DML messages</description></item>
+                /// </ol>
+                /// <list type="bullet">
+                /// <item><description>Example: {&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}</description></item>
+                /// <item><description>If no rule of this type is configured, the default processing policy for messages generated for insert, update, and delete operations is Normal.</description></item>
+                /// <item><description>dmlType: the DML operation. Valid values: Insert, Update, and Delete.</description></item>
+                /// <item><description>dmlAction: the processing policy for DML messages. Valid values: Normal, Ignore, Filter, and LogicalDelete. Filter indicates conditional processing. The value Filter is returned for the dmlAction parameter only when the value of the dmlType parameter is Update or Delete.</description></item>
+                /// <item><description>filterCondition: the condition used to filter DML messages. This parameter is returned only when the value of the dmlAction parameter is Filter.</description></item>
+                /// </list>
+                /// <ol start="5">
+                /// <item><description>Example of a rule used to perform incremental synchronization</description></item>
+                /// </ol>
+                /// <list type="bullet">
+                /// <item><description>Example: {&quot;where&quot;:&quot;id &gt; 0&quot;}</description></item>
+                /// <item><description>The rule used to perform incremental synchronization is returned.</description></item>
+                /// </list>
+                /// <ol start="6">
+                /// <item><description>Example of a rule used to configure scheduling parameters for an auto triggered task</description></item>
+                /// </ol>
+                /// <list type="bullet">
+                /// <item><description>Example: {&quot;cronExpress&quot;:&quot; \* \* \* \* \* \*&quot;, &quot;cycleType&quot;:&quot;1&quot;}</description></item>
+                /// <item><description>The rule used to configure scheduling parameters for an auto triggered task is returned.</description></item>
+                /// </list>
+                /// <ol start="7">
+                /// <item><description>Example of a rule used to specify a partition key</description></item>
+                /// </ol>
+                /// <list type="bullet">
+                /// <item><description>Example: {&quot;columns&quot;:[&quot;id&quot;]}</description></item>
+                /// <item><description>The rule used to specify a partition key is returned.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}</para>
@@ -618,6 +695,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <list type="bullet">
                 /// <item><description>Table</description></item>
                 /// <item><description>Schema</description></item>
+                /// <item><description>Database</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

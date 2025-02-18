@@ -64,6 +64,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The description of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Node description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -181,8 +184,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>The scope of the variable.</para>
-                        /// <para>Valid values:</para>
+                        /// <para>The scope of the variable. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>WorkSpace</description></item>
                         /// <item><description>NodeParameter</description></item>
@@ -198,8 +200,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Scope { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the variable.</para>
-                        /// <para>Valid values:</para>
+                        /// <para>The type of the variable. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>NoKvVariableExpression</description></item>
                         /// <item><description>Constant</description></item>
@@ -351,8 +352,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>The scope of the variable.</para>
-                        /// <para>Valid values:</para>
+                        /// <para>The scope of the variable. Valid value:</para>
                         /// <list type="bullet">
                         /// <item><description>NodeParameter</description></item>
                         /// <item><description>NodeContext</description></item>
@@ -368,8 +368,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Scope { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the variable.</para>
-                        /// <para>Valid values:</para>
+                        /// <para>The type of the variable. Valid value:</para>
                         /// <list type="bullet">
                         /// <item><description>NoKvVariableExpression</description></item>
                         /// <item><description>Constant</description></item>
@@ -510,7 +509,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListNodesResponseBodyPagingInfoNodesStrategy Strategy { get; set; }
                 public class ListNodesResponseBodyPagingInfoNodesStrategy : TeaModel {
                     /// <summary>
-                    /// <para>The instance generation mode.</para>
+                    /// <para>The instance generation mode. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>T+1</description></item>
+                    /// <item><description>Immediately</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>T+1</para>
@@ -530,7 +533,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public int? RerunInterval { get; set; }
 
                     /// <summary>
-                    /// <para>The rerun mode.</para>
+                    /// <para>The rerun mode. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Allowed</description></item>
+                    /// <item><description>Denied</description></item>
+                    /// <item><description>FailureAllowed</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Allowed</para>
@@ -664,13 +672,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <item><description>Scheduler</description></item>
                     /// <item><description>Manual</description></item>
                     /// <item><description>Steaming</description></item>
-                    /// </list>
-                    /// <!---->
-                    /// 
-                    /// <list type="bullet">
-                    /// <item><description></description></item>
-                    /// <item><description></description></item>
-                    /// <item><description></description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

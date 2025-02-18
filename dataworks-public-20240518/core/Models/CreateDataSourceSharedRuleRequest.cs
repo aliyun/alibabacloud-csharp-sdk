@@ -21,6 +21,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataSourceId { get; set; }
 
         /// <summary>
+        /// <para>Share data sources to the target project environment, including</para>
+        /// <list type="bullet">
+        /// <item><description>Dev (Development Environment)</description></item>
+        /// <item><description>Prod (production environment)</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

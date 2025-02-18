@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class StopWorkflowInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>The remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The workflow instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Ids")]

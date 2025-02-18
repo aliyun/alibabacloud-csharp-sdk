@@ -44,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListResourceGroupsResponseBodyPagingInfoResourceGroupList> ResourceGroupList { get; set; }
             public class ListResourceGroupsResponseBodyPagingInfoResourceGroupList : TeaModel {
                 /// <summary>
+                /// <para>Alibaba Cloud Resource Group ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>rg-aek2kqofrgXXXXX</para>
                 /// </summary>
@@ -52,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string AliyunResourceGroupId { get; set; }
 
                 /// <summary>
+                /// <para>The creation time, which is a 64-bit timestamp.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1727055811000</para>
                 /// </summary>
@@ -60,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the user who created the resource group.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>11075500042XXXXX</para>
                 /// </summary>
@@ -68,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CreateUser { get; set; }
 
                 /// <summary>
+                /// <para>Default VPC ID bound to a common resource group</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vpc-m2et4f3oc8msfbccXXXXX</para>
                 /// </summary>
@@ -76,6 +84,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DefaultVpcId { get; set; }
 
                 /// <summary>
+                /// <para>The default switch ID bound to the common resource group.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vsw-uf8usrhs7hjd9amsXXXXX</para>
                 /// </summary>
@@ -84,6 +94,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DefaultVswicthId { get; set; }
 
                 /// <summary>
+                /// <para>Unique identifier of a resource group</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
                 /// </summary>
@@ -92,6 +104,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Id { get; set; }
 
                 /// <summary>
+                /// <para>The name of the resource group.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>common_resource_group</para>
                 /// </summary>
@@ -100,6 +114,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The order instance ID of the resource group.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>c442b330-3b10-4584-959e-736e4edXXXXX</para>
                 /// </summary>
@@ -118,15 +134,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string PaymentType { get; set; }
 
                 /// <summary>
+                /// <para>Remarks for resource groups</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>创建用于普通任务的通用资源组</para>
+                /// <para>Create a common resource group for common tasks</para>
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource group. Valid values:</para>
+                /// <para>The type of resource group. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>CommonV2: serverless resource group</description></item>
                 /// <item><description>ExclusiveDataIntegration: exclusive resource group for Data Integration</description></item>
@@ -141,11 +159,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public string ResourceGroupType { get; set; }
 
+                /// <summary>
+                /// <para>Resource Group specifications</para>
+                /// </summary>
                 [NameInMap("Spec")]
                 [Validation(Required=false)]
                 public ListResourceGroupsResponseBodyPagingInfoResourceGroupListSpec Spec { get; set; }
                 public class ListResourceGroupsResponseBodyPagingInfoResourceGroupListSpec : TeaModel {
                     /// <summary>
+                    /// <para>Quantity</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -154,6 +177,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public int? Amount { get; set; }
 
                     /// <summary>
+                    /// <para>Specification details</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2CU</para>
                     /// </summary>
@@ -188,6 +213,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
+            /// <para>All data entries</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -198,7 +225,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>

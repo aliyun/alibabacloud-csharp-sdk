@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateNetworkRequest : TeaModel {
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the serverless resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string VpcId { get; set; }
 
         /// <summary>
+        /// <para>The VSwitch ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

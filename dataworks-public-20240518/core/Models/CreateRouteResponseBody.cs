@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateRouteResponseBody : TeaModel {
         /// <summary>
+        /// <para>The route ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>
         /// </summary>

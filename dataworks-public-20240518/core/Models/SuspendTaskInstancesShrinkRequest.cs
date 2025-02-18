@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class SuspendTaskInstancesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string Comment { get; set; }
 
+        /// <summary>
+        /// <para>The ID list of the task instance.</para>
+        /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public string IdsShrink { get; set; }

@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The operation content.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Freeze tasks</para>
                 /// </summary>
                 [NameInMap("OperationContent")]
                 [Validation(Required=false)]

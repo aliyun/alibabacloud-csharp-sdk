@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
     public class CreateDeploymentRequest : TeaModel {
         /// <summary>
         /// <para>The description of the process.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a OdpsSQL-node publishing process. The function is XXXX.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

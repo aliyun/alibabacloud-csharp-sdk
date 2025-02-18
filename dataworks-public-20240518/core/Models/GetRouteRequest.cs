@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetRouteRequest : TeaModel {
         /// <summary>
+        /// <para>The route ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-aek2kqofrgXXXXX</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string AliyunResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
         [NameInMap("AliyunResourceTags")]
         [Validation(Required=false)]
         public List<CreateResourceGroupRequestAliyunResourceTags> AliyunResourceTags { get; set; }
         public class CreateResourceGroupRequestAliyunResourceTags : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>key</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>value</para>
             /// </summary>
@@ -39,11 +48,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         }
 
+        /// <summary>
+        /// <para>Specifies whether to enable auto-renewal.</para>
+        /// </summary>
         [NameInMap("AutoRenewEnabled")]
         [Validation(Required=false)]
         public bool? AutoRenewEnabled { get; set; }
 
         /// <summary>
+        /// <para>The idempotent identifier of the client is used to ensure idempotent operation of creating a common resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The name of a common resource group. It must start with a letter and can contain letters, numbers, and underscores (_). It can be up to 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +78,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The duration of the payment.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -72,6 +88,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PaymentDuration { get; set; }
 
         /// <summary>
+        /// <para>The unit of the subscription duration. Valid values: Month and Year.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Month</para>
         /// </summary>
@@ -80,6 +98,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string PaymentDurationUnit { get; set; }
 
         /// <summary>
+        /// <para>The billing method of the serverless resource group. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,8 +109,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string PaymentType { get; set; }
 
         /// <summary>
+        /// <para>Note for creating a common resource group, which can contain letters, Chinese characters, numbers, underscores (_), and a maximum of 128 characters.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>创建用于普通任务的通用资源组</para>
+        /// <para>Create a serverless resource group for common tasks</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -108,6 +129,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? Spec { get; set; }
 
         /// <summary>
+        /// <para>The ID of the virtual private cloud (VPC) with which the serverless resource group is associated by default.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -118,6 +140,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string VpcId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the vSwitch with which the serverless resource group is associated by default.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

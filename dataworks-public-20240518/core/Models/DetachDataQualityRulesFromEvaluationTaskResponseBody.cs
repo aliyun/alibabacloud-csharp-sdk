@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the call is successful. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: the call failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

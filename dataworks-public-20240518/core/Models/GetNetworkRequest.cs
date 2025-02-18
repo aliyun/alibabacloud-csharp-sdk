@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetNetworkRequest : TeaModel {
         /// <summary>
+        /// <para>The network ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

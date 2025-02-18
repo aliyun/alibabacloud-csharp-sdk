@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The description of the workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Financial analysis group project data development</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -92,6 +95,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The display name of the workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Sora financial analysis</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
@@ -165,7 +171,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22C97E95-F023-56B5-8852-B1A77A17XXXX</para>

@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityRuleTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The source of the rule template. Required.</para>
+        /// <list type="bullet">
+        /// <item><description>System: System Template</description></item>
+        /// <item><description>UserDefined: user-defined Template</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>System</para>
         /// </summary>
@@ -17,10 +23,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string CreationSource { get; set; }
 
+        /// <summary>
+        /// <para>The category directory where the custom template is stored, slash/divider level. Each level name can be up to 1024 characters in length and cannot contain white space characters or backslashes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/ods/order_data</para>
+        /// </summary>
         [NameInMap("DirectoryPath")]
         [Validation(Required=false)]
         public string DirectoryPath { get; set; }
 
+        /// <summary>
+        /// <para>Fuzzy matching of template rule names. If it is a system template, the internationalized name of the system template will be fuzzy matching based on the language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Table rows</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -46,6 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>DataWorks workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

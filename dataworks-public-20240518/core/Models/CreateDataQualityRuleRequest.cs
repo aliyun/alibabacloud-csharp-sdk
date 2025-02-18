@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateDataQualityRuleRequestCheckingConfig CheckingConfig { get; set; }
         public class CreateDataQualityRuleRequestCheckingConfig : TeaModel {
             /// <summary>
-            /// <para>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference values. In this example, an expression is used to specify the query method of referenced samples.</para>
+            /// <para>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference samples and perform aggregate operations on the reference values. In this example, an expression is used to specify the query method of referenced samples.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</para>
@@ -41,6 +41,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public CreateDataQualityRuleRequestCheckingConfigThresholdsCritical Critical { get; set; }
                 public class CreateDataQualityRuleRequestCheckingConfigThresholdsCritical : TeaModel {
                     /// <summary>
+                    /// <para>The threshold expression.</para>
+                    /// <para>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Example:</para>
+                    /// <list type="bullet">
+                    /// <item><description>$checkValue &gt; 0.01</description></item>
+                    /// <item><description>$checkValue &lt; -0.01</description></item>
+                    /// <item><description>abs($checkValue) &gt; 0.01</description></item>
+                    /// </list>
+                    /// <para>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>$checkValue &gt; 0.05</para>
                     /// </summary>
@@ -87,6 +96,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public CreateDataQualityRuleRequestCheckingConfigThresholdsExpected Expected { get; set; }
                 public class CreateDataQualityRuleRequestCheckingConfigThresholdsExpected : TeaModel {
                     /// <summary>
+                    /// <para>The threshold expression.</para>
+                    /// <para>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Example:</para>
+                    /// <list type="bullet">
+                    /// <item><description>$checkValue &gt; 0.01</description></item>
+                    /// <item><description>$checkValue &lt; -0.01</description></item>
+                    /// <item><description>abs($checkValue) &gt; 0.01</description></item>
+                    /// </list>
+                    /// <para>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>$checkValue &lt;= 0.01</para>
                     /// </summary>
@@ -133,6 +151,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public CreateDataQualityRuleRequestCheckingConfigThresholdsWarned Warned { get; set; }
                 public class CreateDataQualityRuleRequestCheckingConfigThresholdsWarned : TeaModel {
                     /// <summary>
+                    /// <para>The threshold expression.</para>
+                    /// <para>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Example:</para>
+                    /// <list type="bullet">
+                    /// <item><description>$checkValue &gt; 0.01</description></item>
+                    /// <item><description>$checkValue &lt; -0.01</description></item>
+                    /// <item><description>abs($checkValue) &gt; 0.01</description></item>
+                    /// </list>
+                    /// <para>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>$checkValue &gt; 0.01</para>
                     /// </summary>
@@ -221,7 +248,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<CreateDataQualityRuleRequestErrorHandlers> ErrorHandlers { get; set; }
         public class CreateDataQualityRuleRequestErrorHandlers : TeaModel {
             /// <summary>
-            /// <para>The SQL statement that is used to filter failed tasks. If the rule is defined by custom SQL statements, you must specify an SQL statement to filter failed tasks.</para>
+            /// <para>The SQL statement that is used to filter failed tasks. If you define the rule by using custom SQL statements, you must specify an SQL statement to filter failed tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SELECT * FROM tb_api_log WHERE id IS NULL</para>
@@ -248,6 +275,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The name of the rule.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The table cannot be empty.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -272,7 +302,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateDataQualityRuleRequestSamplingConfig SamplingConfig { get; set; }
         public class CreateDataQualityRuleRequestSamplingConfig : TeaModel {
             /// <summary>
-            /// <para>The metrics used for sampling. Valid values:</para>
+            /// <para>The metrics used for sampling. You can leave this parameter empty if you use a rule template. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Count: the number of rows in the table.</description></item>
             /// <item><description>Min: the minimum value of the field.</description></item>
@@ -288,7 +318,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <item><description>GroupCount: the field value and the number of rows for each field value.</description></item>
             /// <item><description>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</description></item>
             /// <item><description>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</description></item>
-            /// <item><description>UserDefinedSql: indicates that data is sampled by executing custom SQL statements.</description></item>
+            /// <item><description>UserDefinedSql: specifies that data is sampled by executing custom SQL statements.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -332,7 +362,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The strength of the rule.</para>
+        /// <para>The strength of the monitoring rule. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Normal</description></item>
         /// <item><description>High</description></item>

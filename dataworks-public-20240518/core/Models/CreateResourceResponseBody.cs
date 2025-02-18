@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>A5B97987-66EA-5563-9599-A2752292XXXX</para>
         /// 
         /// <b>Example:</b>
-        /// <para>A5B97987-66EA-5563-9599-A2752292XXXX</para>
+        /// <para>The ID of the file resource.</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

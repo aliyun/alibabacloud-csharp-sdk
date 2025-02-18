@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The error message returned when the process fails.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Error message</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -92,6 +95,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The description of the stage.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Phase description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -106,6 +112,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The error message returned for the stage.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Exception information XXX</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -113,6 +122,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The name of the stage.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Publish package build</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]

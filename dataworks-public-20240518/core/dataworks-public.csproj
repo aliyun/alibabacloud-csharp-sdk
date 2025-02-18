@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Dataworks-public20240518</AssemblyName>
-    <Version>3.0.1</Version>
+    <Version>3.0.2</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud dataworks-public (20240518) SDK Library for .NET</Description>

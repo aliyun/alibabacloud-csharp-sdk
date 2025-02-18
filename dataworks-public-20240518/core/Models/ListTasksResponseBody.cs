@@ -113,6 +113,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>The instance generation mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>T+1</description></item>
+                /// <item><description>Immediately</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>T+1</para>
                 /// </summary>
@@ -142,6 +148,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The name of the task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SQL node</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -268,6 +277,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
+                /// <para>The list of script parameters.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>para1=$bizdate para2=$[yyyymmdd]</para>
                 /// </summary>

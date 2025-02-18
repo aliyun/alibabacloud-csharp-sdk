@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The name of the rule.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The table cannot be empty.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -70,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SamplingConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The strength of the rule.</para>
+        /// <para>The strength of the monitoring rule. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Normal</description></item>
         /// <item><description>High</description></item>

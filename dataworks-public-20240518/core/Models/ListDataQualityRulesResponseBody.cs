@@ -54,6 +54,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         [Validation(Required=false)]
                         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsCritical Critical { get; set; }
                         public class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsCritical : TeaModel {
+                            /// <summary>
+                            /// <para>The threshold expression.</para>
+                            /// <para>The volatility type rule must use an expression to represent the volatility threshold. For example:</para>
+                            /// <list type="bullet">
+                            /// <item><description>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</description></item>
+                            /// <item><description>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</description></item>
+                            /// <item><description>Absolute volatility: abs($checkValue) &gt; 0.01</description></item>
+                            /// </list>
+                            /// <para>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>$checkValue &gt; 0.01</para>
+                            /// </summary>
                             [NameInMap("Expression")]
                             [Validation(Required=false)]
                             public string Expression { get; set; }
@@ -96,6 +109,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         [Validation(Required=false)]
                         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsExpected Expected { get; set; }
                         public class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsExpected : TeaModel {
+                            /// <summary>
+                            /// <para>The threshold expression.</para>
+                            /// <para>The volatility type rule must use an expression to represent the volatility threshold. For example:</para>
+                            /// <list type="bullet">
+                            /// <item><description>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</description></item>
+                            /// <item><description>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</description></item>
+                            /// <item><description>Absolute volatility: abs($checkValue) &gt; 0.01</description></item>
+                            /// </list>
+                            /// <para>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>$checkValue &gt; 0.01</para>
+                            /// </summary>
                             [NameInMap("Expression")]
                             [Validation(Required=false)]
                             public string Expression { get; set; }
@@ -138,6 +164,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         [Validation(Required=false)]
                         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsWarned Warned { get; set; }
                         public class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsWarned : TeaModel {
+                            /// <summary>
+                            /// <para>The threshold expression.</para>
+                            /// <para>The volatility type rule must use an expression to represent the volatility threshold. For example:</para>
+                            /// <list type="bullet">
+                            /// <item><description>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</description></item>
+                            /// <item><description>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</description></item>
+                            /// <item><description>Absolute volatility: abs($checkValue) &gt; 0.01</description></item>
+                            /// </list>
+                            /// <para>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>$checkValue &gt; 0.01</para>
+                            /// </summary>
                             [NameInMap("Expression")]
                             [Validation(Required=false)]
                             public string Expression { get; set; }
@@ -259,6 +298,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The rule name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>The table cannot be empty.</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]

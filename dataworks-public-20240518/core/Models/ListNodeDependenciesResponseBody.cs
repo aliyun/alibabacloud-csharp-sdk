@@ -64,6 +64,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The description of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Node description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -181,8 +184,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>The scope of the variable.</para>
-                        /// <para>Valid values:</para>
+                        /// <para>The scope of the variable. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>NodeParameter</description></item>
                         /// <item><description>NodeContext</description></item>
@@ -198,8 +200,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Scope { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the variable.</para>
-                        /// <para>Valid values:</para>
+                        /// <para>The type of the variable. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>NoKvVariableExpression</description></item>
                         /// <item><description>Constant</description></item>
@@ -241,6 +242,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The name of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Node name</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -348,8 +352,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>The scope of the variable.</para>
-                        /// <para>Valid values:</para>
+                        /// <para>The scope of the variable. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>NodeParameter</description></item>
                         /// <item><description>NodeContext</description></item>
@@ -365,8 +368,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Scope { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the variable.</para>
-                        /// <para>Valid values:</para>
+                        /// <para>The type of the variable. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>NoKvVariableExpression</description></item>
                         /// <item><description>Constant</description></item>
@@ -420,9 +422,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The scheduling type.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Normal: The node is scheduled as expected.</description></item>
-                /// <item><description>Pause: The node is paused, and the running of its descendant nodes is blocked.</description></item>
-                /// <item><description>Skip: The node is dry run. The system does not actually run the node but directly prompts that the node is successfully run. The running duration of the node is 0 seconds. In addition, the node does not occupy resources or block the running of its descendant nodes.</description></item>
+                /// <item><description>Normal: Nodes are scheduled as expected.</description></item>
+                /// <item><description>Pause: Nodes are paused, and the running of their descendant nodes is blocked.</description></item>
+                /// <item><description>Skip: Nodes are dry run. The system does not actually run the nodes but directly prompts that the nodes are successfully run. The running duration of the nodes is 0 seconds. In addition, the nodes do not occupy resources or block the running of their descendant nodes.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -507,7 +509,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListNodeDependenciesResponseBodyPagingInfoNodesStrategy Strategy { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesStrategy : TeaModel {
                     /// <summary>
-                    /// <para>The instance generation mode.</para>
+                    /// <para>The instance generation mode. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>T+1</description></item>
+                    /// <item><description>Immediately</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>T+1</para>
@@ -527,7 +533,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public int? RerunInterval { get; set; }
 
                     /// <summary>
-                    /// <para>The rerun mode.</para>
+                    /// <para>The rerun mode. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Allowed</description></item>
+                    /// <item><description>Denied</description></item>
+                    /// <item><description>FailureAllowed</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Allowed</para>
@@ -576,7 +587,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The tag value</para>
+                    /// <para>The tag value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>
