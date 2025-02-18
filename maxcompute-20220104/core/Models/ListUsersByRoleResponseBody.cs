@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListUsersByRoleResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListUsersByRoleResponseBodyData Data { get; set; }
         public class ListUsersByRoleResponseBodyData : TeaModel {
             /// <summary>
-            /// The users.
+            /// <para>The users.</para>
             /// </summary>
             [NameInMap("users")]
             [Validation(Required=false)]
             public List<ListUsersByRoleResponseBodyDataUsers> Users { get; set; }
             public class ListUsersByRoleResponseBodyDataUsers : TeaModel {
                 /// <summary>
-                /// The name of the user.
+                /// <para>The name of the user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALIYUN${account_name}</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -35,7 +38,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0be3e0bb16654558425251398e27a9</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

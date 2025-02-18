@@ -10,21 +10,39 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class KillJobsRequest : TeaModel {
         /// <summary>
-        /// The request body parameters.
+        /// <para>The request body parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[
+        ///       {
+        ///             &quot;instanceId&quot;: &quot;&quot;,
+        ///             &quot;projectName&quot;: &quot;&quot;
+        ///       },
+        ///       {
+        ///             &quot;instanceId&quot;: &quot;&quot;,
+        ///             &quot;projectName&quot;: &quot;&quot;
+        ///       }
+        /// ]</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string Body { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instance resides.
+        /// <para>The ID of the region in which the instance resides.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>478403690625249</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

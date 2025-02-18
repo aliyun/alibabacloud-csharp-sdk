@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
-    public class CreateQuotaScheduleResponse : TeaModel {
+    public class GetMmsAsyncTaskResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public CreateQuotaScheduleResponseBody Body { get; set; }
+        public GetMmsAsyncTaskResponseBody Body { get; set; }
 
     }
 

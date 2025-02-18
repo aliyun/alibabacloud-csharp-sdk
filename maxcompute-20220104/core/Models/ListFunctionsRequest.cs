@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListFunctionsRequest : TeaModel {
         /// <summary>
-        /// Specifies the marker after which the returned list begins.
+        /// <para>Specifies the marker after which the returned list begins.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</para>
         /// </summary>
         [NameInMap("marker")]
         [Validation(Required=false)]
         public string Marker { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to return on each page.
+        /// <para>The maximum number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("maxItem")]
         [Validation(Required=false)]
         public int? MaxItem { get; set; }
 
         /// <summary>
-        /// The names of the returned resources. The names must start with the value specified by the prefix parameter. If the prefix parameter is set to a, the names of the returned resources must start with a.
+        /// <para>The names of the returned resources. The names must start with the value specified by the prefix parameter. If the prefix parameter is set to a, the names of the returned resources must start with a.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a</para>
         /// </summary>
         [NameInMap("prefix")]
         [Validation(Required=false)]
         public string Prefix { get; set; }
 
         /// <summary>
-        /// the name of schema.
+        /// <para>the name of schema.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("schemaName")]
         [Validation(Required=false)]

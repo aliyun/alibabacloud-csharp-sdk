@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetProjectRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to use additional information.
+        /// <para>Specifies whether to use additional information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("verbose")]
         [Validation(Required=false)]

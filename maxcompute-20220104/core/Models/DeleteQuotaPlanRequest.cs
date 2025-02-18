@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class DeleteQuotaPlanRequest : TeaModel {
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>416441016836866</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

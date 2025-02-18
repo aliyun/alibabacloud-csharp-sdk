@@ -10,30 +10,26 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetRoleAclOnObjectResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetRoleAclOnObjectResponseBodyData Data { get; set; }
         public class GetRoleAclOnObjectResponseBodyData : TeaModel {
             /// <summary>
-            /// The operations that were performed on the object.
+            /// <para>The operations that were performed on the object.</para>
             /// </summary>
             [NameInMap("actions")]
             [Validation(Required=false)]
             public List<string> Actions { get; set; }
 
-            /// <summary>
-            /// The name of the object.
-            /// </summary>
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0bc1366d16686529650188023ef87f</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

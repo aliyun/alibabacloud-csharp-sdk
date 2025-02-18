@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class CreateProjectRequest : TeaModel {
         /// <summary>
-        /// The request body parameters.
+        /// <para>The request body parameters.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

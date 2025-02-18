@@ -8,16 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
-    public class CreateQuotaScheduleResponseBody : TeaModel {
+    public class StopMmsJobResponseBody : TeaModel {
         /// <summary>
-        /// The returned result.
+        /// <b>Example:</b>
+        /// <para>88</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public long? Data { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <b>Example:</b>
+        /// <para>8023D058-62B7-5C49-8EB6-AD9BA7942BC5</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

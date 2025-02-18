@@ -10,28 +10,34 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetQuotaScheduleResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<GetQuotaScheduleResponseBodyData> Data { get; set; }
         public class GetQuotaScheduleResponseBodyData : TeaModel {
             /// <summary>
-            /// The condition value.
+            /// <para>The condition value.</para>
             /// </summary>
             [NameInMap("condition")]
             [Validation(Required=false)]
             public GetQuotaScheduleResponseBodyDataCondition Condition { get; set; }
             public class GetQuotaScheduleResponseBodyDataCondition : TeaModel {
                 /// <summary>
-                /// The start time when the quota plan takes effect.
+                /// <para>The start time when the quota plan takes effect.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-04-25T04:23:04Z</para>
                 /// </summary>
                 [NameInMap("after")]
                 [Validation(Required=false)]
                 public string After { get; set; }
 
                 /// <summary>
-                /// The time when the quota plan takes effect.
+                /// <para>The time when the quota plan takes effect.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0900</para>
                 /// </summary>
                 [NameInMap("at")]
                 [Validation(Required=false)]
@@ -40,35 +46,50 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// The ID of the quota plan.
+            /// <para>The ID of the quota plan.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>63</para>
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The name of the operator.
+            /// <para>The name of the operator.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>userA</para>
             /// </summary>
             [NameInMap("operator")]
             [Validation(Required=false)]
             public string Operator { get; set; }
 
             /// <summary>
-            /// The name of the quota plan.
+            /// <para>The name of the quota plan.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>planA</para>
             /// </summary>
             [NameInMap("plan")]
             [Validation(Required=false)]
             public string Plan { get; set; }
 
             /// <summary>
-            /// The time zone.
+            /// <para>The time zone.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>UTC+8</para>
             /// </summary>
             [NameInMap("timezone")]
             [Validation(Required=false)]
             public string Timezone { get; set; }
 
             /// <summary>
-            /// The type of the quota plan.
+            /// <para>The type of the quota plan.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>once</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -77,29 +98,43 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// *   If the value of success was false, an error code was returned.
-        /// *   If the value of success was true, a null value was returned.
+        /// <list type="bullet">
+        /// <item><description>If the value of success was false, an error code was returned.</description></item>
+        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>errorMsg</para>
         /// </summary>
         [NameInMap("errorMsg")]
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.
+        /// <para>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("httpCode")]
         [Validation(Required=false)]
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0bc059b716696296266308790e0d3e</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

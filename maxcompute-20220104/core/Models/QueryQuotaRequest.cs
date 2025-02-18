@@ -8,23 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
-    public class UpdateQuotaRequest : TeaModel {
+    public class QueryQuotaRequest : TeaModel {
         /// <summary>
-        /// The request body parameter.
+        /// <b>Example:</b>
+        /// <para>null</para>
         /// </summary>
-        [NameInMap("body")]
+        [NameInMap("AkProven")]
         [Validation(Required=false)]
-        public string Body { get; set; }
+        public string AkProven { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("mock")]
+        [Validation(Required=false)]
+        public bool? Mock { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-chengdu</para>
         /// </summary>
         [NameInMap("region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The tenant ID.
+        /// <b>Example:</b>
+        /// <para>483212237127906</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

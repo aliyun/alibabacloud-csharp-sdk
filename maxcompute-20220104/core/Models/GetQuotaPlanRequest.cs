@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetQuotaPlanRequest : TeaModel {
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>483212237127906</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

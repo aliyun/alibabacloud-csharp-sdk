@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetRoleAclOnObjectRequest : TeaModel {
         /// <summary>
-        /// The name of the object.
+        /// <para>The name of the object.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tableA</para>
         /// </summary>
         [NameInMap("objectName")]
         [Validation(Required=false)]
         public string ObjectName { get; set; }
 
         /// <summary>
-        /// The type of the object.
+        /// <para>The type of the object.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>table</para>
         /// </summary>
         [NameInMap("objectType")]
         [Validation(Required=false)]

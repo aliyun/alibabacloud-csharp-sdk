@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetTrustedProjectsResponseBody : TeaModel {
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<string> Data { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0bc0590416675329272834336e4387</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
