@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public List<VoiceModerationResultResponseBodyDataSliceDetails> SliceDetails { get; set; }
             public class VoiceModerationResultResponseBodyDataSliceDetails : TeaModel {
+                [NameInMap("Descriptions")]
+                [Validation(Required=false)]
+                public string Descriptions { get; set; }
+
                 /// <summary>
                 /// <para>The end time of the audio segment in seconds.</para>
                 /// 

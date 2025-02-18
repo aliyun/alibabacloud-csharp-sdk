@@ -217,6 +217,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    [NameInMap("Descriptions")]
+                    [Validation(Required=false)]
+                    public string Descriptions { get; set; }
+
                     /// <summary>
                     /// <para>The details of the labels.</para>
                     /// 
@@ -400,6 +404,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     [Validation(Required=false)]
                     public List<DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels> TextLabels { get; set; }
                     public class DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels : TeaModel {
+                        [NameInMap("Description")]
+                        [Validation(Required=false)]
+                        public string Description { get; set; }
+
                         /// <summary>
                         /// <para>The details of the labels.</para>
                         /// 

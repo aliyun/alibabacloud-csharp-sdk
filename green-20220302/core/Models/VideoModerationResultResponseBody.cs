@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public List<VideoModerationResultResponseBodyDataAudioResultAudioSummarys> AudioSummarys { get; set; }
                 public class VideoModerationResultResponseBodyDataAudioResultAudioSummarys : TeaModel {
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
                     /// <summary>
                     /// <para>The voice label.</para>
                     /// 
@@ -79,6 +83,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public List<VideoModerationResultResponseBodyDataAudioResultSliceDetails> SliceDetails { get; set; }
                 public class VideoModerationResultResponseBodyDataAudioResultSliceDetails : TeaModel {
+                    [NameInMap("Descriptions")]
+                    [Validation(Required=false)]
+                    public string Descriptions { get; set; }
+
                     /// <summary>
                     /// <para>The end time of the text after voice-to-text conversion. Unit: seconds.</para>
                     /// 
