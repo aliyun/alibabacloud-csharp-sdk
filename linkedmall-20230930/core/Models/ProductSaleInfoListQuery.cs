@@ -9,19 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductSaleInfoListQuery : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>110000</para>
+        /// </summary>
         [NameInMap("divisionCode")]
         [Validation(Required=false)]
         public string DivisionCode { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("productIds")]
         [Validation(Required=false)]
         public List<string> ProductIds { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>22000009</para>
         /// </summary>
         [NameInMap("purchaserId")]
         [Validation(Required=false)]

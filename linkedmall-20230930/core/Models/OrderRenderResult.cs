@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class OrderRenderResult : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("canSell")]
         [Validation(Required=false)]
         public bool? CanSell { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public Dictionary<string, object> ExtInfo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>库存为0</para>
+        /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }

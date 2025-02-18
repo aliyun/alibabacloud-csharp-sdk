@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductSpec : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>颜色分类</para>
+        /// </summary>
         [NameInMap("key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("keyId")]
         [Validation(Required=false)]
         public long? KeyId { get; set; }

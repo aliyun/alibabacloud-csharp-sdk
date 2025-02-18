@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class ProductSaleInfoQuery : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>22000009</para>
         /// </summary>
         [NameInMap("distributorShopId")]
         [Validation(Required=false)]
         public string DistributorShopId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>110000</para>
+        /// </summary>
         [NameInMap("divisionCode")]
         [Validation(Required=false)]
         public string DivisionCode { get; set; }

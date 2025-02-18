@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public List<AddressInfo> AddressList { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("canSell")]
         [Validation(Required=false)]
         public bool? CanSell { get; set; }
@@ -21,6 +25,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public Dictionary<string, object> ExtInfo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>库存为0</para>
+        /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -29,6 +37,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public List<OrderRenderResult> OrderList { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3239281273464326823</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

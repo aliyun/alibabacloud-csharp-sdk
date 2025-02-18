@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class MemberAccountResult : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;yue***@newburn.cn&quot;</para>
+        /// </summary>
         [NameInMap("accountNo")]
         [Validation(Required=false)]
         public List<string> AccountNo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123</para>
+        /// </summary>
         [NameInMap("shopId")]
         [Validation(Required=false)]
         public string ShopId { get; set; }

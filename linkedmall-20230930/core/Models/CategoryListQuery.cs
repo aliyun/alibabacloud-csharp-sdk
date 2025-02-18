@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public List<long?> CategoryIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5200001</para>
+        /// </summary>
         [NameInMap("parentCategoryId")]
         [Validation(Required=false)]
         public long? ParentCategoryId { get; set; }

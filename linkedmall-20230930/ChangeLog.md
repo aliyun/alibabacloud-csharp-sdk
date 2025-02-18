@@ -1,3 +1,9 @@
+2025-02-18 Version: 2.3.0
+- Support API SearchProducts.
+- Support API SelectionGroupAddProduct.
+- Support API SelectionGroupRemoveProduct.
+
+
 2024-09-18 Version: 2.2.8
 - Generated csharp 2023-09-30 for linkedmall.
 

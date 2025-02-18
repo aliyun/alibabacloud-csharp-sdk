@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class RefundRenderCmd : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("bizClaimType")]
         [Validation(Required=false)]
         public int? BizClaimType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("goodsStatus")]
         [Validation(Required=false)]
         public int? GoodsStatus { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6692****5458</para>
         /// </summary>
         [NameInMap("orderLineId")]
         [Validation(Required=false)]
