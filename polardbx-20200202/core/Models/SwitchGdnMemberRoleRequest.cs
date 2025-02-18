@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string SwitchMode { get; set; }
 
+        [NameInMap("TaskTimeout")]
+        [Validation(Required=false)]
+        public long? TaskTimeout { get; set; }
+
     }
 
 }

@@ -174,6 +174,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
+                    [NameInMap("TaskStatus")]
+                    [Validation(Required=false)]
+                    public string TaskStatus { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>cn-zhangjiakou-a</para>
