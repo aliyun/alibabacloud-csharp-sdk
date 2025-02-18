@@ -29,6 +29,16 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cas-upload-j2ofdb</para>
+        /// </summary>
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public string ResourceId { get; set; }
+
     }
 
 }

@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The name of the certificate. The name can contain up to 128 characters in length. The name can contain all types of characters, such as letters, digits, and underscores (_).</para>
+        /// <para>The name of the certificate. The name can be up to 64 characters in length, and can contain all types of characters, such as letters, digits, and underscores (_).</para>
         /// <remarks>
         /// <para> The name must be unique within an Alibaba Cloud account.</para>
         /// </remarks>
@@ -102,14 +102,29 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string SignPrivateKey { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<UploadUserCertificateRequestTags> Tags { get; set; }
         public class UploadUserCertificateRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testKey</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

@@ -64,14 +64,34 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateCertificateRequestRequestTags> Tags { get; set; }
         public class CreateCertificateRequestRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. You cannot specify empty strings as tag keys.</para>
+            /// <para>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <c>aliyun</c> or <c>acs:</c>. The key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <remarks>
+            /// <para> You must specify at least one of <b>Tag.N</b> (<b>Tag.N.Key</b> and <b>Tag.N.Value</b>).</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:rm:rgId</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <c>aliyun</c> or <c>acs:</c>. The key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

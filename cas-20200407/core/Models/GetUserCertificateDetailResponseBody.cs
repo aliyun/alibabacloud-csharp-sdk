@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The beginning of the validity period of the certificate.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>17322633180000</para>
+            /// <para>17302633180000</para>
             /// </summary>
             [NameInMap("NotBefore")]
             [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
-        /// <para>The unique identifier of the certificate. The value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</para>
+        /// <para>The certificate identifier. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10741304-cn-hangzhou</para>
@@ -249,6 +249,26 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// <para>The end of the validity period of the certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>17322613180000</para>
+        /// </summary>
+        [NameInMap("NotAfter")]
+        [Validation(Required=false)]
+        public long? NotAfter { get; set; }
+
+        /// <summary>
+        /// <para>The beginning of the validity period of the certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>17312613180000</para>
+        /// </summary>
+        [NameInMap("NotBefore")]
+        [Validation(Required=false)]
+        public long? NotBefore { get; set; }
 
         /// <summary>
         /// <para>The order ID.</para>
