@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string NameServerList { get; set; }
 
+            [NameInMap("OfflineReason")]
+            [Validation(Required=false)]
+            public string OfflineReason { get; set; }
+
             /// <summary>
             /// <para>The plan name.</para>
             /// 
