@@ -9,6 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class RepairClusterNodePoolRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to restart the instance of the node.</para>
         /// 
@@ -17,6 +19,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("auto_restart")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? AutoRestart { get; set; }
 
         /// <summary>

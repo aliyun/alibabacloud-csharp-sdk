@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyNodePoolNodeConfigRequest : TeaModel {
+        [NameInMap("containerd_config")]
+        [Validation(Required=false)]
+        public ContainerdConfig ContainerdConfig { get; set; }
+
         /// <summary>
-        /// <para>The kubelet configuration.</para>
+        /// <para>The parameters of the kubelet.</para>
         /// </summary>
         [NameInMap("kubelet_config")]
         [Validation(Required=false)]
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The rotation configuration.</para>
+        /// <para>The rolling policy configuration.</para>
         /// </summary>
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]

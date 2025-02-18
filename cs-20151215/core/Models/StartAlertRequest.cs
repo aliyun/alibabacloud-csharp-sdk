@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     public class StartAlertRequest : TeaModel {
         /// <summary>
         /// <para>The name of the alert rule set to be enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sample</para>
         /// </summary>
         [NameInMap("alert_rule_group_name")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <para>The name of the alert rule to be enabled. If you do not specify an alert rule name, the alert rule set is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sample</para>
         /// </summary>
         [NameInMap("alert_rule_name")]
         [Validation(Required=false)]

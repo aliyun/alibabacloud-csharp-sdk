@@ -16277,7 +16277,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</para>
+        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16325,7 +16325,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</para>
+        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16373,7 +16373,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</para>
+        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16392,7 +16392,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</para>
+        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16438,6 +16438,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerdConfig))
+            {
+                body["containerd_config"] = request.ContainerdConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubeletConfig))
             {
                 body["kubelet_config"] = request.KubeletConfig;
@@ -16506,6 +16510,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerdConfig))
+            {
+                body["containerd_config"] = request.ContainerdConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubeletConfig))
             {
                 body["kubelet_config"] = request.KubeletConfig;
@@ -19541,6 +19549,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return await ScanClusterVulsWithOptionsAsync(clusterId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用告警</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartAlertRequest
         /// </param>
@@ -19593,6 +19606,11 @@ namespace AlibabaCloud.SDK.CS20151215
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用告警</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartAlertRequest
         /// </param>
@@ -19645,6 +19663,11 @@ namespace AlibabaCloud.SDK.CS20151215
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用告警</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartAlertRequest
         /// </param>
@@ -19659,6 +19682,11 @@ namespace AlibabaCloud.SDK.CS20151215
             return StartAlertWithOptions(ClusterId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用告警</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartAlertRequest
         /// </param>
