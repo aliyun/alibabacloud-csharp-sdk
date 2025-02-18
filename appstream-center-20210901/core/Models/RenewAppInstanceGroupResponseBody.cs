@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class RenewAppInstanceGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter.ProductType</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>The parameter ProductType is invalid.</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>

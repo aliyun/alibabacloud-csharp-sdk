@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListNodeInstanceTypeRequest : TeaModel {
         /// <summary>
-        /// <para>资源所属的地域ID。关于支持的地域详情，请参见<a href="https://help.aliyun.com/document_detail/426036.html">使用限制</a>。</para>
+        /// <para>The ID of the region where the resource resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
+        /// <item><description>cn-hangzhou: China (Hangzhou)</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -32,7 +37,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? GpuMemory { get; set; }
 
         /// <summary>
-        /// <para>语言类型。</para>
+        /// <para>The language that you want to use.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en-US: English (US)</description></item>
+        /// <item><description>zh-CN: Simplified Chinese</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -46,6 +56,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Memory { get; set; }
 
         /// <summary>
+        /// <para>The resource type that you want to query. If you do not configure this parameter, all resource types are returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>appstreaming.vgpu.4c8g.2g</para>
         /// </summary>
@@ -62,7 +74,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>支持的操作系统类型。</para>
+        /// <para>The operating system that is supported.</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>Windows: the Windows operating system</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Windows</para>
@@ -72,6 +88,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OsType { get; set; }
 
         /// <summary>
+        /// <para>The number of the page to return.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,6 +99,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Valid values: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,6 +110,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The product type.</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>CloudApp: App Streaming</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

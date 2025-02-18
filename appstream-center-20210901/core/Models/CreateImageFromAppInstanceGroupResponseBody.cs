@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateImageFromAppInstanceGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The image ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>img-bp13mu****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>

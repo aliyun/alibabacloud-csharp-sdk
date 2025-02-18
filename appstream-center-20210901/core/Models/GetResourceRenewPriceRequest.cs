@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetResourceRenewPriceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the delivery group. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The subscription duration of resources. This parameter must be configured together with <c>PeriodUnit</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public long? Period { get; set; }
 
         /// <summary>
+        /// <para>The unit of the subscription duration. This parameter must be configured together with <c>Period</c>. The following items describe valid values for the combinations of <c>Period</c> and <c>PeriodUnit</c>:</para>
+        /// <list type="bullet">
+        /// <item><description>1 Week</description></item>
+        /// <item><description>1 Month</description></item>
+        /// <item><description>2 Month</description></item>
+        /// <item><description>3 Month</description></item>
+        /// <item><description>6 Month</description></item>
+        /// <item><description>1 Year</description></item>
+        /// <item><description>2 Year</description></item>
+        /// <item><description>3 Year</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> The value of this parameter is case-insensitive. For example, <c>Week</c> is valid and <c>week</c> is invalid. If you specify a value combination other than the preceding combinations, such as <c>2 Week</c>, the operation can still be called. However, an error occurs when you place the order.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +56,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
+        /// <para>The product type.</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>CloudApp: App Streaming</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

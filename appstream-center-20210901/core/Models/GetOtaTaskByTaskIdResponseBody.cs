@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetOtaTaskByTaskIdResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OtaTask.Running</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>The task is running and cannot be sumitted.</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The OTA version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.0.1-R-20220708.110604</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string OtaVersion { get; set; }
 
+        /// <summary>
+        /// <para>The version description.</para>
+        /// </summary>
         [NameInMap("ReleaseNote")]
         [Validation(Required=false)]
         public string ReleaseNote { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
@@ -46,6 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The execution time of the OTA update task. The time follows the ISO 8601 standard.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>

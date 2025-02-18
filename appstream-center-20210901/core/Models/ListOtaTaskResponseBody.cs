@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListOtaTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number of the returned page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The OTA update tasks.</para>
+        /// </summary>
         [NameInMap("TaskList")]
         [Validation(Required=false)]
         public List<ListOtaTaskResponseBodyTaskList> TaskList { get; set; }
         public class ListOtaTaskResponseBodyTaskList : TeaModel {
             /// <summary>
+            /// <para>The OTA version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.0.1-R-20220708.110604</para>
             /// </summary>
@@ -46,6 +57,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string OtaVersion { get; set; }
 
             /// <summary>
+            /// <para>The task status.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>FAILED</description></item>
+            /// <item><description>RUNNING</description></item>
+            /// <item><description>TERMINATED</description></item>
+            /// <item><description>PART_FINISHED</description></item>
+            /// <item><description>STANDBY</description></item>
+            /// <item><description>FINISHED</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -54,6 +76,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string TaskDisplayStatus { get; set; }
 
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ota-be7jzm29wrrz5****</para>
             /// </summary>
@@ -62,6 +86,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>The start time of the OTA update task. The time follows the ISO 8601 standard.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -74,6 +99,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
+        /// <para>The total number of OTA update tasks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
