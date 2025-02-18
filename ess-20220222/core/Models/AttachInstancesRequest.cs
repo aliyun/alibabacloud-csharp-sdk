@@ -39,6 +39,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? Entrusted { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to ignore invalid instances when a batch of instances is added to the scaling group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: ignores invalid instances. If invalid instances exist and valid instances are added, the corresponding scaling activity enters the Warning state. You can check the scaling activity details to view the invalid instances that are ignored.</description></item>
+        /// <item><description>false: does not ignore invalid instances. If invalid instances exist in the batch of instances that you want to add to the scaling group, an error is reported.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

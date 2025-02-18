@@ -120,6 +120,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ScalingGroupId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to skip instances that match the desired scaling configuration.</para>
+        /// <remarks>
+        /// <para> The system determines the match based on the ID of the desired scaling configuration rather than individual configuration items.</para>
+        /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: skips instances that match the desired scaling configuration. When you initiate an instance refresh task, the system checks the configurations of all instances. The refresh operation is skipped for instances created based on the desired scaling configuration.</description></item>
+        /// <item><description>false: does not skip instances that match the desired scaling configuration. When an instance refresh task is initiated, all instances in the scaling group at the time of initiation are refreshed.</description></item>
+        /// </list>
+        /// <para>Default value: true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("SkipMatching")]
         [Validation(Required=false)]
         public bool? SkipMatching { get; set; }

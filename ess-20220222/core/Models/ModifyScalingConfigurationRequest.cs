@@ -203,13 +203,22 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The size of the system disk. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set SystemDisk.Category to cloud: 20 to 500.</description></item>
-            /// <item><description>If you set SystemDisk.Category to cloud_efficiency: 20 to 500.</description></item>
-            /// <item><description>If you set SystemDisk.Category to cloud_ssd: 20 to 500.</description></item>
-            /// <item><description>If you set SystemDisk.Category to cloud_essd: 20 to 500.</description></item>
-            /// <item><description>If you set SystemDisk.Category to ephemeral_ssd: 20 to 500.</description></item>
+            /// <item><description><para>Basic disk: 20 to 500.</para>
+            /// </description></item>
+            /// <item><description><para>ESSD: Valid values vary based on the performance level of the ESSD.</para>
+            /// <list type="bullet">
+            /// <item><description>PL0 ESSD: 1 to 2048.</description></item>
+            /// <item><description>PL1 ESSD: 20 to 2048.</description></item>
+            /// <item><description>PL2 ESSD: 461 to 2048.</description></item>
+            /// <item><description>PL3 ESSD: 1261 to 2048.</description></item>
             /// </list>
-            /// <para>The value of SystemDisk.Size must be greater than or equal to max{20, ImageSize}.</para>
+            /// </description></item>
+            /// <item><description><para>ESSD AutoPL disk: 1 to 2048.</para>
+            /// </description></item>
+            /// <item><description><para>Other disk categories: 20 to 2048.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>The value of this parameter must be at least 1 and greater than or equal to the image size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -263,13 +272,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string CreditSpecification { get; set; }
 
         /// <summary>
-        /// <para>The priority of the custom ECS instance type + vSwitch combination.</para>
+        /// <para>The priority of the custom &quot;ECS instance type + vSwitch&quot; combination.</para>
         /// <remarks>
         /// <para> This setting is valid only if the scaling policy of the scaling group is a priority policy.</para>
         /// </remarks>
-        /// <para>If Auto Scaling cannot create ECS instances by using the custom ECS instance type + vSwitch combination of the highest priority, Auto Scaling creates ECS instances by using the custom ECS instance type + vSwitch combination of the next highest priority.</para>
+        /// <para>If Auto Scaling cannot create ECS instances by using the custom &quot;ECS instance type + vSwitch&quot; combination of the highest priority, Auto Scaling creates ECS instances by using the custom &quot;ECS instance type + vSwitch&quot; combination of the next highest priority.</para>
         /// <remarks>
-        /// <para> If you specify the priorities of only a part of custom ECS instance type + vSwitch combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have the specified priorities. If the custom combinations that have the specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have the specified priorities based on the specified orders of vSwitches and instance types.</para>
+        /// <para> If you specify the priorities of only a part of custom &quot;ECS instance type + vSwitch&quot; combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have the specified priorities. If the custom combinations that have the specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have the specified priorities based on the specified orders of vSwitches and instance types.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>Example: The specified order of vSwitches for your scaling group is vsw1 and vsw2, and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify [&quot;vsw2+type2&quot;, &quot;vsw1+type2&quot;]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.</description></item>

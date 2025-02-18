@@ -44,10 +44,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The metric type. Valid values:</para>
+        /// <para>The type of the metric. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>system: system metrics of CloudMonitor</description></item>
         /// <item><description>custom: custom metrics that are reported to CloudMonitor.</description></item>
+        /// <item><description>hybrid: metrics of Hybrid Cloud Monitoring.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

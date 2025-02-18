@@ -208,14 +208,23 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The size of the system disk. Unit: GiB.</para>
             /// <list type="bullet">
-            /// <item><description>If you set SystemDisk.Category cloud: 20 to 500.</description></item>
-            /// <item><description>If you set SystemDisk.Category to cloud_efficiency: 20 to 500.</description></item>
-            /// <item><description>If you set SystemDisk.Category to cloud_ssd: 20 to 500.</description></item>
-            /// <item><description>If you set SystemDisk.Category to cloud_essd: 20 to 500.</description></item>
-            /// <item><description>If you set SystemDisk.Category to cloud_essd: 20 to 500.</description></item>
+            /// <item><description><para>Basic disk: 20 to 500.</para>
+            /// </description></item>
+            /// <item><description><para>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.</para>
+            /// <list type="bullet">
+            /// <item><description>PL0 ESSD: 1 to 2048.</description></item>
+            /// <item><description>PL1 ESSD: 20 to 2048.</description></item>
+            /// <item><description>PL2 ESSD: 461 to 2048.</description></item>
+            /// <item><description>PL3 ESSD: 1261 to 2048.</description></item>
             /// </list>
-            /// <para>The value of SystemDisk.Size must be greater than or equal to the value of max{20, ImageSize}.</para>
-            /// <para>Default value: 40 or the size of the image, whichever is greater.</para>
+            /// </description></item>
+            /// <item><description><para>ESSD AutoPL disk (cloud_auto): 1 to 2048.</para>
+            /// </description></item>
+            /// <item><description><para>Other disk categories: 20 to 2048.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>The value of this parameter must be at least 1 and greater than or equal to the image size.</para>
+            /// <para>Default value: 40 or the size of the image, whichever is larger.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

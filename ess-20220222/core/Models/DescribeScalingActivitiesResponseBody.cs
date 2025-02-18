@@ -170,22 +170,46 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
+            /// <summary>
+            /// <para>The error messages that are returned when the scaling activities failed or are partially successful.</para>
+            /// </summary>
             [NameInMap("ErrorMessages")]
             [Validation(Required=false)]
             public List<DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages> ErrorMessages { get; set; }
             public class DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages : TeaModel {
+                /// <summary>
+                /// <para>The error code that is returned when the scaling activity failed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>OperationDenied.NoStock</para>
+                /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
+                /// <summary>
+                /// <para>The description of the scaling activity exception.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Fail to create instances into scaling group.</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>The IDs of the instances included in the failed scaling activities.</para>
+                /// </summary>
                 [NameInMap("FailedInstanceIds")]
                 [Validation(Required=false)]
                 public List<string> FailedInstanceIds { get; set; }
 
+                /// <summary>
+                /// <para>The error message that is returned when the scaling activity failed or is partially successful.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>The resource is out of stock in the specified zone. Please try other types, or choose other regions and zones.</para>
+                /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }

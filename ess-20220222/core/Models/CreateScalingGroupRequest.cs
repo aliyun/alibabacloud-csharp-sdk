@@ -126,6 +126,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public int? OnDemandPercentageAboveBaseCapacity { get; set; }
 
+            [NameInMap("PriceComparisonMode")]
+            [Validation(Required=false)]
+            public string PriceComparisonMode { get; set; }
+
             /// <summary>
             /// <para>Specifies whether to replace pay-as-you-go instances with preemptible instances. If you specify <c>CompensateWithOnDemand</c>, it may result in a higher percentage of pay-as-you-go instances compared to the value of <c>OnDemandPercentageAboveBaseCapacity</c>. In this scenario, Auto Scaling will try to deploy preemptible instances to replace the surplus pay-as-you-go instances. When <c>CompensateWithOnDemand</c> is specified, Auto Scaling creates pay-as-you-go instances if there are not enough preemptible instance types. To avoid keeping these pay-as-you-go ECS instances for long periods, Auto Scaling tries to replace them with preemptible instances as soon as enough of preemptible instance types become available. Valid values:</para>
             /// <list type="bullet">

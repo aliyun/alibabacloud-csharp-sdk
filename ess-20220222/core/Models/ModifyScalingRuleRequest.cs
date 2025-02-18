@@ -103,42 +103,97 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public int? EstimatedInstanceWarmup { get; set; }
 
+        /// <summary>
+        /// <para>The Hybrid Cloud Monitoring metrics.</para>
+        /// </summary>
         [NameInMap("HybridMetrics")]
         [Validation(Required=false)]
         public List<ModifyScalingRuleRequestHybridMetrics> HybridMetrics { get; set; }
         public class ModifyScalingRuleRequestHybridMetrics : TeaModel {
+            /// <summary>
+            /// <para>The metric dimensions. You can use this parameter to specify the monitored resources.</para>
+            /// </summary>
             [NameInMap("Dimensions")]
             [Validation(Required=false)]
             public List<ModifyScalingRuleRequestHybridMetricsDimensions> Dimensions { get; set; }
             public class ModifyScalingRuleRequestHybridMetricsDimensions : TeaModel {
+                /// <summary>
+                /// <para>The key of the metric dimension.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>queue</para>
+                /// </summary>
                 [NameInMap("DimensionKey")]
                 [Validation(Required=false)]
                 public string DimensionKey { get; set; }
 
+                /// <summary>
+                /// <para>The value of the metric dimension.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testQueue</para>
+                /// </summary>
                 [NameInMap("DimensionValue")]
                 [Validation(Required=false)]
                 public string DimensionValue { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The metric expression that consists of multiple Hybrid Cloud Monitoring metrics. It calculates a result used to trigger scaling events.</para>
+            /// <para>The expression must be written in Reverse Polish Notation (RPN) format and supports only the following operators: <c>+, -, *, /</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>(a+b)/2</para>
+            /// </summary>
             [NameInMap("Expression")]
             [Validation(Required=false)]
             public string Expression { get; set; }
 
+            /// <summary>
+            /// <para>The reference ID of the metric in the metric expression.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>a</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <para>The name of the Hybrid Cloud Monitoring metric.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AliyunSmq_NumberOfMessagesVisible</para>
+            /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
             public string MetricName { get; set; }
 
+            /// <summary>
+            /// <para>The statistical method of the metric value. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Average: calculates the average value of all metric values within a specified interval.</description></item>
+            /// <item><description>Minimum: calculates the minimum value of all metric values within a specified interval.</description></item>
+            /// <item><description>Maximum: calculates the maximum value of all metric values within a specified interval.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Average</para>
+            /// </summary>
             [NameInMap("Statistic")]
             [Validation(Required=false)]
             public string Statistic { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The ID of the Hybrid Cloud Monitoring namespace.</para>
+        /// <para>For information about how to manage Hybrid Cloud Monitoring namespaces, see <a href="https://help.aliyun.com/document_detail/217606.html">Manage namespaces</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aliyun-test</para>
+        /// </summary>
         [NameInMap("HybridMonitorNamespace")]
         [Validation(Required=false)]
         public string HybridMonitorNamespace { get; set; }
@@ -181,6 +236,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
+        /// <summary>
+        /// <para>The metric type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>system: system metrics of CloudMonitor.</description></item>
+        /// <item><description>custom: custom metrics that are reported to CloudMonitor.</description></item>
+        /// <item><description>hybrid: metrics of Hybrid Cloud Monitoring.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>system</para>
+        /// </summary>
         [NameInMap("MetricType")]
         [Validation(Required=false)]
         public string MetricType { get; set; }
