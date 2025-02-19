@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public string FileUrl { get; set; }
 
+        [NameInMap("OssBucket")]
+        [Validation(Required=false)]
+        public string OssBucket { get; set; }
+
+        [NameInMap("OssEndpoint")]
+        [Validation(Required=false)]
+        public string OssEndpoint { get; set; }
+
     }
 
 }
