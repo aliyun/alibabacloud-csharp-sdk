@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
-    public class GetInstanceAccountResponseBody : TeaModel {
+    public class GetInstanceAclResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>MissingInstanceId</para>
         /// </summary>
@@ -19,32 +17,69 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The data returned.</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public GetInstanceAccountResponseBodyData Data { get; set; }
-        public class GetInstanceAccountResponseBodyData : TeaModel {
-            [NameInMap("accountStatus")]
-            [Validation(Required=false)]
-            public string AccountStatus { get; set; }
-
+        public GetInstanceAclResponseBodyData Data { get; set; }
+        public class GetInstanceAclResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The password of the account.</para>
-            /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>apache_acl</para>
             /// </summary>
-            [NameInMap("password")]
+            [NameInMap("aclType")]
             [Validation(Required=false)]
-            public string Password { get; set; }
+            public string AclType { get; set; }
+
+            [NameInMap("actions")]
+            [Validation(Required=false)]
+            public List<string> Actions { get; set; }
 
             /// <summary>
-            /// <para>The username of the account.</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Allow</para>
+            /// </summary>
+            [NameInMap("decision")]
+            [Validation(Required=false)]
+            public string Decision { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>rmq-cn-7e22ody****</para>
+            /// </summary>
+            [NameInMap("instanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("ipWhitelists")]
+            [Validation(Required=false)]
+            public List<string> IpWhitelists { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
+            [NameInMap("regionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
+            [NameInMap("resourceName")]
+            [Validation(Required=false)]
+            public string ResourceName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Topic</para>
+            /// </summary>
+            [NameInMap("resourceType")]
+            [Validation(Required=false)]
+            public string ResourceType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>abc</para>
             /// </summary>
             [NameInMap("username")]
             [Validation(Required=false)]
@@ -53,18 +88,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// <para>The dynamic error code.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>ConsumerGroupId</para>
+        /// <para>InstanceId</para>
         /// </summary>
         [NameInMap("dynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>instanceId</para>
         /// </summary>
@@ -73,8 +104,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -83,8 +112,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>The instance cannot be found.</para>
         /// </summary>
@@ -93,18 +120,16 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, each request\&quot;s ID is unique and can be used for troubleshooting and problem localization.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B5C59E80-FCFC-5796-ABE4-D39EAAE578E4</para>
+        /// <para>AF9A8B10-C426-530F-A0DD-96320B39****</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

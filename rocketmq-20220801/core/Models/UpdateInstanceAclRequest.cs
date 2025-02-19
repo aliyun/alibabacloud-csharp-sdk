@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// </summary>
         [NameInMap("actions")]
         [Validation(Required=false)]
-        public string Actions { get; set; }
+        public List<string> Actions { get; set; }
 
         /// <summary>
         /// <para>The decision result of the authorization.</para>

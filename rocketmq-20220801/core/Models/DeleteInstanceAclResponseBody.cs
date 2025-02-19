@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7358418D-83BD-507A-8079-611C63E05674</para>
+        /// <para>7358418D-83BD-507A-8079-*****</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

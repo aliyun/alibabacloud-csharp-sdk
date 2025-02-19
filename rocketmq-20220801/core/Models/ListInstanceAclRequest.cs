@@ -21,7 +21,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
         /// <summary>
         /// <para>The page number. Pages start from page 1.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -32,7 +31,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
         /// <summary>
         /// <para>The number of entries per page.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

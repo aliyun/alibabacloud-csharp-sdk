@@ -8,63 +8,50 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
-    public class GetInstanceAccountResponseBody : TeaModel {
+    public class GetInstanceIpWhitelistResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>MissingInstanceId</para>
+        /// <para>Instance.NotFound</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The data returned.</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public GetInstanceAccountResponseBodyData Data { get; set; }
-        public class GetInstanceAccountResponseBodyData : TeaModel {
-            [NameInMap("accountStatus")]
+        public GetInstanceIpWhitelistResponseBodyData Data { get; set; }
+        public class GetInstanceIpWhitelistResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>rmq-cn-7e22ody****</para>
+            /// </summary>
+            [NameInMap("instanceId")]
             [Validation(Required=false)]
-            public string AccountStatus { get; set; }
+            public string InstanceId { get; set; }
+
+            [NameInMap("ipWhitelists")]
+            [Validation(Required=false)]
+            public List<string> IpWhitelists { get; set; }
 
             /// <summary>
-            /// <para>The password of the account.</para>
-            /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>cn-hangzhou</para>
             /// </summary>
-            [NameInMap("password")]
+            [NameInMap("regionId")]
             [Validation(Required=false)]
-            public string Password { get; set; }
-
-            /// <summary>
-            /// <para>The username of the account.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>xxx</para>
-            /// </summary>
-            [NameInMap("username")]
-            [Validation(Required=false)]
-            public string Username { get; set; }
+            public string RegionId { get; set; }
 
         }
 
         /// <summary>
-        /// <para>The dynamic error code.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>ConsumerGroupId</para>
+        /// <para>InstanceId</para>
         /// </summary>
         [NameInMap("dynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>instanceId</para>
         /// </summary>
@@ -73,8 +60,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -83,28 +68,22 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>The instance cannot be found.</para>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, each request\&quot;s ID is unique and can be used for troubleshooting and problem localization.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>B5C59E80-FCFC-5796-ABE4-D39EAAE578E4</para>
+        /// <para>0B962390-D84B-5D44-8C11-79DF40299D41</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

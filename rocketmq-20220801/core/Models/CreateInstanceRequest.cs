@@ -294,31 +294,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public bool? AutoScaling { get; set; }
 
             /// <summary>
-            /// <para>The billing method.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>provisioned</description></item>
-            /// <item><description>ondemand</description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>provisioned</para>
-            /// </summary>
-            [NameInMap("chargeType")]
-            [Validation(Required=false)]
-            public string ChargeType { get; set; }
-
-            /// <summary>
-            /// <para>This parameter is no longer used. You do not need to configure this parameter.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>xxxx</para>
-            /// </summary>
-            [NameInMap("intranetSpec")]
-            [Validation(Required=false)]
-            public string IntranetSpec { get; set; }
-
-            /// <summary>
             /// <para>The retention period of messages. Unit: hours.</para>
             /// <para>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section of the <a href="https://help.aliyun.com/document_detail/440347.html">Limits</a> topic.</para>
             /// <para>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fees</a>.</para>

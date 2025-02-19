@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
-    public class DeleteInstanceIpWhitelistRequest : TeaModel {
+    public class DeleteInstanceIpWhitelistShrinkRequest : TeaModel {
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
         [NameInMap("ipWhitelists")]
         [Validation(Required=false)]
-        public List<string> IpWhitelists { get; set; }
+        public string IpWhitelistsShrink { get; set; }
 
     }
 

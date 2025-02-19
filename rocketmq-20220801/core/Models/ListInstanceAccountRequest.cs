@@ -40,7 +40,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
         /// <summary>
         /// <para>The page number. Default value: 1.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +50,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
         /// <summary>
         /// <para>The number of entries per page. Default value: 10.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

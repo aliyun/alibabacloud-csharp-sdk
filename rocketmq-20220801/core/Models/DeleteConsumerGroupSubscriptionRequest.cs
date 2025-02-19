@@ -28,11 +28,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// <item><description>SQL: filters messages by using SQL expressions.</description></item>
         /// <item><description>TAG: filters messages by using tags.</description></item>
         /// </list>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>TAG: filters messages by using SQL expressions.</description></item>
-        /// <item><description>SQL: filters messages by using SQL expressions.</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

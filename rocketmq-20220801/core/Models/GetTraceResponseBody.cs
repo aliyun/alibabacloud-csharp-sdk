@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public string PresetDelayTime { get; set; }
 
+                [NameInMap("recallResult")]
+                [Validation(Required=false)]
+                public string RecallResult { get; set; }
+
             }
 
             /// <summary>
@@ -526,6 +530,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     [NameInMap("produceTime")]
                     [Validation(Required=false)]
                     public string ProduceTime { get; set; }
+
+                    [NameInMap("recallTime")]
+                    [Validation(Required=false)]
+                    public string RecallTime { get; set; }
 
                     /// <summary>
                     /// <para>Producer name.</para>

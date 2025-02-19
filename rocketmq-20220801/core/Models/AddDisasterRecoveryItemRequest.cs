@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string ConsumerGroupId { get; set; }
 
+            [NameInMap("deliveryOrderType")]
+            [Validation(Required=false)]
+            public string DeliveryOrderType { get; set; }
+
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
