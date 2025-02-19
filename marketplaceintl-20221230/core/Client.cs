@@ -80,7 +80,14 @@ namespace AlibabaCloud.SDK.MarketplaceIntl20221230
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PushMeteringDataResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<PushMeteringDataResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<PushMeteringDataResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -126,7 +133,14 @@ namespace AlibabaCloud.SDK.MarketplaceIntl20221230
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PushMeteringDataResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<PushMeteringDataResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<PushMeteringDataResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
