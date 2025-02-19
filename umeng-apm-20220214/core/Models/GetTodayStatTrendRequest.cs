@@ -9,19 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
 {
     public class GetTodayStatTrendRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.0</para>
+        /// </summary>
         [NameInMap("appVersion")]
         [Validation(Required=false)]
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5fb6001a73749c24fd9cb356</para>
         /// </summary>
         [NameInMap("dataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

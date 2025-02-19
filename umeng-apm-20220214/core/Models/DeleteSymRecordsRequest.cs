@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,21 +10,27 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
 {
     public class DeleteSymRecordsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("appVersions")]
         [Validation(Required=false)]
         public List<string> AppVersions { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5fb6001a73749c24fd9cb356</para>
         /// </summary>
         [NameInMap("dataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("fileType")]
         [Validation(Required=false)]

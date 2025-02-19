@@ -10,26 +10,44 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
 {
     public class DeleteSymRecordsResponseBody : TeaModel {
         /// <summary>
-        /// code
+        /// <para>code</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>succeed in handling request</para>
+        /// </summary>
         [NameInMap("msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("num")]
         [Validation(Required=false)]
         public int? Num { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// traceId
+        /// <para>traceId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>210f07c516457690916816858d94ea</para>
         /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]

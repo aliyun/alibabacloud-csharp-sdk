@@ -10,33 +10,49 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214.Models
 {
     public class GetSymUploadParamRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.0.3</para>
         /// </summary>
         [NameInMap("appVersion")]
         [Validation(Required=false)]
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5fb6001a73749c24fd9cb356</para>
         /// </summary>
         [NameInMap("dataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>symbol.zip</para>
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("fileType")]
         [Validation(Required=false)]
         public int? FileType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>my-flutter-app</para>
+        /// </summary>
         [NameInMap("flutterName")]
         [Validation(Required=false)]
         public string FlutterName { get; set; }
