@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string TenantContextShrink { get; set; }
 
+        [NameInMap("actionList")]
+        [Validation(Required=false)]
+        public string ActionListShrink { get; set; }
+
         [NameInMap("contentFieldList")]
         [Validation(Required=false)]
         public string ContentFieldListShrink { get; set; }

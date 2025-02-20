@@ -23,6 +23,50 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        [NameInMap("actionList")]
+        [Validation(Required=false)]
+        public List<CreateTodoTaskRequestActionList> ActionList { get; set; }
+        public class CreateTodoTaskRequestActionList : TeaModel {
+            [NameInMap("actionKey")]
+            [Validation(Required=false)]
+            public string ActionKey { get; set; }
+
+            [NameInMap("actionType")]
+            [Validation(Required=false)]
+            public int? ActionType { get; set; }
+
+            [NameInMap("buttonStyleType")]
+            [Validation(Required=false)]
+            public int? ButtonStyleType { get; set; }
+
+            [NameInMap("param")]
+            [Validation(Required=false)]
+            public CreateTodoTaskRequestActionListParam Param { get; set; }
+            public class CreateTodoTaskRequestActionListParam : TeaModel {
+                [NameInMap("body")]
+                [Validation(Required=false)]
+                public string Body { get; set; }
+
+                [NameInMap("header")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> Header { get; set; }
+
+            }
+
+            [NameInMap("pcUrl")]
+            [Validation(Required=false)]
+            public string PcUrl { get; set; }
+
+            [NameInMap("title")]
+            [Validation(Required=false)]
+            public string Title { get; set; }
+
+            [NameInMap("url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
+
+        }
+
         [NameInMap("contentFieldList")]
         [Validation(Required=false)]
         public List<CreateTodoTaskRequestContentFieldList> ContentFieldList { get; set; }
