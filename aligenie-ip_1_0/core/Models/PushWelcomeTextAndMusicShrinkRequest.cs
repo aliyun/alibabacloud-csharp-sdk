@@ -19,9 +19,11 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string HotelId { get; set; }
 
+        [NameInMap("RoomName")]
+        [Validation(Required=false)]
+        public string RoomName { get; set; }
+
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1211</para>
         /// </summary>
