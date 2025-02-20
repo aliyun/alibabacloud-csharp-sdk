@@ -257,6 +257,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             [Validation(Required=false)]
             public List<string> ServiceChannelKeywords { get; set; }
 
+            [NameInMap("vocabularyId")]
+            [Validation(Required=false)]
+            public string VocabularyId { get; set; }
+
             /// <summary>
             /// <para>This parameter is required.</para>
             /// 
