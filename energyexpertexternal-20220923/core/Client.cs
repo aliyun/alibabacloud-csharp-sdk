@@ -39,6 +39,350 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Get Document Results</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Users obtain real-time VL results by uploading a document URL.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AnalyzeVlRealtimeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnalyzeVlRealtimeResponse
+        /// </returns>
+        public AnalyzeVlRealtimeResponse AnalyzeVlRealtimeWithOptions(AnalyzeVlRealtimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                query["fileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["templateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AnalyzeVlRealtime",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aidoc/document/analyzeVlRealtime",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AnalyzeVlRealtimeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AnalyzeVlRealtimeResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Document Results</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Users obtain real-time VL results by uploading a document URL.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AnalyzeVlRealtimeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnalyzeVlRealtimeResponse
+        /// </returns>
+        public async Task<AnalyzeVlRealtimeResponse> AnalyzeVlRealtimeWithOptionsAsync(AnalyzeVlRealtimeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                query["fileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["templateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AnalyzeVlRealtime",
+                Version = "2022-09-23",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/aidoc/document/analyzeVlRealtime",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AnalyzeVlRealtimeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AnalyzeVlRealtimeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Document Results</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Users obtain real-time VL results by uploading a document URL.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AnalyzeVlRealtimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnalyzeVlRealtimeResponse
+        /// </returns>
+        public AnalyzeVlRealtimeResponse AnalyzeVlRealtime(AnalyzeVlRealtimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AnalyzeVlRealtimeWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Document Results</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Users obtain real-time VL results by uploading a document URL.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AnalyzeVlRealtimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnalyzeVlRealtimeResponse
+        /// </returns>
+        public async Task<AnalyzeVlRealtimeResponse> AnalyzeVlRealtimeAsync(AnalyzeVlRealtimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AnalyzeVlRealtimeWithOptionsAsync(request, headers, runtime);
+        }
+
+        public AnalyzeVlRealtimeResponse AnalyzeVlRealtimeAdvance(AnalyzeVlRealtimeAdvanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            string accessKeyId = this._credential.GetAccessKeyId();
+            string accessKeySecret = this._credential.GetAccessKeySecret();
+            string securityToken = this._credential.GetSecurityToken();
+            string credentialType = this._credential.GetType();
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
+            {
+                credentialType = "access_key";
+            }
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                SecurityToken = securityToken,
+                Type = credentialType,
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
+            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            {
+                Product = "energyExpertExternal",
+                RegionId = _regionId,
+            };
+            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
+            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                Type = "access_key",
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
+            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
+            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
+            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            AnalyzeVlRealtimeRequest analyzeVlRealtimeReq = new AnalyzeVlRealtimeRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, analyzeVlRealtimeReq);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrlObject))
+            {
+                authResponse = authClient.AuthorizeFileUploadWithOptions(authRequest, runtime);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
+                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponse.Body.ObjectKey,
+                    Content = request.FileUrlObject,
+                    ContentType = "",
+                };
+                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                {
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
+                    File = fileObj,
+                    SuccessActionStatus = "201",
+                };
+                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
+                {
+                    BucketName = authResponse.Body.Bucket,
+                    Header = ossHeader,
+                };
+                ossClient.PostObject(uploadRequest, ossRuntime);
+                analyzeVlRealtimeReq.FileUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+            }
+            AnalyzeVlRealtimeResponse analyzeVlRealtimeResp = AnalyzeVlRealtimeWithOptions(analyzeVlRealtimeReq, headers, runtime);
+            return analyzeVlRealtimeResp;
+        }
+
+        public async Task<AnalyzeVlRealtimeResponse> AnalyzeVlRealtimeAdvanceAsync(AnalyzeVlRealtimeAdvanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            string accessKeyId = await this._credential.GetAccessKeyIdAsync();
+            string accessKeySecret = await this._credential.GetAccessKeySecretAsync();
+            string securityToken = await this._credential.GetSecurityTokenAsync();
+            string credentialType = this._credential.GetType();
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
+            {
+                credentialType = "access_key";
+            }
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                SecurityToken = securityToken,
+                Type = credentialType,
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.SDK.OpenPlatform20191219.Client authClient = new AlibabaCloud.SDK.OpenPlatform20191219.Client(authConfig);
+            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest authRequest = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadRequest
+            {
+                Product = "energyExpertExternal",
+                RegionId = _regionId,
+            };
+            AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse authResponse = new AlibabaCloud.SDK.OpenPlatform20191219.Models.AuthorizeFileUploadResponse();
+            AlibabaCloud.OSS.Models.Config ossConfig = new AlibabaCloud.OSS.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                Type = "access_key",
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OSS.Client ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader();
+            AlibabaCloud.OSS.Models.PostObjectRequest uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest();
+            AlibabaCloud.OSSUtil.Models.RuntimeOptions ossRuntime = new AlibabaCloud.OSSUtil.Models.RuntimeOptions();
+            AlibabaCloud.OpenApiUtil.Client.Convert(runtime, ossRuntime);
+            AnalyzeVlRealtimeRequest analyzeVlRealtimeReq = new AnalyzeVlRealtimeRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, analyzeVlRealtimeReq);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrlObject))
+            {
+                authResponse = await authClient.AuthorizeFileUploadWithOptionsAsync(authRequest, runtime);
+                ossConfig.AccessKeyId = authResponse.Body.AccessKeyId;
+                ossConfig.Endpoint = AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponse.Body.Endpoint, authResponse.Body.UseAccelerate, _endpointType);
+                ossClient = new AlibabaCloud.OSS.Client(ossConfig);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponse.Body.ObjectKey,
+                    Content = request.FileUrlObject,
+                    ContentType = "",
+                };
+                ossHeader = new AlibabaCloud.OSS.Models.PostObjectRequest.PostObjectRequestHeader
+                {
+                    AccessKeyId = authResponse.Body.AccessKeyId,
+                    Policy = authResponse.Body.EncodedPolicy,
+                    Signature = authResponse.Body.Signature,
+                    Key = authResponse.Body.ObjectKey,
+                    File = fileObj,
+                    SuccessActionStatus = "201",
+                };
+                uploadRequest = new AlibabaCloud.OSS.Models.PostObjectRequest
+                {
+                    BucketName = authResponse.Body.Bucket,
+                    Header = ossHeader,
+                };
+                await ossClient.PostObjectAsync(uploadRequest, ossRuntime);
+                analyzeVlRealtimeReq.FileUrl = "http://" + authResponse.Body.Bucket + "." + authResponse.Body.Endpoint + "/" + authResponse.Body.ObjectKey;
+            }
+            AnalyzeVlRealtimeResponse analyzeVlRealtimeResp = await AnalyzeVlRealtimeWithOptionsAsync(analyzeVlRealtimeReq, headers, runtime);
+            return analyzeVlRealtimeResp;
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>策略执行状态反馈</para>
         /// </summary>
         /// 
