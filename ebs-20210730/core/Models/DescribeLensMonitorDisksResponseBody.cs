@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeLensMonitorDisksResponseBody : TeaModel {
         /// <summary>
-        /// <para>Cloud disk information list.</para>
+        /// <para>The information about the disks.</para>
         /// </summary>
         [NameInMap("DiskInfos")]
         [Validation(Required=false)]
@@ -141,11 +141,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</para>
-            /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</para>
-            /// <remarks>
-            /// <para> This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks">ESSD AutoPL disks</a></para>
-            /// </remarks>
+            /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
+            /// <para>Baseline performance = min{1,800 + 50 × Capacity, 50,000}</para>
+            /// <para>This parameter is available only if you set <c>DiskCategory</c> to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4000</para>

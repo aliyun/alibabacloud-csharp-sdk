@@ -27,6 +27,12 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string DiskCategory { get; set; }
 
+        /// <summary>
+        /// <para>Regular matching fuzzy query to filter cloud disk IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-cd40hxfu0v**</para>
+        /// </summary>
         [NameInMap("DiskIdPattern")]
         [Validation(Required=false)]
         public string DiskIdPattern { get; set; }
@@ -56,7 +62,6 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         /// <item><description>DiskBPSExceedInstanceMaxLimit: specifies the event that is triggered when the number of BPS on the disk reaches the upper limit of the instance.</description></item>
         /// <item><description>DiskIOPSExceedDiskMaxLimit: specifies the event that is triggered when the number of IOPS on the disk reaches the upper limit of the disk.</description></item>
         /// <item><description>DiskBPSExceedDiskMaxLimit: specifies the event that is triggered when the number of BPS on the disk reaches the upper limit of the disk.</description></item>
-        /// <item><description>DiskSlowIOTriggerred: specifies the event that is triggered when the I/O speed on the disk is slow.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("LensTags")]
