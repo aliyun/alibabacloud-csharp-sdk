@@ -8,9 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class UpdateClusterAttributeResponseBody : TeaModel {
+    public class UpdateUserAttributeResponseBody : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        [Obsolete]
+        public bool? Data { get; set; }
+
+        /// <summary>
+        /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>

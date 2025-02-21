@@ -9,21 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class AutoScalingPolicy : TeaModel {
-        [NameInMap("constraints")]
+        [NameInMap("Constraints")]
         [Validation(Required=false)]
         public AutoScalingPolicyConstraints Constraints { get; set; }
         public class AutoScalingPolicyConstraints : TeaModel {
-            [NameInMap("maxCapacity")]
+            [NameInMap("MaxCapacity")]
             [Validation(Required=false)]
             public int? MaxCapacity { get; set; }
 
-            [NameInMap("minCapacity")]
+            [NameInMap("MinCapacity")]
             [Validation(Required=false)]
             public int? MinCapacity { get; set; }
 
         }
 
-        [NameInMap("scalingRules")]
+        [NameInMap("ScalingRules")]
         [Validation(Required=false)]
         public List<ScalingRule> ScalingRules { get; set; }
 

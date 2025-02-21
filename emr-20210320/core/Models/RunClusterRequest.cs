@@ -72,6 +72,17 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string ClusterType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable release protection for the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: enables release protection for the cluster.</description></item>
+        /// <item><description>false: disables release protection for the cluster.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DeletionProtection")]
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }

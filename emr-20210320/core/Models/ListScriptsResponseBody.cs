@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of scripts.</para>
+        /// <para>The scripts.</para>
         /// </summary>
         [NameInMap("Scripts")]
         [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public long? LastUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>Node selector.</para>
+            /// <para>The node selector.</para>
             /// </summary>
             [NameInMap("NodeSelector")]
             [Validation(Required=false)]

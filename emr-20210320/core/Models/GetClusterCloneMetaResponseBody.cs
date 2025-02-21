@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public List<ApplicationConfig> ApplicationConfigs { get; set; }
 
             /// <summary>
-            /// <para>The services deployed in the cluster.</para>
+            /// <para>The services.</para>
             /// </summary>
             [NameInMap("Applications")]
             [Validation(Required=false)]
@@ -95,6 +95,17 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             [Validation(Required=false)]
             public string ClusterType { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether release protection is enabled for the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Release protection is enabled for the cluster.</description></item>
+            /// <item><description>false: Release protection is disabled for the cluster.</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("DeletionProtection")]
             [Validation(Required=false)]
             public bool? DeletionProtection { get; set; }
@@ -227,7 +238,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                     public int? MaxCapacity { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of nodes that you can configure based on your business requirements.</para>
+                    /// <para>The maximum number of pay-as-you-go nodes in the node group.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>200</para>
                     /// </summary>
                     [NameInMap("MaxOnDemandCapacity")]
                     [Validation(Required=false)]
@@ -256,6 +270,16 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public string NodeGroupId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the node group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>emr-etltask</para>
+                /// </summary>
+                [NameInMap("NodeGroupName")]
+                [Validation(Required=false)]
+                public string NodeGroupName { get; set; }
+
+                /// <summary>
                 /// <para>The ID of the auto scaling policy.</para>
                 /// 
                 /// <b>Example:</b>
@@ -273,7 +297,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public string ScalingPolicyType { get; set; }
 
                 /// <summary>
-                /// <para>The list of auto scaling rules.</para>
+                /// <para>The auto scaling rules.</para>
                 /// </summary>
                 [NameInMap("ScalingRules")]
                 [Validation(Required=false)]

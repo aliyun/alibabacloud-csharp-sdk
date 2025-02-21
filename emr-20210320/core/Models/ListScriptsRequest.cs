@@ -52,6 +52,20 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The script ID. Only common scripts are supported.</para>
+        /// </summary>
+        [NameInMap("ScriptId")]
+        [Validation(Required=false)]
+        public string ScriptId { get; set; }
+
+        /// <summary>
+        /// <para>The name of the script. Only common scripts are supported. Fuzzy search is supported.</para>
+        /// </summary>
+        [NameInMap("ScriptName")]
+        [Validation(Required=false)]
+        public string ScriptName { get; set; }
+
+        /// <summary>
         /// <para>Type of cluster script. Possible values:</para>
         /// <list type="bullet">
         /// <item><description>BOOTSTRAP: Bootstrap script.</description></item>
@@ -65,6 +79,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [NameInMap("ScriptType")]
         [Validation(Required=false)]
         public string ScriptType { get; set; }
+
+        /// <summary>
+        /// <para>The status of the script. Only common scripts are supported.</para>
+        /// </summary>
+        [NameInMap("Statuses")]
+        [Validation(Required=false)]
+        public List<string> Statuses { get; set; }
 
     }
 
