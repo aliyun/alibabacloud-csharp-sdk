@@ -449,6 +449,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public string PaneId { get; set; }
 
+            [NameInMap("ReservePaneForOfflineUser")]
+            [Validation(Required=false)]
+            public bool? ReservePaneForOfflineUser { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1811****</para>
@@ -613,6 +617,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cameraFirst</para>
+            /// </summary>
+            [NameInMap("VideoOrder")]
+            [Validation(Required=false)]
+            public string VideoOrder { get; set; }
+
             [NameInMap("Whiteboard")]
             [Validation(Required=false)]
             public StartStreamingOutShrinkRequestPanesWhiteboard Whiteboard { get; set; }
@@ -658,6 +670,22 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             public int? R { get; set; }
 
         }
+
+        [NameInMap("ReservePaneForNoCameraUser")]
+        [Validation(Required=false)]
+        public bool? ReservePaneForNoCameraUser { get; set; }
+
+        [NameInMap("StartWithoutChannel")]
+        [Validation(Required=false)]
+        public bool? StartWithoutChannel { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
+        [NameInMap("StartWithoutChannelWaitTime")]
+        [Validation(Required=false)]
+        public int? StartWithoutChannelWaitTime { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

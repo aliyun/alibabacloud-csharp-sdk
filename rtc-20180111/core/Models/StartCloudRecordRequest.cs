@@ -471,6 +471,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public int? PaneId { get; set; }
 
+            [NameInMap("ReservePaneForOfflineUser")]
+            [Validation(Required=false)]
+            public bool? ReservePaneForOfflineUser { get; set; }
+
             /// <summary>
             /// <para>source</para>
             /// </summary>
@@ -636,6 +640,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cameraFirst</para>
+            /// </summary>
+            [NameInMap("VideoOrder")]
+            [Validation(Required=false)]
+            public string VideoOrder { get; set; }
+
             [NameInMap("Whiteboard")]
             [Validation(Required=false)]
             public StartCloudRecordRequestPanesWhiteboard Whiteboard { get; set; }
@@ -682,6 +694,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("ReservePaneForNoCameraUser")]
+        [Validation(Required=false)]
+        public bool? ReservePaneForNoCameraUser { get; set; }
+
         /// <summary>
         /// <para>storageConfig</para>
         /// <para>This parameter is required.</para>
@@ -711,6 +727,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [NameInMap("Bucket")]
             [Validation(Required=false)]
             public string Bucket { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="https://aliyuns.dalian.oss.com">https://aliyuns.dalian.oss.com</a></para>
+            /// </summary>
+            [NameInMap("Endpoint")]
+            [Validation(Required=false)]
+            public string Endpoint { get; set; }
 
             /// <summary>
             /// <para>region</para>

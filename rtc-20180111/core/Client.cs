@@ -13178,6 +13178,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["RegionColor"] = request.RegionColor;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservePaneForNoCameraUser))
+            {
+                query["ReservePaneForNoCameraUser"] = request.ReservePaneForNoCameraUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageConfig))
             {
                 query["StorageConfig"] = request.StorageConfig;
@@ -13280,6 +13284,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionColor))
             {
                 query["RegionColor"] = request.RegionColor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservePaneForNoCameraUser))
+            {
+                query["ReservePaneForNoCameraUser"] = request.ReservePaneForNoCameraUser;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageConfig))
             {
@@ -14048,6 +14056,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["RegionColor"] = request.RegionColor;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservePaneForNoCameraUser))
+            {
+                query["ReservePaneForNoCameraUser"] = request.ReservePaneForNoCameraUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWithoutChannel))
+            {
+                query["StartWithoutChannel"] = request.StartWithoutChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWithoutChannelWaitTime))
+            {
+                query["StartWithoutChannelWaitTime"] = request.StartWithoutChannelWaitTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["TaskId"] = request.TaskId;
@@ -14150,6 +14170,18 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionColor))
             {
                 query["RegionColor"] = request.RegionColor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReservePaneForNoCameraUser))
+            {
+                query["ReservePaneForNoCameraUser"] = request.ReservePaneForNoCameraUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWithoutChannel))
+            {
+                query["StartWithoutChannel"] = request.StartWithoutChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWithoutChannelWaitTime))
+            {
+                query["StartWithoutChannelWaitTime"] = request.StartWithoutChannelWaitTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {

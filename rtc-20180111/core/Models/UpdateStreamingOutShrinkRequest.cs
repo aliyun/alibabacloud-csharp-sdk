@@ -439,6 +439,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [Validation(Required=false)]
             public int? PaneId { get; set; }
 
+            [NameInMap("ReservePaneForOfflineUser")]
+            [Validation(Required=false)]
+            public bool? ReservePaneForOfflineUser { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>22</para>
@@ -602,6 +606,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 public double? Y { get; set; }
 
             }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cameraFirst</para>
+            /// </summary>
+            [NameInMap("VideoOrder")]
+            [Validation(Required=false)]
+            public string VideoOrder { get; set; }
 
             [NameInMap("Whiteboard")]
             [Validation(Required=false)]
