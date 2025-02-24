@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string Data { get; set; }
 
+        [NameInMap("header")]
+        [Validation(Required=false)]
+        public string Header { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>avatar</para>

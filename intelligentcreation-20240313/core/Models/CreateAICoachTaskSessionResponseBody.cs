@@ -31,9 +31,29 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public CreateAICoachTaskSessionResponseBodyScriptInfo ScriptInfo { get; set; }
         public class CreateAICoachTaskSessionResponseBodyScriptInfo : TeaModel {
+            [NameInMap("agentIconUrl")]
+            [Validation(Required=false)]
+            public string AgentIconUrl { get; set; }
+
+            [NameInMap("characterName")]
+            [Validation(Required=false)]
+            public string CharacterName { get; set; }
+
+            [NameInMap("dialogueTextFlag")]
+            [Validation(Required=false)]
+            public bool? DialogueTextFlag { get; set; }
+
+            [NameInMap("dialogueTipFlag")]
+            [Validation(Required=false)]
+            public bool? DialogueTipFlag { get; set; }
+
             [NameInMap("initiator")]
             [Validation(Required=false)]
             public string Initiator { get; set; }
+
+            [NameInMap("inputTypeList")]
+            [Validation(Required=false)]
+            public List<string> InputTypeList { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -55,6 +75,30 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public string ScriptName { get; set; }
 
+            [NameInMap("scriptRecordId")]
+            [Validation(Required=false)]
+            public string ScriptRecordId { get; set; }
+
+            [NameInMap("scriptType")]
+            [Validation(Required=false)]
+            public long? ScriptType { get; set; }
+
+            [NameInMap("sparringTipContent")]
+            [Validation(Required=false)]
+            public string SparringTipContent { get; set; }
+
+            [NameInMap("sparringTipTitle")]
+            [Validation(Required=false)]
+            public string SparringTipTitle { get; set; }
+
+            [NameInMap("studentThinkTimeFlag")]
+            [Validation(Required=false)]
+            public bool? StudentThinkTimeFlag { get; set; }
+
+            [NameInMap("studentThinkTimeLimit")]
+            [Validation(Required=false)]
+            public long? StudentThinkTimeLimit { get; set; }
+
         }
 
         /// <summary>
@@ -64,6 +108,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [NameInMap("sessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
+
+        [NameInMap("sessionStatus")]
+        [Validation(Required=false)]
+        public long? SessionStatus { get; set; }
 
         /// <summary>
         /// <para>Token</para>

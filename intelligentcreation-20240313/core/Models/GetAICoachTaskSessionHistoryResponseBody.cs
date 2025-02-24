@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("pauseDuration")]
+        [Validation(Required=false)]
+        public long? PauseDuration { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>D5798660-1531-5D12-9C20-16FEE9D22351</para>
