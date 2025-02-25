@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopSessionsRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to turn on the switch to check session status of cloud computers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("CheckOsSession")]
         [Validation(Required=false)]
         public bool? CheckOsSession { get; set; }
@@ -50,6 +56,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
         [NameInMap("EndUserIdFilter")]
         [Validation(Required=false)]
         public string EndUserIdFilter { get; set; }
@@ -85,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,6 +130,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        /// <summary>
+        /// <para>The billing method of cloud computers.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>duration: hourly plan (available for users in the whitelist)</description></item>
+        /// <item><description>postPaid: pay-as-you-go</description></item>
+        /// <item><description>monthPackage: monthly subscription (the 120-hour/250-hour computing plan)</description></item>
+        /// <item><description>prePaid: monthly subscription (the Unlimited computing plan)</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>monthPackage</para>
+        /// </summary>
         [NameInMap("SubPayType")]
         [Validation(Required=false)]
         public string SubPayType { get; set; }

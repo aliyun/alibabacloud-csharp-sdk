@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopsPolicyGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The modification results.</para>
+        /// <para>The request results.</para>
         /// </summary>
         [NameInMap("ModifyResults")]
         [Validation(Required=false)]
         public List<ModifyDesktopsPolicyGroupResponseBodyModifyResults> ModifyResults { get; set; }
         public class ModifyDesktopsPolicyGroupResponseBodyModifyResults : TeaModel {
             /// <summary>
-            /// <para>The result of the modification. A value of success indicates that the policy is modified. If the policy failed to be modified, an error message is returned.</para>
+            /// <para>The returned message. If the request was successful, <c>success</c> is returned. If the request failed, an error message is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud desktop.</para>
+            /// <para>The cloud computer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-7w78ozhjcwa3u****</para>

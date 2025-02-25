@@ -11,23 +11,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class RenewDesktopsRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to enable the auto-payment feature.</para>
-        /// <para>Default value: true. Valid values:</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: enables the auto-payment feature.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <para>Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, your order becomes invalid.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <para>You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.</para>
-        /// <!-- --></description></item>
+        /// <item><description>true (default): enables the auto-payment feature. Make sure that your account balance is sufficient. Otherwise, an abnormal order is generated.</description></item>
+        /// <item><description>false: disables the auto-payment feature. In this case, an order is generated but you need to complete the payment. You can log on to the EDS console and complete the payment based on the order ID on the Orders page.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,12 +24,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable the auto-renewal feature.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud computers. Only IDs of subscription cloud computers are supported.</para>
+        /// <para>The cloud computer IDs. You can only renew monthly subscription cloud computers.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,6 +107,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para> This field is not available for public use.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }

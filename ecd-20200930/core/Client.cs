@@ -3040,7 +3040,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones an existing policy.</para>
+        /// <para>Clones an existing policy to quickly create a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3097,7 +3097,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones an existing policy.</para>
+        /// <para>Clones an existing policy to quickly create a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3154,7 +3154,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones an existing policy.</para>
+        /// <para>Clones an existing policy to quickly create a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3172,7 +3172,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones an existing policy.</para>
+        /// <para>Clones an existing policy to quickly create a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8406,12 +8406,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy.</para>
+        /// <para>Creates a cloud computer policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
+        /// <para>A cloud computer policy is a collection of rules to manage cloud computers in performance and security. For example, you can create a basic policy that involves the disk mapping, USB redirection, watermarking features and rules such as DNS rules. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8684,12 +8684,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy.</para>
+        /// <para>Creates a cloud computer policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
+        /// <para>A cloud computer policy is a collection of rules to manage cloud computers in performance and security. For example, you can create a basic policy that involves the disk mapping, USB redirection, watermarking features and rules such as DNS rules. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8962,12 +8962,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy.</para>
+        /// <para>Creates a cloud computer policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
+        /// <para>A cloud computer policy is a collection of rules to manage cloud computers in performance and security. For example, you can create a basic policy that involves the disk mapping, USB redirection, watermarking features and rules such as DNS rules. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8985,12 +8985,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy.</para>
+        /// <para>Creates a cloud computer policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
+        /// <para>A cloud computer policy is a collection of rules to manage cloud computers in performance and security. For example, you can create a basic policy that involves the disk mapping, USB redirection, watermarking features and rules such as DNS rules. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12004,8 +12004,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more custom policies.</para>
+        /// <para>Deletes one or more custom cloud computer policies.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You cannot delete the cloud computer policy created by the Elastic Desktop Service (EDS) system.</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot delete the cloud computer policies that are associated with cloud computers.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePolicyGroupsRequest
@@ -12057,8 +12065,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more custom policies.</para>
+        /// <para>Deletes one or more custom cloud computer policies.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You cannot delete the cloud computer policy created by the Elastic Desktop Service (EDS) system.</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot delete the cloud computer policies that are associated with cloud computers.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePolicyGroupsRequest
@@ -12110,8 +12126,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more custom policies.</para>
+        /// <para>Deletes one or more custom cloud computer policies.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You cannot delete the cloud computer policy created by the Elastic Desktop Service (EDS) system.</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot delete the cloud computer policies that are associated with cloud computers.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePolicyGroupsRequest
@@ -12128,8 +12152,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more custom policies.</para>
+        /// <para>Deletes one or more custom cloud computer policies.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You cannot delete the cloud computer policy created by the Elastic Desktop Service (EDS) system.</para>
+        /// <list type="bullet">
+        /// <item><description>You cannot delete the cloud computer policies that are associated with cloud computers.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePolicyGroupsRequest
@@ -15976,6 +16008,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["GpuDriverType"] = request.GpuDriverType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuMemory))
+            {
+                query["GpuMemory"] = request.GpuMemory;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeFamily))
             {
                 query["InstanceTypeFamily"] = request.InstanceTypeFamily;
@@ -16093,6 +16129,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuDriverType))
             {
                 query["GpuDriverType"] = request.GpuDriverType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuMemory))
+            {
+                query["GpuMemory"] = request.GpuMemory;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeFamily))
             {
@@ -31860,12 +31900,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the policies that are configured for a cloud desktop.</para>
+        /// <para>Changes an existing cloud computer policy for cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud desktops that you want to restart by calling this operation must be in the Running state.</para>
+        /// <para>The cloud computers for which you want to change their policies must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31926,12 +31966,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the policies that are configured for a cloud desktop.</para>
+        /// <para>Changes an existing cloud computer policy for cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud desktops that you want to restart by calling this operation must be in the Running state.</para>
+        /// <para>The cloud computers for which you want to change their policies must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31992,12 +32032,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the policies that are configured for a cloud desktop.</para>
+        /// <para>Changes an existing cloud computer policy for cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud desktops that you want to restart by calling this operation must be in the Running state.</para>
+        /// <para>The cloud computers for which you want to change their policies must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32015,12 +32055,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the policies that are configured for a cloud desktop.</para>
+        /// <para>Changes an existing cloud computer policy for cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud desktops that you want to restart by calling this operation must be in the Running state.</para>
+        /// <para>The cloud computers for which you want to change their policies must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33728,6 +33768,156 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改工作区DNS信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyOfficeSiteDnsInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOfficeSiteDnsInfoResponse
+        /// </returns>
+        public ModifyOfficeSiteDnsInfoResponse ModifyOfficeSiteDnsInfoWithOptions(ModifyOfficeSiteDnsInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsAddress))
+            {
+                query["DnsAddress"] = request.DnsAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyOfficeSiteDnsInfo",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyOfficeSiteDnsInfoResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyOfficeSiteDnsInfoResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改工作区DNS信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyOfficeSiteDnsInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOfficeSiteDnsInfoResponse
+        /// </returns>
+        public async Task<ModifyOfficeSiteDnsInfoResponse> ModifyOfficeSiteDnsInfoWithOptionsAsync(ModifyOfficeSiteDnsInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsAddress))
+            {
+                query["DnsAddress"] = request.DnsAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyOfficeSiteDnsInfo",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyOfficeSiteDnsInfoResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyOfficeSiteDnsInfoResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改工作区DNS信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyOfficeSiteDnsInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOfficeSiteDnsInfoResponse
+        /// </returns>
+        public ModifyOfficeSiteDnsInfoResponse ModifyOfficeSiteDnsInfo(ModifyOfficeSiteDnsInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyOfficeSiteDnsInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改工作区DNS信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyOfficeSiteDnsInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOfficeSiteDnsInfoResponse
+        /// </returns>
+        public async Task<ModifyOfficeSiteDnsInfoResponse> ModifyOfficeSiteDnsInfoAsync(ModifyOfficeSiteDnsInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyOfficeSiteDnsInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Enables or disables multi-factor authentication (MFA) for an enterprise Active Directory (AD) office network (formerly workspace).</para>
         /// </summary>
         /// 
@@ -33878,7 +34068,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a policy.</para>
+        /// <para>Modifies the cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34163,7 +34353,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a policy.</para>
+        /// <para>Modifies the cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34448,7 +34638,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a policy.</para>
+        /// <para>Modifies the cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34466,7 +34656,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a policy.</para>
+        /// <para>Modifies the cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36350,7 +36540,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renew subscription cloud computers.</para>
+        /// <para>Renews monthly subscription cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36427,7 +36617,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renew subscription cloud computers.</para>
+        /// <para>Renews monthly subscription cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36504,7 +36694,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renew subscription cloud computers.</para>
+        /// <para>Renews monthly subscription cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36522,7 +36712,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renew subscription cloud computers.</para>
+        /// <para>Renews monthly subscription cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">

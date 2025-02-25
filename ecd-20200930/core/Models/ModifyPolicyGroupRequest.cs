@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyPolicyGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the end user has administrator permissions after the end user connects to the cloud desktop.</para>
+        /// <para>Specifies whether end users have the administrator permissions.</para>
         /// <remarks>
-        /// <para> This parameter is in invitational preview and not available to the public.</para>
+        /// <para> This parameter is in invitational preview for specific users and not available to the public.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,12 +23,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AdminAccess { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the anti-screenshot feature. Valid values:</para>
+        /// <para>Specifies whether to enable the anti-screenshot feature.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
+        /// <item><description>off (default)</description></item>
         /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
         /// </list>
-        /// <para>Default value: off.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AppContentProtection { get; set; }
 
         /// <summary>
-        /// <para>The client CIDR blocks in the whitelist.</para>
+        /// <para>The client IP address whitelist.</para>
         /// </summary>
         [NameInMap("AuthorizeAccessPolicyRule")]
         [Validation(Required=false)]
         public List<ModifyPolicyGroupRequestAuthorizeAccessPolicyRule> AuthorizeAccessPolicyRule { get; set; }
         public class ModifyPolicyGroupRequestAuthorizeAccessPolicyRule : TeaModel {
             /// <summary>
-            /// <para>The CIDR block that the client can access.</para>
+            /// <para>The client CIDR block from which end users can connect to cloud computers. The value is an IPv4 CIDR block.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CidrIp { get; set; }
 
             /// <summary>
-            /// <para>The description of security group rule N.</para>
+            /// <para>The description of the security group rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -95,13 +95,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of security group rule N. Valid values:</para>
+            /// <para>The protocol type of the security group rule.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>tcp: TCP</description></item>
-            /// <item><description>udp: UDP</description></item>
-            /// <item><description>icmp: ICMP (IPv4)</description></item>
-            /// <item><description>gre: GRE</description></item>
-            /// <item><description>all: all protocols</description></item>
+            /// <item><description>UDP: the User Datagram Protocol (UDP) protocol.</description></item>
+            /// <item><description>TCP: the Transmission Control Protocol (TCP) protocol.</description></item>
+            /// <item><description>ALL: all protocols.</description></item>
+            /// <item><description>GRE: the Generic Routing Encapsulation (GRE) protocol.</description></item>
+            /// <item><description>ICMP: the Internet Control Message Protocol (ICMP) for (IPv4)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,10 +113,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string IpProtocol { get; set; }
 
             /// <summary>
-            /// <para>The authorization policy of security group rule N. Valid values:</para>
+            /// <para>The authorization of the security group rule.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>accept: specifies the Allow policy that allows all access requests.</description></item>
-            /// <item><description>drop: specifies the Deny policy that denies all access requests. If no messages of access denied are returned, the requests time out or failed.</description></item>
+            /// <item><description>drop: denies all access requests. If no messages of access denied are returned, the requests timed out or failed.</description></item>
+            /// <item><description>accept: accepts all requests.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,14 +128,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The port range of security group rule N. The value of the port range is determined by the protocol type specified by the AuthorizeSecurityPolicyRule.N.IpProtocol parameter.</para>
+            /// <para>The port range of the security group rule. The value range of this parameter varies based on the value of the IpProtocol parameter.</para>
             /// <list type="bullet">
-            /// <item><description>When the AuthorizeSecurityPolicyRule.N.IpProtocol parameter is set to tcp or udp, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</description></item>
-            /// <item><description>When AuthorizeSecurityPolicyRule.N.IpProtocol is set to icmp, set the value to -1/-1.</description></item>
-            /// <item><description>When AuthorizeSecurityPolicyRule.N.IpProtocol is set to gre, set the value to -1/-1.</description></item>
-            /// <item><description>When AuthorizeSecurityPolicyRule.N.IpProtocol is set to all, set the value to -1/-1.</description></item>
+            /// <item><description>If the IpProtocol parameter is set to TCP or UDP, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</description></item>
+            /// <item><description>If the IpProtocol parameter is set to ICMP, set the value to -1/-1.</description></item>
+            /// <item><description>If the IpProtocol parameter is set to GRE, set the value to -1/-1.</description></item>
+            /// <item><description>If the IpProtocol parameter is set to ALL, set the value to -1/-1.</description></item>
             /// </list>
-            /// <para>For more information about the common ports of typical applications, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</para>
+            /// <para>For more information about the common ports applied in EDS, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22/22</para>
@@ -143,9 +145,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PortRange { get; set; }
 
             /// <summary>
-            /// <para>The priority of security group rule N. A smaller value indicates a higher priority.</para>
-            /// <para>Valid values: 1 to 60.</para>
-            /// <para>Default value: 1.</para>
+            /// <para>The priority of the security group rule. A smaller value indicates a higher priority. Valid values: 1 to 60. Default value: 1</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -155,10 +155,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The direction of security group rule N. Valid values:</para>
+            /// <para>The direction of the security group rule.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>inflow: inbound</description></item>
             /// <item><description>outflow: outbound</description></item>
+            /// <item><description>inflow: inbound</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,12 +172,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable the webcam redirection feature. Valid values:</para>
+        /// <para>Specifies whether to enable the webcam redirection feature.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
         /// <item><description>off</description></item>
+        /// <item><description>on (default)</description></item>
         /// </list>
-        /// <para>Default value: on.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -186,25 +187,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CameraRedirect { get; set; }
 
         /// <summary>
-        /// <para>The logon methods.</para>
+        /// <para>The logon method control rules to limit the type of the Alibaba Cloud Workspace client used by end users to connect to cloud computers.</para>
         /// </summary>
         [NameInMap("ClientType")]
         [Validation(Required=false)]
         public List<ModifyPolicyGroupRequestClientType> ClientType { get; set; }
         public class ModifyPolicyGroupRequestClientType : TeaModel {
             /// <summary>
-            /// <para>The type of client that you want to use to connect to the cloud desktop. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>windows: the Windows client</description></item>
-            /// <item><description>linux: C-Key Series Cloud Computer TC and A Series Cloud Computer TC</description></item>
-            /// <item><description>macos: the macOS client</description></item>
-            /// <item><description>ios: the iOS client</description></item>
-            /// <item><description>android: the Android client</description></item>
-            /// <item><description>html5: the web client</description></item>
-            /// </list>
+            /// <para>The type of the Alibaba Cloud Workspace client.</para>
             /// <remarks>
-            /// <para>By default, if you do not configure the ClientType-related parameters, all types of clients are allowed to connect to the cloud desktop.</para>
+            /// <para> If you do not specify the <c>ClientType</c> parameter, all types of the client are allowed by default.</para>
             /// </remarks>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>html5: web client</description></item>
+            /// <item><description>android: Android client</description></item>
+            /// <item><description>windows: Windows client</description></item>
+            /// <item><description>ios: iOS client</description></item>
+            /// <item><description>macos: macOS client</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>windows</para>
@@ -214,14 +215,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientType { get; set; }
 
             /// <summary>
-            /// <para>The logon method. This parameter specifies whether a specific type of the client is allowed to connect to the cloud desktop. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>on: allowed.</description></item>
-            /// <item><description>off: disallowed.</description></item>
-            /// </list>
+            /// <para>Specifies whether to allow end users to use a specific type of the client to connect to cloud computers.</para>
             /// <remarks>
-            /// <para>By default, if you do not configure the ClientType-related parameters, all types of clients are allowed to log on to cloud desktops.</para>
+            /// <para> If you do not specify the <c>ClientType</c> parameter, all types of the client are allowed by default.</para>
             /// </remarks>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>off</description></item>
+            /// <item><description>on</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -233,11 +235,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The permissions on clipboards. Valid values:</para>
+        /// <para>The permissions on the clipboard.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>read: specifies one-way transfer. You can copy data from your computer to cloud desktops, but cannot copy data from cloud desktops to your computer.</description></item>
-        /// <item><description>readwrite: specifies two-way transfer. You can copy data between your computer and cloud desktops.</description></item>
-        /// <item><description>off: specifies that the two-way transfer is disabled. You cannot copy data between your computer and cloud desktops.</description></item>
+        /// <item><description>read: specifies one-way transfer. You can copy files only from local devices to cloud computers.</description></item>
+        /// <item><description>readwrite: specifies two-way transfer You can copy files between local devices and cloud computers.</description></item>
+        /// <item><description>write: specifies one-way transfer. You can only copy files from cloud computers to local devices.</description></item>
+        /// <item><description>off: disables both one-way and two-way transfer. Files cannot be copied between local devices and cloud computers.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -247,14 +251,42 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Clipboard { get; set; }
 
+        /// <summary>
+        /// <para>The device redirection rules.</para>
+        /// </summary>
         [NameInMap("DeviceRedirects")]
         [Validation(Required=false)]
         public List<ModifyPolicyGroupRequestDeviceRedirects> DeviceRedirects { get; set; }
         public class ModifyPolicyGroupRequestDeviceRedirects : TeaModel {
+            /// <summary>
+            /// <para>The peripheral type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>printer</description></item>
+            /// <item><description>scanner</description></item>
+            /// <item><description>camera</description></item>
+            /// <item><description>adb: the Android Debug Bridge (ADB) device</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>camera</para>
+            /// </summary>
             [NameInMap("DeviceType")]
             [Validation(Required=false)]
             public string DeviceType { get; set; }
 
+            /// <summary>
+            /// <para>The redirection type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>deviceRedirect: device redirection</description></item>
+            /// <item><description>usbRedirect: USB redirection</description></item>
+            /// <item><description>off: redirection disabled</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>usbRedirect</para>
+            /// </summary>
             [NameInMap("RedirectType")]
             [Validation(Required=false)]
             public string RedirectType { get; set; }
@@ -262,6 +294,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
+        /// <para>The custom peripheral rules.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
         /// </summary>
@@ -269,26 +303,81 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<ModifyPolicyGroupRequestDeviceRules> DeviceRules { get; set; }
         public class ModifyPolicyGroupRequestDeviceRules : TeaModel {
+            /// <summary>
+            /// <para>The device name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sandisk</para>
+            /// </summary>
             [NameInMap("DeviceName")]
             [Validation(Required=false)]
             public string DeviceName { get; set; }
 
+            /// <summary>
+            /// <para>The product ID (PID).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0x0781</para>
+            /// </summary>
             [NameInMap("DevicePid")]
             [Validation(Required=false)]
             public string DevicePid { get; set; }
 
+            /// <summary>
+            /// <para>The peripheral type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>usbKey</description></item>
+            /// <item><description>other</description></item>
+            /// <item><description>graphicsTablet</description></item>
+            /// <item><description>printer</description></item>
+            /// <item><description>cardReader</description></item>
+            /// <item><description>scanner</description></item>
+            /// <item><description>storage</description></item>
+            /// <item><description>camera</description></item>
+            /// <item><description>adb</description></item>
+            /// <item><description>networkInterfaceCard: the NIC device</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>storage</para>
+            /// </summary>
             [NameInMap("DeviceType")]
             [Validation(Required=false)]
             public string DeviceType { get; set; }
 
+            /// <summary>
+            /// <para>The vendor ID (VID). For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB VIDs</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0x55b1</para>
+            /// </summary>
             [NameInMap("DeviceVid")]
             [Validation(Required=false)]
             public string DeviceVid { get; set; }
 
+            /// <summary>
+            /// <para>The link optimization command.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2:0</para>
+            /// </summary>
             [NameInMap("OptCommand")]
             [Validation(Required=false)]
             public string OptCommand { get; set; }
 
+            /// <summary>
+            /// <para>The redirection type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>deviceRedirect: device redirection</description></item>
+            /// <item><description>usbRedirect: USB redirection</description></item>
+            /// <item><description>off: redirection disabled</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>usbRedirect</para>
+            /// </summary>
             [NameInMap("RedirectType")]
             [Validation(Required=false)]
             public string RedirectType { get; set; }
@@ -296,10 +385,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The domain blacklist or whitelist. Wildcard domains are supported. Separate domain names with commas (,). Valid values:</para>
+        /// <para>Specifies whether the access control for domain names is enabled. Domain names support wildcards (\*). Separate multiple domain names with commas (,).</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>[black:],example1.com,example2.com: the domain name blacklist.</description></item>
-        /// <item><description>[white:],example1.com,example2.com: the domain name whitelist.</description></item>
+        /// <item><description>off</description></item>
+        /// <item><description>on</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -310,14 +400,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DomainList { get; set; }
 
         /// <summary>
-        /// <para>The details of the DNS rule.</para>
+        /// <para>The details of the domain name resolution rules.</para>
         /// </summary>
         [NameInMap("DomainResolveRule")]
         [Validation(Required=false)]
         public List<ModifyPolicyGroupRequestDomainResolveRule> DomainResolveRule { get; set; }
         public class ModifyPolicyGroupRequestDomainResolveRule : TeaModel {
             /// <summary>
-            /// <para>The description of the DNS rule.</para>
+            /// <para>The description of domain name resolution rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description policy</para>
@@ -337,22 +427,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to allow the DNS rule.</para>
+            /// <para>Specifies whether to allow the domain name resolution rule.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>allow</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>block</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
+            /// <item><description>allow</description></item>
+            /// <item><description>block</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -365,7 +444,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The DNS rule type.</para>
+        /// <para>The type of the domain name resolution rule.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>OFF</description></item>
+        /// <item><description>ON</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>OFF</para>
@@ -375,10 +459,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DomainResolveRuleType { get; set; }
 
         /// <summary>
-        /// <para>The user applies for the administrator assistance switch. Value range: </para>
+        /// <para>Specifies whether to turn on the Contact Administrator for Help switch.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on </description></item>
         /// <item><description>off</description></item>
+        /// <item><description>on</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -389,10 +474,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserApplyAdminCoordinate { get; set; }
 
         /// <summary>
-        /// <para>The flow collaboration switch between users. Value range: </para>
+        /// <para>Specifies whether to turn on the User Stream Collaboration switch.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on </description></item>
         /// <item><description>off</description></item>
+        /// <item><description>on</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -403,10 +489,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserGroupCoordinate { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the image display quality feature for the Graphics cloud desktop. If your business requires high desktop performance and optimal user experience, we recommend that you enable this feature. For example, you can enable this policy in professional design scenarios. Valid values:</para>
+        /// <para>Specifies whether to enable the Image Quality Control feature for Graphic-based cloud computers. If you have high requirements on the performance and user experience in scenarios such as professional design, we recommend that you enable this feature.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
         /// <item><description>off</description></item>
+        /// <item><description>on</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -417,15 +504,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GpuAcceleration { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow the access from HTM5 clients to a cloud desktop. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>on: allows the access.</description></item>
-        /// <item><description>off: denies the access.</description></item>
-        /// </list>
-        /// <para>Default value: off.</para>
+        /// <para>Specifies whether to allow web client access.</para>
         /// <remarks>
-        /// <para> We recommend that you use the ClientType-related parameters to control the EDS client type for cloud desktop logon.</para>
+        /// <para> We recommend that you specify the ClientType-related parameters to control the Alibaba Cloud Workspace client type for cloud computer connection.``</para>
         /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>off</description></item>
+        /// <item><description>on</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -435,14 +522,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Html5Access { get; set; }
 
         /// <summary>
-        /// <para>The file transfer policy for HTML5 clients. Valid values:</para>
+        /// <para>The file transfer feature on the web client.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>off: Files cannot be uploaded from or downloaded to HTML5 clients.</description></item>
-        /// <item><description>upload: Files can be uploaded from HTML5 clients.</description></item>
-        /// <item><description>download: Files can be downloaded to HTML5 clients.</description></item>
-        /// <item><description>all: Files can be uploaded from and downloaded to HTML5 clients.</description></item>
+        /// <item><description>all: Files can be uploaded and downloaded between local computers and the web client.</description></item>
+        /// <item><description>download: Files on the web client can be downloaded to local computers.</description></item>
+        /// <item><description>upload: Files on local computers can be uploaded to the web client.</description></item>
+        /// <item><description>off (default): Files cannot be transferred between the web client and local computers.</description></item>
         /// </list>
-        /// <para>Default value: off.</para>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -452,12 +539,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Html5FileTransfer { get; set; }
 
         /// <summary>
-        /// <para>The protocol that you want to use for network communication. Valid values:</para>
+        /// <para>The protocol for network communication.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>TCP: Only the TCP protocol is used.</description></item>
-        /// <item><description>BOTH: allows automatic switchover between the TCP protocol and the UDP protocol.</description></item>
+        /// <item><description>TCP (default): TCP</description></item>
+        /// <item><description>BOTH: TCP and UDP</description></item>
         /// </list>
-        /// <para>Default value: TCP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BOTH</para>
@@ -467,11 +554,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InternetCommunicationProtocol { get; set; }
 
         /// <summary>
-        /// <para>The permissions on local disk mapping. Valid values:</para>
+        /// <para>The permissions on local disk mapping.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>read: read-only permissions. Local disks are mapped to cloud desktops. You can only read (copy) local files but cannot modify them.</description></item>
-        /// <item><description>readwrite: read and write permissions. Local disks are mapped to cloud desktops. You can read (copy) and modify local files.</description></item>
-        /// <item><description>off: no permissions. Local disks are not mapped to cloud desktops.</description></item>
+        /// <item><description>read: read-only. Local disk mapping is available on cloud computers. However, you can only read (copy) local files but cannot modify the files.</description></item>
+        /// <item><description>readwrite: read and write. Local disk mapping is available on cloud computers. You can read (copy) and write (modify) local files.</description></item>
+        /// <item><description>off (default): no permissions. Local disk mapping is unavailable on cloud computers.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -481,12 +569,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string LocalDrive { get; set; }
 
+        /// <summary>
+        /// <para>The maximum retry period for reconnecting to cloud computers when the cloud computers are disconnected due to none-human reasons. Valid values: 30 to 7200. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>120</para>
+        /// </summary>
         [NameInMap("MaxReconnectTime")]
         [Validation(Required=false)]
         public int? MaxReconnectTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy.</para>
+        /// <para>The name of the cloud computer policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testPolicyGroupName</para>
@@ -496,12 +590,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The network redirection feature. Valid values:</para>
+        /// <para>Specifies whether to enable network redirection.</para>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview for specific users and not available to the public.</para>
+        /// </remarks>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
+        /// <item><description>off (default)</description></item>
         /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
         /// </list>
-        /// <para>Default value: off.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -511,7 +608,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NetRedirect { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy.</para>
+        /// <para>The ID of the cloud computer policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -522,7 +619,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow user preemption. Default value: off. You cannot change the value.</para>
+        /// <para>The cloud computer preemption feature.</para>
+        /// <remarks>
+        /// <para> To ensure user experience and data security, when a cloud computer is used by an end user, other end users cannot connect to the cloud computer. By default, this parameter is set to <c>off</c>, which cannot be modified.</para>
+        /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>off (default): Multiple end users cannot connect to the same cloud computer at the same time.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -532,9 +636,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PreemptLogin { get; set; }
 
         /// <summary>
-        /// <para>The names of the users that are allowed to connect to the same cloud desktop at the same time. You can specify up to five usernames.</para>
+        /// <para>The usernames that are allowed to connect to the cloud computer in use. You can specify up to five usernames.</para>
         /// <remarks>
-        /// <para>To improve user experience and ensure data security, multiple end users cannot connect to the same cloud desktop at the same time.</para>
+        /// <para> To ensure user experience and data security, other end users cannot connect to the cloud computer that is used by an end user.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("PreemptLoginUser")]
@@ -542,10 +646,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> PreemptLoginUser { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable printer redirection. Valid values:</para>
+        /// <para>The printer redirection feature.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>off: disables printer redirection.</description></item>
-        /// <item><description>on: enables printer redirection.</description></item>
+        /// <item><description>off</description></item>
+        /// <item><description>on</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -556,12 +661,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PrinterRedirection { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the custom screen recording feature. Valid values:</para>
+        /// <para>Specifies whether to enable the custom screen recording feature.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
+        /// <item><description>off (default)</description></item>
         /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
         /// </list>
-        /// <para>Default value: off.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OFF</para>
@@ -581,11 +686,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? RecordContentExpires { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable screen recording. Valid values:</para>
+        /// <para>Specifies whether to enable the screen recording feature.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OFF: disabled.</description></item>
-        /// <item><description>ALLTIME: All operations that are performed by an end user on the cloud desktop are recorded. The recording immediately starts when the end user connects to the cloud desktop and ends after the end user disconnects from the cloud desktop.</description></item>
-        /// <item><description>PERIOD: The operations that are performed by an end user on the cloud desktop during a specific period of time are recorded. You must specify the start time and the end time of the recording.</description></item>
+        /// <item><description>byaction_cmd_ft: enables the operation-triggered screen recording upon command execution and file transfer.</description></item>
+        /// <item><description>ALLTIME: enables the whole-process screen recording. That is, the recording starts when cloud computers are connected and ends when the cloud computers are disconnected.</description></item>
+        /// <item><description>session: enables the screen recording for session lifecycle listening.</description></item>
+        /// <item><description>PERIOD: enables the interval-based screen recording. You must specify an interval between the start time and end time of this type of recording.</description></item>
+        /// <item><description>byaction_commands: enables the operation-triggered screen recording upon command execution.</description></item>
+        /// <item><description>OFF: disables the screen recording feature.</description></item>
+        /// <item><description>byaction_file_transfer: enables the operation-triggered screen recording upon file transfer.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -596,10 +706,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Recording { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to record the sound that is generated on the cloud desktop during screen recording. Valid values:</para>
+        /// <para>Specifies whether to record the audio files generated from cloud computers.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description>off: records only video files.</description></item>
+        /// <item><description>on: records video and audio files.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -610,7 +721,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RecordingAudio { get; set; }
 
         /// <summary>
-        /// <para>This parameter takes effect based on the Recording-related parameters. You can specify a time range for screen recording, and recording files are generated after the specified end time is reached.</para>
+        /// <para>The file length of the screen recording. Unit: minutes. Screen recording files are split based on the specified file length and uploaded to Object Storage Service (OSS) buckets. When a screen recording file reaches 300 MB in size, the system preferentially performs rolling update for the file.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>10</description></item>
+        /// <item><description>20</description></item>
+        /// <item><description>30</description></item>
+        /// <item><description>60</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -620,7 +738,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? RecordingDuration { get; set; }
 
         /// <summary>
-        /// <para>The time when the screen recording ends. Specify the value in the HH:MM:SS format. The value is valid only when you set the Recording parameter to PERIOD.</para>
+        /// <para>The time when the screen recording stops. Specify the value in the HH:MM:SS format. The value is meaningful only when you set <c>Recording</c> to <c>PERIOD</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08:59:00</para>
@@ -630,7 +748,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RecordingEndTime { get; set; }
 
         /// <summary>
-        /// <para>The period in which the screen recording audit is valid. Valid values: 15 to 180. Unit: days.</para>
+        /// <para>The retention period of the screen recording file. Valid values: 1 to 180. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -640,7 +758,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? RecordingExpires { get; set; }
 
         /// <summary>
-        /// <para>The frame rate of screen recording. Unit: fps. Valid values:</para>
+        /// <para>The frame rate of screen recording. Unit: fps.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>2</description></item>
         /// <item><description>5</description></item>
@@ -656,7 +775,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? RecordingFps { get; set; }
 
         /// <summary>
-        /// <para>The time when the screen recording starts. Specify the value in the HH:MM:SS format. The value is valid only when you set the Recording parameter to PERIOD.</para>
+        /// <para>The time when the screen recording starts. Specify the value in the HH:MM:SS format. The value is meaningful only when you set the <c>Recording</c> parameter to <c>PERIOD</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08:00:00</para>
@@ -666,7 +785,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RecordingStartTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the screen recording notification feature. Valid values: on and off. on and off (default).</para>
+        /// <para>Specifies whether to enable the screen recording notification feature after end users log on to the Alibaba Cloud Workspace client.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>off</description></item>
+        /// <item><description>on</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -676,7 +800,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RecordingUserNotify { get; set; }
 
         /// <summary>
-        /// <para>The content of the screen recording notification sent to the client. By default, you do not need to specify this parameter.</para>
+        /// <para>The notification content of screen recording. By default, this parameter is left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Your desktop is being recorded.</para>
@@ -686,7 +810,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RecordingUserNotifyMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the cloud desktop resides.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -697,11 +821,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The permissions on the keyboard and mouse to control the cloud desktop during remote assistance. Valid values:</para>
+        /// <para>The permissions on keyboard and mouse control during remote assistance.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>fullControl: The keyboard and mouse can be fully controlled.</description></item>
-        /// <item><description>optionalControl: By default, this feature is disabled. You can apply for permissions to enable the feature.</description></item>
-        /// <item><description>disableControl: The keyboard and mouse cannot be controlled.</description></item>
+        /// <item><description>optionalControl: By default, you are not granted the permissions. You can apply for the permissions.</description></item>
+        /// <item><description>fullControl: You are granted the full permissions.</description></item>
+        /// <item><description>disableControl: You are not granted the permissions.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -712,14 +837,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RemoteCoordinate { get; set; }
 
         /// <summary>
-        /// <para>The security group rules that you want to delete.</para>
+        /// <para>The client IP addresses that you want to delete from the whitelist.</para>
         /// </summary>
         [NameInMap("RevokeAccessPolicyRule")]
         [Validation(Required=false)]
         public List<ModifyPolicyGroupRequestRevokeAccessPolicyRule> RevokeAccessPolicyRule { get; set; }
         public class ModifyPolicyGroupRequestRevokeAccessPolicyRule : TeaModel {
             /// <summary>
-            /// <para>The IPv4 CIDR block that can be accessed from the client.</para>
+            /// <para>The client CIDR block that you want to delete. After it is deleted, end users cannot connect to cloud computers from the CIDR block. The value is an IPv4 CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.100.XX.XX/16</para>
@@ -729,7 +854,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CidrIp { get; set; }
 
             /// <summary>
-            /// <para>The description of the client IP address whitelist that you want to delete.</para>
+            /// <para>The description of the client IP addresses that you want to delete from the whitelist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -748,7 +873,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<ModifyPolicyGroupRequestRevokeSecurityPolicyRule> RevokeSecurityPolicyRule { get; set; }
         public class ModifyPolicyGroupRequestRevokeSecurityPolicyRule : TeaModel {
             /// <summary>
-            /// <para>The IPv4 CIDR block of the security group rule.</para>
+            /// <para>The object of the security group rule that you want to delete. The value is an IPv4 CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.100.XX.XX/16</para>
@@ -758,7 +883,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CidrIp { get; set; }
 
             /// <summary>
-            /// <para>The description of the security group rule.</para>
+            /// <para>The description of the security group rule that you want to delete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -768,13 +893,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of the security group rule. Valid values:</para>
+            /// <para>The protocol type of the security group rule that you want to delete.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>TCP</description></item>
             /// <item><description>UDP</description></item>
-            /// <item><description>ICMP: ICMP (IPv4)</description></item>
-            /// <item><description>GRE</description></item>
             /// <item><description>ALL</description></item>
+            /// <item><description>GRE</description></item>
+            /// <item><description>ICMP</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -785,12 +911,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string IpProtocol { get; set; }
 
             /// <summary>
-            /// <para>The authorization policy of the security group rule that you want to delete. Valid values:</para>
+            /// <para>The authorization of the security group rule that you want to delete.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>accept: allows all access requests.</description></item>
-            /// <item><description>drop: disallows all access requests. If no denied messages are returned, the requests timed out or failed.</description></item>
+            /// <item><description>drop: denies all access requests. If no messages of access denied are returned, the requests timed out or failed.</description></item>
+            /// <item><description>accept (default): accepts all requests.</description></item>
             /// </list>
-            /// <para>Default value: accept.</para>
             /// 
             /// <b>Example:</b>
             /// <para>accept</para>
@@ -800,14 +926,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The port range of the security group rule that you want to delete. The value of the port range is determined by the protocol type specified by the IpProtocol parameter.</para>
+            /// <para>The port range of the security group rule that you want to delete. The value range of this parameter varies based on the value of the IpProtocol parameter.</para>
             /// <list type="bullet">
-            /// <item><description>If the IpProtocol parameter is set to TCP or UDP, the port range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.</description></item>
-            /// <item><description>If the IpProtocol parameter is set to ICMP, the port range is -1/-1.</description></item>
-            /// <item><description>If the IpProtocol parameter is set to GRE, the port range is -1/-1.</description></item>
-            /// <item><description>If the IpProtocol parameter is set to ALL, the port range is -1/-1.</description></item>
+            /// <item><description>If the IpProtocol parameter is set to TCP or UDP, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</description></item>
+            /// <item><description>If the IpProtocol parameter is set to ICMP, set the value to -1/-1.</description></item>
+            /// <item><description>If the IpProtocol parameter is set to GRE, set the value to -1/-1.</description></item>
+            /// <item><description>If the IpProtocol parameter is set to ALL, set the value to -1/-1.</description></item>
             /// </list>
-            /// <para>For more information about the common ports of typical applications, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/common-ports?spm=a2c63.p38356.0.0.56b87f2c2SJTAw">Common ports</a>.</para>
+            /// <para>For more information about the common ports applied in EDS, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22/22</para>
@@ -817,9 +943,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PortRange { get; set; }
 
             /// <summary>
-            /// <para>The priority of the security group rule. A smaller value indicates a higher priority.</para>
-            /// <para>Valid values: 1 to 60.</para>
-            /// <para>Default value: 1.</para>
+            /// <para>The priority of the security group rule that you want to delete. A smaller value indicates a higher priority. Valid values: 1 to 60. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -829,10 +953,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The direction of the security group rule that you want to delete. Valid values:</para>
+            /// <para>The direction of the security group rule that you want to delete.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>inflow: inbound</description></item>
             /// <item><description>outflow: outbound</description></item>
+            /// <item><description>inflow: inbound</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -845,10 +970,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The effective scope of the policy. Valid values:</para>
+        /// <para>The effective scope of the policy.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GLOBAL: takes effect globally.</description></item>
-        /// <item><description>IP: takes effect based on the IP address.</description></item>
+        /// <item><description>IP: The policy takes effect based on the IP address.</description></item>
+        /// <item><description>GLOBAL: The policy takes effect globally.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -859,17 +985,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required when the Scope parameter is set to IP.</para>
+        /// <para>This parameter is required when the <c>Scope</c> parameter is set to <c>IP</c>.````</para>
         /// </summary>
         [NameInMap("ScopeValue")]
         [Validation(Required=false)]
         public List<string> ScopeValue { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable USB redirection. Valid values:</para>
+        /// <para>Specifies whether to enable the USB redirection feature.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: enables USB redirection.</description></item>
-        /// <item><description>off: disables USB redirection.</description></item>
+        /// <item><description>off</description></item>
+        /// <item><description>on</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -887,7 +1014,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<ModifyPolicyGroupRequestUsbSupplyRedirectRule> UsbSupplyRedirectRule { get; set; }
         public class ModifyPolicyGroupRequestUsbSupplyRedirectRule : TeaModel {
             /// <summary>
-            /// <para>The description of the rule.</para>
+            /// <para>The rule description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test rule</para>
@@ -897,7 +1024,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The class of the device. This parameter is required when you set the usbRuleType parameter to 1. For more information, see <a href="https://www.usb.org/defined-class-codes?spm=a2c63.p38356.0.0.56b84b03GUn4kJ">Defined Class Codes</a>.</para>
+            /// <para>The device class. This parameter is required when <c>usbRuleType</c> is set to 1. For more information, see <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0Eh</para>
@@ -907,7 +1034,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DeviceClass { get; set; }
 
             /// <summary>
-            /// <para>The subclass of the device. This parameter is required when you set the usbRuleType parameter to 1. For more information, see <a href="https://www.usb.org/defined-class-codes?spm=a2c63.p38356.0.0.56b84b03GUn4kJ">Defined Class Codes</a>.</para>
+            /// <para>The device subclass. This parameter is required when <c>usbRuleType</c> is set to 1. For more information, see <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxh</para>
@@ -917,7 +1044,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DeviceSubclass { get; set; }
 
             /// <summary>
-            /// <para>The ID of the service.</para>
+            /// <para>The product ID (PID).</para>
             /// 
             /// <b>Example:</b>
             /// <para>08**</para>
@@ -927,10 +1054,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProductId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to allow USB redirection. Valid values:</para>
+            /// <para>Specifies whether to allow USB redirection.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: allowed.</description></item>
-            /// <item><description>2: disallowed.</description></item>
+            /// <item><description>1: allows USB redirection.</description></item>
+            /// <item><description>2: forbids USB redirection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -941,10 +1069,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? UsbRedirectType { get; set; }
 
             /// <summary>
-            /// <para>The type of the USB redirection rule. Valid values:</para>
+            /// <para>The type of the USB redirection rule.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: device class.</description></item>
-            /// <item><description>2: device vendor.</description></item>
+            /// <item><description>1: by device class</description></item>
+            /// <item><description>2: by device vendor</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -955,7 +1084,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? UsbRuleType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vendor. For more information, see<a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf?spm=a2c63.p38356.0.0.56b84b03GUn4kJ&file=vendor_ids032322.pdf_1.pdf"> Valid USB Vendor IDs (VIDs)</a>.</para>
+            /// <para>The vendor ID (VID). For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB VIDs</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>04**</para>
@@ -977,12 +1106,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string VideoRedirect { get; set; }
 
         /// <summary>
-        /// <para>Specify whether to enable the policy of image display quality. Valid values:</para>
+        /// <para>The image display quality.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: enables the policy of image display quality.</description></item>
-        /// <item><description>off: disables the policy of image display quality.</description></item>
+        /// <item><description>high: high-definition (HD)</description></item>
+        /// <item><description>low: smoothness</description></item>
+        /// <item><description>lossless: no quality loss</description></item>
+        /// <item><description>medium (default): scenario-specific adaptation</description></item>
         /// </list>
-        /// <para>Default value: off.</para>
         /// 
         /// <b>Example:</b>
         /// <para>low</para>
@@ -992,10 +1123,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string VisualQuality { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable watermarking. Valid values:</para>
+        /// <para>The watermarking feature.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: enables watermarking.</description></item>
-        /// <item><description>off: disables watermarking.</description></item>
+        /// <item><description>blind: Invisible watermarks are applied.</description></item>
+        /// <item><description>off: The watermarking feature is disabled.</description></item>
+        /// <item><description>on: Visible watermarks are applied.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1006,7 +1139,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Watermark { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the anti-screen photo feature for invisible watermarks. on and off (default).</para>
+        /// <para>Specifies whether to enable the anti-screen photo feature for invisible watermarks.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>off</description></item>
+        /// <item><description>on</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -1016,7 +1154,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string WatermarkAntiCam { get; set; }
 
         /// <summary>
-        /// <para>The font color of the watermark. Valid values: 0 to 16777215.</para>
+        /// <para>The font color in red, green, and blue (RGB) of the watermark. Valid values: 0 to 16777215.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -1026,7 +1164,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? WatermarkColor { get; set; }
 
         /// <summary>
-        /// <para>The inclination angle of the watermark. Value values: -10 to -30.</para>
+        /// <para>The watermark rotation. Valid values: -10 to -30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-10</para>
@@ -1036,7 +1174,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public double? WatermarkDegree { get; set; }
 
         /// <summary>
-        /// <para>The font size of the watermark. Valid values: 10 to 50</para>
+        /// <para>The watermark font size. Valid values: 10 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -1046,7 +1184,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? WatermarkFontSize { get; set; }
 
         /// <summary>
-        /// <para>The font style of the watermark. Valid values:</para>
+        /// <para>The watermark font style.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>plain</description></item>
         /// <item><description>bold</description></item>
@@ -1060,7 +1199,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string WatermarkFontStyle { get; set; }
 
         /// <summary>
-        /// <para>The watermark enhancement feature. Valid values: low, medium, and high.</para>
+        /// <para>The watermark enhancement feature.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>high</description></item>
+        /// <item><description>low</description></item>
+        /// <item><description>medium</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>medium</para>
@@ -1070,7 +1215,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string WatermarkPower { get; set; }
 
         /// <summary>
-        /// <para>The number of watermark rows. This parameter is not in use.</para>
+        /// <para>The number of watermark rows.</para>
+        /// <remarks>
+        /// <para> This parameter is not available for public use.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -1080,7 +1228,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? WatermarkRowAmount { get; set; }
 
         /// <summary>
-        /// <para>The security priority rule for invisible watermarks. Valid values: on and off.</para>
+        /// <para>Specifies whether to enable the security priority feature for invisible watermarks.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>off</description></item>
+        /// <item><description>on</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -1090,11 +1243,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string WatermarkSecurity { get; set; }
 
         /// <summary>
-        /// <para>The transparency of the watermark. The valid values include:</para>
+        /// <para>The watermark transparency.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LIGHT</description></item>
-        /// <item><description>MIDDLE</description></item>
+        /// <item><description>LIGHT (default)</description></item>
         /// <item><description>DARK</description></item>
+        /// <item><description>MIDDLE</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1105,7 +1259,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string WatermarkTransparency { get; set; }
 
         /// <summary>
-        /// <para>The transparency of the watermark. A larger value indicates a less transparent watermark. Valid values: 10 to 100.</para>
+        /// <para>The watermark opacity. A larger value indicates more opaque watermarks. Valid values: 10 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -1115,10 +1269,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? WatermarkTransparencyValue { get; set; }
 
         /// <summary>
-        /// <para>The type of the watermark. You can specify multiple watermark types at a time. Separate watermark types with commas (,). Valid values:</para>
+        /// <para>The watermark content. You can select up to three items as the watermark content. Separate multiple items with commas (,).</para>
+        /// <remarks>
+        /// <para> If you set this parameter to <c>Custom</c>, you must specify <c>WatermarkCustomText</c>.</para>
+        /// </remarks>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>EndUserId: the username</description></item>
-        /// <item><description>HostName: the last 15 characters of the cloud desktop ID</description></item>
+        /// <item><description>Custom: the custom text</description></item>
+        /// <item><description>DesktopIp: the IP address of the cloud computer</description></item>
+        /// <item><description>ClientIp: the IP address of the Alibaba Cloud Workspace client</description></item>
+        /// <item><description>HostName: the rightmost 15 digits of the cloud computer ID</description></item>
+        /// <item><description>ClientTime: the current time displayed on the cloud computer</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1128,6 +1290,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string WatermarkType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
         [NameInMap("WyAssistant")]
         [Validation(Required=false)]
         public string WyAssistant { get; set; }

@@ -8,20 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class DeletePolicyGroupsRequest : TeaModel {
+    public class ModifyOfficeSiteDnsInfoRequest : TeaModel {
+        [NameInMap("DnsAddress")]
+        [Validation(Required=false)]
+        public List<string> DnsAddress { get; set; }
+
         /// <summary>
-        /// <para>The cloud computer policy IDs. You can specify 1 to 100 policies.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pg-gx2x1dhsmthe9****</para>
+        /// <para>cn-hangzhou+dir-778418****</para>
         /// </summary>
-        [NameInMap("PolicyGroupId")]
+        [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
-        public List<string> PolicyGroupId { get; set; }
+        public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by EDS.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

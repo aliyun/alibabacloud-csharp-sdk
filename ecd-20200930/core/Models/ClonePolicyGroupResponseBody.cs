@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ClonePolicyGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the new policy.</para>
+        /// <para>The ID of the new cloud computer policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-7jcaznnx6go6n****</para>

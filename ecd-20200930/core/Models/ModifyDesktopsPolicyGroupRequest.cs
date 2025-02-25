@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopsPolicyGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud desktop. You can specify one or more desktop IDs. The value is a JSON array.</para>
+        /// <para>The cloud computer IDs. You can specify one or more cloud computers IDs. The value is a JSON array.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy.</para>
+        /// <para>The ID of the cloud computer policy that you want to associate with cloud computers.</para>
+        /// <remarks>
+        /// <para> If the <c>PolicyGroupIds</c> parameter is used, ignore the current parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>pg-gx2x1dhsmthe9****</para>
@@ -31,14 +34,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>策略ID列表。</para>
+        /// <para>The IDs of the cloud computer policies that you want to associate with cloud computers.</para>
+        /// <remarks>
+        /// <para> You can specify up to one cloud computer policy that takes effect globally, and up to four cloud computer policies that apply to specific IP addresses. If you specify more than one cloud computer policy that takes effect globally, only the policy first associate with the cloud computer can take effect.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("PolicyGroupIds")]
         [Validation(Required=false)]
         public List<string> PolicyGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

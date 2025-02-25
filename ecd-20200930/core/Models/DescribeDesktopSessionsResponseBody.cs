@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details of the session.</para>
+        /// <para>Details of sessions.</para>
         /// </summary>
         [NameInMap("Sessions")]
         [Validation(Required=false)]
@@ -126,6 +126,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string OfficeSiteName { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the switch to check session status of cloud computers is turned on.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("OsSessionStatus")]
             [Validation(Required=false)]
             public string OsSessionStatus { get; set; }
@@ -205,6 +211,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string SessionStatus { get; set; }
 
+            /// <summary>
+            /// <para>The billing method of cloud computers.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>duration: hourly plan (available for users in the whitelist)</description></item>
+            /// <item><description>postPaid: pay-as-you-go</description></item>
+            /// <item><description>monthPackage: monthly subscription (120-hour computing plan and 250-hour computing plan)</description></item>
+            /// <item><description>prePaid: monthly subscription (Unlimited computing plan)</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>monthPackage</para>
+            /// </summary>
             [NameInMap("SubPayType")]
             [Validation(Required=false)]
             public string SubPayType { get; set; }

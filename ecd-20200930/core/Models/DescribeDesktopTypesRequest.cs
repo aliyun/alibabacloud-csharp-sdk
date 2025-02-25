@@ -222,6 +222,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string GpuDriverType { get; set; }
 
+        [NameInMap("GpuMemory")]
+        [Validation(Required=false)]
+        public int? GpuMemory { get; set; }
+
         /// <summary>
         /// <para>The name of the instance family.</para>
         /// <remarks>
