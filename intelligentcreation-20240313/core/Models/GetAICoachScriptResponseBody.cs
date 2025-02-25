@@ -277,6 +277,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("pointId")]
+            [Validation(Required=false)]
+            public string PointId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>test</para>
