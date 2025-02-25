@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetCacheTagResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the matching is not case-sensitive. Valid values:</para>
+        /// <para>Whether to ignore case. Possible values:</para>
         /// <list type="bullet">
-        /// <item><description>on: The matching is not case-sensitive.</description></item>
-        /// <item><description>off: The matching is case-sensitive.</description></item>
+        /// <item><description>on: Enabled, ignores case.</description></item>
+        /// <item><description>off: Disabled, does not ignore case.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CaseInsensitive { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>156A6B-677B1A-4297B7-9187B7-2B44792</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the website.</para>
+        /// <para>Version number of the site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? SiteVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom cache tag.</para>
+        /// <para>Custom CacheTag name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>

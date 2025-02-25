@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteOriginPoolResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

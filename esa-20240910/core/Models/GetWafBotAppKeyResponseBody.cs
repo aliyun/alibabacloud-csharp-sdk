@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetWafBotAppKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The application key.</para>
+        /// <para>Application key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example_appkey</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AppKey { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>

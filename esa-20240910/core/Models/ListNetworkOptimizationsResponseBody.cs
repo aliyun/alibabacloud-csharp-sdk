@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListNetworkOptimizationsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Response body configurations.</para>
+        /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public List<ListNetworkOptimizationsResponseBodyConfigs> Configs { get; set; }
         public class ListNetworkOptimizationsResponseBodyConfigs : TeaModel {
             /// <summary>
+            /// <para>Configuration ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>395386449776640</para>
             /// </summary>
@@ -22,6 +27,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ConfigId { get; set; }
 
             /// <summary>
+            /// <para>Configuration type, which can be used to query global or rule-based configurations. The value range is as follows:</para>
+            /// <list type="bullet">
+            /// <item><description>global: Query global configuration.</description></item>
+            /// <item><description>rule: Query rule configuration.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>global</para>
             /// </summary>
@@ -30,6 +41,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ConfigType { get; set; }
 
             /// <summary>
+            /// <para>Whether to enable GRPC, defaulting to disabled. The value range is as follows:</para>
+            /// <list type="bullet">
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -38,6 +55,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Grpc { get; set; }
 
             /// <summary>
+            /// <para>Whether to enable HTTP2 origin, defaulting to disabled. The value range is as follows:</para>
+            /// <list type="bullet">
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -46,6 +69,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Http2Origin { get; set; }
 
             /// <summary>
+            /// <para>Rule content.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(http.host eq \&quot;video.example.com\&quot;)</para>
             /// </summary>
@@ -54,6 +79,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
+            /// <para>Rule switch. The value range is as follows:</para>
+            /// <list type="bullet">
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -62,6 +93,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleEnable { get; set; }
 
             /// <summary>
+            /// <para>Rule name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rule_example</para>
             /// </summary>
@@ -70,6 +103,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
+            /// <para>Rule execution sequence.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -78,6 +113,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Sequence { get; set; }
 
             /// <summary>
+            /// <para>Site version number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -86,6 +123,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? SiteVersion { get; set; }
 
             /// <summary>
+            /// <para>Whether to enable smart routing service, defaulting to disabled. The value range is as follows:</para>
+            /// <list type="bullet">
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -94,6 +137,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SmartRouting { get; set; }
 
             /// <summary>
+            /// <para>Maximum upload file size in MB, with a range from 100 to 500.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>500</para>
             /// </summary>
@@ -102,6 +147,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string UploadMaxFilesize { get; set; }
 
             /// <summary>
+            /// <para>Whether to enable Websocket, defaulting to enabled. The value range is as follows:</para>
+            /// <list type="bullet">
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -112,6 +163,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -120,6 +173,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The size of the page, i.e., the number of items per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -128,6 +183,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</para>
         /// </summary>
@@ -136,6 +193,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -144,6 +203,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
+        /// <para>Total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

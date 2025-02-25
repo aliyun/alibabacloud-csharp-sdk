@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateHttpsBasicConfigurationRequest : TeaModel {
         /// <summary>
+        /// <para>Custom cipher suite, indicating the specific encryption algorithm selected when CiphersuiteGroup is set to custom.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</para>
         /// </summary>
@@ -18,6 +20,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Ciphersuite { get; set; }
 
         /// <summary>
+        /// <para>Cipher suite group. Default is all cipher suites. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>all: All cipher suites.</description></item>
+        /// <item><description>strict: Strong cipher suites.</description></item>
+        /// <item><description>custom: Custom cipher suites.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>all</para>
         /// </summary>
@@ -26,6 +35,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CiphersuiteGroup { get; set; }
 
         /// <summary>
+        /// <para>Whether to enable HTTP2. Default is enabled. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -34,6 +49,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Http2 { get; set; }
 
         /// <summary>
+        /// <para>Whether to enable HTTP3. Default is enabled. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -42,6 +63,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Http3 { get; set; }
 
         /// <summary>
+        /// <para>Whether to enable HTTPS. Default is enabled. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -50,6 +77,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Https { get; set; }
 
         /// <summary>
+        /// <para>Whether to enable OCSP. Default is disabled. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -58,6 +91,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OcspStapling { get; set; }
 
         /// <summary>
+        /// <para>Rule content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(http.host eq \&quot;video.example.com\&quot;)</para>
         /// </summary>
@@ -66,6 +101,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
+        /// <para>Rule switch. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -74,6 +115,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
+        /// <para>Rule name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
         /// </summary>
@@ -82,6 +125,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
+        /// <para>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,6 +136,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
+        /// <para>Whether to enable TLS1.0. Default is disabled. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -100,6 +150,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Tls10 { get; set; }
 
         /// <summary>
+        /// <para>Whether to enable TLS1.1. Default is enabled. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -108,6 +164,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Tls11 { get; set; }
 
         /// <summary>
+        /// <para>Whether to enable TLS1.2. Default is enabled. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -116,6 +178,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Tls12 { get; set; }
 
         /// <summary>
+        /// <para>Whether to enable TLS1.3. Default is enabled. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>

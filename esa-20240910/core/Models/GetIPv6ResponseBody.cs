@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetIPv6ResponseBody : TeaModel {
         /// <summary>
+        /// <para>IPv6 switch. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b>: Enable. </description></item>
+        /// <item><description><b>off</b>: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Enable { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>156A6B-677B1A-4297B7-9187B7-2B44792</para>
         /// </summary>

@@ -10,17 +10,22 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteLoadBalancerRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the load balancer, used to uniquely identify the load balancer to be queried. This ID is returned directly upon creation of the load balancer and can also be obtained through the <a href="~~ListLoadBalancers~~">ListLoadBalancers</a> interface for querying all load balancers under a site.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DeleteLoadBalancer</para>
+        /// <para>99867648760****</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The ID of the site, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1159101787****</para>
         /// </summary>
         [NameInMap("SiteId")]
         [Validation(Required=false)]

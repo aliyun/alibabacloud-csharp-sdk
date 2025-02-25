@@ -10,20 +10,46 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class PurgeCachesRequest : TeaModel {
         /// <summary>
-        /// <para>The content to purge.</para>
+        /// <para>Content to be refreshed.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public PurgeCachesRequestContent Content { get; set; }
         public class PurgeCachesRequestContent : TeaModel {
+            /// <summary>
+            /// <para>List of cachekeys to be refreshed, required when the type is cachekey.</para>
+            /// </summary>
             [NameInMap("CacheKeys")]
             [Validation(Required=false)]
             public List<PurgeCachesRequestContentCacheKeys> CacheKeys { get; set; }
             public class PurgeCachesRequestContentCacheKeys : TeaModel {
+                /// <summary>
+                /// <para>When refreshing, specify the header information corresponding to the cache key. When the custom cache key feature switch is enabled, the cache key will be generated based on the specified header for refreshing.</para>
+                /// <para><b>UserGeo: Country/Region</b></para>
+                /// <list type="bullet">
+                /// <item><description>Country/region codes follow the ISO 3166-2 standard.</description></item>
+                /// </list>
+                /// <para><b>UserDeviceType: Device Type, currently there are three enum values</b></para>
+                /// <list type="bullet">
+                /// <item><description>desktop</description></item>
+                /// <item><description>tablet</description></item>
+                /// <item><description>mobile</description></item>
+                /// </list>
+                /// <para><b>UserLanguage: Language</b></para>
+                /// <list type="bullet">
+                /// <item><description>Language codes follow the ISO 639-1 or BCP47 standards. For example, input \&quot;zh\&quot; to refresh content in Chinese.</description></item>
+                /// </list>
+                /// </summary>
                 [NameInMap("Headers")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Headers { get; set; }
 
+                /// <summary>
+                /// <para>URL address to be refreshed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://a.com/1.jpg?b=1">http://a.com/1.jpg?b=1</a></para>
+                /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
                 public string Url { get; set; }
@@ -31,42 +57,42 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The cache tags that are used to purge the cache. This parameter is required if Type is set to cachetag.</para>
+            /// <para>List of cachetags to be refreshed, required when the type is cachetag.</para>
             /// </summary>
             [NameInMap("CacheTags")]
             [Validation(Required=false)]
             public List<string> CacheTags { get; set; }
 
             /// <summary>
-            /// <para>The directories that are used to purge the cache. This parameter is required if Type is set to directory.</para>
+            /// <para>List of directories to be refreshed, required when the type is directory.</para>
             /// </summary>
             [NameInMap("Directories")]
             [Validation(Required=false)]
             public List<string> Directories { get; set; }
 
             /// <summary>
-            /// <para>The files to purge. This parameter is required if Type is set to file.</para>
+            /// <para>List of files to be refreshed, required when the type is file.</para>
             /// </summary>
             [NameInMap("Files")]
             [Validation(Required=false)]
             public List<object> Files { get; set; }
 
             /// <summary>
-            /// <para>The hostnames that are used to purge the cache. This parameter is required if Type is set to hostname.</para>
+            /// <para>List of hostnames to be refreshed, required when the type is hostname.</para>
             /// </summary>
             [NameInMap("Hostnames")]
             [Validation(Required=false)]
             public List<string> Hostnames { get; set; }
 
             /// <summary>
-            /// <para>The file URLs with parameters ignored that are used to purge the cache. This parameter is required if Type is set to ignoreParams.</para>
+            /// <para>List of files with ignored parameters, required when the type is ignoreParams.</para>
             /// </summary>
             [NameInMap("IgnoreParams")]
             [Validation(Required=false)]
             public List<string> IgnoreParams { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to purge all cache of the website. Default value: false. The value is true when Type is set to purgeall.</para>
+            /// <para>Flag for purging all content. Default is false, set to true when the type is purgeall.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -78,7 +104,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to purge cached resources for edge computing. For example, purge the resources cached by the CacheAPI operation of Edge Routine.</para>
+        /// <para>Used for refreshing cached resources in edge computing, such as allowing the refresh of content cached using the CacheAPI interface of an edge function.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -88,13 +114,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? EdgeComputePurge { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to purge resources in a directory if the resources requested are different from the resources on the origin server. Default value: false.</para>
+        /// <para>Indicates whether to refresh all resources under the directory when the content from the origin and the source resource are inconsistent. The default is false.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: purges all resources in the directory.</description></item>
-        /// <item><description><b>false</b>: purges only changed resources in the directory.</description></item>
+        /// <item><description><b>true</b>: Refreshes all resources under the specified directory.</description></item>
+        /// <item><description><b>false</b>: Refreshes only the changed resources under the specified directory.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This configuration takes effect for the following purge task types: directory, cachetag, ignoreParams, hostname, and purgeall.</para>
+        /// <para> Applies to: Directory refresh, cachetag refresh, ignoreParams refresh, hostname refresh, and purge all cache of the site.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -105,7 +131,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</para>
+        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,14 +142,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The type of the purge task. Valid values:</para>
+        /// <para>The type of refresh task. Possible values:</para>
         /// <list type="bullet">
-        /// <item><description><b>file</b> (default): purges the cache by file.</description></item>
-        /// <item><description><b>cachetag</b>: purges the cache by cache tag.</description></item>
-        /// <item><description><b>directory</b>: purges the cache by directory.</description></item>
-        /// <item><description><b>ignoreParams</b>: purges the cache by URL with specific parameters ignored. This option ignores the question mark (?) and parameters after the question mark (?) in a request URL and purges the cache. After you call this operation with the request URL submitted, the system compares the submitted URL with the URL of the cached resource without specified parameters. If the URLs match, the POPs purge the cached resources.</description></item>
-        /// <item><description><b>hostname</b>: purges the cache by hostname.</description></item>
-        /// <item><description><b>purgeall</b>: purges all cache.</description></item>
+        /// <item><description><b>file</b> (default): File refresh.</description></item>
+        /// <item><description><b>cachekey</b>: Cachekey refresh.</description></item>
+        /// <item><description><b>cachetag</b>: Cachetag refresh.</description></item>
+        /// <item><description><b>directory</b>: Directory refresh.</description></item>
+        /// <item><description><b>ignoreParams</b>: Ignore parameters refresh. Ignoring parameters means removing the ? and everything after it in the request URL. When performing an ignore parameters refresh, the user first submits the URL without parameters through the interface. The submitted URLs to be refreshed will then be matched against the cached resource URLs with the parameters removed. If the cached resource URL, after removing the parameters, matches the URL to be refreshed, the CDN node will refresh the cached resources.</description></item>
+        /// <item><description><b>hostname</b>: Hostname refresh.</description></item>
+        /// <item><description><b>purgeall</b>: Purge all cache under the site.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
     public class DescribeCustomScenePoliciesRequest : TeaModel {
         /// <summary>
         /// <para>The number of the page to return. Valid values: <b>1 to 100000</b>.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

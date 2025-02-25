@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateCacheRuleRequest : TeaModel {
         /// <summary>
+        /// <para>Enable caching on specified ports. Value range: 8880, 2052, 2082, 2086, 2095, 2053, 2083, 2087, 2096</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8880</para>
         /// </summary>
@@ -18,6 +20,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AdditionalCacheablePorts { get; set; }
 
         /// <summary>
+        /// <para>Browser cache mode. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>no_cache: Do not cache.</description></item>
+        /// <item><description>follow_origin: Follow the origin server\&quot;s cache policy.</description></item>
+        /// <item><description>override_origin: Override the origin server\&quot;s cache policy.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>follow_origin</para>
         /// </summary>
@@ -26,6 +35,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string BrowserCacheMode { get; set; }
 
         /// <summary>
+        /// <para>Browser cache expiration time in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>300</para>
         /// </summary>
@@ -34,6 +45,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string BrowserCacheTtl { get; set; }
 
         /// <summary>
+        /// <para>Set the bypass cache mode. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>cache_all: Cache all requests.</description></item>
+        /// <item><description>bypass_all: Bypass cache for all requests.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>cache_all</para>
         /// </summary>
@@ -42,6 +59,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string BypassCache { get; set; }
 
         /// <summary>
+        /// <para>Cache deception protection. Used to defend against web cache deception attacks, only the cache content that passes the validation will be cached. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -50,6 +73,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CacheDeceptionArmor { get; set; }
 
         /// <summary>
+        /// <para>Cache retention eligibility. Used to control whether user requests bypass the cache retention node when returning to the origin. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>bypass_cache_reserve: Requests bypass cache retention.</description></item>
+        /// <item><description>eligible_for_cache_reserve: Eligible for cache retention.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>bypass_cache_reserve</para>
         /// </summary>
@@ -58,6 +87,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CacheReserveEligibility { get; set; }
 
         /// <summary>
+        /// <para>When generating the cache key, check if the cookie exists. If it does, add the cookie name (case-insensitive) to the cache key. Multiple cookie names are supported, separated by spaces.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cookiename</para>
         /// </summary>
@@ -66,6 +97,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CheckPresenceCookie { get; set; }
 
         /// <summary>
+        /// <para>When generating the cache key, check if the header exists. If it does, add the header name (case-insensitive) to the cache key. Multiple header names are supported, separated by spaces.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>headername</para>
         /// </summary>
@@ -74,6 +107,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CheckPresenceHeader { get; set; }
 
         /// <summary>
+        /// <para>Edge cache mode. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>follow_origin: Follow the origin server\&quot;s cache policy (if it exists), otherwise use the default cache policy.</description></item>
+        /// <item><description>no_cache: Do not cache.</description></item>
+        /// <item><description>override_origin: Override the origin server\&quot;s cache policy.</description></item>
+        /// <item><description>follow_origin_bypass: Follow the origin server\&quot;s cache policy (if it exists), otherwise do not cache.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>follow_origin</para>
         /// </summary>
@@ -82,6 +123,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EdgeCacheMode { get; set; }
 
         /// <summary>
+        /// <para>Edge cache expiration time in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>300</para>
         /// </summary>
@@ -90,6 +133,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EdgeCacheTtl { get; set; }
 
         /// <summary>
+        /// <para>Status code cache expiration time in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>300</para>
         /// </summary>
@@ -98,6 +143,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EdgeStatusCodeCacheTtl { get; set; }
 
         /// <summary>
+        /// <para>When generating the cache key, add the specified cookie names and their values. Multiple values are supported, separated by spaces.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cookie_exapmle</para>
         /// </summary>
@@ -106,6 +153,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string IncludeCookie { get; set; }
 
         /// <summary>
+        /// <para>When generating the cache key, add the specified header names and their values. Multiple values are supported, separated by spaces.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example</para>
         /// </summary>
@@ -114,6 +163,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string IncludeHeader { get; set; }
 
         /// <summary>
+        /// <para>Query strings to be reserved or excluded. Multiple values are supported, separated by spaces.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example</para>
         /// </summary>
@@ -122,6 +173,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QueryString { get; set; }
 
         /// <summary>
+        /// <para>The processing mode for query strings when generating the cache key. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>ignore_all: Ignore all.</description></item>
+        /// <item><description>exclude_query_string: Exclude specified query strings.</description></item>
+        /// <item><description>reserve_all: Default, reserve all.</description></item>
+        /// <item><description>include_query_string: Include specified query strings.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>reserve_all</para>
         /// </summary>
@@ -130,6 +189,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QueryStringMode { get; set; }
 
         /// <summary>
+        /// <para>Rule content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(http.host eq \&quot;video.example.com\&quot;)</para>
         /// </summary>
@@ -138,6 +199,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
+        /// <para>Rule switch. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -146,6 +213,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
+        /// <para>Rule name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
         /// </summary>
@@ -154,6 +223,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
+        /// <para>Serve stale cache. When enabled, the node can still respond to user requests with expired cached files when the origin server is unavailable. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -162,6 +237,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ServeStale { get; set; }
 
         /// <summary>
+        /// <para>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -172,6 +248,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
+        /// <para>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the version for the configuration to take effect. The default is version 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -180,6 +258,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? SiteVersion { get; set; }
 
         /// <summary>
+        /// <para>Query string sorting, disabled by default. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -188,6 +272,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortQueryStringForCache { get; set; }
 
         /// <summary>
+        /// <para>When generating the cache key, add the client device type. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -196,6 +286,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string UserDeviceType { get; set; }
 
         /// <summary>
+        /// <para>When generating the cache key, add the client\&quot;s geographic location. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -204,6 +300,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string UserGeo { get; set; }
 
         /// <summary>
+        /// <para>When generating cache keys, include the client\&quot;s language type. The value can be: - on: enabled. - off: disabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>

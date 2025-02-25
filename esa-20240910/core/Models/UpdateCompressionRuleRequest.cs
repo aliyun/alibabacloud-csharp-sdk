@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateCompressionRuleRequest : TeaModel {
         /// <summary>
+        /// <para>Brotli compression. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -18,6 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Brotli { get; set; }
 
         /// <summary>
+        /// <para>Configuration ID. It can be obtained by calling the <a href="~~ListCompressionRules~~">ListCompressionRules</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +35,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
+        /// <para>Gzip compression. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -36,6 +49,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Gzip { get; set; }
 
         /// <summary>
+        /// <para>Rule content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(http.host eq &quot;video.example.com&quot;)</para>
         /// </summary>
@@ -44,6 +59,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
+        /// <para>Rule enable status, supports:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b>: indicates enabled.</description></item>
+        /// <item><description><b>off</b>: indicates disabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -52,6 +73,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
+        /// <para>Rule name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
         /// </summary>
@@ -60,6 +83,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
+        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

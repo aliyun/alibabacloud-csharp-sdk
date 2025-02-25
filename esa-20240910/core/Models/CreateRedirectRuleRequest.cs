@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRedirectRuleRequest : TeaModel {
         /// <summary>
+        /// <para>Whether to preserve the query string. Allowed values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Preserve.</description></item>
+        /// <item><description>off: Do not preserve.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +25,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ReserveQueryString { get; set; }
 
         /// <summary>
+        /// <para>The content of the rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(http.host eq &quot;video.example.com&quot;)</para>
         /// </summary>
@@ -28,6 +35,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
+        /// <para>The switch for the rule. Allowed values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -36,6 +49,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
+        /// <para>The name of the rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
         /// </summary>
@@ -44,6 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
+        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
+        /// <para>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0. vvvv</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -62,6 +80,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? SiteVersion { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code used by the node when responding to the client with the redirect address. Allowed values:</para>
+        /// <list type="bullet">
+        /// <item><description>301</description></item>
+        /// <item><description>302</description></item>
+        /// <item><description>303</description></item>
+        /// <item><description>307</description></item>
+        /// <item><description>308</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +98,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StatusCode { get; set; }
 
         /// <summary>
+        /// <para>The target URL after redirection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,6 +109,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string TargetUrl { get; set; }
 
         /// <summary>
+        /// <para>The type of redirection. Allowed values:</para>
+        /// <list type="bullet">
+        /// <item><description>static: Static mode.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

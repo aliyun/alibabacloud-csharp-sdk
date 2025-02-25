@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateSitePauseRequest : TeaModel {
         /// <summary>
+        /// <para>Used to temporarily pause the proxy acceleration function of the entire site. When enabled, all DNS records will directly return their values to the client. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Pause site acceleration.</description></item>
+        /// <item><description>false: Normal site acceleration.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Paused { get; set; }
 
         /// <summary>
+        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

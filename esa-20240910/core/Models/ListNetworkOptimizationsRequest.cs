@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListNetworkOptimizationsRequest : TeaModel {
         /// <summary>
+        /// <para>Configuration ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3528160969****</para>
         /// </summary>
@@ -18,6 +20,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
+        /// <para>Configuration type, which can be used to query global or rule-based configurations. The value range is as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>global: Query global configuration.</description></item>
+        /// <item><description>rule: Query rule configuration.</description></item>
+        /// </list>
+        /// <para>This parameter is optional. If not provided, it will not distinguish between global and rule configurations.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>global</para>
         /// </summary>
@@ -26,6 +35,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
+        /// <para>Page number, defaulting to 1 if not provided.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +45,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page, with a maximum of 500. Defaults to 500 if not provided.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -42,6 +55,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Rule name, which can be used to find the rule with the specified name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -50,6 +65,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
+        /// <para>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
+        /// <para>Site version number. For sites with version management enabled, this parameter can specify the site version for which the configuration takes effect, defaulting to version 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

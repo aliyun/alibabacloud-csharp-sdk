@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class PurchaseRatePlanResponseBody : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>xcdn-ads11w</para>
+        /// <para>esa-site-ads11w</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123123</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30423A7F-A83D-1E24-B80E-86DD25790758</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRewriteUrlRuleRequest : TeaModel {
         /// <summary>
+        /// <para>Query string after rewriting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example=123</para>
         /// </summary>
@@ -18,6 +20,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QueryString { get; set; }
 
         /// <summary>
+        /// <para>Query string rewrite type. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>static: Static mode.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>static</para>
         /// 
@@ -29,6 +36,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RewriteQueryStringType { get; set; }
 
         /// <summary>
+        /// <para>URI rewrite type. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>static: Static mode.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>static</para>
         /// 
@@ -40,6 +52,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RewriteUriType { get; set; }
 
         /// <summary>
+        /// <para>Rule content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(http.host eq &quot;video.example.com&quot;)</para>
         /// </summary>
@@ -48,6 +62,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
+        /// <para>Rule switch. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -56,6 +76,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
+        /// <para>Rule name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
         /// </summary>
@@ -64,6 +86,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
+        /// <para>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +97,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
+        /// <para>Version number of the site configuration. For sites with version management enabled, this parameter can specify the version to which the configuration applies, defaulting to version 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -82,6 +107,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? SiteVersion { get; set; }
 
         /// <summary>
+        /// <para>Target URI after rewriting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/image/example.jpg</para>
         /// </summary>

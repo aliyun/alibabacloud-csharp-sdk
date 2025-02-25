@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetWafQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>The type of WAF resources. Valid values:</para>
+        /// <para>The path of the WAF quota, for example:</para>
         /// <list type="bullet">
-        /// <item><description>managed_rules_group: the managed rule group.</description></item>
-        /// <item><description>list: the custom list.</description></item>
-        /// <item><description>page: the custom error page.</description></item>
-        /// <item><description>scene_policy: the scenario-specific policy.</description></item>
+        /// <item><description>managed_rules_group: represents the quota for the WAF managed rules group</description></item>
+        /// <item><description>list: represents the quota for custom lists</description></item>
+        /// <item><description>page: represents the quota for custom response pages</description></item>
+        /// <item><description>scene_policy: represents the quota for scenario protection</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

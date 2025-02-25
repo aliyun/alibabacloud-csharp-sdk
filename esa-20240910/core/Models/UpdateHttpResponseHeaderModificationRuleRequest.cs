@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateHttpResponseHeaderModificationRuleRequest : TeaModel {
         /// <summary>
+        /// <para>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpResponseHeaderModificationRules</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public long? ConfigId { get; set; }
 
+        /// <summary>
+        /// <para>Modify response headers, supporting add, delete, and modify operations.</para>
+        /// </summary>
         [NameInMap("ResponseHeaderModification")]
         [Validation(Required=false)]
         public List<UpdateHttpResponseHeaderModificationRuleRequestResponseHeaderModification> ResponseHeaderModification { get; set; }
         public class UpdateHttpResponseHeaderModificationRuleRequestResponseHeaderModification : TeaModel {
             /// <summary>
+            /// <para>Response header name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -34,6 +39,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Operation method. Value range:</para>
+            /// <list type="bullet">
+            /// <item><description>add: Add.</description></item>
+            /// <item><description>del: Delete</description></item>
+            /// <item><description>modify: Modify.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -44,6 +55,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Operation { get; set; }
 
             /// <summary>
+            /// <para>Response header value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>headerValue</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>Rule content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(http.host eq &quot;video.example.com&quot;)</para>
         /// </summary>
@@ -62,6 +77,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
+        /// <para>Rule enable status, supports:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b>: indicates enabled.</description></item>
+        /// <item><description><b>off</b>: indicates disabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -70,6 +91,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
+        /// <para>Rule name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
         /// </summary>
@@ -78,6 +101,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
+        /// <para>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

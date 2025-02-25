@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetCompressionRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>Brotli compression. Value range: </para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable. </description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Brotli { get; set; }
 
         /// <summary>
+        /// <para>Configuration ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>35281609698****</para>
         /// </summary>
@@ -26,6 +34,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
+        /// <para>Configuration type. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>global: Global configuration.</description></item>
+        /// <item><description>rule: Rule configuration.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>rule</para>
         /// </summary>
@@ -34,6 +48,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
+        /// <para>Gzip compression. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -42,6 +62,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Gzip { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>186C6DF2-D96A-5102-B04E-FB92C16C9867</para>
         /// </summary>
@@ -50,6 +72,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Rule content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(http.host eq &quot;video.example.com&quot;)</para>
         /// </summary>
@@ -58,6 +82,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
+        /// <para>Rule switch. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>on</b>: Enabled.</description></item>
+        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -66,6 +96,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
+        /// <para>Rule name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
         /// </summary>
@@ -74,6 +106,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
+        /// <para>Rule execution sequence.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -82,6 +116,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
+        /// <para>Site configuration version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -89,6 +125,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public int? SiteVersion { get; set; }
 
+        /// <summary>
+        /// <para>Zstd compression. Value range: </para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable. </description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
         [NameInMap("Zstd")]
         [Validation(Required=false)]
         public string Zstd { get; set; }

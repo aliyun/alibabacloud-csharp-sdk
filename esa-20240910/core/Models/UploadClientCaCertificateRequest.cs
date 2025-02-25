@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UploadClientCaCertificateRequest : TeaModel {
         /// <summary>
+        /// <para>The certificate content.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Certificate { get; set; }
 
         /// <summary>
+        /// <para>The certificate name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yourCertName</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The website ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

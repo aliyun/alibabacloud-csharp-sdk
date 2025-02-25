@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateLoadBalancerResponseBody : TeaModel {
         /// <summary>
+        /// <para>Load Balancer ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>99867648760****</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</para>

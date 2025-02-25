@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetTieredCacheResponseBody : TeaModel {
         /// <summary>
-        /// <para>The tiered cache architecture mode. Valid values:</para>
+        /// <para>Multi-level cache architecture mode. Possible values:</para>
         /// <list type="bullet">
-        /// <item><description>edge: edge tiered cache.</description></item>
-        /// <item><description>edge_smart: edge tiered cache + smart tiered cache.</description></item>
-        /// <item><description>edge_regional: edge tiered cache + regional tiered cache.</description></item>
-        /// <item><description>edge_regional_smart: edge tiered cache + regional tiered cache + smart tiered cache.</description></item>
+        /// <item><description>edge: Edge cache layer.</description></item>
+        /// <item><description>edge_smart: Edge cache layer + intelligent cache layer.</description></item>
+        /// <item><description>edge_regional: Edge cache layer + regional cache layer.</description></item>
+        /// <item><description>edge_regional_smart: Edge cache layer + regional cache layer + intelligent cache layer.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CacheArchitectureMode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>

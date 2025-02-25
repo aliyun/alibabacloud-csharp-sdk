@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListHttpRequestHeaderModificationRulesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of HTTP request header modification configurations.</para>
+        /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public List<ListHttpRequestHeaderModificationRulesResponseBodyConfigs> Configs { get; set; }
         public class ListHttpRequestHeaderModificationRulesResponseBodyConfigs : TeaModel {
             /// <summary>
+            /// <para>Configuration ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>35281609698****</para>
             /// </summary>
@@ -22,6 +27,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ConfigId { get; set; }
 
             /// <summary>
+            /// <para>Configuration type. Possible values:</para>
+            /// <list type="bullet">
+            /// <item><description>global: Global configuration;</description></item>
+            /// <item><description>rule: Rule configuration;</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>global</para>
             /// </summary>
@@ -29,11 +40,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string ConfigType { get; set; }
 
+            /// <summary>
+            /// <para>Modify request headers, supporting add, delete, and modify operations.</para>
+            /// </summary>
             [NameInMap("RequestHeaderModification")]
             [Validation(Required=false)]
             public List<ListHttpRequestHeaderModificationRulesResponseBodyConfigsRequestHeaderModification> RequestHeaderModification { get; set; }
             public class ListHttpRequestHeaderModificationRulesResponseBodyConfigsRequestHeaderModification : TeaModel {
                 /// <summary>
+                /// <para>Request header name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>headerName</para>
                 /// </summary>
@@ -42,6 +58,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>Operation method. Value range:</para>
+                /// <list type="bullet">
+                /// <item><description>add: Add. </description></item>
+                /// <item><description>del: Delete. </description></item>
+                /// <item><description>modify: Modify.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>add</para>
                 /// </summary>
@@ -50,6 +73,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Operation { get; set; }
 
                 /// <summary>
+                /// <para>The value of the request header.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>headerValue</para>
                 /// </summary>
@@ -60,6 +85,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
+            /// <para>Rule content.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(http.host eq &quot;video.example.com&quot;)</para>
             /// </summary>
@@ -68,6 +95,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
+            /// <para>Rule switch. Possible values:</para>
+            /// <list type="bullet">
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -76,6 +109,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleEnable { get; set; }
 
             /// <summary>
+            /// <para>Rule name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rule_example</para>
             /// </summary>
@@ -84,6 +119,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
+            /// <para>Rule execution sequence.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -92,6 +129,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Sequence { get; set; }
 
             /// <summary>
+            /// <para>Version number of the site configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -102,6 +141,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>Page number. Default value: <b>1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -110,6 +151,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size, default is <b>500</b>, range: <b>1~500</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -118,6 +161,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>35C66C7B-671H-4297-9187-2C4477247A78</para>
         /// </summary>
@@ -126,6 +171,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total number of items.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -134,6 +181,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
+        /// <para>Total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

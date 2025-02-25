@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetOriginRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>Configuration ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>352816096987136</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
+        /// <para>Configuration type, which can be used to query global or rule configurations. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>global: Query global configuration.</description></item>
+        /// <item><description>rule: Query rule configuration.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>rule</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
+        /// <para>Rewrite the DNS resolution record for the origin request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test.example.com</para>
         /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DnsRecord { get; set; }
 
         /// <summary>
+        /// <para>HOST carried in the origin request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>origin.example.com</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OriginHost { get; set; }
 
         /// <summary>
+        /// <para>Source site port accessed when using the HTTP protocol for origin.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8080</para>
         /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OriginHttpPort { get; set; }
 
         /// <summary>
+        /// <para>Source site port accessed when using the HTTPS protocol for origin.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4433</para>
         /// </summary>
@@ -58,6 +74,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OriginHttpsPort { get; set; }
 
         /// <summary>
+        /// <para>Protocol used for the origin request. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>http: Use HTTP protocol for origin.</description></item>
+        /// <item><description>https: Use HTTPS protocol for origin.</description></item>
+        /// <item><description>follow: Follow client protocol for origin.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>http</para>
         /// </summary>
@@ -66,6 +89,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OriginScheme { get; set; }
 
         /// <summary>
+        /// <para>SNI carried in the origin request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>origin.example.com</para>
         /// </summary>
@@ -74,6 +99,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OriginSni { get; set; }
 
         /// <summary>
+        /// <para>Use range chunking method for origin download. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// <item><description>force: Force.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -82,6 +114,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Range { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
@@ -90,6 +124,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Rule content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(http.host eq \&quot;video.example.com\&quot;)</para>
         /// </summary>
@@ -98,6 +134,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
+        /// <para>Rule switch. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -106,6 +148,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
+        /// <para>Rule name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
         /// </summary>
@@ -114,6 +158,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
+        /// <para>Rule execution sequence.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -122,6 +168,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
+        /// <para>Site version number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
