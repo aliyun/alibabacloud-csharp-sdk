@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Properties { get; set; }
 
+        [NameInMap("ResellerOwnerUid")]
+        [Validation(Required=false)]
+        public long? ResellerOwnerUid { get; set; }
+
     }
 
 }

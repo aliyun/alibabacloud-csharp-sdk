@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["Properties"] = request.PropertiesShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResellerOwnerUid))
+            {
+                query["ResellerOwnerUid"] = request.ResellerOwnerUid;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -126,6 +130,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PropertiesShrink))
             {
                 query["Properties"] = request.PropertiesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResellerOwnerUid))
+            {
+                query["ResellerOwnerUid"] = request.ResellerOwnerUid;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
