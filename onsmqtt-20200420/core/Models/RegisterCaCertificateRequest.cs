@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class RegisterCaCertificateRequest : TeaModel {
         /// <summary>
+        /// <para>The content of the CA certificate that you want to register with an ApsaraMQ for MQTT broker.</para>
+        /// <remarks>
+        /// <para>In the example, \n indicates a line feed.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,9 +24,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string CaContent { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>Only Platinum and Professional instances support using the RegisterCaCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</description></item>
-        /// </list>
+        /// <para>The name of the CA certificate that you want to register with an ApsaraMQ for MQTT broker.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +35,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string CaName { get; set; }
 
         /// <summary>
-        /// <para>RegisterCaCertificate</para>
+        /// <para>The ID of the ApsaraMQ for MQTT instance to which you want to bind the CA certificate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +46,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string MqttInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The content of the validation certificate issued by the CA certificate that you want to register with an ApsaraMQ for MQTT broker. The validation certificate must be used together with the registration code of the CA certificate to verify the private key of the CA certificate.</para>
+        /// <remarks>
+        /// <para>In the example, \n indicates a line feed.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
