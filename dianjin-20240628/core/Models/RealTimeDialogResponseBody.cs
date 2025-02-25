@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 [Validation(Required=false)]
                 public string IntentionScript { get; set; }
 
+                [NameInMap("interrupt")]
+                [Validation(Required=false)]
+                public bool? Interrupt { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -146,6 +150,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 [NameInMap("intentionScript")]
                 [Validation(Required=false)]
                 public string IntentionScript { get; set; }
+
+                [NameInMap("interrupt")]
+                [Validation(Required=false)]
+                public bool? Interrupt { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

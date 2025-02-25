@@ -4903,6 +4903,10 @@ namespace AlibabaCloud.SDK.DianJin20240628
             {
                 body["recommend"] = request.Recommend;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptContentPlayed))
+            {
+                body["scriptContentPlayed"] = request.ScriptContentPlayed;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["sessionId"] = request.SessionId;
@@ -4910,6 +4914,10 @@ namespace AlibabaCloud.SDK.DianJin20240628
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
             {
                 body["stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserVad))
+            {
+                body["userVad"] = request.UserVad;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4984,6 +4992,10 @@ namespace AlibabaCloud.SDK.DianJin20240628
             {
                 body["recommend"] = request.Recommend;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptContentPlayed))
+            {
+                body["scriptContentPlayed"] = request.ScriptContentPlayed;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["sessionId"] = request.SessionId;
@@ -4991,6 +5003,10 @@ namespace AlibabaCloud.SDK.DianJin20240628
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
             {
                 body["stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserVad))
+            {
+                body["userVad"] = request.UserVad;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

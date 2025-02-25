@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public bool? Recommend { get; set; }
 
+        [NameInMap("scriptContentPlayed")]
+        [Validation(Required=false)]
+        public string ScriptContentPlayed { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -146,6 +150,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [NameInMap("stream")]
         [Validation(Required=false)]
         public bool? Stream { get; set; }
+
+        [NameInMap("userVad")]
+        [Validation(Required=false)]
+        public bool? UserVad { get; set; }
 
     }
 
