@@ -459,6 +459,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrompt))
+            {
+                body["customPrompt"] = request.CustomPrompt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dialogue))
             {
                 body["dialogue"] = request.Dialogue;
@@ -544,6 +548,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrompt))
+            {
+                body["customPrompt"] = request.CustomPrompt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dialogue))
             {
                 body["dialogue"] = request.Dialogue;

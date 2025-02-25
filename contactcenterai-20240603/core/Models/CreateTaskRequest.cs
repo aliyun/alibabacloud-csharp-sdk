@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 {
     public class CreateTaskRequest : TeaModel {
+        [NameInMap("customPrompt")]
+        [Validation(Required=false)]
+        public string CustomPrompt { get; set; }
+
         [NameInMap("dialogue")]
         [Validation(Required=false)]
         public CreateTaskRequestDialogue Dialogue { get; set; }
@@ -104,9 +108,6 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             [Validation(Required=false)]
             public string Desc { get; set; }
 
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
             [NameInMap("enumValues")]
             [Validation(Required=false)]
             public List<CreateTaskRequestFieldsEnumValues> EnumValues { get; set; }
