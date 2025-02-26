@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("GpuNodeSpec")]
+        [Validation(Required=false)]
+        public string GpuNodeSpec { get; set; }
+
         [NameInMap("KvStoreAccount")]
         [Validation(Required=false)]
         public string KvStoreAccount { get; set; }
@@ -99,6 +103,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("KvStoreType")]
         [Validation(Required=false)]
         public string KvStoreType { get; set; }
+
+        [NameInMap("ModelId")]
+        [Validation(Required=false)]
+        public string ModelId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Disable</para>
+        /// </summary>
+        [NameInMap("ModelOption")]
+        [Validation(Required=false)]
+        public string ModelOption { get; set; }
 
         [NameInMap("OssPath")]
         [Validation(Required=false)]

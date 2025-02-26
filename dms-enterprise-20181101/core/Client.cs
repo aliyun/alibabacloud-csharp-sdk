@@ -6192,6 +6192,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuNodeSpec))
+            {
+                query["GpuNodeSpec"] = request.GpuNodeSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreAccount))
             {
                 query["KvStoreAccount"] = request.KvStoreAccount;
@@ -6223,6 +6227,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreType))
             {
                 query["KvStoreType"] = request.KvStoreType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["ModelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelOption))
+            {
+                query["ModelOption"] = request.ModelOption;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssPath))
             {
@@ -6451,6 +6463,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuNodeSpec))
+            {
+                query["GpuNodeSpec"] = request.GpuNodeSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreAccount))
             {
                 query["KvStoreAccount"] = request.KvStoreAccount;
@@ -6482,6 +6498,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvStoreType))
             {
                 query["KvStoreType"] = request.KvStoreType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["ModelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelOption))
+            {
+                query["ModelOption"] = request.ModelOption;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssPath))
             {
@@ -44975,6 +44999,152 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateTaskContentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>接受大容量sql文件的更新节点内容API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTaskContentV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTaskContentV2Response
+        /// </returns>
+        public UpdateTaskContentV2Response UpdateTaskContentV2WithOptions(UpdateTaskContentV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeContent))
+            {
+                body["NodeContent"] = request.NodeContent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTaskContentV2",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateTaskContentV2Response>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateTaskContentV2Response>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>接受大容量sql文件的更新节点内容API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTaskContentV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTaskContentV2Response
+        /// </returns>
+        public async Task<UpdateTaskContentV2Response> UpdateTaskContentV2WithOptionsAsync(UpdateTaskContentV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeContent))
+            {
+                body["NodeContent"] = request.NodeContent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTaskContentV2",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateTaskContentV2Response>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateTaskContentV2Response>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>接受大容量sql文件的更新节点内容API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTaskContentV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTaskContentV2Response
+        /// </returns>
+        public UpdateTaskContentV2Response UpdateTaskContentV2(UpdateTaskContentV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateTaskContentV2WithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>接受大容量sql文件的更新节点内容API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTaskContentV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTaskContentV2Response
+        /// </returns>
+        public async Task<UpdateTaskContentV2Response> UpdateTaskContentV2Async(UpdateTaskContentV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateTaskContentV2WithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
