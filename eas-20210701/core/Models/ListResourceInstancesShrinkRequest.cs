@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
-    public class ListResourceInstancesRequest : TeaModel {
+    public class ListResourceInstancesShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Label { get; set; }
+        public string LabelShrink { get; set; }
 
         /// <summary>
         /// <para>The sorting order.</para>

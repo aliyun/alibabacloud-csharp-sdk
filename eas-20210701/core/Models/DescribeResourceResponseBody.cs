@@ -29,6 +29,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
 
+        /// <summary>
+        /// <para>The number of vCPUs that is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8</para>
+        /// </summary>
         [NameInMap("CpuUsed")]
         [Validation(Required=false)]
         public int? CpuUsed { get; set; }
@@ -63,6 +69,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? GpuCount { get; set; }
 
+        /// <summary>
+        /// <para>The number of GPUs that is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("GpuUsed")]
         [Validation(Required=false)]
         public float? GpuUsed { get; set; }
@@ -77,10 +89,22 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? InstanceCount { get; set; }
 
+        /// <summary>
+        /// <para>The total memory size. Unit: MB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8192</para>
+        /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        /// <summary>
+        /// <para>The size of memory that is used. Unit: MB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2048</para>
+        /// </summary>
         [NameInMap("MemoryUsed")]
         [Validation(Required=false)]
         public int? MemoryUsed { get; set; }

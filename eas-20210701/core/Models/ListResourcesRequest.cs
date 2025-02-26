@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The sorting order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Desc</description></item>
+        /// <item><description>Asc</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Desc</para>
+        /// </summary>
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
+        /// <summary>
         /// <para>The page number. Pages start from page 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +64,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceName { get; set; }
 
         /// <summary>
+        /// <para>The resource group status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ResourceReady</para>
+        /// </summary>
+        [NameInMap("ResourceStatus")]
+        [Validation(Required=false)]
+        public string ResourceStatus { get; set; }
+
+        /// <summary>
         /// <para>The type of the resource group. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Dedicated: the dedicated resource group.</description></item>
@@ -62,6 +86,29 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
+
+        /// <summary>
+        /// <para>The condition by which the results are sorted. By default, the query results are sorted by the timestamp type in descending order.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrePaidInstanceCount</description></item>
+        /// <item><description>CpuCount</description></item>
+        /// <item><description>Memory</description></item>
+        /// <item><description>CreateTime</description></item>
+        /// <item><description>PostPaidInstanceCount</description></item>
+        /// <item><description>MemoryUsed</description></item>
+        /// <item><description>GpuCount</description></item>
+        /// <item><description>GpuUsed</description></item>
+        /// <item><description>CpuUsed</description></item>
+        /// <item><description>ServiceCount</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CreateTime</para>
+        /// </summary>
+        [NameInMap("Sort")]
+        [Validation(Required=false)]
+        public string Sort { get; set; }
 
     }
 

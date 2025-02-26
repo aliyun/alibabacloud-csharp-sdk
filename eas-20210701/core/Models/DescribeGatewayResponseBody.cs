@@ -144,6 +144,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the HTTP to HTTPS redirection is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("SSLRedirectionEnabled")]
         [Validation(Required=false)]
         public bool? SSLRedirectionEnabled { get; set; }

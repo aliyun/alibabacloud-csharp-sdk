@@ -67,6 +67,13 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string EcsInstanceType { get; set; }
 
         /// <summary>
+        /// <para>The custom tag.</para>
+        /// </summary>
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Labels { get; set; }
+
+        /// <summary>
         /// <para>The type of the resource group. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Dedicated: the dedicated resource group.</description></item>
@@ -101,14 +108,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string ExternalClusterId { get; set; }
 
             /// <summary>
-            /// <para>The tag key-value pairs for nodes.</para>
+            /// <para>The tag key-value pairs of the node.</para>
             /// </summary>
             [NameInMap("NodeMatchLabels")]
             [Validation(Required=false)]
             public Dictionary<string, string> NodeMatchLabels { get; set; }
 
             /// <summary>
-            /// <para>Tolerations for nodes.</para>
+            /// <para>The tolerations for the node taint.</para>
             /// </summary>
             [NameInMap("NodeTolerations")]
             [Validation(Required=false)]
@@ -168,7 +175,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             }
 
             /// <summary>
-            /// <para>The name of the RAM user to which the permissions on Elastic Algorithm Service of Platform for AI (PAI-EAS) are granted.</para>
+            /// <para>The name of the RAM user to which the permissions on Elastic Algorithm Service (EAS) of Platform for AI (PAI) are granted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>clusterrole</para>

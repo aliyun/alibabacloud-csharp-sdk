@@ -29,6 +29,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The worker name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-fd95xxxxx-xxxxxx</para>
+        /// </summary>
+        [NameInMap("WorkerName")]
+        [Validation(Required=false)]
+        public string WorkerName { get; set; }
+
     }
 
 }

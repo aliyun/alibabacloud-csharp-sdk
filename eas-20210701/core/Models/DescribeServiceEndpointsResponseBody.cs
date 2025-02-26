@@ -100,6 +100,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         /// <summary>
         /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Execution successful.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

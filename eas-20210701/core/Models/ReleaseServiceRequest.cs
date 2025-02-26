@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string TrafficState { get; set; }
 
         /// <summary>
-        /// <para>The weight of the canary release. Valid values: 0 to 100.</para>
+        /// <para>The weight of the service. Valid values: [-1, 1000].</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

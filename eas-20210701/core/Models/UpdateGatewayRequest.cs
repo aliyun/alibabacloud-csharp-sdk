@@ -13,19 +13,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>Specifies whether to enable Internet access. Default value: false.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +25,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? EnableInternet { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable internal network access. Default value: true.</para>
+        /// <para>Specifies whether to enable private access. Default value: true.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -45,12 +39,24 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? EnableIntranet { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable HTTP to HTTPS redirection. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("EnableSSLRedirection")]
         [Validation(Required=false)]
         public bool? EnableSSLRedirection { get; set; }
 
         /// <summary>
-        /// <para>The instance type used for the private gateway.</para>
+        /// <para>The instance type used by the private gateway. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>2c4g</description></item>
+        /// <item><description>4c8g</description></item>
+        /// <item><description>8c16g</description></item>
+        /// <item><description>16c32g</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c6.4xlarge</para>
@@ -60,7 +66,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether it is the default private gateway.</para>
+        /// <para>Specifies whether it is the default private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -70,7 +76,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? IsDefault { get; set; }
 
         /// <summary>
-        /// <para>The private gateway alias.</para>
+        /// <para>The alias of the private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mygateway1</para>

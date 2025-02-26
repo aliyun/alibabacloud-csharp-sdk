@@ -89,6 +89,20 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string InstanceUsedMemory { get; set; }
 
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public List<ResourceInstanceLabels> Labels { get; set; }
+        public class ResourceInstanceLabels : TeaModel {
+            [NameInMap("LabelKey")]
+            [Validation(Required=false)]
+            public string LabelKey { get; set; }
+
+            [NameInMap("LabelValue")]
+            [Validation(Required=false)]
+            public string LabelValue { get; set; }
+
+        }
+
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }

@@ -10,9 +10,19 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateVirtualResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The list of resources in the virtual resource group.</para>
+        /// <para>Specifies whether to disable the retention period of preemptible instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("DisableSpotProtectionPeriod")]
+        [Validation(Required=false)]
+        public bool? DisableSpotProtectionPeriod { get; set; }
+
+        /// <summary>
+        /// <para>The resources in the virtual resource group.</para>
         /// <remarks>
-        /// <para> If you specify this parameter, previous data are overwritten.</para>
+        /// <para> If you specify this parameter, previous data is overwritten.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Resources")]
@@ -33,7 +43,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The priority of resource scheduling. A greater number specifies a higher priority.</para>
+            /// <para>The priority of resource scheduling. A greater number indicates a higher priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -43,7 +53,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The Lingjun resource quota ID.</para>
+            /// <para>The ID of the Lingjun resource quota.</para>
             /// <remarks>
             /// <para> You must specify one and only one of the InstanceType, ResourceId, and QuotaId parameters.</para>
             /// </remarks>
@@ -56,7 +66,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string QuotaId { get; set; }
 
             /// <summary>
-            /// <para>The region where the resource resides.</para>
+            /// <para>The region in which the resource resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -66,7 +76,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The ID of the dedicated resource group. For information about how to query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</para>
+            /// <para>The ID of the dedicated resource group. For information about how to obtain the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</para>
             /// <remarks>
             /// <para> You must specify one and only one of the InstanceType, ResourceId, and QuotaId parameters.</para>
             /// </remarks>
@@ -81,7 +91,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// <para>The maximum price of preemptible instances in a public resource group.</para>
             /// <remarks>
-            /// <para> If you do not specify this parameter, preemptible instances are not used.</para>
+            /// <para> If you leave this parameter empty, preemptible instances are not used.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -94,7 +104,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The new name for the virtual resource group.</para>
+        /// <para>The new name of the virtual resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NewMyVirtualResource</para>

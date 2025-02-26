@@ -61,6 +61,13 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string EcsInstanceType { get; set; }
 
         /// <summary>
+        /// <para>The custom service tag.</para>
+        /// </summary>
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Labels { get; set; }
+
+        /// <summary>
         /// <para>The size of the system disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</para>
         /// 
         /// <b>Example:</b>

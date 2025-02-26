@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the retention period of preemptible instances was disabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("DisableSpotProtectionPeriod")]
+        [Validation(Required=false)]
+        public bool? DisableSpotProtectionPeriod { get; set; }
+
+        /// <summary>
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
@@ -97,6 +107,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public float? SpotPriceLimit { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>The number of deployed services.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("ServiceCount")]
+        [Validation(Required=false)]
+        public int? ServiceCount { get; set; }
 
         /// <summary>
         /// <para>The time when the virtual resource group was last updated.</para>

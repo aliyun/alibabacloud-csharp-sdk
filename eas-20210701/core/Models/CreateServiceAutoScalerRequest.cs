@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <list type="bullet">
             /// <item><description>If you set metricName to qps, scale-out is triggered when the average qps for a single instance is greater than this threshold.</description></item>
             /// <item><description>If you set metricName to cpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.</description></item>
-            /// <item><description>If you set metricName to gpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.</description></item>
+            /// <item><description>If you set metricName to gpu, scale-out is triggered when the average gpu utilization for a single instance is greater than this threshold.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

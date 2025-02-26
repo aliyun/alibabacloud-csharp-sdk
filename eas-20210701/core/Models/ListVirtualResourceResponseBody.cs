@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of virtual resource groups.</para>
+        /// <para>The virtual resource groups.</para>
         /// </summary>
         [NameInMap("VirtualResources")]
         [Validation(Required=false)]
@@ -65,6 +65,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
+            /// <summary>
+            /// <para>The number of deployed services.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("ServiceCount")]
+            [Validation(Required=false)]
+            public int? ServiceCount { get; set; }
 
             /// <summary>
             /// <para>The time when the virtual resource group was last updated.</para>
