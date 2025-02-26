@@ -8,58 +8,50 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
-    public class StartAIAnalysisRequest : TeaModel {
-        [NameInMap("analysisTool")]
+    public class ListInstancesEcsInfoListRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ip</para>
+        /// </summary>
+        [NameInMap("info_type")]
         [Validation(Required=false)]
-        public string AnalysisTool { get; set; }
+        public string InfoType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ecs_sysom</para>
+        /// <para>i-bp118piqcio9tiwgh84b</para>
         /// </summary>
-        [NameInMap("channel")]
+        [NameInMap("instance_id")]
         [Validation(Required=false)]
-        public string Channel { get; set; }
+        public string InstanceId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>python_test</para>
+        /// <para>managed</para>
         /// </summary>
-        [NameInMap("comms")]
+        [NameInMap("managed_type")]
         [Validation(Required=false)]
-        public string Comms { get; set; }
+        public string ManagedType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>i-wz9dej066kii4goqxxxx</para>
+        /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>
         /// </summary>
-        [NameInMap("instance")]
+        [NameInMap("plugin_id")]
         [Validation(Required=false)]
-        public string Instance { get; set; }
+        public string PluginId { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>2421,36547,10043</para>
-        /// </summary>
-        [NameInMap("pids")]
-        [Validation(Required=false)]
-        public string Pids { get; set; }
-
-        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
         /// </summary>
         [NameInMap("region")]
         [Validation(Required=false)]
         public string Region { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>2000</para>
-        /// </summary>
-        [NameInMap("timeout")]
-        [Validation(Required=false)]
-        public int? Timeout { get; set; }
 
     }
 
