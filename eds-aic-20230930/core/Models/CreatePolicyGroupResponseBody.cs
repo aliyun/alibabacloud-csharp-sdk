@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreatePolicyGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pg-exbuu6yrpvb******</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC******</para>
         /// </summary>

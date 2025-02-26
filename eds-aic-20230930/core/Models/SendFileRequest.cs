@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class SendFileRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the cloud phone instances.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIdList")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> AndroidInstanceIdList { get; set; }
 
         /// <summary>
+        /// <para>The path to which you want to upload the pushed file in the cloud phone instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,7 +29,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string SourceFilePath { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <para>The endpoint of the OSS bucket in which the file is stored.</para>
+        /// <remarks>
+        /// <para> Set the value to an internal endpoint when the cloud phone instance and the OSS bucket are in the same region to improve transfer speed without incurring public traffic fees. Sample endpoint: <c>oss-cn-hangzhou-internal.aliyuncs.com</c>. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>oss-cn-hangzhou.aliyuncs.com</para>
@@ -37,6 +42,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string UploadEndpoint { get; set; }
 
         /// <summary>
+        /// <para>The storage type of the file that you want to upload.</para>
+        /// <list type="bullet">
+        /// <item><description>Set the value to OSS.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,6 +56,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string UploadType { get; set; }
 
         /// <summary>
+        /// <para>The OSS URL of the file.</para>
+        /// <remarks>
+        /// <para> The OSS bucket name must start with &quot;cloudphone-saved-bucket-&quot;, for example, &quot;cloudphone-saved-bucket-example&quot;. You must also create an OSS directory to store the backup data. Set the value for UploadUrl in this format: oss://\<BucketName>/\<OSSDirectoryName>\<FileName>.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UploadUrl")]

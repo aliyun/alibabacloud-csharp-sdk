@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateScreenshotRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the cloud phone instances. You can create multiple snapshots simultaneously.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIdList")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> AndroidInstanceIdList { get; set; }
 
         /// <summary>
+        /// <para>The name of the OSS bucket. The name must start with &quot;cloudphone-saved-bucket-&quot;. The OSS bucket and the cloud phone instance must be in the same region. If you leave this parameter empty, the system will create a default OSS bucket named “cloudphone-saved-bucket-{Region of the cloud phone instance}-{AliUid}.”</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cloudphone-saved-bucket-cn-shanghai-default</para>
         /// </summary>
@@ -25,6 +28,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string OssBucketName { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to bypass the snapshot policy control. Default value: false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class UpdateInstanceGroupImageRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ImageId { get; set; }
 
         /// <summary>
+        /// <para>The IDs of the instance groups.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceGroupIds")]

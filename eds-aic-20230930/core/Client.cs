@@ -40,8 +40,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定密钥对</para>
+        /// <para>Attaches an Android Debug Bridge (ADB) key pair to one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can attach to an ADB key pair only to cloud phone instances in the Running state.</para>
+        /// <list type="bullet">
+        /// <item><description>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the ~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachKeyPairRequest
@@ -93,8 +101,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定密钥对</para>
+        /// <para>Attaches an Android Debug Bridge (ADB) key pair to one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can attach to an ADB key pair only to cloud phone instances in the Running state.</para>
+        /// <list type="bullet">
+        /// <item><description>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the ~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachKeyPairRequest
@@ -146,8 +162,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定密钥对</para>
+        /// <para>Attaches an Android Debug Bridge (ADB) key pair to one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can attach to an ADB key pair only to cloud phone instances in the Running state.</para>
+        /// <list type="bullet">
+        /// <item><description>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the ~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachKeyPairRequest
@@ -164,8 +188,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定密钥对</para>
+        /// <para>Attaches an Android Debug Bridge (ADB) key pair to one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can attach to an ADB key pair only to cloud phone instances in the Running state.</para>
+        /// <list type="bullet">
+        /// <item><description>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the ~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachKeyPairRequest
@@ -182,8 +214,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为用户授权/解授权安卓实例</para>
+        /// <para>Authorize/unauthorize Android instances for users.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Instance states that support user assignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed.
+        /// Instance states that support unassignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed, Expired, Overdue, Deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AuthorizeAndroidInstanceRequest
@@ -239,8 +277,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为用户授权/解授权安卓实例</para>
+        /// <para>Authorize/unauthorize Android instances for users.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Instance states that support user assignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed.
+        /// Instance states that support unassignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed, Expired, Overdue, Deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AuthorizeAndroidInstanceRequest
@@ -296,8 +340,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为用户授权/解授权安卓实例</para>
+        /// <para>Authorize/unauthorize Android instances for users.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Instance states that support user assignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed.
+        /// Instance states that support unassignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed, Expired, Overdue, Deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AuthorizeAndroidInstanceRequest
@@ -314,8 +364,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为用户授权/解授权安卓实例</para>
+        /// <para>Authorize/unauthorize Android instances for users.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Instance states that support user assignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed.
+        /// Instance states that support unassignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed, Expired, Overdue, Deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AuthorizeAndroidInstanceRequest
@@ -332,8 +388,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据备份</para>
+        /// <para>Generates and uploads backup files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to upload only backup files generated by cloud phones to Object Storage Service (OSS) buckets.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BackupFileRequest
@@ -413,8 +474,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据备份</para>
+        /// <para>Generates and uploads backup files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to upload only backup files generated by cloud phones to Object Storage Service (OSS) buckets.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BackupFileRequest
@@ -494,8 +560,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据备份</para>
+        /// <para>Generates and uploads backup files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to upload only backup files generated by cloud phones to Object Storage Service (OSS) buckets.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BackupFileRequest
@@ -512,8 +583,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据备份</para>
+        /// <para>Generates and uploads backup files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to upload only backup files generated by cloud phones to Object Storage Service (OSS) buckets.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BackupFileRequest
@@ -530,7 +606,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取ticket</para>
+        /// <para>Retrieves connection tickets in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -591,7 +667,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取ticket</para>
+        /// <para>Retrieves connection tickets in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -652,7 +728,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取ticket</para>
+        /// <para>Retrieves connection tickets in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -670,7 +746,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取ticket</para>
+        /// <para>Retrieves connection tickets in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -688,7 +764,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查资源库存</para>
+        /// <para>Check the resource inventory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -753,7 +829,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查资源库存</para>
+        /// <para>Check the resource inventory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -818,7 +894,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查资源库存</para>
+        /// <para>Check the resource inventory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -836,7 +912,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查资源库存</para>
+        /// <para>Check the resource inventory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -854,8 +930,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建安卓实例组</para>
+        /// <para>Creates pay-as-you-go or subscription instance groups.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating an instance group, ensure you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing methods</a> supported by Cloud Phone.</para>
+        /// <list type="bullet">
+        /// <item><description>If the billing method of an instance group is PrePaid, AutoPay is set to false by default. In this case, you need to go to <a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs</a> to manually complete the payment.</description></item>
+        /// <item><description>You can also set AutoPay to true based on your business requirements.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAndroidInstanceGroupRequest
@@ -895,6 +980,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIpv6))
+            {
+                query["EnableIpv6"] = request.EnableIpv6;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuAcceleration))
             {
                 query["GpuAcceleration"] = request.GpuAcceleration;
@@ -910,6 +999,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupSpec))
             {
                 query["InstanceGroupSpec"] = request.InstanceGroupSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Bandwidth))
+            {
+                query["Ipv6Bandwidth"] = request.Ipv6Bandwidth;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairId))
             {
@@ -934,6 +1027,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
             {
                 query["PolicyGroupId"] = request.PolicyGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -967,8 +1064,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建安卓实例组</para>
+        /// <para>Creates pay-as-you-go or subscription instance groups.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating an instance group, ensure you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing methods</a> supported by Cloud Phone.</para>
+        /// <list type="bullet">
+        /// <item><description>If the billing method of an instance group is PrePaid, AutoPay is set to false by default. In this case, you need to go to <a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs</a> to manually complete the payment.</description></item>
+        /// <item><description>You can also set AutoPay to true based on your business requirements.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAndroidInstanceGroupRequest
@@ -1008,6 +1114,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIpv6))
+            {
+                query["EnableIpv6"] = request.EnableIpv6;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuAcceleration))
             {
                 query["GpuAcceleration"] = request.GpuAcceleration;
@@ -1023,6 +1133,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupSpec))
             {
                 query["InstanceGroupSpec"] = request.InstanceGroupSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Bandwidth))
+            {
+                query["Ipv6Bandwidth"] = request.Ipv6Bandwidth;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairId))
             {
@@ -1047,6 +1161,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
             {
                 query["PolicyGroupId"] = request.PolicyGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -1080,8 +1198,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建安卓实例组</para>
+        /// <para>Creates pay-as-you-go or subscription instance groups.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating an instance group, ensure you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing methods</a> supported by Cloud Phone.</para>
+        /// <list type="bullet">
+        /// <item><description>If the billing method of an instance group is PrePaid, AutoPay is set to false by default. In this case, you need to go to <a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs</a> to manually complete the payment.</description></item>
+        /// <item><description>You can also set AutoPay to true based on your business requirements.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAndroidInstanceGroupRequest
@@ -1098,8 +1225,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建安卓实例组</para>
+        /// <para>Creates pay-as-you-go or subscription instance groups.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating an instance group, ensure you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing methods</a> supported by Cloud Phone.</para>
+        /// <list type="bullet">
+        /// <item><description>If the billing method of an instance group is PrePaid, AutoPay is set to false by default. In this case, you need to go to <a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs</a> to manually complete the payment.</description></item>
+        /// <item><description>You can also set AutoPay to true based on your business requirements.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAndroidInstanceGroupRequest
@@ -1114,7 +1250,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             return await CreateAndroidInstanceGroupWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Android application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Preparations</h3>
+        /// <para>Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the values of request parameters <c>FileName</c>, <c>FilePath</c>, and <c>OssAppUrl</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
         /// CreateAppRequest
         /// </param>
         /// <param name="runtime">
@@ -1124,9 +1271,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <returns>
         /// CreateAppResponse
         /// </returns>
-        public CreateAppResponse CreateAppWithOptions(CreateAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateAppResponse CreateAppWithOptions(CreateAppRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAppShrinkRequest request = new CreateAppShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CustomAppInfo))
+            {
+                request.CustomAppInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomAppInfo, "CustomAppInfo", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
@@ -1135,6 +1288,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAppInfoShrink))
+            {
+                query["CustomAppInfo"] = request.CustomAppInfoShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -1186,7 +1343,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             }
         }
 
-        /// <param name="request">
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Android application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Preparations</h3>
+        /// <para>Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the values of request parameters <c>FileName</c>, <c>FilePath</c>, and <c>OssAppUrl</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
         /// CreateAppRequest
         /// </param>
         /// <param name="runtime">
@@ -1196,9 +1364,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <returns>
         /// CreateAppResponse
         /// </returns>
-        public async Task<CreateAppResponse> CreateAppWithOptionsAsync(CreateAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateAppResponse> CreateAppWithOptionsAsync(CreateAppRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAppShrinkRequest request = new CreateAppShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CustomAppInfo))
+            {
+                request.CustomAppInfoShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomAppInfo, "CustomAppInfo", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
@@ -1207,6 +1381,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAppInfoShrink))
+            {
+                query["CustomAppInfo"] = request.CustomAppInfoShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -1258,6 +1436,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Android application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Preparations</h3>
+        /// <para>Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the values of request parameters <c>FileName</c>, <c>FilePath</c>, and <c>OssAppUrl</c>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAppRequest
         /// </param>
@@ -1271,6 +1460,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             return CreateAppWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Android application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Preparations</h3>
+        /// <para>Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the values of request parameters <c>FileName</c>, <c>FilePath</c>, and <c>OssAppUrl</c>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAppRequest
         /// </param>
@@ -1286,7 +1486,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义镜像</para>
+        /// <para>Create Custom Image</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1347,7 +1547,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义镜像</para>
+        /// <para>Create Custom Image</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1408,7 +1608,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义镜像</para>
+        /// <para>Create Custom Image</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1426,7 +1626,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义镜像</para>
+        /// <para>Create Custom Image</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1444,8 +1644,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建密钥对</para>
+        /// <para>Creates an Android Debug Bridge (ADB) key pair. The system retains the public key and provides a PEM-encoded private key in PKCS#8 format, adhering to the ADB connection specification. You must securely store the private key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In addition to using the CreateKeyPair operation to generate a key pair, you can also create one by using the ADB tool and upload it to the Cloud Phone console. The usage of this key pair is identical to that of a system-generated key pair.
+        /// Each tenant can create up to 500 key pairs.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateKeyPairRequest
@@ -1493,8 +1699,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建密钥对</para>
+        /// <para>Creates an Android Debug Bridge (ADB) key pair. The system retains the public key and provides a PEM-encoded private key in PKCS#8 format, adhering to the ADB connection specification. You must securely store the private key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In addition to using the CreateKeyPair operation to generate a key pair, you can also create one by using the ADB tool and upload it to the Cloud Phone console. The usage of this key pair is identical to that of a system-generated key pair.
+        /// Each tenant can create up to 500 key pairs.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateKeyPairRequest
@@ -1542,8 +1754,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建密钥对</para>
+        /// <para>Creates an Android Debug Bridge (ADB) key pair. The system retains the public key and provides a PEM-encoded private key in PKCS#8 format, adhering to the ADB connection specification. You must securely store the private key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In addition to using the CreateKeyPair operation to generate a key pair, you can also create one by using the ADB tool and upload it to the Cloud Phone console. The usage of this key pair is identical to that of a system-generated key pair.
+        /// Each tenant can create up to 500 key pairs.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateKeyPairRequest
@@ -1560,8 +1778,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建密钥对</para>
+        /// <para>Creates an Android Debug Bridge (ADB) key pair. The system retains the public key and provides a PEM-encoded private key in PKCS#8 format, adhering to the ADB connection specification. You must securely store the private key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In addition to using the CreateKeyPair operation to generate a key pair, you can also create one by using the ADB tool and upload it to the Cloud Phone console. The usage of this key pair is identical to that of a system-generated key pair.
+        /// Each tenant can create up to 500 key pairs.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateKeyPairRequest
@@ -1578,7 +1802,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建策略</para>
+        /// <para>Creates a policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1665,7 +1889,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建策略</para>
+        /// <para>Creates a policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1752,7 +1976,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建策略</para>
+        /// <para>Creates a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1770,7 +1994,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建策略</para>
+        /// <para>Creates a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1788,8 +2012,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云手机截图接口</para>
+        /// <para>Creates a screenshot of a cloud phone instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a screenshot of a cloud phone instance and upload it to the default Object Storage Service (OSS) bucket. The operation returns a task ID, which you can use with the DescribeTasks operation to get the download link for the screenshot.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScreenshotRequest
@@ -1845,8 +2074,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云手机截图接口</para>
+        /// <para>Creates a screenshot of a cloud phone instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a screenshot of a cloud phone instance and upload it to the default Object Storage Service (OSS) bucket. The operation returns a task ID, which you can use with the DescribeTasks operation to get the download link for the screenshot.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScreenshotRequest
@@ -1902,8 +2136,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云手机截图接口</para>
+        /// <para>Creates a screenshot of a cloud phone instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a screenshot of a cloud phone instance and upload it to the default Object Storage Service (OSS) bucket. The operation returns a task ID, which you can use with the DescribeTasks operation to get the download link for the screenshot.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScreenshotRequest
@@ -1920,8 +2159,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云手机截图接口</para>
+        /// <para>Creates a screenshot of a cloud phone instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create a screenshot of a cloud phone instance and upload it to the default Object Storage Service (OSS) bucket. The operation returns a task ID, which you can use with the DescribeTasks operation to get the download link for the screenshot.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScreenshotRequest
@@ -1938,8 +2182,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除安卓实例组</para>
+        /// <para>Delete an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can delete only pay-as-you-go instance groups.
+        /// You can delete subscription instance groups only after they expire.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAndroidInstanceGroupRequest
@@ -1987,8 +2237,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除安卓实例组</para>
+        /// <para>Delete an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can delete only pay-as-you-go instance groups.
+        /// You can delete subscription instance groups only after they expire.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAndroidInstanceGroupRequest
@@ -2036,8 +2292,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除安卓实例组</para>
+        /// <para>Delete an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can delete only pay-as-you-go instance groups.
+        /// You can delete subscription instance groups only after they expire.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAndroidInstanceGroupRequest
@@ -2054,8 +2316,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除安卓实例组</para>
+        /// <para>Delete an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can delete only pay-as-you-go instance groups.
+        /// You can delete subscription instance groups only after they expire.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAndroidInstanceGroupRequest
@@ -2072,7 +2340,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除app</para>
+        /// <para>Deletes an application. Before you delete an application, make sure that the application is not installed on any instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2121,7 +2389,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除app</para>
+        /// <para>Deletes an application. Before you delete an application, make sure that the application is not installed on any instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2170,7 +2438,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除app</para>
+        /// <para>Deletes an application. Before you delete an application, make sure that the application is not installed on any instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2188,7 +2456,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除app</para>
+        /// <para>Deletes an application. Before you delete an application, make sure that the application is not installed on any instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2204,6 +2472,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             return await DeleteAppsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot delete an image that is currently in use by an instance group.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// DeleteImagesRequest
         /// </param>
@@ -2254,6 +2532,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot delete an image that is currently in use by an instance group.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// DeleteImagesRequest
         /// </param>
@@ -2304,6 +2592,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot delete an image that is currently in use by an instance group.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteImagesRequest
         /// </param>
@@ -2317,6 +2615,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             return DeleteImagesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot delete an image that is currently in use by an instance group.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteImagesRequest
         /// </param>
@@ -2332,8 +2640,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除密钥对</para>
+        /// <para>Deletes Android Debug Bridge (ADB) key pairs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a cloud phone instance is currently associated with the ADB key pair you intend to delete, the ADB key pair cannot be deleted.</para>
+        /// <list type="bullet">
+        /// <item><description>Once an ADB key pair is deleted, it cannot be retrieved or queried by using the DescribeKeyPairs operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteKeyPairsRequest
@@ -2381,8 +2697,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除密钥对</para>
+        /// <para>Deletes Android Debug Bridge (ADB) key pairs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a cloud phone instance is currently associated with the ADB key pair you intend to delete, the ADB key pair cannot be deleted.</para>
+        /// <list type="bullet">
+        /// <item><description>Once an ADB key pair is deleted, it cannot be retrieved or queried by using the DescribeKeyPairs operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteKeyPairsRequest
@@ -2430,8 +2754,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除密钥对</para>
+        /// <para>Deletes Android Debug Bridge (ADB) key pairs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a cloud phone instance is currently associated with the ADB key pair you intend to delete, the ADB key pair cannot be deleted.</para>
+        /// <list type="bullet">
+        /// <item><description>Once an ADB key pair is deleted, it cannot be retrieved or queried by using the DescribeKeyPairs operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteKeyPairsRequest
@@ -2448,8 +2780,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除密钥对</para>
+        /// <para>Deletes Android Debug Bridge (ADB) key pairs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a cloud phone instance is currently associated with the ADB key pair you intend to delete, the ADB key pair cannot be deleted.</para>
+        /// <list type="bullet">
+        /// <item><description>Once an ADB key pair is deleted, it cannot be retrieved or queried by using the DescribeKeyPairs operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteKeyPairsRequest
@@ -2466,7 +2806,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除策略</para>
+        /// <para>Deletes a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2515,7 +2855,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除策略</para>
+        /// <para>Deletes a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2564,7 +2904,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除策略</para>
+        /// <para>Deletes a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2582,7 +2922,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除策略</para>
+        /// <para>Deletes a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2600,7 +2940,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例组</para>
+        /// <para>Queries the details of an instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2685,7 +3025,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例组</para>
+        /// <para>Queries the details of an instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2770,7 +3110,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例组</para>
+        /// <para>Queries the details of an instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2788,7 +3128,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例组</para>
+        /// <para>Queries the details of an instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2806,7 +3146,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询安卓的实例列表</para>
+        /// <para>Queries cloud phone instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2911,7 +3251,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询安卓的实例列表</para>
+        /// <para>Queries cloud phone instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3016,7 +3356,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询安卓的实例列表</para>
+        /// <para>Queries cloud phone instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3034,7 +3374,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询安卓的实例列表</para>
+        /// <para>Queries cloud phone instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3052,7 +3392,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询app</para>
+        /// <para>Queries applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3129,7 +3469,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询app</para>
+        /// <para>Queries applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3206,7 +3546,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询app</para>
+        /// <para>Queries applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3224,7 +3564,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询app</para>
+        /// <para>Queries applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3242,8 +3582,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询备份文件列表</para>
+        /// <para>Queries backup files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to query only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeBackupFilesRequest
@@ -3339,8 +3684,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询备份文件列表</para>
+        /// <para>Queries backup files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to query only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeBackupFilesRequest
@@ -3436,8 +3786,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询备份文件列表</para>
+        /// <para>Queries backup files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to query only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeBackupFilesRequest
@@ -3454,8 +3809,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询备份文件列表</para>
+        /// <para>Queries backup files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to query only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeBackupFilesRequest
@@ -3472,7 +3832,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像列表</para>
+        /// <para>Queries images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3547,7 +3907,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像列表</para>
+        /// <para>Queries images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3622,7 +3982,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像列表</para>
+        /// <para>Queries images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3640,7 +4000,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像列表</para>
+        /// <para>Queries images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3658,7 +4018,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询命令结果</para>
+        /// <para>Queries the execution results of commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3711,7 +4071,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询命令结果</para>
+        /// <para>Queries the execution results of commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3764,7 +4124,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询命令结果</para>
+        /// <para>Queries the execution results of commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3782,7 +4142,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询命令结果</para>
+        /// <para>Queries the execution results of commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3800,7 +4160,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥对</para>
+        /// <para>Queries one or more key pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3861,7 +4221,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥对</para>
+        /// <para>Queries one or more key pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3922,7 +4282,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥对</para>
+        /// <para>Queries one or more key pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3940,7 +4300,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥对</para>
+        /// <para>Queries one or more key pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3958,7 +4318,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域</para>
+        /// <para>Query available regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4011,7 +4371,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域</para>
+        /// <para>Query available regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4064,7 +4424,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域</para>
+        /// <para>Query available regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4082,7 +4442,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域</para>
+        /// <para>Query available regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4100,7 +4460,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规格</para>
+        /// <para>Query available specifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4177,7 +4537,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规格</para>
+        /// <para>Query available specifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4254,7 +4614,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规格</para>
+        /// <para>Query available specifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4272,7 +4632,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规格</para>
+        /// <para>Query available specifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4290,8 +4650,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步任务</para>
+        /// <para>Queries tasks created for a cloud phone instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call the DescribeTasks operation to query the tasks created for one or more cloud phone instances.</para>
+        /// <list type="bullet">
+        /// <item><description>The system currently supports various tasks, including starting, stopping, restarting, and resetting cloud phone instances; backing up and restoring data; installing apps; and executing remote commands.</description></item>
+        /// <item><description>You can use the Level field to specify the type of task. If Level is set to 1, it represents a batch task. If Level is set to 2, it represents an instance-level task.
+        /// <b>Example</b>
+        /// Assume you restart two cloud phone instances with the instance IDs acp-25nt4kk9whhok\<em>\</em>\<em>\</em> and acp-j2taq887orj8l\<em>\</em>\<em>\</em>, and the returned request ID is B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you want to check the operation outcomes of the two cloud phone instances, you can call the DescribeTasks operation. You need to set the InvokeId request parameter to B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you only want to check the cloud phone instance with the ID acp-25nt4kk9whhok\<em>\</em>\<em>\</em>, you must set the ParentTaskId request parameter to the ID of the batch task and the AndroidInstanceId request parameter to acp-25nt4kk9whhok\<em>\</em>\<em>\</em> when calling the DescribeTasks operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTasksRequest
@@ -4391,8 +4762,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步任务</para>
+        /// <para>Queries tasks created for a cloud phone instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call the DescribeTasks operation to query the tasks created for one or more cloud phone instances.</para>
+        /// <list type="bullet">
+        /// <item><description>The system currently supports various tasks, including starting, stopping, restarting, and resetting cloud phone instances; backing up and restoring data; installing apps; and executing remote commands.</description></item>
+        /// <item><description>You can use the Level field to specify the type of task. If Level is set to 1, it represents a batch task. If Level is set to 2, it represents an instance-level task.
+        /// <b>Example</b>
+        /// Assume you restart two cloud phone instances with the instance IDs acp-25nt4kk9whhok\<em>\</em>\<em>\</em> and acp-j2taq887orj8l\<em>\</em>\<em>\</em>, and the returned request ID is B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you want to check the operation outcomes of the two cloud phone instances, you can call the DescribeTasks operation. You need to set the InvokeId request parameter to B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you only want to check the cloud phone instance with the ID acp-25nt4kk9whhok\<em>\</em>\<em>\</em>, you must set the ParentTaskId request parameter to the ID of the batch task and the AndroidInstanceId request parameter to acp-25nt4kk9whhok\<em>\</em>\<em>\</em> when calling the DescribeTasks operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTasksRequest
@@ -4492,8 +4874,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步任务</para>
+        /// <para>Queries tasks created for a cloud phone instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call the DescribeTasks operation to query the tasks created for one or more cloud phone instances.</para>
+        /// <list type="bullet">
+        /// <item><description>The system currently supports various tasks, including starting, stopping, restarting, and resetting cloud phone instances; backing up and restoring data; installing apps; and executing remote commands.</description></item>
+        /// <item><description>You can use the Level field to specify the type of task. If Level is set to 1, it represents a batch task. If Level is set to 2, it represents an instance-level task.
+        /// <b>Example</b>
+        /// Assume you restart two cloud phone instances with the instance IDs acp-25nt4kk9whhok\<em>\</em>\<em>\</em> and acp-j2taq887orj8l\<em>\</em>\<em>\</em>, and the returned request ID is B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you want to check the operation outcomes of the two cloud phone instances, you can call the DescribeTasks operation. You need to set the InvokeId request parameter to B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you only want to check the cloud phone instance with the ID acp-25nt4kk9whhok\<em>\</em>\<em>\</em>, you must set the ParentTaskId request parameter to the ID of the batch task and the AndroidInstanceId request parameter to acp-25nt4kk9whhok\<em>\</em>\<em>\</em> when calling the DescribeTasks operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTasksRequest
@@ -4510,8 +4903,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步任务</para>
+        /// <para>Queries tasks created for a cloud phone instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call the DescribeTasks operation to query the tasks created for one or more cloud phone instances.</para>
+        /// <list type="bullet">
+        /// <item><description>The system currently supports various tasks, including starting, stopping, restarting, and resetting cloud phone instances; backing up and restoring data; installing apps; and executing remote commands.</description></item>
+        /// <item><description>You can use the Level field to specify the type of task. If Level is set to 1, it represents a batch task. If Level is set to 2, it represents an instance-level task.
+        /// <b>Example</b>
+        /// Assume you restart two cloud phone instances with the instance IDs acp-25nt4kk9whhok\<em>\</em>\<em>\</em> and acp-j2taq887orj8l\<em>\</em>\<em>\</em>, and the returned request ID is B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you want to check the operation outcomes of the two cloud phone instances, you can call the DescribeTasks operation. You need to set the InvokeId request parameter to B8ED2BA9-0C6A-5643-818F-B5D60A64\<em>\</em>\<em>\</em>. If you only want to check the cloud phone instance with the ID acp-25nt4kk9whhok\<em>\</em>\<em>\</em>, you must set the ParentTaskId request parameter to the ID of the batch task and the AndroidInstanceId request parameter to acp-25nt4kk9whhok\<em>\</em>\<em>\</em> when calling the DescribeTasks operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeTasksRequest
@@ -4528,8 +4932,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑密钥对</para>
+        /// <para>Detaches an Android Debug Bridge (ADB) key pair from one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After you detach an ADB key pair from a cloud phone instance, the ADB connection will fail. This occurs because the system can no longer authenticate using a valid ADB public key, leading to authentication errors.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DetachKeyPairRequest
@@ -4581,8 +4990,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑密钥对</para>
+        /// <para>Detaches an Android Debug Bridge (ADB) key pair from one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After you detach an ADB key pair from a cloud phone instance, the ADB connection will fail. This occurs because the system can no longer authenticate using a valid ADB public key, leading to authentication errors.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DetachKeyPairRequest
@@ -4634,8 +5048,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑密钥对</para>
+        /// <para>Detaches an Android Debug Bridge (ADB) key pair from one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After you detach an ADB key pair from a cloud phone instance, the ADB connection will fail. This occurs because the system can no longer authenticate using a valid ADB public key, leading to authentication errors.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DetachKeyPairRequest
@@ -4652,8 +5071,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑密钥对</para>
+        /// <para>Detaches an Android Debug Bridge (ADB) key pair from one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After you detach an ADB key pair from a cloud phone instance, the ADB connection will fail. This occurs because the system can no longer authenticate using a valid ADB public key, leading to authentication errors.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DetachKeyPairRequest
@@ -4670,8 +5094,147 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义镜像分发</para>
+        /// <para>实例断开连接</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisconnectAndroidInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisconnectAndroidInstanceResponse
+        /// </returns>
+        public DisconnectAndroidInstanceResponse DisconnectAndroidInstanceWithOptions(DisconnectAndroidInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisconnectAndroidInstance",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DisconnectAndroidInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DisconnectAndroidInstanceResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例断开连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisconnectAndroidInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisconnectAndroidInstanceResponse
+        /// </returns>
+        public async Task<DisconnectAndroidInstanceResponse> DisconnectAndroidInstanceWithOptionsAsync(DisconnectAndroidInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisconnectAndroidInstance",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DisconnectAndroidInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DisconnectAndroidInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例断开连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisconnectAndroidInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisconnectAndroidInstanceResponse
+        /// </returns>
+        public DisconnectAndroidInstanceResponse DisconnectAndroidInstance(DisconnectAndroidInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisconnectAndroidInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例断开连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisconnectAndroidInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisconnectAndroidInstanceResponse
+        /// </returns>
+        public async Task<DisconnectAndroidInstanceResponse> DisconnectAndroidInstanceAsync(DisconnectAndroidInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisconnectAndroidInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Distributes an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you distribute an image in supported regions, the distribution cannot be canceled.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DistributeImageRequest
@@ -4723,8 +5286,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义镜像分发</para>
+        /// <para>Distributes an image.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you distribute an image in supported regions, the distribution cannot be canceled.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DistributeImageRequest
@@ -4776,8 +5344,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义镜像分发</para>
+        /// <para>Distributes an image.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you distribute an image in supported regions, the distribution cannot be canceled.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DistributeImageRequest
@@ -4794,8 +5367,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义镜像分发</para>
+        /// <para>Distributes an image.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you distribute an image in supported regions, the distribution cannot be canceled.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DistributeImageRequest
@@ -4812,8 +5390,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例组缩容</para>
+        /// <para>Downgrades an instance group. Currently, this operation allows you to only delete specific cloud phone instances from an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation only allows you to scale down an instance group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DowngradeAndroidInstanceGroupRequest
@@ -4869,8 +5452,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例组缩容</para>
+        /// <para>Downgrades an instance group. Currently, this operation allows you to only delete specific cloud phone instances from an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation only allows you to scale down an instance group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DowngradeAndroidInstanceGroupRequest
@@ -4926,8 +5514,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例组缩容</para>
+        /// <para>Downgrades an instance group. Currently, this operation allows you to only delete specific cloud phone instances from an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation only allows you to scale down an instance group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DowngradeAndroidInstanceGroupRequest
@@ -4944,8 +5537,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例组缩容</para>
+        /// <para>Downgrades an instance group. Currently, this operation allows you to only delete specific cloud phone instances from an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation only allows you to scale down an instance group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DowngradeAndroidInstanceGroupRequest
@@ -4962,8 +5560,163 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云手机拉取文件到OSS</para>
+        /// <para>结束协同</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// EndCoordinationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndCoordinationResponse
+        /// </returns>
+        public EndCoordinationResponse EndCoordinationWithOptions(EndCoordinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoordinatorUserId))
+            {
+                query["CoordinatorUserId"] = request.CoordinatorUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerUserId))
+            {
+                query["OwnerUserId"] = request.OwnerUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EndCoordination",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EndCoordinationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EndCoordinationResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>结束协同</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EndCoordinationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndCoordinationResponse
+        /// </returns>
+        public async Task<EndCoordinationResponse> EndCoordinationWithOptionsAsync(EndCoordinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CoordinatorUserId))
+            {
+                query["CoordinatorUserId"] = request.CoordinatorUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerUserId))
+            {
+                query["OwnerUserId"] = request.OwnerUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EndCoordination",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EndCoordinationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EndCoordinationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>结束协同</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EndCoordinationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndCoordinationResponse
+        /// </returns>
+        public EndCoordinationResponse EndCoordination(EndCoordinationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EndCoordinationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>结束协同</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EndCoordinationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EndCoordinationResponse
+        /// </returns>
+        public async Task<EndCoordinationResponse> EndCoordinationAsync(EndCoordinationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EndCoordinationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pulls a file from a cloud phone instance and stores it in Object Storage Service (OSS).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to retrieve files or folders from cloud phone instances and save them directly to OSS.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// FetchFileRequest
@@ -5027,8 +5780,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云手机拉取文件到OSS</para>
+        /// <para>Pulls a file from a cloud phone instance and stores it in Object Storage Service (OSS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to retrieve files or folders from cloud phone instances and save them directly to OSS.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// FetchFileRequest
@@ -5092,8 +5850,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云手机拉取文件到OSS</para>
+        /// <para>Pulls a file from a cloud phone instance and stores it in Object Storage Service (OSS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to retrieve files or folders from cloud phone instances and save them directly to OSS.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// FetchFileRequest
@@ -5110,8 +5873,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云手机拉取文件到OSS</para>
+        /// <para>Pulls a file from a cloud phone instance and stores it in Object Storage Service (OSS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to retrieve files or folders from cloud phone instances and save them directly to OSS.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// FetchFileRequest
@@ -5128,8 +5896,155 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入秘钥</para>
+        /// <para>获取协同码</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateCoordinationCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateCoordinationCodeResponse
+        /// </returns>
+        public GenerateCoordinationCodeResponse GenerateCoordinationCodeWithOptions(GenerateCoordinationCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerUserId))
+            {
+                query["OwnerUserId"] = request.OwnerUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateCoordinationCode",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GenerateCoordinationCodeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GenerateCoordinationCodeResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取协同码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateCoordinationCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateCoordinationCodeResponse
+        /// </returns>
+        public async Task<GenerateCoordinationCodeResponse> GenerateCoordinationCodeWithOptionsAsync(GenerateCoordinationCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerUserId))
+            {
+                query["OwnerUserId"] = request.OwnerUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateCoordinationCode",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GenerateCoordinationCodeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GenerateCoordinationCodeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取协同码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateCoordinationCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateCoordinationCodeResponse
+        /// </returns>
+        public GenerateCoordinationCodeResponse GenerateCoordinationCode(GenerateCoordinationCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateCoordinationCodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取协同码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateCoordinationCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateCoordinationCodeResponse
+        /// </returns>
+        public async Task<GenerateCoordinationCodeResponse> GenerateCoordinationCodeAsync(GenerateCoordinationCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateCoordinationCodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports the public key of an Android Debug Bridge (ADB) key pair.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To avoid authorization errors that could cause ADB connection failures, you must import the public key of an ADB key pair.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ImportKeyPairRequest
@@ -5181,8 +6096,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入秘钥</para>
+        /// <para>Imports the public key of an Android Debug Bridge (ADB) key pair.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To avoid authorization errors that could cause ADB connection failures, you must import the public key of an ADB key pair.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ImportKeyPairRequest
@@ -5234,8 +6154,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入秘钥</para>
+        /// <para>Imports the public key of an Android Debug Bridge (ADB) key pair.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To avoid authorization errors that could cause ADB connection failures, you must import the public key of an ADB key pair.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ImportKeyPairRequest
@@ -5252,8 +6177,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入秘钥</para>
+        /// <para>Imports the public key of an Android Debug Bridge (ADB) key pair.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To avoid authorization errors that could cause ADB connection failures, you must import the public key of an ADB key pair.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ImportKeyPairRequest
@@ -5270,8 +6200,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安装app到实例组</para>
+        /// <para>Installs an app on multiple cloud phone instances at the same time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation runs asynchronously. To check the installation result, you can query the installation history for the app.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// InstallAppRequest
@@ -5327,8 +6262,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安装app到实例组</para>
+        /// <para>Installs an app on multiple cloud phone instances at the same time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation runs asynchronously. To check the installation result, you can query the installation history for the app.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// InstallAppRequest
@@ -5384,8 +6324,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安装app到实例组</para>
+        /// <para>Installs an app on multiple cloud phone instances at the same time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation runs asynchronously. To check the installation result, you can query the installation history for the app.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// InstallAppRequest
@@ -5402,8 +6347,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安装app到实例组</para>
+        /// <para>Installs an app on multiple cloud phone instances at the same time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation runs asynchronously. To check the installation result, you can query the installation history for the app.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// InstallAppRequest
@@ -5420,7 +6370,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Policy列表</para>
+        /// <para>Queries policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5481,7 +6431,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Policy列表</para>
+        /// <para>Queries policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5542,7 +6492,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Policy列表</para>
+        /// <para>Queries policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5560,7 +6510,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Policy列表</para>
+        /// <para>Queries policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5578,7 +6528,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改安卓实例信息</para>
+        /// <para>Modifies attributes of a cloud phone instance. Currently, this operation allows you to modify only the name of a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5631,7 +6581,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改安卓实例信息</para>
+        /// <para>Modifies attributes of a cloud phone instance. Currently, this operation allows you to modify only the name of a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5684,7 +6634,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改安卓实例信息</para>
+        /// <para>Modifies attributes of a cloud phone instance. Currently, this operation allows you to modify only the name of a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5702,7 +6652,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改安卓实例信息</para>
+        /// <para>Modifies attributes of a cloud phone instance. Currently, this operation allows you to modify only the name of a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5720,7 +6670,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改安卓实例组</para>
+        /// <para>Modifies attributes of an instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5777,7 +6727,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改安卓实例组</para>
+        /// <para>Modifies attributes of an instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5834,7 +6784,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改安卓实例组</para>
+        /// <para>Modifies attributes of an instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5852,7 +6802,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改安卓实例组</para>
+        /// <para>Modifies attributes of an instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5870,7 +6820,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改app</para>
+        /// <para>Modify attributes of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5931,7 +6881,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改app</para>
+        /// <para>Modify attributes of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5992,7 +6942,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改app</para>
+        /// <para>Modify attributes of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6010,7 +6960,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改app</para>
+        /// <para>Modify attributes of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6028,7 +6978,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改密钥对名称</para>
+        /// <para>Modifies Android Debug Bridge (ADB) key pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6081,7 +7031,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改密钥对名称</para>
+        /// <para>Modifies Android Debug Bridge (ADB) key pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6134,7 +7084,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改密钥对名称</para>
+        /// <para>Modifies Android Debug Bridge (ADB) key pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6152,7 +7102,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改密钥对名称</para>
+        /// <para>Modifies Android Debug Bridge (ADB) key pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6170,7 +7120,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改policy</para>
+        /// <para>Modifies a policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6261,7 +7211,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改policy</para>
+        /// <para>Modifies a policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6352,7 +7302,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改policy</para>
+        /// <para>Modifies a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6370,7 +7320,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改policy</para>
+        /// <para>Modifies a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6388,7 +7338,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>操作App</para>
+        /// <para>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6445,7 +7395,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>操作App</para>
+        /// <para>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6502,7 +7452,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>操作App</para>
+        /// <para>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6520,7 +7470,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>操作App</para>
+        /// <para>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6538,8 +7488,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启安卓实例</para>
+        /// <para>Restarts one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you restart a cloud phone instance, make sure it is in one of the following states: <b>Available, Abnormal, Backup failure, and Restoration failure</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RebootAndroidInstancesInGroupRequest
@@ -6591,8 +7546,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启安卓实例</para>
+        /// <para>Restarts one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you restart a cloud phone instance, make sure it is in one of the following states: <b>Available, Abnormal, Backup failure, and Restoration failure</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RebootAndroidInstancesInGroupRequest
@@ -6644,8 +7604,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启安卓实例</para>
+        /// <para>Restarts one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you restart a cloud phone instance, make sure it is in one of the following states: <b>Available, Abnormal, Backup failure, and Restoration failure</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RebootAndroidInstancesInGroupRequest
@@ -6662,8 +7627,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启安卓实例</para>
+        /// <para>Restarts one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you restart a cloud phone instance, make sure it is in one of the following states: <b>Available, Abnormal, Backup failure, and Restoration failure</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RebootAndroidInstancesInGroupRequest
@@ -6680,8 +7650,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据恢复</para>
+        /// <para>Restores backup files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to restore only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RecoveryFileRequest
@@ -6749,8 +7724,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据恢复</para>
+        /// <para>Restores backup files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to restore only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RecoveryFileRequest
@@ -6818,8 +7798,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据恢复</para>
+        /// <para>Restores backup files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to restore only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RecoveryFileRequest
@@ -6836,8 +7821,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据恢复</para>
+        /// <para>Restores backup files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to restore only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RecoveryFileRequest
@@ -6854,7 +7844,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费安卓实例组</para>
+        /// <para>Renews instance groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6915,7 +7905,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费安卓实例组</para>
+        /// <para>Renews instance groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6976,7 +7966,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费安卓实例组</para>
+        /// <para>Renews instance groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6994,7 +7984,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费安卓实例组</para>
+        /// <para>Renews instance groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7012,8 +8002,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置安卓实例</para>
+        /// <para>Resets one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you reset a cloud phone instance, make sure it is in one of the following states: <b>Available, Stopped, Abnormal, Backup failure, and Restoration failure</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetAndroidInstancesInGroupRequest
@@ -7061,8 +8056,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置安卓实例</para>
+        /// <para>Resets one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you reset a cloud phone instance, make sure it is in one of the following states: <b>Available, Stopped, Abnormal, Backup failure, and Restoration failure</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetAndroidInstancesInGroupRequest
@@ -7110,8 +8110,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置安卓实例</para>
+        /// <para>Resets one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you reset a cloud phone instance, make sure it is in one of the following states: <b>Available, Stopped, Abnormal, Backup failure, and Restoration failure</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetAndroidInstancesInGroupRequest
@@ -7128,8 +8133,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置安卓实例</para>
+        /// <para>Resets one or more cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you reset a cloud phone instance, make sure it is in one of the following states: <b>Available, Stopped, Abnormal, Backup failure, and Restoration failure</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetAndroidInstancesInGroupRequest
@@ -7146,7 +8156,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过eds agent通道下发命令</para>
+        /// <para>Executes a command on a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7207,7 +8217,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过eds agent通道下发命令</para>
+        /// <para>Executes a command on a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7268,7 +8278,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过eds agent通道下发命令</para>
+        /// <para>Executes a command on a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7286,7 +8296,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过eds agent通道下发命令</para>
+        /// <para>Executes a command on a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7304,8 +8314,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送文件到云手机</para>
+        /// <para>Pushes files from Object Storage Service (OSS) buckets to cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to only push files or folders from OSS buckets to cloud phone instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendFileRequest
@@ -7369,8 +8384,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送文件到云手机</para>
+        /// <para>Pushes files from Object Storage Service (OSS) buckets to cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to only push files or folders from OSS buckets to cloud phone instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendFileRequest
@@ -7434,8 +8454,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送文件到云手机</para>
+        /// <para>Pushes files from Object Storage Service (OSS) buckets to cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to only push files or folders from OSS buckets to cloud phone instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendFileRequest
@@ -7452,8 +8477,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送文件到云手机</para>
+        /// <para>Pushes files from Object Storage Service (OSS) buckets to cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to only push files or folders from OSS buckets to cloud phone instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendFileRequest
@@ -7470,8 +8500,175 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例开机</para>
+        /// <para>Sets the authentication status for cloud phone instances. If you enable Android Debug Bridge (ADB) authentication for cloud phone instances, the system will verify the validity of the ADB key pairs provided by end users when they connect to the instances over ADB. To ensure successful authentication and a proper connection, we recommend that you attach ADB key pairs to cloud phone instances. If you disable ADB authentication for cloud phone instances, the system will no longer verify the validity of any ADB key pairs. As a result, end users can connect to the cloud phone instances over ADB without authentication, provided the network connection is functioning properly.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the desired cloud phone instance is in the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetAdbSecureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAdbSecureResponse
+        /// </returns>
+        public SetAdbSecureResponse SetAdbSecureWithOptions(SetAdbSecureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAdbSecure",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SetAdbSecureResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SetAdbSecureResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the authentication status for cloud phone instances. If you enable Android Debug Bridge (ADB) authentication for cloud phone instances, the system will verify the validity of the ADB key pairs provided by end users when they connect to the instances over ADB. To ensure successful authentication and a proper connection, we recommend that you attach ADB key pairs to cloud phone instances. If you disable ADB authentication for cloud phone instances, the system will no longer verify the validity of any ADB key pairs. As a result, end users can connect to the cloud phone instances over ADB without authentication, provided the network connection is functioning properly.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the desired cloud phone instance is in the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetAdbSecureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAdbSecureResponse
+        /// </returns>
+        public async Task<SetAdbSecureResponse> SetAdbSecureWithOptionsAsync(SetAdbSecureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAdbSecure",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SetAdbSecureResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SetAdbSecureResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the authentication status for cloud phone instances. If you enable Android Debug Bridge (ADB) authentication for cloud phone instances, the system will verify the validity of the ADB key pairs provided by end users when they connect to the instances over ADB. To ensure successful authentication and a proper connection, we recommend that you attach ADB key pairs to cloud phone instances. If you disable ADB authentication for cloud phone instances, the system will no longer verify the validity of any ADB key pairs. As a result, end users can connect to the cloud phone instances over ADB without authentication, provided the network connection is functioning properly.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the desired cloud phone instance is in the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetAdbSecureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAdbSecureResponse
+        /// </returns>
+        public SetAdbSecureResponse SetAdbSecure(SetAdbSecureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetAdbSecureWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the authentication status for cloud phone instances. If you enable Android Debug Bridge (ADB) authentication for cloud phone instances, the system will verify the validity of the ADB key pairs provided by end users when they connect to the instances over ADB. To ensure successful authentication and a proper connection, we recommend that you attach ADB key pairs to cloud phone instances. If you disable ADB authentication for cloud phone instances, the system will no longer verify the validity of any ADB key pairs. As a result, end users can connect to the cloud phone instances over ADB without authentication, provided the network connection is functioning properly.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the desired cloud phone instance is in the Running state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetAdbSecureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAdbSecureResponse
+        /// </returns>
+        public async Task<SetAdbSecureResponse> SetAdbSecureAsync(SetAdbSecureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetAdbSecureWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only supports starting when the instance is in the <b>Stopped, Backup Failed, or Recovery Failed</b> state.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAndroidInstanceRequest
@@ -7519,8 +8716,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例开机</para>
+        /// <para>Start instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only supports starting when the instance is in the <b>Stopped, Backup Failed, or Recovery Failed</b> state.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAndroidInstanceRequest
@@ -7568,8 +8770,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例开机</para>
+        /// <para>Start instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only supports starting when the instance is in the <b>Stopped, Backup Failed, or Recovery Failed</b> state.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAndroidInstanceRequest
@@ -7586,8 +8793,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例开机</para>
+        /// <para>Start instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only supports starting when the instance is in the <b>Stopped, Backup Failed, or Recovery Failed</b> state.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAndroidInstanceRequest
@@ -7604,8 +8816,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例关机</para>
+        /// <para>Stops a cloud phone instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you stop a cloud phone instance, make sure it is in one of the following states: <b>Available, Backup failure, and Restoration failure</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAndroidInstanceRequest
@@ -7657,8 +8874,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例关机</para>
+        /// <para>Stops a cloud phone instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you stop a cloud phone instance, make sure it is in one of the following states: <b>Available, Backup failure, and Restoration failure</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAndroidInstanceRequest
@@ -7710,8 +8932,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例关机</para>
+        /// <para>Stops a cloud phone instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you stop a cloud phone instance, make sure it is in one of the following states: <b>Available, Backup failure, and Restoration failure</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAndroidInstanceRequest
@@ -7728,8 +8955,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例关机</para>
+        /// <para>Stops a cloud phone instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you stop a cloud phone instance, make sure it is in one of the following states: <b>Available, Backup failure, and Restoration failure</b>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAndroidInstanceRequest
@@ -7746,7 +8978,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载app</para>
+        /// <para>Uninstalls an app from multiple cloud phone instances. This operation runs asynchronously. You can check the result of the task by using the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7803,7 +9035,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载app</para>
+        /// <para>Uninstalls an app from multiple cloud phone instances. This operation runs asynchronously. You can check the result of the task by using the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7860,7 +9092,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载app</para>
+        /// <para>Uninstalls an app from multiple cloud phone instances. This operation runs asynchronously. You can check the result of the task by using the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7878,7 +9110,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载app</para>
+        /// <para>Uninstalls an app from multiple cloud phone instances. This operation runs asynchronously. You can check the result of the task by using the task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7896,7 +9128,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改自定义镜像名称</para>
+        /// <para>Updates the name of a custom image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7949,7 +9181,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改自定义镜像名称</para>
+        /// <para>Updates the name of a custom image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8002,7 +9234,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改自定义镜像名称</para>
+        /// <para>Updates the name of a custom image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8020,7 +9252,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改自定义镜像名称</para>
+        /// <para>Updates the name of a custom image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8038,8 +9270,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例组变更镜像</para>
+        /// <para>Changes the image of an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure the image is in the Available state and the region of the image is included in the region list of the desired instance group. In addition, the instance group itself is available.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateInstanceGroupImageRequest
@@ -8091,8 +9328,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例组变更镜像</para>
+        /// <para>Changes the image of an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure the image is in the Available state and the region of the image is included in the region list of the desired instance group. In addition, the instance group itself is available.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateInstanceGroupImageRequest
@@ -8144,8 +9386,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例组变更镜像</para>
+        /// <para>Changes the image of an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure the image is in the Available state and the region of the image is included in the region list of the desired instance group. In addition, the instance group itself is available.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateInstanceGroupImageRequest
@@ -8162,8 +9409,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例组变更镜像</para>
+        /// <para>Changes the image of an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure the image is in the Available state and the region of the image is included in the region list of the desired instance group. In addition, the instance group itself is available.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateInstanceGroupImageRequest
@@ -8180,8 +9432,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安卓实例组扩容</para>
+        /// <para>Upgrades an instance group. Currently, this operation allows you to only increase the number of instances in an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to only increase the size of an instance group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradeAndroidInstanceGroupRequest
@@ -8237,8 +9494,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安卓实例组扩容</para>
+        /// <para>Upgrades an instance group. Currently, this operation allows you to only increase the number of instances in an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to only increase the size of an instance group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradeAndroidInstanceGroupRequest
@@ -8294,8 +9556,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安卓实例组扩容</para>
+        /// <para>Upgrades an instance group. Currently, this operation allows you to only increase the number of instances in an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to only increase the size of an instance group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradeAndroidInstanceGroupRequest
@@ -8312,8 +9579,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安卓实例组扩容</para>
+        /// <para>Upgrades an instance group. Currently, this operation allows you to only increase the number of instances in an instance group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation allows you to only increase the size of an instance group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradeAndroidInstanceGroupRequest

@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DetachKeyPairRequest : TeaModel {
+        /// <summary>
+        /// <para>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</para>
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
+        /// <para>The ID of the ADB key pair.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

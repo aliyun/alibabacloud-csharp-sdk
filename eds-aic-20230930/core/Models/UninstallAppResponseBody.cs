@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class UninstallAppResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E5138F7E-46B5-526A-8C99-82DEAE6B****</para>
         /// </summary>
@@ -17,6 +19,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>t-1ljew7on6ay0j****</para>
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

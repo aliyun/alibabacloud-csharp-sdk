@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DeletePolicyGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the policies.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PolicyGroupIds")]

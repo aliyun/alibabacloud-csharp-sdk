@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ModifyKeyPairNameRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the ADB key pair.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string KeyPairId { get; set; }
 
         /// <summary>
+        /// <para>The name of the ADB key pair.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

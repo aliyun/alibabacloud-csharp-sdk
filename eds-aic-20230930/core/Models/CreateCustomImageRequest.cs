@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateCustomImageRequest : TeaModel {
+        /// <summary>
+        /// <para>Idempotent parameter. Default is empty, with a maximum length of 100 characters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20393E53-8FF1-524C-B494-B478A5369733</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>Image description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>create for cc5g group auth rules test</para>
         /// </summary>
@@ -22,6 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Image name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +41,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ImageName { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

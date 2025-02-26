@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ImportKeyPairRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the ADB key pair.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
+        /// <para>The public key of the ADB key pair.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

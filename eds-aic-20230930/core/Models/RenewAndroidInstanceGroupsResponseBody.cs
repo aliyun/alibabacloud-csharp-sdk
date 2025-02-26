@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RenewAndroidInstanceGroupsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the order.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22326560487****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4B886792-2051-5DB4-8AE6-C8E45D3B4****</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CheckResourceStockRequest : TeaModel {
         /// <summary>
+        /// <para>Specification ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acp.basic.small</para>
         /// </summary>
@@ -22,6 +24,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Amount { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +39,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? GpuAcceleration { get; set; }
 
         /// <summary>
+        /// <para>The availability zone of the resource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DistributeImageResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>440D7342-5FC2-5E7C-B2DB-D0B4EAC2BDF1</para>
         /// </summary>

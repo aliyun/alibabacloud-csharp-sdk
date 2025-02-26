@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ModifyAndroidInstanceGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6C83EBE3-F267-5F11-ABF8-4E7B90B****</para>
         /// </summary>

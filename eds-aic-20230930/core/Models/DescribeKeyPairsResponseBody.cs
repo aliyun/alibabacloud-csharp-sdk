@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeKeyPairsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The objects that are returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeKeyPairsResponseBodyData> Data { get; set; }
         public class DescribeKeyPairsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The time when the ADB key pair was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-10-11T08:53:32Z</para>
             /// </summary>
@@ -22,14 +27,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
+            /// <para>The ID of the ADB key pair.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>kp-6v2q33ae4tw3*****</para>
+            /// <para>kp-6v2q33ae4tw3a****</para>
             /// </summary>
             [NameInMap("KeyPairId")]
             [Validation(Required=false)]
             public string KeyPairId { get; set; }
 
             /// <summary>
+            /// <para>The name of the ADB key pair.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testKeyPairName</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FFbc8N4E1iOlcSxC+8boa0HHH2LKWbggYUinyrZWvtS1oTrMYCg1HuMLGuftj0****</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>565FB06A-AE04-5AD0-8A32-5BA92CA5****</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

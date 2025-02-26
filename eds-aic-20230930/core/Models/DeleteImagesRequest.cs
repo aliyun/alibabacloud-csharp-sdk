@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DeleteImagesRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the images.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ImageIds")]

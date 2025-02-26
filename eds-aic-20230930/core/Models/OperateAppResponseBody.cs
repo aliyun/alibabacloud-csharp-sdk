@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class OperateAppResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>425F351C-3F8E-5218-A520-B6311D0D****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>t-imr0fufqgac2z****</para>
         /// </summary>

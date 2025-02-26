@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeAndroidInstanceGroupsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the instance group.</para>
+        /// </summary>
         [NameInMap("InstanceGroupModel")]
         [Validation(Required=false)]
         public List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel> InstanceGroupModel { get; set; }
         public class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel : TeaModel {
             /// <summary>
+            /// <para>The ID of the delivery group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>aig-48xr63m4dybjk****</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
+            /// <para>The type of the architecture.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ARM</para>
             /// </summary>
@@ -29,11 +36,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string ArchitectureType { get; set; }
 
+            /// <summary>
+            /// <para>Number of instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("AvailableInstanceAmount")]
             [Validation(Required=false)]
             public int? AvailableInstanceAmount { get; set; }
 
             /// <summary>
+            /// <para>The billing method.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
             /// </summary>
@@ -42,6 +57,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ChargeType { get; set; }
 
             /// <summary>
+            /// <para>The number of vCPUs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -49,11 +66,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string Cpu { get; set; }
 
+            /// <summary>
+            /// <para>The disks.</para>
+            /// </summary>
             [NameInMap("Disks")]
             [Validation(Required=false)]
             public List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks> Disks { get; set; }
             public class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks : TeaModel {
                 /// <summary>
+                /// <para>The size of the disk. Unit: GB.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
                 /// </summary>
@@ -62,6 +84,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public int? DiskSize { get; set; }
 
                 /// <summary>
+                /// <para>The type of the disk.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SYSTEM</para>
                 /// </summary>
@@ -71,11 +95,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             }
 
+            /// <summary>
+            /// <para>The error code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
 
             /// <summary>
+            /// <para>The time when the instance group was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-02-01 10:56:36</para>
             /// </summary>
@@ -84,6 +116,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The time when the subscription instance group expires.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2027-06-29 07:25:31</para>
             /// </summary>
@@ -92,6 +126,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtExpired { get; set; }
 
             /// <summary>
+            /// <para>The time when the instance group was updated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-02-01 10:56:36</para>
             /// </summary>
@@ -100,6 +136,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The ID of the image.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>imgc-06zyt9m93zwax****</para>
             /// </summary>
@@ -107,11 +145,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
+            /// <summary>
+            /// <para>The list of installed applications.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;TikTok&quot;,&quot;WeChat&quot;</para>
+            /// </summary>
             [NameInMap("InstalledAppList")]
             [Validation(Required=false)]
             public string InstalledAppList { get; set; }
 
             /// <summary>
+            /// <para>The ID of the instance group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ag-h67a2cs0zprfdh****</para>
             /// </summary>
@@ -119,11 +165,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string InstanceGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the instance group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>defaultInstanceGroup</para>
+            /// </summary>
             [NameInMap("InstanceGroupName")]
             [Validation(Required=false)]
             public string InstanceGroupName { get; set; }
 
             /// <summary>
+            /// <para>The specifications of the instance group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>acp.basic.small</para>
             /// </summary>
@@ -132,6 +186,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceGroupSpec { get; set; }
 
             /// <summary>
+            /// <para>The description of the instance group specifications.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ARM-2vCPU4GiB 32GiB</para>
             /// </summary>
@@ -140,6 +196,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceGroupSpecDescribe { get; set; }
 
             /// <summary>
+            /// <para>The status of the instance group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -148,6 +206,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceGroupStatus { get; set; }
 
             /// <summary>
+            /// <para>The memory size.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -156,6 +216,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? Memory { get; set; }
 
             /// <summary>
+            /// <para>The number of instances in the instance group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -164,6 +226,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string NumberOfInstances { get; set; }
 
             /// <summary>
+            /// <para>The ID of the network.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai+dir-030598****</para>
             /// </summary>
@@ -172,6 +236,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the policy.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pg-c6n38xucps8kl****</para>
             /// </summary>
@@ -180,6 +246,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string PolicyGroupId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -187,11 +255,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>The rendering type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CPU</para>
+            /// </summary>
             [NameInMap("RenderingType")]
             [Validation(Required=false)]
             public string RenderingType { get; set; }
 
             /// <summary>
+            /// <para>The height of the resolution.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1280</para>
             /// </summary>
@@ -200,6 +276,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? ResolutionHeight { get; set; }
 
             /// <summary>
+            /// <para>The width of the resolution.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>720</para>
             /// </summary>
@@ -208,6 +286,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? ResolutionWidth { get; set; }
 
             /// <summary>
+            /// <para>The sales mode.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>standard</para>
             /// </summary>
@@ -216,6 +296,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string SaleMode { get; set; }
 
             /// <summary>
+            /// <para>The version of the operating system.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Android 12</para>
             /// </summary>
@@ -224,6 +306,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string SystemVersion { get; set; }
 
             /// <summary>
+            /// <para>The ID of the vSwitch.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vsw-t4n0yqs009ho024wt****</para>
             /// </summary>
@@ -234,6 +318,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</para>
         /// </summary>
@@ -242,6 +328,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</para>
         /// </summary>
@@ -250,6 +338,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
