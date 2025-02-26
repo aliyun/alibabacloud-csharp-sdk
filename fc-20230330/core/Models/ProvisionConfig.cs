@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>acs:fc:cn-shanghai:124:functions/myFunction</para>
+        /// <para>acs:fc:cn-shanghai:124:functions/myFunction/prod</para>
         /// </summary>
         [NameInMap("functionArn")]
         [Validation(Required=false)]
