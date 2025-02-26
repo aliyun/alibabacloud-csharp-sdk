@@ -441,6 +441,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             [Validation(Required=false)]
             public bool? GlobalStatus { get; set; }
 
+            [NameInMap("HasUpgrade")]
+            [Validation(Required=false)]
+            public bool? HasUpgrade { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>false</para>
@@ -508,6 +512,46 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }
+
+            [NameInMap("OsUpdate")]
+            [Validation(Required=false)]
+            public DescribeUserResourcesResponseBodyResourcesOsUpdate OsUpdate { get; set; }
+            public class DescribeUserResourcesResponseBodyResourcesOsUpdate : TeaModel {
+                [NameInMap("CheckId")]
+                [Validation(Required=false)]
+                public string CheckId { get; set; }
+
+                [NameInMap("KbListString")]
+                [Validation(Required=false)]
+                public string KbListString { get; set; }
+
+                [NameInMap("PackageCount")]
+                [Validation(Required=false)]
+                public int? PackageCount { get; set; }
+
+                [NameInMap("Packages")]
+                [Validation(Required=false)]
+                public List<DescribeUserResourcesResponseBodyResourcesOsUpdatePackages> Packages { get; set; }
+                public class DescribeUserResourcesResponseBodyResourcesOsUpdatePackages : TeaModel {
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    [NameInMap("Kb")]
+                    [Validation(Required=false)]
+                    public string Kb { get; set; }
+
+                    [NameInMap("Title")]
+                    [Validation(Required=false)]
+                    public string Title { get; set; }
+
+                }
+
+                [NameInMap("UpdateCatalogUrl")]
+                [Validation(Required=false)]
+                public string UpdateCatalogUrl { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>

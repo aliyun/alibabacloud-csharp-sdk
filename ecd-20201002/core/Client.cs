@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             {
                 query["SessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetStatus))
+            {
+                query["TargetStatus"] = request.TargetStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
             {
                 query["Uuid"] = request.Uuid;
@@ -153,6 +157,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetStatus))
+            {
+                query["TargetStatus"] = request.TargetStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
             {
