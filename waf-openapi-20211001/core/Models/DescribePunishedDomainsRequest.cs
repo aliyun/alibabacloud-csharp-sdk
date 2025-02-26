@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribePunishedDomainsRequest : TeaModel {
         /// <summary>
-        /// <para>The domain names.</para>
+        /// <para>The domain names that are added to WAF.</para>
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>beian</para>
+        /// </summary>
         [NameInMap("PunishType")]
         [Validation(Required=false)]
         public string PunishType { get; set; }

@@ -282,6 +282,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string Note { get; set; }
 
+            /// <summary>
+            /// <para>The list of protection objects corresponding to this asset.</para>
+            /// </summary>
+            [NameInMap("Resources")]
+            [Validation(Required=false)]
+            public List<string> Resources { get; set; }
+
         }
 
         /// <summary>

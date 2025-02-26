@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the listeners.</para>
+        /// <para>The listener configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Listen")]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ListenShrink { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the forwarding rule.</para>
+        /// <para>The forwarding configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Redirect")]
@@ -89,14 +89,29 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The tags. You can specify up to 20 tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDomainShrinkRequestTag> Tag { get; set; }
         public class CreateDomainShrinkRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Tagkey1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TagValue1</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the domain name.</para>
+        /// <para>The information about the domain name that is added.</para>
         /// </summary>
         [NameInMap("DomainInfo")]
         [Validation(Required=false)]
@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            /// <summary>
+            /// <para>The name of the protected object that is generated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></para>
+            /// </summary>
             [NameInMap("DomainId")]
             [Validation(Required=false)]
             public string DomainId { get; set; }

@@ -17,6 +17,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeApisecStatisticsResponseBodyData Data { get; set; }
         public class DescribeApisecStatisticsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The number of handled events.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Actioned")]
+            [Validation(Required=false)]
+            public long? Actioned { get; set; }
+
+            /// <summary>
             /// <para>The number of APIs.</para>
             /// 
             /// <b>Example:</b>

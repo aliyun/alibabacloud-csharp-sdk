@@ -110,6 +110,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
+        [NameInMap("ResponseHeaders")]
+        [Validation(Required=false)]
+        public List<ModifyDefenseResourceXffRequestResponseHeaders> ResponseHeaders { get; set; }
+        public class ModifyDefenseResourceXffRequestResponseHeaders : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Specifies whether a Layer 7 proxy is deployed in front of WAF. Layer 7 proxies include Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:</para>
         /// <list type="bullet">

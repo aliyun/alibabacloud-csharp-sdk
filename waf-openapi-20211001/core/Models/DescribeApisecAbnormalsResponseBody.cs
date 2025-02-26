@@ -185,6 +185,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? LastestTime { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>1684252800</para>
+            /// </summary>
+            [NameInMap("LatestDiscoverTime")]
+            [Validation(Required=false)]
+            public long? LatestDiscoverTime { get; set; }
+
+            /// <summary>
             /// <para>The domain name or IP address of the API.</para>
             /// 
             /// <b>Example:</b>

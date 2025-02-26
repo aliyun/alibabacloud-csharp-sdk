@@ -182,6 +182,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string ResourceOrigin { get; set; }
 
+            [NameInMap("ResponseHeaders")]
+            [Validation(Required=false)]
+            public List<DescribeDefenseResourcesResponseBodyResourcesResponseHeaders> ResponseHeaders { get; set; }
+            public class DescribeDefenseResourcesResponseBodyResourcesResponseHeaders : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
             /// <para>Indicates whether the X-Forwarded-For (XFF) header is used.</para>
             /// 

@@ -87,10 +87,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RequestTime { get; set; }
 
             /// <summary>
-            /// <para>The sensitive data.</para>
+            /// <para>The sensitive data. The value of this parameter is a JSON string that contains multiple parameters. The Key of JSON is the sensitive information type identifier (including default and custom types), and the Value is the sensitive information data list.</para>
+            /// <remarks>
+            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of sensitive data.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>A0Y5MPH3P</para>
+            /// <para>{
+            ///           &quot;1000&quot;:[ 
+            ///               &quot;90.88.49.19&quot;,
+            ///               &quot;90.88.49.19&quot;
+            ///           ],
+            ///           &quot;835436&quot;:[ 
+            ///               &quot;<a href="http://www.abc.com">www.abc.com</a>&quot;
+            ///           ]
+            /// }</para>
             /// </summary>
             [NameInMap("SensitiveList")]
             [Validation(Required=false)]

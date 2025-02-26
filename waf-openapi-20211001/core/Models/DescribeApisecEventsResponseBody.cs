@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public class DescribeApisecEventsResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The number of attacks.</para>
+            /// <remarks>
+            /// <para>Notice: The parameter has been deprecated, please use the Attackips parameter.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -104,6 +107,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [NameInMap("AttackIpInfo")]
             [Validation(Required=false)]
             public string AttackIpInfo { get; set; }
+
+            /// <summary>
+            /// <para>The source IP addresses of the attacks.</para>
+            /// </summary>
+            [NameInMap("AttackIps")]
+            [Validation(Required=false)]
+            public List<string> AttackIps { get; set; }
 
             /// <summary>
             /// <para>The end of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</para>
