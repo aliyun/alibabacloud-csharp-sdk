@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class GenericAdvancedSearchRequest : TeaModel {
+        [NameInMap("industry")]
+        [Validation(Required=false)]
+        public string Industry { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>

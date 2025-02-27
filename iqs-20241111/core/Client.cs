@@ -235,6 +235,10 @@ namespace AlibabaCloud.SDK.IQS20241111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
+            {
+                query["industry"] = request.Industry;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["query"] = request.Query;
@@ -296,6 +300,10 @@ namespace AlibabaCloud.SDK.IQS20241111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
+            {
+                query["industry"] = request.Industry;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["query"] = request.Query;
