@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
 {
     public class RunDataAnalysisRequest : TeaModel {
+        [NameInMap("agentCtrlParams")]
+        [Validation(Required=false)]
+        public object AgentCtrlParams { get; set; }
+
         [NameInMap("dataRole")]
         [Validation(Required=false)]
         public List<string> DataRole { get; set; }

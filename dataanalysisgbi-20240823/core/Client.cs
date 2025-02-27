@@ -2999,6 +2999,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentCtrlParams))
+            {
+                body["agentCtrlParams"] = request.AgentCtrlParams;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRole))
             {
                 body["dataRole"] = request.DataRole;
@@ -3072,6 +3076,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentCtrlParams))
+            {
+                body["agentCtrlParams"] = request.AgentCtrlParams;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRole))
             {
                 body["dataRole"] = request.DataRole;
