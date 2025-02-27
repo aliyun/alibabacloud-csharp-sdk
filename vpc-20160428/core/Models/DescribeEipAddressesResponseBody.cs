@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeEipAddressesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the EIPs.</para>
+        /// <para>Details of the EIPs.</para>
         /// </summary>
         [NameInMap("EipAddresses")]
         [Validation(Required=false)]
@@ -476,15 +476,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string SegmentInstanceId { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the service provider to which the managed instance belongs.</para>
+                /// <remarks>
+                /// <para>This is only valid when the ServiceManaged parameter is set to True.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>197*************</para>
+                /// </summary>
                 [NameInMap("ServiceID")]
                 [Validation(Required=false)]
                 public long? ServiceID { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the resource is created by the service account. Valid values:</para>
+                /// <para>Indicates whether the instance is managed. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b></description></item>
-                /// <item><description><b>1</b></description></item>
+                /// <item><description><b>1</b>: yes</description></item>
+                /// <item><description><b>0</b>: no</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

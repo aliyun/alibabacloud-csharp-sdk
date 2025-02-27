@@ -52,7 +52,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
         /// <item><description>The name must be 3 to 63 characters in length.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FlowLogStore</para>
@@ -76,7 +75,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
         /// <item><description>The name must be 3 to 63 characters in length.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FlowLogProject</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class TransformEipSegmentToPublicIpAddressPoolResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the IP address pool.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pippool-6wetvn6fumkgycssx****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PublicIpAddressPoolId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group to which the IP address pool belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4pcdvf****</para>
         /// </summary>

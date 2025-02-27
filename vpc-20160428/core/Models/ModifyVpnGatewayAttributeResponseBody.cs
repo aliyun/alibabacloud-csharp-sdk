@@ -122,8 +122,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the VPN gateway.</para>
-        /// <para>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in single-tunnel mode.</para>
+        /// <para>The private IP address of the vSwitch that is used by the system when the VPN gateway is deployed.</para>
+        /// <para>The parameter is returned only for VPN gateways that support single-tunnel IPsec-VPN connections. The IPsec-VPN feature must be enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.27.30.24</para>
@@ -153,6 +153,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group to which the VPN gateway belongs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzs372yg****</para>
         /// </summary>

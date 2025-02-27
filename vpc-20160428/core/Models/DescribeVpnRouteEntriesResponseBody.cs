@@ -49,6 +49,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>The information about route entries of the VPN gateway in dual-tunnel mode.</para>
+        /// <remarks>
+        /// <para>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in dual-tunnel mode.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("VpnRouteCounts")]
         [Validation(Required=false)]
         public DescribeVpnRouteEntriesResponseBodyVpnRouteCounts VpnRouteCounts { get; set; }
@@ -57,14 +63,40 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount> VpnRouteCount { get; set; }
             public class DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount : TeaModel {
+                /// <summary>
+                /// <para>The number of route entries.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("RouteCount")]
                 [Validation(Required=false)]
                 public int? RouteCount { get; set; }
 
+                /// <summary>
+                /// <para>The route type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>custom</b> (default): destination-based route.</description></item>
+                /// <item><description><b>bgp</b> : BGP route entry.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>bgp</para>
+                /// </summary>
                 [NameInMap("RouteEntryType")]
                 [Validation(Required=false)]
                 public string RouteEntryType { get; set; }
 
+                /// <summary>
+                /// <para>The source of the BGP route. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>CLOUD</b>: advertised from a cloud service associated with the VPN gateway.</description></item>
+                /// <item><description><b>VPN_BGP</b>: indicates that the current route is learned by using BGP of the VPN gateway. For example, the BGP is used to learn the route of the on-premises data center.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>VPN_BGP</para>
+                /// </summary>
                 [NameInMap("Source")]
                 [Validation(Required=false)]
                 public string Source { get; set; }
@@ -74,7 +106,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The list of route entries.</para>
+        /// <para>The route entry list.</para>
         /// </summary>
         [NameInMap("VpnRouteEntries")]
         [Validation(Required=false)]
@@ -162,7 +194,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string RouteEntryType { get; set; }
 
                 /// <summary>
-                /// <para>The source CIDR block of the route entry.</para>
+                /// <para>The source of the BGP route. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>CLOUD</b>: advertised from a cloud service associated with the VPN gateway.</description></item>
+                /// <item><description><b>VPN_BGP</b>: indicates that the current route is learned by using BGP of the VPN gateway. For example, the BGP is used to learn the route of the on-premises data center.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.10.0/24</para>

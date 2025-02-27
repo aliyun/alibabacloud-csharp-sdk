@@ -278,6 +278,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string SegmentInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the instance is managed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
+        /// </list>
+        /// <para>If you do not specify this parameter, all instances are queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("ServiceManaged")]
         [Validation(Required=false)]
         public bool? ServiceManaged { get; set; }

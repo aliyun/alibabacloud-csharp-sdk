@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>VpcPeer</b>: a VPC peering connection.</description></item>
         /// <item><description><b>Ipv4Gateway</b>: an IPv4 gateway.</description></item>
         /// <item><description><b>GatewayEndpoint</b>: a gateway endpoint.</description></item>
-        /// <item><description><b>Ecr</b>: a Express Connect Router (ECR).</description></item>
+        /// <item><description><b>Ecr</b>: an Express Connect Router (ECR).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

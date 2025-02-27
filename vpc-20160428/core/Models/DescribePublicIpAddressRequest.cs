@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribePublicIpAddressRequest : TeaModel {
+        /// <summary>
+        /// <para>The IP version. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IPv4</b> (default)</description></item>
+        /// <item><description><b>IPv6</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ipv4</para>
+        /// </summary>
         [NameInMap("IpVersion")]
         [Validation(Required=false)]
         public string IpVersion { get; set; }

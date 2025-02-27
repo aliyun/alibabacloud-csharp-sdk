@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DissociateVpnGatewayWithCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The certificate ID.</para>
+        /// <para>The ID of the certificate.</para>
         /// <remarks>
-        /// <para>The certificate ID refers to the ID generated after the SSL certificate is associated with the VPN gateway. It is not the ID of the SSL certificate. You can call the <a href="https://help.aliyun.com/document_detail/2521961.html">ListVpnCertificateAssociations</a> operation to query certificate IDs.</para>
+        /// <para> The certificate ID refers to the ID generated after the SSL certificate is associated with the VPN gateway. It is not the ID of the SSL certificate.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

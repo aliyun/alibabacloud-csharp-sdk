@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreatePublicIpAddressPoolResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The ID of the IP address pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pippool-6wetvn6fumkgycssx****</para>
+        /// </summary>
         [NameInMap("PublicIpAddressPoolId")]
         [Validation(Required=false)]
         public string PublicIpAddressPoolId { get; set; }

@@ -1,3 +1,19 @@
+2025-02-27 Version: 6.12.0
+- Support API ModifyEipForwardMode.
+- Update API CreateFlowLog: update param LogStoreName.
+- Update API CreateFlowLog: update param ProjectName.
+- Update API CreateRouteEntries: update param RouteEntries.
+- Update API DeleteRouteEntries: update param RouteEntries.
+- Update API DeleteVSwitch: update response param.
+- Update API DeletionProtection: update response param.
+- Update API DescribeEipAddresses: update response param.
+- Update API DescribeIpv6Gateways: update response param.
+- Update API DescribeRouteEntryList: update param DestCidrBlockList.
+- Update API GetIpv4GatewayAttribute: update response param.
+- Update API ListDhcpOptionsSets: update response param.
+- Update API ListTrafficMirrorSessions: update response param.
+
+
 2025-02-10 Version: 6.11.3
 - Update API CreateRouteEntries: update param RouteEntries.
 - Update API DeleteRouteEntries: update param RouteEntries.
