@@ -4345,10 +4345,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is available only for ApsaraDB for Redis instances that meet the following requirements:<list type="bullet">
         /// <item><description>The instance is a Community Edition instance that uses a major version of 5.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4420,10 +4417,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is available only for ApsaraDB for Redis instances that meet the following requirements:<list type="bullet">
         /// <item><description>The instance is a Community Edition instance that uses a major version of 5.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4495,10 +4489,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is available only for ApsaraDB for Redis instances that meet the following requirements:<list type="bullet">
         /// <item><description>The instance is a Community Edition instance that uses a major version of 5.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4531,10 +4522,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is available only for ApsaraDB for Redis instances that meet the following requirements:<list type="bullet">
         /// <item><description>The instance is a Community Edition instance that uses a major version of 5.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4567,10 +4555,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is applicable only to ApsaraDB for Redis instances that meet the following requirements:<list type="bullet">
         /// <item><description>The ApsaraDB for Redis instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For more information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4638,10 +4623,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is applicable only to ApsaraDB for Redis instances that meet the following requirements:<list type="bullet">
         /// <item><description>The ApsaraDB for Redis instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For more information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4709,10 +4691,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is applicable only to ApsaraDB for Redis instances that meet the following requirements:<list type="bullet">
         /// <item><description>The ApsaraDB for Redis instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For more information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4745,10 +4724,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is applicable only to ApsaraDB for Redis instances that meet the following requirements:<list type="bullet">
         /// <item><description>The ApsaraDB for Redis instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For more information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6325,10 +6301,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is available only for an ApsaraDB for Redis instance of one of the following versions:<list type="bullet">
         /// <item><description>The instance is ApsaraDB for Redis Community Edition instances that use a major version of 5.0 or later or a performance-enhanced instance of the ApsaraDB for Redis Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6408,10 +6381,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is available only for an ApsaraDB for Redis instance of one of the following versions:<list type="bullet">
         /// <item><description>The instance is ApsaraDB for Redis Community Edition instances that use a major version of 5.0 or later or a performance-enhanced instance of the ApsaraDB for Redis Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6491,10 +6461,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is available only for an ApsaraDB for Redis instance of one of the following versions:<list type="bullet">
         /// <item><description>The instance is ApsaraDB for Redis Community Edition instances that use a major version of 5.0 or later or a performance-enhanced instance of the ApsaraDB for Redis Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6527,10 +6494,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is available only for an ApsaraDB for Redis instance of one of the following versions:<list type="bullet">
         /// <item><description>The instance is ApsaraDB for Redis Community Edition instances that use a major version of 5.0 or later or a performance-enhanced instance of the ApsaraDB for Redis Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6563,10 +6527,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is available only for an ApsaraDB for Redis instance of one of the following versions:<list type="bullet">
         /// <item><description>The instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> and <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6646,10 +6607,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is available only for an ApsaraDB for Redis instance of one of the following versions:<list type="bullet">
         /// <item><description>The instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> and <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6729,10 +6687,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is available only for an ApsaraDB for Redis instance of one of the following versions:<list type="bullet">
         /// <item><description>The instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> and <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6765,10 +6720,7 @@ namespace AlibabaCloud.SDK.DAS20200116
         /// <item><description>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</description></item>
         /// <item><description>This operation is available only for an ApsaraDB for Redis instance of one of the following versions:<list type="bullet">
         /// <item><description>The instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</description></item>
-        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.<remarks>
-        /// <para> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> and <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>The ApsaraDB for Redis instance is updated to the latest minor version.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -19310,6 +19262,10 @@ namespace AlibabaCloud.SDK.DAS20200116
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAudit))
+            {
+                query["EnableAudit"] = request.EnableAudit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
             {
                 query["Filters"] = request.Filters;
@@ -19391,6 +19347,10 @@ namespace AlibabaCloud.SDK.DAS20200116
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAudit))
+            {
+                query["EnableAudit"] = request.EnableAudit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
             {
                 query["Filters"] = request.Filters;

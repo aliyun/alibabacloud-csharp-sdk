@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        [NameInMap("EnableAudit")]
+        [Validation(Required=false)]
+        public bool? EnableAudit { get; set; }
+
         /// <summary>
         /// <para>A reserved parameter.</para>
         /// </summary>

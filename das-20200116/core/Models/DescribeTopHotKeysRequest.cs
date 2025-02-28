@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraDB for Redis instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID.</para>
+        /// <para>The ID of the ApsaraDB for Redis instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data shard on the ApsaraDB for Redis instance. You can call the <a href="https://help.aliyun.com/document_detail/190794.html">DescribeRoleZoneInfo</a> operation to query the ID.</para>
+        /// <para>The ID of the data shard on the ApsaraDB for Redis instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-****-db-0</para>
