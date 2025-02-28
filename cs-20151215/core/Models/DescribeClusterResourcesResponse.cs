@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The resource creator. Valid values:</para>
+            /// <para>The type of the resource creator. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>user: The resource is created by the user.</description></item>
             /// <item><description>system: The resource is created by the ACK management system.</description></item>

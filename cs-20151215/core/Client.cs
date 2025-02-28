@@ -6817,6 +6817,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["arch"] = request.Arch;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expired))
+            {
+                body["expired"] = request.Expired;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatDisk))
             {
                 body["format_disk"] = request.FormatDisk;
@@ -6889,6 +6893,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Arch))
             {
                 body["arch"] = request.Arch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expired))
+            {
+                body["expired"] = request.Expired;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatDisk))
             {
@@ -15537,9 +15545,17 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["resource_group_id"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                body["security_group_id"] = request.SecurityGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemEventsLogging))
             {
                 body["system_events_logging"] = request.SystemEventsLogging;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["timezone"] = request.Timezone;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchIds))
             {
@@ -15650,9 +15666,17 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["resource_group_id"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                body["security_group_id"] = request.SecurityGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemEventsLogging))
             {
                 body["system_events_logging"] = request.SystemEventsLogging;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["timezone"] = request.Timezone;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchIds))
             {

@@ -24,6 +24,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Arch { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1740037333</para>
+        /// </summary>
+        [NameInMap("expired")]
+        [Validation(Required=false)]
+        public long? Expired { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to mount data disks to an existing instance when you add the instance to the cluster. You can add data disks to store container data and images. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: mounts data disks to the existing instance that you want to add. After a data disk is mounted, the original data on the disk is erased. Back up data before you mount a data disk.</description></item>

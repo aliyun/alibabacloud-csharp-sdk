@@ -512,6 +512,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("security_group_id")]
+        [Validation(Required=false)]
+        public string SecurityGroupId { get; set; }
+
         /// <summary>
         /// <para>The storage configurations of system events.</para>
         /// </summary>
@@ -540,6 +544,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LoggingProject { get; set; }
 
         }
+
+        [NameInMap("timezone")]
+        [Validation(Required=false)]
+        public string Timezone { get; set; }
 
         /// <summary>
         /// <para>The vSwitches of the control plane. This parameter can be used to change the vSwitches of the control plane in an ACK managed cluster. Take note of the following items:</para>
