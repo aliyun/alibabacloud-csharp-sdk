@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operation.</para>
+        /// <para>The operation ID. You can call the GetExecuteOperationResult operation to asynchronously query the result of an operation. The ID expires after one hour.</para>
         /// 
         /// <b>Example:</b>
         /// <para>op_xxxxxxxxxxxxxxxxxx_ecs_modifyInstanceType_BYSOQGWUV6PME412_ERMEZLXNN3K9N3OL</para>

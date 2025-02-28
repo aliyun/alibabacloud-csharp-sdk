@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 {
     public class ListFoCreatedAppsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about disaster recovery plans.</para>
+        /// <para>The templates.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListFoCreatedAppsResponseBodyData> Data { get; set; }
         public class ListFoCreatedAppsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>应用ID</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>JIX9NEZUALGS46UI</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The URL of an error report.</para>
+            /// <para>The URL of the error report.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://api.aliyun.com/troubleshoot?q=ServiceUnavailable&product=BPStudio&requestId=4CDA03A3-C652-1408-8ABD-7E652A7CBFB6">https://api.aliyun.com/troubleshoot?q=ServiceUnavailable&amp;product=BPStudio&amp;requestId=4CDA03A3-C652-1408-8ABD-7E652A7CBFB6</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             public string ReportUrl { get; set; }
 
             /// <summary>
-            /// <para>The status of the disaster recovery plan.</para>
+            /// <para>The state of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Deployed_Success
@@ -59,6 +59,9 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
             /// <summary>
             /// <para>The title.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>容灾计划1</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         }
 
         /// <summary>
-        /// <para>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</para>
+        /// <para>The returned error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Cannot find region according to your domain.</para>

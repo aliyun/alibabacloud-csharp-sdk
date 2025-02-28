@@ -115,6 +115,34 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
 
             }
 
+            [NameInMap("ComplianceList")]
+            [Validation(Required=false)]
+            public List<GetApplicationResponseBodyDataComplianceList> ComplianceList { get; set; }
+            public class GetApplicationResponseBodyDataComplianceList : TeaModel {
+                [NameInMap("ResourceCode")]
+                [Validation(Required=false)]
+                public string ResourceCode { get; set; }
+
+                [NameInMap("ResourceName")]
+                [Validation(Required=false)]
+                public string ResourceName { get; set; }
+
+                [NameInMap("Rules")]
+                [Validation(Required=false)]
+                public List<GetApplicationResponseBodyDataComplianceListRules> Rules { get; set; }
+                public class GetApplicationResponseBodyDataComplianceListRules : TeaModel {
+                    [NameInMap("ruleDetail")]
+                    [Validation(Required=false)]
+                    public string RuleDetail { get; set; }
+
+                    [NameInMap("ruleId")]
+                    [Validation(Required=false)]
+                    public string RuleId { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <para>The time when the app was created</para>
             /// 

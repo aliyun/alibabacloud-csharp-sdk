@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Template DescriptionD</para>
+            /// <para>Template Description</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>remark</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

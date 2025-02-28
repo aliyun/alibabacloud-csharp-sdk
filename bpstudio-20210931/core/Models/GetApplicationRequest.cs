@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Queries the basic information, verification results, billing results, and deployment results of an application.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmyjt3c5om3hi</para>

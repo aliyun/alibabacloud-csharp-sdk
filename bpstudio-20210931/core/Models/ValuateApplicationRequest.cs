@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmyjt3c5om3hi</para>

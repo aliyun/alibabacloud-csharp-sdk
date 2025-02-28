@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         /// <para>This operation type is the operation type of modifying the product, some operation types are generic, and some are used alone. The following is an example of ECS deployment:</para>
         /// <list type="bullet">
         /// <item><description>The name of the ECS: rename</description></item>
-        /// <item><description>Specificationof ecs: modifyInstanceType</description></item>
+        /// <item><description>Specification of ecs: modifyInstanceType</description></item>
         /// <item><description>Startup of ecs: modifyInstanceType</description></item>
         /// <item><description>Stop of ecs: modifyInstanceType</description></item>
         /// <item><description>Restart of ecs: modifyInstanceType</description></item>
