@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateFeatureConsistencyCheckJobResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4</para>
+        /// </summary>
         [NameInMap("FeatureConsistencyCheckJobId")]
         [Validation(Required=false)]
         public string FeatureConsistencyCheckJobId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>7D59453C-48AA-5FC5-8848-2D373BD1A17F</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

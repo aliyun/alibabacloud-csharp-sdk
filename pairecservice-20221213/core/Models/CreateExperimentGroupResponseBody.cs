@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateExperimentGroupResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("ExperimentGroupId")]
         [Validation(Required=false)]
         public string ExperimentGroupId { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A04CB8C0-E74A-5E83-BC61-64D153574EC7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

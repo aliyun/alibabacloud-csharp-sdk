@@ -10,12 +10,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListCrowdUsersResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F0AB6527-093F-5C44-B3BD-42C8C210C619</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public long? TotalCount { get; set; }

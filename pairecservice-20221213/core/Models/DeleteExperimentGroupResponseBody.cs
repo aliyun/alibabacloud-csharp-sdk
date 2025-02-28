@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class DeleteExperimentGroupResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A009D9BE-C85E-57B2-AE05-BD78BB6EBF50</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

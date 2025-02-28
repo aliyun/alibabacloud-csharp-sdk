@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class UpdateSceneResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FC17887E-3C82-5096-8AA6-F4C2E7417245</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

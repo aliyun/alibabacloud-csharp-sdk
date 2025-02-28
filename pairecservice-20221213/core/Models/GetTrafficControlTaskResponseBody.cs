@@ -69,9 +69,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("PreExperimentIds")]
+        [Validation(Required=false)]
+        public string PreExperimentIds { get; set; }
+
         [NameInMap("PrepubStatus")]
         [Validation(Required=false)]
         public string PrepubStatus { get; set; }
+
+        [NameInMap("ProdExperimentIds")]
+        [Validation(Required=false)]
+        public string ProdExperimentIds { get; set; }
 
         [NameInMap("ProductStatus")]
         [Validation(Required=false)]
@@ -88,6 +96,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [NameInMap("SceneName")]
         [Validation(Required=false)]
         public string SceneName { get; set; }
+
+        [NameInMap("ServiceId")]
+        [Validation(Required=false)]
+        public string ServiceId { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]

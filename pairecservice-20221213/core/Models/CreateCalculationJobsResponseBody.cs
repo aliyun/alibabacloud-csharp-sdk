@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public List<string> CalculationJobIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>8C27790E-CCA5-56BB-BA17-646295DEC0A2</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -35,15 +35,15 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
             [NameInMap("TrafficControlTargetAimTraffic")]
             [Validation(Required=false)]
-            public string TrafficControlTargetAimTraffic { get; set; }
+            public double? TrafficControlTargetAimTraffic { get; set; }
 
             [NameInMap("TrafficControlTargetTraffic")]
             [Validation(Required=false)]
-            public string TrafficControlTargetTraffic { get; set; }
+            public double? TrafficControlTargetTraffic { get; set; }
 
             [NameInMap("TrafficControlTaskTraffic")]
             [Validation(Required=false)]
-            public string TrafficControlTaskTraffic { get; set; }
+            public double? TrafficControlTaskTraffic { get; set; }
 
         }
 

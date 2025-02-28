@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class UpdateCrowdResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8C27790E-CCA5-56BB-BA17-646295DEC0A2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

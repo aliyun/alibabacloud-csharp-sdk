@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public class GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics : TeaModel {
                 [NameInMap("Data")]
                 [Validation(Required=false)]
-                public List<Dictionary<string, object>> Data { get; set; }
+                public Dictionary<string, TrafficControlTaskTrafficInfoTargetTrafficsDataValue> Data { get; set; }
 
                 [NameInMap("TrafficContorlTargetId")]
                 [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
             [NameInMap("TaskTraffics")]
             [Validation(Required=false)]
-            public Dictionary<string, object> TaskTraffics { get; set; }
+            public Dictionary<string, TrafficControlTaskTrafficInfoTaskTrafficsValue> TaskTraffics { get; set; }
 
         }
 

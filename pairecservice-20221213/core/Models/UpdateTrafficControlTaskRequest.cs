@@ -61,9 +61,21 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("PreExperimentIds")]
+        [Validation(Required=false)]
+        public string PreExperimentIds { get; set; }
+
+        [NameInMap("ProdExperimentIds")]
+        [Validation(Required=false)]
+        public string ProdExperimentIds { get; set; }
+
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }
+
+        [NameInMap("ServiceId")]
+        [Validation(Required=false)]
+        public string ServiceId { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]
