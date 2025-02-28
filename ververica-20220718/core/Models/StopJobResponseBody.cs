@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class StopJobResponseBody : TeaModel {
+        [NameInMap("accessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         /// <summary>
         /// <list type="bullet">
         /// <item><description>If the value of success was true, the job that you stopped was returned.</description></item>

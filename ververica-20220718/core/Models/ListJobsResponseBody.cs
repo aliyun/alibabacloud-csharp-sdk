@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ListJobsResponseBody : TeaModel {
+        [NameInMap("accessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         /// <summary>
         /// <list type="bullet">
         /// <item><description>If the value of success was true, all jobs that meet the condition were returned.</description></item>

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
     public class Event : TeaModel {
         [NameInMap("createdAt")]
         [Validation(Required=false)]
-        public long? CreatedAt { get; set; }
+        public string CreatedAt { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

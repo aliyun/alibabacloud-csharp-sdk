@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class StartJobWithParamsResponseBody : TeaModel {
+        [NameInMap("accessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         /// <summary>
         /// <para>The details of the job of the deployment returned.</para>
         /// </summary>
