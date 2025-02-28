@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string Scope { get; set; }
 
+            [NameInMap("ScopeList")]
+            [Validation(Required=false)]
+            public List<string> ScopeList { get; set; }
+
             /// <summary>
             /// <para>The status of the advertisement of the aggregate route. Valid values:</para>
             /// <list type="bullet">

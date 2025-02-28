@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
-    public class CreateTransitRouteTableAggregationRequest : TeaModel {
+    public class CreateTransitRouteTableAggregationShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         [NameInMap("TransitRouteTableAggregationScopeList")]
         [Validation(Required=false)]
-        public List<string> TransitRouteTableAggregationScopeList { get; set; }
+        public string TransitRouteTableAggregationScopeListShrink { get; set; }
 
         /// <summary>
         /// <para>The ID of the route table of the Enterprise Edition transit router.</para>

@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The information about the multicast domain.</para>
+        /// <para>The list of multicast domains.</para>
         /// </summary>
         [NameInMap("TransitRouterMulticastDomains")]
         [Validation(Required=false)]
@@ -70,10 +70,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string CenId { get; set; }
 
+            /// <summary>
+            /// <para>Multicast domain feature.</para>
+            /// </summary>
             [NameInMap("Options")]
             [Validation(Required=false)]
             public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions Options { get; set; }
             public class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions : TeaModel {
+                /// <summary>
+                /// <para>Indicates whether the IGMP feature is enabled for the multicast domain.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>enable</para>
+                /// </summary>
                 [NameInMap("Igmpv2Support")]
                 [Validation(Required=false)]
                 public string Igmpv2Support { get; set; }

@@ -34,10 +34,25 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// <para>Multicast domain feature.</para>
+        /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
         public ModifyTransitRouterMulticastDomainRequestOptions Options { get; set; }
         public class ModifyTransitRouterMulticastDomainRequestOptions : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether the IGMP feature is enabled for the multicast domain. Once enabled, hosts can dynamically join or leave multicast groups by using the IGMP protocol. Default value: <b>enable</b>.</para>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>The IGMP feature is in beta testing. To use it, contact your account manager.</description></item>
+            /// <item><description>The IGMP feature cannot be disabled after it is enabled.</description></item>
+            /// </list>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>enable</para>
+            /// </summary>
             [NameInMap("Igmpv2Support")]
             [Validation(Required=false)]
             public string Igmpv2Support { get; set; }
