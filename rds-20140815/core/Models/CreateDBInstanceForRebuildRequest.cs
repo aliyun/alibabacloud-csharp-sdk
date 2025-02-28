@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// <para>Default value: Classic.</para>
         /// <remarks>
-        /// <para> The <b>VPCId</b> and <b>VSwitchId</b> parameters must be specified when this parameter is set to <b>VPC</b>.</para>
+        /// <para> If the instance uses cloud disks, this parameter is required. Set the value to <b>VPC</b>. The <b>VpcId</b> and <b>VSwitchId</b> parameters must be specified when this parameter is set to <b>VPC</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>Month</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set the PayType parameter to <b>Prepaid</b>, you must specify this parameter.</para>
+        /// <para> If you set the PayType parameter to <b>Prepaid</b>, you must also specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

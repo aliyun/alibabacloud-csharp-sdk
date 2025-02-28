@@ -506,8 +506,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: a virtual private cloud (VPC)</description></item>
-        /// <item><description><b>Classic</b>: the classic network</description></item>
+        /// <item><description><b>VPC</b></description></item>
+        /// <item><description><b>Classic</b></description></item>
         /// </list>
         /// <remarks>
         /// </remarks>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyEndpointResponseBody : TeaModel {
+        [NameInMap("CausalConsistReadTimeout")]
+        [Validation(Required=false)]
+        public string CausalConsistReadTimeout { get; set; }
+
         /// <summary>
         /// <para>The proxy endpoint queried.</para>
         /// 
@@ -161,6 +165,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("DbProxyEndpointReadWriteMode")]
         [Validation(Required=false)]
         public string DbProxyEndpointReadWriteMode { get; set; }
+
+        [NameInMap("DbProxyEndpointVpcId")]
+        [Validation(Required=false)]
+        public string DbProxyEndpointVpcId { get; set; }
 
         /// <summary>
         /// <para>The vSwitch ID of the proxy terminal.</para>

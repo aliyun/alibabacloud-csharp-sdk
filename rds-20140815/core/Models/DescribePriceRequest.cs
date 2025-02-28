@@ -184,11 +184,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? InstanceUsedType { get; set; }
 
         /// <summary>
-        /// <para>The type of the order. Valid values:</para>
+        /// <para>The order type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BUY</b>: purchase order</description></item>
-        /// <item><description><b>UPGRADE</b>: specification change order</description></item>
-        /// <item><description><b>RENEW</b>: renewal order</description></item>
+        /// <item><description><b>BUY</b></description></item>
+        /// <item><description><b>RENEW</b></description></item>
+        /// <item><description><b>UPGRADE</b></description></item>
+        /// <item><description><b>DOWNGRADE</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -296,7 +297,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TimeType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the instance. Valid values:</para>
+        /// <para>The subscription duration of the instance.</para>
         /// <list type="bullet">
         /// <item><description>If you set the <b>TimeType</b> parameter to <b>Year</b>, the value of the UsedTime parameter ranges from <b>1 to 100</b>.</description></item>
         /// <item><description>If you set the <b>TimeType</b> parameter to <b>Month</b>, the value of the UsedTime parameter ranges from <b>1 to 999</b>.</description></item>

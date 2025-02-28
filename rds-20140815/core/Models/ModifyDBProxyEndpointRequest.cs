@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBProxyEndpointRequest : TeaModel {
+        [NameInMap("CausalConsistReadTimeout")]
+        [Validation(Required=false)]
+        public string CausalConsistReadTimeout { get; set; }
+
         /// <summary>
         /// <para>The capabilities that you want to enable for the proxy endpoint. If you specify more than one capability, separate the capabilities with semicolons (;). Format: <c>Capability 1:Status;Capability 2:Status;...</c>. Do not add a semicolon (;) at the end of the value.</para>
         /// <para>Valid capability values:</para>
@@ -257,6 +261,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vpc-2zeusejj******</para>
+        /// </summary>
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
 
     }
 

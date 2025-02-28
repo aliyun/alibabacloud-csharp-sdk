@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string DestVSwitchId { get; set; }
 
+            [NameInMap("destVpcId")]
+            [Validation(Required=false)]
+            public string DestVpcId { get; set; }
+
         }
 
         [NameInMap("OwnerId")]

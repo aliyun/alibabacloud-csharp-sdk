@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        [NameInMap("DBName")]
+        [Validation(Required=false)]
+        public string DBName { get; set; }
+
         [NameInMap("ExpireTime")]
         [Validation(Required=false)]
         public string ExpireTime { get; set; }

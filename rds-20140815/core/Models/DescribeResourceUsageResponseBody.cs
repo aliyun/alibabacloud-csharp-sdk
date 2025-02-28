@@ -29,6 +29,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? BackupDataSize { get; set; }
 
+        /// <summary>
+        /// <para>The storage capacity that is used to store the snapshot backup files of the <b>RDS for SQL Server</b> instance. Unit: bytes. The value 0 indicates that no snapshot backup files are stored for the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("BackupEcsSnapshotSize")]
         [Validation(Required=false)]
         public string BackupEcsSnapshotSize { get; set; }

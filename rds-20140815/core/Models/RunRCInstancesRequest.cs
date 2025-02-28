@@ -393,6 +393,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        [NameInMap("UserData")]
+        [Validation(Required=false)]
+        public string UserData { get; set; }
+
         /// <summary>
         /// <para>The vSwitch ID of the instance. You must specify this parameter when you create an instance of the virtual private cloud (VPC) type. The specified vSwitch and security group must belong to the same VPC.</para>
         /// <remarks>

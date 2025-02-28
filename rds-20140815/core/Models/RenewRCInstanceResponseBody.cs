@@ -8,39 +8,36 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class CreateRCNodePoolResponseBody : TeaModel {
+    public class RenewRCInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance IDs.</para>
-        /// </summary>
-        [NameInMap("InstanceIdSets")]
-        [Validation(Required=false)]
-        public List<string> InstanceIdSets { get; set; }
-
-        /// <summary>
-        /// <para>The node pool ID.</para>
+        /// <para>The ID of the RDS Custom instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>np31da1b38983f4511b490fc62108a****</para>
+        /// <para>rc-dh2jf9n6j4s14926****</para>
         /// </summary>
-        [NameInMap("NodePoolId")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string NodePoolId { get; set; }
+        public string DBInstanceId { get; set; }
 
-        /// <summary>
-        /// <para>The order ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>50357661918****</para>
-        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23202700556****</para>
+        /// </summary>
+        [NameInMap("OrderIds")]
+        [Validation(Required=false)]
+        public string OrderIds { get; set; }
+
+        /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</para>
+        /// <para>EFFC7565-B3CF-5CFA-9E1F-164DD1E1F498</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -29,6 +29,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the service-linked role is required. Default value: true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("RequireServiceLinkedRole")]
         [Validation(Required=false)]
         public string RequireServiceLinkedRole { get; set; }
