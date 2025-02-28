@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth20221125.Models
 {
-    public class EntElementVerifyResponse : TeaModel {
+    public class EntElementVerifyV2Response : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public EntElementVerifyResponseBody Body { get; set; }
+        public EntElementVerifyV2ResponseBody Body { get; set; }
 
     }
 

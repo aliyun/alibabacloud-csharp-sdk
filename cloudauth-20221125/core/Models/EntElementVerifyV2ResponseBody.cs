@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth20221125.Models
 {
-    public class EntElementVerifyResponseBody : TeaModel {
+    public class EntElementVerifyV2ResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
 
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public EntElementVerifyResponseBodyResult Result { get; set; }
-        public class EntElementVerifyResponseBodyResult : TeaModel {
+        public EntElementVerifyV2ResponseBodyResult Result { get; set; }
+        public class EntElementVerifyV2ResponseBodyResult : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,14 +47,18 @@ namespace AlibabaCloud.SDK.Cloudauth20221125.Models
             [Validation(Required=false)]
             public string BizCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2018-09-25/9999-09-09</para>
+            /// </summary>
             [NameInMap("OpenTime")]
             [Validation(Required=false)]
             public string OpenTime { get; set; }
 
-            [NameInMap("ReasonCode")]
-            [Validation(Required=false)]
-            public string ReasonCode { get; set; }
-
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>LegalPersonNameFlag,LegalPersonCertNoFlag</para>
+            /// </summary>
             [NameInMap("ReasonDetail")]
             [Validation(Required=false)]
             public string ReasonDetail { get; set; }
