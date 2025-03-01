@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteOriginPoolRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the origin address pool, which can be obtained by calling the <a href="~~ListOriginPools~~">ListOriginPools</a> API.</para>
+        /// <para>The ID of the origin address pool, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2863947.html">ListOriginPools</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateRatePlanSpecRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to enable auto payment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
@@ -30,6 +36,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The specification update type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DOWNGRADE</description></item>
+        /// <item><description>UPGRADE</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>UPGRADE</para>
         /// </summary>

@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public List<GetWafFilterResponseBodyFilterFields> Fields { get; set; }
             public class GetWafFilterResponseBodyFilterFields : TeaModel {
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
                 /// <summary>
                 /// <para>The field for matched objects in the system.</para>
                 /// 
@@ -60,6 +64,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     [Validation(Required=false)]
                     public int? Attributes { get; set; }
 
+                    [NameInMap("Enable")]
+                    [Validation(Required=false)]
+                    public bool? Enable { get; set; }
+
                     /// <summary>
                     /// <para>The type of the value input box. Valid values:</para>
                     /// <list type="bullet">
@@ -75,6 +83,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     [NameInMap("Kind")]
                     [Validation(Required=false)]
                     public string Kind { get; set; }
+
+                    [NameInMap("MinPlan")]
+                    [Validation(Required=false)]
+                    public string MinPlan { get; set; }
 
                     /// <summary>
                     /// <para>Indicates whether the match result is inverted.</para>
@@ -173,6 +185,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     }
 
                 }
+
+                [NameInMap("MinPlan")]
+                [Validation(Required=false)]
+                public string MinPlan { get; set; }
 
                 /// <summary>
                 /// <para>The selector, which defines how to select a matched object.</para>

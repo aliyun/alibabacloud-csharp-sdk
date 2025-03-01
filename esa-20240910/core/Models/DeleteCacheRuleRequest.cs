@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteCacheRuleRequest : TeaModel {
         /// <summary>
-        /// <para>ConfigId of the configuration, which can be obtained by calling the <a href="~~ListCacheRules~~">ListCacheRules</a> interface.</para>
+        /// <para>ConfigId of the configuration, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2866985.html">ListCacheRules</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

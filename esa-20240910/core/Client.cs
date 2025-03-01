@@ -6472,6 +6472,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["OriginHttpsPort"] = request.OriginHttpsPort;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginMtls))
+            {
+                query["OriginMtls"] = request.OriginMtls;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginScheme))
             {
                 query["OriginScheme"] = request.OriginScheme;
@@ -6479,6 +6483,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginSni))
             {
                 query["OriginSni"] = request.OriginSni;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginVerify))
+            {
+                query["OriginVerify"] = request.OriginVerify;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
             {
@@ -6565,6 +6573,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["OriginHttpsPort"] = request.OriginHttpsPort;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginMtls))
+            {
+                query["OriginMtls"] = request.OriginMtls;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginScheme))
             {
                 query["OriginScheme"] = request.OriginScheme;
@@ -6572,6 +6584,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginSni))
             {
                 query["OriginSni"] = request.OriginSni;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginVerify))
+            {
+                query["OriginVerify"] = request.OriginVerify;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
             {
@@ -16965,8 +16981,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询套餐实例状态</para>
+        /// <para>Query Package Instance Status</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can only query the status of a package instance after purchasing and creating it.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRatePlanInstanceStatusRequest
@@ -17014,8 +17035,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询套餐实例状态</para>
+        /// <para>Query Package Instance Status</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can only query the status of a package instance after purchasing and creating it.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRatePlanInstanceStatusRequest
@@ -17063,8 +17089,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询套餐实例状态</para>
+        /// <para>Query Package Instance Status</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can only query the status of a package instance after purchasing and creating it.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRatePlanInstanceStatusRequest
@@ -17081,8 +17112,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询套餐实例状态</para>
+        /// <para>Query Package Instance Status</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can only query the status of a package instance after purchasing and creating it.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRatePlanInstanceStatusRequest
@@ -39592,6 +39628,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["OriginHttpsPort"] = request.OriginHttpsPort;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginMtls))
+            {
+                query["OriginMtls"] = request.OriginMtls;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginScheme))
             {
                 query["OriginScheme"] = request.OriginScheme;
@@ -39599,6 +39639,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginSni))
             {
                 query["OriginSni"] = request.OriginSni;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginVerify))
+            {
+                query["OriginVerify"] = request.OriginVerify;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
             {
@@ -39685,6 +39729,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["OriginHttpsPort"] = request.OriginHttpsPort;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginMtls))
+            {
+                query["OriginMtls"] = request.OriginMtls;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginScheme))
             {
                 query["OriginScheme"] = request.OriginScheme;
@@ -39692,6 +39740,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginSni))
             {
                 query["OriginSni"] = request.OriginSni;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginVerify))
+            {
+                query["OriginVerify"] = request.OriginVerify;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
             {

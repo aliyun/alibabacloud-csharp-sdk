@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string OriginHttpsPort { get; set; }
 
+        [NameInMap("OriginMtls")]
+        [Validation(Required=false)]
+        public string OriginMtls { get; set; }
+
         /// <summary>
         /// <para>Protocol used for the origin request. Possible values:</para>
         /// <list type="bullet">
@@ -73,6 +77,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("OriginSni")]
         [Validation(Required=false)]
         public string OriginSni { get; set; }
+
+        [NameInMap("OriginVerify")]
+        [Validation(Required=false)]
+        public string OriginVerify { get; set; }
 
         /// <summary>
         /// <para>Use range chunking for downloading files from the origin. Possible values:</para>

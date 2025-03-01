@@ -237,6 +237,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         }
 
+        [NameInMap("SecurityLevel")]
+        [Validation(Required=false)]
+        public WafRuleConfigSecurityLevel SecurityLevel { get; set; }
+        public class WafRuleConfigSecurityLevel : TeaModel {
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("Sigchl")]
         [Validation(Required=false)]
         public List<string> Sigchl { get; set; }

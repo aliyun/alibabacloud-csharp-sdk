@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteOriginRuleRequest : TeaModel {
         /// <summary>
-        /// <para>ConfigId of the configuration, which can be obtained by calling the <a href="~~ListOriginRules~~">ListOriginRules</a> interface.</para>
+        /// <para>ConfigId of the configuration, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2866989.html">ListOriginRules</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteNetworkOptimizationRequest : TeaModel {
         /// <summary>
-        /// <para>ConfigId of the configuration, which can be obtained by calling the <a href="~~ListNetworkOptimizations~~">ListNetworkOptimizations</a> interface.</para>
+        /// <para>ConfigId of the configuration, which can be obtained by calling the ListNetworkOptimizations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

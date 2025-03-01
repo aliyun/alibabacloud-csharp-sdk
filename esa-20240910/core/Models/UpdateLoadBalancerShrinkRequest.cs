@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? FallbackPool { get; set; }
 
         /// <summary>
-        /// <para>Load balancer ID, which can be obtained by calling the <a href="~~ListLoadBalancers~~">ListLoadBalancers</a> interface.</para>
+        /// <para>Load balancer ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
