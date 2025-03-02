@@ -296,6 +296,23 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
                     /// <summary>
                     /// <para>The ecs instance infos.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{
+                    ///   &quot;i-xxxxxxxx&quot;: {
+                    ///     &quot;hostName&quot;: &quot;test&quot;,
+                    ///     &quot;instanceName&quot;: &quot;test&quot;,
+                    ///     &quot;instanceType&quot;: &quot;ecs.c7.xlarge&quot;,
+                    ///     &quot;osType&quot;: &quot;linux&quot;,
+                    ///     &quot;diskIds&quot;: [
+                    ///       &quot;d-xxxxxxxx01&quot;,
+                    ///       &quot;d-xxxxxxxx02&quot;
+                    ///     ],
+                    ///     &quot;osNameEn&quot;: &quot;Rocky Linux 8.8 64 bit&quot;,
+                    ///     &quot;osName&quot;: &quot;Rocky Linux 8.8 64位&quot;,
+                    ///     &quot;platform&quot;: &quot;Rocky Linux&quot;
+                    ///   }
+                    /// }</para>
                     /// </summary>
                     [NameInMap("InstanceInfos")]
                     [Validation(Required=false)]
@@ -522,6 +539,65 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [NameInMap("Progress")]
                 [Validation(Required=false)]
                 public int? Progress { get; set; }
+
+                /// <summary>
+                /// <para>Task Report</para>
+                /// </summary>
+                [NameInMap("Report")]
+                [Validation(Required=false)]
+                public DescribeBackupJobs2ResponseBodyBackupJobsBackupJobReport Report { get; set; }
+                public class DescribeBackupJobs2ResponseBodyBackupJobsBackupJobReport : TeaModel {
+                    /// <summary>
+                    /// <para>List of failed files</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/temp/report/158975xxxxxx4625/r-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_failed.zip</para>
+                    /// </summary>
+                    [NameInMap("FailedFiles")]
+                    [Validation(Required=false)]
+                    public string FailedFiles { get; set; }
+
+                    /// <summary>
+                    /// <para>Report generation status.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>COMPLETE</para>
+                    /// </summary>
+                    [NameInMap("ReportTaskStatus")]
+                    [Validation(Required=false)]
+                    public string ReportTaskStatus { get; set; }
+
+                    /// <summary>
+                    /// <para>List of skipped files</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/temp/report/158975xxxxxx4625/r-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_skipped.zip</para>
+                    /// </summary>
+                    [NameInMap("SkippedFiles")]
+                    [Validation(Required=false)]
+                    public string SkippedFiles { get; set; }
+
+                    /// <summary>
+                    /// <para>List of successful files.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/temp/report/158975xxxxxx4625/r-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_success.zip</para>
+                    /// </summary>
+                    [NameInMap("SuccessFiles")]
+                    [Validation(Required=false)]
+                    public string SuccessFiles { get; set; }
+
+                    /// <summary>
+                    /// <para>List of all files. (This field is not returned for data synchronization)</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/temp/report/158975xxxxxx4625/job-0001hfxxxxxymsspjjtl/job-0001hfxxxxxymsspjjtl_total.csv</para>
+                    /// </summary>
+                    [NameInMap("TotalFiles")]
+                    [Validation(Required=false)]
+                    public string TotalFiles { get; set; }
+
+                }
 
                 /// <summary>
                 /// <para>The type of the data source. Valid values:</para>

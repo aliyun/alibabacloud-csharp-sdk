@@ -40,6 +40,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string ChangeListPath { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the client group that executes the data synchronization plan. This parameter is required only for data synchronization.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cl-***************</para>
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -88,6 +94,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public long? CrossAccountUserId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the data source. This parameter is required only for data synchronization.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ds-****************</para>
+        /// </summary>
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
         public string DataSourceId { get; set; }
@@ -228,7 +240,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>Table store instance details.</para>
+        /// <para>The details about the Tablestore instance.</para>
         /// </summary>
         [NameInMap("OtsDetail")]
         [Validation(Required=false)]
@@ -381,13 +393,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Schedule { get; set; }
 
         /// <summary>
-        /// <para>Data source type, with the following options:</para>
+        /// <para>The type of the data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS_FILE</b>: Backs up ECS files</description></item>
-        /// <item><description><b>OSS</b>: Backs up Alibaba Cloud OSS</description></item>
-        /// <item><description><b>NAS</b>: Backs up Alibaba Cloud NAS</description></item>
-        /// <item><description><b>OTS</b>: Backs up Alibaba Cloud OTS</description></item>
-        /// <item><description><b>UDM_ECS</b>: Backs up the entire ECS instance</description></item>
+        /// <item><description><b>ECS_FILE</b>: Elastic Compute Service (ECS) files</description></item>
+        /// <item><description><b>OSS</b>: Object Storage Service (OSS) buckets</description></item>
+        /// <item><description><b>NAS</b>: File Storage NAS (NAS) file systems</description></item>
+        /// <item><description><b>OTS</b>: Tablestore instances</description></item>
+        /// <item><description><b>UDM_ECS</b>: ECS instances</description></item>
+        /// <item><description><b>SYNC</b>: data synchronization</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

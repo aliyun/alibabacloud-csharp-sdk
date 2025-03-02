@@ -92,6 +92,19 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? BytesTotal { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the disk backup point can be deleted. This parameter is valid only if the value of SourceType is UDM_ECS_DISK.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("CanBeDeleted")]
+            [Validation(Required=false)]
+            public bool? CanBeDeleted { get; set; }
+
+            /// <summary>
             /// <para>The time when the backup snapshot was completed. The value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>

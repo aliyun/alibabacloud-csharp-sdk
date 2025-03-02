@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string VaultId { get; set; }
 
+        [NameInMap("VaultName")]
+        [Validation(Required=false)]
+        public string VaultName { get; set; }
+
         /// <summary>
         /// <para>The region ID to which the backup vault belongs.</para>
         /// 

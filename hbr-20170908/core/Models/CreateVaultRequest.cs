@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string VaultRegionId { get; set; }
 
         /// <summary>
-        /// <para>The storage class of the backup vault. Valid value: <b>STANDARD</b>, which indicates standard storage.</para>
+        /// <para>The storage type of the backup vault. Valid value: <b>STANDARD</b>, which indicates standard storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>
@@ -89,6 +89,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string VaultType { get; set; }
 
+        /// <summary>
+        /// <para>Whether to enable the vault worm feature. Once the worm feature is enabled, the vault and all its backup data cannot be deleted before they automatically expire. After enabling the worm feature, it is not supported to disable it. The worm feature is only effective for standard and archive backup vault.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("WormEnabled")]
         [Validation(Required=false)]
         public bool? WormEnabled { get; set; }

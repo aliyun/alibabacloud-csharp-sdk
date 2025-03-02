@@ -10109,6 +10109,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["VaultId"] = request.VaultId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultName))
+            {
+                query["VaultName"] = request.VaultName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultRegionId))
             {
                 query["VaultRegionId"] = request.VaultRegionId;
@@ -10187,6 +10191,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultId))
             {
                 query["VaultId"] = request.VaultId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultName))
+            {
+                query["VaultName"] = request.VaultName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultRegionId))
             {
