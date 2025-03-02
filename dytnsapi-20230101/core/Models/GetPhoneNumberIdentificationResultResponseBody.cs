@@ -10,26 +10,33 @@ namespace AlibabaCloud.SDK.Dytnsapi20230101.Models
 {
     public class GetPhoneNumberIdentificationResultResponseBody : TeaModel {
         /// <summary>
-        /// The return code. Valid values:
+        /// <para>The return code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>OK: The request is successful.</description></item>
+        /// <item><description>NoIdentificationResult: No verification result is available or the verification failed.</description></item>
+        /// <item><description>SessionNotValid: The session is invalid or expired.</description></item>
+        /// <item><description>MobileNumberIllegal: The format of the phone number is invalid.</description></item>
+        /// </list>
         /// 
-        /// *   OK: The request is successful.
-        /// *   NoIdentificationResult: No verification result is available or the verification failed.
-        /// *   SessionNotValid: The session is invalid or expired.
-        /// *   MobileNumberIllegal: The format of the phone number is invalid.
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetPhoneNumberIdentificationResultResponseBodyData Data { get; set; }
         public class GetPhoneNumberIdentificationResultResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates whether the phone number passed the verification.
+            /// <para>Indicates whether the phone number passed the verification.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("IsIdentified")]
             [Validation(Required=false)]
@@ -38,14 +45,20 @@ namespace AlibabaCloud.SDK.Dytnsapi20230101.Models
         }
 
         /// <summary>
-        /// The description of the return code.
+        /// <para>The description of the return code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>68A40250-50CD-034C-B728-0BD******177</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

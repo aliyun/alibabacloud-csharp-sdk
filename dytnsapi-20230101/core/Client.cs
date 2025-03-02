@@ -37,6 +37,21 @@ namespace AlibabaCloud.SDK.Dytnsapi20230101
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the verification result of your phone number.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPhoneNumberIdentificationResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPhoneNumberIdentificationResultResponse
+        /// </returns>
         public GetPhoneNumberIdentificationResultResponse GetPhoneNumberIdentificationResultWithOptions(GetPhoneNumberIdentificationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -89,9 +104,31 @@ namespace AlibabaCloud.SDK.Dytnsapi20230101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPhoneNumberIdentificationResultResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetPhoneNumberIdentificationResultResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetPhoneNumberIdentificationResultResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the verification result of your phone number.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPhoneNumberIdentificationResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPhoneNumberIdentificationResultResponse
+        /// </returns>
         public async Task<GetPhoneNumberIdentificationResultResponse> GetPhoneNumberIdentificationResultWithOptionsAsync(GetPhoneNumberIdentificationResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -144,21 +181,67 @@ namespace AlibabaCloud.SDK.Dytnsapi20230101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPhoneNumberIdentificationResultResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetPhoneNumberIdentificationResultResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetPhoneNumberIdentificationResultResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the verification result of your phone number.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPhoneNumberIdentificationResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPhoneNumberIdentificationResultResponse
+        /// </returns>
         public GetPhoneNumberIdentificationResultResponse GetPhoneNumberIdentificationResult(GetPhoneNumberIdentificationResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetPhoneNumberIdentificationResultWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the verification result of your phone number.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPhoneNumberIdentificationResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPhoneNumberIdentificationResultResponse
+        /// </returns>
         public async Task<GetPhoneNumberIdentificationResultResponse> GetPhoneNumberIdentificationResultAsync(GetPhoneNumberIdentificationResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetPhoneNumberIdentificationResultWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the verification URL of your phone number.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPhoneNumberIdentificationUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPhoneNumberIdentificationUrlResponse
+        /// </returns>
         public GetPhoneNumberIdentificationUrlResponse GetPhoneNumberIdentificationUrlWithOptions(GetPhoneNumberIdentificationUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -211,9 +294,31 @@ namespace AlibabaCloud.SDK.Dytnsapi20230101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPhoneNumberIdentificationUrlResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetPhoneNumberIdentificationUrlResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetPhoneNumberIdentificationUrlResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the verification URL of your phone number.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPhoneNumberIdentificationUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPhoneNumberIdentificationUrlResponse
+        /// </returns>
         public async Task<GetPhoneNumberIdentificationUrlResponse> GetPhoneNumberIdentificationUrlWithOptionsAsync(GetPhoneNumberIdentificationUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -266,15 +371,46 @@ namespace AlibabaCloud.SDK.Dytnsapi20230101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetPhoneNumberIdentificationUrlResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetPhoneNumberIdentificationUrlResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetPhoneNumberIdentificationUrlResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the verification URL of your phone number.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPhoneNumberIdentificationUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPhoneNumberIdentificationUrlResponse
+        /// </returns>
         public GetPhoneNumberIdentificationUrlResponse GetPhoneNumberIdentificationUrl(GetPhoneNumberIdentificationUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetPhoneNumberIdentificationUrlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the verification URL of your phone number.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPhoneNumberIdentificationUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPhoneNumberIdentificationUrlResponse
+        /// </returns>
         public async Task<GetPhoneNumberIdentificationUrlResponse> GetPhoneNumberIdentificationUrlAsync(GetPhoneNumberIdentificationUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -10,32 +10,42 @@ namespace AlibabaCloud.SDK.Dytnsapi20230101.Models
 {
     public class GetPhoneNumberIdentificationUrlResponseBody : TeaModel {
         /// <summary>
-        /// The return code. Valid values:
+        /// <para>The return code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>OK</b>: The request is successful.</description></item>
+        /// <item><description><b>IdentificationNotAvailable</b>: The verification system does not support the phone number that corresponds to the IP address.</description></item>
+        /// <item><description><b>MobileNumberIllegal</b>: The format of the phone number is invalid.</description></item>
+        /// </list>
         /// 
-        /// *   **OK**: The request is successful.
-        /// *   **IdentificationNotAvailable**: The verification system does not support the phone number that corresponds to the IP address.
-        /// *   **MobileNumberIllegal**: The format of the phone number is invalid.
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetPhoneNumberIdentificationUrlResponseBodyData Data { get; set; }
         public class GetPhoneNumberIdentificationUrlResponseBodyData : TeaModel {
             /// <summary>
-            /// The verification URL.
+            /// <para>The verification URL.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://global-ip-auth.dycpaas.com/global/biz/ip_auth/start?ipa_s_c_c=IPF0000000000000******&ipa_s_i=8636b75e2fcb40c53ffecc2b59">https://global-ip-auth.dycpaas.com/global/biz/ip_auth/start?ipa_s_c_c=IPF0000000000000******&amp;ipa_s_i=8636b75e2fcb40c53ffecc2b59</a>******</para>
             /// </summary>
             [NameInMap("IdentificationUrl")]
             [Validation(Required=false)]
             public string IdentificationUrl { get; set; }
 
             /// <summary>
-            /// The session ID.
+            /// <para>The session ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8636b75e2fcb40c53ffecc2b5947115c.149b03d2a7494e6e8f5b34c915245815.707c7f0d93f4409db0761aa5da94ce01.1686******041</para>
             /// </summary>
             [NameInMap("SessionId")]
             [Validation(Required=false)]
@@ -44,14 +54,20 @@ namespace AlibabaCloud.SDK.Dytnsapi20230101.Models
         }
 
         /// <summary>
-        /// The description of the return code.
+        /// <para>The description of the return code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>68A40250-50CD-034C-B728-0BD******177</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

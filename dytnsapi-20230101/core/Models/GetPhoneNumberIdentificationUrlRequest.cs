@@ -10,21 +10,32 @@ namespace AlibabaCloud.SDK.Dytnsapi20230101.Models
 {
     public class GetPhoneNumberIdentificationUrlRequest : TeaModel {
         /// <summary>
-        /// The authorization code.
+        /// <para>The authorization code.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>K***9i7CIe</para>
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// The IP address of the subscriber\"s phone.
+        /// <para>The IP address of the subscriber\&quot;s phone.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>114.124.***.13</para>
         /// </summary>
         [NameInMap("Ip")]
         [Validation(Required=false)]
         public string Ip { get; set; }
 
         /// <summary>
-        /// The external ID.
+        /// <para>The external ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>149b03d2-a749-4e6e-8f5b-34******5815</para>
         /// </summary>
         [NameInMap("OutId")]
         [Validation(Required=false)]
@@ -35,14 +46,21 @@ namespace AlibabaCloud.SDK.Dytnsapi20230101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The phone number of the subscriber. The phone number is in the Mobile Station International Subscriber Directory Number (MSISDN) format.
+        /// <para>The phone number of the subscriber. The phone number is in the Mobile Station International Subscriber Directory Number (MSISDN) format.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>628211****113</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// Specifies whether to remember the phone number.
+        /// <para>Specifies whether to remember the phone number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("RememberPhoneNumber")]
         [Validation(Required=false)]
