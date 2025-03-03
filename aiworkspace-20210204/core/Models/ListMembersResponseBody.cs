@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public List<ListMembersResponseBodyMembers> Members { get; set; }
         public class ListMembersResponseBodyMembers : TeaModel {
+            [NameInMap("AccountName")]
+            [Validation(Required=false)]
+            public string AccountName { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>myDisplayName</para>

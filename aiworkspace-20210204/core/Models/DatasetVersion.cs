@@ -37,9 +37,21 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
+        [NameInMap("ImportInfo")]
+        [Validation(Required=false)]
+        public string ImportInfo { get; set; }
+
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>RO RW</para>
+        /// </summary>
+        [NameInMap("MountAccess")]
+        [Validation(Required=false)]
+        public string MountAccess { get; set; }
 
         [NameInMap("Options")]
         [Validation(Required=false)]

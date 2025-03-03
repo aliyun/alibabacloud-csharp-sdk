@@ -60,12 +60,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
+        [NameInMap("ImportInfo")]
+        [Validation(Required=false)]
+        public string ImportInfo { get; set; }
+
         /// <summary>
         /// <para>代表资源标签的资源属性字段</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
+
+        [NameInMap("MountAccess")]
+        [Validation(Required=false)]
+        public string MountAccess { get; set; }
 
         /// <summary>
         /// <para>扩展字段，JsonString类型。

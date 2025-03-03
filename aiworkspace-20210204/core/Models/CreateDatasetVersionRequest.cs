@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("ImportInfo")]
+        [Validation(Required=false)]
+        public string ImportInfo { get; set; }
+
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }

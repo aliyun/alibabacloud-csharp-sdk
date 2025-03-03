@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
+{
+    public class UpdateDatasetJobRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>v1</para>
+        /// </summary>
+        [NameInMap("DatasetVersion")]
+        [Validation(Required=false)]
+        public string DatasetVersion { get; set; }
+
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>478**</para>
+        /// </summary>
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
+
+    }
+
+}

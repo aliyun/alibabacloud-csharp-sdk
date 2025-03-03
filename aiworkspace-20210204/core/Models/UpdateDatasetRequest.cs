@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("MountAccessReadWriteRoleIdList")]
+        [Validation(Required=false)]
+        public List<string> MountAccessReadWriteRoleIdList { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>myName</para>

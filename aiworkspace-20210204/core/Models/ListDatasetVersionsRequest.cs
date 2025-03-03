@@ -11,27 +11,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
     public class ListDatasetVersionsRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OSS</para>
-        /// </summary>
-        [NameInMap("DataSourcesTypes")]
-        [Validation(Required=false)]
-        public string DataSourcesTypes { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
         /// <para>key1,key2</para>
         /// </summary>
         [NameInMap("LabelKeys")]
         [Validation(Required=false)]
         public string LabelKeys { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>value1,value2</para>
-        /// </summary>
-        [NameInMap("LableValues")]
+        [NameInMap("LabelValues")]
         [Validation(Required=false)]
-        public string LableValues { get; set; }
+        public string LabelValues { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

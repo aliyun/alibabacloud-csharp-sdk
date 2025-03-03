@@ -47,9 +47,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("ImportInfo")]
+        [Validation(Required=false)]
+        public string ImportInfo { get; set; }
+
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
+
+        [NameInMap("MountAccessReadWriteRoleIdList")]
+        [Validation(Required=false)]
+        public List<string> MountAccessReadWriteRoleIdList { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

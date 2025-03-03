@@ -121,6 +121,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             [Validation(Required=false)]
             public string WorkspaceName { get; set; }
 
+            [NameInMap("resourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
         }
 
     }

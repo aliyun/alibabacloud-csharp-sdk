@@ -57,14 +57,6 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>155**********904</para>
-        /// </summary>
-        [NameInMap("ParentUserId")]
-        [Validation(Required=false)]
-        public string ParentUserId { get; set; }
-
         [NameInMap("Query")]
         [Validation(Required=false)]
         public string Query { get; set; }
@@ -76,14 +68,6 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>155**********904</para>
-        /// </summary>
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Provider { get; set; }
 
+        [NameInMap("SortBy")]
+        [Validation(Required=false)]
+        public string SortBy { get; set; }
+
         [NameInMap("SourceDatasetId")]
         [Validation(Required=false)]
         public string SourceDatasetId { get; set; }
