@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DisableAssociatedTransferResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7CE0AE54-6F27-5522-A429-4C5EE8FD40C8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

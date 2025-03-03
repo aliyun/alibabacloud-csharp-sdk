@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CheckAccountDeleteResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7CDDDCEF-CDFD-0825-B7D7-217BE0897B22</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

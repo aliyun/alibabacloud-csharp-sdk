@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListFoldersForParentResponseBody : TeaModel {
         /// <summary>
-        /// The information of the folders.
+        /// <para>The information of the folders.</para>
         /// </summary>
         [NameInMap("Folders")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public List<ListFoldersForParentResponseBodyFoldersFolder> Folder { get; set; }
             public class ListFoldersForParentResponseBodyFoldersFolder : TeaModel {
                 /// <summary>
-                /// The time when the folder was created.
+                /// <para>The time when the folder was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-01-23T12:33:18Z</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The ID of the folder.
+                /// <para>The ID of the folder.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rd-evic31****</para>
                 /// </summary>
                 [NameInMap("FolderId")]
                 [Validation(Required=false)]
                 public string FolderId { get; set; }
 
                 /// <summary>
-                /// The name of the folder.
+                /// <para>The name of the folder.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>project-1</para>
                 /// </summary>
                 [NameInMap("FolderName")]
                 [Validation(Required=false)]
@@ -46,28 +55,40 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

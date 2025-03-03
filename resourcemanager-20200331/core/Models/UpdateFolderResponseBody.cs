@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateFolderResponseBody : TeaModel {
         /// <summary>
-        /// The information of the folder.
+        /// <para>The information of the folder.</para>
         /// </summary>
         [NameInMap("Folder")]
         [Validation(Required=false)]
         public UpdateFolderResponseBodyFolder Folder { get; set; }
         public class UpdateFolderResponseBodyFolder : TeaModel {
             /// <summary>
-            /// The time when the folder was created.
+            /// <para>The time when the folder was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2019-02-19T09:34:50.757Z</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The ID of the folder.
+            /// <para>The ID of the folder.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>fd-u8B321****</para>
             /// </summary>
             [NameInMap("FolderId")]
             [Validation(Required=false)]
             public string FolderId { get; set; }
 
             /// <summary>
-            /// The name of the folder.
+            /// <para>The name of the folder.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rdFolder</para>
             /// </summary>
             [NameInMap("FolderName")]
             [Validation(Required=false)]
             public string FolderName { get; set; }
 
             /// <summary>
-            /// The ID of the parent folder.
+            /// <para>The ID of the parent folder.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>r-b1****</para>
             /// </summary>
             [NameInMap("ParentFolderId")]
             [Validation(Required=false)]
@@ -47,7 +59,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C2CBCA30-C8DD-423E-B4AD-4FB694C9180C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

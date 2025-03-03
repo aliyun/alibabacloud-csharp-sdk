@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DeletePolicyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>898FAB24-7509-43EE-A287-086FE4C44394</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

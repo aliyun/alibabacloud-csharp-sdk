@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetPayerForAccountResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the settlement account.
+        /// <para>The ID of the settlement account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172841235500****</para>
         /// </summary>
         [NameInMap("PayerAccountId")]
         [Validation(Required=false)]
         public string PayerAccountId { get; set; }
 
         /// <summary>
-        /// The name of the settlement account.
+        /// <para>The name of the settlement account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Alice</para>
         /// </summary>
         [NameInMap("PayerAccountName")]
         [Validation(Required=false)]
         public string PayerAccountName { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9B34724D-54B0-4A51-B34D-4512372FE1BE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

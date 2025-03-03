@@ -10,30 +10,39 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreatePolicyVersionRequest : TeaModel {
         /// <summary>
-        /// The document of the policy.
+        /// <para>The document of the policy.</para>
+        /// <para>The document must be 1 to 2,048 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The document must be 1 to 2,048 characters in length.
+        /// <b>Example:</b>
+        /// <para>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</para>
         /// </summary>
         [NameInMap("PolicyDocument")]
         [Validation(Required=false)]
         public string PolicyDocument { get; set; }
 
         /// <summary>
-        /// The name of the policy.
+        /// <para>The name of the policy.</para>
+        /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
+        /// <b>Example:</b>
+        /// <para>OSS-Administrator</para>
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// Specifies whether to set the policy version as the default version. Valid values:
+        /// <para>Specifies whether to set the policy version as the default version. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false: The policy version is not set as the default version.</description></item>
+        /// <item><description>true: The policy version is set as the default version.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
-        /// *   false: The policy version is not set as the default version.
-        /// *   true: The policy version is set as the default version.
-        /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("SetAsDefault")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListAccountsForParentResponseBody : TeaModel {
         /// <summary>
-        /// The information of the members.
+        /// <para>The information of the members.</para>
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
@@ -21,74 +21,100 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public List<ListAccountsForParentResponseBodyAccountsAccount> Account { get; set; }
             public class ListAccountsForParentResponseBodyAccountsAccount : TeaModel {
                 /// <summary>
-                /// The Alibaba Cloud account ID of the member.
+                /// <para>The Alibaba Cloud account ID of the member.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>184311716100****</para>
                 /// </summary>
                 [NameInMap("AccountId")]
                 [Validation(Required=false)]
                 public string AccountId { get; set; }
 
                 /// <summary>
-                /// The display name of the member.
+                /// <para>The display name of the member.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>admin</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// The ID of the folder.
+                /// <para>The ID of the folder.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>fd-bVaRIG****</para>
                 /// </summary>
                 [NameInMap("FolderId")]
                 [Validation(Required=false)]
                 public string FolderId { get; set; }
 
                 /// <summary>
-                /// The way in which the member joins the resource directory.
+                /// <para>The way in which the member joins the resource directory.</para>
+                /// <list type="bullet">
+                /// <item><description>invited: The member is invited to join the resource directory.</description></item>
+                /// <item><description>created: The member is directly created in the resource directory.</description></item>
+                /// </list>
                 /// 
-                /// *   invited: The member is invited to join the resource directory.
-                /// *   created: The member is directly created in the resource directory.
+                /// <b>Example:</b>
+                /// <para>created</para>
                 /// </summary>
                 [NameInMap("JoinMethod")]
                 [Validation(Required=false)]
                 public string JoinMethod { get; set; }
 
                 /// <summary>
-                /// The time when the member joined the resource directory. The time is displayed in UTC.
+                /// <para>The time when the member joined the resource directory. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-01-23T12:33:18Z</para>
                 /// </summary>
                 [NameInMap("JoinTime")]
                 [Validation(Required=false)]
                 public string JoinTime { get; set; }
 
                 /// <summary>
-                /// The time when the member was modified. The time is displayed in UTC.
+                /// <para>The time when the member was modified. The time is displayed in UTC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-01-23T12:33:18Z</para>
                 /// </summary>
                 [NameInMap("ModifyTime")]
                 [Validation(Required=false)]
                 public string ModifyTime { get; set; }
 
                 /// <summary>
-                /// The ID of the resource directory.
+                /// <para>The ID of the resource directory.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rd-k4****</para>
                 /// </summary>
                 [NameInMap("ResourceDirectoryId")]
                 [Validation(Required=false)]
                 public string ResourceDirectoryId { get; set; }
 
                 /// <summary>
-                /// The status of the member. Valid values:
+                /// <para>The status of the member. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>CreateSuccess: The member is created.</description></item>
+                /// <item><description>PromoteVerifying: The upgrade of the member is being confirmed.</description></item>
+                /// <item><description>PromoteFailed: The upgrade of the member fails.</description></item>
+                /// <item><description>PromoteExpired: The upgrade of the member expires.</description></item>
+                /// <item><description>PromoteCancelled: The upgrade of the member is canceled.</description></item>
+                /// <item><description>PromoteSuccess: The member is upgraded.</description></item>
+                /// <item><description>InviteSuccess: The member accepts the invitation.</description></item>
+                /// </list>
                 /// 
-                /// *   CreateSuccess: The member is created.
-                /// *   PromoteVerifying: The upgrade of the member is being confirmed.
-                /// *   PromoteFailed: The upgrade of the member fails.
-                /// *   PromoteExpired: The upgrade of the member expires.
-                /// *   PromoteCancelled: The upgrade of the member is canceled.
-                /// *   PromoteSuccess: The member is upgraded.
-                /// *   InviteSuccess: The member accepts the invitation.
+                /// <b>Example:</b>
+                /// <para>CreateSuccess</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The tags that are added to the member.
+                /// <para>The tags that are added to the member.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -99,14 +125,20 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                     public List<ListAccountsForParentResponseBodyAccountsAccountTagsTag> Tag { get; set; }
                     public class ListAccountsForParentResponseBodyAccountsAccountTagsTag : TeaModel {
                         /// <summary>
-                        /// A tag key.
+                        /// <para>A tag key.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>tag_key</para>
                         /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// A tag value.
+                        /// <para>A tag value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>tag_value</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -117,10 +149,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 }
 
                 /// <summary>
-                /// The type of the member.
+                /// <para>The type of the member.</para>
+                /// <list type="bullet">
+                /// <item><description>CloudAccount: cloud account</description></item>
+                /// <item><description>ResourceAccount: resource account</description></item>
+                /// </list>
                 /// 
-                /// *   CloudAccount: cloud account
-                /// *   ResourceAccount: resource account
+                /// <b>Example:</b>
+                /// <para>ResourceAccount</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -131,28 +167,40 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

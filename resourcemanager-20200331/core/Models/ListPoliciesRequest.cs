@@ -10,39 +10,51 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListPoliciesRequest : TeaModel {
         /// <summary>
-        /// The language that is used to return the description of the system policy. Valid values:
+        /// <para>The language that is used to return the description of the system policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English</description></item>
+        /// <item><description>zh-CN: Chinese</description></item>
+        /// <item><description>ja: Japanese</description></item>
+        /// </list>
         /// 
-        /// *   en: English
-        /// *   zh-CN: Chinese
-        /// *   ja: Japanese
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 100. Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The type of the policy. If you do not specify this parameter, the system lists all types of policies. Valid values:
+        /// <para>The type of the policy. If you do not specify this parameter, the system lists all types of policies. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Custom: custom policy</description></item>
+        /// <item><description>System: system policy</description></item>
+        /// </list>
         /// 
-        /// *   Custom: custom policy
-        /// *   System: system policy
+        /// <b>Example:</b>
+        /// <para>Custom</para>
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]

@@ -10,49 +10,67 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class InitResourceDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CD76D376-2517-4924-92C5-DBC52262F93A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of the resource directory.
+        /// <para>The information of the resource directory.</para>
         /// </summary>
         [NameInMap("ResourceDirectory")]
         [Validation(Required=false)]
         public InitResourceDirectoryResponseBodyResourceDirectory ResourceDirectory { get; set; }
         public class InitResourceDirectoryResponseBodyResourceDirectory : TeaModel {
             /// <summary>
-            /// The time when the resource directory was enabled.
+            /// <para>The time when the resource directory was enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2019-02-18T15:32:10.473Z</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The ID of the enterprise management account.
+            /// <para>The ID of the enterprise management account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>172841235500****</para>
             /// </summary>
             [NameInMap("MasterAccountId")]
             [Validation(Required=false)]
             public string MasterAccountId { get; set; }
 
             /// <summary>
-            /// The name of the enterprise management account.
+            /// <para>The name of the enterprise management account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aliyun-****</para>
             /// </summary>
             [NameInMap("MasterAccountName")]
             [Validation(Required=false)]
             public string MasterAccountName { get; set; }
 
             /// <summary>
-            /// The ID of the resource directory.
+            /// <para>The ID of the resource directory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rd-Ss****</para>
             /// </summary>
             [NameInMap("ResourceDirectoryId")]
             [Validation(Required=false)]
             public string ResourceDirectoryId { get; set; }
 
             /// <summary>
-            /// The ID of the root folder.
+            /// <para>The ID of the root folder.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>r-Zo****</para>
             /// </summary>
             [NameInMap("RootFolderId")]
             [Validation(Required=false)]

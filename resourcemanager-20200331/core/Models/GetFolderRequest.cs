@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetFolderRequest : TeaModel {
         /// <summary>
-        /// The ID of the folder.
+        /// <para>The ID of the folder.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fd-Jyl5U7****</para>
         /// </summary>
         [NameInMap("FolderId")]
         [Validation(Required=false)]

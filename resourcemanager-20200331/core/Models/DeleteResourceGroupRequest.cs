@@ -10,9 +10,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DeleteResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListResourceGroups](~~158855~~) operation to obtain the ID.
+        /// <b>Example:</b>
+        /// <para>rg-9gLOoK****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

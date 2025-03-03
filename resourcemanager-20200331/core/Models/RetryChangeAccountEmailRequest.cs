@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class RetryChangeAccountEmailRequest : TeaModel {
         /// <summary>
-        /// The Alibaba Cloud account ID of the member.
+        /// <para>The Alibaba Cloud account ID of the member.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>181761095690****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]

@@ -10,30 +10,37 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListTrustedServiceStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the enterprise management account or delegated administrator account.
+        /// <para>The ID of the enterprise management account or delegated administrator account.</para>
+        /// <list type="bullet">
+        /// <item><description>If you set this parameter to the ID of an enterprise management account, the trusted services that are enabled within the enterprise management account are queried. The default value of this parameter is the ID of an enterprise management account.</description></item>
+        /// <item><description>If you set this parameter to the ID of a delegated administrator account, the trusted services that are enabled within the delegated administrator account are queried.</description></item>
+        /// </list>
+        /// <para>For more information about trusted services and delegated administrator accounts, see <a href="https://help.aliyun.com/document_detail/208133.html">Overview of trusted services</a> and <a href="https://help.aliyun.com/document_detail/208117.html">Delegated administrator accounts</a>.</para>
         /// 
-        /// *   If you set this parameter to the ID of an enterprise management account, the trusted services that are enabled within the enterprise management account are queried. The default value of this parameter is the ID of an enterprise management account.
-        /// *   If you set this parameter to the ID of a delegated administrator account, the trusted services that are enabled within the delegated administrator account are queried.
-        /// 
-        /// For more information about trusted services and delegated administrator accounts, see [Overview of trusted services](~~208133~~) and [Delegated administrator accounts](~~208117~~).
+        /// <b>Example:</b>
+        /// <para>177242285274****</para>
         /// </summary>
         [NameInMap("AdminAccountId")]
         [Validation(Required=false)]
         public string AdminAccountId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 100. Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

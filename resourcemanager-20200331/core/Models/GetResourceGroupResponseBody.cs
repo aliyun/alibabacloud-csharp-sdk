@@ -10,65 +10,85 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// The information of the resource group.
+        /// <para>The information of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2D69A58F-345C-4FDE-88E4-BF5189484043</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The display name of the resource group.
+        /// <para>The display name of the resource group.</para>
         /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]
         public GetResourceGroupResponseBodyResourceGroup ResourceGroup { get; set; }
         public class GetResourceGroupResponseBodyResourceGroup : TeaModel {
             /// <summary>
-            /// The identifier of the resource group.
+            /// <para>The identifier of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123456789****</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2015-01-23T12:33:18Z</para>
             /// </summary>
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// The status of the resource group. Valid values:
+            /// <para>The status of the resource group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Creating: The resource group is being created.</description></item>
+            /// <item><description>OK: The resource group is created.</description></item>
+            /// <item><description>PendingDelete: The resource group is waiting to be deleted.</description></item>
+            /// </list>
             /// 
-            /// *   Creating: The resource group is being created.
-            /// *   OK: The resource group is created.
-            /// *   PendingDelete: The resource group is waiting to be deleted.
+            /// <b>Example:</b>
+            /// <para>my-project</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// The tags that are added to the resource group.
+            /// <para>The tags that are added to the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-9gLOoK****</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The time when the resource group was created. The time is displayed in UTC.
+            /// <para>The time when the resource group was created. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>my-project</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The status of the resource group. Valid values:
-            /// 
-            /// *   Creating: The resource group is being created.
-            /// *   OK: The resource group is created.
-            /// *   PendingDelete: The resource group is waiting to be deleted.
-            /// *   Deleting: The resource group is being deleted.
+            /// <para>The status of the resource group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Creating: The resource group is being created.</description></item>
+            /// <item><description>OK: The resource group is created.</description></item>
+            /// <item><description>PendingDelete: The resource group is waiting to be deleted.</description></item>
+            /// <item><description>Deleting: The resource group is being deleted.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("RegionStatuses")]
             [Validation(Required=false)]
@@ -79,14 +99,20 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public List<GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus> RegionStatus { get; set; }
                 public class GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus : TeaModel {
                     /// <summary>
-                    /// The ID of the Alibaba Cloud account to which the resource group belongs.
+                    /// <para>The ID of the Alibaba Cloud account to which the resource group belongs.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cn-qingdao</para>
                     /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// The region ID.
+                    /// <para>The region ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>OK</para>
                     /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
@@ -97,14 +123,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             }
 
             /// <summary>
-            /// The status of the resource group in all regions.
+            /// <para>The status of the resource group in all regions.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OK</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -115,12 +144,19 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public List<GetResourceGroupResponseBodyResourceGroupTagsTag> Tag { get; set; }
                 public class GetResourceGroupResponseBodyResourceGroupTagsTag : TeaModel {
                     /// <summary>
-                    /// The tag value.
+                    /// <para>The tag value.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>k1</para>
                     /// </summary>
                     [NameInMap("TagKey")]
                     [Validation(Required=false)]
                     public string TagKey { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>v1</para>
+                    /// </summary>
                     [NameInMap("TagValue")]
                     [Validation(Required=false)]
                     public string TagValue { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListAncestorsResponseBody : TeaModel {
         /// <summary>
-        /// The information of the folders.
+        /// <para>The information of the folders.</para>
         /// </summary>
         [NameInMap("Folders")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public List<ListAncestorsResponseBodyFoldersFolder> Folder { get; set; }
             public class ListAncestorsResponseBodyFoldersFolder : TeaModel {
                 /// <summary>
-                /// The time when the folder was created.
+                /// <para>The time when the folder was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-01-18T10:03:35.217Z</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The ID of the folder.
+                /// <para>The ID of the folder.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>r-b1****</para>
                 /// </summary>
                 [NameInMap("FolderId")]
                 [Validation(Required=false)]
                 public string FolderId { get; set; }
 
                 /// <summary>
-                /// The name of the folder.
+                /// <para>The name of the folder.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>root</para>
                 /// </summary>
                 [NameInMap("FolderName")]
                 [Validation(Required=false)]
@@ -46,7 +55,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>83AFBEB6-DC03-406E-9686-867461FF6698</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

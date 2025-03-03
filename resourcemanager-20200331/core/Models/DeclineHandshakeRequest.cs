@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DeclineHandshakeRequest : TeaModel {
         /// <summary>
-        /// The ID of the invitation.
+        /// <para>The ID of the invitation.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>h-ycm4rp****</para>
         /// </summary>
         [NameInMap("HandshakeId")]
         [Validation(Required=false)]

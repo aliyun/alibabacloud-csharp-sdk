@@ -10,27 +10,33 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListDelegatedAdministratorsRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 100. Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// The identifier of the trusted service.
+        /// <para>The identifier of the trusted service.</para>
+        /// <para>For more information, see the <c>Trusted service identifier</c> column in <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</para>
         /// 
-        /// For more information, see the `Trusted service identifier` column in [Supported trusted services](~~208133~~).
+        /// <b>Example:</b>
+        /// <para>cloudfw.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ServicePrincipal")]
         [Validation(Required=false)]

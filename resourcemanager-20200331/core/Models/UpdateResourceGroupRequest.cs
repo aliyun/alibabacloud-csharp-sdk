@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The display name of the resource group.
+        /// <para>The display name of the resource group.</para>
+        /// <para>The name must be 1 to 50 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name must be 1 to 50 characters in length.
+        /// <b>Example:</b>
+        /// <para>project</para>
         /// </summary>
         [NameInMap("NewDisplayName")]
         [Validation(Required=false)]
         public string NewDisplayName { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListResourceGroups](~~158855~~) operation to obtain the ID.
+        /// <b>Example:</b>
+        /// <para>rg-9gLOoK****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

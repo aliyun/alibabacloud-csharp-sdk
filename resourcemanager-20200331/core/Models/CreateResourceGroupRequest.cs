@@ -10,43 +10,53 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The display name of the resource group.
+        /// <para>The display name of the resource group.</para>
+        /// <para>The name must be 1 to 50 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name must be 1 to 50 characters in length.
+        /// <b>Example:</b>
+        /// <para>my-project</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// The unique identifier of the resource group.
+        /// <para>The unique identifier of the resource group.</para>
+        /// <para>The identifier must be 3 to 50 characters in length and can contain letters, digits, and hyphens (-). The identifier must start with a letter.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The identifier must be 3 to 50 characters in length and can contain letters, digits, and hyphens (-). The identifier must start with a letter.
+        /// <b>Example:</b>
+        /// <para>my-project</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateResourceGroupRequestTag> Tag { get; set; }
         public class CreateResourceGroupRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag. 
+            /// <para>The key of the tag. </para>
+            /// <para>The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
             /// 
-            /// The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+            /// <b>Example:</b>
+            /// <para>k1</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag. 
+            /// <para>The value of the tag. </para>
+            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
             /// 
-            /// The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+            /// <b>Example:</b>
+            /// <para>v1</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

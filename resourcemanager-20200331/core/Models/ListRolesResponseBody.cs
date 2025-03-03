@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListRolesResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information of the RAM roles.
+        /// <para>The information of the RAM roles.</para>
         /// </summary>
         [NameInMap("Roles")]
         [Validation(Required=false)]
@@ -42,49 +51,67 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public List<ListRolesResponseBodyRolesRole> Role { get; set; }
             public class ListRolesResponseBodyRolesRole : TeaModel {
                 /// <summary>
-                /// The Alibaba Cloud Resource Name (ARN) of the RAM role.
+                /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>acs:ram::123456789012****:role/ECSAdmin</para>
                 /// </summary>
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
                 public string Arn { get; set; }
 
                 /// <summary>
-                /// The time when the RAM role was created.
+                /// <para>The time when the RAM role was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-01-23T12:33:18Z</para>
                 /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
                 public string CreateDate { get; set; }
 
                 /// <summary>
-                /// The description of the RAM role.
+                /// <para>The description of the RAM role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECS administrator</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// Indicates whether the RAM role is a service linked role.
+                /// <para>Indicates whether the RAM role is a service linked role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("IsServiceLinkedRole")]
                 [Validation(Required=false)]
                 public bool? IsServiceLinkedRole { get; set; }
 
                 /// <summary>
-                /// The information of the most recent deletion task.
+                /// <para>The information of the most recent deletion task.</para>
                 /// </summary>
                 [NameInMap("LatestDeletionTask")]
                 [Validation(Required=false)]
                 public ListRolesResponseBodyRolesRoleLatestDeletionTask LatestDeletionTask { get; set; }
                 public class ListRolesResponseBodyRolesRoleLatestDeletionTask : TeaModel {
                     /// <summary>
-                    /// The time when the deletion task was created.
+                    /// <para>The time when the deletion task was created.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2018-10-23T12:33:18Z</para>
                     /// </summary>
                     [NameInMap("CreateDate")]
                     [Validation(Required=false)]
                     public string CreateDate { get; set; }
 
                     /// <summary>
-                    /// The ID of the deletion task.
+                    /// <para>The ID of the deletion task.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ECSAdmin/cc61514b-26eb-4453-ab53-b142eb70****</para>
                     /// </summary>
                     [NameInMap("DeletionTaskId")]
                     [Validation(Required=false)]
@@ -93,35 +120,50 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 }
 
                 /// <summary>
-                /// The maximum session duration of the RAM role.
+                /// <para>The maximum session duration of the RAM role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3600</para>
                 /// </summary>
                 [NameInMap("MaxSessionDuration")]
                 [Validation(Required=false)]
                 public long? MaxSessionDuration { get; set; }
 
                 /// <summary>
-                /// The ID of the RAM role.
+                /// <para>The ID of the RAM role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>90123456789****</para>
                 /// </summary>
                 [NameInMap("RoleId")]
                 [Validation(Required=false)]
                 public string RoleId { get; set; }
 
                 /// <summary>
-                /// The name of the RAM role.
+                /// <para>The name of the RAM role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECSAdmin</para>
                 /// </summary>
                 [NameInMap("RoleName")]
                 [Validation(Required=false)]
                 public string RoleName { get; set; }
 
                 /// <summary>
-                /// The name of the RAM role after authorization.
+                /// <para>The name of the RAM role after authorization.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></para>
                 /// </summary>
                 [NameInMap("RolePrincipalName")]
                 [Validation(Required=false)]
                 public string RolePrincipalName { get; set; }
 
                 /// <summary>
-                /// The time when the RAM role was updated.
+                /// <para>The time when the RAM role was updated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2016-01-23T12:33:18Z</para>
                 /// </summary>
                 [NameInMap("UpdateDate")]
                 [Validation(Required=false)]
@@ -132,7 +174,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// The total number of RAM roles.
+        /// <para>The total number of RAM roles.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

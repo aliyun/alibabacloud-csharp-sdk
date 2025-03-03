@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListDelegatedServicesForAccountRequest : TeaModel {
         /// <summary>
-        /// The ID of the member.
+        /// <para>The ID of the member.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>138660628348****</para>
         /// </summary>
         [NameInMap("AccountId")]
         [Validation(Required=false)]

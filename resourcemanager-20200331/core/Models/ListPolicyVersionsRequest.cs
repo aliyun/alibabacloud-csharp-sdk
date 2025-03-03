@@ -10,19 +10,27 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListPolicyVersionsRequest : TeaModel {
         /// <summary>
-        /// The name of the policy.
+        /// <para>The name of the policy.</para>
+        /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
+        /// <b>Example:</b>
+        /// <para>OSS-Administrator</para>
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// The type of the policy. Valid values:
+        /// <para>The type of the policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Custom: custom policy</description></item>
+        /// <item><description>System: system policy</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Custom: custom policy
-        /// *   System: system policy
+        /// <b>Example:</b>
+        /// <para>Custom</para>
         /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]

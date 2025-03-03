@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListPolicyVersionsResponseBody : TeaModel {
         /// <summary>
-        /// The information of the policy versions.
+        /// <para>The information of the policy versions.</para>
         /// </summary>
         [NameInMap("PolicyVersions")]
         [Validation(Required=false)]
@@ -21,21 +21,30 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public List<ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion> PolicyVersion { get; set; }
             public class ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion : TeaModel {
                 /// <summary>
-                /// The time when the policy version was created.
+                /// <para>The time when the policy version was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2015-01-23T12:33:18Z</para>
                 /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
                 public string CreateDate { get; set; }
 
                 /// <summary>
-                /// Indicates whether the policy version is the default version.
+                /// <para>Indicates whether the policy version is the default version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IsDefaultVersion")]
                 [Validation(Required=false)]
                 public bool? IsDefaultVersion { get; set; }
 
                 /// <summary>
-                /// The ID of the policy version.
+                /// <para>The ID of the policy version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>v3</para>
                 /// </summary>
                 [NameInMap("VersionId")]
                 [Validation(Required=false)]
@@ -46,7 +55,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DeleteControlPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the control policy.
+        /// <para>The ID of the control policy.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cp-SImPt8GCEwiq****</para>
         /// </summary>
         [NameInMap("PolicyId")]
         [Validation(Required=false)]
