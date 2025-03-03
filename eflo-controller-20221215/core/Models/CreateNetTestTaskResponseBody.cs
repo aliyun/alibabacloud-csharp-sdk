@@ -8,23 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
-    public class StopNodesRequest : TeaModel {
+    public class CreateNetTestTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Whether to allow skipping failed node tasks, default value is False.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>False</para>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</para>
         /// </summary>
-        [NameInMap("IgnoreFailedNodeTasks")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public bool? IgnoreFailedNodeTasks { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of nodes.</para>
+        /// <b>Example:</b>
+        /// <para>dr-uf6i0tv2refv8wz*****</para>
         /// </summary>
-        [NameInMap("Nodes")]
+        [NameInMap("TestId")]
         [Validation(Required=false)]
-        public List<string> Nodes { get; set; }
+        public string TestId { get; set; }
 
     }
 

@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
-    public class StopNodesResponseBody : TeaModel {
+    public class CreateSessionRequest : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</para>
+        /// <para>e01-cn-kvw44e6dn04</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("NodeId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string NodeId { get; set; }
+
+        [NameInMap("SessionType")]
+        [Validation(Required=false)]
+        public string SessionType { get; set; }
 
         /// <summary>
-        /// <para>Task ID</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>i155847351716171893489</para>
+        /// <para>1669340937156</para>
         /// </summary>
-        [NameInMap("TaskId")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string StartTime { get; set; }
 
     }
 
