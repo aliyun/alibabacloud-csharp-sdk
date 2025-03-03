@@ -10,25 +10,35 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class QueryEventRequest : TeaModel {
         /// <summary>
-        /// The name of the event bus.
+        /// <para>The name of the event bus.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>demo</para>
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]
         public string EventBusName { get; set; }
 
         /// <summary>
-        /// The event ID.
+        /// <para>The event ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1935debf-ddac-49dc-a090-d4f2857a046d</para>
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public string EventId { get; set; }
 
         /// <summary>
-        /// EventSource is required for querying default bus events.
+        /// <para>The name of the event source.</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required if you query the system event bus.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testEventSourceName</para>
         /// </summary>
         [NameInMap("EventSource")]
         [Validation(Required=false)]

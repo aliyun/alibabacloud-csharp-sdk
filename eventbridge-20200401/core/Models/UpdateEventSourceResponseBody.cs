@@ -10,38 +10,54 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class UpdateEventSourceResponseBody : TeaModel {
         /// <summary>
-        /// The returned response code. Valid values:
+        /// <para>The returned response code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Success: The request is successful.</description></item>
+        /// <item><description>Other codes: The request failed. For more information about error codes, see Error codes.</description></item>
+        /// </list>
         /// 
-        /// *   Success: The request is successful.
-        /// *   Other codes: The request failed. For more information about error codes, see Error codes.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The result of the operation.
+        /// <para>The result of the operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// The returned error message.
+        /// <para>The returned error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Remote error. requestId: [xxxx-9D10-65DFDFA3A75D], error code: [EventSourceNotExist], message: [The event source in request is not exist! ]</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c057d379-ea65-41ec-a8a8-90627a968204</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the operation is successful. The value true indicates that the operation is successful.
+        /// <para>Indicates whether the operation is successful. The value true indicates that the operation is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

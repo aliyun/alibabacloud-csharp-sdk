@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateEventBusRequest : TeaModel {
         /// <summary>
-        /// The description of the event bus.
+        /// <para>The description of the event bus.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the event bus.
+        /// <para>Indicates whether the request is successful. The value true indicates that the request is successful.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MyEventBus</para>
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]

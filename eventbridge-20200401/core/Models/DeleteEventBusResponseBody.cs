@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteEventBusResponseBody : TeaModel {
         /// <summary>
-        /// The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.
+        /// <para>The response code. The code 200 indicates that the request was successful. Other codes indicate that the request failed. For information about error codes, see Error codes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -21,21 +24,30 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// The returned error message.
+        /// <para>The returned error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EventBusNotExist</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C229E140-1A5C-5D55-8904-CFC5BA4CAA98</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the operation is successful. Valid values: true and false.
+        /// <para>Indicates whether the operation is successful. Valid values: true and false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

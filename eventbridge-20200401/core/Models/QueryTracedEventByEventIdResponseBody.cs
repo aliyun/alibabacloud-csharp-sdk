@@ -10,56 +10,76 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class QueryTracedEventByEventIdResponseBody : TeaModel {
         /// <summary>
-        /// The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.
+        /// <para>The response code. Valid values:</para>
+        /// <para>Success: The request was successful.</para>
+        /// <para>Other codes: The request failed. For information about error codes, see Error codes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QueryTracedEventByEventIdResponseBodyData> Data { get; set; }
         public class QueryTracedEventByEventIdResponseBodyData : TeaModel {
             /// <summary>
-            /// The events.
+            /// <para>The events.</para>
             /// </summary>
             [NameInMap("Events")]
             [Validation(Required=false)]
             public List<QueryTracedEventByEventIdResponseBodyDataEvents> Events { get; set; }
             public class QueryTracedEventByEventIdResponseBodyDataEvents : TeaModel {
                 /// <summary>
-                /// The name of the event bus.
+                /// <para>The name of the event bus.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("EventBusName")]
                 [Validation(Required=false)]
                 public string EventBusName { get; set; }
 
                 /// <summary>
-                /// The event ID.
+                /// <para>The event ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>37C-1P6Yn6EM7TcH37Vod8w7rbSeimJ</para>
                 /// </summary>
                 [NameInMap("EventId")]
                 [Validation(Required=false)]
                 public string EventId { get; set; }
 
                 /// <summary>
-                /// The time when the event was delivered to the event bus.
+                /// <para>The time when the event was delivered to the event bus.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1661773573100</para>
                 /// </summary>
                 [NameInMap("EventReceivedTime")]
                 [Validation(Required=false)]
                 public long? EventReceivedTime { get; set; }
 
                 /// <summary>
-                /// The name of the event source.
+                /// <para>The name of the event source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cert-api</para>
                 /// </summary>
                 [NameInMap("EventSource")]
                 [Validation(Required=false)]
                 public string EventSource { get; set; }
 
                 /// <summary>
-                /// The event type.
+                /// <para>The event type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>eventbridge:Events:HTTPEvent</para>
                 /// </summary>
                 [NameInMap("EventType")]
                 [Validation(Required=false)]
@@ -68,14 +88,20 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// If excess return values exist, this parameter is returned.
+            /// <para>If excess return values exist, this parameter is returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1000</para>
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }
 
             /// <summary>
-            /// The total number of entries returned.
+            /// <para>The total number of entries returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>18</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -84,21 +110,30 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// The returned error message.
+        /// <para>The returned error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EventBusNotExist</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A5D7B9F4-BF96-51A9-90B1-928955FABB5B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values: true and false.
+        /// <para>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

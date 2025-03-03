@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteConnectionRequest : TeaModel {
         /// <summary>
-        /// The name of the connection that you want to delete.
+        /// <para>The name of the connection that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>connection-name</para>
         /// </summary>
         [NameInMap("ConnectionName")]
         [Validation(Required=false)]

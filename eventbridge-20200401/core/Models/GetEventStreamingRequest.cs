@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class GetEventStreamingRequest : TeaModel {
         /// <summary>
-        /// The name of the event stream whose details you want to query.
+        /// <para>The name of the event stream whose details you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>myeventstreaming</para>
         /// </summary>
         [NameInMap("EventStreamingName")]
         [Validation(Required=false)]

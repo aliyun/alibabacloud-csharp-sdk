@@ -10,53 +10,67 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class UpdateApiDestinationRequest : TeaModel {
         /// <summary>
-        /// The name of the API destination. The name must be 2 to 127 characters in length.
+        /// <para>The name of the API destination. The name must be 2 to 127 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>api-destination-name</para>
         /// </summary>
         [NameInMap("ApiDestinationName")]
         [Validation(Required=false)]
         public string ApiDestinationName { get; set; }
 
         /// <summary>
-        /// The name of the connection. The name must be 2 to 127 characters in length.
+        /// <para>The name of the connection. The name must be 2 to 127 characters in length.</para>
+        /// <para>Note: Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.</para>
         /// 
-        /// Note: Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.
+        /// <b>Example:</b>
+        /// <para>connection-name</para>
         /// </summary>
         [NameInMap("ConnectionName")]
         [Validation(Required=false)]
         public string ConnectionName { get; set; }
 
         /// <summary>
-        /// The description of the API destination. The description can be up to 255 characters in length.
+        /// <para>The description of the API destination. The description can be up to 255 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The parameters that are configured for the API destination.
+        /// <para>The parameters that are configured for the API destination.</para>
         /// </summary>
         [NameInMap("HttpApiParameters")]
         [Validation(Required=false)]
         public UpdateApiDestinationRequestHttpApiParameters HttpApiParameters { get; set; }
         public class UpdateApiDestinationRequestHttpApiParameters : TeaModel {
             /// <summary>
-            /// The endpoint of the API destination. The endpoint can be up to 127 characters in length.
+            /// <para>The endpoint of the API destination. The endpoint can be up to 127 characters in length.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://127.0.0.1:8001/api">http://127.0.0.1:8001/api</a></para>
             /// </summary>
             [NameInMap("Endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// The HTTP request method. Valid values:
+            /// <para>The HTTP request method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>GET</description></item>
+            /// <item><description>POST</description></item>
+            /// <item><description>HEAD</description></item>
+            /// <item><description>DELETE</description></item>
+            /// <item><description>PUT</description></item>
+            /// <item><description>PATCH</description></item>
+            /// </list>
             /// 
-            /// - GET
-            /// - POST
-            /// - HEAD
-            /// - DELETE
-            /// - PUT
-            /// - PATCH
+            /// <b>Example:</b>
+            /// <para>POST</para>
             /// </summary>
             [NameInMap("Method")]
             [Validation(Required=false)]

@@ -10,32 +10,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class UpdateConnectionShrinkRequest : TeaModel {
         /// <summary>
-        /// The parameters that are configured for authentication.
+        /// <para>The parameters that are configured for authentication.</para>
         /// </summary>
         [NameInMap("AuthParameters")]
         [Validation(Required=false)]
         public string AuthParametersShrink { get; set; }
 
         /// <summary>
-        /// The name of the connection that you want to update. The name must be 2 to 127 characters in length.
+        /// <para>The name of the connection that you want to update. The name must be 2 to 127 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>connection-name</para>
         /// </summary>
         [NameInMap("ConnectionName")]
         [Validation(Required=false)]
         public string ConnectionName { get; set; }
 
         /// <summary>
-        /// The description of the connection. The description can be up to 255 characters in length.
+        /// <para>The description of the connection. The description can be up to 255 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The description of the connection.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The parameters that are configured for the network.
-        /// 
-        /// This parameter is required.
+        /// <para>The parameters that are configured for the network.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NetworkParameters")]
         [Validation(Required=false)]

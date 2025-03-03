@@ -14,9 +14,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventBusName { get; set; }
 
         /// <summary>
-        /// The name of the event source.
+        /// <para>The name of the event source.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>myrabbitmq.source</para>
         /// </summary>
         [NameInMap("EventSourceName")]
         [Validation(Required=false)]

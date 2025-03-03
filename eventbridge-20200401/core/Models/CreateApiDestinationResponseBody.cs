@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateApiDestinationResponseBody : TeaModel {
         /// <summary>
-        /// The returned response code. The value Success indicates that the request is successful.
+        /// <para>The returned response code. The value Success indicates that the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The data returned if the API destination is created.
+        /// <para>The data returned if the API destination is created.</para>
         /// </summary>
         [NameInMap("Date")]
         [Validation(Required=false)]
         public CreateApiDestinationResponseBodyDate Date { get; set; }
         public class CreateApiDestinationResponseBodyDate : TeaModel {
             /// <summary>
-            /// The name of the API destination.
+            /// <para>The name of the API destination.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ApiDestinationName</para>
             /// </summary>
             [NameInMap("ApiDestinationName")]
             [Validation(Required=false)]
@@ -33,14 +39,20 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// The returned message.
+        /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5DAF96FB-A4B6-548C-B999-0BFDCB2261B9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

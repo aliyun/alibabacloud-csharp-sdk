@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteRuleRequest : TeaModel {
         /// <summary>
-        /// The name of the event bus.
+        /// <para>The name of the event bus.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tf-testacc-event-bus</para>
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]
         public string EventBusName { get; set; }
 
         /// <summary>
-        /// The name of the event rule that you want to delete.
+        /// <para>The name of the event rule that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ramrolechange-mns</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

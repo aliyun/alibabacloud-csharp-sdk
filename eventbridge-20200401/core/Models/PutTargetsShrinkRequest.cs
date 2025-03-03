@@ -10,27 +10,30 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class PutTargetsShrinkRequest : TeaModel {
         /// <summary>
-        /// The name of the event bus.
+        /// <para>The name of the event bus.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>eventTest</para>
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]
         public string EventBusName { get; set; }
 
         /// <summary>
-        /// The name of the event rule.
+        /// <para>The name of the event rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ssr-send-to-vendor-test01</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// The event targets to be created or updated. For more information, see [Limits.](https://www.alibabacloud.com/help/en/eventbridge/latest/limits)
-        /// 
-        /// This parameter is required.
+        /// <para>The event targets to be created or updated. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/limits">Limits.</a></para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]

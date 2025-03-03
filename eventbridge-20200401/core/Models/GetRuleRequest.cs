@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class GetRuleRequest : TeaModel {
         /// <summary>
-        /// The name of the event bus.
+        /// <para>The name of the event bus.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]
         public string EventBusName { get; set; }
 
         /// <summary>
-        /// The name of the event rule.
+        /// <para>The name of the event rule.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ram-changes</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class GetConnectionRequest : TeaModel {
         /// <summary>
-        /// The connection name.
+        /// <para>The connection name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>connection-name</para>
         /// </summary>
         [NameInMap("ConnectionName")]
         [Validation(Required=false)]

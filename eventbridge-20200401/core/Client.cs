@@ -37,15 +37,26 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary Creates an API destination.
-         *
-         * @description You can call this API operation to create an API destination.
-         *
-         * @param tmpReq CreateApiDestinationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateApiDestinationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApiDestinationResponse
+        /// </returns>
         public CreateApiDestinationResponse CreateApiDestinationWithOptions(CreateApiDestinationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -88,18 +99,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateApiDestinationResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateApiDestinationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateApiDestinationResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates an API destination.
-         *
-         * @description You can call this API operation to create an API destination.
-         *
-         * @param tmpReq CreateApiDestinationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateApiDestinationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApiDestinationResponse
+        /// </returns>
         public async Task<CreateApiDestinationResponse> CreateApiDestinationWithOptionsAsync(CreateApiDestinationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -142,46 +171,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateApiDestinationResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateApiDestinationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateApiDestinationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates an API destination.
-         *
-         * @description You can call this API operation to create an API destination.
-         *
-         * @param request CreateApiDestinationRequest
-         * @return CreateApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateApiDestinationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApiDestinationResponse
+        /// </returns>
         public CreateApiDestinationResponse CreateApiDestination(CreateApiDestinationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateApiDestinationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an API destination.
-         *
-         * @description You can call this API operation to create an API destination.
-         *
-         * @param request CreateApiDestinationRequest
-         * @return CreateApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateApiDestinationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApiDestinationResponse
+        /// </returns>
         public async Task<CreateApiDestinationResponse> CreateApiDestinationAsync(CreateApiDestinationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateApiDestinationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a connection.
-         *
-         * @description You can call this API operation to create a connection.
-         *
-         * @param tmpReq CreateConnectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConnectionResponse
+        /// </returns>
         public CreateConnectionResponse CreateConnectionWithOptions(CreateConnectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -228,18 +293,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateConnectionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateConnectionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateConnectionResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates a connection.
-         *
-         * @description You can call this API operation to create a connection.
-         *
-         * @param tmpReq CreateConnectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConnectionResponse
+        /// </returns>
         public async Task<CreateConnectionResponse> CreateConnectionWithOptionsAsync(CreateConnectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -286,46 +369,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateConnectionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates a connection.
-         *
-         * @description You can call this API operation to create a connection.
-         *
-         * @param request CreateConnectionRequest
-         * @return CreateConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConnectionResponse
+        /// </returns>
         public CreateConnectionResponse CreateConnection(CreateConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateConnectionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a connection.
-         *
-         * @description You can call this API operation to create a connection.
-         *
-         * @param request CreateConnectionRequest
-         * @return CreateConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConnectionResponse
+        /// </returns>
         public async Task<CreateConnectionResponse> CreateConnectionAsync(CreateConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateConnectionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an event bus.
-         *
-         * @description You can call this API operation to create an event bus.
-         *
-         * @param request CreateEventBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEventBusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventBusResponse
+        /// </returns>
         public CreateEventBusResponse CreateEventBusWithOptions(CreateEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -354,18 +473,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateEventBusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateEventBusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateEventBusResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates an event bus.
-         *
-         * @description You can call this API operation to create an event bus.
-         *
-         * @param request CreateEventBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEventBusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventBusResponse
+        /// </returns>
         public async Task<CreateEventBusResponse> CreateEventBusWithOptionsAsync(CreateEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -394,46 +531,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateEventBusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateEventBusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateEventBusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates an event bus.
-         *
-         * @description You can call this API operation to create an event bus.
-         *
-         * @param request CreateEventBusRequest
-         * @return CreateEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEventBusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventBusResponse
+        /// </returns>
         public CreateEventBusResponse CreateEventBus(CreateEventBusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateEventBusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an event bus.
-         *
-         * @description You can call this API operation to create an event bus.
-         *
-         * @param request CreateEventBusRequest
-         * @return CreateEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEventBusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventBusResponse
+        /// </returns>
         public async Task<CreateEventBusResponse> CreateEventBusAsync(CreateEventBusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateEventBusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an event source.
-         *
-         * @description You can call this operation to create an event source.
-         *
-         * @param tmpReq CreateEventSourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateEventSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create an event source.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateEventSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventSourceResponse
+        /// </returns>
         public CreateEventSourceResponse CreateEventSourceWithOptions(CreateEventSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -540,18 +713,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateEventSourceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateEventSourceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateEventSourceResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates an event source.
-         *
-         * @description You can call this operation to create an event source.
-         *
-         * @param tmpReq CreateEventSourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateEventSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create an event source.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateEventSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventSourceResponse
+        /// </returns>
         public async Task<CreateEventSourceResponse> CreateEventSourceWithOptionsAsync(CreateEventSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -658,46 +849,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateEventSourceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateEventSourceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateEventSourceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates an event source.
-         *
-         * @description You can call this operation to create an event source.
-         *
-         * @param request CreateEventSourceRequest
-         * @return CreateEventSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create an event source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEventSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventSourceResponse
+        /// </returns>
         public CreateEventSourceResponse CreateEventSource(CreateEventSourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateEventSourceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an event source.
-         *
-         * @description You can call this operation to create an event source.
-         *
-         * @param request CreateEventSourceRequest
-         * @return CreateEventSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to create an event source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEventSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventSourceResponse
+        /// </returns>
         public async Task<CreateEventSourceResponse> CreateEventSourceAsync(CreateEventSourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateEventSourceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an event stream.
-         *
-         * @description You can call this API operation to create an event stream.
-         *
-         * @param tmpReq CreateEventStreamingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create an event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateEventStreamingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventStreamingResponse
+        /// </returns>
         public CreateEventStreamingResponse CreateEventStreamingWithOptions(CreateEventStreamingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -764,18 +991,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateEventStreamingResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateEventStreamingResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateEventStreamingResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates an event stream.
-         *
-         * @description You can call this API operation to create an event stream.
-         *
-         * @param tmpReq CreateEventStreamingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create an event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateEventStreamingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventStreamingResponse
+        /// </returns>
         public async Task<CreateEventStreamingResponse> CreateEventStreamingWithOptionsAsync(CreateEventStreamingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -842,46 +1087,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateEventStreamingResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateEventStreamingResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateEventStreamingResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates an event stream.
-         *
-         * @description You can call this API operation to create an event stream.
-         *
-         * @param request CreateEventStreamingRequest
-         * @return CreateEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create an event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEventStreamingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventStreamingResponse
+        /// </returns>
         public CreateEventStreamingResponse CreateEventStreaming(CreateEventStreamingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateEventStreamingWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an event stream.
-         *
-         * @description You can call this API operation to create an event stream.
-         *
-         * @param request CreateEventStreamingRequest
-         * @return CreateEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create an event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateEventStreamingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventStreamingResponse
+        /// </returns>
         public async Task<CreateEventStreamingResponse> CreateEventStreamingAsync(CreateEventStreamingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateEventStreamingWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates an event rule.
-         *
-         * @description You can call this API operation to create an event rule.
-         *
-         * @param tmpReq CreateRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRuleResponse
+        /// </returns>
         public CreateRuleResponse CreateRuleWithOptions(CreateRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -932,18 +1213,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateRuleResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateRuleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateRuleResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates an event rule.
-         *
-         * @description You can call this API operation to create an event rule.
-         *
-         * @param tmpReq CreateRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRuleResponse
+        /// </returns>
         public async Task<CreateRuleResponse> CreateRuleWithOptionsAsync(CreateRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -994,46 +1293,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateRuleResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateRuleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateRuleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates an event rule.
-         *
-         * @description You can call this API operation to create an event rule.
-         *
-         * @param request CreateRuleRequest
-         * @return CreateRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRuleResponse
+        /// </returns>
         public CreateRuleResponse CreateRule(CreateRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates an event rule.
-         *
-         * @description You can call this API operation to create an event rule.
-         *
-         * @param request CreateRuleRequest
-         * @return CreateRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRuleResponse
+        /// </returns>
         public async Task<CreateRuleResponse> CreateRuleAsync(CreateRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates a service-linked role for your cloud service.
-         *
-         * @description You can call this API operation to create a service-linked role for your cloud service.
-         *
-         * @param request CreateServiceLinkedRoleForProductRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateServiceLinkedRoleForProductResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service-linked role for your cloud service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create a service-linked role for your cloud service.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceLinkedRoleForProductRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceLinkedRoleForProductResponse
+        /// </returns>
         public CreateServiceLinkedRoleForProductResponse CreateServiceLinkedRoleForProductWithOptions(CreateServiceLinkedRoleForProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1058,18 +1393,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateServiceLinkedRoleForProductResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateServiceLinkedRoleForProductResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateServiceLinkedRoleForProductResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates a service-linked role for your cloud service.
-         *
-         * @description You can call this API operation to create a service-linked role for your cloud service.
-         *
-         * @param request CreateServiceLinkedRoleForProductRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateServiceLinkedRoleForProductResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service-linked role for your cloud service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create a service-linked role for your cloud service.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceLinkedRoleForProductRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceLinkedRoleForProductResponse
+        /// </returns>
         public async Task<CreateServiceLinkedRoleForProductResponse> CreateServiceLinkedRoleForProductWithOptionsAsync(CreateServiceLinkedRoleForProductRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1094,46 +1447,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateServiceLinkedRoleForProductResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateServiceLinkedRoleForProductResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateServiceLinkedRoleForProductResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates a service-linked role for your cloud service.
-         *
-         * @description You can call this API operation to create a service-linked role for your cloud service.
-         *
-         * @param request CreateServiceLinkedRoleForProductRequest
-         * @return CreateServiceLinkedRoleForProductResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service-linked role for your cloud service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create a service-linked role for your cloud service.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceLinkedRoleForProductRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceLinkedRoleForProductResponse
+        /// </returns>
         public CreateServiceLinkedRoleForProductResponse CreateServiceLinkedRoleForProduct(CreateServiceLinkedRoleForProductRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateServiceLinkedRoleForProductWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates a service-linked role for your cloud service.
-         *
-         * @description You can call this API operation to create a service-linked role for your cloud service.
-         *
-         * @param request CreateServiceLinkedRoleForProductRequest
-         * @return CreateServiceLinkedRoleForProductResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service-linked role for your cloud service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create a service-linked role for your cloud service.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceLinkedRoleForProductRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceLinkedRoleForProductResponse
+        /// </returns>
         public async Task<CreateServiceLinkedRoleForProductResponse> CreateServiceLinkedRoleForProductAsync(CreateServiceLinkedRoleForProductRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateServiceLinkedRoleForProductWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an API destination.
-         *
-         * @description You can call this API operation to delete an API destination.
-         *
-         * @param request DeleteApiDestinationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteApiDestinationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApiDestinationResponse
+        /// </returns>
         public DeleteApiDestinationResponse DeleteApiDestinationWithOptions(DeleteApiDestinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1158,18 +1547,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteApiDestinationResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteApiDestinationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteApiDestinationResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes an API destination.
-         *
-         * @description You can call this API operation to delete an API destination.
-         *
-         * @param request DeleteApiDestinationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteApiDestinationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApiDestinationResponse
+        /// </returns>
         public async Task<DeleteApiDestinationResponse> DeleteApiDestinationWithOptionsAsync(DeleteApiDestinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1194,46 +1601,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteApiDestinationResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteApiDestinationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteApiDestinationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes an API destination.
-         *
-         * @description You can call this API operation to delete an API destination.
-         *
-         * @param request DeleteApiDestinationRequest
-         * @return DeleteApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteApiDestinationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApiDestinationResponse
+        /// </returns>
         public DeleteApiDestinationResponse DeleteApiDestination(DeleteApiDestinationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteApiDestinationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an API destination.
-         *
-         * @description You can call this API operation to delete an API destination.
-         *
-         * @param request DeleteApiDestinationRequest
-         * @return DeleteApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteApiDestinationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApiDestinationResponse
+        /// </returns>
         public async Task<DeleteApiDestinationResponse> DeleteApiDestinationAsync(DeleteApiDestinationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteApiDestinationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes a connection.
-         *
-         * @description You can call this API operation to delete a connection.
-         *
-         * @param request DeleteConnectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnectionResponse
+        /// </returns>
         public DeleteConnectionResponse DeleteConnectionWithOptions(DeleteConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1258,18 +1701,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteConnectionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteConnectionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteConnectionResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes a connection.
-         *
-         * @description You can call this API operation to delete a connection.
-         *
-         * @param request DeleteConnectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnectionResponse
+        /// </returns>
         public async Task<DeleteConnectionResponse> DeleteConnectionWithOptionsAsync(DeleteConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1294,46 +1755,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteConnectionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes a connection.
-         *
-         * @description You can call this API operation to delete a connection.
-         *
-         * @param request DeleteConnectionRequest
-         * @return DeleteConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnectionResponse
+        /// </returns>
         public DeleteConnectionResponse DeleteConnection(DeleteConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteConnectionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes a connection.
-         *
-         * @description You can call this API operation to delete a connection.
-         *
-         * @param request DeleteConnectionRequest
-         * @return DeleteConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConnectionResponse
+        /// </returns>
         public async Task<DeleteConnectionResponse> DeleteConnectionAsync(DeleteConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteConnectionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an event bus.
-         *
-         * @description You can call this API operation to delete an event bus.
-         *
-         * @param request DeleteEventBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventBusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventBusResponse
+        /// </returns>
         public DeleteEventBusResponse DeleteEventBusWithOptions(DeleteEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1358,18 +1855,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteEventBusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteEventBusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteEventBusResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes an event bus.
-         *
-         * @description You can call this API operation to delete an event bus.
-         *
-         * @param request DeleteEventBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventBusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventBusResponse
+        /// </returns>
         public async Task<DeleteEventBusResponse> DeleteEventBusWithOptionsAsync(DeleteEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1394,46 +1909,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteEventBusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteEventBusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteEventBusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes an event bus.
-         *
-         * @description You can call this API operation to delete an event bus.
-         *
-         * @param request DeleteEventBusRequest
-         * @return DeleteEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventBusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventBusResponse
+        /// </returns>
         public DeleteEventBusResponse DeleteEventBus(DeleteEventBusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteEventBusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an event bus.
-         *
-         * @description You can call this API operation to delete an event bus.
-         *
-         * @param request DeleteEventBusRequest
-         * @return DeleteEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventBusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventBusResponse
+        /// </returns>
         public async Task<DeleteEventBusResponse> DeleteEventBusAsync(DeleteEventBusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteEventBusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an event source.
-         *
-         * @description You can call this API operation to delete an event source.
-         *
-         * @param request DeleteEventSourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteEventSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventSourceResponse
+        /// </returns>
         public DeleteEventSourceResponse DeleteEventSourceWithOptions(DeleteEventSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1462,18 +2013,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteEventSourceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteEventSourceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteEventSourceResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes an event source.
-         *
-         * @description You can call this API operation to delete an event source.
-         *
-         * @param request DeleteEventSourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteEventSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventSourceResponse
+        /// </returns>
         public async Task<DeleteEventSourceResponse> DeleteEventSourceWithOptionsAsync(DeleteEventSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1502,46 +2071,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteEventSourceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteEventSourceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteEventSourceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes an event source.
-         *
-         * @description You can call this API operation to delete an event source.
-         *
-         * @param request DeleteEventSourceRequest
-         * @return DeleteEventSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventSourceResponse
+        /// </returns>
         public DeleteEventSourceResponse DeleteEventSource(DeleteEventSourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteEventSourceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an event source.
-         *
-         * @description You can call this API operation to delete an event source.
-         *
-         * @param request DeleteEventSourceRequest
-         * @return DeleteEventSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventSourceResponse
+        /// </returns>
         public async Task<DeleteEventSourceResponse> DeleteEventSourceAsync(DeleteEventSourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteEventSourceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an event stream.
-         *
-         * @description You can call this API operation to delete an event stream.
-         *
-         * @param request DeleteEventStreamingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventStreamingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventStreamingResponse
+        /// </returns>
         public DeleteEventStreamingResponse DeleteEventStreamingWithOptions(DeleteEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1566,18 +2171,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteEventStreamingResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteEventStreamingResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteEventStreamingResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes an event stream.
-         *
-         * @description You can call this API operation to delete an event stream.
-         *
-         * @param request DeleteEventStreamingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventStreamingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventStreamingResponse
+        /// </returns>
         public async Task<DeleteEventStreamingResponse> DeleteEventStreamingWithOptionsAsync(DeleteEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1602,46 +2225,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteEventStreamingResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteEventStreamingResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteEventStreamingResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes an event stream.
-         *
-         * @description You can call this API operation to delete an event stream.
-         *
-         * @param request DeleteEventStreamingRequest
-         * @return DeleteEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventStreamingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventStreamingResponse
+        /// </returns>
         public DeleteEventStreamingResponse DeleteEventStreaming(DeleteEventStreamingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteEventStreamingWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an event stream.
-         *
-         * @description You can call this API operation to delete an event stream.
-         *
-         * @param request DeleteEventStreamingRequest
-         * @return DeleteEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteEventStreamingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventStreamingResponse
+        /// </returns>
         public async Task<DeleteEventStreamingResponse> DeleteEventStreamingAsync(DeleteEventStreamingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteEventStreamingWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes an event rule.
-         *
-         * @description You can call this API operation to delete an event rule.
-         *
-         * @param request DeleteRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRuleResponse
+        /// </returns>
         public DeleteRuleResponse DeleteRuleWithOptions(DeleteRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1670,18 +2329,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteRuleResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteRuleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteRuleResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes an event rule.
-         *
-         * @description You can call this API operation to delete an event rule.
-         *
-         * @param request DeleteRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRuleResponse
+        /// </returns>
         public async Task<DeleteRuleResponse> DeleteRuleWithOptionsAsync(DeleteRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1710,46 +2387,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteRuleResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteRuleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteRuleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes an event rule.
-         *
-         * @description You can call this API operation to delete an event rule.
-         *
-         * @param request DeleteRuleRequest
-         * @return DeleteRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRuleResponse
+        /// </returns>
         public DeleteRuleResponse DeleteRule(DeleteRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes an event rule.
-         *
-         * @description You can call this API operation to delete an event rule.
-         *
-         * @param request DeleteRuleRequest
-         * @return DeleteRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRuleResponse
+        /// </returns>
         public async Task<DeleteRuleResponse> DeleteRuleAsync(DeleteRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Deletes one or more event targets of an event rule.
-         *
-         * @description You can call this API operation to delete one or more event targets of an event rule.
-         *
-         * @param tmpReq DeleteTargetsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes one or more event targets of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete one or more event targets of an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteTargetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTargetsResponse
+        /// </returns>
         public DeleteTargetsResponse DeleteTargetsWithOptions(DeleteTargetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1788,18 +2501,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteTargetsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteTargetsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteTargetsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes one or more event targets of an event rule.
-         *
-         * @description You can call this API operation to delete one or more event targets of an event rule.
-         *
-         * @param tmpReq DeleteTargetsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes one or more event targets of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete one or more event targets of an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteTargetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTargetsResponse
+        /// </returns>
         public async Task<DeleteTargetsResponse> DeleteTargetsWithOptionsAsync(DeleteTargetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1838,46 +2569,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteTargetsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteTargetsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteTargetsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Deletes one or more event targets of an event rule.
-         *
-         * @description You can call this API operation to delete one or more event targets of an event rule.
-         *
-         * @param request DeleteTargetsRequest
-         * @return DeleteTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes one or more event targets of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete one or more event targets of an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTargetsResponse
+        /// </returns>
         public DeleteTargetsResponse DeleteTargets(DeleteTargetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTargetsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Deletes one or more event targets of an event rule.
-         *
-         * @description You can call this API operation to delete one or more event targets of an event rule.
-         *
-         * @param request DeleteTargetsRequest
-         * @return DeleteTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes one or more event targets of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to delete one or more event targets of an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTargetsResponse
+        /// </returns>
         public async Task<DeleteTargetsResponse> DeleteTargetsAsync(DeleteTargetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTargetsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Disables an event rule.
-         *
-         * @description You can call this API operation to disable an event rule.
-         *
-         * @param request DisableRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to disable an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableRuleResponse
+        /// </returns>
         public DisableRuleResponse DisableRuleWithOptions(DisableRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1906,18 +2673,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DisableRuleResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DisableRuleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DisableRuleResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Disables an event rule.
-         *
-         * @description You can call this API operation to disable an event rule.
-         *
-         * @param request DisableRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DisableRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to disable an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableRuleResponse
+        /// </returns>
         public async Task<DisableRuleResponse> DisableRuleWithOptionsAsync(DisableRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1946,46 +2731,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DisableRuleResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DisableRuleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DisableRuleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Disables an event rule.
-         *
-         * @description You can call this API operation to disable an event rule.
-         *
-         * @param request DisableRuleRequest
-         * @return DisableRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to disable an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableRuleResponse
+        /// </returns>
         public DisableRuleResponse DisableRule(DisableRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DisableRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Disables an event rule.
-         *
-         * @description You can call this API operation to disable an event rule.
-         *
-         * @param request DisableRuleRequest
-         * @return DisableRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to disable an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableRuleResponse
+        /// </returns>
         public async Task<DisableRuleResponse> DisableRuleAsync(DisableRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables an event rule.
-         *
-         * @description You can call this API operation to enable an event rule.
-         *
-         * @param request EnableRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to enable an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRuleResponse
+        /// </returns>
         public EnableRuleResponse EnableRuleWithOptions(EnableRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2014,18 +2835,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EnableRuleResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EnableRuleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EnableRuleResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Enables an event rule.
-         *
-         * @description You can call this API operation to enable an event rule.
-         *
-         * @param request EnableRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EnableRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to enable an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRuleResponse
+        /// </returns>
         public async Task<EnableRuleResponse> EnableRuleWithOptionsAsync(EnableRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2054,260 +2893,77 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EnableRuleResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EnableRuleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EnableRuleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Enables an event rule.
-         *
-         * @description You can call this API operation to enable an event rule.
-         *
-         * @param request EnableRuleRequest
-         * @return EnableRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to enable an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRuleResponse
+        /// </returns>
         public EnableRuleResponse EnableRule(EnableRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EnableRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables an event rule.
-         *
-         * @description You can call this API operation to enable an event rule.
-         *
-         * @param request EnableRuleRequest
-         * @return EnableRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to enable an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableRuleResponse
+        /// </returns>
         public async Task<EnableRuleResponse> EnableRuleAsync(EnableRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary EventCenterCheckEnabledOnDefaultBus
-         *
-         * @param request EventCenterCheckEnabledOnDefaultBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EventCenterCheckEnabledOnDefaultBusResponse
-         */
-        public EventCenterCheckEnabledOnDefaultBusResponse EventCenterCheckEnabledOnDefaultBusWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "EventCenterCheckEnabledOnDefaultBus",
-                Version = "2020-04-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<EventCenterCheckEnabledOnDefaultBusResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary EventCenterCheckEnabledOnDefaultBus
-         *
-         * @param request EventCenterCheckEnabledOnDefaultBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EventCenterCheckEnabledOnDefaultBusResponse
-         */
-        public async Task<EventCenterCheckEnabledOnDefaultBusResponse> EventCenterCheckEnabledOnDefaultBusWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "EventCenterCheckEnabledOnDefaultBus",
-                Version = "2020-04-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<EventCenterCheckEnabledOnDefaultBusResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary EventCenterCheckEnabledOnDefaultBus
-         *
-         * @return EventCenterCheckEnabledOnDefaultBusResponse
-         */
-        public EventCenterCheckEnabledOnDefaultBusResponse EventCenterCheckEnabledOnDefaultBus()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return EventCenterCheckEnabledOnDefaultBusWithOptions(runtime);
-        }
-
-        /**
-         * @summary EventCenterCheckEnabledOnDefaultBus
-         *
-         * @return EventCenterCheckEnabledOnDefaultBusResponse
-         */
-        public async Task<EventCenterCheckEnabledOnDefaultBusResponse> EventCenterCheckEnabledOnDefaultBusAsync()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await EventCenterCheckEnabledOnDefaultBusWithOptionsAsync(runtime);
-        }
-
-        /**
-         * @summary EventCenterDisableOnDefaultBus
-         *
-         * @param request EventCenterDisableOnDefaultBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EventCenterDisableOnDefaultBusResponse
-         */
-        public EventCenterDisableOnDefaultBusResponse EventCenterDisableOnDefaultBusWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "EventCenterDisableOnDefaultBus",
-                Version = "2020-04-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<EventCenterDisableOnDefaultBusResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary EventCenterDisableOnDefaultBus
-         *
-         * @param request EventCenterDisableOnDefaultBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EventCenterDisableOnDefaultBusResponse
-         */
-        public async Task<EventCenterDisableOnDefaultBusResponse> EventCenterDisableOnDefaultBusWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "EventCenterDisableOnDefaultBus",
-                Version = "2020-04-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<EventCenterDisableOnDefaultBusResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary EventCenterDisableOnDefaultBus
-         *
-         * @return EventCenterDisableOnDefaultBusResponse
-         */
-        public EventCenterDisableOnDefaultBusResponse EventCenterDisableOnDefaultBus()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return EventCenterDisableOnDefaultBusWithOptions(runtime);
-        }
-
-        /**
-         * @summary EventCenterDisableOnDefaultBus
-         *
-         * @return EventCenterDisableOnDefaultBusResponse
-         */
-        public async Task<EventCenterDisableOnDefaultBusResponse> EventCenterDisableOnDefaultBusAsync()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await EventCenterDisableOnDefaultBusWithOptionsAsync(runtime);
-        }
-
-        /**
-         * @summary EventCenterEnableOnDefaultBus
-         *
-         * @param request EventCenterEnableOnDefaultBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EventCenterEnableOnDefaultBusResponse
-         */
-        public EventCenterEnableOnDefaultBusResponse EventCenterEnableOnDefaultBusWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "EventCenterEnableOnDefaultBus",
-                Version = "2020-04-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<EventCenterEnableOnDefaultBusResponse>(CallApi(params_, req, runtime));
-        }
-
-        /**
-         * @summary EventCenterEnableOnDefaultBus
-         *
-         * @param request EventCenterEnableOnDefaultBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EventCenterEnableOnDefaultBusResponse
-         */
-        public async Task<EventCenterEnableOnDefaultBusResponse> EventCenterEnableOnDefaultBusWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "EventCenterEnableOnDefaultBus",
-                Version = "2020-04-01",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<EventCenterEnableOnDefaultBusResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /**
-         * @summary EventCenterEnableOnDefaultBus
-         *
-         * @return EventCenterEnableOnDefaultBusResponse
-         */
-        public EventCenterEnableOnDefaultBusResponse EventCenterEnableOnDefaultBus()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return EventCenterEnableOnDefaultBusWithOptions(runtime);
-        }
-
-        /**
-         * @summary EventCenterEnableOnDefaultBus
-         *
-         * @return EventCenterEnableOnDefaultBusResponse
-         */
-        public async Task<EventCenterEnableOnDefaultBusResponse> EventCenterEnableOnDefaultBusAsync()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await EventCenterEnableOnDefaultBusWithOptionsAsync(runtime);
-        }
-
-        /**
-         * @summary EventCenterQueryEvents
-         *
-         * @param tmpReq EventCenterQueryEventsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EventCenterQueryEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>EventCenterQueryEvents</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// EventCenterQueryEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventCenterQueryEventsResponse
+        /// </returns>
         public EventCenterQueryEventsResponse EventCenterQueryEventsWithOptions(EventCenterQueryEventsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2352,16 +3008,31 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EventCenterQueryEventsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EventCenterQueryEventsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EventCenterQueryEventsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary EventCenterQueryEvents
-         *
-         * @param tmpReq EventCenterQueryEventsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return EventCenterQueryEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>EventCenterQueryEvents</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// EventCenterQueryEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventCenterQueryEventsResponse
+        /// </returns>
         public async Task<EventCenterQueryEventsResponse> EventCenterQueryEventsWithOptionsAsync(EventCenterQueryEventsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2406,42 +3077,72 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EventCenterQueryEventsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EventCenterQueryEventsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EventCenterQueryEventsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary EventCenterQueryEvents
-         *
-         * @param request EventCenterQueryEventsRequest
-         * @return EventCenterQueryEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>EventCenterQueryEvents</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EventCenterQueryEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventCenterQueryEventsResponse
+        /// </returns>
         public EventCenterQueryEventsResponse EventCenterQueryEvents(EventCenterQueryEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return EventCenterQueryEventsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary EventCenterQueryEvents
-         *
-         * @param request EventCenterQueryEventsRequest
-         * @return EventCenterQueryEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>EventCenterQueryEvents</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EventCenterQueryEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventCenterQueryEventsResponse
+        /// </returns>
         public async Task<EventCenterQueryEventsResponse> EventCenterQueryEventsAsync(EventCenterQueryEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EventCenterQueryEventsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about an API destination.
-         *
-         * @description You can call this API operation to query the information about an API destination.
-         *
-         * @param request GetApiDestinationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the information about an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetApiDestinationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiDestinationResponse
+        /// </returns>
         public GetApiDestinationResponse GetApiDestinationWithOptions(GetApiDestinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2466,18 +3167,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetApiDestinationResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetApiDestinationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetApiDestinationResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information about an API destination.
-         *
-         * @description You can call this API operation to query the information about an API destination.
-         *
-         * @param request GetApiDestinationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the information about an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetApiDestinationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiDestinationResponse
+        /// </returns>
         public async Task<GetApiDestinationResponse> GetApiDestinationWithOptionsAsync(GetApiDestinationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2502,46 +3221,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetApiDestinationResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetApiDestinationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetApiDestinationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the information about an API destination.
-         *
-         * @description You can call this API operation to query the information about an API destination.
-         *
-         * @param request GetApiDestinationRequest
-         * @return GetApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the information about an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetApiDestinationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiDestinationResponse
+        /// </returns>
         public GetApiDestinationResponse GetApiDestination(GetApiDestinationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetApiDestinationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the information about an API destination.
-         *
-         * @description You can call this API operation to query the information about an API destination.
-         *
-         * @param request GetApiDestinationRequest
-         * @return GetApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the information about an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetApiDestinationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiDestinationResponse
+        /// </returns>
         public async Task<GetApiDestinationResponse> GetApiDestinationAsync(GetApiDestinationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetApiDestinationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the configurations of a connection.
-         *
-         * @description You can call this API operation to query the configurations of a connection.
-         *
-         * @param request GetConnectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the configurations of a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConnectionResponse
+        /// </returns>
         public GetConnectionResponse GetConnectionWithOptions(GetConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2566,18 +3321,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetConnectionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetConnectionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetConnectionResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the configurations of a connection.
-         *
-         * @description You can call this API operation to query the configurations of a connection.
-         *
-         * @param request GetConnectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the configurations of a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConnectionResponse
+        /// </returns>
         public async Task<GetConnectionResponse> GetConnectionWithOptionsAsync(GetConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2602,46 +3375,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetConnectionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the configurations of a connection.
-         *
-         * @description You can call this API operation to query the configurations of a connection.
-         *
-         * @param request GetConnectionRequest
-         * @return GetConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the configurations of a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConnectionResponse
+        /// </returns>
         public GetConnectionResponse GetConnection(GetConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetConnectionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the configurations of a connection.
-         *
-         * @description You can call this API operation to query the configurations of a connection.
-         *
-         * @param request GetConnectionRequest
-         * @return GetConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the configurations of a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConnectionResponse
+        /// </returns>
         public async Task<GetConnectionResponse> GetConnectionAsync(GetConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetConnectionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the detailed information about an event bus.
-         *
-         * @description You can call this API operation to query the detailed information about an event bus.
-         *
-         * @param request GetEventBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the detailed information about an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEventBusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventBusResponse
+        /// </returns>
         public GetEventBusResponse GetEventBusWithOptions(GetEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2666,18 +3475,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetEventBusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetEventBusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetEventBusResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the detailed information about an event bus.
-         *
-         * @description You can call this API operation to query the detailed information about an event bus.
-         *
-         * @param request GetEventBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the detailed information about an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEventBusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventBusResponse
+        /// </returns>
         public async Task<GetEventBusResponse> GetEventBusWithOptionsAsync(GetEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2702,46 +3529,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetEventBusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetEventBusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetEventBusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the detailed information about an event bus.
-         *
-         * @description You can call this API operation to query the detailed information about an event bus.
-         *
-         * @param request GetEventBusRequest
-         * @return GetEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the detailed information about an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEventBusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventBusResponse
+        /// </returns>
         public GetEventBusResponse GetEventBus(GetEventBusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetEventBusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the detailed information about an event bus.
-         *
-         * @description You can call this API operation to query the detailed information about an event bus.
-         *
-         * @param request GetEventBusRequest
-         * @return GetEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the detailed information about an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEventBusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventBusResponse
+        /// </returns>
         public async Task<GetEventBusResponse> GetEventBusAsync(GetEventBusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetEventBusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of an event stream.
-         *
-         * @description You can call this API operation to query the details of an event stream.
-         *
-         * @param request GetEventStreamingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the details of an event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEventStreamingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventStreamingResponse
+        /// </returns>
         public GetEventStreamingResponse GetEventStreamingWithOptions(GetEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2766,18 +3629,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetEventStreamingResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetEventStreamingResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetEventStreamingResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the details of an event stream.
-         *
-         * @description You can call this API operation to query the details of an event stream.
-         *
-         * @param request GetEventStreamingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the details of an event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEventStreamingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventStreamingResponse
+        /// </returns>
         public async Task<GetEventStreamingResponse> GetEventStreamingWithOptionsAsync(GetEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2802,46 +3683,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetEventStreamingResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetEventStreamingResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetEventStreamingResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the details of an event stream.
-         *
-         * @description You can call this API operation to query the details of an event stream.
-         *
-         * @param request GetEventStreamingRequest
-         * @return GetEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the details of an event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEventStreamingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventStreamingResponse
+        /// </returns>
         public GetEventStreamingResponse GetEventStreaming(GetEventStreamingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetEventStreamingWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of an event stream.
-         *
-         * @description You can call this API operation to query the details of an event stream.
-         *
-         * @param request GetEventStreamingRequest
-         * @return GetEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the details of an event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetEventStreamingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventStreamingResponse
+        /// </returns>
         public async Task<GetEventStreamingResponse> GetEventStreamingAsync(GetEventStreamingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetEventStreamingWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of an event rule.
-         *
-         * @description You can call this API operation to query the details of an event rule.
-         *
-         * @param request GetRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the details of an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRuleResponse
+        /// </returns>
         public GetRuleResponse GetRuleWithOptions(GetRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2870,18 +3787,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetRuleResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetRuleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetRuleResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the details of an event rule.
-         *
-         * @description You can call this API operation to query the details of an event rule.
-         *
-         * @param request GetRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the details of an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRuleResponse
+        /// </returns>
         public async Task<GetRuleResponse> GetRuleWithOptionsAsync(GetRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2910,46 +3845,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetRuleResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetRuleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetRuleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the details of an event rule.
-         *
-         * @description You can call this API operation to query the details of an event rule.
-         *
-         * @param request GetRuleRequest
-         * @return GetRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the details of an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRuleResponse
+        /// </returns>
         public GetRuleResponse GetRule(GetRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the details of an event rule.
-         *
-         * @description You can call this API operation to query the details of an event rule.
-         *
-         * @param request GetRuleRequest
-         * @return GetRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the details of an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRuleResponse
+        /// </returns>
         public async Task<GetRuleResponse> GetRuleAsync(GetRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetRuleWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries all Alibaba Cloud service event sources.
-         *
-         * @description You can call this API operation to query all Alibaba Cloud service event sources.
-         *
-         * @param request ListAliyunOfficialEventSourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAliyunOfficialEventSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all Alibaba Cloud service event sources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all Alibaba Cloud service event sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAliyunOfficialEventSourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAliyunOfficialEventSourcesResponse
+        /// </returns>
         public ListAliyunOfficialEventSourcesResponse ListAliyunOfficialEventSourcesWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -2965,18 +3936,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAliyunOfficialEventSourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListAliyunOfficialEventSourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListAliyunOfficialEventSourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries all Alibaba Cloud service event sources.
-         *
-         * @description You can call this API operation to query all Alibaba Cloud service event sources.
-         *
-         * @param request ListAliyunOfficialEventSourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListAliyunOfficialEventSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all Alibaba Cloud service event sources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all Alibaba Cloud service event sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAliyunOfficialEventSourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAliyunOfficialEventSourcesResponse
+        /// </returns>
         public async Task<ListAliyunOfficialEventSourcesResponse> ListAliyunOfficialEventSourcesWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -2992,44 +3981,74 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListAliyunOfficialEventSourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListAliyunOfficialEventSourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListAliyunOfficialEventSourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries all Alibaba Cloud service event sources.
-         *
-         * @description You can call this API operation to query all Alibaba Cloud service event sources.
-         *
-         * @return ListAliyunOfficialEventSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all Alibaba Cloud service event sources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all Alibaba Cloud service event sources.</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListAliyunOfficialEventSourcesResponse
+        /// </returns>
         public ListAliyunOfficialEventSourcesResponse ListAliyunOfficialEventSources()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAliyunOfficialEventSourcesWithOptions(runtime);
         }
 
-        /**
-         * @summary Queries all Alibaba Cloud service event sources.
-         *
-         * @description You can call this API operation to query all Alibaba Cloud service event sources.
-         *
-         * @return ListAliyunOfficialEventSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all Alibaba Cloud service event sources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all Alibaba Cloud service event sources.</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// ListAliyunOfficialEventSourcesResponse
+        /// </returns>
         public async Task<ListAliyunOfficialEventSourcesResponse> ListAliyunOfficialEventSourcesAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAliyunOfficialEventSourcesWithOptionsAsync(runtime);
         }
 
-        /**
-         * @summary Queries a list of API destinations.
-         *
-         * @description You can use this API operation to query a list of API destinations.
-         *
-         * @param request ListApiDestinationsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListApiDestinationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of API destinations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this API operation to query a list of API destinations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListApiDestinationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiDestinationsResponse
+        /// </returns>
         public ListApiDestinationsResponse ListApiDestinationsWithOptions(ListApiDestinationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3066,18 +4085,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListApiDestinationsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListApiDestinationsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListApiDestinationsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries a list of API destinations.
-         *
-         * @description You can use this API operation to query a list of API destinations.
-         *
-         * @param request ListApiDestinationsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListApiDestinationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of API destinations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this API operation to query a list of API destinations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListApiDestinationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiDestinationsResponse
+        /// </returns>
         public async Task<ListApiDestinationsResponse> ListApiDestinationsWithOptionsAsync(ListApiDestinationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3114,46 +4151,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListApiDestinationsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListApiDestinationsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListApiDestinationsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries a list of API destinations.
-         *
-         * @description You can use this API operation to query a list of API destinations.
-         *
-         * @param request ListApiDestinationsRequest
-         * @return ListApiDestinationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of API destinations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this API operation to query a list of API destinations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListApiDestinationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiDestinationsResponse
+        /// </returns>
         public ListApiDestinationsResponse ListApiDestinations(ListApiDestinationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListApiDestinationsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries a list of API destinations.
-         *
-         * @description You can use this API operation to query a list of API destinations.
-         *
-         * @param request ListApiDestinationsRequest
-         * @return ListApiDestinationsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of API destinations.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use this API operation to query a list of API destinations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListApiDestinationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiDestinationsResponse
+        /// </returns>
         public async Task<ListApiDestinationsResponse> ListApiDestinationsAsync(ListApiDestinationsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListApiDestinationsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries connections.
-         *
-         * @description You can call this API operation to query connections.
-         *
-         * @param request ListConnectionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListConnectionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries connections.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query connections.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConnectionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectionsResponse
+        /// </returns>
         public ListConnectionsResponse ListConnectionsWithOptions(ListConnectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3186,18 +4259,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListConnectionsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListConnectionsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListConnectionsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries connections.
-         *
-         * @description You can call this API operation to query connections.
-         *
-         * @param request ListConnectionsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListConnectionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries connections.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query connections.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConnectionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectionsResponse
+        /// </returns>
         public async Task<ListConnectionsResponse> ListConnectionsWithOptionsAsync(ListConnectionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3230,46 +4321,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListConnectionsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListConnectionsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListConnectionsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries connections.
-         *
-         * @description You can call this API operation to query connections.
-         *
-         * @param request ListConnectionsRequest
-         * @return ListConnectionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries connections.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query connections.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConnectionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectionsResponse
+        /// </returns>
         public ListConnectionsResponse ListConnections(ListConnectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListConnectionsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries connections.
-         *
-         * @description You can call this API operation to query connections.
-         *
-         * @param request ListConnectionsRequest
-         * @return ListConnectionsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries connections.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query connections.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConnectionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectionsResponse
+        /// </returns>
         public async Task<ListConnectionsResponse> ListConnectionsAsync(ListConnectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListConnectionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries all event buses.
-         *
-         * @description You can call this API operation to query all event buses.
-         *
-         * @param request ListEventBusesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListEventBusesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all event buses.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all event buses.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEventBusesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventBusesResponse
+        /// </returns>
         public ListEventBusesResponse ListEventBusesWithOptions(ListEventBusesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3302,18 +4429,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListEventBusesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListEventBusesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListEventBusesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries all event buses.
-         *
-         * @description You can call this API operation to query all event buses.
-         *
-         * @param request ListEventBusesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListEventBusesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all event buses.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all event buses.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEventBusesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventBusesResponse
+        /// </returns>
         public async Task<ListEventBusesResponse> ListEventBusesWithOptionsAsync(ListEventBusesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3346,46 +4491,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListEventBusesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListEventBusesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListEventBusesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries all event buses.
-         *
-         * @description You can call this API operation to query all event buses.
-         *
-         * @param request ListEventBusesRequest
-         * @return ListEventBusesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all event buses.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all event buses.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEventBusesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventBusesResponse
+        /// </returns>
         public ListEventBusesResponse ListEventBuses(ListEventBusesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListEventBusesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries all event buses.
-         *
-         * @description You can call this API operation to query all event buses.
-         *
-         * @param request ListEventBusesRequest
-         * @return ListEventBusesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all event buses.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all event buses.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEventBusesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventBusesResponse
+        /// </returns>
         public async Task<ListEventBusesResponse> ListEventBusesAsync(ListEventBusesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListEventBusesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries event streams.
-         *
-         * @description You can call this API operation to query event streams.
-         *
-         * @param request ListEventStreamingsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListEventStreamingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event streams.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event streams.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEventStreamingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventStreamingsResponse
+        /// </returns>
         public ListEventStreamingsResponse ListEventStreamingsWithOptions(ListEventStreamingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3426,18 +4607,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListEventStreamingsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListEventStreamingsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListEventStreamingsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries event streams.
-         *
-         * @description You can call this API operation to query event streams.
-         *
-         * @param request ListEventStreamingsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListEventStreamingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event streams.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event streams.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEventStreamingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventStreamingsResponse
+        /// </returns>
         public async Task<ListEventStreamingsResponse> ListEventStreamingsWithOptionsAsync(ListEventStreamingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3478,46 +4677,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListEventStreamingsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListEventStreamingsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListEventStreamingsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries event streams.
-         *
-         * @description You can call this API operation to query event streams.
-         *
-         * @param request ListEventStreamingsRequest
-         * @return ListEventStreamingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event streams.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event streams.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEventStreamingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventStreamingsResponse
+        /// </returns>
         public ListEventStreamingsResponse ListEventStreamings(ListEventStreamingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListEventStreamingsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries event streams.
-         *
-         * @description You can call this API operation to query event streams.
-         *
-         * @param request ListEventStreamingsRequest
-         * @return ListEventStreamingsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event streams.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event streams.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEventStreamingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventStreamingsResponse
+        /// </returns>
         public async Task<ListEventStreamingsResponse> ListEventStreamingsAsync(ListEventStreamingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListEventStreamingsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries all rules of an event bus.
-         *
-         * @description You can call this API operation to query all rules of an event bus.
-         *
-         * @param request ListRulesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRulesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all rules of an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all rules of an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRulesResponse
+        /// </returns>
         public ListRulesResponse ListRulesWithOptions(ListRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3554,18 +4789,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListRulesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListRulesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListRulesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries all rules of an event bus.
-         *
-         * @description You can call this API operation to query all rules of an event bus.
-         *
-         * @param request ListRulesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListRulesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all rules of an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all rules of an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRulesResponse
+        /// </returns>
         public async Task<ListRulesResponse> ListRulesWithOptionsAsync(ListRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3602,44 +4855,77 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListRulesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListRulesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListRulesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries all rules of an event bus.
-         *
-         * @description You can call this API operation to query all rules of an event bus.
-         *
-         * @param request ListRulesRequest
-         * @return ListRulesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all rules of an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all rules of an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRulesResponse
+        /// </returns>
         public ListRulesResponse ListRules(ListRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListRulesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries all rules of an event bus.
-         *
-         * @description You can call this API operation to query all rules of an event bus.
-         *
-         * @param request ListRulesRequest
-         * @return ListRulesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all rules of an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query all rules of an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRulesResponse
+        /// </returns>
         public async Task<ListRulesResponse> ListRulesAsync(ListRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListRulesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries all event targets of an event rule.
-         *
-         * @param request ListTargetsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all event targets of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTargetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTargetsResponse
+        /// </returns>
         public ListTargetsResponse ListTargetsWithOptions(ListTargetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3680,16 +4966,31 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTargetsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTargetsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTargetsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries all event targets of an event rule.
-         *
-         * @param request ListTargetsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all event targets of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTargetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTargetsResponse
+        /// </returns>
         public async Task<ListTargetsResponse> ListTargetsWithOptionsAsync(ListTargetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3730,42 +5031,72 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTargetsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTargetsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTargetsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries all event targets of an event rule.
-         *
-         * @param request ListTargetsRequest
-         * @return ListTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all event targets of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTargetsResponse
+        /// </returns>
         public ListTargetsResponse ListTargets(ListTargetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTargetsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries all event targets of an event rule.
-         *
-         * @param request ListTargetsRequest
-         * @return ListTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all event targets of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTargetsResponse
+        /// </returns>
         public async Task<ListTargetsResponse> ListTargetsAsync(ListTargetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTargetsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries all custom event sources.
-         *
-         * @description You can call this API operation to query custom event sources.
-         *
-         * @param request ListUserDefinedEventSourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListUserDefinedEventSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all custom event sources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query custom event sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListUserDefinedEventSourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserDefinedEventSourcesResponse
+        /// </returns>
         public ListUserDefinedEventSourcesResponse ListUserDefinedEventSourcesWithOptions(ListUserDefinedEventSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3802,18 +5133,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListUserDefinedEventSourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListUserDefinedEventSourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListUserDefinedEventSourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries all custom event sources.
-         *
-         * @description You can call this API operation to query custom event sources.
-         *
-         * @param request ListUserDefinedEventSourcesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListUserDefinedEventSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all custom event sources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query custom event sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListUserDefinedEventSourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserDefinedEventSourcesResponse
+        /// </returns>
         public async Task<ListUserDefinedEventSourcesResponse> ListUserDefinedEventSourcesWithOptionsAsync(ListUserDefinedEventSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3850,46 +5199,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListUserDefinedEventSourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListUserDefinedEventSourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListUserDefinedEventSourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries all custom event sources.
-         *
-         * @description You can call this API operation to query custom event sources.
-         *
-         * @param request ListUserDefinedEventSourcesRequest
-         * @return ListUserDefinedEventSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all custom event sources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query custom event sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListUserDefinedEventSourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserDefinedEventSourcesResponse
+        /// </returns>
         public ListUserDefinedEventSourcesResponse ListUserDefinedEventSources(ListUserDefinedEventSourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListUserDefinedEventSourcesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries all custom event sources.
-         *
-         * @description You can call this API operation to query custom event sources.
-         *
-         * @param request ListUserDefinedEventSourcesRequest
-         * @return ListUserDefinedEventSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all custom event sources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query custom event sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListUserDefinedEventSourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserDefinedEventSourcesResponse
+        /// </returns>
         public async Task<ListUserDefinedEventSourcesResponse> ListUserDefinedEventSourcesAsync(ListUserDefinedEventSourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUserDefinedEventSourcesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Stops an event stream that is running.
-         *
-         * @description You can call this API operation to stop an event stream that is running.
-         *
-         * @param request PauseEventStreamingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PauseEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an event stream that is running.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to stop an event stream that is running.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PauseEventStreamingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseEventStreamingResponse
+        /// </returns>
         public PauseEventStreamingResponse PauseEventStreamingWithOptions(PauseEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3914,18 +5299,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PauseEventStreamingResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<PauseEventStreamingResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<PauseEventStreamingResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Stops an event stream that is running.
-         *
-         * @description You can call this API operation to stop an event stream that is running.
-         *
-         * @param request PauseEventStreamingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PauseEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an event stream that is running.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to stop an event stream that is running.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PauseEventStreamingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseEventStreamingResponse
+        /// </returns>
         public async Task<PauseEventStreamingResponse> PauseEventStreamingWithOptionsAsync(PauseEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3950,46 +5353,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PauseEventStreamingResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<PauseEventStreamingResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<PauseEventStreamingResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Stops an event stream that is running.
-         *
-         * @description You can call this API operation to stop an event stream that is running.
-         *
-         * @param request PauseEventStreamingRequest
-         * @return PauseEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an event stream that is running.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to stop an event stream that is running.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PauseEventStreamingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseEventStreamingResponse
+        /// </returns>
         public PauseEventStreamingResponse PauseEventStreaming(PauseEventStreamingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PauseEventStreamingWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Stops an event stream that is running.
-         *
-         * @description You can call this API operation to stop an event stream that is running.
-         *
-         * @param request PauseEventStreamingRequest
-         * @return PauseEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an event stream that is running.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to stop an event stream that is running.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PauseEventStreamingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseEventStreamingResponse
+        /// </returns>
         public async Task<PauseEventStreamingResponse> PauseEventStreamingAsync(PauseEventStreamingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PauseEventStreamingWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Creates or updates event targets under a rule.
-         *
-         * @description You can call this API operation to create or update event targets under a rule.
-         *
-         * @param tmpReq PutTargetsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PutTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates event targets under a rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create or update event targets under a rule.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// PutTargetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutTargetsResponse
+        /// </returns>
         public PutTargetsResponse PutTargetsWithOptions(PutTargetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4028,18 +5467,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PutTargetsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<PutTargetsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<PutTargetsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates or updates event targets under a rule.
-         *
-         * @description You can call this API operation to create or update event targets under a rule.
-         *
-         * @param tmpReq PutTargetsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return PutTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates event targets under a rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create or update event targets under a rule.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// PutTargetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutTargetsResponse
+        /// </returns>
         public async Task<PutTargetsResponse> PutTargetsWithOptionsAsync(PutTargetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4078,46 +5535,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PutTargetsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<PutTargetsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<PutTargetsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Creates or updates event targets under a rule.
-         *
-         * @description You can call this API operation to create or update event targets under a rule.
-         *
-         * @param request PutTargetsRequest
-         * @return PutTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates event targets under a rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create or update event targets under a rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutTargetsResponse
+        /// </returns>
         public PutTargetsResponse PutTargets(PutTargetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return PutTargetsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Creates or updates event targets under a rule.
-         *
-         * @description You can call this API operation to create or update event targets under a rule.
-         *
-         * @param request PutTargetsRequest
-         * @return PutTargetsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates event targets under a rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to create or update event targets under a rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutTargetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutTargetsResponse
+        /// </returns>
         public async Task<PutTargetsResponse> PutTargetsAsync(PutTargetsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PutTargetsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries the content of an event.
-         *
-         * @description You can call this API operation to query the content of an event.
-         *
-         * @param request QueryEventRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryEventResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the content of an event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the content of an event.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryEventRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEventResponse
+        /// </returns>
         public QueryEventResponse QueryEventWithOptions(QueryEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4150,18 +5643,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryEventResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<QueryEventResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<QueryEventResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the content of an event.
-         *
-         * @description You can call this API operation to query the content of an event.
-         *
-         * @param request QueryEventRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryEventResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the content of an event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the content of an event.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryEventRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEventResponse
+        /// </returns>
         public async Task<QueryEventResponse> QueryEventWithOptionsAsync(QueryEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4194,46 +5705,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryEventResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<QueryEventResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<QueryEventResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries the content of an event.
-         *
-         * @description You can call this API operation to query the content of an event.
-         *
-         * @param request QueryEventRequest
-         * @return QueryEventResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the content of an event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the content of an event.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryEventRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEventResponse
+        /// </returns>
         public QueryEventResponse QueryEvent(QueryEventRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryEventWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries the content of an event.
-         *
-         * @description You can call this API operation to query the content of an event.
-         *
-         * @param request QueryEventRequest
-         * @return QueryEventResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the content of an event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query the content of an event.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryEventRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEventResponse
+        /// </returns>
         public async Task<QueryEventResponse> QueryEventAsync(QueryEventRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryEventWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries event traces.
-         *
-         * @description You can call this API operation to query event traces.
-         *
-         * @param request QueryEventTracesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryEventTracesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event traces.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event traces.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryEventTracesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEventTracesResponse
+        /// </returns>
         public QueryEventTracesResponse QueryEventTracesWithOptions(QueryEventTracesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4262,18 +5809,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryEventTracesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<QueryEventTracesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<QueryEventTracesResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries event traces.
-         *
-         * @description You can call this API operation to query event traces.
-         *
-         * @param request QueryEventTracesRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryEventTracesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event traces.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event traces.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryEventTracesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEventTracesResponse
+        /// </returns>
         public async Task<QueryEventTracesResponse> QueryEventTracesWithOptionsAsync(QueryEventTracesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4302,46 +5867,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryEventTracesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<QueryEventTracesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<QueryEventTracesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries event traces.
-         *
-         * @description You can call this API operation to query event traces.
-         *
-         * @param request QueryEventTracesRequest
-         * @return QueryEventTracesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event traces.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event traces.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryEventTracesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEventTracesResponse
+        /// </returns>
         public QueryEventTracesResponse QueryEventTraces(QueryEventTracesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryEventTracesWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries event traces.
-         *
-         * @description You can call this API operation to query event traces.
-         *
-         * @param request QueryEventTracesRequest
-         * @return QueryEventTracesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event traces.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event traces.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryEventTracesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEventTracesResponse
+        /// </returns>
         public async Task<QueryEventTracesResponse> QueryEventTracesAsync(QueryEventTracesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryEventTracesWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries event traces by event ID.
-         *
-         * @description You can call this API operation to query event traces by event ID.
-         *
-         * @param request QueryTracedEventByEventIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryTracedEventByEventIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event traces by event ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event traces by event ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryTracedEventByEventIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTracedEventByEventIdResponse
+        /// </returns>
         public QueryTracedEventByEventIdResponse QueryTracedEventByEventIdWithOptions(QueryTracedEventByEventIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4374,18 +5975,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryTracedEventByEventIdResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<QueryTracedEventByEventIdResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<QueryTracedEventByEventIdResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries event traces by event ID.
-         *
-         * @description You can call this API operation to query event traces by event ID.
-         *
-         * @param request QueryTracedEventByEventIdRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryTracedEventByEventIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event traces by event ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event traces by event ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryTracedEventByEventIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTracedEventByEventIdResponse
+        /// </returns>
         public async Task<QueryTracedEventByEventIdResponse> QueryTracedEventByEventIdWithOptionsAsync(QueryTracedEventByEventIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4418,46 +6037,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryTracedEventByEventIdResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<QueryTracedEventByEventIdResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<QueryTracedEventByEventIdResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries event traces by event ID.
-         *
-         * @description You can call this API operation to query event traces by event ID.
-         *
-         * @param request QueryTracedEventByEventIdRequest
-         * @return QueryTracedEventByEventIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event traces by event ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event traces by event ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryTracedEventByEventIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTracedEventByEventIdResponse
+        /// </returns>
         public QueryTracedEventByEventIdResponse QueryTracedEventByEventId(QueryTracedEventByEventIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryTracedEventByEventIdWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries event traces by event ID.
-         *
-         * @description You can call this API operation to query event traces by event ID.
-         *
-         * @param request QueryTracedEventByEventIdRequest
-         * @return QueryTracedEventByEventIdResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event traces by event ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event traces by event ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryTracedEventByEventIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTracedEventByEventIdResponse
+        /// </returns>
         public async Task<QueryTracedEventByEventIdResponse> QueryTracedEventByEventIdAsync(QueryTracedEventByEventIdRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryTracedEventByEventIdWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Queries event traces by time range.
-         *
-         * @description You can call this API operation to query event traces by time range.
-         *
-         * @param request QueryTracedEventsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryTracedEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event traces by time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event traces by time range.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryTracedEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTracedEventsResponse
+        /// </returns>
         public QueryTracedEventsResponse QueryTracedEventsWithOptions(QueryTracedEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4510,18 +6165,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryTracedEventsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<QueryTracedEventsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<QueryTracedEventsResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries event traces by time range.
-         *
-         * @description You can call this API operation to query event traces by time range.
-         *
-         * @param request QueryTracedEventsRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryTracedEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event traces by time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event traces by time range.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryTracedEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTracedEventsResponse
+        /// </returns>
         public async Task<QueryTracedEventsResponse> QueryTracedEventsWithOptionsAsync(QueryTracedEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4574,46 +6247,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryTracedEventsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<QueryTracedEventsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<QueryTracedEventsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Queries event traces by time range.
-         *
-         * @description You can call this API operation to query event traces by time range.
-         *
-         * @param request QueryTracedEventsRequest
-         * @return QueryTracedEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event traces by time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event traces by time range.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryTracedEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTracedEventsResponse
+        /// </returns>
         public QueryTracedEventsResponse QueryTracedEvents(QueryTracedEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryTracedEventsWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Queries event traces by time range.
-         *
-         * @description You can call this API operation to query event traces by time range.
-         *
-         * @param request QueryTracedEventsRequest
-         * @return QueryTracedEventsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries event traces by time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to query event traces by time range.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryTracedEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTracedEventsResponse
+        /// </returns>
         public async Task<QueryTracedEventsResponse> QueryTracedEventsAsync(QueryTracedEventsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryTracedEventsWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Enables a created or deactivated event stream.
-         *
-         * @description You can call this API operation to enable a created or deactivated event stream.
-         *
-         * @param request StartEventStreamingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a created or deactivated event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to enable a created or deactivated event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartEventStreamingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartEventStreamingResponse
+        /// </returns>
         public StartEventStreamingResponse StartEventStreamingWithOptions(StartEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4638,18 +6347,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartEventStreamingResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartEventStreamingResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartEventStreamingResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Enables a created or deactivated event stream.
-         *
-         * @description You can call this API operation to enable a created or deactivated event stream.
-         *
-         * @param request StartEventStreamingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return StartEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a created or deactivated event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to enable a created or deactivated event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartEventStreamingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartEventStreamingResponse
+        /// </returns>
         public async Task<StartEventStreamingResponse> StartEventStreamingWithOptionsAsync(StartEventStreamingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4674,46 +6401,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartEventStreamingResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartEventStreamingResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartEventStreamingResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Enables a created or deactivated event stream.
-         *
-         * @description You can call this API operation to enable a created or deactivated event stream.
-         *
-         * @param request StartEventStreamingRequest
-         * @return StartEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a created or deactivated event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to enable a created or deactivated event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartEventStreamingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartEventStreamingResponse
+        /// </returns>
         public StartEventStreamingResponse StartEventStreaming(StartEventStreamingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartEventStreamingWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Enables a created or deactivated event stream.
-         *
-         * @description You can call this API operation to enable a created or deactivated event stream.
-         *
-         * @param request StartEventStreamingRequest
-         * @return StartEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a created or deactivated event stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to enable a created or deactivated event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartEventStreamingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartEventStreamingResponse
+        /// </returns>
         public async Task<StartEventStreamingResponse> StartEventStreamingAsync(StartEventStreamingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartEventStreamingWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Checks whether the event pattern matches the provided JSON format.
-         *
-         * @description You can call this API operation to check whether the event pattern matches the provided JSON format.
-         *
-         * @param request TestEventPatternRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TestEventPatternResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the event pattern matches the provided JSON format.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to check whether the event pattern matches the provided JSON format.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TestEventPatternRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestEventPatternResponse
+        /// </returns>
         public TestEventPatternResponse TestEventPatternWithOptions(TestEventPatternRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4742,18 +6505,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TestEventPatternResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TestEventPatternResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TestEventPatternResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Checks whether the event pattern matches the provided JSON format.
-         *
-         * @description You can call this API operation to check whether the event pattern matches the provided JSON format.
-         *
-         * @param request TestEventPatternRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return TestEventPatternResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the event pattern matches the provided JSON format.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to check whether the event pattern matches the provided JSON format.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TestEventPatternRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestEventPatternResponse
+        /// </returns>
         public async Task<TestEventPatternResponse> TestEventPatternWithOptionsAsync(TestEventPatternRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4782,46 +6563,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TestEventPatternResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TestEventPatternResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TestEventPatternResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Checks whether the event pattern matches the provided JSON format.
-         *
-         * @description You can call this API operation to check whether the event pattern matches the provided JSON format.
-         *
-         * @param request TestEventPatternRequest
-         * @return TestEventPatternResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the event pattern matches the provided JSON format.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to check whether the event pattern matches the provided JSON format.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TestEventPatternRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestEventPatternResponse
+        /// </returns>
         public TestEventPatternResponse TestEventPattern(TestEventPatternRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TestEventPatternWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Checks whether the event pattern matches the provided JSON format.
-         *
-         * @description You can call this API operation to check whether the event pattern matches the provided JSON format.
-         *
-         * @param request TestEventPatternRequest
-         * @return TestEventPatternResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the event pattern matches the provided JSON format.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to check whether the event pattern matches the provided JSON format.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TestEventPatternRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestEventPatternResponse
+        /// </returns>
         public async Task<TestEventPatternResponse> TestEventPatternAsync(TestEventPatternRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TestEventPatternWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates an API destination.
-         *
-         * @description You can call this API operation to update an API destination.
-         *
-         * @param tmpReq UpdateApiDestinationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateApiDestinationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiDestinationResponse
+        /// </returns>
         public UpdateApiDestinationResponse UpdateApiDestinationWithOptions(UpdateApiDestinationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4864,18 +6681,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateApiDestinationResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateApiDestinationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateApiDestinationResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Updates an API destination.
-         *
-         * @description You can call this API operation to update an API destination.
-         *
-         * @param tmpReq UpdateApiDestinationRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateApiDestinationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiDestinationResponse
+        /// </returns>
         public async Task<UpdateApiDestinationResponse> UpdateApiDestinationWithOptionsAsync(UpdateApiDestinationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4918,46 +6753,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateApiDestinationResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateApiDestinationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateApiDestinationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Updates an API destination.
-         *
-         * @description You can call this API operation to update an API destination.
-         *
-         * @param request UpdateApiDestinationRequest
-         * @return UpdateApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateApiDestinationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiDestinationResponse
+        /// </returns>
         public UpdateApiDestinationResponse UpdateApiDestination(UpdateApiDestinationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateApiDestinationWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates an API destination.
-         *
-         * @description You can call this API operation to update an API destination.
-         *
-         * @param request UpdateApiDestinationRequest
-         * @return UpdateApiDestinationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an API destination.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update an API destination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateApiDestinationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiDestinationResponse
+        /// </returns>
         public async Task<UpdateApiDestinationResponse> UpdateApiDestinationAsync(UpdateApiDestinationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateApiDestinationWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates a connection.
-         *
-         * @description You can call this API operation to update a connection.
-         *
-         * @param tmpReq UpdateConnectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnectionResponse
+        /// </returns>
         public UpdateConnectionResponse UpdateConnectionWithOptions(UpdateConnectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5004,18 +6875,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateConnectionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateConnectionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateConnectionResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Updates a connection.
-         *
-         * @description You can call this API operation to update a connection.
-         *
-         * @param tmpReq UpdateConnectionRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnectionResponse
+        /// </returns>
         public async Task<UpdateConnectionResponse> UpdateConnectionWithOptionsAsync(UpdateConnectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5062,46 +6951,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateConnectionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Updates a connection.
-         *
-         * @description You can call this API operation to update a connection.
-         *
-         * @param request UpdateConnectionRequest
-         * @return UpdateConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnectionResponse
+        /// </returns>
         public UpdateConnectionResponse UpdateConnection(UpdateConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateConnectionWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates a connection.
-         *
-         * @description You can call this API operation to update a connection.
-         *
-         * @param request UpdateConnectionRequest
-         * @return UpdateConnectionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a connection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update a connection.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnectionResponse
+        /// </returns>
         public async Task<UpdateConnectionResponse> UpdateConnectionAsync(UpdateConnectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateConnectionWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies an event bus.
-         *
-         * @description You can call this API operation to modify an event bus.
-         *
-         * @param request UpdateEventBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to update an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateEventBusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventBusResponse
+        /// </returns>
         public UpdateEventBusResponse UpdateEventBusWithOptions(UpdateEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5130,18 +7055,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateEventBusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateEventBusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateEventBusResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Modifies an event bus.
-         *
-         * @description You can call this API operation to modify an event bus.
-         *
-         * @param request UpdateEventBusRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to update an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateEventBusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventBusResponse
+        /// </returns>
         public async Task<UpdateEventBusResponse> UpdateEventBusWithOptionsAsync(UpdateEventBusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5170,46 +7113,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateEventBusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateEventBusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateEventBusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Modifies an event bus.
-         *
-         * @description You can call this API operation to modify an event bus.
-         *
-         * @param request UpdateEventBusRequest
-         * @return UpdateEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to update an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateEventBusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventBusResponse
+        /// </returns>
         public UpdateEventBusResponse UpdateEventBus(UpdateEventBusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateEventBusWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies an event bus.
-         *
-         * @description You can call this API operation to modify an event bus.
-         *
-         * @param request UpdateEventBusRequest
-         * @return UpdateEventBusResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an event bus.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to update an event bus.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateEventBusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventBusResponse
+        /// </returns>
         public async Task<UpdateEventBusResponse> UpdateEventBusAsync(UpdateEventBusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateEventBusWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates an event source.
-         *
-         * @description You can call this API operation to update an event source.
-         *
-         * @param tmpReq UpdateEventSourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateEventSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an event source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update an event source.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateEventSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventSourceResponse
+        /// </returns>
         public UpdateEventSourceResponse UpdateEventSourceWithOptions(UpdateEventSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5316,18 +7295,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateEventSourceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateEventSourceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateEventSourceResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Updates an event source.
-         *
-         * @description You can call this API operation to update an event source.
-         *
-         * @param tmpReq UpdateEventSourceRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateEventSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an event source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update an event source.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateEventSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventSourceResponse
+        /// </returns>
         public async Task<UpdateEventSourceResponse> UpdateEventSourceWithOptionsAsync(UpdateEventSourceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5434,46 +7431,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateEventSourceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateEventSourceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateEventSourceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Updates an event source.
-         *
-         * @description You can call this API operation to update an event source.
-         *
-         * @param request UpdateEventSourceRequest
-         * @return UpdateEventSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an event source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update an event source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateEventSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventSourceResponse
+        /// </returns>
         public UpdateEventSourceResponse UpdateEventSource(UpdateEventSourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateEventSourceWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates an event source.
-         *
-         * @description You can call this API operation to update an event source.
-         *
-         * @param request UpdateEventSourceRequest
-         * @return UpdateEventSourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an event source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update an event source.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateEventSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventSourceResponse
+        /// </returns>
         public async Task<UpdateEventSourceResponse> UpdateEventSourceAsync(UpdateEventSourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateEventSourceWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-         *
-         * @description You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-         *
-         * @param tmpReq UpdateEventStreamingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateEventStreamingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventStreamingResponse
+        /// </returns>
         public UpdateEventStreamingResponse UpdateEventStreamingWithOptions(UpdateEventStreamingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5540,18 +7573,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateEventStreamingResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateEventStreamingResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateEventStreamingResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-         *
-         * @description You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-         *
-         * @param tmpReq UpdateEventStreamingRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateEventStreamingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventStreamingResponse
+        /// </returns>
         public async Task<UpdateEventStreamingResponse> UpdateEventStreamingWithOptionsAsync(UpdateEventStreamingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5618,46 +7669,82 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateEventStreamingResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateEventStreamingResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateEventStreamingResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-         *
-         * @description You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-         *
-         * @param request UpdateEventStreamingRequest
-         * @return UpdateEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateEventStreamingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventStreamingResponse
+        /// </returns>
         public UpdateEventStreamingResponse UpdateEventStreaming(UpdateEventStreamingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateEventStreamingWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-         *
-         * @description You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-         *
-         * @param request UpdateEventStreamingRequest
-         * @return UpdateEventStreamingResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateEventStreamingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventStreamingResponse
+        /// </returns>
         public async Task<UpdateEventStreamingResponse> UpdateEventStreamingAsync(UpdateEventStreamingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateEventStreamingWithOptionsAsync(request, runtime);
         }
 
-        /**
-         * @summary Updates the configurations of an event rule.
-         *
-         * @description You can call this API operation to update the configurations of an event rule.
-         *
-         * @param request UpdateRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update the configurations of an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRuleResponse
+        /// </returns>
         public UpdateRuleResponse UpdateRuleWithOptions(UpdateRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5698,18 +7785,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateRuleResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateRuleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateRuleResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Updates the configurations of an event rule.
-         *
-         * @description You can call this API operation to update the configurations of an event rule.
-         *
-         * @param request UpdateRuleRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update the configurations of an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRuleResponse
+        /// </returns>
         public async Task<UpdateRuleResponse> UpdateRuleWithOptionsAsync(UpdateRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5750,31 +7855,56 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpdateRuleResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateRuleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateRuleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-         * @summary Updates the configurations of an event rule.
-         *
-         * @description You can call this API operation to update the configurations of an event rule.
-         *
-         * @param request UpdateRuleRequest
-         * @return UpdateRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update the configurations of an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRuleResponse
+        /// </returns>
         public UpdateRuleResponse UpdateRule(UpdateRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateRuleWithOptions(request, runtime);
         }
 
-        /**
-         * @summary Updates the configurations of an event rule.
-         *
-         * @description You can call this API operation to update the configurations of an event rule.
-         *
-         * @param request UpdateRuleRequest
-         * @return UpdateRuleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of an event rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this API operation to update the configurations of an event rule.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRuleResponse
+        /// </returns>
         public async Task<UpdateRuleResponse> UpdateRuleAsync(UpdateRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

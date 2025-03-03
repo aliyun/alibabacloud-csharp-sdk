@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteApiDestinationRequest : TeaModel {
         /// <summary>
-        /// The name of the API destination.
+        /// <para>The name of the API destination.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ApiDestinationName</para>
         /// </summary>
         [NameInMap("ApiDestinationName")]
         [Validation(Required=false)]

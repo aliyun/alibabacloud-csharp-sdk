@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class PauseEventStreamingRequest : TeaModel {
         /// <summary>
-        /// The name of the event stream that you want to stop.
+        /// <para>The name of the event stream that you want to stop.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>rocketmq-sync</para>
         /// </summary>
         [NameInMap("EventStreamingName")]
         [Validation(Required=false)]

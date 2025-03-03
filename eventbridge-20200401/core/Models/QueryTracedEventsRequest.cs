@@ -10,62 +10,86 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class QueryTracedEventsRequest : TeaModel {
         /// <summary>
-        /// The end of the time range when event traces are queried. Unit: milliseconds.
+        /// <para>The end of the time range when event traces are queried. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1661773509000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// The name of the event bus.
+        /// <para>The name of the event bus.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>MyEventBus</para>
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]
         public string EventBusName { get; set; }
 
         /// <summary>
-        /// The name of the event source.
+        /// <para>The name of the event source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse</para>
         /// </summary>
         [NameInMap("EventSource")]
         [Validation(Required=false)]
         public string EventSource { get; set; }
 
         /// <summary>
-        /// The event type.
+        /// <para>The event type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eventbridge:Events:HTTPEvent</para>
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
 
         /// <summary>
-        /// The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. Up to 100 entries can be returned in a call.
+        /// <para>The maximum number of entries to return in a request. You can use this parameter and NextToken to implement paging.</para>
+        /// <remarks>
+        /// <para> A maximum of 100 entries can be returned in a request.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The name of the event rule that is matched.
+        /// <para>The name of the event rule that is matched.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-mnsrule</para>
         /// </summary>
         [NameInMap("MatchedRule")]
         [Validation(Required=false)]
         public string MatchedRule { get; set; }
 
         /// <summary>
-        /// If you configure Limit and excess return values exist, this parameter is returned.
+        /// <para>If you configure Limit and excess return values exist, this parameter is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The beginning of the time range to query event traces. Unit: milliseconds.
+        /// <para>The beginning of the time range to query event traces. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1661773509000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

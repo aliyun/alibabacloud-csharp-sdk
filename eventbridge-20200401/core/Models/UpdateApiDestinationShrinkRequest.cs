@@ -10,32 +10,39 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class UpdateApiDestinationShrinkRequest : TeaModel {
         /// <summary>
-        /// The name of the API destination. The name must be 2 to 127 characters in length.
+        /// <para>The name of the API destination. The name must be 2 to 127 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>api-destination-name</para>
         /// </summary>
         [NameInMap("ApiDestinationName")]
         [Validation(Required=false)]
         public string ApiDestinationName { get; set; }
 
         /// <summary>
-        /// The name of the connection. The name must be 2 to 127 characters in length.
+        /// <para>The name of the connection. The name must be 2 to 127 characters in length.</para>
+        /// <para>Note: Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.</para>
         /// 
-        /// Note: Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.
+        /// <b>Example:</b>
+        /// <para>connection-name</para>
         /// </summary>
         [NameInMap("ConnectionName")]
         [Validation(Required=false)]
         public string ConnectionName { get; set; }
 
         /// <summary>
-        /// The description of the API destination. The description can be up to 255 characters in length.
+        /// <para>The description of the API destination. The description can be up to 255 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>demo</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The parameters that are configured for the API destination.
+        /// <para>The parameters that are configured for the API destination.</para>
         /// </summary>
         [NameInMap("HttpApiParameters")]
         [Validation(Required=false)]
