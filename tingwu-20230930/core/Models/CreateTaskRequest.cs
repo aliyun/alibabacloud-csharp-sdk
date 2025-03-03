@@ -369,6 +369,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public string PhraseId { get; set; }
 
+                [NameInMap("RealtimeDiarizationEnabled")]
+                [Validation(Required=false)]
+                public bool? RealtimeDiarizationEnabled { get; set; }
+
             }
 
             [NameInMap("Translation")]
