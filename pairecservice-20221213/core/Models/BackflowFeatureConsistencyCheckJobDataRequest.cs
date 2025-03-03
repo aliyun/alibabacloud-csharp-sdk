@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string Scores { get; set; }
 
+        [NameInMap("ServiceName")]
+        [Validation(Required=false)]
+        public string ServiceName { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

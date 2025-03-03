@@ -239,6 +239,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Scores"] = request.Scores;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                body["ServiceName"] = request.ServiceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserFeatures))
             {
                 body["UserFeatures"] = request.UserFeatures;
@@ -327,6 +331,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scores))
             {
                 body["Scores"] = request.Scores;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
+            {
+                body["ServiceName"] = request.ServiceName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserFeatures))
             {
