@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class WakeupDesktopsRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesktopId")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopId { get; set; }
 
         /// <summary>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -8,19 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class UnbindConfigGroupResponseBody : TeaModel {
+    public class CreateBandwidthResourcePackagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the configuration groups.</para>
-        /// </summary>
-        [NameInMap("GroupIds")]
-        [Validation(Required=false)]
-        public List<string> GroupIds { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of the order.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AD0FF13D-FC7D-56AD-934F-91C8487*****</para>
+        /// <para>24251717783****</para>
+        /// </summary>
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public long? OrderId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of a request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AE7B699F-625C-587E-BC5F-1395CA969681</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

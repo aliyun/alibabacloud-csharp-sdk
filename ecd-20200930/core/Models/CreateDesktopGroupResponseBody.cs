@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateDesktopGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the desktop group.</para>
+        /// <para>The ID of the shared group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-2i8qxpv6t1a03****</para>
@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the shared groups.</para>
+        /// </summary>
         [NameInMap("DesktopGroupIds")]
         [Validation(Required=false)]
         public List<string> DesktopGroupIds { get; set; }

@@ -82,7 +82,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopTypeFamily { get; set; }
 
         /// <summary>
-        /// <para>This parameter is now in invitational preview and not publicly available.</para>
+        /// <remarks>
+        /// <para> This parameter is not available for public use.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>This parameter is now in invitational preview and unavailable.</para>
@@ -127,12 +129,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public float? GpuCount { get; set; }
 
+        /// <summary>
+        /// <para>The GPU driver type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>T4</description></item>
+        /// <item><description>A10</description></item>
+        /// <item><description>G28</description></item>
+        /// <item><description>G39</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>T4</para>
+        /// </summary>
         [NameInMap("GpuDriverType")]
         [Validation(Required=false)]
         public string GpuDriverType { get; set; }
 
         /// <summary>
-        /// <para>The image ID.</para>
+        /// <para>The image IDs.</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -212,7 +227,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -243,11 +258,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? SelectedBundle { get; set; }
 
         /// <summary>
-        /// <para>The type of the session.</para>
-        /// <para>Enumeration Value:</para>
+        /// <para>The type of the session. Valide values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SingleSession</b></description></item>
-        /// <item><description><b>MultipleSession</b></description></item>
+        /// <item><description>SingleSession</description></item>
+        /// <item><description>MultipleSession</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

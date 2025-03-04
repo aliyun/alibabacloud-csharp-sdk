@@ -16,18 +16,38 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeNASFileSystemsResponseBodyFileSystems> FileSystems { get; set; }
         public class DescribeNASFileSystemsResponseBodyFileSystems : TeaModel {
+            /// <summary>
+            /// <remarks>
+            /// <para>This parameter is not publicly available.</para>
+            /// </remarks>
+            /// </summary>
             [NameInMap("AllowOperateUserDrive")]
             [Validation(Required=false)]
             public bool? AllowOperateUserDrive { get; set; }
 
+            /// <summary>
+            /// <para>The array of the app steaming delivery groups bound with UPM-supported NAS.</para>
+            /// </summary>
             [NameInMap("AppInstanceGroups")]
             [Validation(Required=false)]
             public List<DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups> AppInstanceGroups { get; set; }
             public class DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups : TeaModel {
+                /// <summary>
+                /// <para>The ID of the delivery group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aig-0bz55ibznu9p7****</para>
+                /// </summary>
                 [NameInMap("AppInstanceGroupId")]
                 [Validation(Required=false)]
                 public string AppInstanceGroupId { get; set; }
 
+                /// <summary>
+                /// <para>The name of the delivery group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DemoDeliveryGroup</para>
+                /// </summary>
                 [NameInMap("AppInstanceGroupName")]
                 [Validation(Required=false)]
                 public string AppInstanceGroupName { get; set; }
@@ -212,14 +232,29 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string OfficeSiteName { get; set; }
 
+            /// <summary>
+            /// <para>The array of office networks.</para>
+            /// </summary>
             [NameInMap("OfficeSites")]
             [Validation(Required=false)]
             public List<DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites> OfficeSites { get; set; }
             public class DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites : TeaModel {
+                /// <summary>
+                /// <para>The ID of the office network.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou+dir-363353****</para>
+                /// </summary>
                 [NameInMap("OfficeSiteId")]
                 [Validation(Required=false)]
                 public string OfficeSiteId { get; set; }
 
+                /// <summary>
+                /// <para>The name of the office network.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DemoOfficeNetwork</para>
+                /// </summary>
                 [NameInMap("OfficeSiteName")]
                 [Validation(Required=false)]
                 public string OfficeSiteName { get; set; }
@@ -246,6 +281,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>The storage type of the NAS file system. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Upm: UPM NAS</description></item>
+            /// <item><description>ShareNas: Shared NAS</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Upm</para>
+            /// </summary>
             [NameInMap("Scene")]
             [Validation(Required=false)]
             public string Scene { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribePolicyGroupsRequest : TeaModel {
+        /// <summary>
+        /// <para>The array of cloud computer policy IDs to be excluded.</para>
+        /// </summary>
         [NameInMap("ExternalPolicyGroupIds")]
         [Validation(Required=false)]
         public List<string> ExternalPolicyGroupIds { get; set; }
@@ -37,8 +40,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         /// <summary>
-        /// <para>The policy IDs. You can specify one or more policy IDs.</para>
+        /// <para>The IDs of the cloud computer policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system-all-enabled-policy</para>
@@ -48,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,13 +70,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The effective scope of the policy. Valid values:</para>
+        /// <para>The effective scope of the cloud computer policy.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GLOBAL: The policy takes effect globally.</description></item>
-        /// <item><description>IP: The policy takes effect based on the IP address.</description></item>
-        /// <item><description>ALL: The policy takes effect without limits.</description></item>
+        /// <item><description>ALL</description></item>
+        /// <item><description>IP</description></item>
+        /// <item><description>GLOBAL</description></item>
         /// </list>
-        /// <para>Default value: GLOBAL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL</para>

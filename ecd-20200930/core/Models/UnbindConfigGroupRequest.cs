@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class UnbindConfigGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the region. Set the value to <c>cn-shanghai</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resources from which you want to unbind the configuration group.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceInfos")]
@@ -25,6 +28,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<UnbindConfigGroupRequestResourceInfos> ResourceInfos { get; set; }
         public class UnbindConfigGroupRequestResourceInfos : TeaModel {
             /// <summary>
+            /// <para>The service type of the resource.</para>
+            /// <para>Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description>CLOUD_DESKTOP: the cloud computer service.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>CLOUD_DESKTOP</para>
             /// </summary>
@@ -33,6 +42,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProductType { get; set; }
 
             /// <summary>
+            /// <para>The ID of the resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ecd-ctwj0bk3l5nz****</para>
             /// </summary>
@@ -41,6 +52,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceId { get; set; }
 
             /// <summary>
+            /// <para>The region ID of the resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-chengdu</para>
             /// </summary>
@@ -49,6 +62,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceRegionId { get; set; }
 
             /// <summary>
+            /// <para>The type of the resource.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>RESOURCE_GROUP: the resource group.</description></item>
+            /// <item><description>CLOUD_DESKTOP: the cloud computer service.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>CLOUD_DESKTOP</para>
             /// </summary>
@@ -59,6 +79,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
+        /// <para>The type of the configuration group.</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>Timer: the scheduled task type.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -108,6 +108,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             }
 
+            /// <summary>
+            /// <para>The ID of the GA instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ga-bp1astu3yrplkzoo2****</para>
+            /// </summary>
             [NameInMap("AcceleratorId")]
             [Validation(Required=false)]
             public string AcceleratorId { get; set; }
@@ -208,10 +214,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            /// <summary>
+            /// <para>The custom gateway.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>gw-****.com</para>
+            /// </summary>
             [NameInMap("CustomAccessPoint")]
             [Validation(Required=false)]
             public string CustomAccessPoint { get; set; }
 
+            /// <summary>
+            /// <para>The array of custom DNS addresses.</para>
+            /// </summary>
             [NameInMap("CustomDnsAddress")]
             [Validation(Required=false)]
             public List<string> CustomDnsAddress { get; set; }
@@ -474,6 +489,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string NetworkPackageId { get; set; }
 
+            /// <summary>
+            /// <para>The network version. App Streaming is supported by the new version. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DEFAULT: the legacy version</description></item>
+            /// <item><description>NM: the new version</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NM</para>
+            /// </summary>
             [NameInMap("NmVersion")]
             [Validation(Required=false)]
             public string NmVersion { get; set; }
@@ -558,14 +583,33 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string RdsLicenseStatus { get; set; }
 
+            /// <summary>
+            /// <para>The amount of resources.</para>
+            /// </summary>
             [NameInMap("ResourceAmounts")]
             [Validation(Required=false)]
             public List<DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts> ResourceAmounts { get; set; }
             public class DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts : TeaModel {
+                /// <summary>
+                /// <para>The amount of resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("amount")]
                 [Validation(Required=false)]
                 public long? Amount { get; set; }
 
+                /// <summary>
+                /// <para>The resource type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>desktop: cloud computers</description></item>
+                /// <item><description>desktopGroup: shared cloud computers</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>desktop</para>
+                /// </summary>
                 [NameInMap("resourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
@@ -685,6 +729,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public long? TotalEdsCountForGroup { get; set; }
 
+            /// <summary>
+            /// <para>The total number of network cards.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("TotalResourceAmount")]
             [Validation(Required=false)]
             public long? TotalResourceAmount { get; set; }

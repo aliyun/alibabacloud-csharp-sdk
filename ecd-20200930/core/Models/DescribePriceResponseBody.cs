@@ -10,29 +10,41 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribePriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The price details.</para>
+        /// <para>The price information.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribePriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribePriceResponseBodyPriceInfo : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether a free enterprise drive is available.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("FreeCdsQuota")]
             [Validation(Required=false)]
             public bool? FreeCdsQuota { get; set; }
 
+            /// <summary>
+            /// <para>The free capacity provided by the enterprise drive. Unit: GiB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("FreeCdsSize")]
             [Validation(Required=false)]
             public long? FreeCdsSize { get; set; }
 
             /// <summary>
-            /// <para>The information about the price.</para>
+            /// <para>The price.</para>
             /// </summary>
             [NameInMap("Price")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribePriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
-                /// <para>The unit of the currency.</para>
+                /// <para>The unit of currency (USD).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -42,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The discounted price.</para>
+                /// <para>The discounted amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -51,6 +63,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 [Validation(Required=false)]
                 public float? DiscountPrice { get; set; }
 
+                /// <summary>
+                /// <para>The orders.</para>
+                /// </summary>
                 [NameInMap("OrderLines")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> OrderLines { get; set; }
@@ -66,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// <para>The details of the promotion.</para>
+                /// <para>The promotions.</para>
                 /// </summary>
                 [NameInMap("Promotions")]
                 [Validation(Required=false)]
@@ -124,12 +139,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
                 }
 
+                /// <summary>
+                /// <para>The price under an effective savings plan.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>50.00</para>
+                /// </summary>
                 [NameInMap("SpPrice")]
                 [Validation(Required=false)]
                 public long? SpPrice { get; set; }
 
                 /// <summary>
-                /// <para>The actual price that is paid. The original price minus the discounted part equals the actual price.</para>
+                /// <para>The actual price. The original price minus the discounted amount equals the actual price.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.796</para>

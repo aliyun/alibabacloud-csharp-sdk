@@ -119,6 +119,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
+            /// <para>The hostname of the domain controller.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dc001</para>
             /// </summary>
@@ -127,6 +129,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AdHostname { get; set; }
 
             /// <summary>
+            /// <para>The hostname of the backup domain controller.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dc002</para>
             /// </summary>
@@ -135,6 +139,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BackupDCHostname { get; set; }
 
             /// <summary>
+            /// <para>The DNS address of the backup domain controller.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192.168.2.100</para>
             /// </summary>

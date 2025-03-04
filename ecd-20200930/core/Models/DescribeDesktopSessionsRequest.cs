@@ -57,6 +57,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
+        /// <para>The ID the end user. It is the same as EndUserId. Either one of these two parameters is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>alice</para>
         /// </summary>

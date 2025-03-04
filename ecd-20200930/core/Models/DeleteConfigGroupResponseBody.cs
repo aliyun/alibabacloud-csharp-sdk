@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteConfigGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F7E4322D-D679-5ACB-A909-490D2F0E****</para>
         /// </summary>

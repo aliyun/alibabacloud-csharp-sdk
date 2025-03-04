@@ -79,24 +79,54 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The array of resource specification templates.</para>
+        /// </summary>
         [NameInMap("ResourceSpecs")]
         [Validation(Required=false)]
         public List<ModifyDesktopSpecRequestResourceSpecs> ResourceSpecs { get; set; }
         public class ModifyDesktopSpecRequestResourceSpecs : TeaModel {
+            /// <summary>
+            /// <para>The ID of the cloud computer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ecd-4543qyik164a4****</para>
+            /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
 
+            /// <summary>
+            /// <para>The target size of the system disk. Valid values: 80-500 GiB. The value must be a multiple of 10.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
+            /// </summary>
             [NameInMap("RootDiskSizeGib")]
             [Validation(Required=false)]
             public int? RootDiskSizeGib { get; set; }
 
+            /// <summary>
+            /// <para>The target size of the data disk. Valid values: 80-500 GiB. The value must be a multiple of 10.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("UserDiskSizeGib")]
             [Validation(Required=false)]
             public int? UserDiskSizeGib { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The resource type.</para>
+        /// <remarks>
+        /// <para>This parameter is optional for non-subscribed cloud computers.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DesktopMonthPackage</para>
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }

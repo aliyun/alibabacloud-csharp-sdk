@@ -166,10 +166,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? RemainTime { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the restore point.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rp-btgmaa20wkcju****</para>
+            /// </summary>
             [NameInMap("RestorePointId")]
             [Validation(Required=false)]
             public string RestorePointId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the restore point.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DataDiskBackup</para>
+            /// </summary>
             [NameInMap("RestorePointName")]
             [Validation(Required=false)]
             public string RestorePointName { get; set; }

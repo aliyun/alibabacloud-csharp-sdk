@@ -93,10 +93,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string InvocationStatus { get; set; }
 
+            /// <summary>
+            /// <para>The total number of cloud computers on which the command is executed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("InvokeDesktopCount")]
             [Validation(Required=false)]
             public int? InvokeDesktopCount { get; set; }
 
+            /// <summary>
+            /// <para>The total number of cloud computers on which the command is executed successfully.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("InvokeDesktopSucceedCount")]
             [Validation(Required=false)]
             public int? InvokeDesktopSucceedCount { get; set; }

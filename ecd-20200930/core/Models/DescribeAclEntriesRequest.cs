@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The office network ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai+dir-631324****</para>
+        /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }

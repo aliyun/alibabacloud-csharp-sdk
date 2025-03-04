@@ -170,6 +170,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        /// <summary>
+        /// <para>The input parameters used when no templates are used.</para>
+        /// </summary>
         [NameInMap("DesktopAttachment")]
         [Validation(Required=false)]
         public string DesktopAttachmentShrink { get; set; }
@@ -539,14 +542,32 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-3mtuc28rx95lx****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the saving plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>spn-4b945dc4Wktd****</para>
+        /// </summary>
         [NameInMap("SavingPlanId")]
         [Validation(Required=false)]
         public string SavingPlanId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the auto-snapshot policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sp-28mp6my0l6zow****</para>
+        /// </summary>
         [NameInMap("SnapshotPolicyId")]
         [Validation(Required=false)]
         public string SnapshotPolicyId { get; set; }
@@ -580,6 +601,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         }
 
+        /// <summary>
+        /// <para>The ID of the timer group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccg-0caoeogrk9m5****</para>
+        /// </summary>
         [NameInMap("TimerGroupId")]
         [Validation(Required=false)]
         public string TimerGroupId { get; set; }

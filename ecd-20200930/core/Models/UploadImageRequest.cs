@@ -157,6 +157,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The size of the system disk. Unit: GB.</para>
+        /// <remarks>
+        /// <para>The size of the system disk cannot be smaller than the size of the image.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
+        /// </summary>
         [NameInMap("SystemDiskSize")]
         [Validation(Required=false)]
         public string SystemDiskSize { get; set; }

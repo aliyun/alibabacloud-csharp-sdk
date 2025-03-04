@@ -1291,6 +1291,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string WatermarkType { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to provide the AI Assistant function in the DesktopAssistant when the cloud computer is accessed from the Alibaba Cloud Workspace desktop clients (including the Windows client and the macOS client).</para>
+        /// <remarks>
+        /// <para>Desktop clients of V7.7 and higher versions required.</para>
+        /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>off: the AI Aisstant function is not provided.</description></item>
+        /// <item><description>on: the AI Aisstant function is provided.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>

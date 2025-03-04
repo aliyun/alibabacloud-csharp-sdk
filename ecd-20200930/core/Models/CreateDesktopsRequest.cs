@@ -170,42 +170,121 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        /// <summary>
+        /// <para>The input parameters used when no templates are used.</para>
+        /// </summary>
         [NameInMap("DesktopAttachment")]
         [Validation(Required=false)]
         public CreateDesktopsRequestDesktopAttachment DesktopAttachment { get; set; }
         public class CreateDesktopsRequestDesktopAttachment : TeaModel {
+            /// <summary>
+            /// <para>The category of the data disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>cloud_auto: SSD</description></item>
+            /// <item><description>cloud_essd: ESSD</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cloud_auto</para>
+            /// </summary>
             [NameInMap("DataDiskCategory")]
             [Validation(Required=false)]
             public string DataDiskCategory { get; set; }
 
+            /// <summary>
+            /// <para>The performance level of the data disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PL0 (default)</description></item>
+            /// <item><description>PL1</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PL0</para>
+            /// </summary>
             [NameInMap("DataDiskPerLevel")]
             [Validation(Required=false)]
             public string DataDiskPerLevel { get; set; }
 
+            /// <summary>
+            /// <para>The size of the data disk. Unit: GiB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>40</para>
+            /// </summary>
             [NameInMap("DataDiskSize")]
             [Validation(Required=false)]
             public int? DataDiskSize { get; set; }
 
+            /// <summary>
+            /// <para>The default display language:</para>
+            /// <list type="bullet">
+            /// <item><description>zh-CN: Simplified Chinese</description></item>
+            /// <item><description>zh-HK: Traditional Chinese</description></item>
+            /// <item><description>en-US: English</description></item>
+            /// <item><description>ja-JP: Japanese</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>zh-CN</para>
+            /// </summary>
             [NameInMap("DefaultLanguage")]
             [Validation(Required=false)]
             public string DefaultLanguage { get; set; }
 
+            /// <summary>
+            /// <para>The desktop type. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the IDs of supported desktop types.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>eds.enterprise_office.8c16g</para>
+            /// </summary>
             [NameInMap("DesktopType")]
             [Validation(Required=false)]
             public string DesktopType { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>m-39ddhdb0ggzjx*****</para>
+            /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
+            /// <summary>
+            /// <para>The category of the system disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>cloud_auto: SSD</description></item>
+            /// <item><description>cloud_essd: ESSD</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cloud_auto</para>
+            /// </summary>
             [NameInMap("SystemDiskCategory")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
+            /// <summary>
+            /// <para>The performance level of the system disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PL0 (default)</description></item>
+            /// <item><description>PL1</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PL0</para>
+            /// </summary>
             [NameInMap("SystemDiskPerLevel")]
             [Validation(Required=false)]
             public string SystemDiskPerLevel { get; set; }
 
+            /// <summary>
+            /// <para>The size of the system disk. Unit: GiB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>40</para>
+            /// </summary>
             [NameInMap("SystemDiskSize")]
             [Validation(Required=false)]
             public int? SystemDiskSize { get; set; }
@@ -577,14 +656,32 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-3mtuc28rx95lx****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the saving plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>spn-4b945dc4Wktd****</para>
+        /// </summary>
         [NameInMap("SavingPlanId")]
         [Validation(Required=false)]
         public string SavingPlanId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the auto-snapshot policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sp-28mp6my0l6zow****</para>
+        /// </summary>
         [NameInMap("SnapshotPolicyId")]
         [Validation(Required=false)]
         public string SnapshotPolicyId { get; set; }
@@ -618,6 +715,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         }
 
+        /// <summary>
+        /// <para>The ID of the timer group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccg-0caoeogrk9m5****</para>
+        /// </summary>
         [NameInMap("TimerGroupId")]
         [Validation(Required=false)]
         public string TimerGroupId { get; set; }

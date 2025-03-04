@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListDirectoryUsersRequest : TeaModel {
+        /// <summary>
+        /// <remarks>
+        /// <para>This parameter is not publicly available. The value can be 1 or left empty.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("AssignedInfo")]
         [Validation(Required=false)]
         public string AssignedInfo { get; set; }
@@ -34,6 +42,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to return the users with assigned cloud computers only.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IncludeAssignedUser")]
         [Validation(Required=false)]
         public bool? IncludeAssignedUser { get; set; }
@@ -81,6 +95,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The sort type.</para>
+        /// <para>Valide values:</para>
+        /// <list type="bullet">
+        /// <item><description>asc: cloud computers assigned to users on bottom</description></item>
+        /// <item><description>desc: cloud computers assigned to users on top</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>asc</para>
+        /// </summary>
         [NameInMap("SortType")]
         [Validation(Required=false)]
         public string SortType { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeBundlesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the queried cloud computer templates.</para>
+        /// <para>The details of the cloud computer templates.</para>
         /// </summary>
         [NameInMap("Bundles")]
         [Validation(Required=false)]
@@ -72,6 +72,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            /// <summary>
+            /// <para>The category of the data disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>cloud_efficiency: ultra disk</description></item>
+            /// <item><description>cloud_auto: SSD</description></item>
+            /// <item><description>cloud_essd: ESSD (supported by specific specifications)</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cloud_efficiency</para>
+            /// </summary>
             [NameInMap("DataDiskCategory")]
             [Validation(Required=false)]
             public string DataDiskCategory { get; set; }
@@ -278,6 +289,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The OS language of the image.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>en-US: English</description></item>
+            /// <item><description>zh-HK: Chinese, Traditional (Hong Kong, China)</description></item>
+            /// <item><description>zh-CN: Simplified Chinese</description></item>
+            /// <item><description>ja-JP: Japanese</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>en-US</para>
@@ -406,6 +424,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string StockState { get; set; }
 
+            /// <summary>
+            /// <para>The category of the system disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>cloud_efficiency: ultra disk</description></item>
+            /// <item><description>cloud_auto: SSD</description></item>
+            /// <item><description>cloud_essd: ESSD (supported by specific specifications)</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cloud_efficiency</para>
+            /// </summary>
             [NameInMap("SystemDiskCategory")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }

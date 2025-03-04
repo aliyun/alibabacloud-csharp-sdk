@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDiskSpecRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
+        /// <para>Specifies whether to enable the automatic payment feature.</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: automatically completes the payment. Make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.</description></item>
-        /// <item><description><c>false</c>: does not complete the payment. In this case, an order is generated, but no payment is made. You can log on to the Elastic Desktop Service (EDS) console and complete the payment based on the order ID on the <b>Orders</b> page.</description></item>
+        /// <item><description>If you set the value to <c>true</c>, ensure your account has sufficient balance to avoid generating abnormal orders.</description></item>
+        /// <item><description>If you set the value to <c>false</c>, go to the <b>Expenses and Costs</b> page to complete the payment based on the order number.</description></item>
         /// </list>
-        /// <para>Default value: <c>true</c>.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true (default): enables the automatic payment feature.</description></item>
+        /// <item><description>false: generates the order and manually complete the payment.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -25,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud desktop.</para>
+        /// <para>The ID of the cloud computer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,13 +60,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResellerOwnerUid")]
+        [Validation(Required=false)]
+        public long? ResellerOwnerUid { get; set; }
+
         /// <summary>
-        /// <para>The performance level (PL) of the system disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the system disk. Valid values:</para>
+        /// <para>The PL of the system disk. Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PL0</description></item>
         /// <item><description>PL1</description></item>
-        /// <item><description>PL2</description></item>
+        /// <item><description>PL0</description></item>
         /// <item><description>PL3</description></item>
+        /// <item><description>PL2</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,12 +82,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RootDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:</para>
+        /// <para>The PL of the data disk. Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PL0</description></item>
         /// <item><description>PL1</description></item>
-        /// <item><description>PL2</description></item>
+        /// <item><description>PL0</description></item>
         /// <item><description>PL3</description></item>
+        /// <item><description>PL2</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

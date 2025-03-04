@@ -65,6 +65,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to return the execution results of all cloud computers if the command is executed on multiple cloud computers.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: returned.</description></item>
+        /// <item><description>false: not returned.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("IncludeInvokeDesktops")]
         [Validation(Required=false)]
         public bool? IncludeInvokeDesktops { get; set; }

@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<ListDirectoryUsersResponseBodyUsers> Users { get; set; }
         public class ListDirectoryUsersResponseBodyUsers : TeaModel {
+            /// <summary>
+            /// <para>The number of assigned cloud computers.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("AssignedDesktopNumber")]
             [Validation(Required=false)]
             public int? AssignedDesktopNumber { get; set; }
@@ -50,6 +56,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
+            /// <summary>
+            /// <para>The email address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="mailto:user@example.com">user@example.com</a></para>
+            /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
@@ -64,6 +76,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string EndUser { get; set; }
 
+            /// <summary>
+            /// <para>The mobile number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>130********</para>
+            /// </summary>
             [NameInMap("Phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopsInGroupRequest : TeaModel {
+        [NameInMap("CustomEndTimePeriod")]
+        [Validation(Required=false)]
+        public long? CustomEndTimePeriod { get; set; }
+
+        [NameInMap("CustomStartTimePeriod")]
+        [Validation(Required=false)]
+        public long? CustomStartTimePeriod { get; set; }
+
         /// <summary>
         /// <para>The ID of the cloud computer pool.</para>
         /// <para>This parameter is required.</para>

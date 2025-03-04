@@ -2298,7 +2298,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定配置组</para>
+        /// <para>Binds a configuration group to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2355,7 +2355,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定配置组</para>
+        /// <para>Binds a configuration group to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2412,7 +2412,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定配置组</para>
+        /// <para>Binds a configuration group to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2430,7 +2430,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定配置组</para>
+        /// <para>Binds a configuration group to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5020,6 +5020,188 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates data transfer plans.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBandwidthResourcePackagesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBandwidthResourcePackagesResponse
+        /// </returns>
+        public CreateBandwidthResourcePackagesResponse CreateBandwidthResourcePackagesWithOptions(CreateBandwidthResourcePackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageSize))
+            {
+                query["PackageSize"] = request.PackageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBandwidthResourcePackages",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateBandwidthResourcePackagesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateBandwidthResourcePackagesResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates data transfer plans.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBandwidthResourcePackagesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBandwidthResourcePackagesResponse
+        /// </returns>
+        public async Task<CreateBandwidthResourcePackagesResponse> CreateBandwidthResourcePackagesWithOptionsAsync(CreateBandwidthResourcePackagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageSize))
+            {
+                query["PackageSize"] = request.PackageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBandwidthResourcePackages",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateBandwidthResourcePackagesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateBandwidthResourcePackagesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates data transfer plans.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBandwidthResourcePackagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBandwidthResourcePackagesResponse
+        /// </returns>
+        public CreateBandwidthResourcePackagesResponse CreateBandwidthResourcePackages(CreateBandwidthResourcePackagesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateBandwidthResourcePackagesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates data transfer plans.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBandwidthResourcePackagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBandwidthResourcePackagesResponse
+        /// </returns>
+        public async Task<CreateBandwidthResourcePackagesResponse> CreateBandwidthResourcePackagesAsync(CreateBandwidthResourcePackagesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateBandwidthResourcePackagesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a custom cloud computer template.</para>
         /// </summary>
         /// 
@@ -6130,7 +6312,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建配置组</para>
+        /// <para>Creates a configuration group. A configuration group stores the setup details for scheduled tasks on cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6199,7 +6381,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建配置组</para>
+        /// <para>Creates a configuration group. A configuration group stores the setup details for scheduled tasks on cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6268,7 +6450,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建配置组</para>
+        /// <para>Creates a configuration group. A configuration group stores the setup details for scheduled tasks on cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6286,7 +6468,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建配置组</para>
+        /// <para>Creates a configuration group. A configuration group stores the setup details for scheduled tasks on cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6304,15 +6486,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud computer pool (formerly desktop group).</para>
+        /// <para>Creates a shared group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation to create a desktop group, make sure that the following operations are complete:</para>
+        /// <para>  To learn about the features, application scenarios, usage limits, scaling policies, and other details of shared groups, refer to <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a> of desktop groups.</description></item>
-        /// <item><description>Resources, such as workspaces, users, desktop templates, and policies, are created.</description></item>
+        /// <item><description>Before you call this operation, make sure that the required resources, such as the office network, cloud computer template, and policies, are created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6582,15 +6763,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud computer pool (formerly desktop group).</para>
+        /// <para>Creates a shared group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation to create a desktop group, make sure that the following operations are complete:</para>
+        /// <para>  To learn about the features, application scenarios, usage limits, scaling policies, and other details of shared groups, refer to <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a> of desktop groups.</description></item>
-        /// <item><description>Resources, such as workspaces, users, desktop templates, and policies, are created.</description></item>
+        /// <item><description>Before you call this operation, make sure that the required resources, such as the office network, cloud computer template, and policies, are created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6860,15 +7040,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud computer pool (formerly desktop group).</para>
+        /// <para>Creates a shared group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation to create a desktop group, make sure that the following operations are complete:</para>
+        /// <para>  To learn about the features, application scenarios, usage limits, scaling policies, and other details of shared groups, refer to <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a> of desktop groups.</description></item>
-        /// <item><description>Resources, such as workspaces, users, desktop templates, and policies, are created.</description></item>
+        /// <item><description>Before you call this operation, make sure that the required resources, such as the office network, cloud computer template, and policies, are created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6887,15 +7066,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud computer pool (formerly desktop group).</para>
+        /// <para>Creates a shared group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation to create a desktop group, make sure that the following operations are complete:</para>
+        /// <para>  To learn about the features, application scenarios, usage limits, scaling policies, and other details of shared groups, refer to <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a> of desktop groups.</description></item>
-        /// <item><description>Resources, such as workspaces, users, desktop templates, and policies, are created.</description></item>
+        /// <item><description>Before you call this operation, make sure that the required resources, such as the office network, cloud computer template, and policies, are created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10392,7 +10570,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除配置组</para>
+        /// <para>Deletes a configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10445,7 +10623,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除配置组</para>
+        /// <para>Deletes a configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10498,7 +10676,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除配置组</para>
+        /// <para>Deletes a configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10516,7 +10694,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除配置组</para>
+        /// <para>Deletes a configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14276,7 +14454,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询配置组</para>
+        /// <para>Queries configuration groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14357,7 +14535,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询配置组</para>
+        /// <para>Queries configuration groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14438,7 +14616,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询配置组</para>
+        /// <para>Queries configuration groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14456,7 +14634,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询配置组</para>
+        /// <para>Queries configuration groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16244,7 +16422,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of the cloud desktop.</para>
+        /// <para>Queries the details of cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16433,7 +16611,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of the cloud desktop.</para>
+        /// <para>Queries the details of cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16622,7 +16800,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of the cloud desktop.</para>
+        /// <para>Queries the details of cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16640,7 +16818,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of the cloud desktop.</para>
+        /// <para>Queries the details of cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16675,6 +16853,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomEndTimePeriod))
+            {
+                query["CustomEndTimePeriod"] = request.CustomEndTimePeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomStartTimePeriod))
+            {
+                query["CustomStartTimePeriod"] = request.CustomStartTimePeriod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopGroupId))
             {
                 query["DesktopGroupId"] = request.DesktopGroupId;
@@ -16744,6 +16930,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomEndTimePeriod))
+            {
+                query["CustomEndTimePeriod"] = request.CustomEndTimePeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomStartTimePeriod))
+            {
+                query["CustomStartTimePeriod"] = request.CustomStartTimePeriod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopGroupId))
             {
                 query["DesktopGroupId"] = request.DesktopGroupId;
@@ -19708,7 +19902,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more policies.</para>
+        /// <para>Queries the details of a cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19736,6 +19930,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
             {
@@ -19777,7 +19979,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more policies.</para>
+        /// <para>Queries the details of a cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19805,6 +20007,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupId))
             {
@@ -19846,7 +20056,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more policies.</para>
+        /// <para>Queries the details of a cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19864,7 +20074,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more policies.</para>
+        /// <para>Queries the details of a cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19882,7 +20092,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the price information of desktop resources in Elastic Desktop Service (EDS).</para>
+        /// <para>Queries the prices of Elastic Desktop Service (EDS) resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20005,7 +20215,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the price information of desktop resources in Elastic Desktop Service (EDS).</para>
+        /// <para>Queries the prices of Elastic Desktop Service (EDS) resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20128,7 +20338,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the price information of desktop resources in Elastic Desktop Service (EDS).</para>
+        /// <para>Queries the prices of Elastic Desktop Service (EDS) resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20160,7 +20370,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the price information of desktop resources in Elastic Desktop Service (EDS).</para>
+        /// <para>Queries the prices of Elastic Desktop Service (EDS) resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20866,6 +21076,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeRecordingsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the refund amount for unsubscribing from a cloud computer.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRefundPriceRequest
         /// </param>
@@ -20918,6 +21133,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the refund amount for unsubscribing from a cloud computer.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRefundPriceRequest
         /// </param>
@@ -20970,6 +21190,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the refund amount for unsubscribing from a cloud computer.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRefundPriceRequest
         /// </param>
@@ -20983,6 +21208,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return DescribeRefundPriceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the refund amount for unsubscribing from a cloud computer.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRefundPriceRequest
         /// </param>
@@ -21722,7 +21952,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询定时任务配置</para>
+        /// <para>Queries a scheduled task configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21775,7 +22005,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询定时任务配置</para>
+        /// <para>Queries a scheduled task configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21828,7 +22058,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询定时任务配置</para>
+        /// <para>Queries a scheduled task configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21846,7 +22076,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询定时任务配置</para>
+        /// <para>Queries a scheduled task configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29726,7 +29956,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改配置组</para>
+        /// <para>Modifies the basic information of a configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29787,7 +30017,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改配置组</para>
+        /// <para>Modifies the basic information of a configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29848,7 +30078,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改配置组</para>
+        /// <para>Modifies the basic information of a configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29866,7 +30096,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改配置组</para>
+        /// <para>Modifies the basic information of a configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32078,23 +32308,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configurations of a cloud desktop, including the number of vCPUs, memory size, and disk size.</para>
+        /// <para>Changes the performance level (PL) of a system disk or data disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.</para>
-        /// <list type="bullet">
-        /// <item><description>Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.</description></item>
-        /// <item><description>When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
-        /// 1\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
-        /// 2\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-        /// 3\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
-        /// 4\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
-        /// 5\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
-        /// 6\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.</description></item>
-        /// <item><description>The changes do not affect your personal data on the cloud desktop.</description></item>
-        /// </list>
+        /// <para>When creating a cloud computer in Elastic Desktop Service (EDS) Enterprise, you can use a template to define specifications that align with your business needs. By default, Enterprise Graphics or High Frequency cloud computers utilize Enterprise SSDs (ESSDs). You can customize the disk capacity and performance level (PL) of these ESSDs, and adjust the PL for both system and data disks as needed.</para>
+        /// <remarks>
+        /// <para> Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -32126,6 +32348,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResellerOwnerUid))
+            {
+                query["ResellerOwnerUid"] = request.ResellerOwnerUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskPerformanceLevel))
             {
@@ -32163,23 +32389,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configurations of a cloud desktop, including the number of vCPUs, memory size, and disk size.</para>
+        /// <para>Changes the performance level (PL) of a system disk or data disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.</para>
-        /// <list type="bullet">
-        /// <item><description>Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.</description></item>
-        /// <item><description>When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
-        /// 1\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
-        /// 2\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-        /// 3\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
-        /// 4\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
-        /// 5\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
-        /// 6\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.</description></item>
-        /// <item><description>The changes do not affect your personal data on the cloud desktop.</description></item>
-        /// </list>
+        /// <para>When creating a cloud computer in Elastic Desktop Service (EDS) Enterprise, you can use a template to define specifications that align with your business needs. By default, Enterprise Graphics or High Frequency cloud computers utilize Enterprise SSDs (ESSDs). You can customize the disk capacity and performance level (PL) of these ESSDs, and adjust the PL for both system and data disks as needed.</para>
+        /// <remarks>
+        /// <para> Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -32211,6 +32429,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResellerOwnerUid))
+            {
+                query["ResellerOwnerUid"] = request.ResellerOwnerUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDiskPerformanceLevel))
             {
@@ -32248,23 +32470,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configurations of a cloud desktop, including the number of vCPUs, memory size, and disk size.</para>
+        /// <para>Changes the performance level (PL) of a system disk or data disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.</para>
-        /// <list type="bullet">
-        /// <item><description>Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.</description></item>
-        /// <item><description>When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
-        /// 1\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
-        /// 2\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-        /// 3\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
-        /// 4\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
-        /// 5\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
-        /// 6\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.</description></item>
-        /// <item><description>The changes do not affect your personal data on the cloud desktop.</description></item>
-        /// </list>
+        /// <para>When creating a cloud computer in Elastic Desktop Service (EDS) Enterprise, you can use a template to define specifications that align with your business needs. By default, Enterprise Graphics or High Frequency cloud computers utilize Enterprise SSDs (ESSDs). You can customize the disk capacity and performance level (PL) of these ESSDs, and adjust the PL for both system and data disks as needed.</para>
+        /// <remarks>
+        /// <para> Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -32282,23 +32496,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configurations of a cloud desktop, including the number of vCPUs, memory size, and disk size.</para>
+        /// <para>Changes the performance level (PL) of a system disk or data disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.</para>
-        /// <list type="bullet">
-        /// <item><description>Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.</description></item>
-        /// <item><description>When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
-        /// 1\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
-        /// 2\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-        /// 3\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
-        /// 4\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
-        /// 5\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
-        /// 6\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.</description></item>
-        /// <item><description>The changes do not affect your personal data on the cloud desktop.</description></item>
-        /// </list>
+        /// <para>When creating a cloud computer in Elastic Desktop Service (EDS) Enterprise, you can use a template to define specifications that align with your business needs. By default, Enterprise Graphics or High Frequency cloud computers utilize Enterprise SSDs (ESSDs). You can customize the disk capacity and performance level (PL) of these ESSDs, and adjust the PL for both system and data disks as needed.</para>
+        /// <remarks>
+        /// <para> Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -34674,7 +34880,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改定时任务配置</para>
+        /// <para>Modifies a scheduled task configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34739,7 +34945,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改定时任务配置</para>
+        /// <para>Modifies a scheduled task configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34804,7 +35010,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改定时任务配置</para>
+        /// <para>Modifies a scheduled task configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34822,7 +35028,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改定时任务配置</para>
+        /// <para>Modifies a scheduled task configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36234,6 +36440,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await RemoveUserFromDesktopOversoldUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renew a subscription cloud computer pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RenewDesktopGroupRequest
         /// </param>
@@ -36298,6 +36509,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renew a subscription cloud computer pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RenewDesktopGroupRequest
         /// </param>
@@ -36362,6 +36578,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renew a subscription cloud computer pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RenewDesktopGroupRequest
         /// </param>
@@ -36375,6 +36596,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return RenewDesktopGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renew a subscription cloud computer pool.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RenewDesktopGroupRequest
         /// </param>
@@ -36751,6 +36977,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AutoPay"] = request.AutoPay;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPackageId))
             {
                 query["NetworkPackageId"] = request.NetworkPackageId;
@@ -36819,6 +37049,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkPackageId))
             {
@@ -39992,7 +40226,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑配置组</para>
+        /// <para>Unbinds a configuration group from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40049,7 +40283,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑配置组</para>
+        /// <para>Unbinds a configuration group from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40106,7 +40340,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑配置组</para>
+        /// <para>Unbinds a configuration group from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40124,7 +40358,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑配置组</para>
+        /// <para>Unbinds a configuration group from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41208,6 +41442,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await VerifyCenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Wakes up cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only cloud computers that are in the Hibernated state can be waked up.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// WakeupDesktopsRequest
         /// </param>
@@ -41256,6 +41500,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Wakes up cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only cloud computers that are in the Hibernated state can be waked up.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// WakeupDesktopsRequest
         /// </param>
@@ -41304,6 +41558,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Wakes up cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only cloud computers that are in the Hibernated state can be waked up.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// WakeupDesktopsRequest
         /// </param>
@@ -41317,6 +41581,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return WakeupDesktopsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Wakes up cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only cloud computers that are in the Hibernated state can be waked up.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// WakeupDesktopsRequest
         /// </param>

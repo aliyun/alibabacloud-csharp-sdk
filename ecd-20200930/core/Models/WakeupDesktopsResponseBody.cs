@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class WakeupDesktopsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6557DBA9-CF3E-5C1B-B1F1-68FDA599****</para>
         /// </summary>

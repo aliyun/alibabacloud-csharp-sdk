@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
         /// <summary>
         /// <para>The IDs of premium bandwidth plans. You can specify up to 100 IDs.</para>
         /// <para>This parameter is required.</para>

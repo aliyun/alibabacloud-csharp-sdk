@@ -19,10 +19,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string AdHostname { get; set; }
 
+        /// <summary>
+        /// <para>The hostname of the backup domain controller.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dc002</para>
+        /// </summary>
         [NameInMap("BackupDCHostname")]
         [Validation(Required=false)]
         public string BackupDCHostname { get; set; }
 
+        /// <summary>
+        /// <para>The DNS address of the backup domain controller.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.2.100</para>
+        /// </summary>
         [NameInMap("BackupDns")]
         [Validation(Required=false)]
         public string BackupDns { get; set; }

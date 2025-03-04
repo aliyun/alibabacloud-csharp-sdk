@@ -66,6 +66,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public float? GpuCount { get; set; }
 
+            /// <summary>
+            /// <para>The GPU memory size. Unit: MB. This parameter applies to GPU-enabled cloud computers only.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2048</para>
+            /// </summary>
             [NameInMap("GpuMemory")]
             [Validation(Required=false)]
             public int? GpuMemory { get; set; }
@@ -90,6 +96,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string InstanceTypeFamily { get; set; }
 
+            /// <summary>
+            /// <para>The number of sessions supported by the current specification.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
             [NameInMap("MaxSessionCount")]
             [Validation(Required=false)]
             public int? MaxSessionCount { get; set; }
@@ -104,10 +116,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string MemorySize { get; set; }
 
+            /// <summary>
+            /// <para>The array of sales modes.</para>
+            /// </summary>
             [NameInMap("Scopes")]
             [Validation(Required=false)]
             public List<string> Scopes { get; set; }
 
+            /// <summary>
+            /// <para>The stock status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Sufficient</para>
+            /// </summary>
             [NameInMap("StockState")]
             [Validation(Required=false)]
             public string StockState { get; set; }

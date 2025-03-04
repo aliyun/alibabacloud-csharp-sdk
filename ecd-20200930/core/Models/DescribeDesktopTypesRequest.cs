@@ -204,6 +204,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopTypeId { get; set; }
 
+        /// <summary>
+        /// <para>The array of specifications.</para>
+        /// </summary>
         [NameInMap("DesktopTypeIdList")]
         [Validation(Required=false)]
         public List<string> DesktopTypeIdList { get; set; }
@@ -218,10 +221,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public float? GpuCount { get; set; }
 
+        /// <summary>
+        /// <para>The type of the pre-installed GPU driver. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>T4</description></item>
+        /// <item><description>A10</description></item>
+        /// <item><description>G28</description></item>
+        /// <item><description>G39</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A10</para>
+        /// </summary>
         [NameInMap("GpuDriverType")]
         [Validation(Required=false)]
         public string GpuDriverType { get; set; }
 
+        /// <summary>
+        /// <para>The GPU memory size. Unit: MB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2048</para>
+        /// </summary>
         [NameInMap("GpuMemory")]
         [Validation(Required=false)]
         public int? GpuMemory { get; set; }
@@ -300,6 +321,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? MemorySize { get; set; }
 
+        /// <summary>
+        /// <para>The sort criterion. If left empty, the entries will be in descending order based on the creation time. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Memory: sort by memory size</description></item>
+        /// <item><description>Cpu: sort by number of CPU cores</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Memory</para>
+        /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
@@ -325,18 +356,52 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The sales mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>MonthPackage: monthly subscription</description></item>
+        /// <item><description>FastBuy: fast buy</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FastBuy</para>
+        /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]
         public string Scope { get; set; }
 
+        /// <summary>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ASC: in ascending order [default]</description></item>
+        /// <item><description>DESC: in descending order</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ASC</para>
+        /// </summary>
         [NameInMap("SortType")]
         [Validation(Required=false)]
         public string SortType { get; set; }
 
+        /// <summary>
+        /// <para>The number of sessions supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("SupportMinSessionCount")]
         [Validation(Required=false)]
         public int? SupportMinSessionCount { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para>This parameter is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]
         public string ZoneId { get; set; }
