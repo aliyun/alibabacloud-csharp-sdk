@@ -39,6 +39,156 @@ namespace AlibabaCloud.SDK.MarketplaceIntl20221230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>isv推送实例消息给用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// NoticeInstanceUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// NoticeInstanceUserResponse
+        /// </returns>
+        public NoticeInstanceUserResponse NoticeInstanceUserWithOptions(NoticeInstanceUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeParam))
+            {
+                body["NoticeParam"] = request.NoticeParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
+            {
+                body["NoticeType"] = request.NoticeType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "NoticeInstanceUser",
+                Version = "2022-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<NoticeInstanceUserResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<NoticeInstanceUserResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>isv推送实例消息给用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// NoticeInstanceUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// NoticeInstanceUserResponse
+        /// </returns>
+        public async Task<NoticeInstanceUserResponse> NoticeInstanceUserWithOptionsAsync(NoticeInstanceUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeParam))
+            {
+                body["NoticeParam"] = request.NoticeParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
+            {
+                body["NoticeType"] = request.NoticeType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "NoticeInstanceUser",
+                Version = "2022-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<NoticeInstanceUserResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<NoticeInstanceUserResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>isv推送实例消息给用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// NoticeInstanceUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// NoticeInstanceUserResponse
+        /// </returns>
+        public NoticeInstanceUserResponse NoticeInstanceUser(NoticeInstanceUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return NoticeInstanceUserWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>isv推送实例消息给用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// NoticeInstanceUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// NoticeInstanceUserResponse
+        /// </returns>
+        public async Task<NoticeInstanceUserResponse> NoticeInstanceUserAsync(NoticeInstanceUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await NoticeInstanceUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>国际云市场推送计量数据</para>
         /// </summary>
         /// 
