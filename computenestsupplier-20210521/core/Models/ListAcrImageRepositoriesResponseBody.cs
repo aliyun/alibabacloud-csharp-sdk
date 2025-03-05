@@ -76,6 +76,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string RepoName { get; set; }
 
+            /// <summary>
+            /// <para>The type of the repository. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>Private</c>: a private repository</description></item>
+            /// <item><description><c>Public</c>: a public repository</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Private</para>
+            /// </summary>
             [NameInMap("RepoType")]
             [Validation(Required=false)]
             public string RepoType { get; set; }

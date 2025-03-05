@@ -17,6 +17,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public List<ListArtifactsResponseBodyArtifacts> Artifacts { get; set; }
         public class ListArtifactsResponseBodyArtifacts : TeaModel {
             /// <summary>
+            /// <para>The build properties of the artifact, utilized for hosting and building the deployment package.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;CodeRepo\&quot;:{\&quot;Owner\&quot;:\&quot;wenle\&quot;,\&quot;Platform\&quot;:\&quot;github\&quot;,\&quot;Branch\&quot;:\&quot;main\&quot;,\&quot;RepoName\&quot;:\&quot;aliyun-computenest/java-springboot-demo\&quot;}}</para>
+            /// </summary>
+            [NameInMap("ArtifactBuildProperty")]
+            [Validation(Required=false)]
+            public string ArtifactBuildProperty { get; set; }
+
+            /// <summary>
             /// <para>The ID of the deployment package.</para>
             /// 
             /// <b>Example:</b>

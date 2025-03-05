@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         /// <summary>
         /// <para>Whether to set the recommended service publishing to the service directory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Recommend")]
         [Validation(Required=false)]

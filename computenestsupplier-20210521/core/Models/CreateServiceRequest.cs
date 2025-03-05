@@ -69,10 +69,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>Compliance check metadata.</para>
+        /// </summary>
         [NameInMap("ComplianceMetadata")]
         [Validation(Required=false)]
         public CreateServiceRequestComplianceMetadata ComplianceMetadata { get; set; }
         public class CreateServiceRequestComplianceMetadata : TeaModel {
+            /// <summary>
+            /// <para>The compliance package selected.</para>
+            /// </summary>
             [NameInMap("CompliancePacks")]
             [Validation(Required=false)]
             public List<string> CompliancePacks { get; set; }
@@ -110,6 +116,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string DeployType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform only a dry run for the request to check information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs a dry run for the request, but does not create a service.</description></item>
+        /// <item><description>false: performs a dry run for the request, and create a service if the request passes the dry run.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -314,14 +330,29 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string ShortDescription { get; set; }
 
+            /// <summary>
+            /// <para>The list of the software in the service.</para>
+            /// </summary>
             [NameInMap("Softwares")]
             [Validation(Required=false)]
             public List<CreateServiceRequestServiceInfoSoftwares> Softwares { get; set; }
             public class CreateServiceRequestServiceInfoSoftwares : TeaModel {
+                /// <summary>
+                /// <para>The name of the software.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>MySQL</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The version of the software.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5.7</para>
+                /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public string Version { get; set; }

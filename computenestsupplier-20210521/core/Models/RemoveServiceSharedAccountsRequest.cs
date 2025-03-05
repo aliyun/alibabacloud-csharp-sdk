@@ -57,6 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>Whitelist accounts for service sharing.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserAliUids")]
