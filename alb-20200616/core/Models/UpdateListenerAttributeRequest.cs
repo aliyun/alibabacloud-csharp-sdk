@@ -281,10 +281,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public UpdateListenerAttributeRequestXForwardedForConfig XForwardedForConfig { get; set; }
         public class UpdateListenerAttributeRequestXForwardedForConfig : TeaModel {
             /// <summary>
-            /// <para>The name of the custom header. The header takes effect only when you set <b>XForwardedForClientCertClientVerifyEnabled</b> to <b>true</b>.</para>
-            /// <para>The name must be 1 to 40 characters in length. The name can contain lowercase letters, digits, hyphens (-), and underscores (-).</para>
+            /// <para>The name of the custom header. The header takes effect only when you set **XForwardedForClientCertClientVerifyEnabled **to <b>true</b>.</para>
+            /// <para>The name must be 1 to 40 characters in length. It can contain lowercase letters, digits, hyphens (-), and underscores (_).</para>
             /// <remarks>
-            /// <para> Only HTTPS listeners support this parameter.</para>
+            /// <para> This parameter is only available for HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <item><description><b>false</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para> Only HTTPS listeners support this parameter.</para>
+            /// <para> This parameter is only available for HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -313,9 +313,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             /// <summary>
             /// <para>The name of the custom header. The header takes effect only when you set <b>XForwardedForClientCertFingerprintEnabled</b> to <b>true</b>.</para>
-            /// <para>The name must be 1 to 40 characters in length. The name can contain lowercase letters, digits, hyphens (-), and underscores (-).</para>
+            /// <para>The name must be 1 to 40 characters in length. It can contain lowercase letters, digits, hyphens (-), and underscores (_).</para>
             /// <remarks>
-            /// <para> Only HTTPS listeners support this parameter.</para>
+            /// <para> This parameter is only available for HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <item><description><b>false</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para> Only HTTPS listeners support this parameter.</para>
+            /// <para> This parameter is only available for HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -344,9 +344,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             /// <summary>
             /// <para>The name of the custom header. The header takes effect only when you set <b>XForwardedForClientCertIssuerDNEnabled</b> to <b>true</b>.</para>
-            /// <para>The name must be 1 to 40 characters in length. The name can contain lowercase letters, digits, hyphens (-), and underscores (-).</para>
+            /// <para>The name must be 1 to 40 characters in length. It can contain lowercase letters, digits, hyphens (-), and underscores (_).</para>
             /// <remarks>
-            /// <para> Only HTTPS listeners support this parameter.</para>
+            /// <para> This parameter is only available for HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <item><description><b>false</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para> Only HTTPS listeners support this parameter.</para>
+            /// <para> This parameter is only available for HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -374,10 +374,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? XForwardedForClientCertIssuerDNEnabled { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom header. This parameter is valid only if the <b>XForwardedForClientCertSubjectDNEnabled</b> parameter is set to true.****</para>
-            /// <para>The name must be 1 to 40 characters in length, The name can contain lowercase letters, digits, hyphens (-), and underscores (-).</para>
+            /// <para>The name of the custom header. This parameter is valid only if the <b>XForwardedForClientCertSubjectDNEnabled</b> parameter is set to <b>true</b>.</para>
+            /// <para>The name must be 1 to 40 characters in length. It can contain lowercase letters, digits, hyphens (-), and underscores (_).</para>
             /// <remarks>
-            /// <para> Only HTTPS listeners support this parameter.</para>
+            /// <para> This parameter is only available for HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -394,7 +394,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <item><description><b>false</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para> Only HTTPS listeners support this parameter.</para>
+            /// <para> This parameter is only available for HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <item><description><b>false</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para> HTTP and HTTPS listeners support this parameter.</para>
+            /// <para> This parameter is only available for HTTP and HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -433,13 +433,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string XForwardedForClientSourceIpsTrusted { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use the <c>XForwardedFor_ClientSrcPort</c> header to retrieve the client port. Valid values:</para>
+            /// <para>Specifies whether to use the <c>X-Forwarded-Client-srcport</c> header to retrieve the client port. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b></description></item>
             /// <item><description><b>false</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para> HTTP and HTTPS listeners support this parameter.</para>
+            /// <para> This parameter is only available for HTTP and HTTPS listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -450,13 +450,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? XForwardedForClientSrcPortEnabled { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use the <c>X-Forwarded-For</c> header to retrieve client IP addresses. Valid values:</para>
+            /// <para>Specifies whether to use the <c>X-Forwarded-For</c> header to retrieve the client IP address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>true</b> (default)</description></item>
             /// <item><description><b>false</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para> HTTP and HTTPS listeners support this parameter.</para>
+            /// <list type="bullet">
+            /// <item><description>If this parameter is set to <b>true</b>, the default value of the <b>XForwardedForProcessingMode</b> parameter is <b>append</b>. You can change it to <b>remove</b>.</description></item>
+            /// <item><description>If this parameter is set to <b>false</b>, the <c>X-Forwarded-For</c> header in the request is not modified in any way before the request is sent to backend servers.</description></item>
+            /// <item><description>This parameter is only available for HTTP and HTTPS listeners.</description></item>
+            /// </list>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -466,10 +470,40 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public bool? XForwardedForEnabled { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to use the <c>X-Forwarded-Host</c> header to retrieve the client domain name. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b> (default)</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> This parameter is available for HTTP, HTTPS, and QUIC listeners.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("XForwardedForHostEnabled")]
             [Validation(Required=false)]
             public bool? XForwardedForHostEnabled { get; set; }
 
+            /// <summary>
+            /// <para>Specifies how the <c>X-Forwarded-For</c> header is processed. This parameter takes effect only when <b>XForwardedForEnabled</b> is set to <b>true</b>. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>append</b> (default)</description></item>
+            /// <item><description><b>remove</b></description></item>
+            /// </list>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>If this parameter is set to <b>append</b>, ALB appends the IP address of the last hop to the existing <c>X-Forwarded-For</c> header in the request before the request is sent to backend servers.</description></item>
+            /// <item><description>If this parameter is set to <b>remove</b>, ALB removes the <c>X-Forwarded-For</c> header in the request before the request is sent to backend servers, no matter whether the request carries the <c>X-Forwarded-For</c> header.</description></item>
+            /// <item><description>This parameter is only available for HTTP and HTTPS listeners.</description></item>
+            /// </list>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>append</para>
+            /// </summary>
             [NameInMap("XForwardedForProcessingMode")]
             [Validation(Required=false)]
             public string XForwardedForProcessingMode { get; set; }
@@ -481,7 +515,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <item><description><b>false</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para> HTTP, HTTPS, and QUIC listeners support this parameter.</para>
+            /// <para> This parameter is available for HTTP, HTTPS, and QUIC listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -498,7 +532,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <item><description><b>false</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para> HTTP, HTTPS, and QUIC listeners support this parameter.</para>
+            /// <para> This parameter is available for HTTP, HTTPS, and QUIC listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -515,7 +549,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <item><description><b>false</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para> HTTP, HTTPS, and QUIC listeners support this parameter.</para>
+            /// <para> This parameter is available for HTTP, HTTPS, and QUIC listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

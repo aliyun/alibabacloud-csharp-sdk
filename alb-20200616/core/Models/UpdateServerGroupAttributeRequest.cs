@@ -27,13 +27,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The configurations of connection draining.</para>
         /// <para>After connection draining is enabled, SLB remains data transmission for a period of time after a backend server is removed or declared unhealthy.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Basic SLB instances do not support connection draining. Standard and WAF-enabled SLB instances support connection draining.</para>
-        /// </description></item>
-        /// <item><description><para>Server groups of the server and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</para>
-        /// </description></item>
+        /// <item><description>Basic SLB instances do not support connection draining. Standard and WAF-enabled SLB instances support connection draining.</description></item>
+        /// <item><description>Server groups of the server and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</description></item>
         /// </list>
+        /// </remarks>
         /// </summary>
         [NameInMap("ConnectionDrainConfig")]
         [Validation(Required=false)]
@@ -73,15 +71,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <item><description><b>false</b></description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Basic ALB instances do not support server groups that have cross-zone load balancing disabled. Only Standard and WAF-enabled ALB instances support server groups that have cross-zone load balancing.</para>
-        /// </description></item>
-        /// <item><description><para>Cross-zone load balancing can be disabled for server groups of the server and IP type, but not for server groups of the Function Compute type.</para>
-        /// </description></item>
-        /// <item><description><para>When cross-zone load balancing is disabled, session persistence cannot be enabled.</para>
-        /// </description></item>
+        /// <item><description>Basic ALB instances do not support server groups that have cross-zone load balancing disabled. Only Standard and WAF-enabled ALB instances support server groups that have cross-zone load balancing.</description></item>
+        /// <item><description>Cross-zone load balancing can be disabled for server groups of the server and IP type, but not for server groups of the Function Compute type.</description></item>
+        /// <item><description>When cross-zone load balancing is disabled, session persistence cannot be enabled.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -483,6 +478,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// <para>Specifies whether to enable persistent TCP connections.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("UpstreamKeepaliveEnabled")]
         [Validation(Required=false)]

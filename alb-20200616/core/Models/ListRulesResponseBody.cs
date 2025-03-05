@@ -225,6 +225,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public class ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupStickySession : TeaModel {
                         /// <summary>
                         /// <para>If the value of N in ServerGroupTuple.N is larger than 1, you can enable or disable session persistence for server groups.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>true</para>
                         /// </summary>
                         [NameInMap("Enabled")]
                         [Validation(Required=false)]

@@ -72,15 +72,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <item><description><b>false</b></description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Basic ALB instances do not support server groups that have cross-zone load balancing disabled. Only Standard and WAF-enabled ALB instances support server groups that have cross-zone load balancing.</para>
-        /// </description></item>
-        /// <item><description><para>Cross-zone load balancing can be disabled for server groups of the server and IP type, but not for server groups of the Function Compute type.</para>
-        /// </description></item>
-        /// <item><description><para>When cross-zone load balancing is disabled, session persistence cannot be enabled.</para>
-        /// </description></item>
+        /// <item><description>Basic ALB instances do not support server groups that have cross-zone load balancing disabled. Only Standard and WAF-enabled ALB instances support server groups that have cross-zone load balancing.</description></item>
+        /// <item><description>Cross-zone load balancing can be disabled for server groups of the server and IP type, but not for server groups of the Function Compute type.</description></item>
+        /// <item><description>When cross-zone load balancing is disabled, session persistence cannot be enabled.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -112,7 +109,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public CreateServerGroupRequestHealthCheckConfig HealthCheckConfig { get; set; }
         public class CreateServerGroupRequestHealthCheckConfig : TeaModel {
             /// <summary>
-            /// <para>The HTTP status codes that indicate healthy backend servers.</para>
+            /// <para>The HTTP status code that indicates healthy backend servers.</para>
             /// </summary>
             [NameInMap("HealthCheckCodes")]
             [Validation(Required=false)]
@@ -120,7 +117,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             /// <summary>
             /// <para>The backend port that is used for health checks.</para>
-            /// <para>Valid values: <b>0</b> to <b>65535</b>.</para>
+            /// <para>Valid values: <b>0</b> to <b>65535</b></para>
             /// <para>The default value is <b>0</b>, which specifies that the port of a backend server is used for health checks.</para>
             /// 
             /// <b>Example:</b>
@@ -157,7 +154,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <list type="bullet">
             /// <item><description>The domain name must be 1 to 80 characters in length.</description></item>
             /// <item><description>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</description></item>
-            /// <item><description>The domain name can contain at least one period (.) but cannot start or end with a period (.).</description></item>
+            /// <item><description>The domain name must contain at least one period (.) but cannot start or end with a period (.).</description></item>
             /// <item><description>The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).</description></item>
             /// <item><description>The domain name cannot start or end with a hyphen (-).</description></item>
             /// </list>
@@ -188,8 +185,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string HealthCheckHttpVersion { get; set; }
 
             /// <summary>
-            /// <para>The interval at which health checks are performed. Unit: seconds.</para>
-            /// <para>Valid values: <b>1</b> to <b>50</b>.</para>
+            /// <para>The interval at which health checks are performed. Unit: seconds</para>
+            /// <para>Valid values: <b>1</b> to <b>50</b></para>
             /// <para>Default value: <b>2</b>.</para>
             /// 
             /// <b>Example:</b>
@@ -218,7 +215,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string HealthCheckMethod { get; set; }
 
             /// <summary>
-            /// <para>The path that is used for health checks.</para>
+            /// <para>The URL that is used for health checks.</para>
             /// <para>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <c>- / . % ? # &amp; =</c>. It can also contain the following extended characters: <c>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</c>. The URL must start with a forward slash (/).</para>
             /// <remarks>
             /// <para> This parameter takes effect only if <b>HealthCheckProtocol</b> is set to <b>HTTP</b> or <b>HTTPS</b>.</para>
@@ -248,9 +245,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string HealthCheckProtocol { get; set; }
 
             /// <summary>
-            /// <para>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds.</para>
-            /// <para>Valid values: <b>1</b> to <b>300</b>.</para>
-            /// <para>Default value: <b>5</b>.</para>
+            /// <para>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds</para>
+            /// <para>Valid values: <b>1</b> to <b>300</b></para>
+            /// <para>Default value: <b>5</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -261,7 +258,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             /// <summary>
             /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <b>fail</b> to <b>success</b>.</para>
-            /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
+            /// <para>Valid values: <b>2</b> to <b>10</b></para>
             /// <para>Default value: <b>3</b>.</para>
             /// 
             /// <b>Example:</b>
@@ -273,8 +270,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             /// <summary>
             /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health check status of the backend server changes from <b>success</b> to <b>fail</b>.</para>
-            /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
-            /// <para>Default value: <b>3</b>.</para>
+            /// <para>Valid values: <b>2</b> to <b>10</b></para>
+            /// <para>Default value: <b>3</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -285,6 +282,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         }
 
+        /// <summary>
+        /// <para>Specifies whether to enable Ipv6.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Ipv6Enabled")]
         [Validation(Required=false)]
         public bool? Ipv6Enabled { get; set; }
@@ -443,9 +446,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Cookie { get; set; }
 
             /// <summary>
-            /// <para>The maximum amount of time to wait before the session cookie expires. Unit: seconds.</para>
-            /// <para>Valid values: <b>1</b> to <b>86400</b>.</para>
-            /// <para>Default value: <b>1000</b>.</para>
+            /// <para>The maximum amount of time to wait before the session cookie expires. Unit: seconds</para>
+            /// <para>Valid values: <b>1</b> to <b>86400</b></para>
+            /// <para>Default value: <b>1000</b></para>
             /// <remarks>
             /// <para> This parameter takes effect only when <b>StickySessionEnabled</b> is set to <b>true</b> and <b>StickySessionType</b> is set to <b>Insert</b>.</para>
             /// </remarks>
@@ -477,8 +480,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>The method that is used to handle cookies. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Insert</b> (default value): inserts a cookie. The first time a client accesses SLB, SLB inserts the SERVERID cookie into the HTTP or HTTPS response packet. Subsequent requests from the client that carry this cookie are forwarded to the same backend server as the first request.</description></item>
-            /// <item><description><b>Server</b>: rewrites a cookie. SLB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</description></item>
+            /// <item><description><b>Insert</b> (default value): inserts a cookie. The first time a client accesses ALB, ALB inserts the SERVERID cookie into the HTTP or HTTPS response packet. Subsequent requests from the client that carry this cookie are forwarded to the same backend server as the first request.</description></item>
+            /// <item><description><b>Server</b>: rewrites a cookie. ALB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</description></item>
             /// </list>
             /// <remarks>
             /// <para> This parameter takes effect when the <b>StickySessionEnabled</b> parameter is set to <b>true</b>.</para>

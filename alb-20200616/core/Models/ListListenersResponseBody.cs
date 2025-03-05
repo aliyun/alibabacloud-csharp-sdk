@@ -522,11 +522,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// <para>Specifies whether to use the <c>X-Forwarded-For</c> header to retrieve client IP addresses. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>true</b> (default)</description></item>
                 /// <item><description><b>false</b></description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> This parameter is returned only for HTTP and HTTPS listeners.</para>
+                /// <list type="bullet">
+                /// <item><description>If this parameter is set to <b>true</b>, the default value of the <b>XForwardedForProcessingMode</b> parameter is <b>append</b>. You can change it to <b>remove</b>.</description></item>
+                /// <item><description>If this parameter is set to <b>false</b>, the <c>X-Forwarded-For</c> header in the request is not modified in any way before the request is sent to backend servers.</description></item>
+                /// <item><description>Both HTTP and HTTPS listeners support this parameter.</description></item>
+                /// </list>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -536,10 +540,40 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 [Validation(Required=false)]
                 public bool? XForwardedForEnabled { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether to use the <c>X-Forwarded-Host</c> header to retrieve client domain names. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b> (default)</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para> HTTP, HTTPS, and QUIC listeners all support this parameter.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("XForwardedForHostEnabled")]
                 [Validation(Required=false)]
                 public bool? XForwardedForHostEnabled { get; set; }
 
+                /// <summary>
+                /// <para>Specifies how the <c>X-Forwarded-For</c> header is processed. This parameter takes effect only when <b>XForwardedForEnabled</b> is set to <b>true</b>. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>append</b> (default)</description></item>
+                /// <item><description><b>remove</b></description></item>
+                /// </list>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description>If this parameter is set to <b>append</b>, ALB appends the IP address of the last hop to the existing <c>X-Forwarded-For</c> header in the request before the request is sent to backend servers.</description></item>
+                /// <item><description>If this parameter is set to <b>remove</b>, ALB removes the <c>X-Forwarded-For</c> header in the request before the request is sent to backend servers, no matter whether the request carries the <c>X-Forwarded-For</c> header.</description></item>
+                /// <item><description>Both HTTP and HTTPS listeners support this parameter.</description></item>
+                /// </list>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>append</para>
+                /// </summary>
                 [NameInMap("XForwardedForProcessingMode")]
                 [Validation(Required=false)]
                 public string XForwardedForProcessingMode { get; set; }
