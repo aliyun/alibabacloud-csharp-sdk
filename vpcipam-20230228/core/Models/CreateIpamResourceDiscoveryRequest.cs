@@ -8,38 +8,45 @@ using Tea;
 
 namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
-    public class ListIpamResourceDiscoveriesRequest : TeaModel {
-        [NameInMap("IpamResourceDiscoveryIds")]
+    public class CreateIpamResourceDiscoveryRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public List<string> IpamResourceDiscoveryIds { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>description</para>
+        /// </summary>
+        [NameInMap("IpamResourceDiscoveryDescription")]
+        [Validation(Required=false)]
+        public string IpamResourceDiscoveryDescription { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>name</para>
         /// </summary>
         [NameInMap("IpamResourceDiscoveryName")]
         [Validation(Required=false)]
         public string IpamResourceDiscoveryName { get; set; }
 
-        [NameInMap("IsShared")]
-        [Validation(Required=false)]
-        public bool? IsShared { get; set; }
-
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("MaxResults")]
+        [NameInMap("OperatingRegionList")]
         [Validation(Required=false)]
-        public int? MaxResults { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
-        /// </summary>
-        [NameInMap("NextToken")]
-        [Validation(Required=false)]
-        public string NextToken { get; set; }
+        public List<string> OperatingRegionList { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -75,10 +82,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("Tags")]
+        [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<ListIpamResourceDiscoveriesRequestTags> Tags { get; set; }
-        public class ListIpamResourceDiscoveriesRequestTags : TeaModel {
+        public List<CreateIpamResourceDiscoveryRequestTag> Tag { get; set; }
+        public class CreateIpamResourceDiscoveryRequestTag : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -96,14 +103,6 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
             public string Value { get; set; }
 
         }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>system</para>
-        /// </summary>
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
 
     }
 

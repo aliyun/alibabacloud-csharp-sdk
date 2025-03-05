@@ -183,6 +183,204 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await AddIpamPoolCidrWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关联资源发现和IPAM实例。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateIpamResourceDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateIpamResourceDiscoveryResponse
+        /// </returns>
+        public AssociateIpamResourceDiscoveryResponse AssociateIpamResourceDiscoveryWithOptions(AssociateIpamResourceDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamId))
+            {
+                query["IpamId"] = request.IpamId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryId))
+            {
+                query["IpamResourceDiscoveryId"] = request.IpamResourceDiscoveryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateIpamResourceDiscovery",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AssociateIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AssociateIpamResourceDiscoveryResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关联资源发现和IPAM实例。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateIpamResourceDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateIpamResourceDiscoveryResponse
+        /// </returns>
+        public async Task<AssociateIpamResourceDiscoveryResponse> AssociateIpamResourceDiscoveryWithOptionsAsync(AssociateIpamResourceDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamId))
+            {
+                query["IpamId"] = request.IpamId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryId))
+            {
+                query["IpamResourceDiscoveryId"] = request.IpamResourceDiscoveryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateIpamResourceDiscovery",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AssociateIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AssociateIpamResourceDiscoveryResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关联资源发现和IPAM实例。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateIpamResourceDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateIpamResourceDiscoveryResponse
+        /// </returns>
+        public AssociateIpamResourceDiscoveryResponse AssociateIpamResourceDiscovery(AssociateIpamResourceDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AssociateIpamResourceDiscoveryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关联资源发现和IPAM实例。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateIpamResourceDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateIpamResourceDiscoveryResponse
+        /// </returns>
+        public async Task<AssociateIpamResourceDiscoveryResponse> AssociateIpamResourceDiscoveryAsync(AssociateIpamResourceDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AssociateIpamResourceDiscoveryWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// ChangeResourceGroupRequest
         /// </param>
@@ -1001,6 +1199,228 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateIpamPoolAllocationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建自定义类型资源发现。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIpamResourceDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIpamResourceDiscoveryResponse
+        /// </returns>
+        public CreateIpamResourceDiscoveryResponse CreateIpamResourceDiscoveryWithOptions(CreateIpamResourceDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryDescription))
+            {
+                query["IpamResourceDiscoveryDescription"] = request.IpamResourceDiscoveryDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryName))
+            {
+                query["IpamResourceDiscoveryName"] = request.IpamResourceDiscoveryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingRegionList))
+            {
+                query["OperatingRegionList"] = request.OperatingRegionList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIpamResourceDiscovery",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateIpamResourceDiscoveryResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建自定义类型资源发现。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIpamResourceDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIpamResourceDiscoveryResponse
+        /// </returns>
+        public async Task<CreateIpamResourceDiscoveryResponse> CreateIpamResourceDiscoveryWithOptionsAsync(CreateIpamResourceDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryDescription))
+            {
+                query["IpamResourceDiscoveryDescription"] = request.IpamResourceDiscoveryDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryName))
+            {
+                query["IpamResourceDiscoveryName"] = request.IpamResourceDiscoveryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingRegionList))
+            {
+                query["OperatingRegionList"] = request.OperatingRegionList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIpamResourceDiscovery",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateIpamResourceDiscoveryResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建自定义类型资源发现。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIpamResourceDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIpamResourceDiscoveryResponse
+        /// </returns>
+        public CreateIpamResourceDiscoveryResponse CreateIpamResourceDiscovery(CreateIpamResourceDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateIpamResourceDiscoveryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建自定义类型资源发现。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIpamResourceDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIpamResourceDiscoveryResponse
+        /// </returns>
+        public async Task<CreateIpamResourceDiscoveryResponse> CreateIpamResourceDiscoveryAsync(CreateIpamResourceDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateIpamResourceDiscoveryWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -1837,6 +2257,196 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             return await DeleteIpamPoolCidrWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除自定义类型的资源发现。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIpamResourceDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIpamResourceDiscoveryResponse
+        /// </returns>
+        public DeleteIpamResourceDiscoveryResponse DeleteIpamResourceDiscoveryWithOptions(DeleteIpamResourceDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryId))
+            {
+                query["IpamResourceDiscoveryId"] = request.IpamResourceDiscoveryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIpamResourceDiscovery",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteIpamResourceDiscoveryResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除自定义类型的资源发现。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIpamResourceDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIpamResourceDiscoveryResponse
+        /// </returns>
+        public async Task<DeleteIpamResourceDiscoveryResponse> DeleteIpamResourceDiscoveryWithOptionsAsync(DeleteIpamResourceDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryId))
+            {
+                query["IpamResourceDiscoveryId"] = request.IpamResourceDiscoveryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteIpamResourceDiscovery",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteIpamResourceDiscoveryResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除自定义类型的资源发现。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIpamResourceDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIpamResourceDiscoveryResponse
+        /// </returns>
+        public DeleteIpamResourceDiscoveryResponse DeleteIpamResourceDiscovery(DeleteIpamResourceDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteIpamResourceDiscoveryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除自定义类型的资源发现。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIpamResourceDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIpamResourceDiscoveryResponse
+        /// </returns>
+        public async Task<DeleteIpamResourceDiscoveryResponse> DeleteIpamResourceDiscoveryAsync(DeleteIpamResourceDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteIpamResourceDiscoveryWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// DeleteIpamScopeRequest
         /// </param>
@@ -2009,6 +2619,204 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>解关联资源发现和IPAM实例。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DissociateIpamResourceDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateIpamResourceDiscoveryResponse
+        /// </returns>
+        public DissociateIpamResourceDiscoveryResponse DissociateIpamResourceDiscoveryWithOptions(DissociateIpamResourceDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamId))
+            {
+                query["IpamId"] = request.IpamId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryId))
+            {
+                query["IpamResourceDiscoveryId"] = request.IpamResourceDiscoveryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DissociateIpamResourceDiscovery",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DissociateIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DissociateIpamResourceDiscoveryResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解关联资源发现和IPAM实例。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DissociateIpamResourceDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateIpamResourceDiscoveryResponse
+        /// </returns>
+        public async Task<DissociateIpamResourceDiscoveryResponse> DissociateIpamResourceDiscoveryWithOptionsAsync(DissociateIpamResourceDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamId))
+            {
+                query["IpamId"] = request.IpamId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryId))
+            {
+                query["IpamResourceDiscoveryId"] = request.IpamResourceDiscoveryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DissociateIpamResourceDiscovery",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DissociateIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DissociateIpamResourceDiscoveryResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解关联资源发现和IPAM实例。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DissociateIpamResourceDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateIpamResourceDiscoveryResponse
+        /// </returns>
+        public DissociateIpamResourceDiscoveryResponse DissociateIpamResourceDiscovery(DissociateIpamResourceDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DissociateIpamResourceDiscoveryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解关联资源发现和IPAM实例。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DissociateIpamResourceDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateIpamResourceDiscoveryResponse
+        /// </returns>
+        public async Task<DissociateIpamResourceDiscoveryResponse> DissociateIpamResourceDiscoveryAsync(DissociateIpamResourceDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DissociateIpamResourceDiscoveryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询指定IPAM地址池CIDR分配的信息</para>
         /// </summary>
         /// 
@@ -2131,6 +2939,132 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetIpamPoolAllocationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取地址池可用CIDR。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIpamPoolNextAvailableCidrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIpamPoolNextAvailableCidrResponse
+        /// </returns>
+        public GetIpamPoolNextAvailableCidrResponse GetIpamPoolNextAvailableCidrWithOptions(GetIpamPoolNextAvailableCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIpamPoolNextAvailableCidr",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetIpamPoolNextAvailableCidrResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetIpamPoolNextAvailableCidrResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取地址池可用CIDR。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIpamPoolNextAvailableCidrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIpamPoolNextAvailableCidrResponse
+        /// </returns>
+        public async Task<GetIpamPoolNextAvailableCidrResponse> GetIpamPoolNextAvailableCidrWithOptionsAsync(GetIpamPoolNextAvailableCidrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIpamPoolNextAvailableCidr",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetIpamPoolNextAvailableCidrResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetIpamPoolNextAvailableCidrResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取地址池可用CIDR。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIpamPoolNextAvailableCidrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIpamPoolNextAvailableCidrResponse
+        /// </returns>
+        public GetIpamPoolNextAvailableCidrResponse GetIpamPoolNextAvailableCidr(GetIpamPoolNextAvailableCidrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetIpamPoolNextAvailableCidrWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取地址池可用CIDR。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetIpamPoolNextAvailableCidrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIpamPoolNextAvailableCidrResponse
+        /// </returns>
+        public async Task<GetIpamPoolNextAvailableCidrResponse> GetIpamPoolNextAvailableCidrAsync(GetIpamPoolNextAvailableCidrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetIpamPoolNextAvailableCidrWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3200,6 +4134,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             {
                 query["IpamResourceDiscoveryName"] = request.IpamResourceDiscoveryName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsShared))
+            {
+                query["IsShared"] = request.IsShared;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -3292,6 +4230,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryName))
             {
                 query["IpamResourceDiscoveryName"] = request.IpamResourceDiscoveryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsShared))
+            {
+                query["IsShared"] = request.IsShared;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -3393,6 +4335,204 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListIpamResourceDiscoveriesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看资源发现和IPAM的关联关系。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIpamResourceDiscoveryAssociationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIpamResourceDiscoveryAssociationsResponse
+        /// </returns>
+        public ListIpamResourceDiscoveryAssociationsResponse ListIpamResourceDiscoveryAssociationsWithOptions(ListIpamResourceDiscoveryAssociationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamId))
+            {
+                query["IpamId"] = request.IpamId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryId))
+            {
+                query["IpamResourceDiscoveryId"] = request.IpamResourceDiscoveryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIpamResourceDiscoveryAssociations",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListIpamResourceDiscoveryAssociationsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListIpamResourceDiscoveryAssociationsResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看资源发现和IPAM的关联关系。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIpamResourceDiscoveryAssociationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIpamResourceDiscoveryAssociationsResponse
+        /// </returns>
+        public async Task<ListIpamResourceDiscoveryAssociationsResponse> ListIpamResourceDiscoveryAssociationsWithOptionsAsync(ListIpamResourceDiscoveryAssociationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamId))
+            {
+                query["IpamId"] = request.IpamId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryId))
+            {
+                query["IpamResourceDiscoveryId"] = request.IpamResourceDiscoveryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIpamResourceDiscoveryAssociations",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListIpamResourceDiscoveryAssociationsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListIpamResourceDiscoveryAssociationsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看资源发现和IPAM的关联关系。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIpamResourceDiscoveryAssociationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIpamResourceDiscoveryAssociationsResponse
+        /// </returns>
+        public ListIpamResourceDiscoveryAssociationsResponse ListIpamResourceDiscoveryAssociations(ListIpamResourceDiscoveryAssociationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListIpamResourceDiscoveryAssociationsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看资源发现和IPAM的关联关系。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIpamResourceDiscoveryAssociationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIpamResourceDiscoveryAssociationsResponse
+        /// </returns>
+        public async Task<ListIpamResourceDiscoveryAssociationsResponse> ListIpamResourceDiscoveryAssociationsAsync(ListIpamResourceDiscoveryAssociationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListIpamResourceDiscoveryAssociationsWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -3607,7 +4747,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ipam</para>
+        /// <para>Queries IP Address Managers (IPAMs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3696,7 +4836,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ipam</para>
+        /// <para>Queries IP Address Managers (IPAMs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3785,7 +4925,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ipam</para>
+        /// <para>Queries IP Address Managers (IPAMs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3803,7 +4943,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ipam</para>
+        /// <para>Queries IP Address Managers (IPAMs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5207,6 +6347,228 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateIpamPoolAllocationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自定义类型资源发现。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIpamResourceDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIpamResourceDiscoveryResponse
+        /// </returns>
+        public UpdateIpamResourceDiscoveryResponse UpdateIpamResourceDiscoveryWithOptions(UpdateIpamResourceDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddOperatingRegion))
+            {
+                query["AddOperatingRegion"] = request.AddOperatingRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryDescription))
+            {
+                query["IpamResourceDiscoveryDescription"] = request.IpamResourceDiscoveryDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryId))
+            {
+                query["IpamResourceDiscoveryId"] = request.IpamResourceDiscoveryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryName))
+            {
+                query["IpamResourceDiscoveryName"] = request.IpamResourceDiscoveryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveOperatingRegion))
+            {
+                query["RemoveOperatingRegion"] = request.RemoveOperatingRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateIpamResourceDiscovery",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateIpamResourceDiscoveryResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateIpamResourceDiscoveryResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自定义类型资源发现。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIpamResourceDiscoveryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIpamResourceDiscoveryResponse
+        /// </returns>
+        public async Task<UpdateIpamResourceDiscoveryResponse> UpdateIpamResourceDiscoveryWithOptionsAsync(UpdateIpamResourceDiscoveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddOperatingRegion))
+            {
+                query["AddOperatingRegion"] = request.AddOperatingRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryDescription))
+            {
+                query["IpamResourceDiscoveryDescription"] = request.IpamResourceDiscoveryDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryId))
+            {
+                query["IpamResourceDiscoveryId"] = request.IpamResourceDiscoveryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryName))
+            {
+                query["IpamResourceDiscoveryName"] = request.IpamResourceDiscoveryName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveOperatingRegion))
+            {
+                query["RemoveOperatingRegion"] = request.RemoveOperatingRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateIpamResourceDiscovery",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateIpamResourceDiscoveryResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateIpamResourceDiscoveryResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自定义类型资源发现。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIpamResourceDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIpamResourceDiscoveryResponse
+        /// </returns>
+        public UpdateIpamResourceDiscoveryResponse UpdateIpamResourceDiscovery(UpdateIpamResourceDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateIpamResourceDiscoveryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自定义类型资源发现。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIpamResourceDiscoveryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIpamResourceDiscoveryResponse
+        /// </returns>
+        public async Task<UpdateIpamResourceDiscoveryResponse> UpdateIpamResourceDiscoveryAsync(UpdateIpamResourceDiscoveryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateIpamResourceDiscoveryWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
