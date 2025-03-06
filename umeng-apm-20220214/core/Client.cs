@@ -211,6 +211,166 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取分钟粒度稳定性统计数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetErrorMinuteStatTrendRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetErrorMinuteStatTrendResponse
+        /// </returns>
+        public GetErrorMinuteStatTrendResponse GetErrorMinuteStatTrendWithOptions(GetErrorMinuteStatTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["dataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetErrorMinuteStatTrend",
+                Version = "2022-02-14",
+                Protocol = "HTTPS",
+                Pathname = "/stat/GetErrorMinuteStatTrend",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetErrorMinuteStatTrendResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetErrorMinuteStatTrendResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分钟粒度稳定性统计数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetErrorMinuteStatTrendRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetErrorMinuteStatTrendResponse
+        /// </returns>
+        public async Task<GetErrorMinuteStatTrendResponse> GetErrorMinuteStatTrendWithOptionsAsync(GetErrorMinuteStatTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["dataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetErrorMinuteStatTrend",
+                Version = "2022-02-14",
+                Protocol = "HTTPS",
+                Pathname = "/stat/GetErrorMinuteStatTrend",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetErrorMinuteStatTrendResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetErrorMinuteStatTrendResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分钟粒度稳定性统计数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetErrorMinuteStatTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetErrorMinuteStatTrendResponse
+        /// </returns>
+        public GetErrorMinuteStatTrendResponse GetErrorMinuteStatTrend(GetErrorMinuteStatTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetErrorMinuteStatTrendWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分钟粒度稳定性统计数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetErrorMinuteStatTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetErrorMinuteStatTrendResponse
+        /// </returns>
+        public async Task<GetErrorMinuteStatTrendResponse> GetErrorMinuteStatTrendAsync(GetErrorMinuteStatTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetErrorMinuteStatTrendWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取H5页面性能统计数据</para>
         /// </summary>
         /// 
@@ -735,6 +895,158 @@ namespace AlibabaCloud.SDK.Umeng_apm20220214
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetNativePageTrendWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分钟粒度网络统计数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkMinuteTrendRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkMinuteTrendResponse
+        /// </returns>
+        public GetNetworkMinuteTrendResponse GetNetworkMinuteTrendWithOptions(GetNetworkMinuteTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["dataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNetworkMinuteTrend",
+                Version = "2022-02-14",
+                Protocol = "HTTPS",
+                Pathname = "/stat/getNetworkMinuteTrend",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetNetworkMinuteTrendResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetNetworkMinuteTrendResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分钟粒度网络统计数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkMinuteTrendRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkMinuteTrendResponse
+        /// </returns>
+        public async Task<GetNetworkMinuteTrendResponse> GetNetworkMinuteTrendWithOptionsAsync(GetNetworkMinuteTrendRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceId))
+            {
+                query["dataSourceId"] = request.DataSourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNetworkMinuteTrend",
+                Version = "2022-02-14",
+                Protocol = "HTTPS",
+                Pathname = "/stat/getNetworkMinuteTrend",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetNetworkMinuteTrendResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetNetworkMinuteTrendResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分钟粒度网络统计数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkMinuteTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkMinuteTrendResponse
+        /// </returns>
+        public GetNetworkMinuteTrendResponse GetNetworkMinuteTrend(GetNetworkMinuteTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetNetworkMinuteTrendWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分钟粒度网络统计数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNetworkMinuteTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNetworkMinuteTrendResponse
+        /// </returns>
+        public async Task<GetNetworkMinuteTrendResponse> GetNetworkMinuteTrendAsync(GetNetworkMinuteTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetNetworkMinuteTrendWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
