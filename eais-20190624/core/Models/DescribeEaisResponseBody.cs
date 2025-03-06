@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Eais20190624.Models
                 [Validation(Required=false)]
                 public string JupyterUrl { get; set; }
 
+                [NameInMap("PaymentType")]
+                [Validation(Required=false)]
+                public string PaymentType { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>cn-shenzhen</para>
