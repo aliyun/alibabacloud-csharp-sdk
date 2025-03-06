@@ -66,7 +66,13 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string VaultRegionId { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the backup vault. Valid value: <b>STANDARD</b>, which indicates standard storage.</para>
+        /// <para>The storage type of the backup vault. Valid value: </para>
+        /// <list type="bullet">
+        /// <item><description><b>STANDARD</b>: standard storage.</description></item>
+        /// <item><description><b>ARCHIVE</b>: deprected.</description></item>
+        /// <item><description><b>COLD_ARCHIVE</b>: deprected.</description></item>
+        /// <item><description><b>IA</b>: deprected.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>STANDARD</para>

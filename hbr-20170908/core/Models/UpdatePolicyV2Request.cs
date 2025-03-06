@@ -283,6 +283,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
             }
 
+            /// <summary>
+            /// <para>This parameter is required only if the RuleType parameter is set to BACKUP. The ID of the backup vault.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v-0001************aseg</para>
+            /// </summary>
+            [NameInMap("VaultId")]
+            [Validation(Required=false)]
+            public string VaultId { get; set; }
+
         }
 
     }

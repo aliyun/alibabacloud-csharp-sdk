@@ -82,11 +82,11 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 /// <summary>
                 /// <para>The type of the data source. Valid value:</para>
                 /// <list type="bullet">
-                /// <item><description><b>UDM_ECS</b>: Elastic Compute Service (ECS) instance This type of data source is supported only if the <b>RuleType</b> parameter is set to <b>UDM_ECS_ONLY</b>.</description></item>
-                /// <item><description><b>OSS</b>: Object Storage Service (OSS) bucket This type of data source is supported only if the <b>RuleType</b> parameter is set to <b>STANDARD</b>.</description></item>
-                /// <item><description><b>NAS</b>: File Storage NAS (NAS) file system This type of data source is supported only if the <b>RuleType</b> parameter is set to <b>STANDARD</b>.</description></item>
-                /// <item><description><b>ECS_FILE</b>: ECS file This type of data source is supported only if the <b>RuleType</b> parameter is set to <b>STANDARD</b>.</description></item>
-                /// <item><description><b>OTS</b>: Tablestore instance This type of data source is supported only if the <b>RuleType</b> parameter is set to <b>STANDARD</b>.</description></item>
+                /// <item><description><b>UDM_ECS</b>: Elastic Compute Service (ECS) instance This type of data source is supported only if the <b>PolicyType</b> parameter is set to <b>UDM_ECS_ONLY</b>.</description></item>
+                /// <item><description><b>OSS</b>: Object Storage Service (OSS) bucket This type of data source is supported only if the <b>PolicyType</b> parameter is set to <b>STANDARD</b>.</description></item>
+                /// <item><description><b>NAS</b>: File Storage NAS (NAS) file system This type of data source is supported only if the <b>PolicyType</b> parameter is set to <b>STANDARD</b>.</description></item>
+                /// <item><description><b>ECS_FILE</b>: ECS file This type of data source is supported only if the <b>PolicyType</b> parameter is set to <b>STANDARD</b>.</description></item>
+                /// <item><description><b>OTS</b>: Tablestore instance This type of data source is supported only if the <b>PolicyType</b> parameter is set to <b>STANDARD</b>.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -133,8 +133,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string ReplicationRegionId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required only if the <b>RuleType</b> parameter is set to <b>TRANSITION</b> or <b>REPLICATION</b>.</para>
+            /// <para>This parameter is required only if the <b>RuleType</b> parameter is set to <b>BACKUP</b>, <b>TRANSITION</b> or <b>REPLICATION</b>.</para>
             /// <list type="bullet">
+            /// <item><description>If the <b>RuleType</b> parameter is set to <b>BACKUP</b>, this parameter specifies the retention period of the backup data. The priority is lower than the Retention field of the rule with RuleType=TRANSITION. Minimum value: 1. Maximum value: 364635. Unit: days.</description></item>
             /// <item><description>If the <b>RuleType</b> parameter is set to <b>TRANSITION</b>, this parameter specifies the retention period of the backup data. Minimum value: 1. Maximum value: 364635. Unit: days.</description></item>
             /// <item><description>If the <b>RuleType</b> parameter is set to <b>REPLICATION</b>, this parameter specifies the retention period of remote backups. Minimum value: 1. Maximum value: 364635. Unit: days.</description></item>
             /// </list>
@@ -197,6 +198,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <item><description><b>BACKUP</b>: backup rule</description></item>
             /// <item><description><b>TRANSITION</b>: lifecycle rule</description></item>
             /// <item><description><b>REPLICATION</b>: replication rule</description></item>
+            /// <item><description><b>TAG</b>: tag rule</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

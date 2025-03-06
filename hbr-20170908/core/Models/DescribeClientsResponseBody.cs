@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public long? CreatedTime { get; set; }
 
+                [NameInMap("HeartBeatTime")]
+                [Validation(Required=false)]
+                public long? HeartBeatTime { get; set; }
+
                 /// <summary>
                 /// <para>The instance ID.</para>
                 /// 
