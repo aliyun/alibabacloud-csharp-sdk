@@ -10,8 +10,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteLivePackageChannelGroupRequest : TeaModel {
         /// <summary>
-        /// <para>代表资源一级ID的资源属性字段</para>
+        /// <para>The channel group name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>group1</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

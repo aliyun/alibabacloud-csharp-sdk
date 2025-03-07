@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AddAdInsertionRequest : TeaModel {
         /// <summary>
-        /// <para>内容URL前缀</para>
+        /// <para>Specifies whether to enable ad marker passthrough. Default value: OFF.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>OFF: Disable.</description></item>
+        /// <item><description>ON: Enable.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>
@@ -20,7 +25,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AdMarkerPassthrough { get; set; }
 
         /// <summary>
-        /// <para>广告策略服务器URL</para>
+        /// <para>The request URL of the ad decision server (ADS). HTTP and HTTPS are supported. The maximum length is 2,048 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +36,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AdsUrl { get; set; }
 
         /// <summary>
-        /// <para>广告分片的CDN前缀</para>
+        /// <para>The CDN prefix for ad segments. HTTP and HTTPS are supported. The maximum length is 512 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://cdn.com/">http://cdn.com/</a></para>
@@ -41,7 +46,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CdnAdSegmentUrlPrefix { get; set; }
 
         /// <summary>
-        /// <para>视频内容分片的CDN前缀</para>
+        /// <para>The CDN prefix for content segments. HTTP and HTTPS are supported. The maximum length is 512 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://cdn.com/">http://cdn.com/</a></para>
@@ -51,6 +56,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string CdnContentSegmentUrlPrefix { get; set; }
 
         /// <summary>
+        /// <para>The idempotency key that is used to avoid repeated submission. The value can be up to 200 characters in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>0311a423d11a5f7dee713535</b></b></para>
         /// </summary>
@@ -59,7 +66,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>动态配置别名</para>
+        /// <para>A JSON string that specifies the player parameter variables and aliases. You can add up to 20 player_params.{name} entries. The name field can be up to 150 characters in length. Each player parameter can include up to 50 key-value pairs. A key can be up to 150 characters long, and a value can be up to 500 characters. Example: { &quot;player_params.{name}&quot;: { &quot;{key}&quot;: &quot;{value}&quot; } }</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;player_params.p1&quot;: { &quot;1&quot;: &quot;abc&quot; } }</para>
@@ -69,7 +76,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ConfigAliases { get; set; }
 
         /// <summary>
-        /// <para>内容URL前缀</para>
+        /// <para>The URL prefix for the source content. HTTP and HTTPS are supported. The maximum length is 512 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +87,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ContentUrlPrefix { get; set; }
 
         /// <summary>
-        /// <para>代表资源一级ID的资源属性字段</para>
+        /// <para>The name of the configuration. The name must be unique and can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +98,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>个性化配置阈值</para>
+        /// <para>Specifies the maximum duration of underfilled time allowed in an ad break. Unit: seconds. Default value: 8 seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -101,7 +108,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PersonalizationThreshold { get; set; }
 
         /// <summary>
-        /// <para>slate广告URL</para>
+        /// <para>The HTTP or HTTPS URL of the slate ad. Only MP4 format is supported. The maximum length is 2,048 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://storage.com/slate1.mp4">http://storage.com/slate1.mp4</a></para>

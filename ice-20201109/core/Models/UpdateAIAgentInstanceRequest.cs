@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateAIAgentInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the AI agent that you want to update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,10 +20,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The template configurations of the AI agent. The configurations are merged with the template configurations that are used to start the AI agent. For more information, see the definition of TemplateConfig.</para>
+        /// </summary>
         [NameInMap("TemplateConfig")]
         [Validation(Required=false)]
         public AIAgentTemplateConfig TemplateConfig { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;VoiceId&quot;:&quot;xiaoxia&quot;}</para>
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

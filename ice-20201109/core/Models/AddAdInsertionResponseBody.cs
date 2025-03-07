@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AddAdInsertionResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The ad insertion configuration.</para>
+        /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public AddAdInsertionResponseBodyConfig Config { get; set; }
         public class AddAdInsertionResponseBodyConfig : TeaModel {
             /// <summary>
-            /// <para>广告标记透传</para>
+            /// <para>Indicates whether ad marker passthrough is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string AdMarkerPassthrough { get; set; }
 
             /// <summary>
-            /// <para>广告策略服务器URL</para>
+            /// <para>The request URL of ADS.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://ads.com/ad1?param1=%5Bpalyer_params.p1%5D">http://ads.com/ad1?param1=[palyer_params.p1]</a></para>
@@ -34,14 +37,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string AdsUrl { get; set; }
 
             /// <summary>
-            /// <para>CDN配置</para>
+            /// <para>The CDN configurations.</para>
             /// </summary>
             [NameInMap("CdnConfig")]
             [Validation(Required=false)]
             public AddAdInsertionResponseBodyConfigCdnConfig CdnConfig { get; set; }
             public class AddAdInsertionResponseBodyConfigCdnConfig : TeaModel {
                 /// <summary>
-                /// <para>广告分片的CDN前缀</para>
+                /// <para>The CDN prefix for ad segments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://cdn.com/">http://cdn.com/</a></para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string AdSegmentUrlPrefix { get; set; }
 
                 /// <summary>
-                /// <para>视频内容分片的CDN前缀</para>
+                /// <para>The CDN prefix for content segments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://cdn.com/">http://cdn.com/</a></para>
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>动态配置别名</para>
+            /// <para>The player parameter variables and aliases.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ &quot;player_params.p1&quot;: { &quot;1&quot;: &quot;abc&quot; } }</para>
@@ -73,7 +76,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ConfigAliases { get; set; }
 
             /// <summary>
-            /// <para>内容URL前缀</para>
+            /// <para>The URL prefix for the source content.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://source.com/">https://source.com/</a></para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ContentUrlPrefix { get; set; }
 
             /// <summary>
-            /// <para>创建时间</para>
+            /// <para>The time when the configuration was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-13T08:26:09Z</para>
@@ -93,7 +96,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>修改时间</para>
+            /// <para>The time when the configuration was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-13T08:26:09Z</para>
@@ -103,14 +106,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string LastModified { get; set; }
 
             /// <summary>
-            /// <para>清单播放端点配置</para>
+            /// <para>The playback endpoint configuration.</para>
             /// </summary>
             [NameInMap("ManifestEndpointConfig")]
             [Validation(Required=false)]
             public AddAdInsertionResponseBodyConfigManifestEndpointConfig ManifestEndpointConfig { get; set; }
             public class AddAdInsertionResponseBodyConfigManifestEndpointConfig : TeaModel {
                 /// <summary>
-                /// <para>HLS清单播放端点前缀</para>
+                /// <para>The prefix of the playback endpoint for HLS manifests.</para>
                 /// </summary>
                 [NameInMap("HlsPrefix")]
                 [Validation(Required=false)]
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>广告插入配置名称</para>
+            /// <para>The name of the ad insertion configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my_ad</para>
@@ -129,7 +132,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>个性化配置阈值</para>
+            /// <para>The personalization threshold.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -139,7 +142,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? PersonalizationThreshold { get; set; }
 
             /// <summary>
-            /// <para>slate广告URL</para>
+            /// <para>The URL of the slate ad.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://storage.com/slate1.mp4">http://storage.com/slate1.mp4</a></para>
@@ -151,6 +154,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteMediaConnectFlowInputResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response body</para>
+        /// <para>The response body.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>Description of the API call</para>
+        /// <para>The call description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>请求ID</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C0C02296-113C-5838-8FE9-8F3A32998DDC</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned error code, 0 indicates success</para>
+        /// <para>The returned error code. A value of 0 indicates the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

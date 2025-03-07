@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetMediaConnectFlowResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response body</para>
+        /// <para>The response body.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public GetMediaConnectFlowResponseBodyContent Content { get; set; }
         public class GetMediaConnectFlowResponseBodyContent : TeaModel {
             /// <summary>
-            /// <para>Flow creation time</para>
+            /// <para>The time when the flow was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-18T01:29:24Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Flow instance ID</para>
+            /// <para>The flow ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>34900dc6-90ec-4968-af3c-fcd87f231a5f</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string FlowId { get; set; }
 
             /// <summary>
-            /// <para>Flow instance name</para>
+            /// <para>The flow name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliTestFlow</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string FlowName { get; set; }
 
             /// <summary>
-            /// <para>Flow status</para>
+            /// <para>The state of the flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>online</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string FlowStatus { get; set; }
 
             /// <summary>
-            /// <para>Flow start time</para>
+            /// <para>The time when the flow is started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-18T01:39:24Z</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>Interface call description information</para>
+        /// <para>The call description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>请求ID</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FB503AEF-118E-1516-89E2-7B227EA1AC20</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return status code, 0 indicates success</para>
+        /// <para>The returned code. A value of 0 indicates the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

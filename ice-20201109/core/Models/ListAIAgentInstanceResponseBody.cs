@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAIAgentInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of the AI agents.</para>
+        /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<ListAIAgentInstanceResponseBodyInstances> Instances { get; set; }
         public class ListAIAgentInstanceResponseBodyInstances : TeaModel {
             /// <summary>
+            /// <para>The URL of the call log file for the AI agent. The structure of the file is CallLog in the JSON format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/call_logs/12345.json">https://example.com/call_logs/12345.json</a></para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CallLogUrl { get; set; }
 
             /// <summary>
+            /// <para>The runtime configurations of the AI agent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;VoiceChat&quot;:{&quot;AgentUserId&quot;:&quot;voice_agent_001&quot;,&quot;ChannelId&quot;:&quot;voice_channel_001&quot;,&quot;AuthToken&quot;:&quot;your_voice_chat_auth_token&quot;}}</para>
             /// </summary>
@@ -30,6 +37,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public AIAgentRuntimeConfig RuntimeConfig { get; set; }
 
             /// <summary>
+            /// <para>The state of the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Executing</description></item>
+            /// <item><description>Finished</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Finished</para>
             /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The template configurations of the AI agent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;VoiceChat&quot;: {&quot;VoiceId&quot;: &quot;zhixiaoxia&quot;}}</para>
             /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public AIAgentTemplateConfig TemplateConfig { get; set; }
 
             /// <summary>
+            /// <para>The custom information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</para>
             /// </summary>
@@ -56,6 +73,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7B117AF5-2A16-412C-B127-FA6175ED1AD0</para>
         /// </summary>

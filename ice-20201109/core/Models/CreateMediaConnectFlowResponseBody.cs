@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateMediaConnectFlowResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response body</para>
+        /// <para>The response body.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public CreateMediaConnectFlowResponseBodyContent Content { get; set; }
         public class CreateMediaConnectFlowResponseBodyContent : TeaModel {
             /// <summary>
-            /// <para>Flow instance ID</para>
+            /// <para>The flow ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>34900dc6-90ec-4968-af3c-fcd87f231a5f</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>Description information returned by the interface</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86D92F9D-65E8-58A2-85D1-9DEEECC172E8</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned error code, 0 indicates success</para>
+        /// <para>The returned error code. A value of 0 indicates the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

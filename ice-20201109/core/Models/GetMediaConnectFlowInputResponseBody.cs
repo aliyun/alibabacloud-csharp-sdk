@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetMediaConnectFlowInputResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response body</para>
+        /// <para>The response body.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public GetMediaConnectFlowInputResponseBodyContent Content { get; set; }
         public class GetMediaConnectFlowInputResponseBodyContent : TeaModel {
             /// <summary>
-            /// <para>IP whitelist, in CIDR format, multiple IP segments separated by commas</para>
+            /// <para>The IP address whitelist in CIDR format. CIDR blocks are separated with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.211.0.0/17</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Cidrs { get; set; }
 
             /// <summary>
-            /// <para>Flow creation time</para>
+            /// <para>The time when the flow was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-18T01:29:24Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Input name</para>
+            /// <para>The source name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliTestInput</para>
@@ -47,7 +47,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string InputName { get; set; }
 
             /// <summary>
-            /// <para>Input type</para>
+            /// <para>The source type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>RTMP-PUSH</description></item>
+            /// <item><description>SRT-Caller</description></item>
+            /// <item><description>RTMP-PULL</description></item>
+            /// <item><description>SRT-Listener</description></item>
+            /// <item><description>Flow</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RTMP-PUSH</para>
@@ -57,7 +65,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string InputProtocol { get; set; }
 
             /// <summary>
-            /// <para>Input URL</para>
+            /// <para>The source URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rtmp://1.2.3.4:1935/live/AliTestInput_8666ec062190f00e263012666319a5be</para>
@@ -67,7 +75,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string InputUrl { get; set; }
 
             /// <summary>
-            /// <para>Input bitrate, in bps</para>
+            /// <para>The maximum bitrate. Unit: bit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000000</para>
@@ -77,7 +85,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? MaxBitrate { get; set; }
 
             /// <summary>
-            /// <para>Peer Flow instance ID, required when the output type is Flow</para>
+            /// <para>The ID of the source flow. This parameter is returned when the source type is Flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>05c3adf4-aa0e-421d-a991-48ceae3e642e</para>
@@ -87,7 +95,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string PairFlowId { get; set; }
 
             /// <summary>
-            /// <para>Peer Flow output name, required only when the input type is Flow</para>
+            /// <para>The output of the source flow. This parameter is returned when the source type is Flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliTestOutput</para>
@@ -97,7 +105,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string PairOutputName { get; set; }
 
             /// <summary>
-            /// <para>SRT latency, in ms, required only when the input type is SRT-Listener/SRT-Caller</para>
+            /// <para>The latency for the SRT stream. Unit: milliseconds. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -107,7 +115,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? SrtLatency { get; set; }
 
             /// <summary>
-            /// <para>SRT encryption key, required only when the input type is SRT-Listener/SRT-Caller</para>
+            /// <para>The SRT key. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FICUBPX4Q77DYHRF</para>
@@ -117,7 +125,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string SrtPassphrase { get; set; }
 
             /// <summary>
-            /// <para>SRT encryption length, required only when the input type is SRT-Listener/SRT-Caller</para>
+            /// <para>The encryption key length. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0</description></item>
+            /// <item><description>16</description></item>
+            /// <item><description>24</description></item>
+            /// <item><description>32</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -129,7 +144,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>Interface call description</para>
+        /// <para>The call description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -139,7 +154,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>请求ID</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D4C231DF-103A-55FF-8D09-E699552457DE</para>
@@ -149,7 +164,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned error code, 0 indicates success</para>
+        /// <para>The returned error code. A value of 0 indicates the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAlertsRequest : TeaModel {
+        /// <summary>
+        /// <para>The alert type.</para>
+        /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range to query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-11-22T16:10:45Z</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string GmtEnd { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-11-21T16:10:45Z</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string GmtStart { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -46,6 +57,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ARN of the source or program.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +68,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ResourceArn { get; set; }
 
         /// <summary>
+        /// <para>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values: asc and desc.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>asc</para>
         /// </summary>
@@ -64,6 +78,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>The sorting order by modification time. Valid values: asc and desc.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>asc</para>
         /// </summary>

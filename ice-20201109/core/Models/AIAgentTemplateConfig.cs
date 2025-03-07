@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            [NameInMap("InterruptWords")]
+            [Validation(Required=false)]
+            public List<string> InterruptWords { get; set; }
+
             [NameInMap("LlmHistory")]
             [Validation(Required=false)]
             public List<AIAgentTemplateConfigAvatarChat3DLlmHistory> LlmHistory { get; set; }
@@ -67,6 +71,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? LlmHistoryLimit { get; set; }
 
+            [NameInMap("LlmSystemPrompt")]
+            [Validation(Required=false)]
+            public string LlmSystemPrompt { get; set; }
+
             [NameInMap("MaxIdleTime")]
             [Validation(Required=false)]
             public int? MaxIdleTime { get; set; }
@@ -82,6 +90,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("UserOnlineTimeout")]
             [Validation(Required=false)]
             public int? UserOnlineTimeout { get; set; }
+
+            [NameInMap("VadLevel")]
+            [Validation(Required=false)]
+            public int? VadLevel { get; set; }
 
             [NameInMap("VoiceId")]
             [Validation(Required=false)]
@@ -145,6 +157,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            [NameInMap("InterruptWords")]
+            [Validation(Required=false)]
+            public List<string> InterruptWords { get; set; }
+
             [NameInMap("LlmHistory")]
             [Validation(Required=false)]
             public List<AIAgentTemplateConfigVisionChatLlmHistory> LlmHistory { get; set; }
@@ -163,6 +179,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? LlmHistoryLimit { get; set; }
 
+            [NameInMap("LlmSystemPrompt")]
+            [Validation(Required=false)]
+            public string LlmSystemPrompt { get; set; }
+
             [NameInMap("MaxIdleTime")]
             [Validation(Required=false)]
             public int? MaxIdleTime { get; set; }
@@ -178,6 +198,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("UserOnlineTimeout")]
             [Validation(Required=false)]
             public int? UserOnlineTimeout { get; set; }
+
+            [NameInMap("VadLevel")]
+            [Validation(Required=false)]
+            public int? VadLevel { get; set; }
 
             [NameInMap("VoiceId")]
             [Validation(Required=false)]
@@ -249,6 +273,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Greeting { get; set; }
 
+            [NameInMap("InterruptWords")]
+            [Validation(Required=false)]
+            public List<string> InterruptWords { get; set; }
+
             [NameInMap("LlmHistory")]
             [Validation(Required=false)]
             public List<AIAgentTemplateConfigVoiceChatLlmHistory> LlmHistory { get; set; }
@@ -267,6 +295,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? LlmHistoryLimit { get; set; }
 
+            [NameInMap("LlmSystemPrompt")]
+            [Validation(Required=false)]
+            public string LlmSystemPrompt { get; set; }
+
             [NameInMap("MaxIdleTime")]
             [Validation(Required=false)]
             public int? MaxIdleTime { get; set; }
@@ -282,6 +314,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("UserOnlineTimeout")]
             [Validation(Required=false)]
             public int? UserOnlineTimeout { get; set; }
+
+            [NameInMap("VadLevel")]
+            [Validation(Required=false)]
+            public int? VadLevel { get; set; }
 
             [NameInMap("VoiceId")]
             [Validation(Required=false)]

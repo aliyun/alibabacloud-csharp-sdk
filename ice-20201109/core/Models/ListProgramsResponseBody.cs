@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListProgramsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20. Valid values: 1 to 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The programs.</para>
+        /// </summary>
         [NameInMap("Programs")]
         [Validation(Required=false)]
         public List<ChannelAssemblyProgram> Programs { get; set; }
 
         /// <summary>
+        /// <para><b>Request ID</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx-xxxx-xxxxx-xxxx</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of programs returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

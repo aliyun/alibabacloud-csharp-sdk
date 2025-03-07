@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SendAIAgentSpeechRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether the broadcast can interrupt the ongoing speech. Default value: true</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

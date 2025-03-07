@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetLivePackageOriginEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>频道名称</para>
+        /// <para>The channel name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ChannelName { get; set; }
 
         /// <summary>
-        /// <para>端点名称</para>
+        /// <para>The endpoint name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EndpointName { get; set; }
 
         /// <summary>
-        /// <para>频道组名称</para>
+        /// <para>The channel group name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

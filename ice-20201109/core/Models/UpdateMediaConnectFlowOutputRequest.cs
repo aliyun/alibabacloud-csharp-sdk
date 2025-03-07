@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateMediaConnectFlowOutputRequest : TeaModel {
         /// <summary>
-        /// <para>IP whitelist</para>
+        /// <para>The IP address whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19.168.1.1/32,18.168.1.1/16</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Cidrs { get; set; }
 
         /// <summary>
-        /// <para>Flow instance ID</para>
+        /// <para>The flow ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FlowId { get; set; }
 
         /// <summary>
-        /// <para>Output name</para>
+        /// <para>The output name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputName { get; set; }
 
         /// <summary>
-        /// <para>Output address, modifiable when the output type is RTMP-PUSH/SRT-Caller mode</para>
+        /// <para>The output URL. You can modify this parameter only when the output type is RTMP-PUSH or SRT-Caller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rtmp://push.test.alivecdn.com/live/alitest</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputToUrl { get; set; }
 
         /// <summary>
-        /// <para>Player limit</para>
+        /// <para>The maximum number of viewers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PlayerLimit { get; set; }
 
         /// <summary>
-        /// <para>SRT latency, modifiable when the input type is SRT-Listener/SRT-Caller</para>
+        /// <para>The latency for the SRT stream. You can modify this parameter only when the source type is SRT-Listener or SRT-Caller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SrtLatency { get; set; }
 
         /// <summary>
-        /// <para>SRT encryption key, modifiable when the input type is SRT-Listener/SRT-Caller</para>
+        /// <para>The SRT key. You can modify this parameter only when the source type is SRT-Listener or SRT-Caller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FICUBPX4Q77DYHRF</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SrtPassphrase { get; set; }
 
         /// <summary>
-        /// <para>SRT encryption length, modifiable when the input type is SRT-Listener/SRT-Caller</para>
+        /// <para>The encryption key length. You can modify this parameter only when the source type is SRT-Listener or SRT-Caller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>

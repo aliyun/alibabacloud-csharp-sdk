@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class TakeoverAIAgentCallRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the human agent that will take over the AI agent (UserId in ARTC). If you do not specify this parameter, it is automatically generated and returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>uid2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string HumanAgentUserId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the AI agent that will be taken over.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>39f8e0bc005e4f309379701645f4****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return the ARTC token. Default value: false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

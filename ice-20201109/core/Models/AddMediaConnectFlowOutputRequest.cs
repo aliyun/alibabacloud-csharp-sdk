@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class AddMediaConnectFlowOutputRequest : TeaModel {
         /// <summary>
-        /// <para>IP whitelist, in CIDR format, separated by commas if multiple IP segments are provided</para>
+        /// <para>The IP address whitelist in CIDR format. Separate multiple CIDR blocks with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>83.17.231.31/32</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Cidrs { get; set; }
 
         /// <summary>
-        /// <para>Flow instance ID</para>
+        /// <para>The flow ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FlowId { get; set; }
 
         /// <summary>
-        /// <para>Output name</para>
+        /// <para>The output name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputName { get; set; }
 
         /// <summary>
-        /// <para>Output protocol</para>
+        /// <para>The output type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RTMP-PUSH</description></item>
+        /// <item><description>SRT-Caller</description></item>
+        /// <item><description>RTMP-PULL</description></item>
+        /// <item><description>SRT-Listener</description></item>
+        /// <item><description>Flow</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +61,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputProtocol { get; set; }
 
         /// <summary>
-        /// <para>Output address, required when the output type is RTMP-PUSH/SRT-Caller mode</para>
+        /// <para>The output URL. This parameter is required when OutputProtocol is set to RTMP-PUSH or SRT-Caller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rtmp://push.test.alivecdn.com/live/alitest</para>
@@ -63,7 +71,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputToUrl { get; set; }
 
         /// <summary>
-        /// <para>Paired Flow instance ID, required when the output type is Flow</para>
+        /// <para>The ID of the destination flow. This parameter is required when OutputProtocol is set to Flow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8666ec062190f00e263012666319a5be</para>
@@ -73,7 +81,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PairFlowId { get; set; }
 
         /// <summary>
-        /// <para>Input name of the paired Flow, required when the output type is Flow</para>
+        /// <para>The source name of the destination flow. This parameter is required when OutputProtocol is set to Flow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliTestInput</para>
@@ -83,7 +91,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PairInputName { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of players</para>
+        /// <para>The maximum number of viewers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -93,7 +101,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PlayerLimit { get; set; }
 
         /// <summary>
-        /// <para>SRT latency, required only when the input type is SRT-Listener/SRT-Caller</para>
+        /// <para>The latency for the SRT stream. This parameter is required when the source type is SRT-Listener or SRT-Caller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -103,7 +111,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? SrtLatency { get; set; }
 
         /// <summary>
-        /// <para>SRT passphrase, required only when the input type is SRT-Listener/SRT-Caller</para>
+        /// <para>The SRT key. This parameter is required when the source type is SRT-Listener or SRT-Caller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BETTERG08S01</para>
@@ -113,7 +121,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SrtPassphrase { get; set; }
 
         /// <summary>
-        /// <para>SRT encryption length, required only when the input type is SRT-Listener/SRT-Caller</para>
+        /// <para>The encryption key length. This parameter is required when the source type is SRT-Listener or SRT-Caller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListVodPackagingConfigurationsRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the packaging group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vod_hls</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string GroupName { get; set; }
 
         /// <summary>
+        /// <para>The search keyword. The names of the returned packaging configurations contain the keyword.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hls</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,6 +50,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The sorting order of the packaging configurations based on the time when they were created. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>desc (default): descending order.</description></item>
+        /// <item><description>asc: ascending order.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>desc</para>
         /// </summary>

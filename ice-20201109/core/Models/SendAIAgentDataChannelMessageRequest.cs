@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SendAIAgentDataChannelMessageRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the AI agent in the conversation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The DataChannel message you want to send. You must specify a JSON string. The value can be up to 8,192 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

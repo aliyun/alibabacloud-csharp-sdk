@@ -9,14 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetLivePackageChannelResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Details of the live package channel.</para>
+        /// </summary>
         [NameInMap("LivePackageChannel")]
         [Validation(Required=false)]
         public GetLivePackageChannelResponseBodyLivePackageChannel LivePackageChannel { get; set; }
         public class GetLivePackageChannelResponseBodyLivePackageChannel : TeaModel {
             /// <summary>
-            /// <para>频道名称，字符必须为大小写英文字母或-、<em>。
-            /// 1 ~ 200个字符。
-            /// 格式：[A-Za-z0-9</em>-]+</para>
+            /// <para>The channel name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ch4</para>
@@ -26,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ChannelName { get; set; }
 
             /// <summary>
-            /// <para>代表创建时间的资源属性字段</para>
+            /// <para>The time when the channel was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-01T12:00:00Z</para>
@@ -36,14 +37,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>频道描述，最大1000个字符</para>
+            /// <para>The channel description.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>频道组名称</para>
+            /// <para>The channel group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>channel-group-1</para>
@@ -52,11 +53,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
+            /// <summary>
+            /// <para>The ingest endpoints.</para>
+            /// </summary>
             [NameInMap("IngestEndpoints")]
             [Validation(Required=false)]
             public List<GetLivePackageChannelResponseBodyLivePackageChannelIngestEndpoints> IngestEndpoints { get; set; }
             public class GetLivePackageChannelResponseBodyLivePackageChannelIngestEndpoints : TeaModel {
                 /// <summary>
+                /// <para>The ingest endpoint ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ingest1</para>
                 /// </summary>
@@ -65,6 +71,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Id { get; set; }
 
                 /// <summary>
+                /// <para>The password.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2F9e******b569c8</para>
                 /// </summary>
@@ -73,6 +81,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Password { get; set; }
 
                 /// <summary>
+                /// <para>The ingest endpoint URL.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://xxx-1.packagepush-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest">http://xxx-1.packagepush-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest</a></para>
                 /// </summary>
@@ -81,6 +91,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Url { get; set; }
 
                 /// <summary>
+                /// <para>The username.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>us12******das</para>
                 /// </summary>
@@ -91,7 +103,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>最后修改时间</para>
+            /// <para>The time when the endpoint was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-01T12:00:00Z</para>
@@ -101,7 +113,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string LastModified { get; set; }
 
             /// <summary>
-            /// <para>输入协议，目前仅支持HLS</para>
+            /// <para>The ingest protocol. Only HLS is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HLS</para>
@@ -111,7 +123,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>输入流m3u8切片个数，2～100</para>
+            /// <para>The number of M3U8 segments.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -121,7 +133,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? SegmentCount { get; set; }
 
             /// <summary>
-            /// <para>输入流切片时长，1～30</para>
+            /// <para>The segment duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -133,6 +145,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RequestId-12345678</para>
         /// </summary>

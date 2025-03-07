@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListSourcesRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to ignore sources marked as deleted.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public bool? FilterState { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values: asc and desc.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>asc</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>The sorting order by modification time. Valid values: asc and desc.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>desc</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SortByModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the source location.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MySourceLocation</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SourceLocationName { get; set; }
 
         /// <summary>
+        /// <para>The name of the source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MyVodSource</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SourceName { get; set; }
 
         /// <summary>
+        /// <para>The source type. Valid values: vodSource and liveSource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vodSource</para>
         /// </summary>

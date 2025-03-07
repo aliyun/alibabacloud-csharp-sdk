@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateLivePackageChannelRequest : TeaModel {
         /// <summary>
-        /// <para>频道名称，字符必须为大小写英文字母或-、<em>。
-        /// 1 ~ 200个字符。
-        /// 格式：[A-Za-z0-9</em>-]+</para>
+        /// <para>The channel name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,14 +21,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ChannelName { get; set; }
 
         /// <summary>
-        /// <para>频道描述，最大1000个字符</para>
+        /// <para>The channel description. It can be up to 1,000 characters in length.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>频道组名称</para>
+        /// <para>The channel group name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +39,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>输入协议，目前仅支持HLS</para>
+        /// <para>The ingest protocol. Only HLS is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +50,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>输入流m3u8切片个数，2～100</para>
+        /// <para>The number of M3U8 segments. Valid values: 2 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? SegmentCount { get; set; }
 
         /// <summary>
-        /// <para>输入流切片时长，1～30</para>
+        /// <para>The segment duration. Valid values: 1 to 30.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

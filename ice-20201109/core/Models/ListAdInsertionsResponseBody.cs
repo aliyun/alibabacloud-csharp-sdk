@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAdInsertionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Array</para>
+        /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public List<ListAdInsertionsResponseBodyConfigs> Configs { get; set; }
         public class ListAdInsertionsResponseBodyConfigs : TeaModel {
             /// <summary>
-            /// <para>广告标记透传</para>
+            /// <para>Indicates whether ad marker passthrough is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string AdMarkerPassthrough { get; set; }
 
             /// <summary>
-            /// <para>广告策略服务器URL</para>
+            /// <para>The request URL of the ad decision server (ADS).</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://ads.com/ad1?param1=%5Bpalyer_params.p1%5D">http://ads.com/ad1?param1=[palyer_params.p1]</a></para>
@@ -34,14 +37,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string AdsUrl { get; set; }
 
             /// <summary>
-            /// <para>CDN配置</para>
+            /// <para>The CDN configurations.</para>
             /// </summary>
             [NameInMap("CdnConfig")]
             [Validation(Required=false)]
             public ListAdInsertionsResponseBodyConfigsCdnConfig CdnConfig { get; set; }
             public class ListAdInsertionsResponseBodyConfigsCdnConfig : TeaModel {
                 /// <summary>
-                /// <para>广告分片的CDN前缀</para>
+                /// <para>The CDN prefix for ad segments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://cdn.com/">http://cdn.com/</a></para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string AdSegmentUrlPrefix { get; set; }
 
                 /// <summary>
-                /// <para>视频内容分片的CDN前缀</para>
+                /// <para>The CDN prefix for content segments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://cdn.com/">http://cdn.com/</a></para>
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>动态配置别名</para>
+            /// <para>The player parameter variables and aliases.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ConfigAliases { get; set; }
 
             /// <summary>
-            /// <para>内容URL前缀</para>
+            /// <para>The URL prefix for the source content.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://source.com/">https://source.com/</a></para>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ContentUrlPrefix { get; set; }
 
             /// <summary>
-            /// <para>创建时间</para>
+            /// <para>The time when the configuration was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-13T08:26:09Z</para>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>修改时间</para>
+            /// <para>The time when the configuration was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-13T08:26:09Z</para>
@@ -107,14 +110,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string LastModified { get; set; }
 
             /// <summary>
-            /// <para>清单播放端点配置</para>
+            /// <para>The playback endpoint configuration.</para>
             /// </summary>
             [NameInMap("ManifestEndpointConfig")]
             [Validation(Required=false)]
             public ListAdInsertionsResponseBodyConfigsManifestEndpointConfig ManifestEndpointConfig { get; set; }
             public class ListAdInsertionsResponseBodyConfigsManifestEndpointConfig : TeaModel {
                 /// <summary>
-                /// <para>HLS清单播放端点前缀</para>
+                /// <para>The prefix of the playback endpoint for HLS manifests.</para>
                 /// </summary>
                 [NameInMap("HlsPrefix")]
                 [Validation(Required=false)]
@@ -123,7 +126,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
-            /// <para>广告插入配置名称</para>
+            /// <para>The name of the ad insertion configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my_ad</para>
@@ -133,7 +136,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>个性化配置阈值</para>
+            /// <para>The personalization threshold that defines the maximum duration of underfilled time allowed in an ad break.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -143,7 +146,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? PersonalizationThreshold { get; set; }
 
             /// <summary>
-            /// <para>slate广告URL</para>
+            /// <para>The URL of the slate ad.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://storage.com/slate1.mp4">http://storage.com/slate1.mp4</a></para>
@@ -155,7 +158,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>获取后续数据的最大记录数，使用此方式获取数据时分页参数将无效</para>
+        /// <para>The maximum number of entries to retrieve in a subsequent request. If this parameter is used, the pagination parameters become invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -165,7 +168,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>获取后续数据的Token，使用此方式获取数据时分页参数将无效</para>
+        /// <para>The token that is used in the next request to retrieve a new page of results. If this parameter is used, the pagination parameters become invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>*<em><b><b>8EqYpQbZ6Eh7+Zz8DxVYoQ</b></b></em></para>
@@ -175,7 +178,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>分页参数，页码</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -185,7 +188,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>分页参数，页宽</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -195,7 +198,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
@@ -205,7 +208,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>分页参数，排序方式，asc:按创建时间升序，desc:按创建时间降序</para>
+        /// <para>The sorting order of the configurations by creation time. asc: ascending. desc: descending.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>
@@ -215,7 +218,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>总记录数</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class BatchCreateVodPackagingAssetResponseBody : TeaModel {
         /// <summary>
+        /// <para>The name of the packaging group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vod_hls</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string GroupName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>
@@ -25,15 +29,23 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The results of asset ingestion.</para>
+        /// </summary>
         [NameInMap("ResultList")]
         [Validation(Required=false)]
         public List<BatchCreateVodPackagingAssetResponseBodyResultList> ResultList { get; set; }
         public class BatchCreateVodPackagingAssetResponseBodyResultList : TeaModel {
+            /// <summary>
+            /// <para>The information about the ingested asset.</para>
+            /// </summary>
             [NameInMap("Asset")]
             [Validation(Required=false)]
             public VodPackagingAsset Asset { get; set; }
 
             /// <summary>
+            /// <para>The error code for failed ingestion.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>InvalidParameter.PackagingAssetAlreadyExists</para>
             /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The error message for failed ingestion.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>The specified packagingAsset &quot;inputMovie&quot; already exists</para>
             /// </summary>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateChannelResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The channel information.</para>
+        /// </summary>
         [NameInMap("Channel")]
         [Validation(Required=false)]
         public ChannelAssemblyChannel Channel { get; set; }
 
         /// <summary>
+        /// <para><b>Request ID</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx-xxxx-xxxxx-xxxx</para>
         /// </summary>

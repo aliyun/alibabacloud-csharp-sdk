@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DescribeAIAgentInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the AI agent that you want to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

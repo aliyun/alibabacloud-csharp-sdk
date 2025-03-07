@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Producer { get; set; }
 
+            [NameInMap("ReasoningText")]
+            [Validation(Required=false)]
+            public string ReasoningText { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>f27f9b9be28642a88e18****</para>
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("RoundId")]
             [Validation(Required=false)]
             public string RoundId { get; set; }
+
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
 
             [NameInMap("Text")]
             [Validation(Required=false)]
@@ -48,6 +56,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Time")]
             [Validation(Required=false)]
             public long? Time { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
 
         }
 

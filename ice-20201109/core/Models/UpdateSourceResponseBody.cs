@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateSourceResponseBody : TeaModel {
         /// <summary>
+        /// <para><b>Request ID</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx-xxxx-xxxxx-xxxx</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The source information.</para>
+        /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public ChannelAssemblySource Source { get; set; }

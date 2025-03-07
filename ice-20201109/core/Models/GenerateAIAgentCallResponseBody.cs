@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GenerateAIAgentCallResponseBody : TeaModel {
         /// <summary>
+        /// <para>The username of the AI agent in the Alibaba Real-Time Communication (ARTC) channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>877ae632caae49b1afc81c2e8194ffb4</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AIAgentUserId { get; set; }
 
         /// <summary>
+        /// <para>The ARTC channel ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>70f22d5784194938a7e387052f2b3208</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the AI agent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>39f8e0bc005e4f309379701645f4****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7B117AF5-2A16-412C-B127-FA6175ED1AD0</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ARTC token of the client.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Token { get; set; }
 
         /// <summary>
+        /// <para>The username in the ARTC channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user123</para>
         /// </summary>

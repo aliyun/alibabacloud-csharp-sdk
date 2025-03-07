@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListLivePackageChannelsRequest : TeaModel {
         /// <summary>
+        /// <para>The channel group name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>列表操作私有参数</para>
+        /// <para>The channel name or description. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group-1</para>
@@ -30,6 +31,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -38,6 +41,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -46,6 +51,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The sort order by creation time. Default value: desc.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>asc</description></item>
+        /// <item><description>desc</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>desc</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetAdInsertionRequest : TeaModel {
         /// <summary>
-        /// <para>代表资源一级ID的资源属性字段</para>
+        /// <para>The name of the ad insertion configuration that you want to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

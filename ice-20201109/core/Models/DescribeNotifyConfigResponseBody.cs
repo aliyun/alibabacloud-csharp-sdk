@@ -26,6 +26,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public bool? EnableNotify { get; set; }
 
         /// <summary>
+        /// <para>The event types. If this parameter is empty, all event types are selected.</para>
+        /// <list type="bullet">
+        /// <item><description>agent_start: The agent is started.</description></item>
+        /// <item><description>agent_stop: The agent is stopped.</description></item>
+        /// <item><description>error: An error occurred.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>agent_start,agent_stop,error</para>
         /// </summary>

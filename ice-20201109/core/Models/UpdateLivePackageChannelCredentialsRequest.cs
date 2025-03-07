@@ -10,26 +10,33 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateLivePackageChannelCredentialsRequest : TeaModel {
         /// <summary>
-        /// <para>频道名称，字符必须为大小写英文字母或-、<em>。
-        /// 1 ~ 200个字符。
-        /// 格式：[A-Za-z0-9</em>-]+</para>
+        /// <para>The channel name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>channel-1</para>
         /// </summary>
         [NameInMap("ChannelName")]
         [Validation(Required=false)]
         public string ChannelName { get; set; }
 
         /// <summary>
-        /// <para>频道组名称</para>
+        /// <para>The channel group name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>group-1</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>刷新密钥选项, 1: 刷新endpoint1，2:刷新endpoint2，3: 刷新endpoint1&amp;2</para>
+        /// <para>Specifies whether to update the credentials. 1: updates the credentials of endpoint 1. 2: updates the credentials of endpoint 2. 3: updates the credentials of endpoints 1 and 2.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("RotateCredentials")]
         [Validation(Required=false)]

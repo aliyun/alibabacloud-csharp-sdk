@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListChannelsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The channels.</para>
+        /// </summary>
         [NameInMap("ChannelList")]
         [Validation(Required=false)]
         public List<ChannelAssemblyChannel> ChannelList { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para><b>Request ID</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx-xxxx-xxxxx-xxxx</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of channels returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>180</para>
         /// </summary>

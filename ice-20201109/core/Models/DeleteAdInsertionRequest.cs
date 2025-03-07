@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteAdInsertionRequest : TeaModel {
         /// <summary>
-        /// <para>代表资源一级ID的资源属性字段</para>
+        /// <para>The name of the configuration that you want to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

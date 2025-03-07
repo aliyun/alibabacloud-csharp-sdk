@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class StartChannelRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the channel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetVodPackagingConfigurationRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the packaging configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hls_3s</para>
         /// </summary>

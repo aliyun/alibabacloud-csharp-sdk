@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteProgramResponseBody : TeaModel {
         /// <summary>
+        /// <para><b>Request ID</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx-xxxx-xxxxx-xxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

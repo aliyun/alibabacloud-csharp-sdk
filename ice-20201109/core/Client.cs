@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加广告插入配置</para>
+        /// <para>Adds an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加广告插入配置</para>
+        /// <para>Adds an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加广告插入配置</para>
+        /// <para>Adds an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加广告插入配置</para>
+        /// <para>Adds an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -751,22 +751,22 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add input for MediaConnect instance</para>
+        /// <para>Creates a source for a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>If the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>A Flow instance can only have one Input.</description></item>
+        /// <item><description>A flow can have only one source.</description></item>
         /// </list>
-        /// <h3>Description of Input Types</h3>
+        /// <h3><a href="#"></a>Source type</h3>
         /// <list type="bullet">
-        /// <item><description>RTMP-PUSH: Creates an input of the RTMP listening type. You can push to the URL returned by the interface using the RTMP protocol.</description></item>
-        /// <item><description>RTMP-PULL: Creates an input of the RTMP origin-pull type. The Flow will pull the RTMP live stream from the source you specify.</description></item>
-        /// <item><description>SRT-Listener: Creates an input of the SRT listening type. You can push to the URL returned by the interface using the SRT protocol.</description></item>
-        /// <item><description>SRT-Caller: Creates an input of the SRT origin-pull type. The Flow will pull the SRT live stream from the source you specify.</description></item>
-        /// <item><description>Flow: Uses the output of another upstream Flow instance as the input. You need to specify both the instance ID and the output name of the paired Flow. The output of the upstream Flow instance must be of the SRT-Listener/RTMP-PULL type. When cascading between Flow instances, a dedicated line is used by default, which can be utilized for cross-regional distribution among multiple Flows.</description></item>
+        /// <item><description>RTMP-PUSH: An input that you can push to the returned URL over the RTMP protocol.</description></item>
+        /// <item><description>RTMP-PULL: An input that the MediaConnect flow pulls from the specified server over the RTMP protocol.</description></item>
+        /// <item><description>SRT-Listener: An input that you can push to the returned URL over the SRT protocol.</description></item>
+        /// <item><description>SRT-Caller: An input that the MediaConnect flow pulls from the specified server over the SRT protocol.</description></item>
+        /// <item><description>Flow: An input that uses the output of another upstream flow. You must specify an upstream flow and its output. The output type of the upstream flow must be SRT-Listener or RTMP-PULL. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -856,22 +856,22 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add input for MediaConnect instance</para>
+        /// <para>Creates a source for a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>If the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>A Flow instance can only have one Input.</description></item>
+        /// <item><description>A flow can have only one source.</description></item>
         /// </list>
-        /// <h3>Description of Input Types</h3>
+        /// <h3><a href="#"></a>Source type</h3>
         /// <list type="bullet">
-        /// <item><description>RTMP-PUSH: Creates an input of the RTMP listening type. You can push to the URL returned by the interface using the RTMP protocol.</description></item>
-        /// <item><description>RTMP-PULL: Creates an input of the RTMP origin-pull type. The Flow will pull the RTMP live stream from the source you specify.</description></item>
-        /// <item><description>SRT-Listener: Creates an input of the SRT listening type. You can push to the URL returned by the interface using the SRT protocol.</description></item>
-        /// <item><description>SRT-Caller: Creates an input of the SRT origin-pull type. The Flow will pull the SRT live stream from the source you specify.</description></item>
-        /// <item><description>Flow: Uses the output of another upstream Flow instance as the input. You need to specify both the instance ID and the output name of the paired Flow. The output of the upstream Flow instance must be of the SRT-Listener/RTMP-PULL type. When cascading between Flow instances, a dedicated line is used by default, which can be utilized for cross-regional distribution among multiple Flows.</description></item>
+        /// <item><description>RTMP-PUSH: An input that you can push to the returned URL over the RTMP protocol.</description></item>
+        /// <item><description>RTMP-PULL: An input that the MediaConnect flow pulls from the specified server over the RTMP protocol.</description></item>
+        /// <item><description>SRT-Listener: An input that you can push to the returned URL over the SRT protocol.</description></item>
+        /// <item><description>SRT-Caller: An input that the MediaConnect flow pulls from the specified server over the SRT protocol.</description></item>
+        /// <item><description>Flow: An input that uses the output of another upstream flow. You must specify an upstream flow and its output. The output type of the upstream flow must be SRT-Listener or RTMP-PULL. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -961,22 +961,22 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add input for MediaConnect instance</para>
+        /// <para>Creates a source for a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>If the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>A Flow instance can only have one Input.</description></item>
+        /// <item><description>A flow can have only one source.</description></item>
         /// </list>
-        /// <h3>Description of Input Types</h3>
+        /// <h3><a href="#"></a>Source type</h3>
         /// <list type="bullet">
-        /// <item><description>RTMP-PUSH: Creates an input of the RTMP listening type. You can push to the URL returned by the interface using the RTMP protocol.</description></item>
-        /// <item><description>RTMP-PULL: Creates an input of the RTMP origin-pull type. The Flow will pull the RTMP live stream from the source you specify.</description></item>
-        /// <item><description>SRT-Listener: Creates an input of the SRT listening type. You can push to the URL returned by the interface using the SRT protocol.</description></item>
-        /// <item><description>SRT-Caller: Creates an input of the SRT origin-pull type. The Flow will pull the SRT live stream from the source you specify.</description></item>
-        /// <item><description>Flow: Uses the output of another upstream Flow instance as the input. You need to specify both the instance ID and the output name of the paired Flow. The output of the upstream Flow instance must be of the SRT-Listener/RTMP-PULL type. When cascading between Flow instances, a dedicated line is used by default, which can be utilized for cross-regional distribution among multiple Flows.</description></item>
+        /// <item><description>RTMP-PUSH: An input that you can push to the returned URL over the RTMP protocol.</description></item>
+        /// <item><description>RTMP-PULL: An input that the MediaConnect flow pulls from the specified server over the RTMP protocol.</description></item>
+        /// <item><description>SRT-Listener: An input that you can push to the returned URL over the SRT protocol.</description></item>
+        /// <item><description>SRT-Caller: An input that the MediaConnect flow pulls from the specified server over the SRT protocol.</description></item>
+        /// <item><description>Flow: An input that uses the output of another upstream flow. You must specify an upstream flow and its output. The output type of the upstream flow must be SRT-Listener or RTMP-PULL. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -995,22 +995,22 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add input for MediaConnect instance</para>
+        /// <para>Creates a source for a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>If the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>A Flow instance can only have one Input.</description></item>
+        /// <item><description>A flow can have only one source.</description></item>
         /// </list>
-        /// <h3>Description of Input Types</h3>
+        /// <h3><a href="#"></a>Source type</h3>
         /// <list type="bullet">
-        /// <item><description>RTMP-PUSH: Creates an input of the RTMP listening type. You can push to the URL returned by the interface using the RTMP protocol.</description></item>
-        /// <item><description>RTMP-PULL: Creates an input of the RTMP origin-pull type. The Flow will pull the RTMP live stream from the source you specify.</description></item>
-        /// <item><description>SRT-Listener: Creates an input of the SRT listening type. You can push to the URL returned by the interface using the SRT protocol.</description></item>
-        /// <item><description>SRT-Caller: Creates an input of the SRT origin-pull type. The Flow will pull the SRT live stream from the source you specify.</description></item>
-        /// <item><description>Flow: Uses the output of another upstream Flow instance as the input. You need to specify both the instance ID and the output name of the paired Flow. The output of the upstream Flow instance must be of the SRT-Listener/RTMP-PULL type. When cascading between Flow instances, a dedicated line is used by default, which can be utilized for cross-regional distribution among multiple Flows.</description></item>
+        /// <item><description>RTMP-PUSH: An input that you can push to the returned URL over the RTMP protocol.</description></item>
+        /// <item><description>RTMP-PULL: An input that the MediaConnect flow pulls from the specified server over the RTMP protocol.</description></item>
+        /// <item><description>SRT-Listener: An input that you can push to the returned URL over the SRT protocol.</description></item>
+        /// <item><description>SRT-Caller: An input that the MediaConnect flow pulls from the specified server over the SRT protocol.</description></item>
+        /// <item><description>Flow: An input that uses the output of another upstream flow. You must specify an upstream flow and its output. The output type of the upstream flow must be SRT-Listener or RTMP-PULL. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1029,24 +1029,24 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add output for MediaConnect instance</para>
+        /// <para>Creates an output for a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>If the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>A Flow instance can have up to 4 outputs.</description></item>
-        /// <item><description>The output names under the same Flow instance cannot be duplicated.</description></item>
-        /// <item><description>You can set a maximum number of simultaneous players for each output. New plays will fail once this limit is exceeded. Each output supports up to 5 streams.</description></item>
+        /// <item><description>A flow can have a maximum of four outputs.</description></item>
+        /// <item><description>The output names in the same flow cannot be duplicated.</description></item>
+        /// <item><description>You can set an upper limit on the number of concurrent viewers for each output. If this limit is exceeded, any new playback requests will fail. Each output supports up to five streams.</description></item>
         /// </list>
-        /// <h3>Description of Output Types</h3>
+        /// <h3><a href="#"></a>Output types</h3>
         /// <list type="bullet">
-        /// <item><description>RTMP-PUSH: Creates an output of the RTMP push type. The Flow will use the RTMP protocol to push the live stream to the origin you set.</description></item>
-        /// <item><description>RTMP-PULL: Creates an output of the RTMP pull type. You can use the RTMP protocol to pull the stream from the URL returned by the interface.</description></item>
-        /// <item><description>SRT-Caller: Creates an output of the SRT push type. The Flow will use the SRT protocol to push the live stream to the origin you set.</description></item>
-        /// <item><description>SRT-Listener: Creates an output of the SRT pull type. You can use the SRT protocol to pull the stream from the URL returned by the interface.</description></item>
-        /// <item><description>Flow: Uses the input of another downstream Flow instance as the output. You need to specify both the instance ID and the input name of the paired Flow. The input type of the downstream Flow instance must be a listening type, i.e., SRT-Listener/RTMP-PUSH. This instance will push the live stream to the downstream Flow. When cascading between Flow instances, a dedicated line is used by default, which can be used for cross-regional distribution among multiple Flows.</description></item>
+        /// <item><description>RTMP-PUSH: An output that the MediaConnect flow pushes to the server you specified over the RTMP protocol.</description></item>
+        /// <item><description>RTMP-PULL: An output that you can pull using the returned streaming URL over the RTMP protocol.</description></item>
+        /// <item><description>SRT-Caller: An output that the MediaConnect flow pushes to the server you specified over the SRT protocol.</description></item>
+        /// <item><description>SRT-Listener: An output that you can pull using the returned streaming URL over the SRT protocol.</description></item>
+        /// <item><description>Flow: An output that is pushed to the source URL of another MediaConnect flow. The source type of the destination flow must be SRT-Listener or RTMP-PUSH. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1136,24 +1136,24 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add output for MediaConnect instance</para>
+        /// <para>Creates an output for a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>If the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>A Flow instance can have up to 4 outputs.</description></item>
-        /// <item><description>The output names under the same Flow instance cannot be duplicated.</description></item>
-        /// <item><description>You can set a maximum number of simultaneous players for each output. New plays will fail once this limit is exceeded. Each output supports up to 5 streams.</description></item>
+        /// <item><description>A flow can have a maximum of four outputs.</description></item>
+        /// <item><description>The output names in the same flow cannot be duplicated.</description></item>
+        /// <item><description>You can set an upper limit on the number of concurrent viewers for each output. If this limit is exceeded, any new playback requests will fail. Each output supports up to five streams.</description></item>
         /// </list>
-        /// <h3>Description of Output Types</h3>
+        /// <h3><a href="#"></a>Output types</h3>
         /// <list type="bullet">
-        /// <item><description>RTMP-PUSH: Creates an output of the RTMP push type. The Flow will use the RTMP protocol to push the live stream to the origin you set.</description></item>
-        /// <item><description>RTMP-PULL: Creates an output of the RTMP pull type. You can use the RTMP protocol to pull the stream from the URL returned by the interface.</description></item>
-        /// <item><description>SRT-Caller: Creates an output of the SRT push type. The Flow will use the SRT protocol to push the live stream to the origin you set.</description></item>
-        /// <item><description>SRT-Listener: Creates an output of the SRT pull type. You can use the SRT protocol to pull the stream from the URL returned by the interface.</description></item>
-        /// <item><description>Flow: Uses the input of another downstream Flow instance as the output. You need to specify both the instance ID and the input name of the paired Flow. The input type of the downstream Flow instance must be a listening type, i.e., SRT-Listener/RTMP-PUSH. This instance will push the live stream to the downstream Flow. When cascading between Flow instances, a dedicated line is used by default, which can be used for cross-regional distribution among multiple Flows.</description></item>
+        /// <item><description>RTMP-PUSH: An output that the MediaConnect flow pushes to the server you specified over the RTMP protocol.</description></item>
+        /// <item><description>RTMP-PULL: An output that you can pull using the returned streaming URL over the RTMP protocol.</description></item>
+        /// <item><description>SRT-Caller: An output that the MediaConnect flow pushes to the server you specified over the SRT protocol.</description></item>
+        /// <item><description>SRT-Listener: An output that you can pull using the returned streaming URL over the SRT protocol.</description></item>
+        /// <item><description>Flow: An output that is pushed to the source URL of another MediaConnect flow. The source type of the destination flow must be SRT-Listener or RTMP-PUSH. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1243,24 +1243,24 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add output for MediaConnect instance</para>
+        /// <para>Creates an output for a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>If the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>A Flow instance can have up to 4 outputs.</description></item>
-        /// <item><description>The output names under the same Flow instance cannot be duplicated.</description></item>
-        /// <item><description>You can set a maximum number of simultaneous players for each output. New plays will fail once this limit is exceeded. Each output supports up to 5 streams.</description></item>
+        /// <item><description>A flow can have a maximum of four outputs.</description></item>
+        /// <item><description>The output names in the same flow cannot be duplicated.</description></item>
+        /// <item><description>You can set an upper limit on the number of concurrent viewers for each output. If this limit is exceeded, any new playback requests will fail. Each output supports up to five streams.</description></item>
         /// </list>
-        /// <h3>Description of Output Types</h3>
+        /// <h3><a href="#"></a>Output types</h3>
         /// <list type="bullet">
-        /// <item><description>RTMP-PUSH: Creates an output of the RTMP push type. The Flow will use the RTMP protocol to push the live stream to the origin you set.</description></item>
-        /// <item><description>RTMP-PULL: Creates an output of the RTMP pull type. You can use the RTMP protocol to pull the stream from the URL returned by the interface.</description></item>
-        /// <item><description>SRT-Caller: Creates an output of the SRT push type. The Flow will use the SRT protocol to push the live stream to the origin you set.</description></item>
-        /// <item><description>SRT-Listener: Creates an output of the SRT pull type. You can use the SRT protocol to pull the stream from the URL returned by the interface.</description></item>
-        /// <item><description>Flow: Uses the input of another downstream Flow instance as the output. You need to specify both the instance ID and the input name of the paired Flow. The input type of the downstream Flow instance must be a listening type, i.e., SRT-Listener/RTMP-PUSH. This instance will push the live stream to the downstream Flow. When cascading between Flow instances, a dedicated line is used by default, which can be used for cross-regional distribution among multiple Flows.</description></item>
+        /// <item><description>RTMP-PUSH: An output that the MediaConnect flow pushes to the server you specified over the RTMP protocol.</description></item>
+        /// <item><description>RTMP-PULL: An output that you can pull using the returned streaming URL over the RTMP protocol.</description></item>
+        /// <item><description>SRT-Caller: An output that the MediaConnect flow pushes to the server you specified over the SRT protocol.</description></item>
+        /// <item><description>SRT-Listener: An output that you can pull using the returned streaming URL over the SRT protocol.</description></item>
+        /// <item><description>Flow: An output that is pushed to the source URL of another MediaConnect flow. The source type of the destination flow must be SRT-Listener or RTMP-PUSH. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1279,24 +1279,24 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add output for MediaConnect instance</para>
+        /// <para>Creates an output for a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>If the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>A Flow instance can have up to 4 outputs.</description></item>
-        /// <item><description>The output names under the same Flow instance cannot be duplicated.</description></item>
-        /// <item><description>You can set a maximum number of simultaneous players for each output. New plays will fail once this limit is exceeded. Each output supports up to 5 streams.</description></item>
+        /// <item><description>A flow can have a maximum of four outputs.</description></item>
+        /// <item><description>The output names in the same flow cannot be duplicated.</description></item>
+        /// <item><description>You can set an upper limit on the number of concurrent viewers for each output. If this limit is exceeded, any new playback requests will fail. Each output supports up to five streams.</description></item>
         /// </list>
-        /// <h3>Description of Output Types</h3>
+        /// <h3><a href="#"></a>Output types</h3>
         /// <list type="bullet">
-        /// <item><description>RTMP-PUSH: Creates an output of the RTMP push type. The Flow will use the RTMP protocol to push the live stream to the origin you set.</description></item>
-        /// <item><description>RTMP-PULL: Creates an output of the RTMP pull type. You can use the RTMP protocol to pull the stream from the URL returned by the interface.</description></item>
-        /// <item><description>SRT-Caller: Creates an output of the SRT push type. The Flow will use the SRT protocol to push the live stream to the origin you set.</description></item>
-        /// <item><description>SRT-Listener: Creates an output of the SRT pull type. You can use the SRT protocol to pull the stream from the URL returned by the interface.</description></item>
-        /// <item><description>Flow: Uses the input of another downstream Flow instance as the output. You need to specify both the instance ID and the input name of the paired Flow. The input type of the downstream Flow instance must be a listening type, i.e., SRT-Listener/RTMP-PUSH. This instance will push the live stream to the downstream Flow. When cascading between Flow instances, a dedicated line is used by default, which can be used for cross-regional distribution among multiple Flows.</description></item>
+        /// <item><description>RTMP-PUSH: An output that the MediaConnect flow pushes to the server you specified over the RTMP protocol.</description></item>
+        /// <item><description>RTMP-PULL: An output that you can pull using the returned streaming URL over the RTMP protocol.</description></item>
+        /// <item><description>SRT-Caller: An output that the MediaConnect flow pushes to the server you specified over the SRT protocol.</description></item>
+        /// <item><description>SRT-Listener: An output that you can pull using the returned streaming URL over the SRT protocol.</description></item>
+        /// <item><description>Flow: An output that is pushed to the source URL of another MediaConnect flow. The source type of the destination flow must be SRT-Listener or RTMP-PUSH. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1845,7 +1845,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建vod打包资产</para>
+        /// <para>Ingests multiple assets for VOD packaging.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1904,7 +1904,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建vod打包资产</para>
+        /// <para>Ingests multiple assets for VOD packaging.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1963,7 +1963,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建vod打包资产</para>
+        /// <para>Ingests multiple assets for VOD packaging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1981,7 +1981,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建vod打包资产</para>
+        /// <para>Ingests multiple assets for VOD packaging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2789,7 +2789,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的频道</para>
+        /// <para>Creates a channel in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2866,7 +2866,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的频道</para>
+        /// <para>Creates a channel in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2943,7 +2943,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的频道</para>
+        /// <para>Creates a channel in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2961,7 +2961,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的频道</para>
+        /// <para>Creates a channel in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3715,8 +3715,22 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实时打包频道</para>
+        /// <para>Creates a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</para>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Channel group names and channel names can contain only letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// <item><description>Only <c>HLS</c> is supported.</description></item>
+        /// <item><description>The segment duration must be from 1 to 30 seconds.</description></item>
+        /// <item><description>The number of M3U8 segments must be from 2 to 100.
+        /// If the request succeeds, the system will return the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLivePackageChannelRequest
@@ -3790,8 +3804,22 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实时打包频道</para>
+        /// <para>Creates a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</para>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Channel group names and channel names can contain only letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// <item><description>Only <c>HLS</c> is supported.</description></item>
+        /// <item><description>The segment duration must be from 1 to 30 seconds.</description></item>
+        /// <item><description>The number of M3U8 segments must be from 2 to 100.
+        /// If the request succeeds, the system will return the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLivePackageChannelRequest
@@ -3865,8 +3893,22 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实时打包频道</para>
+        /// <para>Creates a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</para>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Channel group names and channel names can contain only letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// <item><description>Only <c>HLS</c> is supported.</description></item>
+        /// <item><description>The segment duration must be from 1 to 30 seconds.</description></item>
+        /// <item><description>The number of M3U8 segments must be from 2 to 100.
+        /// If the request succeeds, the system will return the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLivePackageChannelRequest
@@ -3883,8 +3925,22 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实时打包频道</para>
+        /// <para>Creates a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</para>
+        /// <h3><a href="#"></a>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Channel group names and channel names can contain only letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// <item><description>Only <c>HLS</c> is supported.</description></item>
+        /// <item><description>The segment duration must be from 1 to 30 seconds.</description></item>
+        /// <item><description>The number of M3U8 segments must be from 2 to 100.
+        /// If the request succeeds, the system will return the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLivePackageChannelRequest
@@ -3901,8 +3957,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加实时打包频道组</para>
+        /// <para>Creates a live package channel group with a custom name and description.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you create a channel group, the assigned origin domain is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLivePackageChannelGroupRequest
@@ -3960,8 +4021,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加实时打包频道组</para>
+        /// <para>Creates a live package channel group with a custom name and description.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you create a channel group, the assigned origin domain is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLivePackageChannelGroupRequest
@@ -4019,8 +4085,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加实时打包频道组</para>
+        /// <para>Creates a live package channel group with a custom name and description.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you create a channel group, the assigned origin domain is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLivePackageChannelGroupRequest
@@ -4037,8 +4108,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加实时打包频道组</para>
+        /// <para>Creates a live package channel group with a custom name and description.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you create a channel group, the assigned origin domain is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLivePackageChannelGroupRequest
@@ -4055,8 +4131,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实时打包源站端点</para>
+        /// <para>Creates an origin endpoint for a live package channel to deliver live streams in HLS format.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation is mainly used to configure origin settings, security policies including the IP address blacklist and whitelist and authorization code, and time shifting settings for channels. Before you create an origin endpoint, you must create a live package channel group and channel. After you create the endpoint, the endpoint URL and other configuration details are returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLivePackageOriginEndpointRequest
@@ -4146,8 +4228,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实时打包源站端点</para>
+        /// <para>Creates an origin endpoint for a live package channel to deliver live streams in HLS format.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation is mainly used to configure origin settings, security policies including the IP address blacklist and whitelist and authorization code, and time shifting settings for channels. Before you create an origin endpoint, you must create a live package channel group and channel. After you create the endpoint, the endpoint URL and other configuration details are returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLivePackageOriginEndpointRequest
@@ -4237,8 +4325,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实时打包源站端点</para>
+        /// <para>Creates an origin endpoint for a live package channel to deliver live streams in HLS format.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation is mainly used to configure origin settings, security policies including the IP address blacklist and whitelist and authorization code, and time shifting settings for channels. Before you create an origin endpoint, you must create a live package channel group and channel. After you create the endpoint, the endpoint URL and other configuration details are returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLivePackageOriginEndpointRequest
@@ -4255,8 +4349,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实时打包源站端点</para>
+        /// <para>Creates an origin endpoint for a live package channel to deliver live streams in HLS format.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation is mainly used to configure origin settings, security policies including the IP address blacklist and whitelist and authorization code, and time shifting settings for channels. Before you create an origin endpoint, you must create a live package channel group and channel. After you create the endpoint, the endpoint URL and other configuration details are returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLivePackageOriginEndpointRequest
@@ -4767,14 +4867,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create MediaConnect Flow</para>
+        /// <para>Creates a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  The flow names cannot be duplicated in the same region.</para>
         /// <list type="bullet">
-        /// <item><description>The name of the Flow cannot be duplicated within the same region.</description></item>
-        /// <item><description>When the interface responds normally, it will return the Flow instance ID. Please keep it properly.</description></item>
+        /// <item><description>Take note of the returned flow ID. You may reference it in other API operations.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4828,14 +4928,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create MediaConnect Flow</para>
+        /// <para>Creates a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  The flow names cannot be duplicated in the same region.</para>
         /// <list type="bullet">
-        /// <item><description>The name of the Flow cannot be duplicated within the same region.</description></item>
-        /// <item><description>When the interface responds normally, it will return the Flow instance ID. Please keep it properly.</description></item>
+        /// <item><description>Take note of the returned flow ID. You may reference it in other API operations.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4889,14 +4989,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create MediaConnect Flow</para>
+        /// <para>Creates a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  The flow names cannot be duplicated in the same region.</para>
         /// <list type="bullet">
-        /// <item><description>The name of the Flow cannot be duplicated within the same region.</description></item>
-        /// <item><description>When the interface responds normally, it will return the Flow instance ID. Please keep it properly.</description></item>
+        /// <item><description>Take note of the returned flow ID. You may reference it in other API operations.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4915,14 +5015,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create MediaConnect Flow</para>
+        /// <para>Creates a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  The flow names cannot be duplicated in the same region.</para>
         /// <list type="bullet">
-        /// <item><description>The name of the Flow cannot be duplicated within the same region.</description></item>
-        /// <item><description>When the interface responds normally, it will return the Flow instance ID. Please keep it properly.</description></item>
+        /// <item><description>Take note of the returned flow ID. You may reference it in other API operations.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4937,6 +5037,648 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateMediaConnectFlowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMediaLiveChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaLiveChannelResponse
+        /// </returns>
+        public CreateMediaLiveChannelResponse CreateMediaLiveChannelWithOptions(CreateMediaLiveChannelRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMediaLiveChannelShrinkRequest request = new CreateMediaLiveChannelShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AudioSettings))
+            {
+                request.AudioSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AudioSettings, "AudioSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InputAttachments))
+            {
+                request.InputAttachmentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InputAttachments, "InputAttachments", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutputGroups))
+            {
+                request.OutputGroupsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutputGroups, "OutputGroups", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoSettings))
+            {
+                request.VideoSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoSettings, "VideoSettings", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioSettingsShrink))
+            {
+                body["AudioSettings"] = request.AudioSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputAttachmentsShrink))
+            {
+                body["InputAttachments"] = request.InputAttachmentsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputGroupsShrink))
+            {
+                body["OutputGroups"] = request.OutputGroupsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoSettingsShrink))
+            {
+                body["VideoSettings"] = request.VideoSettingsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMediaLiveChannel",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateMediaLiveChannelResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateMediaLiveChannelResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMediaLiveChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaLiveChannelResponse
+        /// </returns>
+        public async Task<CreateMediaLiveChannelResponse> CreateMediaLiveChannelWithOptionsAsync(CreateMediaLiveChannelRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMediaLiveChannelShrinkRequest request = new CreateMediaLiveChannelShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AudioSettings))
+            {
+                request.AudioSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AudioSettings, "AudioSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InputAttachments))
+            {
+                request.InputAttachmentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InputAttachments, "InputAttachments", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutputGroups))
+            {
+                request.OutputGroupsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutputGroups, "OutputGroups", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoSettings))
+            {
+                request.VideoSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoSettings, "VideoSettings", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioSettingsShrink))
+            {
+                body["AudioSettings"] = request.AudioSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputAttachmentsShrink))
+            {
+                body["InputAttachments"] = request.InputAttachmentsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputGroupsShrink))
+            {
+                body["OutputGroups"] = request.OutputGroupsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoSettingsShrink))
+            {
+                body["VideoSettings"] = request.VideoSettingsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMediaLiveChannel",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateMediaLiveChannelResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateMediaLiveChannelResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMediaLiveChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaLiveChannelResponse
+        /// </returns>
+        public CreateMediaLiveChannelResponse CreateMediaLiveChannel(CreateMediaLiveChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMediaLiveChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMediaLiveChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaLiveChannelResponse
+        /// </returns>
+        public async Task<CreateMediaLiveChannelResponse> CreateMediaLiveChannelAsync(CreateMediaLiveChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMediaLiveChannelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a MediaLive input.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMediaLiveInputRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaLiveInputResponse
+        /// </returns>
+        public CreateMediaLiveInputResponse CreateMediaLiveInputWithOptions(CreateMediaLiveInputRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMediaLiveInputShrinkRequest request = new CreateMediaLiveInputShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InputSettings))
+            {
+                request.InputSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InputSettings, "InputSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SecurityGroupIds))
+            {
+                request.SecurityGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SecurityGroupIds, "SecurityGroupIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputSettingsShrink))
+            {
+                body["InputSettings"] = request.InputSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupIdsShrink))
+            {
+                body["SecurityGroupIds"] = request.SecurityGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMediaLiveInput",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateMediaLiveInputResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateMediaLiveInputResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a MediaLive input.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMediaLiveInputRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaLiveInputResponse
+        /// </returns>
+        public async Task<CreateMediaLiveInputResponse> CreateMediaLiveInputWithOptionsAsync(CreateMediaLiveInputRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMediaLiveInputShrinkRequest request = new CreateMediaLiveInputShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InputSettings))
+            {
+                request.InputSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InputSettings, "InputSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SecurityGroupIds))
+            {
+                request.SecurityGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SecurityGroupIds, "SecurityGroupIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputSettingsShrink))
+            {
+                body["InputSettings"] = request.InputSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupIdsShrink))
+            {
+                body["SecurityGroupIds"] = request.SecurityGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMediaLiveInput",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateMediaLiveInputResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateMediaLiveInputResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a MediaLive input.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMediaLiveInputRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaLiveInputResponse
+        /// </returns>
+        public CreateMediaLiveInputResponse CreateMediaLiveInput(CreateMediaLiveInputRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMediaLiveInputWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a MediaLive input.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMediaLiveInputRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaLiveInputResponse
+        /// </returns>
+        public async Task<CreateMediaLiveInputResponse> CreateMediaLiveInputAsync(CreateMediaLiveInputRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMediaLiveInputWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a security group in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public CreateMediaLiveInputSecurityGroupResponse CreateMediaLiveInputSecurityGroupWithOptions(CreateMediaLiveInputSecurityGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMediaLiveInputSecurityGroupShrinkRequest request = new CreateMediaLiveInputSecurityGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WhitelistRules))
+            {
+                request.WhitelistRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WhitelistRules, "WhitelistRules", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhitelistRulesShrink))
+            {
+                body["WhitelistRules"] = request.WhitelistRulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMediaLiveInputSecurityGroup",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateMediaLiveInputSecurityGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateMediaLiveInputSecurityGroupResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a security group in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public async Task<CreateMediaLiveInputSecurityGroupResponse> CreateMediaLiveInputSecurityGroupWithOptionsAsync(CreateMediaLiveInputSecurityGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMediaLiveInputSecurityGroupShrinkRequest request = new CreateMediaLiveInputSecurityGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WhitelistRules))
+            {
+                request.WhitelistRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WhitelistRules, "WhitelistRules", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhitelistRulesShrink))
+            {
+                body["WhitelistRules"] = request.WhitelistRulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMediaLiveInputSecurityGroup",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateMediaLiveInputSecurityGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateMediaLiveInputSecurityGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a security group in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public CreateMediaLiveInputSecurityGroupResponse CreateMediaLiveInputSecurityGroup(CreateMediaLiveInputSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMediaLiveInputSecurityGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a security group in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public async Task<CreateMediaLiveInputSecurityGroupResponse> CreateMediaLiveInputSecurityGroupAsync(CreateMediaLiveInputSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMediaLiveInputSecurityGroupWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5091,7 +5833,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的节目</para>
+        /// <para>Creates a program in a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5168,7 +5910,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的节目</para>
+        /// <para>Creates a program in a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5245,7 +5987,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的节目</para>
+        /// <para>Creates a program in a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5263,7 +6005,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的节目</para>
+        /// <para>Creates a program in a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5593,7 +6335,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的源</para>
+        /// <para>Creates a source in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5654,7 +6396,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的源</para>
+        /// <para>Creates a source in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5715,7 +6457,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的源</para>
+        /// <para>Creates a source in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5733,7 +6475,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的源</para>
+        /// <para>Creates a source in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5751,7 +6493,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的源位置</para>
+        /// <para>Creates a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5812,7 +6554,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的源位置</para>
+        /// <para>Creates a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5873,7 +6615,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的源位置</para>
+        /// <para>Creates a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5891,7 +6633,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的源位置</para>
+        /// <para>Creates a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6345,7 +7087,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建vod打包资产</para>
+        /// <para>Ingests an asset for VOD packaging.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6416,7 +7158,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建vod打包资产</para>
+        /// <para>Ingests an asset for VOD packaging.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6487,7 +7229,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建vod打包资产</para>
+        /// <para>Ingests an asset for VOD packaging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6505,7 +7247,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建vod打包资产</para>
+        /// <para>Ingests an asset for VOD packaging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6523,7 +7265,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建点播打包配置</para>
+        /// <para>Creates a packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6594,7 +7336,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建点播打包配置</para>
+        /// <para>Creates a packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6665,7 +7407,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建点播打包配置</para>
+        /// <para>Creates a packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6683,7 +7425,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建点播打包配置</para>
+        /// <para>Creates a packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6701,7 +7443,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建点播打包组</para>
+        /// <para>Creates a packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6754,7 +7496,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建点播打包组</para>
+        /// <para>Creates a packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6807,7 +7549,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建点播打包组</para>
+        /// <para>Creates a packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6825,7 +7567,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建点播打包组</para>
+        /// <para>Creates a packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7119,7 +7861,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除广告插入配置</para>
+        /// <para>Deletes an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7168,7 +7910,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除广告插入配置</para>
+        /// <para>Deletes an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7217,7 +7959,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除广告插入配置</para>
+        /// <para>Deletes an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7235,7 +7977,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除广告插入配置</para>
+        /// <para>Deletes an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7541,7 +8283,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除频道</para>
+        /// <para>Deletes a channel in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7590,7 +8332,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除频道</para>
+        /// <para>Deletes a channel in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7639,7 +8381,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除频道</para>
+        /// <para>Deletes a channel in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7657,7 +8399,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除频道</para>
+        /// <para>Deletes a channel in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8567,8 +9309,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实时打包频道</para>
+        /// <para>Deletes a live package channel by GroupName and ChannelName.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You need to provide GroupName and ChannelName as parameters to specify exactly which channel to delete. Before you delete a channel, you must delete the origin endpoints associated with the channel.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteLivePackageChannelRequest
@@ -8620,8 +9368,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实时打包频道</para>
+        /// <para>Deletes a live package channel by GroupName and ChannelName.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You need to provide GroupName and ChannelName as parameters to specify exactly which channel to delete. Before you delete a channel, you must delete the origin endpoints associated with the channel.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteLivePackageChannelRequest
@@ -8673,8 +9427,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实时打包频道</para>
+        /// <para>Deletes a live package channel by GroupName and ChannelName.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You need to provide GroupName and ChannelName as parameters to specify exactly which channel to delete. Before you delete a channel, you must delete the origin endpoints associated with the channel.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteLivePackageChannelRequest
@@ -8691,8 +9451,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实时打包频道</para>
+        /// <para>Deletes a live package channel by GroupName and ChannelName.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You need to provide GroupName and ChannelName as parameters to specify exactly which channel to delete. Before you delete a channel, you must delete the origin endpoints associated with the channel.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteLivePackageChannelRequest
@@ -8709,8 +9475,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除直播打包频道组</para>
+        /// <para>Deletes a live package channel group by name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Make sure that no channels are included in the channel group before you delete it.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteLivePackageChannelGroupRequest
@@ -8758,8 +9530,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除直播打包频道组</para>
+        /// <para>Deletes a live package channel group by name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Make sure that no channels are included in the channel group before you delete it.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteLivePackageChannelGroupRequest
@@ -8807,8 +9585,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除直播打包频道组</para>
+        /// <para>Deletes a live package channel group by name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Make sure that no channels are included in the channel group before you delete it.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteLivePackageChannelGroupRequest
@@ -8825,8 +9609,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除直播打包频道组</para>
+        /// <para>Deletes a live package channel group by name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>Make sure that no channels are included in the channel group before you delete it.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteLivePackageChannelGroupRequest
@@ -8843,8 +9633,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实时打包源站端点</para>
+        /// <para>Deletes an origin endpoint associated with a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation is used to delete an origin endpoint associated with a live package channel by specifying <c>GroupName</c>, <c>ChannelName</c>, and <c>EndpointName</c>. This operation will permanently delete the relevant configurations. Exercise caution when you perform this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteLivePackageOriginEndpointRequest
@@ -8900,8 +9696,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实时打包源站端点</para>
+        /// <para>Deletes an origin endpoint associated with a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation is used to delete an origin endpoint associated with a live package channel by specifying <c>GroupName</c>, <c>ChannelName</c>, and <c>EndpointName</c>. This operation will permanently delete the relevant configurations. Exercise caution when you perform this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteLivePackageOriginEndpointRequest
@@ -8957,8 +9759,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实时打包源站端点</para>
+        /// <para>Deletes an origin endpoint associated with a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation is used to delete an origin endpoint associated with a live package channel by specifying <c>GroupName</c>, <c>ChannelName</c>, and <c>EndpointName</c>. This operation will permanently delete the relevant configurations. Exercise caution when you perform this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteLivePackageOriginEndpointRequest
@@ -8975,8 +9783,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实时打包源站端点</para>
+        /// <para>Deletes an origin endpoint associated with a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation is used to delete an origin endpoint associated with a live package channel by specifying <c>GroupName</c>, <c>ChannelName</c>, and <c>EndpointName</c>. This operation will permanently delete the relevant configurations. Exercise caution when you perform this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteLivePackageOriginEndpointRequest
@@ -9833,15 +10647,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete MediaConnect instance by instance ID</para>
+        /// <para>Deletes a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>When the input Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>When deleting a Flow instance, all Inputs and Outputs bound to this Flow will also be deleted.</description></item>
-        /// <item><description>You cannot delete a Flow instance that is in the online state.</description></item>
+        /// <item><description>When a flow is deleted, its source and outputs are also deleted.</description></item>
+        /// <item><description>When a flow is in the online state, it cannot be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9891,15 +10705,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete MediaConnect instance by instance ID</para>
+        /// <para>Deletes a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>When the input Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>When deleting a Flow instance, all Inputs and Outputs bound to this Flow will also be deleted.</description></item>
-        /// <item><description>You cannot delete a Flow instance that is in the online state.</description></item>
+        /// <item><description>When a flow is deleted, its source and outputs are also deleted.</description></item>
+        /// <item><description>When a flow is in the online state, it cannot be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9949,15 +10763,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete MediaConnect instance by instance ID</para>
+        /// <para>Deletes a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>When the input Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>When deleting a Flow instance, all Inputs and Outputs bound to this Flow will also be deleted.</description></item>
-        /// <item><description>You cannot delete a Flow instance that is in the online state.</description></item>
+        /// <item><description>When a flow is deleted, its source and outputs are also deleted.</description></item>
+        /// <item><description>When a flow is in the online state, it cannot be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9976,15 +10790,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete MediaConnect instance by instance ID</para>
+        /// <para>Deletes a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>When the input Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>When deleting a Flow instance, all Inputs and Outputs bound to this Flow will also be deleted.</description></item>
-        /// <item><description>You cannot delete a Flow instance that is in the online state.</description></item>
+        /// <item><description>When a flow is deleted, its source and outputs are also deleted.</description></item>
+        /// <item><description>When a flow is in the online state, it cannot be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10003,15 +10817,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the input of a specific MediaConnect instance</para>
+        /// <para>Deletes the source of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>If the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>When the Flow instance status is online, the input cannot be deleted.</description></item>
-        /// <item><description>Only after all outputs under the Flow instance have been deleted can the input be deleted.</description></item>
+        /// <item><description>When a flow is in the online state, its source cannot be deleted.</description></item>
+        /// <item><description>You can delete the source only after all outputs of the flow have been deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10061,15 +10875,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the input of a specific MediaConnect instance</para>
+        /// <para>Deletes the source of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>If the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>When the Flow instance status is online, the input cannot be deleted.</description></item>
-        /// <item><description>Only after all outputs under the Flow instance have been deleted can the input be deleted.</description></item>
+        /// <item><description>When a flow is in the online state, its source cannot be deleted.</description></item>
+        /// <item><description>You can delete the source only after all outputs of the flow have been deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10119,15 +10933,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the input of a specific MediaConnect instance</para>
+        /// <para>Deletes the source of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>If the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>When the Flow instance status is online, the input cannot be deleted.</description></item>
-        /// <item><description>Only after all outputs under the Flow instance have been deleted can the input be deleted.</description></item>
+        /// <item><description>When a flow is in the online state, its source cannot be deleted.</description></item>
+        /// <item><description>You can delete the source only after all outputs of the flow have been deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10146,15 +10960,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the input of a specific MediaConnect instance</para>
+        /// <para>Deletes the source of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>If the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>When the Flow instance status is online, the input cannot be deleted.</description></item>
-        /// <item><description>Only after all outputs under the Flow instance have been deleted can the input be deleted.</description></item>
+        /// <item><description>When a flow is in the online state, its source cannot be deleted.</description></item>
+        /// <item><description>You can delete the source only after all outputs of the flow have been deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10173,14 +10987,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a specific MediaConnect output</para>
+        /// <para>Deletes an output of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>When the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>When the Flow instance status is online, the output cannot be deleted.</description></item>
+        /// <item><description>When a flow is in the online state, its outputs cannot be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10234,14 +11048,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a specific MediaConnect output</para>
+        /// <para>Deletes an output of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>When the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>When the Flow instance status is online, the output cannot be deleted.</description></item>
+        /// <item><description>When a flow is in the online state, its outputs cannot be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10295,14 +11109,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a specific MediaConnect output</para>
+        /// <para>Deletes an output of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>When the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>When the Flow instance status is online, the output cannot be deleted.</description></item>
+        /// <item><description>When a flow is in the online state, its outputs cannot be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10321,14 +11135,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a specific MediaConnect output</para>
+        /// <para>Deletes an output of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>When the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>When the Flow instance status is online, the output cannot be deleted.</description></item>
+        /// <item><description>When a flow is in the online state, its outputs cannot be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10643,6 +11457,552 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteMediaInfosWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can only delete a channel that is not running.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaLiveChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaLiveChannelResponse
+        /// </returns>
+        public DeleteMediaLiveChannelResponse DeleteMediaLiveChannelWithOptions(DeleteMediaLiveChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                body["ChannelId"] = request.ChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMediaLiveChannel",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteMediaLiveChannelResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteMediaLiveChannelResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can only delete a channel that is not running.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaLiveChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaLiveChannelResponse
+        /// </returns>
+        public async Task<DeleteMediaLiveChannelResponse> DeleteMediaLiveChannelWithOptionsAsync(DeleteMediaLiveChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                body["ChannelId"] = request.ChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMediaLiveChannel",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteMediaLiveChannelResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteMediaLiveChannelResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can only delete a channel that is not running.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaLiveChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaLiveChannelResponse
+        /// </returns>
+        public DeleteMediaLiveChannelResponse DeleteMediaLiveChannel(DeleteMediaLiveChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteMediaLiveChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can only delete a channel that is not running.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaLiveChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaLiveChannelResponse
+        /// </returns>
+        public async Task<DeleteMediaLiveChannelResponse> DeleteMediaLiveChannelAsync(DeleteMediaLiveChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteMediaLiveChannelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MediaLive input.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can delete an input only when it is not associated with a MediaLive channel.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaLiveInputRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaLiveInputResponse
+        /// </returns>
+        public DeleteMediaLiveInputResponse DeleteMediaLiveInputWithOptions(DeleteMediaLiveInputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputId))
+            {
+                body["InputId"] = request.InputId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMediaLiveInput",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteMediaLiveInputResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteMediaLiveInputResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MediaLive input.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can delete an input only when it is not associated with a MediaLive channel.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaLiveInputRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaLiveInputResponse
+        /// </returns>
+        public async Task<DeleteMediaLiveInputResponse> DeleteMediaLiveInputWithOptionsAsync(DeleteMediaLiveInputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputId))
+            {
+                body["InputId"] = request.InputId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMediaLiveInput",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteMediaLiveInputResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteMediaLiveInputResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MediaLive input.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can delete an input only when it is not associated with a MediaLive channel.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaLiveInputRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaLiveInputResponse
+        /// </returns>
+        public DeleteMediaLiveInputResponse DeleteMediaLiveInput(DeleteMediaLiveInputRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteMediaLiveInputWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MediaLive input.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can delete an input only when it is not associated with a MediaLive channel.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaLiveInputRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaLiveInputResponse
+        /// </returns>
+        public async Task<DeleteMediaLiveInputResponse> DeleteMediaLiveInputAsync(DeleteMediaLiveInputRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteMediaLiveInputWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a security group in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can only delete a security group not associated with an input.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public DeleteMediaLiveInputSecurityGroupResponse DeleteMediaLiveInputSecurityGroupWithOptions(DeleteMediaLiveInputSecurityGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                body["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMediaLiveInputSecurityGroup",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteMediaLiveInputSecurityGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteMediaLiveInputSecurityGroupResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a security group in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can only delete a security group not associated with an input.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public async Task<DeleteMediaLiveInputSecurityGroupResponse> DeleteMediaLiveInputSecurityGroupWithOptionsAsync(DeleteMediaLiveInputSecurityGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                body["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMediaLiveInputSecurityGroup",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteMediaLiveInputSecurityGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteMediaLiveInputSecurityGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a security group in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can only delete a security group not associated with an input.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public DeleteMediaLiveInputSecurityGroupResponse DeleteMediaLiveInputSecurityGroup(DeleteMediaLiveInputSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteMediaLiveInputSecurityGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a security group in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can only delete a security group not associated with an input.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public async Task<DeleteMediaLiveInputSecurityGroupResponse> DeleteMediaLiveInputSecurityGroupAsync(DeleteMediaLiveInputSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteMediaLiveInputSecurityGroupWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11093,7 +12453,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节目</para>
+        /// <para>Deletes a program from a channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11146,7 +12506,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节目</para>
+        /// <para>Deletes a program from a channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11199,7 +12559,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节目</para>
+        /// <para>Deletes a program from a channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11217,7 +12577,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节目</para>
+        /// <para>Deletes a program from a channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11369,7 +12729,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除源</para>
+        /// <para>Deletes a source from MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11430,7 +12790,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除源</para>
+        /// <para>Deletes a source from MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11491,7 +12851,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除源</para>
+        /// <para>Deletes a source from MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11509,7 +12869,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除源</para>
+        /// <para>Deletes a source from MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11527,7 +12887,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除源位置</para>
+        /// <para>Deletes a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11580,7 +12940,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除源位置</para>
+        /// <para>Deletes a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11633,7 +12993,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除源位置</para>
+        /// <para>Deletes a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11651,7 +13011,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除源位置</para>
+        /// <para>Deletes a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11831,7 +13191,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除点播打包资产</para>
+        /// <para>Deletes a VOD packaging asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11880,7 +13240,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除点播打包资产</para>
+        /// <para>Deletes a VOD packaging asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11929,7 +13289,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除点播打包资产</para>
+        /// <para>Deletes a VOD packaging asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11947,7 +13307,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除点播打包资产</para>
+        /// <para>Deletes a VOD packaging asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11965,7 +13325,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除点播打包配置</para>
+        /// <para>Deletes a packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12014,7 +13374,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除点播打包配置</para>
+        /// <para>Deletes a packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12063,7 +13423,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除点播打包配置</para>
+        /// <para>Deletes a packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12081,7 +13441,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除点播打包配置</para>
+        /// <para>Deletes a packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12099,7 +13459,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除点播打包组</para>
+        /// <para>Deletes a packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12148,7 +13508,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除点播打包组</para>
+        /// <para>Deletes a packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12197,7 +13557,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除点播打包组</para>
+        /// <para>Deletes a packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12215,7 +13575,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除点播打包组</para>
+        /// <para>Deletes a packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12233,8 +13593,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Queries the information about an AI agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Feature</b>: You can call this operation to query the information about an AI agent.</description></item>
+        /// <item><description><b>Scenario</b>: If you need to monitor or analyze the performance of an AI agent in a call or debug the agent configurations, you can call this operation to obtain required data.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAIAgentInstanceRequest
@@ -12282,8 +13651,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Queries the information about an AI agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Feature</b>: You can call this operation to query the information about an AI agent.</description></item>
+        /// <item><description><b>Scenario</b>: If you need to monitor or analyze the performance of an AI agent in a call or debug the agent configurations, you can call this operation to obtain required data.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAIAgentInstanceRequest
@@ -12331,8 +13709,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Queries the information about an AI agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Feature</b>: You can call this operation to query the information about an AI agent.</description></item>
+        /// <item><description><b>Scenario</b>: If you need to monitor or analyze the performance of an AI agent in a call or debug the agent configurations, you can call this operation to obtain required data.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAIAgentInstanceRequest
@@ -12349,8 +13736,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Queries the information about an AI agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Feature</b>: You can call this operation to query the information about an AI agent.</description></item>
+        /// <item><description><b>Scenario</b>: If you need to monitor or analyze the performance of an AI agent in a call or debug the agent configurations, you can call this operation to obtain required data.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAIAgentInstanceRequest
@@ -13149,8 +14545,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述回调配置</para>
+        /// <para>Queries the event callback configurations of an AI agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the detailed callback configurations of an AI agent.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNotifyConfigRequest
@@ -13198,8 +14599,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述回调配置</para>
+        /// <para>Queries the event callback configurations of an AI agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the detailed callback configurations of an AI agent.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNotifyConfigRequest
@@ -13247,8 +14653,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述回调配置</para>
+        /// <para>Queries the event callback configurations of an AI agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the detailed callback configurations of an AI agent.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNotifyConfigRequest
@@ -13265,8 +14676,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述回调配置</para>
+        /// <para>Queries the event callback configurations of an AI agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the detailed callback configurations of an AI agent.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNotifyConfigRequest
@@ -14021,8 +15437,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</para>
+        /// <para>Creates an AI agent. This operation returns the channel in which the AI agent resides, the username of the AI agent in the channel, and the token that you can use to join the channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to create an AI agent based on the provided ID. You can join the channel based on the returned information and talk to the agent.
+        /// <b>Note:</b> Make sure that the provided AI agent ID is valid and configure optional parameters based on your business requirements.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GenerateAIAgentCallRequest
@@ -14039,6 +15462,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             GenerateAIAgentCallShrinkRequest request = new GenerateAIAgentCallShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChatSyncConfig))
+            {
+                request.ChatSyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChatSyncConfig, "ChatSyncConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TemplateConfig))
             {
                 request.TemplateConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TemplateConfig, "TemplateConfig", "json");
@@ -14047,6 +15474,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
             {
                 query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatSyncConfigShrink))
+            {
+                query["ChatSyncConfig"] = request.ChatSyncConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expire))
             {
@@ -14096,8 +15527,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</para>
+        /// <para>Creates an AI agent. This operation returns the channel in which the AI agent resides, the username of the AI agent in the channel, and the token that you can use to join the channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to create an AI agent based on the provided ID. You can join the channel based on the returned information and talk to the agent.
+        /// <b>Note:</b> Make sure that the provided AI agent ID is valid and configure optional parameters based on your business requirements.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GenerateAIAgentCallRequest
@@ -14114,6 +15552,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             GenerateAIAgentCallShrinkRequest request = new GenerateAIAgentCallShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChatSyncConfig))
+            {
+                request.ChatSyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChatSyncConfig, "ChatSyncConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TemplateConfig))
             {
                 request.TemplateConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TemplateConfig, "TemplateConfig", "json");
@@ -14122,6 +15564,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
             {
                 query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatSyncConfigShrink))
+            {
+                query["ChatSyncConfig"] = request.ChatSyncConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expire))
             {
@@ -14171,8 +15617,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</para>
+        /// <para>Creates an AI agent. This operation returns the channel in which the AI agent resides, the username of the AI agent in the channel, and the token that you can use to join the channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to create an AI agent based on the provided ID. You can join the channel based on the returned information and talk to the agent.
+        /// <b>Note:</b> Make sure that the provided AI agent ID is valid and configure optional parameters based on your business requirements.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateAIAgentCallRequest
@@ -14189,8 +15642,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</para>
+        /// <para>Creates an AI agent. This operation returns the channel in which the AI agent resides, the username of the AI agent in the channel, and the token that you can use to join the channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to create an AI agent based on the provided ID. You can join the channel based on the returned information and talk to the agent.
+        /// <b>Note:</b> Make sure that the provided AI agent ID is valid and configure optional parameters based on your business requirements.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateAIAgentCallRequest
@@ -14473,7 +15933,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取广告插入配置</para>
+        /// <para>Obtains details of an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14522,7 +15982,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取广告插入配置</para>
+        /// <para>Obtains details of an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14571,7 +16031,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取广告插入配置</para>
+        /// <para>Obtains details of an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14589,7 +16049,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取广告插入配置</para>
+        /// <para>Obtains details of an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15195,7 +16655,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取频道</para>
+        /// <para>Queries information about a channel in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15244,7 +16704,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取频道</para>
+        /// <para>Queries information about a channel in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15293,7 +16753,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取频道</para>
+        /// <para>Queries information about a channel in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15311,7 +16771,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取频道</para>
+        /// <para>Queries information about a channel in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17043,8 +18503,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实时打包频道</para>
+        /// <para>Queries the details of a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to query the details of a live package channel, including the creation time, description, ingest endpoint, protocol, number of segments, and segment duration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLivePackageChannelRequest
@@ -17096,8 +18562,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实时打包频道</para>
+        /// <para>Queries the details of a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to query the details of a live package channel, including the creation time, description, ingest endpoint, protocol, number of segments, and segment duration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLivePackageChannelRequest
@@ -17149,8 +18621,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实时打包频道</para>
+        /// <para>Queries the details of a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to query the details of a live package channel, including the creation time, description, ingest endpoint, protocol, number of segments, and segment duration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLivePackageChannelRequest
@@ -17167,8 +18645,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实时打包频道</para>
+        /// <para>Queries the details of a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to query the details of a live package channel, including the creation time, description, ingest endpoint, protocol, number of segments, and segment duration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLivePackageChannelRequest
@@ -17185,8 +18669,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取直播打包频道组</para>
+        /// <para>Queries the details of a live package channel group by name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You can call this API operation to query the details of a specific channel group, including its name, description, origin domain, and creation and last modification timestamps.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLivePackageChannelGroupRequest
@@ -17234,8 +18724,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取直播打包频道组</para>
+        /// <para>Queries the details of a live package channel group by name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You can call this API operation to query the details of a specific channel group, including its name, description, origin domain, and creation and last modification timestamps.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLivePackageChannelGroupRequest
@@ -17283,8 +18779,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取直播打包频道组</para>
+        /// <para>Queries the details of a live package channel group by name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You can call this API operation to query the details of a specific channel group, including its name, description, origin domain, and creation and last modification timestamps.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLivePackageChannelGroupRequest
@@ -17301,8 +18803,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取直播打包频道组</para>
+        /// <para>Queries the details of a live package channel group by name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You can call this API operation to query the details of a specific channel group, including its name, description, origin domain, and creation and last modification timestamps.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLivePackageChannelGroupRequest
@@ -17319,8 +18827,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实时打包源站端点</para>
+        /// <para>Queries origin endpoints associated with a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLivePackageOriginEndpointRequest
@@ -17376,8 +18889,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实时打包源站端点</para>
+        /// <para>Queries origin endpoints associated with a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLivePackageOriginEndpointRequest
@@ -17433,8 +18951,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实时打包源站端点</para>
+        /// <para>Queries origin endpoints associated with a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLivePackageOriginEndpointRequest
@@ -17451,8 +18974,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实时打包源站端点</para>
+        /// <para>Queries origin endpoints associated with a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLivePackageOriginEndpointRequest
@@ -18241,14 +19769,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve detailed information of the corresponding MediaConnect based on the instance ID</para>
+        /// <para>Obtains information about a specific MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>When the input Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>The StartTime returned by the interface is only valid when the Flow status is online.</description></item>
+        /// <item><description>The returned StartTime is valid only when the flow is in the online state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18298,14 +19826,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve detailed information of the corresponding MediaConnect based on the instance ID</para>
+        /// <para>Obtains information about a specific MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>When the input Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>The StartTime returned by the interface is only valid when the Flow status is online.</description></item>
+        /// <item><description>The returned StartTime is valid only when the flow is in the online state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18355,14 +19883,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve detailed information of the corresponding MediaConnect based on the instance ID</para>
+        /// <para>Obtains information about a specific MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>When the input Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>The StartTime returned by the interface is only valid when the Flow status is online.</description></item>
+        /// <item><description>The returned StartTime is valid only when the flow is in the online state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18381,14 +19909,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve detailed information of the corresponding MediaConnect based on the instance ID</para>
+        /// <para>Obtains information about a specific MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// <list type="bullet">
-        /// <item><description>When the input Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// <item><description>The StartTime returned by the interface is only valid when the Flow status is online.</description></item>
+        /// <item><description>The returned StartTime is valid only when the flow is in the online state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18407,14 +19935,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get input information under a MediaConnect instance</para>
+        /// <para>Obtains information about the source of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>When the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// </list>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18463,14 +19989,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get input information under a MediaConnect instance</para>
+        /// <para>Obtains information about the source of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>When the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// </list>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18519,14 +20043,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get input information under a MediaConnect instance</para>
+        /// <para>Obtains information about the source of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>When the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// </list>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18544,14 +20066,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get input information under a MediaConnect instance</para>
+        /// <para>Obtains information about the source of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>When the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// </list>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18569,14 +20089,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve detailed information of a specific output based on outputName</para>
+        /// <para>Obtains information about an output of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>When the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// </list>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18629,14 +20147,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve detailed information of a specific output based on outputName</para>
+        /// <para>Obtains information about an output of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>When the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// </list>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18689,14 +20205,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve detailed information of a specific output based on outputName</para>
+        /// <para>Obtains information about an output of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>When the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// </list>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18714,14 +20228,12 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve detailed information of a specific output based on outputName</para>
+        /// <para>Obtains information about an output of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description>When the provided Flow instance ID does not exist, the interface will return an error.</description></item>
-        /// </list>
+        /// <para>  When the specified flow ID is not available, an error code is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18739,7 +20251,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 MediaConvert 任务详情</para>
+        /// <para>Obtains the details of a transcoding task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18788,7 +20300,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 MediaConvert 任务详情</para>
+        /// <para>Obtains the details of a transcoding task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18837,7 +20349,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 MediaConvert 任务详情</para>
+        /// <para>Obtains the details of a transcoding task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18855,7 +20367,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 MediaConvert 任务详情</para>
+        /// <para>Obtains the details of a transcoding task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19181,6 +20693,516 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetMediaInfoJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaLiveChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaLiveChannelResponse
+        /// </returns>
+        public GetMediaLiveChannelResponse GetMediaLiveChannelWithOptions(GetMediaLiveChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                body["ChannelId"] = request.ChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMediaLiveChannel",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetMediaLiveChannelResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetMediaLiveChannelResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaLiveChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaLiveChannelResponse
+        /// </returns>
+        public async Task<GetMediaLiveChannelResponse> GetMediaLiveChannelWithOptionsAsync(GetMediaLiveChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                body["ChannelId"] = request.ChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMediaLiveChannel",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetMediaLiveChannelResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetMediaLiveChannelResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaLiveChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaLiveChannelResponse
+        /// </returns>
+        public GetMediaLiveChannelResponse GetMediaLiveChannel(GetMediaLiveChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMediaLiveChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaLiveChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaLiveChannelResponse
+        /// </returns>
+        public async Task<GetMediaLiveChannelResponse> GetMediaLiveChannelAsync(GetMediaLiveChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMediaLiveChannelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a MediaLive input.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaLiveInputRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaLiveInputResponse
+        /// </returns>
+        public GetMediaLiveInputResponse GetMediaLiveInputWithOptions(GetMediaLiveInputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputId))
+            {
+                body["InputId"] = request.InputId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMediaLiveInput",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetMediaLiveInputResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetMediaLiveInputResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a MediaLive input.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaLiveInputRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaLiveInputResponse
+        /// </returns>
+        public async Task<GetMediaLiveInputResponse> GetMediaLiveInputWithOptionsAsync(GetMediaLiveInputRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputId))
+            {
+                body["InputId"] = request.InputId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMediaLiveInput",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetMediaLiveInputResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetMediaLiveInputResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a MediaLive input.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaLiveInputRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaLiveInputResponse
+        /// </returns>
+        public GetMediaLiveInputResponse GetMediaLiveInput(GetMediaLiveInputRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMediaLiveInputWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a MediaLive input.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaLiveInputRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaLiveInputResponse
+        /// </returns>
+        public async Task<GetMediaLiveInputResponse> GetMediaLiveInputAsync(GetMediaLiveInputRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMediaLiveInputWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a security group in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public GetMediaLiveInputSecurityGroupResponse GetMediaLiveInputSecurityGroupWithOptions(GetMediaLiveInputSecurityGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                body["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMediaLiveInputSecurityGroup",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetMediaLiveInputSecurityGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetMediaLiveInputSecurityGroupResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a security group in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public async Task<GetMediaLiveInputSecurityGroupResponse> GetMediaLiveInputSecurityGroupWithOptionsAsync(GetMediaLiveInputSecurityGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                body["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMediaLiveInputSecurityGroup",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetMediaLiveInputSecurityGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetMediaLiveInputSecurityGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a security group in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public GetMediaLiveInputSecurityGroupResponse GetMediaLiveInputSecurityGroup(GetMediaLiveInputSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMediaLiveInputSecurityGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a security group in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public async Task<GetMediaLiveInputSecurityGroupResponse> GetMediaLiveInputSecurityGroupAsync(GetMediaLiveInputSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMediaLiveInputSecurityGroupWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -19883,7 +21905,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节目</para>
+        /// <para>Queries a program.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19936,7 +21958,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节目</para>
+        /// <para>Queries a program.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19989,7 +22011,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节目</para>
+        /// <para>Queries a program.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20007,7 +22029,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节目</para>
+        /// <para>Queries a program.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20727,7 +22749,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取源</para>
+        /// <para>Queries a source in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20784,7 +22806,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取源</para>
+        /// <para>Queries a source in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20841,7 +22863,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取源</para>
+        /// <para>Queries a source in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20859,7 +22881,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取源</para>
+        /// <para>Queries a source in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20877,7 +22899,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取源位置</para>
+        /// <para>Queries a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20926,7 +22948,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取源位置</para>
+        /// <para>Queries a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20975,7 +22997,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取源位置</para>
+        /// <para>Queries a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20993,7 +23015,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取源位置</para>
+        /// <para>Queries a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22243,7 +24265,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询点播打包资产</para>
+        /// <para>Queries a VOD packaging asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22292,7 +24314,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询点播打包资产</para>
+        /// <para>Queries a VOD packaging asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22341,7 +24363,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询点播打包资产</para>
+        /// <para>Queries a VOD packaging asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22359,7 +24381,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询点播打包资产</para>
+        /// <para>Queries a VOD packaging asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22377,7 +24399,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询打包模板配置</para>
+        /// <para>Queries a packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22426,7 +24448,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询打包模板配置</para>
+        /// <para>Queries a packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22475,7 +24497,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询打包模板配置</para>
+        /// <para>Queries a packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22493,7 +24515,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询打包模板配置</para>
+        /// <para>Queries a packaging configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22511,7 +24533,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取点播打包组</para>
+        /// <para>Queries a packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22560,7 +24582,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取点播打包组</para>
+        /// <para>Queries a packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22609,7 +24631,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取点播打包组</para>
+        /// <para>Queries a packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22627,7 +24649,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取点播打包组</para>
+        /// <para>Queries a packaging group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23119,8 +25141,18 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出实例</para>
+        /// <para>Queries a list of AI agents.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to query a list of AI agents based on the <c>AIAgentId</c>. The optional parameters include <c>StartTime</c>, <c>EndTime</c>, <c>PageSize</c>, and <c>PageNumber</c>. The returned result includes the status, runtime configurations, template configurations, custom information, and the URL of call log file for each AI agent.
+        /// <b>Note</b>:</para>
+        /// <list type="bullet">
+        /// <item><description>The default value of <c>PageSize</c> is 10, and the default value of <c>PageNumber</c> is 1.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAIAgentInstanceRequest
@@ -23184,8 +25216,18 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出实例</para>
+        /// <para>Queries a list of AI agents.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to query a list of AI agents based on the <c>AIAgentId</c>. The optional parameters include <c>StartTime</c>, <c>EndTime</c>, <c>PageSize</c>, and <c>PageNumber</c>. The returned result includes the status, runtime configurations, template configurations, custom information, and the URL of call log file for each AI agent.
+        /// <b>Note</b>:</para>
+        /// <list type="bullet">
+        /// <item><description>The default value of <c>PageSize</c> is 10, and the default value of <c>PageNumber</c> is 1.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAIAgentInstanceRequest
@@ -23249,8 +25291,18 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出实例</para>
+        /// <para>Queries a list of AI agents.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to query a list of AI agents based on the <c>AIAgentId</c>. The optional parameters include <c>StartTime</c>, <c>EndTime</c>, <c>PageSize</c>, and <c>PageNumber</c>. The returned result includes the status, runtime configurations, template configurations, custom information, and the URL of call log file for each AI agent.
+        /// <b>Note</b>:</para>
+        /// <list type="bullet">
+        /// <item><description>The default value of <c>PageSize</c> is 10, and the default value of <c>PageNumber</c> is 1.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAIAgentInstanceRequest
@@ -23267,8 +25319,18 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出实例</para>
+        /// <para>Queries a list of AI agents.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to query a list of AI agents based on the <c>AIAgentId</c>. The optional parameters include <c>StartTime</c>, <c>EndTime</c>, <c>PageSize</c>, and <c>PageNumber</c>. The returned result includes the status, runtime configurations, template configurations, custom information, and the URL of call log file for each AI agent.
+        /// <b>Note</b>:</para>
+        /// <list type="bullet">
+        /// <item><description>The default value of <c>PageSize</c> is 10, and the default value of <c>PageNumber</c> is 1.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAIAgentInstanceRequest
@@ -23285,7 +25347,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取广告插入配置列表</para>
+        /// <para>Obtains ad insertion configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23354,7 +25416,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取广告插入配置列表</para>
+        /// <para>Obtains ad insertion configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23423,7 +25485,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取广告插入配置列表</para>
+        /// <para>Obtains ad insertion configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23441,7 +25503,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取广告插入配置列表</para>
+        /// <para>Obtains ad insertion configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23459,7 +25521,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取警告</para>
+        /// <para>Lists alerts received in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23536,7 +25598,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取警告</para>
+        /// <para>Lists alerts received in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23613,7 +25675,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取警告</para>
+        /// <para>Lists alerts received in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23631,7 +25693,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取警告</para>
+        /// <para>Lists alerts received in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24281,7 +26343,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取频道警告</para>
+        /// <para>Lists alerts for resources in a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24354,7 +26416,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取频道警告</para>
+        /// <para>Lists alerts for resources in a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24427,7 +26489,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取频道警告</para>
+        /// <para>Lists alerts for resources in a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24445,7 +26507,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取频道警告</para>
+        /// <para>Lists alerts for resources in a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24463,7 +26525,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取频道列表</para>
+        /// <para>Lists MediaWeaver channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24540,7 +26602,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取频道列表</para>
+        /// <para>Lists MediaWeaver channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24617,7 +26679,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取频道列表</para>
+        /// <para>Lists MediaWeaver channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24635,7 +26697,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取频道列表</para>
+        /// <para>Lists MediaWeaver channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25891,8 +27953,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实时打包频道组</para>
+        /// <para>Queries live package channel groups by page. Fuzzy search by name or description and sorting are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLivePackageChannelGroupsRequest
@@ -25952,8 +28019,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实时打包频道组</para>
+        /// <para>Queries live package channel groups by page. Fuzzy search by name or description and sorting are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLivePackageChannelGroupsRequest
@@ -26013,8 +28085,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实时打包频道组</para>
+        /// <para>Queries live package channel groups by page. Fuzzy search by name or description and sorting are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLivePackageChannelGroupsRequest
@@ -26031,8 +28108,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实时打包频道组</para>
+        /// <para>Queries live package channel groups by page. Fuzzy search by name or description and sorting are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLivePackageChannelGroupsRequest
@@ -26049,8 +28131,21 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实时打包频道</para>
+        /// <para>Queries live package channels by channel group and keyword. Paging and sorting are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to query live package channels by <b>GroupName</b> and <b>Keyword</b>. Keyword is optional. You can sort the channels by creation time in ascending or descending order and paginate the results. This facilitates the management of channels and retrieval of channel information.</para>
+        /// <list type="bullet">
+        /// <item><description><b>GroupName</b> is required to specify the channel group to which the channel belongs.</description></item>
+        /// <item><description><b>Keyword</b> supports fuzzy match of channel names or descriptions, which helps quickly filter desired channels.</description></item>
+        /// <item><description><b>PageNo</b> and <b>PageSize</b> can help control the paging of returned results to facilitate batch processing of data.</description></item>
+        /// <item><description><b>SortBy</b> allows you to customize how the results are sorted. By default, the results are sorted in descending order.
+        /// <b>RequestId</b> in the response is used for subsequent troubleshooting. <b>TotalCount</b> indicates the total number of channels that meet the conditions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLivePackageChannelsRequest
@@ -26114,8 +28209,21 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实时打包频道</para>
+        /// <para>Queries live package channels by channel group and keyword. Paging and sorting are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to query live package channels by <b>GroupName</b> and <b>Keyword</b>. Keyword is optional. You can sort the channels by creation time in ascending or descending order and paginate the results. This facilitates the management of channels and retrieval of channel information.</para>
+        /// <list type="bullet">
+        /// <item><description><b>GroupName</b> is required to specify the channel group to which the channel belongs.</description></item>
+        /// <item><description><b>Keyword</b> supports fuzzy match of channel names or descriptions, which helps quickly filter desired channels.</description></item>
+        /// <item><description><b>PageNo</b> and <b>PageSize</b> can help control the paging of returned results to facilitate batch processing of data.</description></item>
+        /// <item><description><b>SortBy</b> allows you to customize how the results are sorted. By default, the results are sorted in descending order.
+        /// <b>RequestId</b> in the response is used for subsequent troubleshooting. <b>TotalCount</b> indicates the total number of channels that meet the conditions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLivePackageChannelsRequest
@@ -26179,8 +28287,21 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实时打包频道</para>
+        /// <para>Queries live package channels by channel group and keyword. Paging and sorting are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to query live package channels by <b>GroupName</b> and <b>Keyword</b>. Keyword is optional. You can sort the channels by creation time in ascending or descending order and paginate the results. This facilitates the management of channels and retrieval of channel information.</para>
+        /// <list type="bullet">
+        /// <item><description><b>GroupName</b> is required to specify the channel group to which the channel belongs.</description></item>
+        /// <item><description><b>Keyword</b> supports fuzzy match of channel names or descriptions, which helps quickly filter desired channels.</description></item>
+        /// <item><description><b>PageNo</b> and <b>PageSize</b> can help control the paging of returned results to facilitate batch processing of data.</description></item>
+        /// <item><description><b>SortBy</b> allows you to customize how the results are sorted. By default, the results are sorted in descending order.
+        /// <b>RequestId</b> in the response is used for subsequent troubleshooting. <b>TotalCount</b> indicates the total number of channels that meet the conditions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLivePackageChannelsRequest
@@ -26197,8 +28318,21 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实时打包频道</para>
+        /// <para>Queries live package channels by channel group and keyword. Paging and sorting are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to query live package channels by <b>GroupName</b> and <b>Keyword</b>. Keyword is optional. You can sort the channels by creation time in ascending or descending order and paginate the results. This facilitates the management of channels and retrieval of channel information.</para>
+        /// <list type="bullet">
+        /// <item><description><b>GroupName</b> is required to specify the channel group to which the channel belongs.</description></item>
+        /// <item><description><b>Keyword</b> supports fuzzy match of channel names or descriptions, which helps quickly filter desired channels.</description></item>
+        /// <item><description><b>PageNo</b> and <b>PageSize</b> can help control the paging of returned results to facilitate batch processing of data.</description></item>
+        /// <item><description><b>SortBy</b> allows you to customize how the results are sorted. By default, the results are sorted in descending order.
+        /// <b>RequestId</b> in the response is used for subsequent troubleshooting. <b>TotalCount</b> indicates the total number of channels that meet the conditions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLivePackageChannelsRequest
@@ -26215,8 +28349,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实时打包源站端点</para>
+        /// <para>Queries origin endpoints by channel group and channel name. Paging and sorting are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to query origin endpoints associated with a live package channel. The results include detailed configurations about the origin endpoints, such as access URL, protocol, and security policies. Paging and sorting by creation time are supported.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLivePackageOriginEndpointsRequest
@@ -26284,8 +28424,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实时打包源站端点</para>
+        /// <para>Queries origin endpoints by channel group and channel name. Paging and sorting are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to query origin endpoints associated with a live package channel. The results include detailed configurations about the origin endpoints, such as access URL, protocol, and security policies. Paging and sorting by creation time are supported.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLivePackageOriginEndpointsRequest
@@ -26353,8 +28499,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实时打包源站端点</para>
+        /// <para>Queries origin endpoints by channel group and channel name. Paging and sorting are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to query origin endpoints associated with a live package channel. The results include detailed configurations about the origin endpoints, such as access URL, protocol, and security policies. Paging and sorting by creation time are supported.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLivePackageOriginEndpointsRequest
@@ -26371,8 +28523,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实时打包源站端点</para>
+        /// <para>Queries origin endpoints by channel group and channel name. Paging and sorting are supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to query origin endpoints associated with a live package channel. The results include detailed configurations about the origin endpoints, such as access URL, protocol, and security policies. Paging and sorting by creation time are supported.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLivePackageOriginEndpointsRequest
@@ -27925,6 +30083,628 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries MediaLive channels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaLiveChannelsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaLiveChannelsResponse
+        /// </returns>
+        public ListMediaLiveChannelsResponse ListMediaLiveChannelsWithOptions(ListMediaLiveChannelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                body["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
+            {
+                body["Skip"] = request.Skip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                body["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.States))
+            {
+                body["States"] = request.States;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMediaLiveChannels",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListMediaLiveChannelsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListMediaLiveChannelsResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MediaLive channels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaLiveChannelsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaLiveChannelsResponse
+        /// </returns>
+        public async Task<ListMediaLiveChannelsResponse> ListMediaLiveChannelsWithOptionsAsync(ListMediaLiveChannelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                body["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
+            {
+                body["Skip"] = request.Skip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                body["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.States))
+            {
+                body["States"] = request.States;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMediaLiveChannels",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListMediaLiveChannelsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListMediaLiveChannelsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MediaLive channels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaLiveChannelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaLiveChannelsResponse
+        /// </returns>
+        public ListMediaLiveChannelsResponse ListMediaLiveChannels(ListMediaLiveChannelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMediaLiveChannelsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MediaLive channels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaLiveChannelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaLiveChannelsResponse
+        /// </returns>
+        public async Task<ListMediaLiveChannelsResponse> ListMediaLiveChannelsAsync(ListMediaLiveChannelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMediaLiveChannelsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security groups in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaLiveInputSecurityGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaLiveInputSecurityGroupsResponse
+        /// </returns>
+        public ListMediaLiveInputSecurityGroupsResponse ListMediaLiveInputSecurityGroupsWithOptions(ListMediaLiveInputSecurityGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                body["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
+            {
+                body["Skip"] = request.Skip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                body["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMediaLiveInputSecurityGroups",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListMediaLiveInputSecurityGroupsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListMediaLiveInputSecurityGroupsResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security groups in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaLiveInputSecurityGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaLiveInputSecurityGroupsResponse
+        /// </returns>
+        public async Task<ListMediaLiveInputSecurityGroupsResponse> ListMediaLiveInputSecurityGroupsWithOptionsAsync(ListMediaLiveInputSecurityGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                body["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
+            {
+                body["Skip"] = request.Skip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                body["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMediaLiveInputSecurityGroups",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListMediaLiveInputSecurityGroupsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListMediaLiveInputSecurityGroupsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security groups in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaLiveInputSecurityGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaLiveInputSecurityGroupsResponse
+        /// </returns>
+        public ListMediaLiveInputSecurityGroupsResponse ListMediaLiveInputSecurityGroups(ListMediaLiveInputSecurityGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMediaLiveInputSecurityGroupsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security groups in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaLiveInputSecurityGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaLiveInputSecurityGroupsResponse
+        /// </returns>
+        public async Task<ListMediaLiveInputSecurityGroupsResponse> ListMediaLiveInputSecurityGroupsAsync(ListMediaLiveInputSecurityGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMediaLiveInputSecurityGroupsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MediaLive inputs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaLiveInputsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaLiveInputsResponse
+        /// </returns>
+        public ListMediaLiveInputsResponse ListMediaLiveInputsWithOptions(ListMediaLiveInputsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                body["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
+            {
+                body["Skip"] = request.Skip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                body["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Types))
+            {
+                body["Types"] = request.Types;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMediaLiveInputs",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListMediaLiveInputsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListMediaLiveInputsResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MediaLive inputs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaLiveInputsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaLiveInputsResponse
+        /// </returns>
+        public async Task<ListMediaLiveInputsResponse> ListMediaLiveInputsWithOptionsAsync(ListMediaLiveInputsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                body["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
+            {
+                body["Skip"] = request.Skip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                body["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Types))
+            {
+                body["Types"] = request.Types;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMediaLiveInputs",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListMediaLiveInputsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListMediaLiveInputsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MediaLive inputs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaLiveInputsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaLiveInputsResponse
+        /// </returns>
+        public ListMediaLiveInputsResponse ListMediaLiveInputs(ListMediaLiveInputsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMediaLiveInputsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MediaLive inputs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><h2><a href="#qps-"></a>QPS limit</h2>
+        /// </description></item>
+        /// </list>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMediaLiveInputsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMediaLiveInputsResponse
+        /// </returns>
+        public async Task<ListMediaLiveInputsResponse> ListMediaLiveInputsAsync(ListMediaLiveInputsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMediaLiveInputsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of marks of a media asset.</para>
         /// </summary>
         /// 
@@ -28589,7 +31369,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节目列表</para>
+        /// <para>Lists programs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28654,7 +31434,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节目列表</para>
+        /// <para>Lists programs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28719,7 +31499,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节目列表</para>
+        /// <para>Lists programs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28737,7 +31517,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节目列表</para>
+        /// <para>Lists programs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28937,7 +31717,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节目单</para>
+        /// <para>Lists the program schedule of a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28998,7 +31778,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节目单</para>
+        /// <para>Lists the program schedule of a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29059,7 +31839,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节目单</para>
+        /// <para>Lists the program schedule of a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29077,7 +31857,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取节目单</para>
+        /// <para>Lists the program schedule of a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29803,7 +32583,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举源位置</para>
+        /// <para>Lists source locations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29872,7 +32652,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举源位置</para>
+        /// <para>Lists source locations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29941,7 +32721,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举源位置</para>
+        /// <para>Lists source locations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29959,7 +32739,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举源位置</para>
+        /// <para>Lists source locations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29977,7 +32757,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举源</para>
+        /// <para>Lists sources in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30054,7 +32834,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举源</para>
+        /// <para>Lists sources in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30131,7 +32911,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举源</para>
+        /// <para>Lists sources in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30149,7 +32929,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举源</para>
+        /// <para>Lists sources in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30881,7 +33661,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举点播打包资产</para>
+        /// <para>Lists VOD packaging assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30946,7 +33726,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举点播打包资产</para>
+        /// <para>Lists VOD packaging assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31011,7 +33791,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举点播打包资产</para>
+        /// <para>Lists VOD packaging assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31029,7 +33809,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举点播打包资产</para>
+        /// <para>Lists VOD packaging assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31047,7 +33827,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举点播打包配置列表</para>
+        /// <para>Lists packaging configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31112,7 +33892,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举点播打包配置列表</para>
+        /// <para>Lists packaging configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31177,7 +33957,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举点播打包配置列表</para>
+        /// <para>Lists packaging configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31195,7 +33975,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举点播打包配置列表</para>
+        /// <para>Lists packaging configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31213,7 +33993,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举点播打包组</para>
+        /// <para>Lists packaging groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31274,7 +34054,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举点播打包组</para>
+        /// <para>Lists packaging groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31335,7 +34115,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举点播打包组</para>
+        /// <para>Lists packaging groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31353,7 +34133,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举点播打包组</para>
+        /// <para>Lists packaging groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35769,7 +38549,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向智能体通话发送datachannel消息</para>
+        /// <para>Sends a DataChannel message to an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35822,7 +38602,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向智能体通话发送datachannel消息</para>
+        /// <para>Sends a DataChannel message to an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35875,7 +38655,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向智能体通话发送datachannel消息</para>
+        /// <para>Sends a DataChannel message to an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35893,7 +38673,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向智能体通话发送datachannel消息</para>
+        /// <para>Sends a DataChannel message to an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35911,8 +38691,19 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用来立即让某个智能体实例播报指定的文本。</para>
+        /// <para>Instructs an AI agent to immediately broadcast a text message and supports interruption settings.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to instruct an AI agent to broadcast the content that you specify. You can determine whether this broadcast can immediately interrupt the ongoing speech. The interruption is allowed by default.
+        /// <b>Note</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the <c>InstanceId</c> is valid and corresponds to an existing AI agent.</description></item>
+        /// <item><description>The content of <c>Text</c> must comply with the specifications and does not contain sensitive or inappropriate information.</description></item>
+        /// <item><description>If you do not want the new broadcast to interrupt the ongoing speech, you must set <c>EnableInterrupt</c> to <c>false</c>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAIAgentSpeechRequest
@@ -35968,8 +38759,19 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用来立即让某个智能体实例播报指定的文本。</para>
+        /// <para>Instructs an AI agent to immediately broadcast a text message and supports interruption settings.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to instruct an AI agent to broadcast the content that you specify. You can determine whether this broadcast can immediately interrupt the ongoing speech. The interruption is allowed by default.
+        /// <b>Note</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the <c>InstanceId</c> is valid and corresponds to an existing AI agent.</description></item>
+        /// <item><description>The content of <c>Text</c> must comply with the specifications and does not contain sensitive or inappropriate information.</description></item>
+        /// <item><description>If you do not want the new broadcast to interrupt the ongoing speech, you must set <c>EnableInterrupt</c> to <c>false</c>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAIAgentSpeechRequest
@@ -36025,8 +38827,19 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用来立即让某个智能体实例播报指定的文本。</para>
+        /// <para>Instructs an AI agent to immediately broadcast a text message and supports interruption settings.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to instruct an AI agent to broadcast the content that you specify. You can determine whether this broadcast can immediately interrupt the ongoing speech. The interruption is allowed by default.
+        /// <b>Note</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the <c>InstanceId</c> is valid and corresponds to an existing AI agent.</description></item>
+        /// <item><description>The content of <c>Text</c> must comply with the specifications and does not contain sensitive or inappropriate information.</description></item>
+        /// <item><description>If you do not want the new broadcast to interrupt the ongoing speech, you must set <c>EnableInterrupt</c> to <c>false</c>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAIAgentSpeechRequest
@@ -36043,8 +38856,19 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用来立即让某个智能体实例播报指定的文本。</para>
+        /// <para>Instructs an AI agent to immediately broadcast a text message and supports interruption settings.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to instruct an AI agent to broadcast the content that you specify. You can determine whether this broadcast can immediately interrupt the ongoing speech. The interruption is allowed by default.
+        /// <b>Note</b></para>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the <c>InstanceId</c> is valid and corresponds to an existing AI agent.</description></item>
+        /// <item><description>The content of <c>Text</c> must comply with the specifications and does not contain sensitive or inappropriate information.</description></item>
+        /// <item><description>If you do not want the new broadcast to interrupt the ongoing speech, you must set <c>EnableInterrupt</c> to <c>false</c>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAIAgentSpeechRequest
@@ -36483,6 +39307,188 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SendLiveTranscodeJobCommandWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>向IM客户端发送消息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendMessageChatTextRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendMessageChatTextResponse
+        /// </returns>
+        public SendMessageChatTextResponse SendMessageChatTextWithOptions(SendMessageChatTextRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
+            {
+                query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedArchiving))
+            {
+                query["NeedArchiving"] = request.NeedArchiving;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiverId))
+            {
+                query["ReceiverId"] = request.ReceiverId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                query["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendMessageChatText",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SendMessageChatTextResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SendMessageChatTextResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>向IM客户端发送消息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendMessageChatTextRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendMessageChatTextResponse
+        /// </returns>
+        public async Task<SendMessageChatTextResponse> SendMessageChatTextWithOptionsAsync(SendMessageChatTextRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
+            {
+                query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedArchiving))
+            {
+                query["NeedArchiving"] = request.NeedArchiving;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiverId))
+            {
+                query["ReceiverId"] = request.ReceiverId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                query["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendMessageChatText",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SendMessageChatTextResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SendMessageChatTextResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>向IM客户端发送消息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendMessageChatTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendMessageChatTextResponse
+        /// </returns>
+        public SendMessageChatTextResponse SendMessageChatText(SendMessageChatTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SendMessageChatTextWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>向IM客户端发送消息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendMessageChatTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendMessageChatTextResponse
+        /// </returns>
+        public async Task<SendMessageChatTextResponse> SendMessageChatTextAsync(SendMessageChatTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SendMessageChatTextWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -37095,8 +40101,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新回调配置</para>
+        /// <para>Enables or disables event notifications for an AI agent and configures the callback URL and event types.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to configure event notifications for an AI agent. You can configure <c>EnableNotify</c> to enable or disable event notifications, configure <c>CallbackUrl</c> to specify a callback URL, and configure <c>EventTypes</c> to specify event types. You can also configure <c>Token</c> to specify an authentication token for enhanced security. The system returns a unique <c>RequestId</c> for subsequent tracing after a successful request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetNotifyConfigRequest
@@ -37160,8 +40172,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新回调配置</para>
+        /// <para>Enables or disables event notifications for an AI agent and configures the callback URL and event types.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to configure event notifications for an AI agent. You can configure <c>EnableNotify</c> to enable or disable event notifications, configure <c>CallbackUrl</c> to specify a callback URL, and configure <c>EventTypes</c> to specify event types. You can also configure <c>Token</c> to specify an authentication token for enhanced security. The system returns a unique <c>RequestId</c> for subsequent tracing after a successful request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetNotifyConfigRequest
@@ -37225,8 +40243,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新回调配置</para>
+        /// <para>Enables or disables event notifications for an AI agent and configures the callback URL and event types.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to configure event notifications for an AI agent. You can configure <c>EnableNotify</c> to enable or disable event notifications, configure <c>CallbackUrl</c> to specify a callback URL, and configure <c>EventTypes</c> to specify event types. You can also configure <c>Token</c> to specify an authentication token for enhanced security. The system returns a unique <c>RequestId</c> for subsequent tracing after a successful request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetNotifyConfigRequest
@@ -37243,8 +40267,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新回调配置</para>
+        /// <para>Enables or disables event notifications for an AI agent and configures the callback URL and event types.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to configure event notifications for an AI agent. You can configure <c>EnableNotify</c> to enable or disable event notifications, configure <c>CallbackUrl</c> to specify a callback URL, and configure <c>EventTypes</c> to specify event types. You can also configure <c>Token</c> to specify an authentication token for enhanced security. The system returns a unique <c>RequestId</c> for subsequent tracing after a successful request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetNotifyConfigRequest
@@ -37261,8 +40291,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动一个智能体实例，并加入通话。</para>
+        /// <para>Starts an AI agent that is configured in the Intelligent Media Services (IMS) console.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to start an AI agent instance for a conversation. ````````When the AI agent is started, the system returns a unique <c>InstanceId</c> for subsequent tracking and operations.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartAIAgentInstanceRequest
@@ -37279,6 +40314,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             StartAIAgentInstanceShrinkRequest request = new StartAIAgentInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChatSyncConfig))
+            {
+                request.ChatSyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChatSyncConfig, "ChatSyncConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RuntimeConfig))
             {
                 request.RuntimeConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RuntimeConfig, "RuntimeConfig", "json");
@@ -37291,6 +40330,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
             {
                 query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatSyncConfigShrink))
+            {
+                query["ChatSyncConfig"] = request.ChatSyncConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeConfigShrink))
             {
@@ -37336,8 +40379,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动一个智能体实例，并加入通话。</para>
+        /// <para>Starts an AI agent that is configured in the Intelligent Media Services (IMS) console.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to start an AI agent instance for a conversation. ````````When the AI agent is started, the system returns a unique <c>InstanceId</c> for subsequent tracking and operations.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartAIAgentInstanceRequest
@@ -37354,6 +40402,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             StartAIAgentInstanceShrinkRequest request = new StartAIAgentInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChatSyncConfig))
+            {
+                request.ChatSyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChatSyncConfig, "ChatSyncConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RuntimeConfig))
             {
                 request.RuntimeConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RuntimeConfig, "RuntimeConfig", "json");
@@ -37366,6 +40418,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
             {
                 query["AIAgentId"] = request.AIAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatSyncConfigShrink))
+            {
+                query["ChatSyncConfig"] = request.ChatSyncConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeConfigShrink))
             {
@@ -37411,8 +40467,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动一个智能体实例，并加入通话。</para>
+        /// <para>Starts an AI agent that is configured in the Intelligent Media Services (IMS) console.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to start an AI agent instance for a conversation. ````````When the AI agent is started, the system returns a unique <c>InstanceId</c> for subsequent tracking and operations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAIAgentInstanceRequest
@@ -37429,8 +40490,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动一个智能体实例，并加入通话。</para>
+        /// <para>Starts an AI agent that is configured in the Intelligent Media Services (IMS) console.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to start an AI agent instance for a conversation. ````````When the AI agent is started, the system returns a unique <c>InstanceId</c> for subsequent tracking and operations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAIAgentInstanceRequest
@@ -37447,7 +40513,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动频道</para>
+        /// <para>Starts a channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37496,7 +40562,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动频道</para>
+        /// <para>Starts a channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37545,7 +40611,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动频道</para>
+        /// <para>Starts a channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37563,7 +40629,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动频道</para>
+        /// <para>Starts a channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37577,6 +40643,188 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartChannelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartMediaLiveChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartMediaLiveChannelResponse
+        /// </returns>
+        public StartMediaLiveChannelResponse StartMediaLiveChannelWithOptions(StartMediaLiveChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                body["ChannelId"] = request.ChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartMediaLiveChannel",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartMediaLiveChannelResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartMediaLiveChannelResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartMediaLiveChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartMediaLiveChannelResponse
+        /// </returns>
+        public async Task<StartMediaLiveChannelResponse> StartMediaLiveChannelWithOptionsAsync(StartMediaLiveChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                body["ChannelId"] = request.ChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartMediaLiveChannel",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartMediaLiveChannelResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartMediaLiveChannelResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartMediaLiveChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartMediaLiveChannelResponse
+        /// </returns>
+        public StartMediaLiveChannelResponse StartMediaLiveChannel(StartMediaLiveChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartMediaLiveChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartMediaLiveChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartMediaLiveChannelResponse
+        /// </returns>
+        public async Task<StartMediaLiveChannelResponse> StartMediaLiveChannelAsync(StartMediaLiveChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartMediaLiveChannelWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -37949,8 +41197,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个智能体实例。</para>
+        /// <para>Stops an AI agent instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When you no longer need an AI agent to participate in a conversation or task, you can call this operation to stop the running agent and release relevant resources.****</para>
+        /// <list type="bullet">
+        /// <item><description>You must specify the unique ID of the AI agent that you want to stop by using InstanceId.****</description></item>
+        /// </list>
+        /// <hr>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAIAgentInstanceRequest
@@ -37998,8 +41255,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个智能体实例。</para>
+        /// <para>Stops an AI agent instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When you no longer need an AI agent to participate in a conversation or task, you can call this operation to stop the running agent and release relevant resources.****</para>
+        /// <list type="bullet">
+        /// <item><description>You must specify the unique ID of the AI agent that you want to stop by using InstanceId.****</description></item>
+        /// </list>
+        /// <hr>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAIAgentInstanceRequest
@@ -38047,8 +41313,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个智能体实例。</para>
+        /// <para>Stops an AI agent instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When you no longer need an AI agent to participate in a conversation or task, you can call this operation to stop the running agent and release relevant resources.****</para>
+        /// <list type="bullet">
+        /// <item><description>You must specify the unique ID of the AI agent that you want to stop by using InstanceId.****</description></item>
+        /// </list>
+        /// <hr>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAIAgentInstanceRequest
@@ -38065,8 +41340,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个智能体实例。</para>
+        /// <para>Stops an AI agent instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  When you no longer need an AI agent to participate in a conversation or task, you can call this operation to stop the running agent and release relevant resources.****</para>
+        /// <list type="bullet">
+        /// <item><description>You must specify the unique ID of the AI agent that you want to stop by using InstanceId.****</description></item>
+        /// </list>
+        /// <hr>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAIAgentInstanceRequest
@@ -38083,7 +41367,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止频道</para>
+        /// <para>Stops a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38132,7 +41416,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止频道</para>
+        /// <para>Stops a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38181,7 +41465,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止频道</para>
+        /// <para>Stops a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38199,7 +41483,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止频道</para>
+        /// <para>Stops a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38213,6 +41497,188 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopChannelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopMediaLiveChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopMediaLiveChannelResponse
+        /// </returns>
+        public StopMediaLiveChannelResponse StopMediaLiveChannelWithOptions(StopMediaLiveChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                body["ChannelId"] = request.ChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopMediaLiveChannel",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StopMediaLiveChannelResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StopMediaLiveChannelResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopMediaLiveChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopMediaLiveChannelResponse
+        /// </returns>
+        public async Task<StopMediaLiveChannelResponse> StopMediaLiveChannelWithOptionsAsync(StopMediaLiveChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                body["ChannelId"] = request.ChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopMediaLiveChannel",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StopMediaLiveChannelResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StopMediaLiveChannelResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopMediaLiveChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopMediaLiveChannelResponse
+        /// </returns>
+        public StopMediaLiveChannelResponse StopMediaLiveChannel(StopMediaLiveChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopMediaLiveChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopMediaLiveChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopMediaLiveChannelResponse
+        /// </returns>
+        public async Task<StopMediaLiveChannelResponse> StopMediaLiveChannelAsync(StopMediaLiveChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopMediaLiveChannelWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -42117,7 +45583,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交媒体处理任务</para>
+        /// <para>Submits a transcoding task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42178,7 +45644,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交媒体处理任务</para>
+        /// <para>Submits a transcoding task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42239,7 +45705,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交媒体处理任务</para>
+        /// <para>Submits a transcoding task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42257,7 +45723,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交媒体处理任务</para>
+        /// <para>Submits a transcoding task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45455,7 +48921,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换真人客服接管模式</para>
+        /// <para>Hands off a conversation to a human agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45512,7 +48978,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换真人客服接管模式</para>
+        /// <para>Hands off a conversation to a human agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45569,7 +49035,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换真人客服接管模式</para>
+        /// <para>Hands off a conversation to a human agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45587,7 +49053,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换真人客服接管模式</para>
+        /// <para>Hands off a conversation to a human agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45605,8 +49071,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的配置</para>
+        /// <para>Updates the configurations of an AI agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to update the configurations of an AI agent, such as the tone, by specifying the agent ID and configurations.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateAIAgentInstanceRequest
@@ -45668,8 +49140,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的配置</para>
+        /// <para>Updates the configurations of an AI agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to update the configurations of an AI agent, such as the tone, by specifying the agent ID and configurations.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateAIAgentInstanceRequest
@@ -45731,8 +49209,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的配置</para>
+        /// <para>Updates the configurations of an AI agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to update the configurations of an AI agent, such as the tone, by specifying the agent ID and configurations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateAIAgentInstanceRequest
@@ -45749,8 +49233,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的配置</para>
+        /// <para>Updates the configurations of an AI agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <para>You can call this operation to update the configurations of an AI agent, such as the tone, by specifying the agent ID and configurations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateAIAgentInstanceRequest
@@ -45767,7 +49257,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新广告插入配置</para>
+        /// <para>Modifies an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45848,7 +49338,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新广告插入配置</para>
+        /// <para>Modifies an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45929,7 +49419,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新广告插入配置</para>
+        /// <para>Modifies an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45947,7 +49437,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新广告插入配置</para>
+        /// <para>Modifies an ad insertion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46309,7 +49799,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新频道</para>
+        /// <para>Modifies a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46378,7 +49868,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新频道</para>
+        /// <para>Modifies a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46447,7 +49937,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新频道</para>
+        /// <para>Modifies a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46465,7 +49955,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新频道</para>
+        /// <para>Modifies a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46969,8 +50459,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实时打包频道</para>
+        /// <para>Updates the configuration of a live package channel, including the protocol, segment duration, and number of segments.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You need to provide the name of the channel group to which the channel belongs, channel name, protocol, segment duration, and number of segments to update. In addition, you can choose to add or modify the description of the channel. Make sure that the provided channel group name and channel name conform to the naming conventions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageChannelRequest
@@ -47038,8 +50534,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实时打包频道</para>
+        /// <para>Updates the configuration of a live package channel, including the protocol, segment duration, and number of segments.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You need to provide the name of the channel group to which the channel belongs, channel name, protocol, segment duration, and number of segments to update. In addition, you can choose to add or modify the description of the channel. Make sure that the provided channel group name and channel name conform to the naming conventions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageChannelRequest
@@ -47107,8 +50609,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实时打包频道</para>
+        /// <para>Updates the configuration of a live package channel, including the protocol, segment duration, and number of segments.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You need to provide the name of the channel group to which the channel belongs, channel name, protocol, segment duration, and number of segments to update. In addition, you can choose to add or modify the description of the channel. Make sure that the provided channel group name and channel name conform to the naming conventions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageChannelRequest
@@ -47125,8 +50633,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实时打包频道</para>
+        /// <para>Updates the configuration of a live package channel, including the protocol, segment duration, and number of segments.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You need to provide the name of the channel group to which the channel belongs, channel name, protocol, segment duration, and number of segments to update. In addition, you can choose to add or modify the description of the channel. Make sure that the provided channel group name and channel name conform to the naming conventions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageChannelRequest
@@ -47143,8 +50657,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实时打包频道</para>
+        /// <para>Updates the credentials of ingest endpoints associated with a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You can choose to update the primary endpoint, secondary endpoint, or both. The response includes the updated ingest endpoint URL, username, and password for the ingest device to reconfigure.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageChannelCredentialsRequest
@@ -47200,8 +50720,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实时打包频道</para>
+        /// <para>Updates the credentials of ingest endpoints associated with a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You can choose to update the primary endpoint, secondary endpoint, or both. The response includes the updated ingest endpoint URL, username, and password for the ingest device to reconfigure.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageChannelCredentialsRequest
@@ -47257,8 +50783,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实时打包频道</para>
+        /// <para>Updates the credentials of ingest endpoints associated with a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You can choose to update the primary endpoint, secondary endpoint, or both. The response includes the updated ingest endpoint URL, username, and password for the ingest device to reconfigure.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageChannelCredentialsRequest
@@ -47275,8 +50807,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实时打包频道</para>
+        /// <para>Updates the credentials of ingest endpoints associated with a live package channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You can choose to update the primary endpoint, secondary endpoint, or both. The response includes the updated ingest endpoint URL, username, and password for the ingest device to reconfigure.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageChannelCredentialsRequest
@@ -47293,8 +50831,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改直播打包频道组</para>
+        /// <para>Updates the information about a live package channel group including its description.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to modify the name and description of a live package channel group. The channel group name must conform to the naming conventions and can be up to 1,000 characters. The API response includes the updated channel group details and unique identifier of the request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageChannelGroupRequest
@@ -47346,8 +50890,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改直播打包频道组</para>
+        /// <para>Updates the information about a live package channel group including its description.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to modify the name and description of a live package channel group. The channel group name must conform to the naming conventions and can be up to 1,000 characters. The API response includes the updated channel group details and unique identifier of the request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageChannelGroupRequest
@@ -47399,8 +50949,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改直播打包频道组</para>
+        /// <para>Updates the information about a live package channel group including its description.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to modify the name and description of a live package channel group. The channel group name must conform to the naming conventions and can be up to 1,000 characters. The API response includes the updated channel group details and unique identifier of the request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageChannelGroupRequest
@@ -47417,8 +50973,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改直播打包频道组</para>
+        /// <para>Updates the information about a live package channel group including its description.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This API operation allows you to modify the name and description of a live package channel group. The channel group name must conform to the naming conventions and can be up to 1,000 characters. The API response includes the updated channel group details and unique identifier of the request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageChannelGroupRequest
@@ -47435,8 +50997,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实时打包源站端点</para>
+        /// <para>Updates the origin endpoint settings including the protocol, time shifting, and access control settings.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You can call this operation to modify the origin protocol, set the number of days that time-shifted content is available, define playlist names, and configure the IP address blacklist and whitelist, allowing for fine-grained control over streaming media distribution. Some parameters are required. You must configure IpWhitelist, AuthorizationCode, or both.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageOriginEndpointRequest
@@ -47520,8 +51088,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实时打包源站端点</para>
+        /// <para>Updates the origin endpoint settings including the protocol, time shifting, and access control settings.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You can call this operation to modify the origin protocol, set the number of days that time-shifted content is available, define playlist names, and configure the IP address blacklist and whitelist, allowing for fine-grained control over streaming media distribution. Some parameters are required. You must configure IpWhitelist, AuthorizationCode, or both.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageOriginEndpointRequest
@@ -47605,8 +51179,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实时打包源站端点</para>
+        /// <para>Updates the origin endpoint settings including the protocol, time shifting, and access control settings.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You can call this operation to modify the origin protocol, set the number of days that time-shifted content is available, define playlist names, and configure the IP address blacklist and whitelist, allowing for fine-grained control over streaming media distribution. Some parameters are required. You must configure IpWhitelist, AuthorizationCode, or both.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageOriginEndpointRequest
@@ -47623,8 +51203,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实时打包源站端点</para>
+        /// <para>Updates the origin endpoint settings including the protocol, time shifting, and access control settings.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>You can call this operation to modify the origin protocol, set the number of days that time-shifted content is available, define playlist names, and configure the IP address blacklist and whitelist, allowing for fine-grained control over streaming media distribution. Some parameters are required. You must configure IpWhitelist, AuthorizationCode, or both.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLivePackageOriginEndpointRequest
@@ -48377,14 +51963,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the input information of a specific MediaConnect flow</para>
+        /// <para>Modifies the source of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  You can modify the source only when the flow is in the offline state.</para>
         /// <list type="bullet">
-        /// <item><description>The input can only be modified when the Flow instance status is offline.</description></item>
-        /// <item><description>The input type cannot be modified.</description></item>
+        /// <item><description>The source type cannot be modified.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48458,14 +52044,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the input information of a specific MediaConnect flow</para>
+        /// <para>Modifies the source of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  You can modify the source only when the flow is in the offline state.</para>
         /// <list type="bullet">
-        /// <item><description>The input can only be modified when the Flow instance status is offline.</description></item>
-        /// <item><description>The input type cannot be modified.</description></item>
+        /// <item><description>The source type cannot be modified.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48539,14 +52125,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the input information of a specific MediaConnect flow</para>
+        /// <para>Modifies the source of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  You can modify the source only when the flow is in the offline state.</para>
         /// <list type="bullet">
-        /// <item><description>The input can only be modified when the Flow instance status is offline.</description></item>
-        /// <item><description>The input type cannot be modified.</description></item>
+        /// <item><description>The source type cannot be modified.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48565,14 +52151,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the input information of a specific MediaConnect flow</para>
+        /// <para>Modifies the source of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  You can modify the source only when the flow is in the offline state.</para>
         /// <list type="bullet">
-        /// <item><description>The input can only be modified when the Flow instance status is offline.</description></item>
-        /// <item><description>The input type cannot be modified.</description></item>
+        /// <item><description>The source type cannot be modified.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48591,13 +52177,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify information of a specific output in MediaConnect</para>
+        /// <para>Modifies an output of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  You can modify an output only when the flow is in the offline state.</para>
         /// <list type="bullet">
-        /// <item><description>The output can only be modified when the Flow instance status is offline.</description></item>
         /// <item><description>The output type cannot be modified.</description></item>
         /// </list>
         /// </description>
@@ -48676,13 +52262,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify information of a specific output in MediaConnect</para>
+        /// <para>Modifies an output of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  You can modify an output only when the flow is in the offline state.</para>
         /// <list type="bullet">
-        /// <item><description>The output can only be modified when the Flow instance status is offline.</description></item>
         /// <item><description>The output type cannot be modified.</description></item>
         /// </list>
         /// </description>
@@ -48761,13 +52347,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify information of a specific output in MediaConnect</para>
+        /// <para>Modifies an output of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  You can modify an output only when the flow is in the offline state.</para>
         /// <list type="bullet">
-        /// <item><description>The output can only be modified when the Flow instance status is offline.</description></item>
         /// <item><description>The output type cannot be modified.</description></item>
         /// </list>
         /// </description>
@@ -48787,13 +52373,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify information of a specific output in MediaConnect</para>
+        /// <para>Modifies an output of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>  You can modify an output only when the flow is in the offline state.</para>
         /// <list type="bullet">
-        /// <item><description>The output can only be modified when the Flow instance status is offline.</description></item>
         /// <item><description>The output type cannot be modified.</description></item>
         /// </list>
         /// </description>
@@ -48813,7 +52399,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify MediaConnect Instance Status</para>
+        /// <para>Modifies the state of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48866,7 +52452,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify MediaConnect Instance Status</para>
+        /// <para>Modifies the state of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48919,7 +52505,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify MediaConnect Instance Status</para>
+        /// <para>Modifies the state of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48937,7 +52523,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify MediaConnect Instance Status</para>
+        /// <para>Modifies the state of a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49193,6 +52779,704 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateMediaInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can modify a MediaLive channel only when it is not running.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMediaLiveChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMediaLiveChannelResponse
+        /// </returns>
+        public UpdateMediaLiveChannelResponse UpdateMediaLiveChannelWithOptions(UpdateMediaLiveChannelRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMediaLiveChannelShrinkRequest request = new UpdateMediaLiveChannelShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AudioSettings))
+            {
+                request.AudioSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AudioSettings, "AudioSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InputAttachments))
+            {
+                request.InputAttachmentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InputAttachments, "InputAttachments", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutputGroups))
+            {
+                request.OutputGroupsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutputGroups, "OutputGroups", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoSettings))
+            {
+                request.VideoSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoSettings, "VideoSettings", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioSettingsShrink))
+            {
+                body["AudioSettings"] = request.AudioSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                body["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputAttachmentsShrink))
+            {
+                body["InputAttachments"] = request.InputAttachmentsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputGroupsShrink))
+            {
+                body["OutputGroups"] = request.OutputGroupsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoSettingsShrink))
+            {
+                body["VideoSettings"] = request.VideoSettingsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMediaLiveChannel",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateMediaLiveChannelResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateMediaLiveChannelResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can modify a MediaLive channel only when it is not running.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMediaLiveChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMediaLiveChannelResponse
+        /// </returns>
+        public async Task<UpdateMediaLiveChannelResponse> UpdateMediaLiveChannelWithOptionsAsync(UpdateMediaLiveChannelRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMediaLiveChannelShrinkRequest request = new UpdateMediaLiveChannelShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AudioSettings))
+            {
+                request.AudioSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AudioSettings, "AudioSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InputAttachments))
+            {
+                request.InputAttachmentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InputAttachments, "InputAttachments", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutputGroups))
+            {
+                request.OutputGroupsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutputGroups, "OutputGroups", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoSettings))
+            {
+                request.VideoSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoSettings, "VideoSettings", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioSettingsShrink))
+            {
+                body["AudioSettings"] = request.AudioSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                body["ChannelId"] = request.ChannelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputAttachmentsShrink))
+            {
+                body["InputAttachments"] = request.InputAttachmentsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputGroupsShrink))
+            {
+                body["OutputGroups"] = request.OutputGroupsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoSettingsShrink))
+            {
+                body["VideoSettings"] = request.VideoSettingsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMediaLiveChannel",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateMediaLiveChannelResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateMediaLiveChannelResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can modify a MediaLive channel only when it is not running.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateMediaLiveChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMediaLiveChannelResponse
+        /// </returns>
+        public UpdateMediaLiveChannelResponse UpdateMediaLiveChannel(UpdateMediaLiveChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateMediaLiveChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a MediaLive channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can modify a MediaLive channel only when it is not running.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateMediaLiveChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMediaLiveChannelResponse
+        /// </returns>
+        public async Task<UpdateMediaLiveChannelResponse> UpdateMediaLiveChannelAsync(UpdateMediaLiveChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateMediaLiveChannelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an input of MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can modify an input only when it is not associated with a MediaLive channel.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMediaLiveInputRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMediaLiveInputResponse
+        /// </returns>
+        public UpdateMediaLiveInputResponse UpdateMediaLiveInputWithOptions(UpdateMediaLiveInputRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMediaLiveInputShrinkRequest request = new UpdateMediaLiveInputShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InputSettings))
+            {
+                request.InputSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InputSettings, "InputSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SecurityGroupIds))
+            {
+                request.SecurityGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SecurityGroupIds, "SecurityGroupIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputSettingsShrink))
+            {
+                query["InputSettings"] = request.InputSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupIdsShrink))
+            {
+                query["SecurityGroupIds"] = request.SecurityGroupIdsShrink;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputId))
+            {
+                body["InputId"] = request.InputId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMediaLiveInput",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateMediaLiveInputResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateMediaLiveInputResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an input of MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can modify an input only when it is not associated with a MediaLive channel.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMediaLiveInputRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMediaLiveInputResponse
+        /// </returns>
+        public async Task<UpdateMediaLiveInputResponse> UpdateMediaLiveInputWithOptionsAsync(UpdateMediaLiveInputRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMediaLiveInputShrinkRequest request = new UpdateMediaLiveInputShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InputSettings))
+            {
+                request.InputSettingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InputSettings, "InputSettings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SecurityGroupIds))
+            {
+                request.SecurityGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SecurityGroupIds, "SecurityGroupIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputSettingsShrink))
+            {
+                query["InputSettings"] = request.InputSettingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupIdsShrink))
+            {
+                query["SecurityGroupIds"] = request.SecurityGroupIdsShrink;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputId))
+            {
+                body["InputId"] = request.InputId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMediaLiveInput",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateMediaLiveInputResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateMediaLiveInputResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an input of MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can modify an input only when it is not associated with a MediaLive channel.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateMediaLiveInputRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMediaLiveInputResponse
+        /// </returns>
+        public UpdateMediaLiveInputResponse UpdateMediaLiveInput(UpdateMediaLiveInputRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateMediaLiveInputWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an input of MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can modify an input only when it is not associated with a MediaLive channel.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateMediaLiveInputRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMediaLiveInputResponse
+        /// </returns>
+        public async Task<UpdateMediaLiveInputResponse> UpdateMediaLiveInputAsync(UpdateMediaLiveInputRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateMediaLiveInputWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a security group created in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can modify a security group only when it is not associated with a MediaLive input.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public UpdateMediaLiveInputSecurityGroupResponse UpdateMediaLiveInputSecurityGroupWithOptions(UpdateMediaLiveInputSecurityGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMediaLiveInputSecurityGroupShrinkRequest request = new UpdateMediaLiveInputSecurityGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WhitelistRules))
+            {
+                request.WhitelistRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WhitelistRules, "WhitelistRules", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                body["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhitelistRulesShrink))
+            {
+                body["WhitelistRules"] = request.WhitelistRulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMediaLiveInputSecurityGroup",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateMediaLiveInputSecurityGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateMediaLiveInputSecurityGroupResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a security group created in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can modify a security group only when it is not associated with a MediaLive input.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public async Task<UpdateMediaLiveInputSecurityGroupResponse> UpdateMediaLiveInputSecurityGroupWithOptionsAsync(UpdateMediaLiveInputSecurityGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMediaLiveInputSecurityGroupShrinkRequest request = new UpdateMediaLiveInputSecurityGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WhitelistRules))
+            {
+                request.WhitelistRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WhitelistRules, "WhitelistRules", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                body["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhitelistRulesShrink))
+            {
+                body["WhitelistRules"] = request.WhitelistRulesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMediaLiveInputSecurityGroup",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateMediaLiveInputSecurityGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateMediaLiveInputSecurityGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a security group created in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can modify a security group only when it is not associated with a MediaLive input.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public UpdateMediaLiveInputSecurityGroupResponse UpdateMediaLiveInputSecurityGroup(UpdateMediaLiveInputSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateMediaLiveInputSecurityGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a security group created in MediaLive.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>You can modify a security group only when it is not associated with a MediaLive input.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateMediaLiveInputSecurityGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMediaLiveInputSecurityGroupResponse
+        /// </returns>
+        public async Task<UpdateMediaLiveInputSecurityGroupResponse> UpdateMediaLiveInputSecurityGroupAsync(UpdateMediaLiveInputSecurityGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateMediaLiveInputSecurityGroupWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -49647,7 +53931,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节目</para>
+        /// <para>Modifies a program in a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49724,7 +54008,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节目</para>
+        /// <para>Modifies a program in a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49801,7 +54085,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节目</para>
+        /// <para>Modifies a program in a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49819,7 +54103,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节目</para>
+        /// <para>Modifies a program in a MediaWeaver channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49991,7 +54275,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新源</para>
+        /// <para>Modifies a source in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50052,7 +54336,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新源</para>
+        /// <para>Modifies a source in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50113,7 +54397,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新源</para>
+        /// <para>Modifies a source in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50131,7 +54415,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新源</para>
+        /// <para>Modifies a source in MediaWeaver.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50149,7 +54433,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新源位置</para>
+        /// <para>Modifies a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50210,7 +54494,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新源位置</para>
+        /// <para>Modifies a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50271,7 +54555,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新源位置</para>
+        /// <para>Modifies a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50289,7 +54573,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新源位置</para>
+        /// <para>Modifies a source location.</para>
         /// </summary>
         /// 
         /// <param name="request">

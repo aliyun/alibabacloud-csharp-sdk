@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListAdInsertionsRequest : TeaModel {
         /// <summary>
-        /// <para>按广告名称查询，支持模糊匹配</para>
+        /// <para>The configuration name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ad</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>获取后续数据的最大记录数，使用此方式获取数据时分页参数将无效</para>
+        /// <para>The maximum number of entries to retrieve in a subsequent request. If this parameter is used, the pagination parameters become invalid. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>获取后续数据的Token，使用此方式获取数据时分页参数将无效</para>
+        /// <para>The token that is used in the next request to retrieve a new page of results. If this parameter is used, the pagination parameters become invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>*<em><b><b>8EqYpQbZ6Eh7+Zz8DxVYoQ</b></b></em></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>分页参数，页码</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>分页参数，页宽</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>分页参数，排序方式，asc:按创建时间升序，desc:按创建时间降序</para>
+        /// <para>The sorting order of the configurations by creation time. asc: ascending. desc: descending.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>

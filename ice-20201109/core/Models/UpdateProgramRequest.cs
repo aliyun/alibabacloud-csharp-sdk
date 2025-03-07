@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateProgramRequest : TeaModel {
         /// <summary>
+        /// <para>The information about ad breaks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;MessageType&quot;:&quot;SPLICE_INSERT&quot;,&quot;OffsetMillis&quot;:1000,&quot;SourceLocationName&quot;:&quot;MySourceLocation&quot;,&quot;SourceName&quot;:&quot;MyAdSource&quot;,&quot;SpliceInsertSettings&quot;:{&quot;AvailNumber&quot;:0,&quot;AvailExpected&quot;:0,&quot;SpliceEventID&quot;:1,&quot;UniqueProgramID&quot;:0}}]</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AdBreaks { get; set; }
 
         /// <summary>
+        /// <para>The name of the channel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ChannelName { get; set; }
 
         /// <summary>
+        /// <para>Extracts a clip from the source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{StartOffsetMillis: 213123, EndOffsetMillis: 213134}</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ClipRange { get; set; }
 
         /// <summary>
+        /// <para>The name of the program.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ProgramName { get; set; }
 
         /// <summary>
+        /// <para>The name of the source location.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MySourceLcation</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SourceLocationName { get; set; }
 
         /// <summary>
+        /// <para>The name of the source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MySource</para>
         /// </summary>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SourceName { get; set; }
 
         /// <summary>
+        /// <para>The source type of the program. Valid values: vodSource and liveSource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vodSource</para>
         /// </summary>
@@ -70,6 +82,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SourceType { get; set; }
 
         /// <summary>
+        /// <para>The program transition method.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;Type&quot;: &quot;RELATIVE&quot;, &quot;RelativePosition&quot;: &quot;AFTER_PROGRAM&quot;, &quot;RelativeProgram&quot;: &quot;program2&quot;}</para>
         /// </summary>

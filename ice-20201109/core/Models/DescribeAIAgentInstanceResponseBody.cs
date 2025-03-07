@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DescribeAIAgentInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the AI agent.</para>
+        /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
         public DescribeAIAgentInstanceResponseBodyInstance Instance { get; set; }
         public class DescribeAIAgentInstanceResponseBodyInstance : TeaModel {
             /// <summary>
+            /// <para>The URL of the call log file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/call_logs/12345">https://example.com/call_logs/12345</a></para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CallLogUrl { get; set; }
 
             /// <summary>
+            /// <para>The runtime configurations of the AI agent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;VoiceChat&quot;:{&quot;AgentUserId&quot;:&quot;voice_agent_001&quot;,&quot;ChannelId&quot;:&quot;voice_channel_001&quot;,&quot;AuthToken&quot;:&quot;your_voice_chat_auth_token&quot;}}</para>
             /// </summary>
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string SessionId { get; set; }
 
             /// <summary>
+            /// <para>The state of the AI agent. Valid values: Finished and Executing.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Finished</para>
             /// </summary>
@@ -42,6 +51,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The template configurations of the AI agent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;VoiceChat&quot;: {&quot;AppId&quot;: &quot;your_voice_chat_app_id&quot;}}</para>
             /// </summary>
@@ -50,6 +61,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public AIAgentTemplateConfig TemplateConfig { get; set; }
 
             /// <summary>
+            /// <para>The custom information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</para>
             /// </summary>
@@ -60,6 +73,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7B117AF5-2A16-412C-B127-FA6175ED1AD0</para>
         /// </summary>

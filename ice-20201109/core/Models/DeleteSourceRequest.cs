@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteSourceRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to use delete markers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public bool? SoftDelete { get; set; }
 
         /// <summary>
+        /// <para>The name of the source location.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SourceLocationName { get; set; }
 
         /// <summary>
+        /// <para>The name of the source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SourceName { get; set; }
 
         /// <summary>
+        /// <para>The source type. Valid values: vodSource and liveSource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetLivePackageChannelGroupRequest : TeaModel {
         /// <summary>
-        /// <para>频道组名称</para>
+        /// <para>The channel group name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

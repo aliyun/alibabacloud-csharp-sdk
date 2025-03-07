@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateChannelRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable access control.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public bool? AccessPolicy { get; set; }
 
         /// <summary>
+        /// <para>The token for accessing the channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxx</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AccessToken { get; set; }
 
         /// <summary>
+        /// <para>The name of the channel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ChannelName { get; set; }
 
         /// <summary>
+        /// <para>The tier of the channel. Valid values: basic and standard.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ChannelTier { get; set; }
 
         /// <summary>
+        /// <para>The source location of the filler slate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MySourceLocation</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FillerSourceLocationName { get; set; }
 
         /// <summary>
+        /// <para>The name of the filler slate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FillerSource</para>
         /// </summary>
@@ -62,6 +72,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FillerSourceName { get; set; }
 
         /// <summary>
+        /// <para>The channel output configurations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +91,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutPutConfigList { get; set; }
 
         /// <summary>
+        /// <para>The playback mode. Valid values: loop and linear.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

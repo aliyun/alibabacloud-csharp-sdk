@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateLivePackageOriginEndpointResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the origin endpoint.</para>
+        /// </summary>
         [NameInMap("LivePackageOriginEndpoint")]
         [Validation(Required=false)]
         public CreateLivePackageOriginEndpointResponseBodyLivePackageOriginEndpoint LivePackageOriginEndpoint { get; set; }
         public class CreateLivePackageOriginEndpointResponseBodyLivePackageOriginEndpoint : TeaModel {
             /// <summary>
-            /// <para>回源授权码，与IpWhitelist必选其一</para>
+            /// <para>The authorization code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Abcded123</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string AuthorizationCode { get; set; }
 
             /// <summary>
-            /// <para>频道名称</para>
+            /// <para>The channel name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>channel-1</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ChannelName { get; set; }
 
             /// <summary>
-            /// <para>创建时间</para>
+            /// <para>The time when the endpoint was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-01T12:00:00Z</para>
@@ -44,14 +47,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>端点描述</para>
+            /// <para>The endpoint description.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>端点名称</para>
+            /// <para>The endpoint name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>endpoint-1</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string EndpointName { get; set; }
 
             /// <summary>
-            /// <para>源站端点回源播放地址</para>
+            /// <para>The endpoint URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest">https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest</a></para>
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string EndpointUrl { get; set; }
 
             /// <summary>
-            /// <para>频道组名称</para>
+            /// <para>The channel group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>channel-group-1</para>
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>IP黑名单，支持无类别域间路由（CIDR），逗号分隔</para>
+            /// <para>The IP address blacklist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>103.21.222.1/32,192.168.100.0/24</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string IpBlacklist { get; set; }
 
             /// <summary>
-            /// <para>IP白名单，支持无类别域间路由（CIDR），逗号分隔，与AuthorizationCode必选其一</para>
+            /// <para>The IP address whitelist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1.0/24,10.0.0.1/24</para>
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string IpWhitelist { get; set; }
 
             /// <summary>
-            /// <para>最后修改时间</para>
+            /// <para>The time when the endpoint was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-01T12:00:00Z</para>
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string LastModified { get; set; }
 
             /// <summary>
-            /// <para>播放列表名</para>
+            /// <para>The playlist name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>manifest</para>
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string ManifestName { get; set; }
 
             /// <summary>
-            /// <para>端点分发协议，暂只支持HLS</para>
+            /// <para>The protocol. Only HLS is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HLS</para>
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>时移天数，最大30天，0表示不支持时移</para>
+            /// <para>The number of days that time-shifted content is available. Maximum value: 30.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -142,6 +145,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

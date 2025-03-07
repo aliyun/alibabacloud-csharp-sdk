@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteSourceLocationRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to use delete markers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public bool? SoftDelete { get; set; }
 
         /// <summary>
+        /// <para>The name of the source location.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

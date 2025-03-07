@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetSourceRequest : TeaModel {
         /// <summary>
+        /// <para>The source location.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SourceLocationName { get; set; }
 
         /// <summary>
+        /// <para>The name of the source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SourceName { get; set; }
 
         /// <summary>
+        /// <para>The source type. Valid values: vodSource and liveSource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

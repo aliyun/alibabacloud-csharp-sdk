@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateMediaConnectFlowRequest : TeaModel {
         /// <summary>
-        /// <para>Flow instance name</para>
+        /// <para>The flow name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FlowName { get; set; }
 
         /// <summary>
-        /// <para>Region to which the Flow instance belongs</para>
+        /// <para>The region in which the flow resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
