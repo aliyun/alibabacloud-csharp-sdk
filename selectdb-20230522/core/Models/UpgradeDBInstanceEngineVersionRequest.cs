@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        [NameInMap("ParallelOperation")]
+        [Validation(Required=false)]
+        public bool? ParallelOperation { get; set; }
+
         /// <summary>
         /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>

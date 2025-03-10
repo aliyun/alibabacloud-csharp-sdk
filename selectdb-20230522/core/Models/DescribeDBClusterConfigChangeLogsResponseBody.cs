@@ -18,13 +18,15 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The information returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDBClusterConfigChangeLogsResponseBodyData Data { get; set; }
         public class DescribeDBClusterConfigChangeLogsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-wny3li00g02-be</para>
             /// </summary>
@@ -41,6 +43,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string DbInstanceId { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-wny3li00g02</para>
             /// </summary>
