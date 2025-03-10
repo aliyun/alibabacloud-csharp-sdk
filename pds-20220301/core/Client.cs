@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "pds";
             AlibabaCloud.GatewayPds.Client gatewayClient = new AlibabaCloud.GatewayPds.Client();
             this._spi = gatewayClient;
             this._disableHttp2 = true;
@@ -11937,6 +11938,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["marker"] = request.Marker;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThumbnailProcesses))
+            {
+                body["thumbnail_processes"] = request.ThumbnailProcesses;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -11994,6 +11999,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Marker))
             {
                 body["marker"] = request.Marker;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThumbnailProcesses))
+            {
+                body["thumbnail_processes"] = request.ThumbnailProcesses;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -14643,6 +14652,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["return_total_count"] = request.ReturnTotalCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThumbnailProcesses))
+            {
+                body["thumbnail_processes"] = request.ThumbnailProcesses;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -14716,6 +14729,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnTotalCount))
             {
                 body["return_total_count"] = request.ReturnTotalCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThumbnailProcesses))
+            {
+                body["thumbnail_processes"] = request.ThumbnailProcesses;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17871,6 +17888,144 @@ namespace AlibabaCloud.SDK.Pds20220301
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateUserWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频的DRM License</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VideoDRMLicenseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VideoDRMLicenseResponse
+        /// </returns>
+        public VideoDRMLicenseResponse VideoDRMLicenseWithOptions(VideoDRMLicenseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrmType))
+            {
+                body["drmType"] = request.DrmType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseRequest))
+            {
+                body["licenseRequest"] = request.LicenseRequest;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VideoDRMLicense",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/file/video_drm_license",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VideoDRMLicenseResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频的DRM License</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VideoDRMLicenseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VideoDRMLicenseResponse
+        /// </returns>
+        public async Task<VideoDRMLicenseResponse> VideoDRMLicenseWithOptionsAsync(VideoDRMLicenseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DrmType))
+            {
+                body["drmType"] = request.DrmType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseRequest))
+            {
+                body["licenseRequest"] = request.LicenseRequest;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VideoDRMLicense",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/file/video_drm_license",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VideoDRMLicenseResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频的DRM License</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VideoDRMLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VideoDRMLicenseResponse
+        /// </returns>
+        public VideoDRMLicenseResponse VideoDRMLicense(VideoDRMLicenseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return VideoDRMLicenseWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频的DRM License</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VideoDRMLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VideoDRMLicenseResponse
+        /// </returns>
+        public async Task<VideoDRMLicenseResponse> VideoDRMLicenseAsync(VideoDRMLicenseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await VideoDRMLicenseWithOptionsAsync(request, headers, runtime);
         }
 
     }

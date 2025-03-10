@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string LocalModifiedAt { get; set; }
 
         /// <summary>
-        /// <para>The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule and cannot end with a forward slash (/).</para>
+        /// <para>The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule and cannot contain forward slash (/).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

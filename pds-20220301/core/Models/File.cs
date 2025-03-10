@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public List<string> ActionList { get; set; }
 
+        [NameInMap("auto_delete_left_sec")]
+        [Validation(Required=false)]
+        public long? AutoDeleteLeftSec { get; set; }
+
         [NameInMap("category")]
         [Validation(Required=false)]
         public string Category { get; set; }
@@ -40,6 +44,20 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("dir_size_info")]
+        [Validation(Required=false)]
+        public FileDirSizeInfo DirSizeInfo { get; set; }
+        public class FileDirSizeInfo : TeaModel {
+            [NameInMap("dir_count")]
+            [Validation(Required=false)]
+            public long? DirCount { get; set; }
+
+            [NameInMap("file_count")]
+            [Validation(Required=false)]
+            public long? FileCount { get; set; }
+
+        }
 
         [NameInMap("domain_id")]
         [Validation(Required=false)]
