@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class RestartDrdsInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of a DRDS instance.
+        /// <para>The ID of a DRDS instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds************</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDrdsSqlAuditStatusResponseBody : TeaModel {
         /// <summary>
-        /// The returned data set.
+        /// <para>The returned data set.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -21,55 +21,79 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             public List<DescribeDrdsSqlAuditStatusResponseBodyDataData> Data { get; set; }
             public class DescribeDrdsSqlAuditStatusResponseBodyDataData : TeaModel {
                 /// <summary>
-                /// The name of the database.
+                /// <para>The name of the database.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("DbName")]
                 [Validation(Required=false)]
                 public string DbName { get; set; }
 
                 /// <summary>
-                /// Indicates whether the complete report of the SQL audit is supported. Valid values: true and false.
+                /// <para>Indicates whether the complete report of the SQL audit is supported. Valid values: true and false.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Detailed")]
                 [Validation(Required=false)]
                 public string Detailed { get; set; }
 
                 /// <summary>
-                /// Indicates whether the SQL audit feature is enabled for the database. Valid values: true and false.
+                /// <para>Indicates whether the SQL audit feature is enabled for the database. Valid values: true and false.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Enabled")]
                 [Validation(Required=false)]
                 public string Enabled { get; set; }
 
                 /// <summary>
-                /// The UID of the external delivery.
+                /// <para>The UID of the external delivery.</para>
+                /// <remarks>
+                /// <para>This parameter is returned only if external log delivery is enabled.</para>
+                /// </remarks>
                 /// 
-                /// > This parameter is returned only if external log delivery is enabled.
+                /// <b>Example:</b>
+                /// <para>111</para>
                 /// </summary>
                 [NameInMap("ExtraAliUid")]
                 [Validation(Required=false)]
                 public long? ExtraAliUid { get; set; }
 
                 /// <summary>
-                /// The Log Service Logstore from which logs are delivered.
+                /// <para>The Log Service Logstore from which logs are delivered.</para>
+                /// <remarks>
+                /// <para>This parameter is returned only if external log delivery is enabled.</para>
+                /// </remarks>
                 /// 
-                /// > This parameter is returned only if external log delivery is enabled.
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("ExtraSlsLogStore")]
                 [Validation(Required=false)]
                 public string ExtraSlsLogStore { get; set; }
 
                 /// <summary>
-                /// The Log Service project from which logs are delivered.
+                /// <para>The Log Service project from which logs are delivered.</para>
+                /// <remarks>
+                /// <para>This parameter is returned only if external log delivery is enabled.</para>
+                /// </remarks>
                 /// 
-                /// > This parameter is returned only if external log delivery is enabled.
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("ExtraSlsProject")]
                 [Validation(Required=false)]
                 public string ExtraSlsProject { get; set; }
 
                 /// <summary>
-                /// Indicates whether external log delivery is enabled. Valid values: true and false.
+                /// <para>Indicates whether external log delivery is enabled. Valid values: true and false.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("ExtraWriteEnabled")]
                 [Validation(Required=false)]
@@ -80,14 +104,20 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DC3ABA3E-0F8A-4596-9104-F5155C******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result of the request.
+        /// <para>The result of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

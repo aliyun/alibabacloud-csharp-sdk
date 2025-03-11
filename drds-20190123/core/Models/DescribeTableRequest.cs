@@ -10,28 +10,43 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeTableRequest : TeaModel {
         /// <summary>
-        /// The name of the database.
+        /// <para>The name of the database.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds_flashback</para>
         /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
         /// <summary>
-        /// The ID of the PolarDB-X 1.0 instance.
+        /// <para>The ID of the PolarDB-X 1.0 instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds*********</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the region where the PolarDB-X 1.0 instance is created.
+        /// <para>The ID of the region where the PolarDB-X 1.0 instance is created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The name of the table.
+        /// <para>The name of the table.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>employee_split</para>
         /// </summary>
         [NameInMap("TableName")]
         [Validation(Required=false)]

@@ -10,14 +10,21 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDrdsInstanceRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance that you want to query.
+        /// <para>The ID of the instance that you want to query.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drdshbga1138****</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instance is created.
+        /// <para>The ID of the region in which the instance is created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

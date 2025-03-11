@@ -10,14 +10,21 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class CreateOrderForRdsRequest : TeaModel {
         /// <summary>
-        /// The JSON string that contains the order details. For more information, see [CreateDBInstance](~~26228~~).
+        /// <para>The JSON string that contains the order details. For more information, see <a href="https://help.aliyun.com/document_detail/26228.html">CreateDBInstance</a>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public string Params { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

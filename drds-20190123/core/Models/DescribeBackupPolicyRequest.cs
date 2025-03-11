@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drdshbga71nn****</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]

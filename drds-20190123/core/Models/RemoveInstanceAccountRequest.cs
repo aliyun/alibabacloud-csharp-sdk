@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class RemoveInstanceAccountRequest : TeaModel {
         /// <summary>
-        /// The name of the member account.
+        /// <para>The name of the member account.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The ID of the DRDS instance.
+        /// <para>The ID of the DRDS instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds***********</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]

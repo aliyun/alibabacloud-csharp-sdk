@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDrdsInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The list of returned instances.
+        /// <para>The list of returned instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -21,116 +21,161 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             public List<DescribeDrdsInstancesResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeDrdsInstancesResponseBodyInstancesInstance : TeaModel {
                 /// <summary>
-                /// The commodity code of the service.
+                /// <para>The commodity code of the service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>drdsPost</para>
                 /// </summary>
                 [NameInMap("CommodityCode")]
                 [Validation(Required=false)]
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// The timestamp that indicates when the instance is created.
+                /// <para>The timestamp that indicates when the instance is created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1568620311000</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// The description of the instance.
+                /// <para>The description of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>drds_test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the instance.
+                /// <para>The ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>drdssen12****</para>
                 /// </summary>
                 [NameInMap("DrdsInstanceId")]
                 [Validation(Required=false)]
                 public string DrdsInstanceId { get; set; }
 
                 /// <summary>
-                /// The timestamp that indicates when the instance expires.
+                /// <para>The timestamp that indicates when the instance expires.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4724323200000</para>
                 /// </summary>
                 [NameInMap("ExpireDate")]
                 [Validation(Required=false)]
                 public long? ExpireDate { get; set; }
 
                 /// <summary>
-                /// The role of the instance. Valid values:
+                /// <para>The role of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>MASTER: The instance is a primary instance.</description></item>
+                /// <item><description>SLAVE: The instance is a read-only instance to analyze complex queries.</description></item>
+                /// <item><description>SLAVE_FLOW: The instance is a read-only instance for high-concurrency scenarios.</description></item>
+                /// </list>
                 /// 
-                /// *   MASTER: The instance is a primary instance.
-                /// *   SLAVE: The instance is a read-only instance to analyze complex queries.
-                /// *   SLAVE_FLOW: The instance is a read-only instance for high-concurrency scenarios.
+                /// <b>Example:</b>
+                /// <para>MASTER</para>
                 /// </summary>
                 [NameInMap("InstRole")]
                 [Validation(Required=false)]
                 public string InstRole { get; set; }
 
                 /// <summary>
-                /// The instance series.
+                /// <para>The instance series.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>drds.sn2.4c16g</para>
                 /// </summary>
                 [NameInMap("InstanceSeries")]
                 [Validation(Required=false)]
                 public string InstanceSeries { get; set; }
 
                 /// <summary>
-                /// The specification of the instance.
+                /// <para>The specification of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>drds.sn2.4c16g.8C32G</para>
                 /// </summary>
                 [NameInMap("InstanceSpec")]
                 [Validation(Required=false)]
                 public string InstanceSpec { get; set; }
 
                 /// <summary>
-                /// The tag of the instance. Valid values:
+                /// <para>The tag of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>NORMAL</b>: The instance is a standard instance.</description></item>
+                /// <item><description><b>HA</b>: The instance is a high-availability (HA) instance.</description></item>
+                /// <item><description><b>VPC</b>: The instance is a VPC-based instance.</description></item>
+                /// </list>
                 /// 
-                /// *   **NORMAL**: The instance is a standard instance.
-                /// *   **HA**: The instance is a high-availability (HA) instance.
-                /// *   **VPC**: The instance is a VPC-based instance.
+                /// <b>Example:</b>
+                /// <para>NORMAL</para>
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
                 /// <summary>
-                /// The machine type of the instance. Valid value: ecs.
+                /// <para>The machine type of the instance. Valid value: ecs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs</para>
                 /// </summary>
                 [NameInMap("MachineType")]
                 [Validation(Required=false)]
                 public string MachineType { get; set; }
 
                 /// <summary>
-                /// The ID of the primary instance.
+                /// <para>The ID of the primary instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>drdssen12****</para>
                 /// </summary>
                 [NameInMap("MasterInstanceId")]
                 [Validation(Required=false)]
                 public string MasterInstanceId { get; set; }
 
                 /// <summary>
-                /// The network type of the instance. Valid values:
+                /// <para>The network type of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>CLASSIC</b></description></item>
+                /// <item><description><b>VPC</b></description></item>
+                /// </list>
                 /// 
-                /// *   **CLASSIC**
-                /// *   **VPC**
+                /// <b>Example:</b>
+                /// <para>CLASSIC</para>
                 /// </summary>
                 [NameInMap("NetworkType")]
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// The ID of the purchased instance.
+                /// <para>The ID of the purchased instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>drdssen12****</para>
                 /// </summary>
                 [NameInMap("OrderInstanceId")]
                 [Validation(Required=false)]
                 public string OrderInstanceId { get; set; }
 
                 /// <summary>
-                /// The version of the service.
+                /// <para>The version of the service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>V1</para>
                 /// </summary>
                 [NameInMap("ProductVersion")]
                 [Validation(Required=false)]
                 public string ProductVersion { get; set; }
 
                 /// <summary>
-                /// The IDs of read-only instances that are associated with the instance.
+                /// <para>The IDs of read-only instances that are associated with the instance.</para>
                 /// </summary>
                 [NameInMap("ReadOnlyDBInstanceIds")]
                 [Validation(Required=false)]
@@ -143,52 +188,71 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
                 }
 
                 /// <summary>
-                /// The ID of the region.
+                /// <para>The ID of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-e</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The ID of the resource group to which the instance belongs.
+                /// <para>The ID of the resource group to which the instance belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-aek2ljh3ye4****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The status of the instance.
+                /// <para>The status of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>RUN</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The type of the instance. Valid values:
+                /// <para>The type of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>PUBLIC</b>: The returned instance is a shared instance.</description></item>
+                /// <item><description><b>PRIVATE</b>: The returned instance is a dedicated instance.</description></item>
+                /// </list>
                 /// 
-                /// *   **PUBLIC**: The returned instance is a shared instance.
-                /// *   **PRIVATE**: The returned instance is a dedicated instance.
+                /// <b>Example:</b>
+                /// <para>PRIVATE</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The version of the instance.
+                /// <para>The version of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public long? Version { get; set; }
 
                 /// <summary>
-                /// Indicates whether the version of the instance can be upgraded.
+                /// <para>Indicates whether the version of the instance can be upgraded.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Upgradable</para>
                 /// </summary>
                 [NameInMap("VersionAction")]
                 [Validation(Required=false)]
                 public string VersionAction { get; set; }
 
                 /// <summary>
-                /// The list of returned virtual IP addresses (VIPs).
+                /// <para>The list of returned virtual IP addresses (VIPs).</para>
                 /// </summary>
                 [NameInMap("Vips")]
                 [Validation(Required=false)]
@@ -199,45 +263,64 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
                     public List<DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip> Vip { get; set; }
                     public class DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip : TeaModel {
                         /// <summary>
-                        /// The virtual IP address.
+                        /// <para>The virtual IP address.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>10.23.<em><b>.</b></em></para>
                         /// </summary>
                         [NameInMap("IP")]
                         [Validation(Required=false)]
                         public string IP { get; set; }
 
                         /// <summary>
-                        /// The ports that are opened on the VIP.
+                        /// <para>The ports that are opened on the VIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>3306</para>
                         /// </summary>
                         [NameInMap("Port")]
                         [Validation(Required=false)]
                         public string Port { get; set; }
 
                         /// <summary>
-                        /// The type of the VIP. Valid values:
+                        /// <para>The type of the VIP. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>intranet: a private IP address</description></item>
+                        /// <item><description>internet: a public IP address</description></item>
+                        /// </list>
                         /// 
-                        /// *   intranet: a private IP address
-                        /// *   internet: a public IP address
+                        /// <b>Example:</b>
+                        /// <para>intranet</para>
                         /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// The ID of the VPC.
+                        /// <para>The ID of the VPC.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>vpc-bpxxxxxxxxxxxy</para>
                         /// </summary>
                         [NameInMap("VpcId")]
                         [Validation(Required=false)]
                         public string VpcId { get; set; }
 
                         /// <summary>
-                        /// The ID of the vSwitch.
+                        /// <para>The ID of the vSwitch.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>vsw-bpxxxxxxxxxxxxx96</para>
                         /// </summary>
                         [NameInMap("VswitchId")]
                         [Validation(Required=false)]
                         public string VswitchId { get; set; }
 
                         /// <summary>
-                        /// The domain name that is mapped to the VIP.
+                        /// <para>The domain name that is mapped to the VIP.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>drdssen1243as.drds.aliyuncs.com</para>
                         /// </summary>
                         [NameInMap("dns")]
                         [Validation(Required=false)]
@@ -248,32 +331,45 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
                 }
 
                 /// <summary>
-                /// The ID of the instance that is deployed in the VPC.
+                /// <para>The ID of the instance that is deployed in the VPC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>drdssen12****</para>
                 /// </summary>
                 [NameInMap("VpcCloudInstanceId")]
                 [Validation(Required=false)]
                 public string VpcCloudInstanceId { get; set; }
 
                 /// <summary>
-                /// The ID of the VPC to which the instance belongs.
+                /// <para>The ID of the VPC to which the instance belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-bp**********</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The ID of the zone in which the resource is located.
+                /// <para>The ID of the zone in which the resource is located.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-bpxxxxxxxxxxxxx96</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
 
                 /// <summary>
-                /// The edition of the instance. Valid values:
+                /// <para>The edition of the instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>starter</b>: Starter Edition</description></item>
+                /// <item><description><b>enterprise</b>: Enterprise Edition</description></item>
+                /// <item><description><b>standard</b>: Standard Edition</description></item>
+                /// </list>
                 /// 
-                /// *   **starter**: Starter Edition
-                /// *   **enterprise**: Enterprise Edition
-                /// *   **standard**: Standard Edition
+                /// <b>Example:</b>
+                /// <para>enterprise</para>
                 /// </summary>
                 [NameInMap("series")]
                 [Validation(Required=false)]
@@ -284,28 +380,40 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of instances returned on each page.
+        /// <para>The number of instances returned on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8734773E-7B21-4A22-9106-CBD245F8****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of instances returned.
+        /// <para>The total number of instances returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

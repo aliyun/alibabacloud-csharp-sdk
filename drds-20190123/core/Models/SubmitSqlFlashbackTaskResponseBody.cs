@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class SubmitSqlFlashbackTaskResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DSSDF-SEWE-*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the database creation failure records were removed from the DRDS instance.
+        /// <para>Indicates whether the database creation failure records were removed from the DRDS instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The ID of the replication task.
+        /// <para>The ID of the replication task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1111</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

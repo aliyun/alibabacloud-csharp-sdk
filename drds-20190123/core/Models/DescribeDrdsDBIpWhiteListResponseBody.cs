@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDrdsDBIpWhiteListResponseBody : TeaModel {
         /// <summary>
-        /// The IP address whitelist.
+        /// <para>The IP address whitelist.</para>
         /// </summary>
         [NameInMap("IpWhiteList")]
         [Validation(Required=false)]
@@ -23,14 +23,20 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>017453B9-0001-4745-87BF-DD612D850ED0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

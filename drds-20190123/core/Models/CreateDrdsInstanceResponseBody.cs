@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class CreateDrdsInstanceResponseBody : TeaModel {
         /// <summary>
-        /// Indicates the details of the result.
+        /// <para>Indicates the details of the result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateDrdsInstanceResponseBodyData Data { get; set; }
         public class CreateDrdsInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// Indicates the ID of the instance.
+            /// <para>Indicates the ID of the instance.</para>
             /// </summary>
             [NameInMap("DrdsInstanceIdList")]
             [Validation(Required=false)]
@@ -30,7 +30,10 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             }
 
             /// <summary>
-            /// Indicates the ID of the order.
+            /// <para>Indicates the ID of the order.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>111111111111111</para>
             /// </summary>
             [NameInMap("OrderId")]
             [Validation(Required=false)]
@@ -39,14 +42,20 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         }
 
         /// <summary>
-        /// Indicates the ID of the request.
+        /// <para>Indicates the ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D99D4644-A70D-49A3-B8B4-767ACC50SE2R</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

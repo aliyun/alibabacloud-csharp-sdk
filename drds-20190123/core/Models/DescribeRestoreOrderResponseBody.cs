@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeRestoreOrderResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0AD2DE5D-B86B-40B5-9678-487D37******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned data object.
+        /// <para>The returned data object.</para>
         /// </summary>
         [NameInMap("RestoreOrderDO")]
         [Validation(Required=false)]
         public DescribeRestoreOrderResponseBodyRestoreOrderDO RestoreOrderDO { get; set; }
         public class DescribeRestoreOrderResponseBodyRestoreOrderDO : TeaModel {
             /// <summary>
-            /// The information of the restored order.
+            /// <para>The information of the restored order.</para>
             /// </summary>
             [NameInMap("DrdsOrderDOList")]
             [Validation(Required=false)]
@@ -35,45 +38,64 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
                 public List<DescribeRestoreOrderResponseBodyRestoreOrderDODrdsOrderDOListDrdsOrderDOList> DrdsOrderDOList { get; set; }
                 public class DescribeRestoreOrderResponseBodyRestoreOrderDODrdsOrderDOListDrdsOrderDOList : TeaModel {
                     /// <summary>
-                    /// The ID of the zone for which to query resources.
+                    /// <para>The ID of the zone for which to query resources.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cn-hangzhou-e</para>
                     /// </summary>
                     [NameInMap("AzoneId")]
                     [Validation(Required=false)]
                     public string AzoneId { get; set; }
 
                     /// <summary>
-                    /// The instance type of the instance.
+                    /// <para>The instance type of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>4C8G * 2</para>
                     /// </summary>
                     [NameInMap("InstSpec")]
                     [Validation(Required=false)]
                     public string InstSpec { get; set; }
 
                     /// <summary>
-                    /// The network type. Valid values:
+                    /// <para>The network type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>**Classic **: Classic Network</description></item>
+                    /// <item><description><b>vpc</b>: VPC</description></item>
+                    /// </list>
                     /// 
-                    /// *   **Classic **: Classic Network
-                    /// *   **vpc**: VPC
+                    /// <b>Example:</b>
+                    /// <para>vpc</para>
                     /// </summary>
                     [NameInMap("Network")]
                     [Validation(Required=false)]
                     public string Network { get; set; }
 
                     /// <summary>
-                    /// The region ID of the instance.
+                    /// <para>The region ID of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cn-hangzhou</para>
                     /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// The ID of the vSwitch in the VPC.
+                    /// <para>The ID of the vSwitch in the VPC.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>vsw-*******************</para>
                     /// </summary>
                     [NameInMap("VSwtichId")]
                     [Validation(Required=false)]
                     public string VSwtichId { get; set; }
 
                     /// <summary>
-                    /// The ID of the VPC network.
+                    /// <para>The ID of the VPC network.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>vpc-*******************</para>
                     /// </summary>
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
@@ -84,7 +106,7 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             }
 
             /// <summary>
-            /// The ID of the restored apsaradb for PolarDB cluster.
+            /// <para>The ID of the restored apsaradb for PolarDB cluster.</para>
             /// </summary>
             [NameInMap("PolarOrderDOList")]
             [Validation(Required=false)]
@@ -95,59 +117,84 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
                 public List<DescribeRestoreOrderResponseBodyRestoreOrderDOPolarOrderDOListPolarOrderDOList> PolarOrderDOList { get; set; }
                 public class DescribeRestoreOrderResponseBodyRestoreOrderDOPolarOrderDOListPolarOrderDOList : TeaModel {
                     /// <summary>
-                    /// The zone ID of the node.
+                    /// <para>The zone ID of the node.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cn-hangzhou-g</para>
                     /// </summary>
                     [NameInMap("AzoneId")]
                     [Validation(Required=false)]
                     public string AzoneId { get; set; }
 
                     /// <summary>
-                    /// The capacity of disk.
+                    /// <para>The capacity of disk.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10240</para>
                     /// </summary>
                     [NameInMap("DbInstanceStorage")]
                     [Validation(Required=false)]
                     public string DbInstanceStorage { get; set; }
 
                     /// <summary>
-                    /// The storage engine of PolarDB.
+                    /// <para>The storage engine of PolarDB.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>POLARDB</para>
                     /// </summary>
                     [NameInMap("Engine")]
                     [Validation(Required=false)]
                     public string Engine { get; set; }
 
                     /// <summary>
-                    /// The type of the instance.
+                    /// <para>The type of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>polar.mysql.x4.large</para>
                     /// </summary>
                     [NameInMap("InstanceClass")]
                     [Validation(Required=false)]
                     public string InstanceClass { get; set; }
 
                     /// <summary>
-                    /// The network type. Valid values:
+                    /// <para>The network type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>Classic</b>: Classic Network</description></item>
+                    /// <item><description><b>vpc</b>: VPC</description></item>
+                    /// </list>
                     /// 
-                    /// *   **Classic**: Classic Network
-                    /// *   **vpc**: VPC
+                    /// <b>Example:</b>
+                    /// <para>VPC</para>
                     /// </summary>
                     [NameInMap("Network")]
                     [Validation(Required=false)]
                     public string Network { get; set; }
 
                     /// <summary>
-                    /// The number of streams that were returned.
+                    /// <para>The number of streams that were returned.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("Num")]
                     [Validation(Required=false)]
                     public long? Num { get; set; }
 
                     /// <summary>
-                    /// The region ID of the instance.
+                    /// <para>The region ID of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cn-hangzhou</para>
                     /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// The version of the operating system.
+                    /// <para>The version of the operating system.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5.6</para>
                     /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
@@ -158,7 +205,7 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             }
 
             /// <summary>
-            /// The information of the restored RDS order.
+            /// <para>The information of the restored RDS order.</para>
             /// </summary>
             [NameInMap("RdsOrderDOList")]
             [Validation(Required=false)]
@@ -169,57 +216,83 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
                 public List<DescribeRestoreOrderResponseBodyRestoreOrderDORdsOrderDOListRdsOrderDOList> RdsOrderDOList { get; set; }
                 public class DescribeRestoreOrderResponseBodyRestoreOrderDORdsOrderDOListRdsOrderDOList : TeaModel {
                     /// <summary>
-                    /// The zone ID of the node.
+                    /// <para>The zone ID of the node.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cn-hangzhou-g</para>
                     /// </summary>
                     [NameInMap("AzoneId")]
                     [Validation(Required=false)]
                     public string AzoneId { get; set; }
 
                     /// <summary>
-                    /// The capacity of disk.
+                    /// <para>The capacity of disk.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10240</para>
                     /// </summary>
                     [NameInMap("DbInstanceStorage")]
                     [Validation(Required=false)]
                     public string DbInstanceStorage { get; set; }
 
                     /// <summary>
-                    /// The storage engine of the instance.
+                    /// <para>The storage engine of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>MYSQL</para>
                     /// </summary>
                     [NameInMap("Engine")]
                     [Validation(Required=false)]
                     public string Engine { get; set; }
 
                     /// <summary>
-                    /// The instance type of the instance.
+                    /// <para>The instance type of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>rds.mysql.s2.large</para>
                     /// </summary>
                     [NameInMap("InstanceClass")]
                     [Validation(Required=false)]
                     public string InstanceClass { get; set; }
 
                     /// <summary>
-                    /// The network type. Valid values: - **Classic **: Classic Network
-                    /// - **vpc**: VPC
+                    /// <para>The network type. Valid values: - **Classic **: Classic Network</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>vpc</b>: VPC</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>VPC</para>
                     /// </summary>
                     [NameInMap("Network")]
                     [Validation(Required=false)]
                     public string Network { get; set; }
 
                     /// <summary>
-                    /// The number of streams that were returned.
+                    /// <para>The number of streams that were returned.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("Num")]
                     [Validation(Required=false)]
                     public long? Num { get; set; }
 
                     /// <summary>
-                    /// The region ID of the instance.
+                    /// <para>The region ID of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cn-hangzhou</para>
                     /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// The version of the operating system.
+                    /// <para>The version of the operating system.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5.6</para>
                     /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
@@ -232,7 +305,10 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

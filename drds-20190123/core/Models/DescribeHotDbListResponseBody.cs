@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeHotDbListResponseBody : TeaModel {
         /// <summary>
-        /// The result that is returned.
+        /// <para>The result that is returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeHotDbListResponseBodyData Data { get; set; }
         public class DescribeHotDbListResponseBodyData : TeaModel {
             /// <summary>
-            /// The information about the databases on which hot-spot scale-out is performed.
+            /// <para>The information about the databases on which hot-spot scale-out is performed.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -38,7 +38,10 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
                     }
 
                     /// <summary>
-                    /// The name of the instance.
+                    /// <para>The name of the instance.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>instanceName</para>
                     /// </summary>
                     [NameInMap("InstanceName")]
                     [Validation(Required=false)]
@@ -49,7 +52,10 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             }
 
             /// <summary>
-            /// The random number.
+            /// <para>The random number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>jzhz</para>
             /// </summary>
             [NameInMap("RandomCode")]
             [Validation(Required=false)]
@@ -58,21 +64,30 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         }
 
         /// <summary>
-        /// The message that is returned.
+        /// <para>The message that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>msg</para>
         /// </summary>
         [NameInMap("Msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0B6B7BDC-575D-4A77-A4F8-24B7EF******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

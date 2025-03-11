@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeBackMenuResponseBody : TeaModel {
         /// <summary>
-        /// The backup information list.
+        /// <para>The backup information list.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
@@ -21,17 +21,24 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
             public List<DescribeBackMenuResponseBodyListList> List { get; set; }
             public class DescribeBackMenuResponseBodyListList : TeaModel {
                 /// <summary>
-                /// The backup method. Valid values:
+                /// <para>The backup method. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>**Logic **: logical backup</description></item>
+                /// <item><description><b>phy</b>: physical backup</description></item>
+                /// </list>
                 /// 
-                /// *   **Logic **: logical backup
-                /// *   **phy**: physical backup
+                /// <b>Example:</b>
+                /// <para>phy</para>
                 /// </summary>
                 [NameInMap("MenuName")]
                 [Validation(Required=false)]
                 public string MenuName { get; set; }
 
                 /// <summary>
-                /// Indicates whether backup recovery is supported.
+                /// <para>Indicates whether backup recovery is supported.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Support")]
                 [Validation(Required=false)]
@@ -42,14 +49,20 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60C21BE4-EDFE-454C-95ED-3A5C74******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result of request.
+        /// <para>The result of request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class RollbackInstanceVersionResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the instance version was rolled back.
+        /// <para>Indicates whether the instance version was rolled back.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DSSDF-SEWE-*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

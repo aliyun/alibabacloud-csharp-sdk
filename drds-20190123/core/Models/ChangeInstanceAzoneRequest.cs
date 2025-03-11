@@ -14,14 +14,22 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         public bool? ChangeVSwitch { get; set; }
 
         /// <summary>
-        /// The ID of the PolarDB-X 1.0 instance.
+        /// <para>The ID of the PolarDB-X 1.0 instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drdsjiii1b49****</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("DrdsRegionId")]
         [Validation(Required=false)]
@@ -32,14 +40,22 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         public string NewVSwitch { get; set; }
 
         /// <summary>
-        /// The source zone of the PolarDB-X 1.0 instance.
+        /// <para>The source zone of the PolarDB-X 1.0 instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-B</para>
         /// </summary>
         [NameInMap("OriginAzoneId")]
         [Validation(Required=false)]
         public string OriginAzoneId { get; set; }
 
         /// <summary>
-        /// The destination zone to which you want to modify
+        /// <para>The destination zone to which you want to modify</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-A</para>
         /// </summary>
         [NameInMap("TargetAzoneId")]
         [Validation(Required=false)]

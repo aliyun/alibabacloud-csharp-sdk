@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeInstDbLogInfoResponseBody : TeaModel {
         /// <summary>
-        /// The time range for log query.
+        /// <para>The time range for log query.</para>
         /// </summary>
         [NameInMap("LogTimeRange")]
         [Validation(Required=false)]
         public DescribeInstDbLogInfoResponseBodyLogTimeRange LogTimeRange { get; set; }
         public class DescribeInstDbLogInfoResponseBodyLogTimeRange : TeaModel {
             /// <summary>
-            /// The start time of the query time range.
+            /// <para>The start time of the query time range.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1568267711</para>
             /// </summary>
             [NameInMap("SupportLatestTime")]
             [Validation(Required=false)]
             public long? SupportLatestTime { get; set; }
 
             /// <summary>
-            /// The end time of the task.
+            /// <para>The end time of the task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1568367711</para>
             /// </summary>
             [NameInMap("SupportOldestTime")]
             [Validation(Required=false)]
@@ -33,14 +39,20 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A5438952-70EE-4FA5-87A9-080DB0ASD45F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,42 +10,61 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDbInstancesRequest : TeaModel {
         /// <summary>
-        /// Storage layer type. Valid values: **POLARDB** or **RDS**.
+        /// <para>Storage layer type. Valid values: <b>POLARDB</b> or <b>RDS</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>POLARDB</para>
         /// </summary>
         [NameInMap("DbInstType")]
         [Validation(Required=false)]
         public string DbInstType { get; set; }
 
         /// <summary>
-        /// The ID of a DRDS instance.
+        /// <para>The ID of a DRDS instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds************</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the region.
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The ID of the storage or cluster.
+        /// <para>The ID of the storage or cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-***************</para>
         /// </summary>
         [NameInMap("Search")]
         [Validation(Required=false)]

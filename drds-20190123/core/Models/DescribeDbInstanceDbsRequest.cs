@@ -10,35 +10,52 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDbInstanceDbsRequest : TeaModel {
         /// <summary>
-        /// The name of the privileged account of the PolarDB-X 1.0 instance. You do not need to specify this parameter if you have no privileged account.
+        /// <para>The name of the privileged account of the PolarDB-X 1.0 instance. You do not need to specify this parameter if you have no privileged account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The engine type of the storage-layer databases. Valid values: **POLARDB** and **RDS**.
+        /// <para>The engine type of the storage-layer databases. Valid values: <b>POLARDB</b> and <b>RDS</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>POLARDB</para>
         /// </summary>
         [NameInMap("DbInstType")]
         [Validation(Required=false)]
         public string DbInstType { get; set; }
 
         /// <summary>
-        /// The ID of the instance in which the storage-layer databases are deployed.
+        /// <para>The ID of the instance in which the storage-layer databases are deployed.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-****************</para>
         /// </summary>
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the PolarDB-X 1.0 instance.
+        /// <para>The ID of the PolarDB-X 1.0 instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds************</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
         /// <summary>
-        /// The password of the privileged account. You do not need to specify this parameter if you have no privileged account.
+        /// <para>The password of the privileged account. You do not need to specify this parameter if you have no privileged account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pwd_111111</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]

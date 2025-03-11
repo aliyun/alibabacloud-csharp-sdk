@@ -10,21 +10,31 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeBackupDbsRequest : TeaModel {
         /// <summary>
-        /// Query by backup set ID
+        /// <para>Query by backup set ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>201908367</para>
         /// </summary>
         [NameInMap("BackupId")]
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
         /// <summary>
-        /// The ID of a DRDS instance.
+        /// <para>The ID of a DRDS instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds************</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
         /// <summary>
-        /// Query by restoration time.
+        /// <para>Query by restoration time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1568632541236</para>
         /// </summary>
         [NameInMap("PreferredRestoreTime")]
         [Validation(Required=false)]

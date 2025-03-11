@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeRdsSuperAccountInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The privileged accounts.
+        /// <para>The privileged accounts.</para>
         /// </summary>
         [NameInMap("DbInstances")]
         [Validation(Required=false)]
@@ -23,7 +23,10 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5D64DE5944A1E541E0******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

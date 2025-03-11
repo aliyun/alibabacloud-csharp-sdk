@@ -10,21 +10,32 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeRdsCommodityRequest : TeaModel {
         /// <summary>
-        /// The commodity code of the service.
+        /// <para>The commodity code of the service.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drdsPost</para>
         /// </summary>
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// The ID of the PolarDB-X 1.0 instance.
+        /// <para>The ID of the PolarDB-X 1.0 instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds***********</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
         /// <summary>
-        /// The type of the order.
+        /// <para>The type of the order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]

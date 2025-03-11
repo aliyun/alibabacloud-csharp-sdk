@@ -10,21 +10,32 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDrdsDBIpWhiteListRequest : TeaModel {
         /// <summary>
-        /// The database name.
+        /// <para>The database name.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_db</para>
         /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds********</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the whitelist group.
+        /// <para>The name of the whitelist group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>group1</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDrdsInstanceVersionResponseBody : TeaModel {
         /// <summary>
-        /// The details about the instance version.
+        /// <para>The details about the instance version.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDrdsInstanceVersionResponseBodyData Data { get; set; }
         public class DescribeDrdsInstanceVersionResponseBodyData : TeaModel {
             /// <summary>
-            /// The current version of the instance.
+            /// <para>The current version of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5.3.12-15682777</para>
             /// </summary>
             [NameInMap("InstanceVersion")]
             [Validation(Required=false)]
             public string InstanceVersion { get; set; }
 
             /// <summary>
-            /// The latest version of the instance.
+            /// <para>The latest version of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5.4.12-16315258</para>
             /// </summary>
             [NameInMap("NewestVersion")]
             [Validation(Required=false)]
@@ -33,14 +39,20 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2F7F8080-9132-4279-85D0-B7E5C4305162</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

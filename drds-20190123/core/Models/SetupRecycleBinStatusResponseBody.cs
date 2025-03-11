@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class SetupRecycleBinStatusResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the table recycle bin is enabled.
+        /// <para>Indicates whether the table recycle bin is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A3140FC7-B78B-4D8E-B0C8-926D28******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result of the request.
+        /// <para>The result of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

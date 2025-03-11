@@ -10,21 +10,33 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeDrdsDBClusterRequest : TeaModel {
         /// <summary>
-        /// The ID of the PolarDB cluster.
+        /// <para>The ID of the PolarDB cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-*****************</para>
         /// </summary>
         [NameInMap("DbInstanceId")]
         [Validation(Required=false)]
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// The name of the DRDS database.
+        /// <para>The name of the DRDS database.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds_test</para>
         /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
         /// <summary>
-        /// The ID of a DRDS instance.
+        /// <para>The ID of a DRDS instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds*********</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]

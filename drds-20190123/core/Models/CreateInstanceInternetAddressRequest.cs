@@ -10,14 +10,21 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class CreateInstanceInternetAddressRequest : TeaModel {
         /// <summary>
-        /// The ID of the DRDS instance.
+        /// <para>The ID of the DRDS instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds****************</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the DRDS instance belongs.
+        /// <para>The ID of the region to which the DRDS instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

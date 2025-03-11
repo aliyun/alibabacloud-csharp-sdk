@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DisableSqlAuditRequest : TeaModel {
         /// <summary>
-        /// The name of the database for which you want to disable the SQL audit feature.
+        /// <para>The name of the database for which you want to disable the SQL audit feature.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds_test</para>
         /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
         public string DbName { get; set; }
 
         /// <summary>
-        /// The ID of the PolarDB-X 1.0 instance.
+        /// <para>The ID of the PolarDB-X 1.0 instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drds***********</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]

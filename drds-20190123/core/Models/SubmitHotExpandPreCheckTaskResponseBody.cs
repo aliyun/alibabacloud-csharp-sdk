@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class SubmitHotExpandPreCheckTaskResponseBody : TeaModel {
         /// <summary>
-        /// The result of the task.
+        /// <para>The result of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>scucess</para>
         /// </summary>
         [NameInMap("Msg")]
         [Validation(Required=false)]
         public string Msg { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FE104D26-AC19-49B5-AC67-947F69*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful.
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// The ID of the task.
+        /// <para>The ID of the task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11111</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

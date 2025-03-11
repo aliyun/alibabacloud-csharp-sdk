@@ -9,44 +9,63 @@ using Tea;
 namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class SetupDrdsParamsRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<SetupDrdsParamsRequestData> Data { get; set; }
         public class SetupDrdsParamsRequestData : TeaModel {
             /// <summary>
-            /// The name of the parameter that you want to configure for a database.
+            /// <para>The name of the parameter that you want to configure for a database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_db</para>
             /// </summary>
             [NameInMap("DbName")]
             [Validation(Required=false)]
             public string DbName { get; set; }
 
             /// <summary>
-            /// The valid values of the parameter.
+            /// <para>The valid values of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[true|false]</para>
             /// </summary>
             [NameInMap("ParamRanges")]
             [Validation(Required=false)]
             public string ParamRanges { get; set; }
 
             /// <summary>
-            /// The type of the parameter that you want to configure. Valid values:
+            /// <para>The type of the parameter that you want to configure. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ATOM</b>: the configuration item in the layer-3 data source.</description></item>
+            /// <item><description><b>CONFIG</b>: the configuration item in ConfigServer.</description></item>
+            /// <item><description><b>DIAMOND</b>: the configuration item in Diamond.</description></item>
+            /// </list>
             /// 
-            /// *   **ATOM**: the configuration item in the layer-3 data source.
-            /// *   **CONFIG**: the configuration item in ConfigServer.
-            /// *   **DIAMOND**: the configuration item in Diamond.
+            /// <b>Example:</b>
+            /// <para>ATOM</para>
             /// </summary>
             [NameInMap("ParamType")]
             [Validation(Required=false)]
             public string ParamType { get; set; }
 
             /// <summary>
-            /// The value of parameter that you want to configure.
+            /// <para>The value of parameter that you want to configure.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("ParamValue")]
             [Validation(Required=false)]
             public string ParamValue { get; set; }
 
             /// <summary>
-            /// The name of the parameter that you want to configure.
+            /// <para>The name of the parameter that you want to configure.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>FORBID_EXECUTE_DML_ALL</para>
             /// </summary>
             [NameInMap("ParamVariableName")]
             [Validation(Required=false)]
@@ -55,24 +74,36 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         }
 
         /// <summary>
-        /// The ID of the PolarDB-X 1.0 instance for which you want to configure parameters.
+        /// <para>The ID of the PolarDB-X 1.0 instance for which you want to configure parameters.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>drdsjiii1b49****</para>
         /// </summary>
         [NameInMap("DrdsInstanceId")]
         [Validation(Required=false)]
         public string DrdsInstanceId { get; set; }
 
         /// <summary>
-        /// The resource for which you want to configure parameters. Valid values:
+        /// <para>The resource for which you want to configure parameters. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>INSTANCE</b>: Configure parameters for the instance.</description></item>
+        /// <item><description><b>DB</b>: Configure parameters for the databases of the instance.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **INSTANCE**: Configure parameters for the instance.
-        /// *   **DB**: Configure parameters for the databases of the instance.
+        /// <b>Example:</b>
+        /// <para>DB</para>
         /// </summary>
         [NameInMap("ParamLevel")]
         [Validation(Required=false)]
         public string ParamLevel { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the PolarDB-X 1.0 instance is located.
+        /// <para>The ID of the region in which the PolarDB-X 1.0 instance is located.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

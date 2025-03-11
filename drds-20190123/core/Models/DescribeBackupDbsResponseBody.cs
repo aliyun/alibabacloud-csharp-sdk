@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
 {
     public class DescribeBackupDbsResponseBody : TeaModel {
         /// <summary>
-        /// The details about a database.
+        /// <para>The details about a database.</para>
         /// </summary>
         [NameInMap("DbNames")]
         [Validation(Required=false)]
@@ -23,14 +23,20 @@ namespace AlibabaCloud.SDK.Drds20190123.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>842DFA7F-B09B-42A2-B115-E684AE******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result of request.
+        /// <para>The result of request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
