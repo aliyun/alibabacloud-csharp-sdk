@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeElasticBandwidthSpecResponse : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
+        [NameInMap("headers")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("ElasticBandwidthSpec")]
-        [Validation(Required=true)]
-        public List<string> ElasticBandwidthSpec { get; set; }
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public DescribeElasticBandwidthSpecResponseBody Body { get; set; }
 
     }
 

@@ -9,23 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeDomainAccessModeResponse : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
+        [NameInMap("headers")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DomainModeList")]
-        [Validation(Required=true)]
-        public List<DescribeDomainAccessModeResponseDomainModeList> DomainModeList { get; set; }
-        public class DescribeDomainAccessModeResponseDomainModeList : TeaModel {
-            [NameInMap("Domain")]
-            [Validation(Required=true)]
-            public string Domain { get; set; }
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
 
-            [NameInMap("AccessMode")]
-            [Validation(Required=true)]
-            public int? AccessMode { get; set; }
-
-        }
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public DescribeDomainAccessModeResponseBody Body { get; set; }
 
     }
 

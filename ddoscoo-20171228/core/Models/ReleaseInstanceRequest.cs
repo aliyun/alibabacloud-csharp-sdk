@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class ReleaseInstanceRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
     }
 

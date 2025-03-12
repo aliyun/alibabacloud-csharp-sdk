@@ -9,24 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeDefenseCountStatisticsResponse : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
+        [NameInMap("headers")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("DefenseCountStatistics")]
-        [Validation(Required=true)]
-        public DescribeDefenseCountStatisticsResponseDefenseCountStatistics DefenseCountStatistics { get; set; }
-        public class DescribeDefenseCountStatisticsResponseDefenseCountStatistics : TeaModel {
-            [NameInMap("DefenseCountTotalUsageOfCurrentMonth")]
-            [Validation(Required=true)]
-            public int? DefenseCountTotalUsageOfCurrentMonth { get; set; }
-            [NameInMap("FlowPackCountRemain")]
-            [Validation(Required=true)]
-            public int? FlowPackCountRemain { get; set; }
-            [NameInMap("MaxUsableDefenseCountCurrentMonth")]
-            [Validation(Required=true)]
-            public int? MaxUsableDefenseCountCurrentMonth { get; set; }
-        };
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public DescribeDefenseCountStatisticsResponseBody Body { get; set; }
 
     }
 

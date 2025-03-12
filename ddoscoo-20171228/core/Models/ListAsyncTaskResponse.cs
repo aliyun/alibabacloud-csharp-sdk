@@ -9,47 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class ListAsyncTaskResponse : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
+        [NameInMap("headers")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Total")]
-        [Validation(Required=true)]
-        public int? Total { get; set; }
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
 
-        [NameInMap("AsyncTasks")]
-        [Validation(Required=true)]
-        public List<ListAsyncTaskResponseAsyncTasks> AsyncTasks { get; set; }
-        public class ListAsyncTaskResponseAsyncTasks : TeaModel {
-            [NameInMap("TaskId")]
-            [Validation(Required=true)]
-            public long? TaskId { get; set; }
-
-            [NameInMap("EndTime")]
-            [Validation(Required=true)]
-            public long? EndTime { get; set; }
-
-            [NameInMap("StartTime")]
-            [Validation(Required=true)]
-            public long? StartTime { get; set; }
-
-            [NameInMap("TaskStatus")]
-            [Validation(Required=true)]
-            public int? TaskStatus { get; set; }
-
-            [NameInMap("TaskResult")]
-            [Validation(Required=true)]
-            public string TaskResult { get; set; }
-
-            [NameInMap("TaskParams")]
-            [Validation(Required=true)]
-            public string TaskParams { get; set; }
-
-            [NameInMap("TaskType")]
-            [Validation(Required=true)]
-            public int? TaskType { get; set; }
-
-        }
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public ListAsyncTaskResponseBody Body { get; set; }
 
     }
 

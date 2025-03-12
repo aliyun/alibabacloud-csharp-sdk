@@ -9,37 +9,77 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeIpTrafficRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("StartTime")]
-        [Validation(Required=true)]
-        public long? StartTime { get; set; }
-
-        [NameInMap("Interval")]
-        [Validation(Required=true)]
-        public int? Interval { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=true)]
-        public long? EndTime { get; set; }
-
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.1.1.1</para>
+        /// </summary>
         [NameInMap("Eip")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string Eip { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1536734120</para>
+        /// </summary>
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
+        [NameInMap("Interval")]
+        [Validation(Required=false)]
+        public int? Interval { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>233</para>
+        /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public int? Port { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>http</para>
+        /// </summary>
         [NameInMap("QueryProtocol")]
         [Validation(Required=false)]
         public string QueryProtocol { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxx</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.1.1.1</para>
+        /// </summary>
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1536734112</para>
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

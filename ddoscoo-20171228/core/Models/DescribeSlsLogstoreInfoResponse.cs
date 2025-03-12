@@ -9,29 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeSlsLogstoreInfoResponse : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
+        [NameInMap("headers")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("Quota")]
-        [Validation(Required=true)]
-        public long? Quota { get; set; }
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
 
-        [NameInMap("LogStore")]
-        [Validation(Required=true)]
-        public string LogStore { get; set; }
-
-        [NameInMap("Used")]
-        [Validation(Required=true)]
-        public long? Used { get; set; }
-
-        [NameInMap("Project")]
-        [Validation(Required=true)]
-        public string Project { get; set; }
-
-        [NameInMap("Ttl")]
-        [Validation(Required=true)]
-        public int? Ttl { get; set; }
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public DescribeSlsLogstoreInfoResponseBody Body { get; set; }
 
     }
 

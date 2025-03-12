@@ -9,33 +9,65 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeDomainsRequest : TeaModel {
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
-
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
+        /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ddoscoo-cn-XXXXXX</para>
+        /// </summary>
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public List<string> InstanceIds { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("Offset")]
+        [Validation(Required=false)]
+        public int? Offset { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>fuzzy</para>
+        /// </summary>
         [NameInMap("QueryDomainPattern")]
         [Validation(Required=false)]
         public string QueryDomainPattern { get; set; }
 
-        [NameInMap("Offset")]
-        [Validation(Required=true)]
-        public int? Offset { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public string PageSize { get; set; }
-
-        [NameInMap("InstanceIds")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.1.1.1</para>
+        /// </summary>
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
     }
 

@@ -9,21 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class OpenDomainSlsConfigRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
+        /// </summary>
+        [NameInMap("Domain")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string Domain { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xx</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("Domain")]
-        [Validation(Required=true)]
-        public string Domain { get; set; }
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.1.1.1</para>
+        /// </summary>
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
 
     }
 

@@ -9,25 +9,49 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class ListTagKeysRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=true)]
-        public string RegionId { get; set; }
-
-        [NameInMap("ResourceGroupId")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public int? CurrentPage { get; set; }
 
-        [NameInMap("ResourceType")]
-        [Validation(Required=true)]
-        public string ResourceType { get; set; }
-
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        [NameInMap("CurrentPage")]
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public int? CurrentPage { get; set; }
+        public string RegionId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>INSTANCE</para>
+        /// </summary>
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
 
     }
 

@@ -9,33 +9,71 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeDDoSEventsRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.1.1.1</para>
+        /// </summary>
+        [NameInMap("Eip")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public string Eip { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3289457324</para>
+        /// </summary>
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("Offset")]
+        [Validation(Required=false)]
+        public int? Offset { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xx</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.1.1.1</para>
+        /// </summary>
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3289457398</para>
+        /// </summary>
         [NameInMap("StartTime")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public long? StartTime { get; set; }
-
-        [NameInMap("EndTime")]
-        [Validation(Required=true)]
-        public long? EndTime { get; set; }
-
-        [NameInMap("Eip")]
-        [Validation(Required=true)]
-        public string Eip { get; set; }
-
-        [NameInMap("Offset")]
-        [Validation(Required=true)]
-        public int? Offset { get; set; }
-
-        [NameInMap("PageSize")]
-        [Validation(Required=true)]
-        public string PageSize { get; set; }
 
     }
 

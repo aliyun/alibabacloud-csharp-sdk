@@ -9,37 +9,81 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeOpEntitiesRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1536715558000</para>
+        /// </summary>
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public long? EndTime { get; set; }
 
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        [NameInMap("EntityType")]
-        [Validation(Required=false)]
-        public int? EntityType { get; set; }
-
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xx</para>
+        /// </summary>
         [NameInMap("EntityObject")]
         [Validation(Required=false)]
         public string EntityObject { get; set; }
 
-        [NameInMap("StartTime")]
-        [Validation(Required=true)]
-        public long? StartTime { get; set; }
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("EntityType")]
+        [Validation(Required=false)]
+        public int? EntityType { get; set; }
 
-        [NameInMap("EndTime")]
-        [Validation(Required=true)]
-        public long? EndTime { get; set; }
+        [NameInMap("OpAction")]
+        [Validation(Required=false)]
+        public int? OpAction { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNo")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageNo { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.1.1.1</para>
+        /// </summary>
+        [NameInMap("SourceIp")]
+        [Validation(Required=false)]
+        public string SourceIp { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1534123558000</para>
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

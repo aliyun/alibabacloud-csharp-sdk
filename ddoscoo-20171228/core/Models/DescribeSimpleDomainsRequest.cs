@@ -9,21 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
     public class DescribeSimpleDomainsRequest : TeaModel {
-        [NameInMap("SourceIp")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ddoscoo-cn-XXXXXX</para>
+        /// </summary>
+        [NameInMap("InstanceIds")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public List<string> InstanceIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xx</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        [NameInMap("InstanceIds")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.1.1.1</para>
+        /// </summary>
+        [NameInMap("SourceIp")]
         [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
+        public string SourceIp { get; set; }
 
     }
 
