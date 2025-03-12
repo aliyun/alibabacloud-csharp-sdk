@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SelectionGroupRemoveProductRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("productIds")]
         [Validation(Required=false)]
         public List<string> ProductIds { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PIDxxxxx</para>
         /// </summary>

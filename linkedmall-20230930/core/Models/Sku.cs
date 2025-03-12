@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string ShopId { get; set; }
 
+        [NameInMap("skuAlias")]
+        [Validation(Required=false)]
+        public string SkuAlias { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>660460842235822081</para>

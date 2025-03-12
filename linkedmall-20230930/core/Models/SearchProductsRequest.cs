@@ -148,6 +148,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string OrderDirection { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -156,6 +158,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -192,6 +196,8 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         public string ProductStatus { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PIDxxxx</para>
         /// </summary>
