@@ -8,13 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
-    public class SetDomainServerCertificateResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</para>
-        /// </summary>
+    public class PublishGrayDomainConfigResponseBody : TeaModel {
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

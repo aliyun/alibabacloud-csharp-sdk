@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cdn20180510.Models
 {
-    public class SetDomainServerCertificateResponse : TeaModel {
+    public class PublishGrayDomainConfigResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public SetDomainServerCertificateResponseBody Body { get; set; }
+        public PublishGrayDomainConfigResponseBody Body { get; set; }
 
     }
 

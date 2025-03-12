@@ -20,14 +20,32 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         [Validation(Required=false)]
         public string Domain { get; set; }
 
+        /// <summary>
+        /// <para>The name of the Logstore where log entries are stored.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LogstoreName</para>
+        /// </summary>
         [NameInMap("Logstore")]
         [Validation(Required=false)]
         public string Logstore { get; set; }
 
+        /// <summary>
+        /// <para>The name of the Log Service project that is used for real-time log delivery.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ProjectName</para>
+        /// </summary>
         [NameInMap("Project")]
         [Validation(Required=false)]
         public string Project { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region where the Log Service project is deployed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }

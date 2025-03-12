@@ -115,6 +115,16 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>809A6F10-8238-4A49-BE00-4B2D6305686E</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
         /// <para>The start of the time range during which data was queried.</para>
         /// 
         /// <b>Example:</b>
