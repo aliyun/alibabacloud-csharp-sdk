@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListMachineNetworkInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Array</para>
+        /// </summary>
         [NameInMap("MachineNetworkInfo")]
         [Validation(Required=false)]
         public List<ListMachineNetworkInfoResponseBodyMachineNetworkInfo> MachineNetworkInfo { get; set; }
         public class ListMachineNetworkInfoResponseBodyMachineNetworkInfo : TeaModel {
             /// <summary>
+            /// <para>Cluster network</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc/acl</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterNet { get; set; }
 
             /// <summary>
+            /// <para>Whether jumbo frame capability is enabled</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public bool? EnableJumboFrame { get; set; }
 
             /// <summary>
+            /// <para>Cluster ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>B1</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string HpnZone { get; set; }
 
             /// <summary>
+            /// <para>Whether it is in DPU mode</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public bool? IsDpuMode { get; set; }
 
             /// <summary>
+            /// <para>Machine type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>efg1.nvga8n</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string MachineType { get; set; }
 
             /// <summary>
+            /// <para>Network architecture</para>
+            /// 
             /// <b>Example:</b>
             /// <para>XX-7.0</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NetArch { get; set; }
 
             /// <summary>
+            /// <para>地域ID。</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-heyuan</para>
             /// </summary>
@@ -72,7 +89,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</para>

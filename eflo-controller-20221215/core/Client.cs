@@ -210,6 +210,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 query["ResourceRegionId"] = request.ResourceRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -266,6 +270,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceRegionId))
             {
                 query["ResourceRegionId"] = request.ResourceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -331,8 +339,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>断开连接</para>
+        /// <para>Disconnect Connection</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloseSessionRequest
@@ -384,8 +397,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>断开连接</para>
+        /// <para>Disconnect Connection</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloseSessionRequest
@@ -437,8 +455,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>断开连接</para>
+        /// <para>Disconnect Connection</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloseSessionRequest
@@ -455,8 +478,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>断开连接</para>
+        /// <para>Disconnect Connection</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloseSessionRequest
@@ -913,8 +941,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网络测试任务</para>
+        /// <para>Create Network Test Task</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateNetTestTaskRequest
@@ -1004,8 +1037,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网络测试任务</para>
+        /// <para>Create Network Test Task</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateNetTestTaskRequest
@@ -1095,8 +1133,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网络测试任务</para>
+        /// <para>Create Network Test Task</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateNetTestTaskRequest
@@ -1113,8 +1156,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网络测试任务</para>
+        /// <para>Create Network Test Task</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateNetTestTaskRequest
@@ -1131,8 +1179,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Web Terminal会话</para>
+        /// <para>Create Web Terminal Session</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSessionRequest
@@ -1188,8 +1241,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Web Terminal会话</para>
+        /// <para>Create Web Terminal Session</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSessionRequest
@@ -1245,8 +1303,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Web Terminal会话</para>
+        /// <para>Create Web Terminal Session</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSessionRequest
@@ -1263,8 +1326,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Web Terminal会话</para>
+        /// <para>Create Web Terminal Session</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSessionRequest
@@ -1707,8 +1775,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网络测试结果</para>
+        /// <para>Query Network Test Result</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNetTestResultRequest
@@ -1756,8 +1829,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网络测试结果</para>
+        /// <para>Query Network Test Result</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNetTestResultRequest
@@ -1805,8 +1883,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网络测试结果</para>
+        /// <para>Query Network Test Result</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNetTestResultRequest
@@ -1823,8 +1906,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网络测试结果</para>
+        /// <para>Query Network Test Result</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNetTestResultRequest
@@ -3029,8 +3117,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>诊断任务列表</para>
+        /// <para>List of Diagnostic Tasks</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDiagnosticResultsRequest
@@ -3090,8 +3183,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>诊断任务列表</para>
+        /// <para>List of Diagnostic Tasks</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDiagnosticResultsRequest
@@ -3151,8 +3249,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>诊断任务列表</para>
+        /// <para>List of Diagnostic Tasks</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDiagnosticResultsRequest
@@ -3169,8 +3272,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>诊断任务列表</para>
+        /// <para>List of Diagnostic Tasks</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDiagnosticResultsRequest
@@ -3503,8 +3611,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用HPNZone和机型查询机型网络配置</para>
+        /// <para>Query machine network configuration using HPNZone and machine type</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListMachineNetworkInfoRequest
@@ -3558,8 +3671,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用HPNZone和机型查询机型网络配置</para>
+        /// <para>Query machine network configuration using HPNZone and machine type</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListMachineNetworkInfoRequest
@@ -3613,8 +3731,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用HPNZone和机型查询机型网络配置</para>
+        /// <para>Query machine network configuration using HPNZone and machine type</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMachineNetworkInfoRequest
@@ -3631,8 +3754,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用HPNZone和机型查询机型网络配置</para>
+        /// <para>Query machine network configuration using HPNZone and machine type</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMachineNetworkInfoRequest
@@ -3783,8 +3911,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网络测试列表</para>
+        /// <para>Network Test List</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListNetTestResultsRequest
@@ -3844,8 +3977,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网络测试列表</para>
+        /// <para>Network Test List</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListNetTestResultsRequest
@@ -3905,8 +4043,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网络测试列表</para>
+        /// <para>Network Test List</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListNetTestResultsRequest
@@ -3923,8 +4066,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网络测试列表</para>
+        /// <para>Network Test List</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListNetTestResultsRequest
@@ -4265,8 +4413,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户可以使用的集群类型</para>
+        /// <para>Query the cluster types available to the user</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserClusterTypesRequest
@@ -4305,8 +4458,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户可以使用的集群类型</para>
+        /// <para>Query the cluster types available to the user</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserClusterTypesRequest
@@ -4345,8 +4503,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户可以使用的集群类型</para>
+        /// <para>Query the cluster types available to the user</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <returns>
         /// ListUserClusterTypesResponse
@@ -4359,8 +4522,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户可以使用的集群类型</para>
+        /// <para>Query the cluster types available to the user</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <returns>
         /// ListUserClusterTypesResponse
