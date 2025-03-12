@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListRenderingDataPackagesRequest : TeaModel {
+        [NameInMap("Category")]
+        [Validation(Required=false)]
+        public string Category { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>dp-449ea3d16c0841b8bf33ec5bbc86a152</para>

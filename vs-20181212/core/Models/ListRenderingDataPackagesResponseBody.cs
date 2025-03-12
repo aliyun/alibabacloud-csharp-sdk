@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public List<ListRenderingDataPackagesResponseBodyDataPackages> DataPackages { get; set; }
         public class ListRenderingDataPackagesResponseBodyDataPackages : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2024-10-15T10:23:06+08:00</para>

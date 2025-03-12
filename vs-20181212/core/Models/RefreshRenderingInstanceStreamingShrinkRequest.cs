@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
-    public class CreateRenderingDataPackageRequest : TeaModel {
-        [NameInMap("Category")]
+    public class RefreshRenderingInstanceStreamingShrinkRequest : TeaModel {
+        [NameInMap("ClientInfo")]
         [Validation(Required=false)]
-        public string Category { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>testdescription</para>
-        /// </summary>
-        [NameInMap("Description")]
-        [Validation(Required=false)]
-        public string Description { get; set; }
+        public string ClientInfoShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
