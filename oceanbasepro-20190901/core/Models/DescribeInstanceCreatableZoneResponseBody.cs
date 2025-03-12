@@ -10,26 +10,47 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeInstanceCreatableZoneResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether the cluster is deployed in the zone.
+        /// <para>Indicates whether the cluster is deployed in the zone.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform.   
-        /// Set the value to **DescribeInstanceCreatableZone**.
+        /// <para>The operation that you want to perform.<br>Set the value to <b>DescribeInstanceCreatableZone</b>.</para>
         /// </summary>
         [NameInMap("ZoneList")]
         [Validation(Required=false)]
         public List<DescribeInstanceCreatableZoneResponseBodyZoneList> ZoneList { get; set; }
         public class DescribeInstanceCreatableZoneResponseBodyZoneList : TeaModel {
+            [NameInMap("FullCopyId")]
+            [Validation(Required=false)]
+            public string FullCopyId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsInCluster")]
             [Validation(Required=false)]
             public bool? IsInCluster { get; set; }
 
+            [NameInMap("LogicalZoneName")]
+            [Validation(Required=false)]
+            public string LogicalZoneName { get; set; }
+
+            [NameInMap("ReplicateZoneIndex")]
+            [Validation(Required=false)]
+            public long? ReplicateZoneIndex { get; set; }
+
             /// <summary>
-            /// DescribeInstanceCreatableZone
+            /// <para>DescribeInstanceCreatableZone</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-i</para>
             /// </summary>
             [NameInMap("Zone")]
             [Validation(Required=false)]

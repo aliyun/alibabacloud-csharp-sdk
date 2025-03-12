@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeAvailableMemResourceResponseBody : TeaModel {
         /// <summary>
-        /// The available memory size.
+        /// <para>The available memory size.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeAvailableMemResourceResponseBodyData Data { get; set; }
         public class DescribeAvailableMemResourceResponseBodyData : TeaModel {
             /// <summary>
-            /// The maximum memory size for each resource unit, in GB.
+            /// <para>The maximum memory size for each resource unit, in GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("MaxMem")]
             [Validation(Required=false)]
             public long? MaxMem { get; set; }
 
             /// <summary>
-            /// The minimum memory size required for each resource unit, in GB.
+            /// <para>The minimum memory size required for each resource unit, in GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("MinMem")]
             [Validation(Required=false)]
             public long? MinMem { get; set; }
 
             /// <summary>
-            /// The maximum allowed memory usage, in GB.
+            /// <para>The maximum allowed memory usage, in GB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.0</para>
             /// </summary>
             [NameInMap("SafeMem")]
             [Validation(Required=false)]
             public string SafeMem { get; set; }
 
             /// <summary>
-            /// The number of resource units in the tenant.
+            /// <para>The number of resource units in the tenant.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("UsedMem")]
             [Validation(Required=false)]
@@ -47,7 +59,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EE205C00-30E4-<b><b>-</b></b>-87E3A8A2AA0C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ReleaseWorkerInstanceRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>g_abcdefj***</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

@@ -27,18 +27,42 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public UpdateProjectConfigRequestFullTransferConfig FullTransferConfig { get; set; }
         public class UpdateProjectConfigRequestFullTransferConfig : TeaModel {
+            [NameInMap("IndexDDLConcurrencyLimit")]
+            [Validation(Required=false)]
+            public int? IndexDDLConcurrencyLimit { get; set; }
+
+            [NameInMap("MaxConcurrentIndexDDLs")]
+            [Validation(Required=false)]
+            public int? MaxConcurrentIndexDDLs { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>64</para>
+            /// </summary>
             [NameInMap("ReadWorkerNum")]
             [Validation(Required=false)]
             public int? ReadWorkerNum { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
             [NameInMap("ThrottleIOPS")]
             [Validation(Required=false)]
             public int? ThrottleIOPS { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
             [NameInMap("ThrottleRps")]
             [Validation(Required=false)]
             public int? ThrottleRps { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>64</para>
+            /// </summary>
             [NameInMap("WriteWorkerNum")]
             [Validation(Required=false)]
             public int? WriteWorkerNum { get; set; }
@@ -46,7 +70,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>np_fe****</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -56,6 +83,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public UpdateProjectConfigRequestIncrTransferConfig IncrTransferConfig { get; set; }
         public class UpdateProjectConfigRequestIncrTransferConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>64</para>
+            /// </summary>
             [NameInMap("IncrSyncThreadCount")]
             [Validation(Required=false)]
             public int? IncrSyncThreadCount { get; set; }
@@ -68,10 +99,18 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public List<string> SupportDDLTypes { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
             [NameInMap("ThrottleIOPS")]
             [Validation(Required=false)]
             public int? ThrottleIOPS { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
             [NameInMap("ThrottleRps")]
             [Validation(Required=false)]
             public int? ThrottleRps { get; set; }
@@ -82,6 +121,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public UpdateProjectConfigRequestReverseIncrTransferConfig ReverseIncrTransferConfig { get; set; }
         public class UpdateProjectConfigRequestReverseIncrTransferConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>64</para>
+            /// </summary>
             [NameInMap("IncrSyncThreadCount")]
             [Validation(Required=false)]
             public int? IncrSyncThreadCount { get; set; }
@@ -94,10 +137,18 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             [Validation(Required=false)]
             public List<string> SupportDDLTypes { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
             [NameInMap("ThrottleIOPS")]
             [Validation(Required=false)]
             public int? ThrottleIOPS { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
             [NameInMap("ThrottleRps")]
             [Validation(Required=false)]
             public int? ThrottleRps { get; set; }

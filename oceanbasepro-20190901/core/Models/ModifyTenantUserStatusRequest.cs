@@ -10,39 +10,48 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyTenantUserStatusRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform.   
-        /// Set the value to **ModifyTenantUserStatus**.
+        /// <para>The operation that you want to perform.<br>Set the value to <b>ModifyTenantUserStatus</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob2mr3oae0****</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
         /// <summary>
-        /// The list of database accounts in the tenant.
+        /// <para>The list of database accounts in the tenant.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>pay_test</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]
         public string UserName { get; set; }
 
         /// <summary>
-        /// The status of the database account. Valid values:   
-        /// - Locked: The account is locked. 
-        /// - Online: The account is unlocked.
+        /// <para>The status of the database account. Valid values:   </para>
+        /// <list type="bullet">
+        /// <item><description>Locked: The account is locked. </description></item>
+        /// <item><description>Online: The account is unlocked.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>The ID of the tenant.</para>
         /// </summary>
         [NameInMap("UserStatus")]
         [Validation(Required=false)]

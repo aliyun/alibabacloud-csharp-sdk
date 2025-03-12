@@ -10,20 +10,32 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class CreateProjectModifyRecordsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public List<CreateProjectModifyRecordsRequestDatabases> Databases { get; set; }
         public class CreateProjectModifyRecordsRequestDatabases : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>db_id</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>mapped_db</para>
+            /// </summary>
             [NameInMap("MappedName")]
             [Validation(Required=false)]
             public string MappedName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>db_name</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -40,10 +52,18 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     [Validation(Required=false)]
                     public List<string> DistributedKeys { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>30</para>
+                    /// </summary>
                     [NameInMap("PartitionLifeCycle")]
                     [Validation(Required=false)]
                     public string PartitionLifeCycle { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PARTITION BY VALUE(\&quot;id\&quot;)</para>
+                    /// </summary>
                     [NameInMap("PartitionStatement")]
                     [Validation(Required=false)]
                     public string PartitionStatement { get; set; }
@@ -58,14 +78,26 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public List<string> FilterColumns { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>table_id</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>mapped_table</para>
+                /// </summary>
                 [NameInMap("MappedName")]
                 [Validation(Required=false)]
                 public string MappedName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>table_name</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -74,6 +106,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public List<string> ShardColumns { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>id&lt;1</para>
+                /// </summary>
                 [NameInMap("WhereClause")]
                 [Validation(Required=false)]
                 public string WhereClause { get; set; }
@@ -92,10 +128,18 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     [Validation(Required=false)]
                     public List<string> DistributedKeys { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>30</para>
+                    /// </summary>
                     [NameInMap("PartitionLifeCycle")]
                     [Validation(Required=false)]
                     public string PartitionLifeCycle { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PARTITION BY VALUE(\&quot;id\&quot;)</para>
+                    /// </summary>
                     [NameInMap("PartitionStatement")]
                     [Validation(Required=false)]
                     public string PartitionStatement { get; set; }
@@ -110,14 +154,26 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public List<string> FilterColumns { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>view_id</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>mapped_view</para>
+                /// </summary>
                 [NameInMap("MappedName")]
                 [Validation(Required=false)]
                 public string MappedName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>view_name</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -126,6 +182,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public List<string> ShardColumns { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>id &lt;1</para>
+                /// </summary>
                 [NameInMap("WhereClause")]
                 [Validation(Required=false)]
                 public string WhereClause { get; set; }
@@ -144,10 +204,18 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     [Validation(Required=false)]
                     public List<string> DistributedKeys { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>30</para>
+                    /// </summary>
                     [NameInMap("PartitionLifeCycle")]
                     [Validation(Required=false)]
                     public string PartitionLifeCycle { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PARTITION BY VALUE(\&quot;id\&quot;)</para>
+                    /// </summary>
                     [NameInMap("PartitionStatement")]
                     [Validation(Required=false)]
                     public string PartitionStatement { get; set; }
@@ -162,22 +230,56 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public List<string> FilterColumns { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>table_id</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>mapped_table</para>
+                /// </summary>
                 [NameInMap("MappedName")]
                 [Validation(Required=false)]
                 public string MappedName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>table_name</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("ObkvPartitionConfig")]
+                [Validation(Required=false)]
+                public CreateProjectModifyRecordsRequestDatabasesTablesObkvPartitionConfig ObkvPartitionConfig { get; set; }
+                public class CreateProjectModifyRecordsRequestDatabasesTablesObkvPartitionConfig : TeaModel {
+                    [NameInMap("PartitionSize")]
+                    [Validation(Required=false)]
+                    public int? PartitionSize { get; set; }
+
+                    [NameInMap("PartitionType")]
+                    [Validation(Required=false)]
+                    public string PartitionType { get; set; }
+
+                    [NameInMap("VirtualColumn")]
+                    [Validation(Required=false)]
+                    public string VirtualColumn { get; set; }
+
+                }
 
                 [NameInMap("ShardColumns")]
                 [Validation(Required=false)]
                 public List<string> ShardColumns { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>id&lt;1</para>
+                /// </summary>
                 [NameInMap("WhereClause")]
                 [Validation(Required=false)]
                 public string WhereClause { get; set; }
@@ -196,10 +298,18 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                     [Validation(Required=false)]
                     public List<string> DistributedKeys { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>30</para>
+                    /// </summary>
                     [NameInMap("PartitionLifeCycle")]
                     [Validation(Required=false)]
                     public string PartitionLifeCycle { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PARTITION BY VALUE(\&quot;id\&quot;)</para>
+                    /// </summary>
                     [NameInMap("PartitionStatement")]
                     [Validation(Required=false)]
                     public string PartitionStatement { get; set; }
@@ -214,14 +324,26 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public List<string> FilterColumns { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>view_id</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>mapped_view</para>
+                /// </summary>
                 [NameInMap("MappedName")]
                 [Validation(Required=false)]
                 public string MappedName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>view_name</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -230,6 +352,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
                 [Validation(Required=false)]
                 public List<string> ShardColumns { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>id&lt;1</para>
+                /// </summary>
                 [NameInMap("WhereClause")]
                 [Validation(Required=false)]
                 public string WhereClause { get; set; }
@@ -239,7 +365,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>np_fe****</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

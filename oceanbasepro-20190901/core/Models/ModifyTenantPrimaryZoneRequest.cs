@@ -10,30 +10,36 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyTenantPrimaryZoneRequest : TeaModel {
         /// <summary>
-        /// The primary zone of the tenant.    
-        /// It is one of the zones in which the cluster is deployed.
+        /// <para>The primary zone of the tenant.<br>It is one of the zones in which the cluster is deployed.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// ```
-        /// http(s)://[Endpoint]/?Action=ModifyTenantPrimaryZone
-        /// &TenantId=ob2mr3oae0****
-        /// &InstanceId=ob317v4uif****
-        /// &PrimaryZone=cn-hangzhou-h
-        /// &Common request parameters
-        /// ```
+        /// <pre><c>http(s)://[Endpoint]/?Action=ModifyTenantPrimaryZone
+        /// &amp;TenantId=ob2mr3oae0****
+        /// &amp;InstanceId=ob317v4uif****
+        /// &amp;PrimaryZone=cn-hangzhou-h
+        /// &amp;Common request parameters
+        /// </c></pre>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-h</para>
         /// </summary>
         [NameInMap("MasterIntranetAddressZone")]
         [Validation(Required=false)]
         public string MasterIntranetAddressZone { get; set; }
 
         /// <summary>
-        /// The ID of the vSwitch.
+        /// <para>The ID of the vSwitch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-h</para>
         /// </summary>
         [NameInMap("PrimaryZone")]
         [Validation(Required=false)]
@@ -43,14 +49,20 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string TenantEndpointDirectId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>obe-4tw51gp7****</para>
+        /// </summary>
         [NameInMap("TenantEndpointId")]
         [Validation(Required=false)]
         public string TenantEndpointId { get; set; }
 
         /// <summary>
-        /// The return result of the request.
+        /// <para>The return result of the request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob2mr3oae0****</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
@@ -61,7 +73,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public string UserDirectVSwitchId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-xxx</para>
         /// </summary>
         [NameInMap("UserVSwitchId")]
         [Validation(Required=false)]

@@ -14,16 +14,21 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// 实例的系列  - normal（默认）：标准集群版（云盘）  - normal_ssd：标准集群版（本地盘） - history：历史库集群版。
+        /// <para>实例的系列  - normal（默认）：标准集群版（云盘）  - normal_ssd：标准集群版（本地盘） - history：历史库集群版。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>normal</para>
         /// </summary>
         [NameInMap("Series")]
         [Validation(Required=false)]
         public string Series { get; set; }
 
         /// <summary>
-        /// The return result of the request.
+        /// <para>The return result of the request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Oracle</para>
         /// </summary>
         [NameInMap("TenantMode")]
         [Validation(Required=false)]

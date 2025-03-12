@@ -10,78 +10,118 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeOasSQLPlansResponseBody : TeaModel {
         /// <summary>
-        /// The list of SQL execution plan.
+        /// <para>The list of SQL execution plan.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeOasSQLPlansResponseBodyData> Data { get; set; }
         public class DescribeOasSQLPlansResponseBodyData : TeaModel {
             /// <summary>
-            /// Average CPU time (in milliseconds) during the execution period.
+            /// <para>Average CPU time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1875.34</para>
             /// </summary>
             [NameInMap("AvgCpuTime")]
             [Validation(Required=false)]
             public double? AvgCpuTime { get; set; }
 
             /// <summary>
-            /// Whether to bind the execution plan.
+            /// <para>Whether to bind the execution plan.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Bounded")]
             [Validation(Required=false)]
             public bool? Bounded { get; set; }
 
             /// <summary>
-            /// Execution count.
+            /// <para>Execution count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Executions")]
             [Validation(Required=false)]
             public long? Executions { get; set; }
 
             /// <summary>
-            /// First loading time.
+            /// <para>First loading time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-04-12T04:46:38Z</para>
             /// </summary>
             [NameInMap("FirstLoadTime")]
             [Validation(Required=false)]
             public string FirstLoadTime { get; set; }
 
             /// <summary>
-            /// Whether to hit the diagnosis.
+            /// <para>Whether to hit the diagnosis.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("HitDiagnosis")]
             [Validation(Required=false)]
             public bool? HitDiagnosis { get; set; }
 
             /// <summary>
-            /// Hit rate.
+            /// <para>Hit rate.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100.0</para>
             /// </summary>
             [NameInMap("HitPercentage")]
             [Validation(Required=false)]
             public double? HitPercentage { get; set; }
 
             /// <summary>
-            /// Merge version.
+            /// <para>Merge version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>513</para>
             /// </summary>
             [NameInMap("MergedVersion")]
             [Validation(Required=false)]
             public long? MergedVersion { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the outline used by the execution plan.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3********</para>
+            /// </summary>
             [NameInMap("OutlineId")]
             [Validation(Required=false)]
             public string OutlineId { get; set; }
 
+            /// <summary>
+            /// <para>The outline status of the execution plan. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Effective</b>: indicates that the outline_data and outlIne_content fields exactly match with each other. </description></item>
+            /// <item><description><b>Unknown</b>: indicates that the outline status is unknown.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Effective</para>
+            /// </summary>
             [NameInMap("OutlineStatus")]
             [Validation(Required=false)]
             public string OutlineStatus { get; set; }
 
             /// <summary>
-            /// Execution plan.
+            /// <para>Execution plan.</para>
             /// </summary>
             [NameInMap("PlanExplain")]
             [Validation(Required=false)]
             public DescribeOasSQLPlansResponseBodyDataPlanExplain PlanExplain { get; set; }
             public class DescribeOasSQLPlansResponseBodyDataPlanExplain : TeaModel {
                 /// <summary>
-                /// JSON string of the SQL execution plan.
+                /// <para>JSON string of the SQL execution plan.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{\&quot;RootOperations\&quot;:[{\&quot;Children\</para>
                 /// </summary>
                 [NameInMap("PlanJsonString")]
                 [Validation(Required=false)]
@@ -90,270 +130,387 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             }
 
             /// <summary>
-            /// The internal identifier of the SQL execution plan in the diagnostic system.
+            /// <para>The internal identifier of the SQL execution plan in the diagnostic system.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1758<b><b>24913166</b></b></para>
             /// </summary>
             [NameInMap("PlanHash")]
             [Validation(Required=false)]
             public string PlanHash { get; set; }
 
             /// <summary>
-            /// Execution plan type.
+            /// <para>Execution plan type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>LOCAL</para>
             /// </summary>
             [NameInMap("PlanType")]
             [Validation(Required=false)]
             public string PlanType { get; set; }
 
             /// <summary>
-            /// The internal unique identifier of the SQL execution plan in the diagnostic system.
+            /// <para>The internal unique identifier of the SQL execution plan in the diagnostic system.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;52c7c53<b><b>53e61b3f7586b17</b></b>ad&quot;</para>
             /// </summary>
             [NameInMap("PlanUnionHash")]
             [Validation(Required=false)]
             public string PlanUnionHash { get; set; }
 
             /// <summary>
-            /// The list of the execution plan.
+            /// <para>The list of the execution plan.</para>
             /// </summary>
             [NameInMap("Plans")]
             [Validation(Required=false)]
             public List<DescribeOasSQLPlansResponseBodyDataPlans> Plans { get; set; }
             public class DescribeOasSQLPlansResponseBodyDataPlans : TeaModel {
                 /// <summary>
-                /// Average Application event waiting time (in milliseconds) during the execution period.
+                /// <para>Average Application event waiting time (in milliseconds) during the execution period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0</para>
                 /// </summary>
                 [NameInMap("AvgApplicationWaitTime")]
                 [Validation(Required=false)]
                 public double? AvgApplicationWaitTime { get; set; }
 
                 /// <summary>
-                /// Average cache read count during the execution period.
+                /// <para>Average cache read count during the execution period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>30137.03</para>
                 /// </summary>
                 [NameInMap("AvgBufferGets")]
                 [Validation(Required=false)]
                 public double? AvgBufferGets { get; set; }
 
                 /// <summary>
-                /// Average Concurrency event waiting time (in milliseconds) during the execution period.
+                /// <para>Average Concurrency event waiting time (in milliseconds) during the execution period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0</para>
                 /// </summary>
                 [NameInMap("AvgConcurrencyWaitTime")]
                 [Validation(Required=false)]
                 public double? AvgConcurrencyWaitTime { get; set; }
 
                 /// <summary>
-                /// Average CPU time (in milliseconds) during the execution period.
+                /// <para>Average CPU time (in milliseconds) during the execution period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1875.34</para>
                 /// </summary>
                 [NameInMap("AvgCpuTime")]
                 [Validation(Required=false)]
                 public double? AvgCpuTime { get; set; }
 
                 /// <summary>
-                /// The average physical read count during the execution period.
+                /// <para>The average physical read count during the execution period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0</para>
                 /// </summary>
                 [NameInMap("AvgDiskReads")]
                 [Validation(Required=false)]
                 public double? AvgDiskReads { get; set; }
 
                 /// <summary>
-                /// The average physical write count during the execution period.
+                /// <para>The average physical write count during the execution period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0</para>
                 /// </summary>
                 [NameInMap("AvgDiskWrites")]
                 [Validation(Required=false)]
                 public double? AvgDiskWrites { get; set; }
 
                 /// <summary>
-                /// Average interval waiting time (in milliseconds) during the execution period.
+                /// <para>Average interval waiting time (in milliseconds) during the execution period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1876.78</para>
                 /// </summary>
                 [NameInMap("AvgElapsedTime")]
                 [Validation(Required=false)]
                 public double? AvgElapsedTime { get; set; }
 
                 /// <summary>
-                /// Average row processing waiting time (in milliseconds) during the execution period.
+                /// <para>Average row processing waiting time (in milliseconds) during the execution period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.0</para>
                 /// </summary>
                 [NameInMap("AvgRowProcessed")]
                 [Validation(Required=false)]
                 public double? AvgRowProcessed { get; set; }
 
                 /// <summary>
-                /// Average UserIo event waiting time (in milliseconds) during the execution period.
+                /// <para>Average UserIo event waiting time (in milliseconds) during the execution period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0</para>
                 /// </summary>
                 [NameInMap("AvgUserIoWaitTime")]
                 [Validation(Required=false)]
                 public double? AvgUserIoWaitTime { get; set; }
 
                 /// <summary>
-                /// Collection time.
+                /// <para>Collection time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1684368****00000</para>
                 /// </summary>
                 [NameInMap("CollectTimeUs")]
                 [Validation(Required=false)]
                 public long? CollectTimeUs { get; set; }
 
                 /// <summary>
-                /// Percentage of delayed long-running queries.
+                /// <para>Percentage of delayed long-running queries.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0</para>
                 /// </summary>
                 [NameInMap("DelayedLargeQueryPercentage")]
                 [Validation(Required=false)]
                 public double? DelayedLargeQueryPercentage { get; set; }
 
                 /// <summary>
-                /// The average execution count per second during the execution period.
+                /// <para>The average execution count per second during the execution period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.31</para>
                 /// </summary>
                 [NameInMap("ExecPs")]
                 [Validation(Required=false)]
                 public double? ExecPs { get; set; }
 
                 /// <summary>
-                /// The total number of executions during the execution period.
+                /// <para>The total number of executions during the execution period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Executions")]
                 [Validation(Required=false)]
                 public long? Executions { get; set; }
 
                 /// <summary>
-                /// First time to load the plan.
+                /// <para>First time to load the plan.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2023-04-12T04:46:38Z</para>
                 /// </summary>
                 [NameInMap("FirstLoadTime")]
                 [Validation(Required=false)]
                 public string FirstLoadTime { get; set; }
 
                 /// <summary>
-                /// First loading time.
+                /// <para>First loading time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1684****03289441</para>
                 /// </summary>
                 [NameInMap("FirstLoadTimeUs")]
                 [Validation(Required=false)]
                 public long? FirstLoadTimeUs { get; set; }
 
                 /// <summary>
-                /// Whether to hit the diagnosis.
+                /// <para>Whether to hit the diagnosis.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("HitDiagnosis")]
                 [Validation(Required=false)]
                 public bool? HitDiagnosis { get; set; }
 
                 /// <summary>
-                /// Hit rate.
+                /// <para>Hit rate.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100.0</para>
                 /// </summary>
                 [NameInMap("HitPercentage")]
                 [Validation(Required=false)]
                 public double? HitPercentage { get; set; }
 
                 /// <summary>
-                /// Percentage of completed long-running queries.
+                /// <para>Percentage of completed long-running queries.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0</para>
                 /// </summary>
                 [NameInMap("LargeQueryPercentage")]
                 [Validation(Required=false)]
                 public double? LargeQueryPercentage { get; set; }
 
                 /// <summary>
-                /// Merge version.
+                /// <para>Merge version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>513</para>
                 /// </summary>
                 [NameInMap("MergedVersion")]
                 [Validation(Required=false)]
                 public long? MergedVersion { get; set; }
 
                 /// <summary>
-                /// Database ID.
+                /// <para>Database ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>11006****828</para>
                 /// </summary>
                 [NameInMap("ObDbId")]
                 [Validation(Required=false)]
                 public long? ObDbId { get; set; }
 
                 /// <summary>
-                /// Server ID.
+                /// <para>Server ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("ObServerId")]
                 [Validation(Required=false)]
                 public long? ObServerId { get; set; }
 
                 /// <summary>
-                /// The outline_data parameter of the SQL execution plan.
+                /// <para>The outline_data parameter of the SQL execution plan.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/*+ BEGIN_OUTLINE_DATA INDEX(@\&quot;SEL$1\</para>
                 /// </summary>
                 [NameInMap("OutlineData")]
                 [Validation(Required=false)]
                 public string OutlineData { get; set; }
 
                 /// <summary>
-                /// Outline ID.
+                /// <para>Outline ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>-1</para>
                 /// </summary>
                 [NameInMap("OutlineId")]
                 [Validation(Required=false)]
                 public long? OutlineId { get; set; }
 
                 /// <summary>
-                /// The internal identifier of the SQL execution plan in the diagnostic system.
+                /// <para>The internal identifier of the SQL execution plan in the diagnostic system.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>-86290582****886880</para>
                 /// </summary>
                 [NameInMap("PlanHash")]
                 [Validation(Required=false)]
                 public string PlanHash { get; set; }
 
                 /// <summary>
-                /// The ID of the plan.
+                /// <para>The ID of the plan.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>590****</para>
                 /// </summary>
                 [NameInMap("PlanId")]
                 [Validation(Required=false)]
                 public long? PlanId { get; set; }
 
                 /// <summary>
-                /// Plan size.
+                /// <para>Plan size.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10****</para>
                 /// </summary>
                 [NameInMap("PlanSize")]
                 [Validation(Required=false)]
                 public long? PlanSize { get; set; }
 
                 /// <summary>
-                /// Plan type, including LOCAL, REMOTE, DIST.
+                /// <para>Plan type, including LOCAL, REMOTE, DIST.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>LOCAL</para>
                 /// </summary>
                 [NameInMap("PlanType")]
                 [Validation(Required=false)]
                 public string PlanType { get; set; }
 
                 /// <summary>
-                /// The internal unique identifier of the SQL execution plan in the diagnostic system.
+                /// <para>The internal unique identifier of the SQL execution plan in the diagnostic system.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot;52c7c53<b><b>53e61b3f7586b17</b></b>ad&quot;</para>
                 /// </summary>
                 [NameInMap("PlanUnionHash")]
                 [Validation(Required=false)]
                 public string PlanUnionHash { get; set; }
 
                 /// <summary>
-                /// Schema version.
+                /// <para>Schema version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>16838****3550464</para>
                 /// </summary>
                 [NameInMap("SchemaVersion")]
                 [Validation(Required=false)]
                 public long? SchemaVersion { get; set; }
 
                 /// <summary>
-                /// The server where the SQL is executed.
+                /// <para>The server where the SQL is executed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-bp1db1a9us038****jio</para>
                 /// </summary>
                 [NameInMap("Server")]
                 [Validation(Required=false)]
                 public string Server { get; set; }
 
                 /// <summary>
-                /// The ID of the backend server instance.
+                /// <para>The ID of the backend server instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("ServerId")]
                 [Validation(Required=false)]
                 public long? ServerId { get; set; }
 
+                /// <summary>
+                /// <para>SQL ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>46939C87ECA<b><b>95ED0FF64F44B</b></b></para>
+                /// </summary>
                 [NameInMap("SqlId")]
                 [Validation(Required=false)]
                 public string SqlId { get; set; }
 
                 /// <summary>
-                /// Whether a full table scan is performed.
+                /// <para>Whether a full table scan is performed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("TableScan")]
                 [Validation(Required=false)]
                 public bool? TableScan { get; set; }
 
                 /// <summary>
-                /// Percentage of timeouts.
+                /// <para>Percentage of timeouts.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.0</para>
                 /// </summary>
                 [NameInMap("TimeoutPercentage")]
                 [Validation(Required=false)]
                 public double? TimeoutPercentage { get; set; }
 
                 /// <summary>
-                /// The unique identifier of the plan.
+                /// <para>The unique identifier of the plan.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AAAAAAAAAAI<b><b>AAFoT2QAF--7W</b></b></para>
                 /// </summary>
                 [NameInMap("Uid")]
                 [Validation(Required=false)]
@@ -362,12 +519,21 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             }
 
             /// <summary>
-            /// The SQL for the query.
+            /// <para>The SQL for the query.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;select 1 from t&quot;</para>
             /// </summary>
             [NameInMap("QuerySql")]
             [Validation(Required=false)]
             public string QuerySql { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether full table scan is performed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("TableScan")]
             [Validation(Required=false)]
             public bool? TableScan { get; set; }
@@ -375,7 +541,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EE205C00-30E4-<b><b>-</b></b>-87E3A8A2AA0C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

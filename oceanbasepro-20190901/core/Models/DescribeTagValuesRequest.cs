@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeTagValuesRequest : TeaModel {
         /// <summary>
-        /// The type of the resource.
+        /// <para>The type of the resource.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tag</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

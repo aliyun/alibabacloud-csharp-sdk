@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class RemoveStandbyInstanceResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EE205C00-30E4-<b><b>-</b></b>-87E3A8A2AA0C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

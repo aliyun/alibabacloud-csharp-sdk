@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyTenantUserDescriptionResponseBody : TeaModel {
         /// <summary>
-        /// You can call this operation to modify the description of a specified account in a tenant.
+        /// <para>You can call this operation to modify the description of a specified account in a tenant.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

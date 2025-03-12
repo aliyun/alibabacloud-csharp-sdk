@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DeleteTagValueRequest : TeaModel {
         /// <summary>
-        /// The name of the tag group.
+        /// <para>The name of the tag group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Tag group 1</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// The name of the tag.
+        /// <para>The name of the tag.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Tag 2</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

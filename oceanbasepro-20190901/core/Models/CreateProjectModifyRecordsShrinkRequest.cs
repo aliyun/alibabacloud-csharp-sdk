@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class CreateProjectModifyRecordsShrinkRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public string DatabasesShrink { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>np_fe****</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class RetryProjectModifyRecordsRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>344000005</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

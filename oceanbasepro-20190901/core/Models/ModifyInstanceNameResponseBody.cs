@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyInstanceNameResponseBody : TeaModel {
         /// <summary>
-        /// The operation that you want to perform.   
-        /// Set the value to **ModifyInstanceName**.
+        /// <para>The operation that you want to perform.<br>Set the value to <b>ModifyInstanceName</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

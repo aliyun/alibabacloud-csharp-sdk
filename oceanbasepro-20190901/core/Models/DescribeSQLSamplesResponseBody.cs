@@ -10,376 +10,550 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeSQLSamplesResponseBody : TeaModel {
         /// <summary>
-        /// The list of sample data of slow query execution details.
+        /// <para>The list of sample data of slow query execution details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeSQLSamplesResponseBodyData> Data { get; set; }
         public class DescribeSQLSamplesResponseBodyData : TeaModel {
             /// <summary>
-            /// Average updated rows during the execution period.
+            /// <para>Average updated rows during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000.0</para>
             /// </summary>
             [NameInMap("AffectedRows")]
             [Validation(Required=false)]
             public double? AffectedRows { get; set; }
 
             /// <summary>
-            /// Application event waiting time (in milliseconds).
+            /// <para>Application event waiting time (in milliseconds).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("ApplicationWaitTime")]
             [Validation(Required=false)]
             public double? ApplicationWaitTime { get; set; }
 
             /// <summary>
-            /// BlockCache hit count
+            /// <para>BlockCache hit count</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>99279.0</para>
             /// </summary>
             [NameInMap("BlockCacheHit")]
             [Validation(Required=false)]
             public double? BlockCacheHit { get; set; }
 
             /// <summary>
-            /// BlockIndexCache hit count
+            /// <para>BlockIndexCache hit count</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>142514.0</para>
             /// </summary>
             [NameInMap("BlockIndexCacheHit")]
             [Validation(Required=false)]
             public double? BlockIndexCacheHit { get; set; }
 
             /// <summary>
-            /// BloomFilterCache hit count.
+            /// <para>BloomFilterCache hit count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("BloomFilterCacheHit")]
             [Validation(Required=false)]
             public double? BloomFilterCacheHit { get; set; }
 
             /// <summary>
-            /// Client IP.
+            /// <para>Client IP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-bp1db****38uemejio</para>
             /// </summary>
             [NameInMap("ClientIp")]
             [Validation(Required=false)]
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// Client port.
+            /// <para>Client port.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4****</para>
             /// </summary>
             [NameInMap("ClientPort")]
             [Validation(Required=false)]
             public string ClientPort { get; set; }
 
             /// <summary>
-            /// Concurrency event waiting time (in milliseconds).
+            /// <para>Concurrency event waiting time (in milliseconds).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("ConcurrencyWaitTime")]
             [Validation(Required=false)]
             public double? ConcurrencyWaitTime { get; set; }
 
             /// <summary>
-            /// Consistency level.
+            /// <para>Consistency level.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("ConsistencyLevel")]
             [Validation(Required=false)]
             public string ConsistencyLevel { get; set; }
 
             /// <summary>
-            /// CPU time (in milliseconds).
+            /// <para>CPU time (in milliseconds).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3377.57</para>
             /// </summary>
             [NameInMap("CpuTime")]
             [Validation(Required=false)]
             public double? CpuTime { get; set; }
 
             /// <summary>
-            /// Database name.
+            /// <para>Database name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_db</para>
             /// </summary>
             [NameInMap("DbName")]
             [Validation(Required=false)]
             public string DbName { get; set; }
 
             /// <summary>
-            /// Syntax parsing time (in milliseconds).
+            /// <para>Syntax parsing time (in milliseconds).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("DecodeTime")]
             [Validation(Required=false)]
             public double? DecodeTime { get; set; }
 
             /// <summary>
-            /// Disk read count.
+            /// <para>Disk read count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>96972.0</para>
             /// </summary>
             [NameInMap("DiskReads")]
             [Validation(Required=false)]
             public double? DiskReads { get; set; }
 
             /// <summary>
-            /// Response time (in milliseconds).
+            /// <para>Response time (in milliseconds).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2182.66</para>
             /// </summary>
             [NameInMap("ElapsedTime")]
             [Validation(Required=false)]
             public double? ElapsedTime { get; set; }
 
             /// <summary>
-            /// Plan execution time (in milliseconds).
+            /// <para>Plan execution time (in milliseconds).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8262.01</para>
             /// </summary>
             [NameInMap("ExecuteTime")]
             [Validation(Required=false)]
             public double? ExecuteTime { get; set; }
 
             /// <summary>
-            /// Whether to initiate RPC.
+            /// <para>Whether to initiate RPC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("ExecutorRpc")]
             [Validation(Required=false)]
             public bool? ExecutorRpc { get; set; }
 
             /// <summary>
-            /// Degree of parallelism.
+            /// <para>Degree of parallelism.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("ExpectedWorkerCount")]
             [Validation(Required=false)]
             public double? ExpectedWorkerCount { get; set; }
 
+            /// <summary>
+            /// <para>The full SQL text. </para>
+            /// <remarks>
+            /// <para>This parameter is unavailable.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>select * from test where c1 &gt; 1 and c2 &gt; 3;</para>
+            /// </summary>
             [NameInMap("FullSqlText")]
             [Validation(Required=false)]
             public string FullSqlText { get; set; }
 
             /// <summary>
-            /// Plan generation time (in milliseconds).
+            /// <para>Plan generation time (in milliseconds).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.19</para>
             /// </summary>
             [NameInMap("GetPlanTime")]
             [Validation(Required=false)]
             public double? GetPlanTime { get; set; }
 
             /// <summary>
-            /// Whether to hit the execution plan.
+            /// <para>Whether to hit the execution plan.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("HitPlan")]
             [Validation(Required=false)]
             public bool? HitPlan { get; set; }
 
             /// <summary>
-            /// Whether an internal SQL.
+            /// <para>Whether an internal SQL.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Inner")]
             [Validation(Required=false)]
             public bool? Inner { get; set; }
 
             /// <summary>
-            /// Memstore read row count.
+            /// <para>Memstore read row count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("MemstoreReadRows")]
             [Validation(Required=false)]
             public double? MemstoreReadRows { get; set; }
 
             /// <summary>
-            /// Network transmission time (in milliseconds).
+            /// <para>Network transmission time (in milliseconds).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("NetTime")]
             [Validation(Required=false)]
             public double? NetTime { get; set; }
 
             /// <summary>
-            /// Network enqueue time (in milliseconds).
+            /// <para>Network enqueue time (in milliseconds).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("NetWaitTime")]
             [Validation(Required=false)]
             public double? NetWaitTime { get; set; }
 
             /// <summary>
-            /// Database ID.
+            /// <para>Database ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>11006111****4828</para>
             /// </summary>
             [NameInMap("ObDbId")]
             [Validation(Required=false)]
             public double? ObDbId { get; set; }
 
             /// <summary>
-            /// Server  ID.
+            /// <para>Server  ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("ObServerId")]
             [Validation(Required=false)]
             public double? ObServerId { get; set; }
 
             /// <summary>
-            /// User ID.
+            /// <para>User ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100010</para>
             /// </summary>
             [NameInMap("ObUserId")]
             [Validation(Required=false)]
             public double? ObUserId { get; set; }
 
+            /// <summary>
+            /// <para>The parameter value of the SQL statement.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1****</para>
+            /// </summary>
             [NameInMap("ParamsValue")]
             [Validation(Required=false)]
             public string ParamsValue { get; set; }
 
             /// <summary>
-            /// Average number of partition accessed during the execution period.
+            /// <para>Average number of partition accessed during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0</para>
             /// </summary>
             [NameInMap("PartitionCount")]
             [Validation(Required=false)]
             public double? PartitionCount { get; set; }
 
             /// <summary>
-            /// The execution plan ID.
+            /// <para>The execution plan ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>590****</para>
             /// </summary>
             [NameInMap("PlanId")]
             [Validation(Required=false)]
             public double? PlanId { get; set; }
 
             /// <summary>
-            /// Plan type.
+            /// <para>Plan type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>LOCAL</para>
             /// </summary>
             [NameInMap("PlanType")]
             [Validation(Required=false)]
             public string PlanType { get; set; }
 
             /// <summary>
-            /// Queueing time (in milliseconds).
+            /// <para>Queueing time (in milliseconds).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.02</para>
             /// </summary>
             [NameInMap("QueueTime")]
             [Validation(Required=false)]
             public double? QueueTime { get; set; }
 
             /// <summary>
-            /// Request ID.
+            /// <para>Request ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>EE205C00-30E4-<b><b>-</b></b>-87E3A8A2AA0C</para>
             /// </summary>
             [NameInMap("RequestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
 
             /// <summary>
-            /// SQL request time.
+            /// <para>SQL request time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-04-12T04:46:38Z</para>
             /// </summary>
             [NameInMap("RequestTime")]
             [Validation(Required=false)]
             public string RequestTime { get; set; }
 
             /// <summary>
-            /// Result code.
+            /// <para>Result code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RetCode")]
             [Validation(Required=false)]
             public double? RetCode { get; set; }
 
             /// <summary>
-            /// Retry count.
+            /// <para>Retry count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RetryCount")]
             [Validation(Required=false)]
             public double? RetryCount { get; set; }
 
             /// <summary>
-            /// Average returned rows during the execution period.
+            /// <para>Average returned rows during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("ReturnRows")]
             [Validation(Required=false)]
             public double? ReturnRows { get; set; }
 
             /// <summary>
-            /// RowCache hit count.
+            /// <para>RowCache hit count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>498.0</para>
             /// </summary>
             [NameInMap("RowCacheHit")]
             [Validation(Required=false)]
             public double? RowCacheHit { get; set; }
 
             /// <summary>
-            /// Number of RPC sent.
+            /// <para>Number of RPC sent.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8.0</para>
             /// </summary>
             [NameInMap("RpcCount")]
             [Validation(Required=false)]
             public double? RpcCount { get; set; }
 
             /// <summary>
-            /// Schedule event waiting time (in milliseconds).
+            /// <para>Schedule event waiting time (in milliseconds).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("ScheduleTime")]
             [Validation(Required=false)]
             public double? ScheduleTime { get; set; }
 
             /// <summary>
-            /// The server where the SQL is executed.
+            /// <para>The server where the SQL is executed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-bp1db1****8uemejio</para>
             /// </summary>
             [NameInMap("Server")]
             [Validation(Required=false)]
             public string Server { get; set; }
 
+            /// <summary>
+            /// <para>The SQL text.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>select ** from t</para>
+            /// </summary>
             [NameInMap("SqlText")]
             [Validation(Required=false)]
             public string SqlText { get; set; }
 
             /// <summary>
-            /// SQL type.
+            /// <para>SQL type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>select</para>
             /// </summary>
             [NameInMap("SqlType")]
             [Validation(Required=false)]
             public string SqlType { get; set; }
 
             /// <summary>
-            /// Ssstore read row count.
+            /// <para>Ssstore read row count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>986190</para>
             /// </summary>
             [NameInMap("SsstoreReadRows")]
             [Validation(Required=false)]
             public double? SsstoreReadRows { get; set; }
 
             /// <summary>
-            /// Parameterized SQL text.
+            /// <para>Parameterized SQL text.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>select a from b</para>
             /// </summary>
             [NameInMap("Statement")]
             [Validation(Required=false)]
             public string Statement { get; set; }
 
             /// <summary>
-            /// Whether to perform full table scan.
+            /// <para>Whether to perform full table scan.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("TableScan")]
             [Validation(Required=false)]
             public bool? TableScan { get; set; }
 
             /// <summary>
-            /// Trace ID.
+            /// <para>Trace ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>YB42C****-0005E303D1****-0-0</para>
             /// </summary>
             [NameInMap("TraceId")]
             [Validation(Required=false)]
             public string TraceId { get; set; }
 
             /// <summary>
-            /// Transaction hash.
+            /// <para>Transaction hash.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1219<b><b>927</b></b>73791</para>
             /// </summary>
             [NameInMap("TransHash")]
             [Validation(Required=false)]
             public string TransHash { get; set; }
 
             /// <summary>
-            /// Actual number of SQL execution threads.
+            /// <para>Actual number of SQL execution threads.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("UsedWorkerCount")]
             [Validation(Required=false)]
             public double? UsedWorkerCount { get; set; }
 
             /// <summary>
-            /// UserIO event waiting time (in milliseconds).
+            /// <para>UserIO event waiting time (in milliseconds).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("UserIoWaitTime")]
             [Validation(Required=false)]
             public double? UserIoWaitTime { get; set; }
 
             /// <summary>
-            /// Username.
+            /// <para>Username.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_user</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
             public string UserName { get; set; }
 
             /// <summary>
-            /// Wait count.
+            /// <para>Wait count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("WaitCount")]
             [Validation(Required=false)]
             public double? WaitCount { get; set; }
 
             /// <summary>
-            /// Longest wait event during the execution period.
+            /// <para>Longest wait event during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>none</para>
             /// </summary>
             [NameInMap("WaitEvent")]
             [Validation(Required=false)]
             public string WaitEvent { get; set; }
 
             /// <summary>
-            /// Wait time (in milliseconds).
+            /// <para>Wait time (in milliseconds).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("WaitTime")]
             [Validation(Required=false)]
@@ -388,7 +562,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// Request ID.
+        /// <para>Request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EE205C00-30E4-<b><b>-</b></b>-87E3A8A2AA0C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,67 +10,85 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeParametersHistoryRequest : TeaModel {
         /// <summary>
-        /// The type of the parameter.   
-        /// Valid values: CLUSTER and TENANT.
+        /// <para>The type of the parameter.<br>Valid values: CLUSTER and TENANT.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>TENANT</para>
         /// </summary>
         [NameInMap("Dimension")]
         [Validation(Required=false)]
         public string Dimension { get; set; }
 
         /// <summary>
-        /// The resource ID of the parameter type.   
-        /// You can leave this parameter unspecified when you call this operation to query the modification history of cluster parameters. In the case of tenant parameters, pass the tenant ID.
+        /// <para>The resource ID of the parameter type.<br>You can leave this parameter unspecified when you call this operation to query cluster parameters. In the case of tenant parameters, pass the tenant ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>t4qx8****</para>
         /// </summary>
         [NameInMap("DimensionValue")]
         [Validation(Required=false)]
         public string DimensionValue { get; set; }
 
         /// <summary>
-        /// The end time for the query of parameter modification history.
+        /// <para>The end time of the time range for querying the SQL execution history.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2021-09-13 15:40:43</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// <para>The ID of the OceanBase cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.    
-        /// - Start value: 1   
-        /// - Default value: 1
+        /// <para>The number of the page to return.    </para>
+        /// <list type="bullet">
+        /// <item><description>Start value: 1   </description></item>
+        /// <item><description>Default value: 1</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of rows to return on each page.   
-        /// - Maximum value: 100   
-        /// - Default value: 10
+        /// <para>The number of rows to return on each page.   </para>
+        /// <list type="bullet">
+        /// <item><description>Maximum value: 100.</description></item>
+        /// <item><description>Default value: 10</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The start time of the time range for querying the parameter modification history.
+        /// <para>The start time of querying the slow query execution.
+        /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2021-06-13 15:40:43</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

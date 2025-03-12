@@ -10,25 +10,32 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeTenantTagsRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// <para>The ID of the OceanBase cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;Key&quot;: &quot;xxx&quot;, &quot;Value&quot;, &quot;xxx&quot;}]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
 
         /// <summary>
-        /// The JSON string of the tenant ID.
+        /// <para>The JSON string of the tenant ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[&quot;t5r0x2f6q****&quot;, &quot;t33h8y08k****&quot;, &quot;t5r41rtl7****&quot;]</para>
         /// </summary>
         [NameInMap("TenantIds")]
         [Validation(Required=false)]

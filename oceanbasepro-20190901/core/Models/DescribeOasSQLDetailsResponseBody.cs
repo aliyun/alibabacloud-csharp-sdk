@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeOasSQLDetailsResponseBody : TeaModel {
         /// <summary>
-        /// The list of the SQL execution plan.
+        /// <para>The list of the SQL execution plan.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeOasSQLDetailsResponseBodyData Data { get; set; }
         public class DescribeOasSQLDetailsResponseBodyData : TeaModel {
             /// <summary>
-            /// The name of the database.
+            /// <para>The name of the database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_db</para>
             /// </summary>
             [NameInMap("DbName")]
             [Validation(Required=false)]
             public string DbName { get; set; }
 
             /// <summary>
-            /// SQL text.
+            /// <para>SQL text.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>select a from b</para>
             /// </summary>
             [NameInMap("Fulltext")]
             [Validation(Required=false)]
             public string Fulltext { get; set; }
 
             /// <summary>
-            /// Parameterized text.
+            /// <para>Parameterized text.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>select a from b</para>
             /// </summary>
             [NameInMap("Statement")]
             [Validation(Required=false)]
             public string Statement { get; set; }
 
             /// <summary>
-            /// The table name related to the SQL.
+            /// <para>The table name related to the SQL.</para>
             /// </summary>
             [NameInMap("Tables")]
             [Validation(Required=false)]
             public List<string> Tables { get; set; }
 
             /// <summary>
-            /// The username.
+            /// <para>The username.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_user</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -54,7 +66,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EE205C00-30E4-<b><b>-</b></b>-87E3A8A2AA0C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

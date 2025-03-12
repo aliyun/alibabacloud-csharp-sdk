@@ -10,28 +10,36 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class BatchKillSessionListRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// <para>The ID of the OceanBase cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The list of sessions, which is concatenated with commas.
-        /// >The session information is obtained from the result returned by the DescribeSessionList API.
+        /// <para>The list of sessions, which is concatenated with commas.</para>
+        /// <remarks>
+        /// <para>The session information is obtained from the result returned by the DescribeSessionList API.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>342,354,343</para>
         /// </summary>
         [NameInMap("SessionList")]
         [Validation(Required=false)]
         public string SessionList { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>t4louaeei****</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

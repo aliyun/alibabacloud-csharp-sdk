@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeSessionListResponseBody : TeaModel {
         /// <summary>
-        /// The object information.
+        /// <para>The object information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeSessionListResponseBodyData> Data { get; set; }
         public class DescribeSessionListResponseBodyData : TeaModel {
             /// <summary>
-            /// The address of the client, with the format ip:port.
+            /// <para>The address of the client, with the format ip:port.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.***.**.100:80</para>
             /// </summary>
             [NameInMap("Host")]
             [Validation(Required=false)]
             public string Host { get; set; }
 
             /// <summary>
-            /// The session ID of the proxy service.
+            /// <para>The session ID of the proxy service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>d2c90ad0-bc54-410f-bb89-2dcf14aa3c6d</para>
             /// </summary>
             [NameInMap("SessionId")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

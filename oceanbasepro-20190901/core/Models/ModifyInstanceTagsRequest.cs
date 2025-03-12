@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyInstanceTagsRequest : TeaModel {
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// <para>The ID of the OceanBase cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[{&quot;Key&quot;: &quot;xxx&quot;, &quot;Value&quot;, &quot;xxx&quot;},{}]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyInstanceNameRequest : TeaModel {
         /// <summary>
-        /// It is an Alibaba Cloud asset management and configuration tool, with which you can manage multiple Alibaba Cloud products and services by using commands. It is easy to use and a good helper in migration to cloud.
+        /// <para>It is an Alibaba Cloud asset management and configuration tool, with which you can manage multiple Alibaba Cloud products and services by using commands. It is easy to use and a good helper in migration to cloud.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// <para>The ID of the OceanBase cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob4prod</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]

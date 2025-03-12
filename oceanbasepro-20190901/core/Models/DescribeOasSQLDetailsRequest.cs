@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeOasSQLDetailsRequest : TeaModel {
         /// <summary>
-        /// The name of the database.
+        /// <para>The name of the database.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>test_db</para>
         /// </summary>
         [NameInMap("DbName")]
         [Validation(Required=false)]
@@ -23,19 +25,22 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public bool? DynamicSql { get; set; }
 
         /// <summary>
-        /// The end time of querying the SQL execution plan.   
-        /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+        /// <para>The end time of querying the SQL execution plan.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2023-04-12T05:38:38Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// <para>The ID of the OceanBase cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -46,28 +51,33 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         public bool? ParseTable { get; set; }
 
         /// <summary>
-        /// SQL ID.
+        /// <para>SQL ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>8D6E84<b><b>0B8FB1823D199E2CA1</b></b></para>
         /// </summary>
         [NameInMap("SqlId")]
         [Validation(Required=false)]
         public string SqlId { get; set; }
 
         /// <summary>
-        /// The start time of querying the SQL execution plan.   
-        /// The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+        /// <para>The start time of querying the SQL execution plan.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>2023-04-12T04:38:38Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// The ID of the tenant.
+        /// <para>The ID of the tenant.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>t4louaeei****</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

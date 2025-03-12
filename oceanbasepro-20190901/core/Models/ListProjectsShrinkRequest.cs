@@ -17,18 +17,34 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public bool? NeedRelatedInfo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>descend</para>
+        /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>np_4w****</para>
+        /// </summary>
         [NameInMap("SearchKey")]
         [Validation(Required=false)]
         public string SearchKey { get; set; }
@@ -37,6 +53,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string SinkEndpointTypesShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>gmtCreate</para>
+        /// </summary>
         [NameInMap("SortField")]
         [Validation(Required=false)]
         public string SortField { get; set; }
@@ -49,10 +69,18 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [Validation(Required=false)]
         public string StatusShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>MIGRATION</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("VisibleSubProject")]
         [Validation(Required=false)]
         public bool? VisibleSubProject { get; set; }

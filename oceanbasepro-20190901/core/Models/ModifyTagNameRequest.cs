@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyTagNameRequest : TeaModel {
         /// <summary>
-        /// The name of the tag group.
+        /// <para>The name of the tag group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Tag group 1</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// The new name of the tag group.
+        /// <para>The new name of the tag group.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>Tag group 2</para>
         /// </summary>
         [NameInMap("NewKey")]
         [Validation(Required=false)]

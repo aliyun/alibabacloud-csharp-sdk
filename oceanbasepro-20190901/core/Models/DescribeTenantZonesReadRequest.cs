@@ -10,18 +10,22 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeTenantZonesReadRequest : TeaModel {
         /// <summary>
-        /// The zone information of the tenant.
+        /// <para>The zone information of the tenant.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The return result of the request.
+        /// <para>The return result of the request.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob2mr3oae0****</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

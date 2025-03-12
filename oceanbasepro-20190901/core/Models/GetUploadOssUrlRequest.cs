@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class GetUploadOssUrlRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("EffectiveTimeMinutes")]
         [Validation(Required=false)]
         public int? EffectiveTimeMinutes { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CREATE_PROJECT</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

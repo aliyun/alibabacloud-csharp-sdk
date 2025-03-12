@@ -10,27 +10,36 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class SwitchoverInstanceRequest : TeaModel {
         /// <summary>
-        /// Whether to force the switchover.
-        /// - true: Force the switchover.
-        /// - false: Do not force the switchover.
+        /// <para>Whether to force the switchover.</para>
+        /// <list type="bullet">
+        /// <item><description>true: Force the switchover.</description></item>
+        /// <item><description>false: Do not force the switchover.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Forced")]
         [Validation(Required=false)]
         public bool? Forced { get; set; }
 
         /// <summary>
-        /// The instance ID of the primary/standby instance. You can set the default value to the instance ID of the instance to be switched to the primary instance.
+        /// <para>The instance ID of the primary/standby instance. You can set the default value to the instance ID of the instance to be switched to the primary instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The instance ID of the instance to be switched to the primary instance.
+        /// <para>The instance ID of the instance to be switched to the primary instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob4bv8o7sp****</para>
         /// </summary>
         [NameInMap("TargetInstanceId")]
         [Validation(Required=false)]

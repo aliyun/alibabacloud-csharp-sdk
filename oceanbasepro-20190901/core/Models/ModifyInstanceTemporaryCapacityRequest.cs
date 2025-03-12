@@ -9,30 +9,41 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyInstanceTemporaryCapacityRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
+        /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// The disk size. Unit: GB.
+        /// <para>The disk size. Unit: GB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>400</para>
         /// </summary>
         [NameInMap("DiskSize")]
         [Validation(Required=false)]
         public string DiskSize { get; set; }
 
         /// <summary>
-        /// The ID of the OceanBase cluster.
+        /// <para>The ID of the OceanBase cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Specification.
+        /// <para>Specification.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>oceanbase.cluster.i2.small</para>
         /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]

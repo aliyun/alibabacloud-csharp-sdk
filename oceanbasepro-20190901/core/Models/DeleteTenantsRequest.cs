@@ -10,23 +10,26 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DeleteTenantsRequest : TeaModel {
         /// <summary>
-        /// You can call this operation to delete one or more tenants from an OceanBase cluster.
+        /// <para>You can call this operation to delete one or more tenants from an OceanBase cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// ```
-        /// http(s)://[Endpoint]/?Action=DeleteTenants
-        /// &TenantIds=["ob2mr3oae0****", "ob2mr3oae1****"]
-        /// &InstanceId=ob317v4uif****
-        /// &Common request parameters
-        /// ```
+        /// <pre><c>http(s)://[Endpoint]/?Action=DeleteTenants
+        /// &amp;TenantIds=[&quot;ob2mr3oae0****&quot;, &quot;ob2mr3oae1****&quot;]
+        /// &amp;InstanceId=ob317v4uif****
+        /// &amp;Common request parameters
+        /// </c></pre>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>[&quot;ob2mr3oae0****&quot;, &quot;ob2mr3oae1****&quot;]</para>
         /// </summary>
         [NameInMap("TenantIds")]
         [Validation(Required=false)]

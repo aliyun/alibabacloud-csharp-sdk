@@ -10,56 +10,77 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeOasSlowSQLListResponseBody : TeaModel {
         /// <summary>
-        /// The list of slow queries.
+        /// <para>The list of slow queries.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeOasSlowSQLListResponseBodyData> Data { get; set; }
         public class DescribeOasSlowSQLListResponseBodyData : TeaModel {
             /// <summary>
-            /// Average updated rows during the execution period.
+            /// <para>Average updated rows during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>9978.75</para>
             /// </summary>
             [NameInMap("AvgAffectedRows")]
             [Validation(Required=false)]
             public double? AvgAffectedRows { get; set; }
 
             /// <summary>
-            /// Average Application event wait time (in milliseconds) during the client waiting period.
+            /// <para>Average Application event wait time (in milliseconds) during the client waiting period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgApplicationWaitTime")]
             [Validation(Required=false)]
             public double? AvgApplicationWaitTime { get; set; }
 
             /// <summary>
-            /// Average BlockCache hit count during the execution period.
+            /// <para>Average BlockCache hit count during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgBlockCacheHit")]
             [Validation(Required=false)]
             public double? AvgBlockCacheHit { get; set; }
 
             /// <summary>
-            /// Average BlockIndexCache hit count during the execution period.
+            /// <para>Average BlockIndexCache hit count during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgBlockIndexCacheHit")]
             [Validation(Required=false)]
             public double? AvgBlockIndexCacheHit { get; set; }
 
             /// <summary>
-            /// Average BloomFilterCache hit count during the execution period.
+            /// <para>Average BloomFilterCache hit count during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgBloomFilterCacheHit")]
             [Validation(Required=false)]
             public double? AvgBloomFilterCacheHit { get; set; }
 
             /// <summary>
-            /// Average Concurrency event wait time (in milliseconds) during the execution period.
+            /// <para>Average Concurrency event wait time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgConcurrencyWaitTime")]
             [Validation(Required=false)]
             public double? AvgConcurrencyWaitTime { get; set; }
 
             /// <summary>
-            /// Average CPU time (in milliseconds) during the execution period.
+            /// <para>Average CPU time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1875.34</para>
             /// </summary>
             [NameInMap("AvgCpuTime")]
             [Validation(Required=false)]
@@ -70,175 +91,250 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public double? AvgDbTime { get; set; }
 
             /// <summary>
-            /// Average syntax parsing time (in milliseconds) during the execution period.
+            /// <para>Average syntax parsing time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgDecodeTime")]
             [Validation(Required=false)]
             public double? AvgDecodeTime { get; set; }
 
             /// <summary>
-            /// Average physical read count during the execution period.
+            /// <para>Average physical read count during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgDiskReads")]
             [Validation(Required=false)]
             public double? AvgDiskReads { get; set; }
 
             /// <summary>
-            /// Average response time (in milliseconds) during the execution period.
+            /// <para>Average response time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1876.78</para>
             /// </summary>
             [NameInMap("AvgElapsedTime")]
             [Validation(Required=false)]
             public double? AvgElapsedTime { get; set; }
 
             /// <summary>
-            /// Average plan execution time (in milliseconds) during the execution period.
+            /// <para>Average plan execution time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1895.7</para>
             /// </summary>
             [NameInMap("AvgExecuteTime")]
             [Validation(Required=false)]
             public double? AvgExecuteTime { get; set; }
 
             /// <summary>
-            /// Average number of RPC requests executed during the execution period.
+            /// <para>Average number of RPC requests executed during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgExecutorRpcCount")]
             [Validation(Required=false)]
             public double? AvgExecutorRpcCount { get; set; }
 
             /// <summary>
-            /// Average degree of parallelism during the execution period.
+            /// <para>Average degree of parallelism during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("AvgExpectedWorkerCount")]
             [Validation(Required=false)]
             public double? AvgExpectedWorkerCount { get; set; }
 
             /// <summary>
-            /// Average plan generation time (in milliseconds) during the execution period.
+            /// <para>Average plan generation time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgGetPlanTime")]
             [Validation(Required=false)]
             public double? AvgGetPlanTime { get; set; }
 
             /// <summary>
-            /// Average logical reads of the SQL during the execution period.
+            /// <para>Average logical reads of the SQL during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgLogicalReads")]
             [Validation(Required=false)]
             public double? AvgLogicalReads { get; set; }
 
             /// <summary>
-            /// Strong consistent transaction percentage during the execution period.
+            /// <para>Strong consistent transaction percentage during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgMemstoreReadRows")]
             [Validation(Required=false)]
             public double? AvgMemstoreReadRows { get; set; }
 
             /// <summary>
-            /// Average network transmission time (in milliseconds) during the execution period.
+            /// <para>Average network transmission time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgNetTime")]
             [Validation(Required=false)]
             public double? AvgNetTime { get; set; }
 
             /// <summary>
-            /// Average network enqueue time (in milliseconds) during the network waiting period.
+            /// <para>Average network enqueue time (in milliseconds) during the network waiting period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgNetWaitTime")]
             [Validation(Required=false)]
             public double? AvgNetWaitTime { get; set; }
 
             /// <summary>
-            /// Average number of partition accessed during the execution period.
+            /// <para>Average number of partition accessed during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0</para>
             /// </summary>
             [NameInMap("AvgPartitionCount")]
             [Validation(Required=false)]
             public double? AvgPartitionCount { get; set; }
 
             /// <summary>
-            /// Average queueing time (in milliseconds) during the execution period.
+            /// <para>Average queueing time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.01</para>
             /// </summary>
             [NameInMap("AvgQueueTime")]
             [Validation(Required=false)]
             public double? AvgQueueTime { get; set; }
 
             /// <summary>
-            /// Average number of rows returned during the execution period.
+            /// <para>Average number of rows returned during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgReturnRows")]
             [Validation(Required=false)]
             public double? AvgReturnRows { get; set; }
 
             /// <summary>
-            /// Average RowCache hit count during the execution period.
+            /// <para>Average RowCache hit count during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgRowCacheHit")]
             [Validation(Required=false)]
             public double? AvgRowCacheHit { get; set; }
 
             /// <summary>
-            /// Average number of RPC sent during the execution.
+            /// <para>Average number of RPC sent during the execution.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8.0</para>
             /// </summary>
             [NameInMap("AvgRpcCount")]
             [Validation(Required=false)]
             public double? AvgRpcCount { get; set; }
 
             /// <summary>
-            /// Average Schedule event wait time (in milliseconds) during the scheduling period.
+            /// <para>Average Schedule event wait time (in milliseconds) during the scheduling period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgScheduleTime")]
             [Validation(Required=false)]
             public double? AvgScheduleTime { get; set; }
 
             /// <summary>
-            /// Eventually consistent transaction percentage during the execution period.
+            /// <para>Eventually consistent transaction percentage during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgSsstoreReadRows")]
             [Validation(Required=false)]
             public double? AvgSsstoreReadRows { get; set; }
 
             /// <summary>
-            /// Average number of threads used of the SQL during the execution period.
+            /// <para>Average number of threads used of the SQL during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("AvgUsedWorkerCount")]
             [Validation(Required=false)]
             public double? AvgUsedWorkerCount { get; set; }
 
             /// <summary>
-            /// Average UserIO event wait time (in milliseconds) during the execution period.
+            /// <para>Average UserIO event wait time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgUserIoWaitTime")]
             [Validation(Required=false)]
             public double? AvgUserIoWaitTime { get; set; }
 
             /// <summary>
-            /// Average number of waits during the execution period.
+            /// <para>Average number of waits during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("AvgWaitCount")]
             [Validation(Required=false)]
             public double? AvgWaitCount { get; set; }
 
             /// <summary>
-            /// Average wait time (in milliseconds) during the execution period.
+            /// <para>Average wait time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.42</para>
             /// </summary>
             [NameInMap("AvgWaitTime")]
             [Validation(Required=false)]
             public double? AvgWaitTime { get; set; }
 
             /// <summary>
-            /// Client IP.
+            /// <para>Client IP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1<em>2.</em><b>.1<em>3.</em></b></para>
             /// </summary>
             [NameInMap("ClientIp")]
             [Validation(Required=false)]
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// The name of the database.
+            /// <para>The name of the database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_db</para>
             /// </summary>
             [NameInMap("DbName")]
             [Validation(Required=false)]
             public string DbName { get; set; }
 
             /// <summary>
-            /// Distributed plan percentage during the execution period.
+            /// <para>Distributed plan percentage during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100.0</para>
             /// </summary>
             [NameInMap("DistPlanPercentage")]
             [Validation(Required=false)]
@@ -249,224 +345,320 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public bool? DynamicSql { get; set; }
 
             /// <summary>
-            /// Average execution count per second during the execution period.
+            /// <para>Average execution count per second during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.31</para>
             /// </summary>
             [NameInMap("ExecPs")]
             [Validation(Required=false)]
             public double? ExecPs { get; set; }
 
             /// <summary>
-            /// Total number of executions during the execution period.
+            /// <para>Total number of executions during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Executions")]
             [Validation(Required=false)]
             public double? Executions { get; set; }
 
             /// <summary>
-            /// Average number of partition accessed during the execution period.
+            /// <para>Average number of partition accessed during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("FailCount")]
             [Validation(Required=false)]
             public double? FailCount { get; set; }
 
             /// <summary>
-            /// Error percentage during the execution period.
+            /// <para>Error percentage during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("FailPercentage")]
             [Validation(Required=false)]
             public double? FailPercentage { get; set; }
 
             /// <summary>
-            /// Whether an internal SQL.
+            /// <para>Whether an internal SQL.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Inner")]
             [Validation(Required=false)]
             public bool? Inner { get; set; }
 
             /// <summary>
-            /// Local plan percentage during the execution period.
+            /// <para>Local plan percentage during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("LocalPlanPercentage")]
             [Validation(Required=false)]
             public double? LocalPlanPercentage { get; set; }
 
             /// <summary>
-            /// Max affected rows during the execution period.
+            /// <para>Max affected rows during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000.0</para>
             /// </summary>
             [NameInMap("MaxAffectedRows")]
             [Validation(Required=false)]
             public double? MaxAffectedRows { get; set; }
 
             /// <summary>
-            /// Max Application event wait time (in milliseconds) during the execution period
+            /// <para>Max Application event wait time (in milliseconds) during the execution period</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("MaxApplicationWaitTime")]
             [Validation(Required=false)]
             public double? MaxApplicationWaitTime { get; set; }
 
             /// <summary>
-            /// Max Concurrency event wait time (in milliseconds) during the execution period
+            /// <para>Max Concurrency event wait time (in milliseconds) during the execution period</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("MaxConcurrencyWaitTime")]
             [Validation(Required=false)]
             public double? MaxConcurrencyWaitTime { get; set; }
 
             /// <summary>
-            /// Max CPU time.
+            /// <para>Max CPU time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>257.967</para>
             /// </summary>
             [NameInMap("MaxCpuTime")]
             [Validation(Required=false)]
             public double? MaxCpuTime { get; set; }
 
             /// <summary>
-            /// Max physical read count during the execution period.
+            /// <para>Max physical read count during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("MaxDiskReads")]
             [Validation(Required=false)]
             public double? MaxDiskReads { get; set; }
 
             /// <summary>
-            /// Max response time during the execution period.
+            /// <para>Max response time during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>260.044</para>
             /// </summary>
             [NameInMap("MaxElapsedTime")]
             [Validation(Required=false)]
             public double? MaxElapsedTime { get; set; }
 
             /// <summary>
-            /// Max returned rows during the execution period.
+            /// <para>Max returned rows during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("MaxReturnRows")]
             [Validation(Required=false)]
             public double? MaxReturnRows { get; set; }
 
             /// <summary>
-            /// Max UserIO event wait time (in milliseconds) during the execution period.
+            /// <para>Max UserIO event wait time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("MaxUserIoWaitTime")]
             [Validation(Required=false)]
             public double? MaxUserIoWaitTime { get; set; }
 
             /// <summary>
-            /// Max wait time (in milliseconds) during the execution period.
+            /// <para>Max wait time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3.4</para>
             /// </summary>
             [NameInMap("MaxWaitTime")]
             [Validation(Required=false)]
             public double? MaxWaitTime { get; set; }
 
             /// <summary>
-            /// Plan hit rage during the execution period.
+            /// <para>Plan hit rage during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("MissPlanPercentage")]
             [Validation(Required=false)]
             public double? MissPlanPercentage { get; set; }
 
             /// <summary>
-            /// Missed hit count of the execution plan during the execution period.
+            /// <para>Missed hit count of the execution plan during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("MissPlans")]
             [Validation(Required=false)]
             public double? MissPlans { get; set; }
 
             /// <summary>
-            /// Remote plan percentage during the execution period.
+            /// <para>Remote plan percentage during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("RemotePlanPercentage")]
             [Validation(Required=false)]
             public double? RemotePlanPercentage { get; set; }
 
             /// <summary>
-            /// Remote execution count during the execution period.
+            /// <para>Remote execution count during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RemotePlans")]
             [Validation(Required=false)]
             public double? RemotePlans { get; set; }
 
             /// <summary>
-            /// Number of occurrences of code 4012 during the execution period.
+            /// <para>Number of occurrences of code 4012 during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RetCode4012Count")]
             [Validation(Required=false)]
             public long? RetCode4012Count { get; set; }
 
             /// <summary>
-            /// Number of occurrences of code 4013 during the execution period.
+            /// <para>Number of occurrences of code 4013 during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RetCode4013Count")]
             [Validation(Required=false)]
             public long? RetCode4013Count { get; set; }
 
             /// <summary>
-            /// Number of occurrences of code 5001 during the execution period.
+            /// <para>Number of occurrences of code 5001 during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RetCode5001Count")]
             [Validation(Required=false)]
             public double? RetCode5001Count { get; set; }
 
             /// <summary>
-            /// Number of occurrences of code 5024 during the execution period.
+            /// <para>Number of occurrences of code 5024 during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RetCode5024Count")]
             [Validation(Required=false)]
             public double? RetCode5024Count { get; set; }
 
             /// <summary>
-            /// Number of occurrences of code 5167 during the execution period.
+            /// <para>Number of occurrences of code 5167 during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RetCode5167Count")]
             [Validation(Required=false)]
             public double? RetCode5167Count { get; set; }
 
             /// <summary>
-            /// Number of occurrences of code 5217 during the execution period.
+            /// <para>Number of occurrences of code 5217 during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RetCode5217Count")]
             [Validation(Required=false)]
             public double? RetCode5217Count { get; set; }
 
             /// <summary>
-            /// Number of occurrences of code 6002 during the execution period.
+            /// <para>Number of occurrences of code 6002 during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RetCode6002Count")]
             [Validation(Required=false)]
             public double? RetCode6002Count { get; set; }
 
             /// <summary>
-            /// Total number of retries during the execution period.
+            /// <para>Total number of retries during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("RetryCount")]
             [Validation(Required=false)]
             public double? RetryCount { get; set; }
 
             /// <summary>
-            /// RPC count during the execution period.
+            /// <para>RPC count during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RpcCount")]
             [Validation(Required=false)]
             public double? RpcCount { get; set; }
 
             /// <summary>
-            /// The server where the SQL is executed.
+            /// <para>The server where the SQL is executed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-bp1db1a<b>s038</b>mej**</para>
             /// </summary>
             [NameInMap("Server")]
             [Validation(Required=false)]
             public string Server { get; set; }
 
             /// <summary>
-            /// The IP address of the server.
+            /// <para>The IP address of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-bp1db1a<b>s038</b>mej**</para>
             /// </summary>
             [NameInMap("ServerIp")]
             [Validation(Required=false)]
             public string ServerIp { get; set; }
 
             /// <summary>
-            /// The server port where the SQL is executed.
+            /// <para>The server port where the SQL is executed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10110</para>
             /// </summary>
             [NameInMap("ServerPort")]
             [Validation(Required=false)]
             public long? ServerPort { get; set; }
 
             /// <summary>
-            /// SQL ID.
+            /// <para>SQL ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8D6E84<b><b>0B8FB1823D199E2CA1</b></b></para>
             /// </summary>
             [NameInMap("SqlId")]
             [Validation(Required=false)]
@@ -787,21 +979,30 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             }
 
             /// <summary>
-            /// SQL text (the first 100 characters).
+            /// <para>SQL text (the first 100 characters).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>select a from b where</para>
             /// </summary>
             [NameInMap("SqlTextShort")]
             [Validation(Required=false)]
             public string SqlTextShort { get; set; }
 
             /// <summary>
-            /// SQL type.
+            /// <para>SQL type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>select</para>
             /// </summary>
             [NameInMap("SqlType")]
             [Validation(Required=false)]
             public string SqlType { get; set; }
 
             /// <summary>
-            /// Strong consistent transaction percentage during the execution period.
+            /// <para>Strong consistent transaction percentage during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100.0</para>
             /// </summary>
             [NameInMap("StrongConsistencyPercentage")]
             [Validation(Required=false)]
@@ -812,56 +1013,80 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
             public double? SumDbTime { get; set; }
 
             /// <summary>
-            /// Total response time (in milliseconds) during the execution period.
+            /// <para>Total response time (in milliseconds) during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>11452126.36</para>
             /// </summary>
             [NameInMap("SumElapsedTime")]
             [Validation(Required=false)]
             public double? SumElapsedTime { get; set; }
 
             /// <summary>
-            /// Total logical reads of the SQL during the execution period.
+            /// <para>Total logical reads of the SQL during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("SumLogicalReads")]
             [Validation(Required=false)]
             public double? SumLogicalReads { get; set; }
 
             /// <summary>
-            /// The total wait time (in milliseconds) during the internal waiting period.
+            /// <para>The total wait time (in milliseconds) during the internal waiting period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>9421.73</para>
             /// </summary>
             [NameInMap("SumWaitTime")]
             [Validation(Required=false)]
             public double? SumWaitTime { get; set; }
 
             /// <summary>
-            /// Table scan percentage during the execution period.
+            /// <para>Table scan percentage during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("TableScanPercentage")]
             [Validation(Required=false)]
             public double? TableScanPercentage { get; set; }
 
             /// <summary>
-            /// Total wait time during the execution period.
+            /// <para>Total wait time during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.966</para>
             /// </summary>
             [NameInMap("TotalWaitTime")]
             [Validation(Required=false)]
             public double? TotalWaitTime { get; set; }
 
             /// <summary>
-            /// Username.
+            /// <para>Username.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test_user</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
             public string UserName { get; set; }
 
             /// <summary>
-            /// Longest wait event during the execution period.
+            /// <para>Longest wait event during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>none</para>
             /// </summary>
             [NameInMap("WaitEvent")]
             [Validation(Required=false)]
             public string WaitEvent { get; set; }
 
             /// <summary>
-            /// Eventually consistent transaction percentage during the execution period.
+            /// <para>Eventually consistent transaction percentage during the execution period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0</para>
             /// </summary>
             [NameInMap("WeakConsistencyPercentage")]
             [Validation(Required=false)]
@@ -870,7 +1095,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EE205C00-30E4-<b><b>-</b></b>-87E3A8A2AA0C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

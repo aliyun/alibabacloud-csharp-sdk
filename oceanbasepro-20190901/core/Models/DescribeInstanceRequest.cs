@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeInstanceRequest : TeaModel {
         /// <summary>
-        /// The size of the data disk, in GB.
+        /// <para>The ID of the OceanBase cluster.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("MaxConnectionLimit")]
-        [Validation(Required=false)]
-        public string MaxConnectionLimit { get; set; }
-
         /// <summary>
-        /// The information about the storage resources of the cluster.
+        /// <para>The number of the page to return.</para>
+        /// <list type="bullet">
+        /// <item><description>Pages start from page 1.</description></item>
+        /// <item><description>Default value: 1.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

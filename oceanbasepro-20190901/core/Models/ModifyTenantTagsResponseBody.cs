@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class ModifyTenantTagsResponseBody : TeaModel {
         /// <summary>
-        /// The tag modification result.
+        /// <para>The tag modification result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>done</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

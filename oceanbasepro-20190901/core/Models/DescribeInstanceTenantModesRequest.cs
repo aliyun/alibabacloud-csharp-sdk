@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeInstanceTenantModesRequest : TeaModel {
         /// <summary>
-        /// The operation that you want to perform.   
-        /// Set the value to **DescribeInstanceTenantModes**.
+        /// <para>The operation that you want to perform.<br>Set the value to <b>DescribeInstanceTenantModes</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

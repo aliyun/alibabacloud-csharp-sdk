@@ -10,30 +10,36 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class DescribeAvailableCpuResourceRequest : TeaModel {
         /// <summary>
-        /// The CPU resources available.
+        /// <para>The CPU resources available.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ob317v4uif****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// ```
-        /// http(s)://[Endpoint]/?Action=DescribeAvailableCpuResource
-        /// &InstanceId=ob317v4uif****
-        /// &TenantId=ob2mr3oae0****
-        /// &ModifyType=update
-        /// &Common request parameters
-        /// ```
+        /// <pre><c>http(s)://[Endpoint]/?Action=DescribeAvailableCpuResource
+        /// &amp;InstanceId=ob317v4uif****
+        /// &amp;TenantId=ob2mr3oae0****
+        /// &amp;ModifyType=update
+        /// &amp;Common request parameters
+        /// </c></pre>
+        /// 
+        /// <b>Example:</b>
+        /// <para>update</para>
         /// </summary>
         [NameInMap("ModifyType")]
         [Validation(Required=false)]
         public string ModifyType { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform.   
-        /// Set the value to **DescribeAvailableCpuResource**.
+        /// <para>The operation that you want to perform.<br>Set the value to <b>DescribeAvailableCpuResource</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ob2mr3oae0****</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
