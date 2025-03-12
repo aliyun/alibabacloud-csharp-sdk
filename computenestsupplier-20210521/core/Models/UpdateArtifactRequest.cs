@@ -68,6 +68,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 [Validation(Required=false)]
                 public string Branch { get; set; }
 
+                [NameInMap("Endpoint")]
+                [Validation(Required=false)]
+                public string Endpoint { get; set; }
+
+                [NameInMap("OrgId")]
+                [Validation(Required=false)]
+                public string OrgId { get; set; }
+
                 /// <summary>
                 /// <para>The owner of the code repository.</para>
                 /// <remarks>
@@ -90,6 +98,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 [NameInMap("Platform")]
                 [Validation(Required=false)]
                 public string Platform { get; set; }
+
+                [NameInMap("RepoId")]
+                [Validation(Required=false)]
+                public long? RepoId { get; set; }
 
                 /// <summary>
                 /// <para>The name of the repository.</para>

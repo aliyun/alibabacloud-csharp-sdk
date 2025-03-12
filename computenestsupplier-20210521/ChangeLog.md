@@ -1,3 +1,10 @@
+2025-03-12 Version: 6.0.1
+- Update API CreateArtifact: update param ArtifactBuildProperty.
+- Update API ListServiceInstanceResources: update param NextToken.
+- Update API UpdateArtifact: update param ArtifactBuildProperty.
+- Update API UpgradeServiceInstance: update param ServiceInstanceId.
+
+
 2025-03-05 Version: 6.0.0
 - Support API CancelServiceRegistration.
 - Support API CreateServiceTestCase.
