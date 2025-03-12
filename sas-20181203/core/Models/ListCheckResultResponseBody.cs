@@ -330,6 +330,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? TrialPermission { get; set; }
 
             /// <summary>
+            /// <para>Check whether the data delivery period for ActionTrail is enabled for more than 30 days to establish a baseline of behaviour.</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: REQUIRED</description></item>
+            /// <item><description><b>1</b>: NOT REQUIRED</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("TrialPermissionType")]
+            [Validation(Required=false)]
+            public int? TrialPermissionType { get; set; }
+
+            /// <summary>
             /// <para>The cloud service provider.</para>
             /// 
             /// <b>Example:</b>

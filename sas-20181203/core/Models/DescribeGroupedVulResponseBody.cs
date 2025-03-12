@@ -47,6 +47,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AsapCount { get; set; }
 
             /// <summary>
+            /// <para>The timestamp when the vulnerability was first detected. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1639371046000</para>
+            /// </summary>
+            [NameInMap("GmtFirst")]
+            [Validation(Required=false)]
+            public long? GmtFirst { get; set; }
+
+            /// <summary>
             /// <para>The timestamp when the vulnerability was last detected. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
@@ -66,6 +76,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? HandledCount { get; set; }
 
+            /// <summary>
+            /// <para>The language type associated with the vulnerability. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>java</b></description></item>
+            /// <item><description><b>php</b></description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> This parameter is valid only for a vulnerability of the sca type.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>java</para>
+            /// </summary>
             [NameInMap("LanguageType")]
             [Validation(Required=false)]
             public string LanguageType { get; set; }

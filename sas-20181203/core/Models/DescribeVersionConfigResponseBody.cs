@@ -252,6 +252,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? MVUnusedAuthCount { get; set; }
 
         /// <summary>
+        /// <para>When both the annual/monthly and pay-as-you-go services of Cloud Security Center\&quot;s host and container security are activated, the higher protection version among the two is selected. Values: - <b>1</b>: Free Edition - <b>6</b>: Anti-Virus Edition - <b>5</b>: Advanced Edition - <b>3</b>: Enterprise Edition - <b>7</b>: Ultimate Edition</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
+        /// </summary>
+        [NameInMap("MergedVersion")]
+        [Validation(Required=false)]
+        public int? MergedVersion { get; set; }
+
+        /// <summary>
         /// <para>Indicates whether the new version of the threat analysis and response feature is enabled. With the new version, you can purchase the amount of log data that you want to add to the feature and log storage capacity. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: no</description></item>
@@ -274,6 +284,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("OpenTime")]
         [Validation(Required=false)]
         public long? OpenTime { get; set; }
+
+        /// <summary>
+        /// <para>When activating the pay-as-you-go service for host and container security, this represents the highest protection version for the already bound assets. The values are as follows: - <b>1</b>: Free Edition - <b>3</b>: Enterprise Edition - <b>5</b>: Advanced Edition - <b>6</b>: Anti-Virus Edition - <b>7</b>: Flagship Edition</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
+        /// </summary>
+        [NameInMap("PostPayHostVersion")]
+        [Validation(Required=false)]
+        public int? PostPayHostVersion { get; set; }
 
         /// <summary>
         /// <para>The instance ID of Security Center that uses the pay-as-you-go billing method.</para>

@@ -133,6 +133,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public AddContainerDefenseRuleRequestWhitelist Whitelist { get; set; }
         public class AddContainerDefenseRuleRequestWhitelist : TeaModel {
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The hash values of the files that need to be added to the whitelist.</para>
             /// <remarks>
@@ -141,6 +143,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("Hash")]
             [Validation(Required=false)]
+            [Obsolete]
             public List<string> Hash { get; set; }
 
             /// <summary>

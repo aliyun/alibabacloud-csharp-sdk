@@ -20,15 +20,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The version of the anti-ransomware policy. Set the value to <b>2.0.0</b>.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0.0</para>
         /// </summary>
         [NameInMap("PolicyVersion")]
         [Validation(Required=false)]
+        [Obsolete]
         public string PolicyVersion { get; set; }
 
         /// <summary>

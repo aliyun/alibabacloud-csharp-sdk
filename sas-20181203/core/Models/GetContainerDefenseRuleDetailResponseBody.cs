@@ -181,6 +181,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public GetContainerDefenseRuleDetailResponseBodyDataWhitelist Whitelist { get; set; }
             public class GetContainerDefenseRuleDetailResponseBodyDataWhitelist : TeaModel {
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
                 /// <para>The hash values of the files that are added to the whitelist.</para>
                 /// <remarks>
@@ -189,6 +191,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// </summary>
                 [NameInMap("Hash")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public List<string> Hash { get; set; }
 
                 /// <summary>

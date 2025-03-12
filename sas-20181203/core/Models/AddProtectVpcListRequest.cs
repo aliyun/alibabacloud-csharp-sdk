@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Collection of new VPC instance IDs.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~Describevpclist~~">Describevpclist</a> interface to obtain this parameter.</para>
+        /// <para>Call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> interface to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Collection of VPC instance IDs to be deleted.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~Describevpclist~~">Describevpclist</a> interface to obtain this parameter.</para>
+        /// <para>Call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> interface to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

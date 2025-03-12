@@ -470,6 +470,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PodCount { get; set; }
 
             /// <summary>
+            /// <para>The billing method of the protection version currently bound to the asset. Values: - <b>0</b>: Subscription - <b>1</b>: Pay-as-you-go</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
+            [NameInMap("PostPaidFlag")]
+            [Validation(Required=false)]
+            public int? PostPaidFlag { get; set; }
+
+            /// <summary>
             /// <para>The region ID of the asset.</para>
             /// 
             /// <b>Example:</b>

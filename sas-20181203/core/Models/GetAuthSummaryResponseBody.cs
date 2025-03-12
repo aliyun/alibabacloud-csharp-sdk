@@ -156,6 +156,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BindEcsCount { get; set; }
 
             /// <summary>
+            /// <para>Bind the number of cores for postpaid authorization assets.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("PostPaidBindCoreCount")]
+            [Validation(Required=false)]
+            public int? PostPaidBindCoreCount { get; set; }
+
+            /// <summary>
+            /// <para>The number of assets bound to the postpaid authorization.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("PostPaidBindEcsCount")]
+            [Validation(Required=false)]
+            public int? PostPaidBindEcsCount { get; set; }
+
+            /// <summary>
             /// <para>The number of cores of the assets that are at risk.</para>
             /// 
             /// <b>Example:</b>
@@ -214,6 +234,95 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("UnBindEcsCount")]
             [Validation(Required=false)]
             public int? UnBindEcsCount { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>Activate the pay-as-you-go service protection version for hosts and container security, which is the highest protection version among all bound hosts. Values:   - <b>1</b>: Free Edition  - <b>3</b>: Enterprise Edition - <b>5</b>: Advanced Edition - <b>6</b>: Antivirus Edition     - <b>7</b>: Flagship Edition</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
+        /// </summary>
+        [NameInMap("PostPaidHighestVersion")]
+        [Validation(Required=false)]
+        public string PostPaidHighestVersion { get; set; }
+
+        /// <summary>
+        /// <para>The pay-as-you-go service for host and container security adds an automatic binding identifier for new hosts, with values: - <b>0</b>: Off - <b>1</b>: On</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("PostPaidHostAutoBind")]
+        [Validation(Required=false)]
+        public string PostPaidHostAutoBind { get; set; }
+
+        /// <summary>
+        /// <para>The version for the pay-as-you-go service of host and container security to automatically bind new assets, with values: - <b>1</b>: Free Edition - <b>3</b>: Enterprise Edition - <b>5</b>: Advanced Edition - <b>6</b>: Antivirus Edition - <b>7</b>: Flagship Edition</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
+        /// </summary>
+        [NameInMap("PostPaidHostAutoBindVersion")]
+        [Validation(Required=false)]
+        public string PostPaidHostAutoBindVersion { get; set; }
+
+        /// <summary>
+        /// <para>Statistics on pay-as-you-go service authorization for host and container security.</para>
+        /// </summary>
+        [NameInMap("PostPaidVersionSummary")]
+        [Validation(Required=false)]
+        public List<GetAuthSummaryResponseBodyPostPaidVersionSummary> PostPaidVersionSummary { get; set; }
+        public class GetAuthSummaryResponseBodyPostPaidVersionSummary : TeaModel {
+            /// <summary>
+            /// <para>The type of authorization consumed during binding, with values: - <b>ASSET</b>: Consumes the number of authorized devices - <b>CORE</b>: Consumes the number of authorized cores - <b>ASSET_AND_CORE</b>: Consumes both the number of authorized devices and cores.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ASSET</para>
+            /// </summary>
+            [NameInMap("AuthBindType")]
+            [Validation(Required=false)]
+            public string AuthBindType { get; set; }
+
+            /// <summary>
+            /// <para>Current version index, the higher the number, the newer the version, used for sorting. Values: - <b>1</b>: Free Edition - <b>2</b>: Anti-virus Edition - <b>3</b>: Advanced Edition - <b>4</b>: Enterprise Edition - <b>5</b>: Flagship Edition</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Index")]
+            [Validation(Required=false)]
+            public int? Index { get; set; }
+
+            /// <summary>
+            /// <para>Number of authorized cores used. &gt; This parameter is valid when AuthBindType is set to CORE or ASSET_AND_CORE.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("UsedCoreCount")]
+            [Validation(Required=false)]
+            public long? UsedCoreCount { get; set; }
+
+            /// <summary>
+            /// <para>Number of authorized devices used. &gt; This parameter is valid when AuthBindType is ASSET or ASSET_AND_CORE.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("UsedEcsCount")]
+            [Validation(Required=false)]
+            public long? UsedEcsCount { get; set; }
+
+            /// <summary>
+            /// <para>Bound host assets with postpaid versions, values:   - <b>1</b>: Free version  - <b>3</b>: Enterprise version - <b>5</b>: Advanced version - <b>6</b>: Anti-virus version     - <b>7</b>: Flagship version</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
+            [NameInMap("Version")]
+            [Validation(Required=false)]
+            public int? Version { get; set; }
 
         }
 
