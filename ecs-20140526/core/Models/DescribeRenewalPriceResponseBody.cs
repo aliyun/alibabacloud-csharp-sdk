@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>Details about the promotion rules.</para>
+            /// <para>The information about the promotion rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]

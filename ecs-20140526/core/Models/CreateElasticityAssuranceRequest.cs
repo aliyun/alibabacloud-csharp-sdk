@@ -51,10 +51,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string AssuranceTimes { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable auto-renewal for the elasticity assurance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        /// <summary>
+        /// <para>The auto-renewal period. Unit: month. Valid values: 1, 2, 3, 6, 12, 24, and 36.</para>
+        /// <list type="bullet">
+        /// <item><description>Default value when <c>PeriodUnit</c> is set to Month: 1.</description></item>
+        /// <item><description>Default value when <c>PeriodUnit</c> is set to Year: 12.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you set <c>AutoRenew</c> to <c>true</c>, you must specify this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("AutoRenewPeriod")]
         [Validation(Required=false)]
         public int? AutoRenewPeriod { get; set; }
@@ -81,8 +105,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances for which to reserve capacity of an instance type.</para>
+        /// <para>The total number of instances of an instance type for which you want to reserve capacity.</para>
         /// <para>Valid values: 1 to 1000.</para>
+        /// <remarks>
+        /// <para> You must specify this parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -123,10 +150,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The term of the elasticity assurance. The unit of the term is determined by the <c>PeriodUnit</c> value. Valid values:</para>
+        /// <para>The term of the elasticity assurance. The unit of the term is determined by the value of <c>PeriodUnit</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When <c>PeriodUnit</c> is set to <c>Month</c>, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
-        /// <item><description>When <c>PeriodUnit</c> is set to <c>Year</c>, the valid values are 1, 2, 3, 4, and 5.</description></item>
+        /// <item><description>When the value of <c>PeriodUnit</c> is <c>Month</c>, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
+        /// <item><description>When the value of <c>PeriodUnit</c> is <c>Year</c>, the valid values are 1, 2, 3, 4, and 5.</description></item>
+        /// <item><description>When the value of <c>PeriodUnit</c> is <c>Day</c>, the valid values are 1 to 365.</description></item>
         /// </list>
         /// <para>Default value: 1.</para>
         /// 
@@ -140,8 +168,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The unit of the term of the elasticity assurance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
+        /// <item><description><para>Month</para>
+        /// </description></item>
+        /// <item><description><para>Year</para>
+        /// </description></item>
+        /// <item><description><para>Day</para>
+        /// <para>**</para>
+        /// <para><b>Note</b> If you set <c>PeriodUnit</c> to <c>Day</c>, you must specify RecurrenceRules to create a time-segmented elasticity assurance.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Year.</para>
         /// 
@@ -151,6 +185,77 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
+
+        /// <summary>
+        /// <para>The assurance schedules based on which the capacity reservation takes effect.</para>
+        /// <remarks>
+        /// <para> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
+        /// </remarks>
+        /// </summary>
+        [NameInMap("RecurrenceRules")]
+        [Validation(Required=false)]
+        public List<CreateElasticityAssuranceRequestRecurrenceRules> RecurrenceRules { get; set; }
+        public class CreateElasticityAssuranceRequestRecurrenceRules : TeaModel {
+            /// <summary>
+            /// <para>The end time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("EndHour")]
+            [Validation(Required=false)]
+            public int? EndHour { get; set; }
+
+            /// <summary>
+            /// <para>The type of the assurance schedule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Daily</description></item>
+            /// <item><description>Weekly</description></item>
+            /// <item><description>Monthly</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> You must specify both <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Daily</para>
+            /// </summary>
+            [NameInMap("RecurrenceType")]
+            [Validation(Required=false)]
+            public string RecurrenceType { get; set; }
+
+            /// <summary>
+            /// <para>The days of the week or month on which the capacity reservation takes effect or the interval, in number of days, at which the capacity reservation takes effect.</para>
+            /// <list type="bullet">
+            /// <item><description>If you set <c>RecurrenceType</c> to <c>Daily</c>, you can specify only one value for this parameter. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</description></item>
+            /// <item><description>If you set <c>RecurrenceType</c> to <c>Weekly</c>, you can specify multiple values for this parameter. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <c>1,2</c>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</description></item>
+            /// <item><description>If you set <c>RecurrenceType</c> to <c>Monthly</c>, you can specify two values in the <c>A-B</c> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A. Example: <c>1-5</c>, which specifies that the capacity reservation takes effect every day from the first day up to the fifth day of each month.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> You must specify both <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("RecurrenceValue")]
+            [Validation(Required=false)]
+            public string RecurrenceValue { get; set; }
+
+            /// <summary>
+            /// <para>The start time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</para>
+            /// <remarks>
+            /// <para> You must specify both <c>StartHour</c> and <c>EndHour</c>. EndHour must be at least four hours later than StartHour.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
+            [NameInMap("StartHour")]
+            [Validation(Required=false)]
+            public int? StartHour { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The ID of the region in which to create the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>

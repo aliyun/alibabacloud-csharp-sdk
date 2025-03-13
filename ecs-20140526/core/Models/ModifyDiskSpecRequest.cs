@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskSpecRequest : TeaModel {
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-g</para>
+        /// </summary>
         [NameInMap("DestinationZoneId")]
         [Validation(Required=false)]
         public string DestinationZoneId { get; set; }

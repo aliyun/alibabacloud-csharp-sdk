@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class PurchaseReservedInstancesOfferingResponseBody : TeaModel {
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23841229****</para>
+        /// </summary>
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
+
+        /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>

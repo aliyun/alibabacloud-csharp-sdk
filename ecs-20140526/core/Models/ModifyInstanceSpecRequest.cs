@@ -121,11 +121,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("Disk")]
         [Validation(Required=false)]
         public List<ModifyInstanceSpecRequestDisk> Disk { get; set; }
         public class ModifyInstanceSpecRequestDisk : TeaModel {
             /// <summary>
+            /// <remarks>
+            /// <para> This parameter is in invitational preview and is not publicly available.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -134,6 +143,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Category { get; set; }
 
             /// <summary>
+            /// <remarks>
+            /// <para> This parameter is in invitational preview and is not publicly available.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -142,6 +155,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DiskId { get; set; }
 
             /// <summary>
+            /// <remarks>
+            /// <para> This parameter is in invitational preview and is not publicly available.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -220,6 +237,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <remarks>
         /// <para> This parameter is not publicly available.</para>
         /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Online</description></item>
+        /// <item><description>Offline</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

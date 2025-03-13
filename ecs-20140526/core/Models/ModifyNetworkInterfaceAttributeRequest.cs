@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork EnhancedNetwork { get; set; }
         public class ModifyNetworkInterfaceAttributeRequestEnhancedNetwork : TeaModel {
             /// <summary>
+            /// <remarks>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>

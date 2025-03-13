@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePrefixListAssociationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The query token that is returned in this call. If the return value is empty, no more data is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource.</para>
+        /// <para>Details about the resources that are associated with the prefix list.</para>
         /// </summary>
         [NameInMap("PrefixListAssociations")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribePrefixListAssociationsResponseBodyPrefixListAssociationsPrefixListAssociation> PrefixListAssociation { get; set; }
             public class DescribePrefixListAssociationsResponseBodyPrefixListAssociationsPrefixListAssociation : TeaModel {
                 /// <summary>
-                /// <para>The type of the resource.</para>
+                /// <para>The ID of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sg-bp11ujym6xsff6l0****</para>
@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
+                /// <para>The type of the resource.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>securitygroup</para>
                 /// </summary>
@@ -53,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Details about the resources that are associated with the prefix list.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>38793DB8-A4B2-4AEC-BFD3-111234E9188D</para>

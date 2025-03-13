@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePrefixListAssociationsRequest : TeaModel {
         /// <summary>
-        /// <para>The query token that is returned in this call. If the return value is empty, no more data is returned.</para>
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Maximum value: 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,9 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Maximum value: 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <para>The query token. Set the value to the <c>NextToken</c> value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the <c>NextToken</c> value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.</para>
+        /// <para>The ID of the prefix list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PrefixListId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the prefix list.</para>
+        /// <para>The region ID of the prefix list. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

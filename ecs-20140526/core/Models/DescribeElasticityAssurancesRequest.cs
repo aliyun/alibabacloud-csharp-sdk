@@ -77,6 +77,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The type of the elasticity assurance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ElasticityAssurance: the general-purpose elasticity assurance. RecurrenceRules is not specified for a general-purpose elasticity assurance.</description></item>
+        /// <item><description>TimeDivisionElasticityAssurance: the time-segmented elasticity assurance. RecurrenceRules is specified for a time-segmented assurance.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> The time-segmented assurance of the elasticity assurance is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ElasticityAssurance</para>
+        /// </summary>
+        [NameInMap("PackageType")]
+        [Validation(Required=false)]
+        public string PackageType { get; set; }
+
+        /// <summary>
         /// <remarks>
         /// <para>This parameter is deprecated.</para>
         /// </remarks>
@@ -130,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>Active: The elasticity assurance is in effect.</description></item>
         /// <item><description>Released: The elasticity assurance is released.</description></item>
         /// </list>
-        /// <para>Default value: Active.</para>
+        /// <para>If you do not specify this parameter, elasticity assurances in states other than Pending and Released are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>

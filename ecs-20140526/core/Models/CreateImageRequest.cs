@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateImageRequest : TeaModel {
         /// <summary>
-        /// <para>The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the custom image, you must use Architecture to specify the system architecture of the system disk. Valid values:</para>
+        /// <para>The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the custom image, use Architecture to specify the system architecture of the system disk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>i386</description></item>
         /// <item><description>x86_64</description></item>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DetectionStrategy { get; set; }
 
         /// <summary>
-        /// <para>The information about the custom image.</para>
+        /// <para>The information about the custom image. To create a custom image from multiple snapshots, specify the parameters in this parameter list.</para>
         /// </summary>
         [NameInMap("DiskDeviceMapping")]
         [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The device name of disk N in the custom image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in alphabetical order.</description></item>
+            /// <item><description>For disks other than basic disks, such as standard SSDs, ultra disks, and Enterprise SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in alphabetical order.</description></item>
             /// <item><description>For basic disks, the valid values range from /dev/xvda to /dev/xvdz in alphabetical order.</description></item>
             /// </list>
             /// 
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Device { get; set; }
 
             /// <summary>
-            /// <para>The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you do not specify this parameter, the disk type is determined by the corresponding snapshot. Valid values:</para>
+            /// <para>The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you leave this parameter empty, the disk type is determined by the corresponding snapshot. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>system: system disk. You can specify only one snapshot to use to create the system disk in the custom image.</description></item>
             /// <item><description>data: data disk. You can specify up to 16 snapshots to use to create data disks in the custom image.</description></item>
@@ -117,13 +117,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size vary based on the value of DiskDeviceMapping.N.SnapshotId.</para>
             /// <list type="bullet">
-            /// <item><description><para>If no corresponding snapshot IDs are specified in the value of DiskDeviceMapping.N.SnapshotId, DiskDeviceMapping.N.Size has the following valid values and default values:</para>
+            /// <item><description><para>If you leave DiskDeviceMapping.N.SnapshotId empty, DiskDeviceMapping.N.Size has the following valid values and default values:</para>
             /// <list type="bullet">
             /// <item><description>For basic disks, the valid values range from 5 to 2000, and the default value is 5.</description></item>
             /// <item><description>For other disks, the valid values range from 20 to 32768, and the default value is 20.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>If a corresponding snapshot ID is specified in the value of DiskDeviceMapping.N.SnapshotId, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.</para>
+            /// <item><description><para>If you specify DiskDeviceMapping.N.SnapshotId, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The image version.</para>
         /// <remarks>
-        /// <para>If you specify an instance by configuring <c>InstanceId</c>, and the instance uses an Alibaba Cloud Marketplace image or a custom image that is created from an Alibaba Cloud Marketplace image, you must leave this parameter empty or set this parameter to the value of ImageVersion of the instance.</para>
+        /// <para> If you specify an ECS instance that runs an Alibaba Cloud Marketplace image or a custom image derived from an Alibaba Cloud Marketplace image by using <c>InstanceId</c>, you must leave this parameter empty or set this parameter to the <c>ImageVersion</c> value of the image run by the specified ECS instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageVersion { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the ECS instance from which to create the custom image. To create a custom image from an ECS instance, you must specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1g6zv0ce8oghu7****</para>
@@ -272,9 +272,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which to assign the custom image. If you do not specify this parameter, the image is assigned to the default resource group.</para>
+        /// <para>The ID of the resource group to which to assign the custom image. If you leave this parameter empty, the image is assigned to the default resource group.</para>
         /// <remarks>
-        /// <para> If you call the CreateImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify <c>ResourceGroupId</c>, the <c>Forbbiden: User not authorized to operate on the specified resource</c> error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CreateImage operation again.</para>
+        /// <para> If you call the CreateImage operation as a Resource Access Management (RAM) user who does not have permissions on the default resource group and leave <c>ResourceGroupId</c> empty, the <c>Forbidden: User not authorized to operate on the specified resource</c> error message is returned. You must specify the ID of a resource group on which the RAM user has permissions or grant the RAM user permissions on the default resource group, and then call the CreateImage operation again.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -293,7 +293,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot that you want to use to create the custom image.</para>
+        /// <para>The ID of the snapshot from which to create the custom image.</para>
+        /// <remarks>
+        /// <para> To create a custom image from only a system disk snapshot of an ECS instance, you can specify this parameter or <c>DiskDeviceMapping.SnapshotId</c>. To create a custom image from multiple snapshots, you can specify only <c>DiskDeviceMapping.SnapshotId</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>s-bp17441ohwkdca0****</para>

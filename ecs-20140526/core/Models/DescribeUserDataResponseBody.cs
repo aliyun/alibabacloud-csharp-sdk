@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The user data of the instance.</para>
+        /// <remarks>
+        /// <para> If no user data is configured for the instance, an empty string is returned.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ZWNobyBoZWxsbyBlY321ABC</para>

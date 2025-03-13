@@ -16,12 +16,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The category of data disk N. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud: basic disk</description></item>
-            /// <item><description>cloud_efficiency: ultra disk</description></item>
-            /// <item><description>cloud_ssd: standard SSD</description></item>
-            /// <item><description>ephemeral_ssd: local SSD</description></item>
-            /// <item><description>cloud_essd: ESSD</description></item>
-            /// <item><description>cloud_auto: ESSD AutoPL disk</description></item>
+            /// <item><description>cloud: basic disk.</description></item>
+            /// <item><description>cloud_efficiency: ultra disk.</description></item>
+            /// <item><description>cloud_ssd: standard SSD.</description></item>
+            /// <item><description>ephemeral_ssd: local SSD.</description></item>
+            /// <item><description>cloud_essd: ESSD.</description></item>
+            /// <item><description>cloud_auto: ESSD AutoPL disk.</description></item>
             /// </list>
             /// <para>Valid values of N: 1 to 16.</para>
             /// 
@@ -52,23 +52,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The size of data disk N. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.</para>
+            /// <item><description><para>Valid values if DataDisk.N.Category is set to cloud: 5 to 2000.</para>
             /// </description></item>
-            /// <item><description><para>Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</para>
+            /// <item><description><para>Valid values if DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</para>
             /// </description></item>
-            /// <item><description><para>Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</para>
+            /// <item><description><para>Valid values if DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</para>
             /// </description></item>
-            /// <item><description><para>Valid values when DataDisk.N.Category is set to cloud_auto: 1 to 32768.</para>
+            /// <item><description><para>Valid values if DataDisk.N.Category is set to cloud_auto: 1 to 32768.</para>
             /// </description></item>
-            /// <item><description><para>Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the value of <c>DataDisk.N.PerformanceLevel</c>.</para>
+            /// <item><description><para>Valid values if DataDisk.N.Category is set to cloud_essd: vary based on the <c>DataDisk.N.PerformanceLevel</c> value.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</description></item>
-            /// <item><description>Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</description></item>
-            /// <item><description>Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</description></item>
-            /// <item><description>Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</description></item>
+            /// <item><description>Valid values if DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</description></item>
+            /// <item><description>Valid values if DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</description></item>
+            /// <item><description>Valid values if DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</description></item>
+            /// <item><description>Valid values if DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>Valid values when DataDisk.N.Category is set to ephemeral_ssd: 5 to 800.</para>
+            /// <item><description><para>Valid values if DataDisk.N.Category is set to ephemeral_ssd: 5 to 800.</para>
             /// </description></item>
             /// </list>
             /// <para>Valid values of N: 1 to 16.</para>
@@ -80,6 +80,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public long? Size { get; set; }
 
+            /// <summary>
+            /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
+            /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
+            /// <remarks>
+            /// <para> This parameter is available only if you set <c>DataDisk.N.Category</c> to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>40000</para>
+            /// </summary>
             [NameInMap("ProvisionedIops")]
             [Validation(Required=false)]
             public long? ProvisionedIops { get; set; }
@@ -412,6 +422,77 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PriceUnit { get; set; }
 
         /// <summary>
+        /// <para>Recurrence rules for the time-segmented assurance of the elasticity assurance.</para>
+        /// <remarks>
+        /// <para> The time-segmented assurance of the elasticity assurance is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
+        /// </remarks>
+        /// </summary>
+        [NameInMap("RecurrenceRules")]
+        [Validation(Required=false)]
+        public List<DescribePriceRequestRecurrenceRules> RecurrenceRules { get; set; }
+        public class DescribePriceRequestRecurrenceRules : TeaModel {
+            /// <summary>
+            /// <para>The time when the time-segmented assurance ends. The value must be on the hour.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("EndHour")]
+            [Validation(Required=false)]
+            public int? EndHour { get; set; }
+
+            /// <summary>
+            /// <para>The type of the recurrence rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Daily</description></item>
+            /// <item><description>Weekly</description></item>
+            /// <item><description>Monthly</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> If this parameter is specified, specify <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Daily</para>
+            /// </summary>
+            [NameInMap("RecurrenceType")]
+            [Validation(Required=false)]
+            public string RecurrenceType { get; set; }
+
+            /// <summary>
+            /// <para>The recurrency value of the time-segmented assurance.</para>
+            /// <list type="bullet">
+            /// <item><description>If you set <c>RecurrenceType</c> to <c>Daily</c>, you can set RecurrenceValue to only one value. Valid values: 1 to 31. The time-segmented assurance is performed every few days.</description></item>
+            /// <item><description>If you set <c>RecurrenceType</c> to <c>Weekly</c>, you can set RecurrenceValue to one or more values. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6. For example, <c>1,2</c> indicates that the time-segmented assurance is performed on Monday and Tuesday of every week.</description></item>
+            /// <item><description>If you set <c>RecurrenceType</c> to <c>Monthly</c>, you can set RecurrenceValue to two values in the <c>A-B</c> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <c>1-5</c> indicates that the time-segmented assurance is performed from the 1st to the 5th of each month.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> If this parameter is specified, you must specify <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
+            [NameInMap("RecurrenceValue")]
+            [Validation(Required=false)]
+            public string RecurrenceValue { get; set; }
+
+            /// <summary>
+            /// <para>The time when the time-segmented assurance takes effect. The value must be on the hour.</para>
+            /// <remarks>
+            /// <para> You must specify both StartHour and EndHour. The EndHour time must be at least 4 hours later than the StartHour time.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
+            [NameInMap("StartHour")]
+            [Validation(Required=false)]
+            public int? StartHour { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -431,14 +512,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid values:</para>
+        /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance: queries the most recent prices of ECS instances. When this parameter is set to <c>instance</c>, you must specify <c>InstanceType</c>.</description></item>
-        /// <item><description>disk: queries the most recent prices of cloud disks. When this parameter is set to <c>disk</c>, you must specify <c>DataDisk.1.Category</c> and <c>DataDisk.1.Size</c>.</description></item>
-        /// <item><description>bandwidth: queries the most recent prices of network usage.</description></item>
+        /// <item><description>instance: queries the most recent prices of ECS instances. If you set this parameter to <c>instance</c>, specify <c>InstanceType</c>.</description></item>
+        /// <item><description>disk: queries the most recent prices of cloud disks. If you set this parameter to <c>disk</c>, specify <c>DataDisk.1.Category</c> and <c>DataDisk.1.Size</c>.</description></item>
+        /// <item><description>diskperformance: Queries the most recent prices of the provioned performance of the Enterprise SSD (ESSD) AutoPL disk. You must also specify <c>DataDisk.1.Category</c> and <c>DataDisk.1.ProvisionedIops</c>.</description></item>
+        /// <item><description>bandwidth: queries the most recent prices for network usage.</description></item>
         /// <item><description>ddh: queries the most recent prices of dedicated hosts.</description></item>
-        /// <item><description>ElasticityAssurance: queries the most recent prices of elasticity assurances. When this parameter is set to <c>ElasticityAssurance</c>, you must specify <c>InstanceType</c>.</description></item>
-        /// <item><description>CapacityReservation: queries the most recent prices of capacity reservations. When this parameter is set to <c>CapacityReservation</c>, you must specify <c>InstanceType</c>.</description></item>
+        /// <item><description>ElasticityAssurance: queries the most recent prices of elasticity assurances. If you set this parameter to <c>ElasticityAssurance</c>, specify <c>InstanceType</c>.</description></item>
+        /// <item><description>CapacityReservation: queries the most recent prices of capacity reservations. If you set this parameter to <c>CapacityReservation</c>, specify <c>InstanceType</c>.</description></item>
         /// </list>
         /// <para>Default value: instance.</para>
         /// 
@@ -500,6 +582,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]
         public string SpotStrategy { get; set; }
+
+        /// <summary>
+        /// <para>The time when the time-segmented assurance of the elasticity assurance takes effect. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2020-10-30T06:32:00Z</para>
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         /// <summary>
         /// <para>The zone ID.</para>

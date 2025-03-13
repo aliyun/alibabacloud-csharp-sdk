@@ -43,6 +43,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string BootMode { get; set; }
 
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <b>The token can contain only ASCII characters and cannot exceed 64 characters in length.</b> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -182,12 +188,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The attributes of the custom image.</para>
+        /// <para>The attributes of the image.</para>
         /// </summary>
         [NameInMap("Features")]
         [Validation(Required=false)]
         public ImportImageRequestFeatures Features { get; set; }
         public class ImportImageRequestFeatures : TeaModel {
+            /// <summary>
+            /// <para>The metadata access mode version of the image. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>v1: You cannot set the metadata access mode to security hardening when you create instances from the image.</description></item>
+            /// <item><description>v2: You can set the metadata access mode to security hardening when you create instances from the image.</description></item>
+            /// </list>
+            /// <para>Default value: v1.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v2</para>
+            /// </summary>
             [NameInMap("ImdsSupport")]
             [Validation(Required=false)]
             public string ImdsSupport { get; set; }

@@ -94,6 +94,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>ExportImage</description></item>
         /// <item><description>RedeployInstance</description></item>
         /// <item><description>ModifyDiskSpec</description></item>
+        /// <item><description>ArchiveSnapshot</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

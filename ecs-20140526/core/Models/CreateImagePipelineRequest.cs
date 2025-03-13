@@ -27,6 +27,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public CreateImagePipelineRequestAdvancedOptions AdvancedOptions { get; set; }
         public class CreateImagePipelineRequestAdvancedOptions : TeaModel {
             /// <summary>
+            /// <para>是否禁用目标镜像名称自动增加后缀。可能值：</para>
+            /// <list type="bullet">
+            /// <item><description>disable：禁用。</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>disable</para>
+            /// </summary>
+            [NameInMap("ImageNameSuffix")]
+            [Validation(Required=false)]
+            public string ImageNameSuffix { get; set; }
+
+            /// <summary>
             /// <para>Specifies whether to retain Cloud Assistant Agent that is installed during the image building process. During the image building process, the system automatically installs Cloud Assistant Agent on the intermediate instance to run commands. You can choose whether to retain Cloud Assistant Agent that is installed during the image building process in the new image. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: retains Cloud Assistant Agent that is installed during the image building process in the new image.</description></item>
@@ -125,6 +138,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The image family. The image family name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https:// and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
         /// 
@@ -133,8 +148,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("ImageFamily")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ImageFamily { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The prefix of the image name. The prefix must be 2 to 64 characters in length. The prefix must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The prefix can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <para>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (<c>ExecutionId</c>) in the format of <c>{ImageName}_{ExecutionId}</c>.</para>
@@ -144,7 +162,101 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ImageName { get; set; }
+
+        /// <summary>
+        /// <para>目标镜像属性。</para>
+        /// </summary>
+        [NameInMap("ImageOptions")]
+        [Validation(Required=false)]
+        public CreateImagePipelineRequestImageOptions ImageOptions { get; set; }
+        public class CreateImagePipelineRequestImageOptions : TeaModel {
+            /// <summary>
+            /// <para>描述信息。长度为2~256个英文或中文字符，不能以<c>http://</c>和<c>https://</c>开头。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>This is description.</para>
+            /// </summary>
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
+            /// <para>目标镜像族系。长度为 2~128 个英文或中文字符。必须以大小写字母或中文开头，不能以 aliyun 和 acs:开头，不能包含 http://或者 https://。可以包含数字、半角冒号（:）、下划线（_）或者短划线（-）。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>family</para>
+            /// </summary>
+            [NameInMap("ImageFamily")]
+            [Validation(Required=false)]
+            public string ImageFamily { get; set; }
+
+            /// <summary>
+            /// <para>目标镜像特性相关属性。</para>
+            /// </summary>
+            [NameInMap("ImageFeatures")]
+            [Validation(Required=false)]
+            public CreateImagePipelineRequestImageOptionsImageFeatures ImageFeatures { get; set; }
+            public class CreateImagePipelineRequestImageOptionsImageFeatures : TeaModel {
+                /// <summary>
+                /// <para>构建的目标镜像是否支持 NVMe。可能值：</para>
+                /// <list type="bullet">
+                /// <item><description>supported：支持。表示以该镜像创建的实例支持 NVMe 协议。</description></item>
+                /// <item><description>unsupported：不支持。表示以该镜像创建的实例不支持 NVMe 协议。</description></item>
+                /// <item><description>auto：自动检测。由系统自动检测您的镜像是否安装NVMe驱动，该行为发生在构建阶段前，若您在构建时安装或者卸载了NVMe驱动，可能会出现结果偏差，建议您根据构建内容设置为supported或unsupported。</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>auto</para>
+                /// </summary>
+                [NameInMap("NvmeSupport")]
+                [Validation(Required=false)]
+                public string NvmeSupport { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>目标镜像名称前缀。长度为2~64个字符，必须以大小写字母或中文开头，不能以<c>http://</c>和<c>https://</c>开头。可以包含中文、英文、数字、半角冒号（:）、下划线（_）、半角句号（.）或者短划线（-）。</para>
+            /// <para>最终完整的镜像名称由系统自动拼接名称前缀与构建任务ID（<c>ExecutionId</c>），格式为<c>{ImageName}_{ExecutionId}</c>。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testImageName</para>
+            /// </summary>
+            [NameInMap("ImageName")]
+            [Validation(Required=false)]
+            public string ImageName { get; set; }
+
+            /// <summary>
+            /// <para>目标镜像标签。</para>
+            /// </summary>
+            [NameInMap("ImageTags")]
+            [Validation(Required=false)]
+            public List<CreateImagePipelineRequestImageOptionsImageTags> ImageTags { get; set; }
+            public class CreateImagePipelineRequestImageOptionsImageTags : TeaModel {
+                /// <summary>
+                /// <para>标签键。N 的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持 128 个字符，不能以<c>aliyun</c>和<c>acs:</c>开头，不能包含<c>http://</c>或者<c>https://</c>。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// <para>资源的标签值。N 的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持 128 个字符，不能以<c>acs:</c>开头，不能包含<c>http://</c>或者<c>https://</c>。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+        }
 
         /// <summary>
         /// <para>The attributes and settings of the image that you want to import. If you set <c>BaseImageType</c> to OSS, you must specify this parameter.</para>
@@ -174,7 +286,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>BIOS: BIOS mode</description></item>
             /// <item><description>UEFI: Unified Extensible Firmware Interface (UEFI) mode</description></item>
             /// </list>
-            /// <para>Default value: BIOS. If you set Architecture to <c>arm64</c>, set the value to UEFI.</para>
+            /// <para>Default value: BIOS. If you set Architecture to <c>arm64</c>, set this parameter to UEFI.</para>
             /// <remarks>
             /// <para> Before you specify this parameter, make sure that you are familiar with the boot modes supported by the image. If you specify a boot mode that is not supported by the image, ECS instances created from the image cannot start as expected. For information about the boot modes of images, see the <a href="~~2244655#b9caa9b8bb1wf~~">Boot modes of images</a> section of the &quot;Best practices for ECS instance boot modes&quot; topic.</para>
             /// </remarks>
@@ -347,12 +459,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to retain the imported original image. After the import is complete, the system automatically deletes the imported original image to prevent unnecessary storage fees. You can also choose to retain the imported original image. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: retains the imported original image. After the import is complete, the imported original image is not deleted even if the image building task is canceled or fails.</description></item>
-            /// <item><description>false: does not retain the imported original image.</description></item>
-            /// </list>
-            /// <para>Default value: false.</para>
+            /// <remarks>
+            /// <para> This parameter is in invitational preview.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -398,6 +507,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether the image created based on the image template supports the NVMe protocol. Valid values:</para>
         /// <list type="bullet">
@@ -411,6 +522,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </summary>
         [NameInMap("NvmeSupport")]
         [Validation(Required=false)]
+        [Obsolete]
         public string NvmeSupport { get; set; }
 
         [NameInMap("OwnerAccount")]

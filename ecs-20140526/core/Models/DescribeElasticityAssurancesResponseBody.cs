@@ -195,6 +195,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string LatestStartTime { get; set; }
 
                 /// <summary>
+                /// <para>The type of the elasticity assurance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>ElasticityAssurance: the general-purpose elasticity assurance.</description></item>
+                /// <item><description>TimeDivisionElasticityAssurance: the time-segmented assurance of the elasticity assurance.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ElasticityAssurance</para>
+                /// </summary>
+                [NameInMap("PackageType")]
+                [Validation(Required=false)]
+                public string PackageType { get; set; }
+
+                /// <summary>
                 /// <para>The ID of the elasticity assurance.</para>
                 /// 
                 /// <b>Example:</b>
@@ -227,6 +241,71 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [NameInMap("PrivatePoolOptionsName")]
                 [Validation(Required=false)]
                 public string PrivatePoolOptionsName { get; set; }
+
+                /// <summary>
+                /// <para>The recurrence rules of the time-segmented assurances.</para>
+                /// </summary>
+                [NameInMap("RecurrenceRules")]
+                [Validation(Required=false)]
+                public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRules RecurrenceRules { get; set; }
+                public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRules : TeaModel {
+                    [NameInMap("RecurrenceRule")]
+                    [Validation(Required=false)]
+                    public List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule> RecurrenceRule { get; set; }
+                    public class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule : TeaModel {
+                        /// <summary>
+                        /// <para>The time when the time-segmented assurance ends.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>10</para>
+                        /// </summary>
+                        [NameInMap("EndHour")]
+                        [Validation(Required=false)]
+                        public int? EndHour { get; set; }
+
+                        /// <summary>
+                        /// <para>The type of the recurrence rule. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>Daily</description></item>
+                        /// <item><description>Weekly</description></item>
+                        /// <item><description>Monthly</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Daily</para>
+                        /// </summary>
+                        [NameInMap("RecurrenceType")]
+                        [Validation(Required=false)]
+                        public string RecurrenceType { get; set; }
+
+                        /// <summary>
+                        /// <para>The recurrence value of the time-segmented assurance. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>If you set <c>RecurrenceType</c> to <c>Daily</c>, you can set RecurrenceValue to only one value. Valid values: 1 to 31. The time-segmented assurance is performed every few days.</description></item>
+                        /// <item><description>If you set <c>RecurrenceType</c> to <c>Weekly</c>, you can set RecurrenceValue to one or more values. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6. For example, <c>1,2</c> indicates that the time-segmented assurance is performed on Monday and Tuesday of every week.</description></item>
+                        /// <item><description>If you set <c>RecurrenceType</c> to <c>Monthly</c>, you can set RecurrenceValue to two values in the <c>A-B</c> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <c>1-5</c> indicates that the time-segmented assurance is performed from the 1st to the 5th of each month.</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1</para>
+                        /// </summary>
+                        [NameInMap("RecurrenceValue")]
+                        [Validation(Required=false)]
+                        public string RecurrenceValue { get; set; }
+
+                        /// <summary>
+                        /// <para>The time when the time-segmented assurance takes effect.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>4</para>
+                        /// </summary>
+                        [NameInMap("StartHour")]
+                        [Validation(Required=false)]
+                        public int? StartHour { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// <para>The region ID of the elasticity assurance.</para>

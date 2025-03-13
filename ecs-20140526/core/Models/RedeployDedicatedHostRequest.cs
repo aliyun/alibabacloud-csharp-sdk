@@ -21,6 +21,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to stop the instance before it is migrated to the destination dedicated host. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>reboot: stops the instance before migration.</description></item>
+        /// <item><description>LiveMigrationFirst: migrates the instance without stopping it. If the MigrationType parameter is set to live, you must specify the DedicatedHostId parameter. In this case, you cannot change the instance type of the ECS instance when the instance is migrated. If the migration in LiveMigrationFirst mode fails, the system switches to the Reboot mode.</description></item>
+        /// </list>
+        /// <para>Default value: reboot.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Reboot</para>
         /// 

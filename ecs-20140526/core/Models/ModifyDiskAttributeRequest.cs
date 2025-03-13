@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the performance burst feature for data disk N. Valid values:</para>
+        /// <para>Specifies whether to enable performance burst for the disk if the disk supports performance burst. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: encrypts the disk.</description></item>
-        /// <item><description>false: does not encrypt the disk.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> An error is reported if you specify this parameter for a disk that does not support performance burst.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -24,7 +27,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? BurstingEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to delete the automatic snapshots of the disk when the disk is released. This parameter is empty by default, which indicates that the current value remains unchanged.</para>
+        /// <para>Specifies whether to delete the automatic snapshots of the disk when the disk is released. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// <para>This parameter is empty by default, which indicates that the current value remains unchanged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -34,12 +42,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DeleteAutoSnapshot { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release the disk along with its associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.</para>
+        /// <para>Specifies whether to release the disk together with the associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.</para>
         /// <para>An error is returned if you set <c>DeleteWithInstance</c> to <c>false</c> in one of the following cases:</para>
         /// <list type="bullet">
         /// <item><description>The disk is a local disk.</description></item>
         /// <item><description>The disk is a basic disk and is not removable. If the Portable attribute of a disk is set to false, the disk is not removable.</description></item>
         /// </list>
+        /// <para>**</para>
+        /// <para><b>Warning</b> If you set DeleteWithInstance to false and the instance to which the disk is attached is locked for security reasons, the DeleteWithInstance attribute of the disk is ignored and the disk is released together with the instance. If &quot;LockReason&quot; : &quot;security&quot; is displayed in the response when you query information about an instance, the instance is locked for security reasons.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -59,9 +69,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the disk.</para>
+        /// <para>The ID of the disk whose attributes you want to modify.</para>
         /// <remarks>
-        /// <para>You can specify the <c>DiskId</c> parameter or the <c>DiskIds.N</c> parameter, but you cannot specify both parameters at the same time.</para>
+        /// <para> You can specify <c>DiskId</c> or <c>DiskIds.N</c>, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,9 +82,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of disk N. Valid values of N: 0 to 100.</para>
+        /// <para>The IDs of the disks whose attributes you want to modify. Valid values of N: 0 to 100.</para>
         /// <remarks>
-        /// <para>You can specify the <c>DiskId</c> parameter or the <c>DiskIds.N</c> parameter, but you cannot specify both parameters at the same time.</para>
+        /// <para> You can specify <c>DiskId</c> or <c>DiskIds.N</c>, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -95,14 +105,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the automatic snapshot policy feature for the cloud disk. Valid values:</para>
+        /// <para>Specifies whether to enable the automatic snapshot policy feature for the disk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
         /// </list>
         /// <para>This parameter is empty by default, which indicates that the current value remains unchanged.</para>
         /// <remarks>
-        /// <para> By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to associate an automatic snapshot policy with a cloud disk before you can use the policy.</para>
+        /// <para> By default, the automatic snapshot policy feature is enabled for cloud disks. You need to only apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned monitoring data entries.</para>
+        /// <para>The total number of monitoring data entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

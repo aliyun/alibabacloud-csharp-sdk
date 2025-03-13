@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeInstancesResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeInstancesResponseBodyInstancesInstance : TeaModel {
                 /// <summary>
+                /// <remarks>
+                /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                /// </remarks>
+                /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
                 /// </summary>
@@ -28,6 +32,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo AdditionalInfo { get; set; }
                 public class DescribeInstancesResponseBodyInstancesInstanceAdditionalInfo : TeaModel {
+                    /// <summary>
+                    /// <remarks>
+                    /// <para> This parameter is in invitational preview and is not publicly available.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("EnableHighDensityMode")]
                     [Validation(Required=false)]
                     public bool? EnableHighDensityMode { get; set; }
@@ -990,6 +1002,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The private domain name options of the instance.</para>
                 /// <para>For information about the resolution of ECS private domain names, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private DNS resolution</a>.</para>
+                /// <remarks>
+                /// <para> This parameter is returned only when the <c>AdditionalAttributes</c> parameter contains <c>PRIVATE_DNS_OPTIONS</c> in the request.</para>
+                /// </remarks>
                 /// </summary>
                 [NameInMap("PrivateDnsNameOptions")]
                 [Validation(Required=false)]

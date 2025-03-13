@@ -690,6 +690,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CreateLaunchTemplateRequestNetworkInterface> NetworkInterface { get; set; }
         public class CreateLaunchTemplateRequestNetworkInterface : TeaModel {
             /// <summary>
+            /// <para>Specifies whether to release ENI N when the instance is released. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// <para>Default value: true.</para>
+            /// <remarks>
+            /// <para> This parameter takes effect only for secondary ENIs.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("DeleteOnRelease")]
+            [Validation(Required=false)]
+            public bool? DeleteOnRelease { get; set; }
+
+            /// <summary>
             /// <para>The description of the secondary ENI. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>. The value of N in <c>NetworkInterface.N</c> cannot be greater than 1.</para>
             /// 
             /// <b>Example:</b>
@@ -720,7 +738,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</description></item>
-            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you do not need to set this parameter.</description></item>
+            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, you do not need to specify this parameter.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -750,13 +768,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <list type="bullet">
             /// <item><description><para>Valid values of N: 1 and 2.</para>
             /// <list type="bullet">
-            /// <item><description>If the value of N is 1, you can configure a primary or secondary ENI. If this parameter is specified, <c>Amount</c> is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified one are assigned to the instances. In this case, you cannot attach secondary ENIs to the instances.</description></item>
-            /// <item><description>If the value of N is 2, you can configure a primary ENI and a secondary ENI. If this parameter is specified, <c>Amount</c> is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, you cannot set <c>NetworkInterface.2.InstanceType</c> to Secondary to attach a secondary ENI.</description></item>
+            /// <item><description>If the value of N is 1, you can configure a primary or secondary ENI. If you specify this parameter, set <c>Amount</c> to a numeric value greater than 1, and set NetworkInterface.N.InstanceType to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified IP address are assigned to the instances. In this case, you cannot attach secondary ENIs to the instances.</description></item>
+            /// <item><description>If the value of N is 2, you must configure a primary ENI and a secondary ENI. If you specify this parameter, set <c>Amount</c> to a numeric value greater than 1, and set NetworkInterface.N.InstanceType to Primary, you cannot set <c>NetworkInterface.2.InstanceType</c> to Secondary to attach a secondary ENI.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, this parameter is equivalent to <c>PrivateIpAddress</c>. You cannot specify both this parameter and <c>PrivateIpAddress</c>.</para>
+            /// <item><description><para>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, this parameter is equivalent to <c>PrivateIpAddress</c>. You cannot specify both this parameter and <c>PrivateIpAddress</c> in the same request.</para>
             /// </description></item>
-            /// <item><description><para>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Secondary</c> or left empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.</para>
+            /// <item><description><para>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.</para>
             /// </description></item>
             /// </list>
             /// <remarks>
@@ -775,8 +793,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</description></item>
-            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you must set this parameter. In this case, this parameter is equivalent to <c>SecurityGroupId</c>. You cannot specify <c>SecurityGroupId</c>, <c>SecurityGroupIds.N</c>, or <c>NetworkInterface.N.SecurityGroupIds.N</c>.</description></item>
-            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Secondary</c> or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the instance.</description></item>
+            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, you must specify this parameter. In this case, this parameter is equivalent to <c>SecurityGroupId</c>, and you cannot specify <c>SecurityGroupId</c>, <c>SecurityGroupIds.N</c>, or <c>NetworkInterface.N.SecurityGroupIds.N</c>.</description></item>
+            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -787,15 +805,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of security group N to which to assign ENI N.</para>
+            /// <para>The IDs of security groups to which to assign ENI N.</para>
             /// <list type="bullet">
             /// <item><description>Valid values of the first N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</description></item>
-            /// <item><description>The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</description></item>
+            /// <item><description>The second N in this parameter indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</description></item>
             /// </list>
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you must specify this parameter or <c>NetworkInterface.N.SecurityGroupId</c>. In this case, this parameter is equivalent to <c>SecurityGroupIds.N</c>. You cannot specify <c>SecurityGroupId</c>, <c>SecurityGroupIds.N</c>, or <c>NetworkInterface.N.SecurityGroupId</c>.</description></item>
-            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Secondary</c> or left empty, this parameter is optional. The default value is the ID of the security group to which to assign the instance.</description></item>
+            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, you must specify this parameter or <c>NetworkInterface.N.SecurityGroupId</c>. In this case, this parameter is equivalent to <c>SecurityGroupIds.N</c>, and you cannot specify <c>SecurityGroupId</c>, <c>SecurityGroupIds.N</c>, or <c>NetworkInterface.N.SecurityGroupId</c>.</description></item>
+            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -810,8 +828,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</description></item>
-            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you must set this parameter. In this case, this parameter is equivalent to <c>VSwitchId</c>. You cannot specify both NetworkInterface.N.VSwitchId and <c>VSwitchId</c>.</description></item>
-            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Secondary</c> or left empty, this parameter is optional. The default value is the VSwitchId value.</description></item>
+            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, you must specify this parameter. In this case, this parameter is equivalent to <c>VSwitchId</c>. You cannot specify both NetworkInterface.N.VSwitchId and <c>VSwitchId</c> in the same request.</description></item>
+            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the VSwitchId value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -326,9 +326,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// <remarks>
+        /// <para> This parameter will be removed in the future. We recommend that you use <c>NextToken</c> and <c>MaxResults</c> for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -338,9 +338,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
-        /// <para>Maximum value: 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <remarks>
+        /// <para> This parameter will be removed in the future. We recommend that you use <c>NextToken</c> and <c>MaxResults</c> for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

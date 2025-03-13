@@ -688,6 +688,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CreateLaunchTemplateVersionRequestNetworkInterface> NetworkInterface { get; set; }
         public class CreateLaunchTemplateVersionRequestNetworkInterface : TeaModel {
             /// <summary>
+            /// <para>Specifies whether to release ENI N when the instance is released. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// <para>Default value: true.</para>
+            /// <remarks>
+            /// <para> This parameter takes effect only for secondary ENIs.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("DeleteOnRelease")]
+            [Validation(Required=false)]
+            public bool? DeleteOnRelease { get; set; }
+
+            /// <summary>
             /// <para>The description of the secondary ENI. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>. The value of N in <c>NetworkInterface.N</c> cannot be greater than 1.</para>
             /// 
             /// <b>Example:</b>
@@ -761,7 +779,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the security groups to which to assign the secondary ENI. The security group and the secondary ENI must belong to the same VPC. The valid values of N in <c>SecurityGroupIds.N</c> vary based on the maximum number of security groups to which a secondary ENI can belong. For more information, see the &quot;Security group limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>. The value of N in <c>NetworkInterface.N</c> cannot be greater than 1.</para>
+            /// <para>The IDs of the security groups to which to assign the secondary ENI. The security groups and the secondary ENI must reside in the same VPC. The valid values of N in <c>SecurityGroupIds.N</c> vary based on the maximum number of security groups to which a secondary ENI can belong. For more information, see the &quot;Security group limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>. The value of N in <c>NetworkInterface.N</c> cannot be greater than 1.</para>
             /// <remarks>
             /// <para> You cannot specify both <c>NetworkInterface.N.SecurityGroupId</c> and <c>NetworkInterface.N.SecurityGroupIds.N</c>.</para>
             /// </remarks>

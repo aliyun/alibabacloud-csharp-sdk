@@ -24,9 +24,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
-                /// <para>The currency unit.</para>
-                /// <para>Alibaba Cloud China site (aliyun.com): CNY</para>
-                /// <para>Alibaba Cloud International site (alibabacloud.com): USD</para>
+                /// <para>The currency unit. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Alibaba Cloud China site (aliyun.com): CNY</description></item>
+                /// <item><description>Alibaba Cloud International site (alibabacloud.com): USD</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -35,6 +37,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
+                /// <summary>
+                /// <para>The information about the price.</para>
+                /// <remarks>
+                /// <para> This parameter is returned only when ResourceType is set to instance.</para>
+                /// </remarks>
+                /// </summary>
                 [NameInMap("DetailInfos")]
                 [Validation(Required=false)]
                 public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfos DetailInfos { get; set; }
@@ -43,18 +51,46 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo> DetailInfo { get; set; }
                     public class DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo : TeaModel {
+                        /// <summary>
+                        /// <para>The discount.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>655.2</para>
+                        /// </summary>
                         [NameInMap("DiscountPrice")]
                         [Validation(Required=false)]
                         public float? DiscountPrice { get; set; }
 
+                        /// <summary>
+                        /// <para>The original price.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>4368</para>
+                        /// </summary>
                         [NameInMap("OriginalPrice")]
                         [Validation(Required=false)]
                         public float? OriginalPrice { get; set; }
 
+                        /// <summary>
+                        /// <para>The resource name. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>InstanceType</description></item>
+                        /// <item><description>bandwidth</description></item>
+                        /// <item><description>image</description></item>
+                        /// <item><description>SystemDisk</description></item>
+                        /// <item><description>DataDisk</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>instanceType</para>
+                        /// </summary>
                         [NameInMap("Resource")]
                         [Validation(Required=false)]
                         public string Resource { get; set; }
 
+                        /// <summary>
+                        /// <para>The pricing rules.</para>
+                        /// </summary>
                         [NameInMap("SubRules")]
                         [Validation(Required=false)]
                         public DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRules SubRules { get; set; }
@@ -63,10 +99,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             [Validation(Required=false)]
                             public List<DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule> Rule { get; set; }
                             public class DescribeInstanceModificationPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoSubRulesRule : TeaModel {
+                                /// <summary>
+                                /// <para>The description of the pricing rule.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>If you subscribe to an instance for one year, you can receive a 15% discount off the list price.</para>
+                                /// </summary>
                                 [NameInMap("Description")]
                                 [Validation(Required=false)]
                                 public string Description { get; set; }
 
+                                /// <summary>
+                                /// <para>The ID of the pricing rule.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>315716429631488</para>
+                                /// </summary>
                                 [NameInMap("RuleId")]
                                 [Validation(Required=false)]
                                 public long? RuleId { get; set; }
@@ -75,6 +123,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                         }
 
+                        /// <summary>
+                        /// <para>The transaction price.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>3712.8</para>
+                        /// </summary>
                         [NameInMap("TradePrice")]
                         [Validation(Required=false)]
                         public float? TradePrice { get; set; }

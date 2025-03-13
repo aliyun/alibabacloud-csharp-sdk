@@ -165,6 +165,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public string ParameterName { get; set; }
 
+                        [NameInMap("PatternRegex")]
+                        [Validation(Required=false)]
+                        public string PatternRegex { get; set; }
+
                         /// <summary>
                         /// <para>The valid values of the custom parameter of the enumeration type.</para>
                         /// </summary>

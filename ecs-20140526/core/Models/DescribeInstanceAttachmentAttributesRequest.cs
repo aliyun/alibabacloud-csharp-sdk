@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
+        /// <para>Page starts from page 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>

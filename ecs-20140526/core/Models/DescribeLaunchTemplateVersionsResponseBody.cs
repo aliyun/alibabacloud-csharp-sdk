@@ -552,6 +552,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public List<DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface> NetworkInterface { get; set; }
                         public class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface : TeaModel {
                             /// <summary>
+                            /// <para>Indicates whether to retain the ENI when the associated instance is released. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description>true</description></item>
+                            /// <item><description>false</description></item>
+                            /// </list>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>true</para>
+                            /// </summary>
+                            [NameInMap("DeleteOnRelease")]
+                            [Validation(Required=false)]
+                            public bool? DeleteOnRelease { get; set; }
+
+                            /// <summary>
                             /// <para>The description of the secondary ENI.</para>
                             /// 
                             /// <b>Example:</b>

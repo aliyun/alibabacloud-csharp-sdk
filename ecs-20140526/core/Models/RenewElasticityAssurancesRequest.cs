@@ -39,10 +39,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable auto-renewal for the elasticity assurance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        /// <summary>
+        /// <para>The auto-renewal period. Unit: month. Valid values: 1, 2, 3, 6, 12, 24, and 36.</para>
+        /// <list type="bullet">
+        /// <item><description>If you set <c>PeriodUnit</c> to Month, the default value is 1.</description></item>
+        /// <item><description>If you set <c>PeriodUnit</c> to Year, the default value is 12.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is required if you set <c>AutoRenew</c> to <c>true</c>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("AutoRenewPeriod")]
         [Validation(Required=false)]
         public int? AutoRenewPeriod { get; set; }

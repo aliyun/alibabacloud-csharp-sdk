@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The page number. Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>Default value: 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The number of entries per page. Valid values: 1 to 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <para>Default value: 10</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

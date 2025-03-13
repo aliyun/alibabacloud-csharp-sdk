@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceRamRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of ECS instances. You can specify up to 100 instance IDs in a single request.</para>
+        /// <para>The IDs of ECS instances. You can specify up to 50 instance IDs in a single request.</para>
         /// <remarks>
         /// <para> You must specify at least one parameter from <c>InstanceIds</c> and <c>RamRoleName</c>.</para>
         /// </remarks>

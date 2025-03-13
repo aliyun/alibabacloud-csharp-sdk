@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelinesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the image templates.</para>
+        /// <para>Details about the image templates.</para>
         /// </summary>
         [NameInMap("ImagePipeline")]
         [Validation(Required=false)]
@@ -40,6 +40,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions AdvancedOptions { get; set; }
                 public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions : TeaModel {
+                    /// <summary>
+                    /// <para>Indicates whether to disable the feature that automatically adds a suffix to the name of the image created based on the image template. Valid value:</para>
+                    /// <list type="bullet">
+                    /// <item><description>disable</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>disable</para>
+                    /// </summary>
+                    [NameInMap("ImageNameSuffix")]
+                    [Validation(Required=false)]
+                    public string ImageNameSuffix { get; set; }
+
                     /// <summary>
                     /// <para>Indicates whether to retain Cloud Assistant. During the image building process, the system automatically installs Cloud Assistant in the intermediate instance to run commands. You can choose whether to retain Cloud Assistant in the new image created based on the image template. Valid values:</para>
                     /// <list type="bullet">
@@ -127,25 +140,135 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
-                /// <para>The image family.</para>
+                /// <para>The family of the image created based on the image template.</para>
+                /// <remarks>
+                /// <para> This parameter is no longer used. We recommend that you use ImageOptions.ImageFamily.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
                 /// </summary>
                 [NameInMap("ImageFamily")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string ImageFamily { get; set; }
 
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
-                /// <para>The name prefix of the image to be created based on the image template.</para>
+                /// <para>The name prefix of the image created based on the image template.</para>
+                /// <remarks>
+                /// <para> This parameter is no longer used. We recommend that you use ImageOptions.ImageName.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testImageName</para>
                 /// </summary>
                 [NameInMap("ImageName")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string ImageName { get; set; }
+
+                /// <summary>
+                /// <para>The attributes of the image created based on the image template.</para>
+                /// </summary>
+                [NameInMap("ImageOptions")]
+                [Validation(Required=false)]
+                public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions ImageOptions { get; set; }
+                public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions : TeaModel {
+                    /// <summary>
+                    /// <para>The description of the image.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>description.</para>
+                    /// </summary>
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    /// <summary>
+                    /// <para>The image family.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>family</para>
+                    /// </summary>
+                    [NameInMap("ImageFamily")]
+                    [Validation(Required=false)]
+                    public string ImageFamily { get; set; }
+
+                    /// <summary>
+                    /// <para>The feature attributes of the image.</para>
+                    /// </summary>
+                    [NameInMap("ImageFeatures")]
+                    [Validation(Required=false)]
+                    public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageFeatures ImageFeatures { get; set; }
+                    public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageFeatures : TeaModel {
+                        /// <summary>
+                        /// <para>Indicates whether the image supports the NVMe protocol. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</description></item>
+                        /// <item><description>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</description></item>
+                        /// <item><description>auto: The system automatically checks whether the image supports the NVMe protocol. The system automatically checks whether the NVMe driver is installed on your image before the image is built. If you install or uninstall the NVMe driver during the image building task, the check result may be incorrect. We recommend that you set the value to supported or unsupported based on the image building content.</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>auto</para>
+                        /// </summary>
+                        [NameInMap("NvmeSupport")]
+                        [Validation(Required=false)]
+                        public string NvmeSupport { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The prefix of the image name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>imageName</para>
+                    /// </summary>
+                    [NameInMap("ImageName")]
+                    [Validation(Required=false)]
+                    public string ImageName { get; set; }
+
+                    /// <summary>
+                    /// <para>The tags of the image.</para>
+                    /// </summary>
+                    [NameInMap("ImageTags")]
+                    [Validation(Required=false)]
+                    public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTags ImageTags { get; set; }
+                    public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTags : TeaModel {
+                        [NameInMap("ImageTag")]
+                        [Validation(Required=false)]
+                        public List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTagsImageTag> ImageTag { get; set; }
+                        public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTagsImageTag : TeaModel {
+                            /// <summary>
+                            /// <para>The tag key of the image.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>testKey</para>
+                            /// </summary>
+                            [NameInMap("TagKey")]
+                            [Validation(Required=false)]
+                            public string TagKey { get; set; }
+
+                            /// <summary>
+                            /// <para>The tag value of the image.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>testValue</para>
+                            /// </summary>
+                            [NameInMap("TagValue")]
+                            [Validation(Required=false)]
+                            public string TagValue { get; set; }
+
+                        }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// <para>The ID of the image template.</para>
@@ -158,7 +281,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ImagePipelineId { get; set; }
 
                 /// <summary>
-                /// <para>The properties and settings of the image template that you import.</para>
+                /// <para>The attributes and settings of the imported image.</para>
                 /// </summary>
                 [NameInMap("ImportImageOptions")]
                 [Validation(Required=false)]
@@ -193,10 +316,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string BootMode { get; set; }
 
                     /// <summary>
-                    /// <para>The information of disk N from which a custom image is created.</para>
+                    /// <para>The information of disks from which the custom images are created.</para>
                     /// <list type="bullet">
-                    /// <item><description>When N is set to 1, a custom image is created from the system disk.</description></item>
-                    /// <item><description>When N is set to an integer in the range of 2 to 17, a custom image is created from a data disk.</description></item>
+                    /// <item><description>When the value of N is 1, a custom image is created from the system disk.</description></item>
+                    /// <item><description>When the value of N is an integer in the range of 2 to 17, a custom image is created from a data disk.</description></item>
                     /// </list>
                     /// </summary>
                     [NameInMap("DiskDeviceMappings")]
@@ -263,7 +386,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// <para>The attributes of the custom image.</para>
+                    /// <para>The feature attributes of the image.</para>
                     /// </summary>
                     [NameInMap("Features")]
                     [Validation(Required=false)]
@@ -354,11 +477,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Platform { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether to retain the imported image. After the image is imported, the system automatically deletes the source image to prevent unnecessary storage costs. You can also choose whether to retain it. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>true: retains the image. After the image is imported, the source image is not deleted even if the image building task is canceled or fails.</description></item>
-                    /// <item><description>false: does not retain the image.</description></item>
-                    /// </list>
+                    /// <remarks>
+                    /// <para> This parameter is in invitational preview.</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -399,19 +520,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
-                /// <para>Indicates whether the image created based on the image template supports Non-Volatile Memory Express (NVMe). Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</description></item>
-                /// <item><description>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</description></item>
-                /// <item><description>auto: The system automatically checks whether the image supports the NVMe protocol. The system automatically checks whether the NVMe driver is installed on your image before the image is built. If you install or uninstall the NVMe driver during the image building task, the check result may be incorrect. We recommend that you set the value to supported or unsupported based on the image building content.</description></item>
-                /// </list>
+                /// <para>Indicates whether the image created based on the image template supports the Non-Volatile Memory Express (NVMe) protocol.</para>
+                /// <remarks>
+                /// <para> This parameter is no longer used. We recommend that you use ImageOptions.ImageFeatures.NvmeSupport.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>auto</para>
                 /// </summary>
                 [NameInMap("NvmeSupport")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string NvmeSupport { get; set; }
 
                 /// <summary>

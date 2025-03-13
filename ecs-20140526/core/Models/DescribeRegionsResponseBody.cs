@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the region.</para>
+        /// <para>The information of the regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
                 /// <summary>
-                /// <para>cn-qingdao-et2-bo1</para>
+                /// <para>The name of the region.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>DescribeRegions</para>
+                /// <para>China (Qingdao)</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region.</para>
+                /// <para>The endpoint of the region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.cn-qingdao.aliyuncs.com</para>
@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string RegionEndpoint { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the region.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-qingdao</para>
                 /// </summary>
@@ -49,7 +51,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>China (Qingdao)</para>
+                /// <para>Indicates whether clusters are sold out. 
+                /// Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>available</description></item>
+                /// <item><description>soldOut</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>available</para>
@@ -63,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>ecs.aliyuncs.com</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

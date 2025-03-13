@@ -22,43 +22,43 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The content of the command. The command content can be plaintext or Base64-encoded. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you want to retain the command, make sure that the Base64-encoded command content does not exceed 18 KB in size. If you do not want to retain the command, make sure that the Base64-encoded command content does not exceed 24 KB in size. You can set the <c>KeepCommand</c> parameter to specify whether to retain the command.</para>
+        /// <item><description><para>If you want to retain the command, make sure that the size of the Base64-encoded command content does not exceed 18 KB. If you do not want to retain the command, make sure that the size of the Base64-encoded command content does not exceed 24 KB. You can set <c>KeepCommand</c> to specify whether to retain the command.</para>
         /// </description></item>
-        /// <item><description><para>If the command content is encoded in Base6, set <c>ContentEncoding</c> to Base64.</para>
+        /// <item><description><para>If the command content is Base64-encoded, set <c>ContentEncoding</c> to Base64.</para>
         /// </description></item>
-        /// <item><description><para>If you set the <c>EnableParameter</c> parameter to true, the custom parameter feature is enabled and you can configure custom parameters based on the following rules:</para>
+        /// <item><description><para>If you specify <c>EnableParameter</c> to true, the custom parameter feature is enable. You can configure custom parameters based on the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>Specify custom parameters in the <c>{{}}</c> format. Within <c>{{}}</c>, the spaces and line feeds before and after the parameter names are ignored.</description></item>
+        /// <item><description>Specify custom parameters in the <c>{{}}</c> format. The spaces and line feeds before and after the parameter names within <c>{{}}</c> are ignored.</description></item>
         /// <item><description>You can specify up to 20 custom parameters.</description></item>
-        /// <item><description>A custom parameter name can contain only letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</description></item>
+        /// <item><description>A custom parameter name can contain letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</description></item>
         /// <item><description>Each custom parameter name cannot exceed 64 bytes in length.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>You can specify built-in environment parameters as custom parameters. Then, when you run a command, the parameters are automatically specified by Cloud Assistant. You can specify the following built-in environment parameters:</para>
+        /// <item><description><para>You can specify built-in environment parameters as custom parameters. When you run a command, the parameters are automatically specified by Cloud Assistant. You can specify the following built-in environment parameters:</para>
         /// <list type="bullet">
         /// <item><description><para><c>{{ACS::RegionId}}</c>: the region ID.</para>
         /// </description></item>
         /// <item><description><para><c>{{ACS::AccountId}}</c>: the UID of the Alibaba Cloud account.</para>
         /// </description></item>
-        /// <item><description><para><c>{{ACS::InstanceId}}</c>: the instance ID. If you want to run the command on multiple instances and specify <c>{{ACS::InstanceId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</para>
+        /// <item><description><para><c>{{ACS::InstanceId}}</c>: the instance ID. If you want to run the command on multiple instances and specify <c>{{ACS::InstanceId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</para>
         /// <list type="bullet">
         /// <item><description>Linux: 2.2.3.309</description></item>
         /// <item><description>Windows: 2.1.3.309</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>{{ACS::InstanceName}}</c>: the instance name. If you want to run the command on multiple instances and specify <c>{{ACS::InstanceName}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</para>
+        /// <item><description><para><c>{{ACS::InstanceName}}</c>: the instance name. If you want to run the command on multiple instances and specify <c>{{ACS::InstanceName}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</para>
         /// <list type="bullet">
         /// <item><description>Linux: 2.2.3.344</description></item>
         /// <item><description>Windows: 2.1.3.344</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>{{ACS::InvokeId}}</c>: the ID of the task. If you want to specify <c>{{ACS::InvokeId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</para>
+        /// <item><description><para><c>{{ACS::InvokeId}}</c>: the task ID. If you want to specify <c>{{ACS::InvokeId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</para>
         /// <list type="bullet">
         /// <item><description>Linux: 2.2.3.309</description></item>
         /// <item><description>Windows: 2.1.3.309</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>{{ACS::CommandId}}</c>: the ID of the command. If you want to specify <c>{{ACS::CommandId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</para>
+        /// <item><description><para><c>{{ACS::CommandId}}</c>: the command ID. If you want to specify <c>{{ACS::CommandId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</para>
         /// <list type="bullet">
         /// <item><description>Linux: 2.2.3.309</description></item>
         /// <item><description>Windows: 2.1.3.309</description></item>
@@ -77,14 +77,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandContent { get; set; }
 
         /// <summary>
-        /// <para>The ID of the container. Only 64-bit hexadecimal strings are supported. <c>docker://</c>, <c>containerd://</c>, or <c>cri-o://</c> can be used as the prefix to the container ID to specify the container runtime.</para>
+        /// <para>The container ID. Only 64-bit hexadecimal strings are supported. <c>docker://</c>, <c>containerd://</c>, or <c>cri-o://</c> can be used as the prefix of the container ID to specify the container runtime.</para>
         /// <para>Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.</description></item>
-        /// <item><description>If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.</description></item>
-        /// <item><description>If this parameter is specified, the specified <c>Username</c> and <c>WorkingDir</c> parameters do not take effect. You can run the command in the default working directory of the container only by using the default user of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</description></item>
-        /// <item><description>If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to <c>#!/usr/bin/python</c> at the beginning of a script to specify a script interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</description></item>
+        /// <item><description>If you specify this parameter, Cloud Assistant runs the command in the specified container of the instances.</description></item>
+        /// <item><description>If you specify this parameter, make sure that the Cloud Assistant Agent version installed on Linux instances is 2.2.3.344 or later.</description></item>
+        /// <item><description>If you specify this parameter, <c>Username</c> and <c>WorkingDir</c> do not take effect. You can run the command in the default working directory of the container by using only the default user of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> Only shell scripts can run in Linux containers. You cannot add a command whose format is similar to <c>#!/usr/bin/python</c> at the beginning of a script to specify a script interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****</para>
@@ -94,14 +96,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ContainerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the container.</para>
+        /// <para>The container name.</para>
         /// <para>Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.</description></item>
-        /// <item><description>If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.</description></item>
-        /// <item><description>If this parameter is specified, the specified <c>Username</c> and <c>WorkingDir</c> parameters do not take effect. You can run the command in the default working directory of the container only by using the default user of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</description></item>
-        /// <item><description>If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to <c>#!/usr/bin/python</c> at the beginning of a script to specify a script interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</description></item>
+        /// <item><description>If you specify this parameter, Cloud Assistant runs the command in the specified container of the instances.</description></item>
+        /// <item><description>If you specify this parameter, make sure that the Cloud Assistant Agent version installed on Linux instances is 2.2.3.344 or later.</description></item>
+        /// <item><description>If you specify this parameter, <c>Username</c> and <c>WorkingDir</c> do not take effect. You can run the command in the default working directory of the container by using only the default user of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> Only shell scripts can run in Linux containers. You cannot add a command whose format is similar to <c>#!/usr/bin/python</c> at the beginning of a script to specify a script interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>test-container</para>
@@ -180,9 +184,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Frequency { get; set; }
 
         /// <summary>
-        /// <para>The IDs of instances on which to run the command. N indicates that you can specify multiple instance IDs at the same time. Valid values of N: 1 to 100.</para>
+        /// <para>The IDs of instances on which to create and run the command. Specify at least one instance ID. You can specify up to 100 instance IDs.</para>
         /// <para>If one of the specified instances does not meet the conditions for running the command, the call fails. To ensure that the call is successful, specify only the IDs of instances that meet the conditions.</para>
-        /// <para>You can apply for a quota increase in the Quota Center console. The quota name is Maximum number of instances supported for command execution.</para>
+        /// <para>You can request a quota increase in the Quota Center console. The quota name is Maximum number of instances supported for command execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp185dy2o3o6neg****</para>
@@ -267,34 +271,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies how to run the command. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Once: immediately runs the command.</description></item>
-        /// <item><description>Period: runs the command on a schedule. If you set this parameter to <c>Period</c>, you must also configure the <c>Frequency</c> parameter.</description></item>
-        /// <item><description>NextRebootOnly: runs the command the next time the instances start.</description></item>
-        /// <item><description>EveryReboot: runs the command every time the instances start. Specifies how to run the command. Valid values:</description></item>
-        /// <item><description>Once: immediately runs the command.</description></item>
-        /// <item><description>Period: runs the command on a schedule. If you set this parameter to <c>Period</c>, you must also configure the <c>Frequency</c> parameter.</description></item>
+        /// <item><description>Period: runs the command based on a schedule. If you set this parameter to <c>Period</c>, you must specify <c>Frequency</c>.</description></item>
         /// <item><description>NextRebootOnly: runs the command the next time the instances start.</description></item>
         /// <item><description>EveryReboot: runs the command every time the instances start.</description></item>
         /// <item><description>DryRun: performs only a dry run, without running the actual command. The system checks the request parameters, the execution environments on the instances, and the status of Cloud Assistant Agent.</description></item>
         /// </list>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify the <c>Frequency</c> parameter, the default value is <c>Once</c>.</description></item>
-        /// <item><description>If you specify the <c>Frequency</c> parameter, <c>Period</c> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</description></item>
+        /// <item><description>If you do not specify <c>Frequency</c>, the default value is <c>Once</c>.</description></item>
+        /// <item><description>If you specify <c>Frequency</c>, RepeatMode is set to <c>Period</c> regardless of whether a value is already specified for RepeatMode.</description></item>
         /// </list>
         /// <para>Take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> operation to stop the pending or scheduled executions of the command.</description></item>
-        /// <item><description>If you set this parameter to <c>Period</c> or <c>EveryReboot</c>, you can call the <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with <c>IncludeHistory</c> set to true to query the results of historical scheduled executions.</description></item>
-        /// </list>
-        /// <para>Default value:</para>
-        /// <list type="bullet">
-        /// <item><description>If you do not specify the <c>Frequency</c> parameter, the default value is <c>Once</c>.</description></item>
-        /// <item><description>If you specify the <c>Frequency</c> parameter, <c>Period</c> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</description></item>
-        /// </list>
-        /// <para>Take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> operation to stop the pending or scheduled executions of the command.</description></item>
-        /// <item><description>If you set this parameter to <c>Period</c> or <c>EveryReboot</c>, you can call the <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with <c>IncludeHistory</c> set to true to query the results of historical scheduled executions.</description></item>
+        /// <item><description>If you set this parameter to <c>Period</c> or <c>EveryReboot</c>, you can call the <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with <c>IncludeHistory</c> set to true to query the historical scheduled executions.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -327,7 +317,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the instance. If you do not specify InstanceId.N, the command is run on the instances that have the specified tags.</para>
+        /// <para>The tags of the instance. You can leave this parameter empty or specify up to 20 tags. If you do not specify InstanceId, the command is run on instances that have the specified tags.</para>
         /// </summary>
         [NameInMap("ResourceTag")]
         [Validation(Required=false)]
@@ -338,8 +328,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>This parameter and InstanceId.N are mutually exclusive.</description></item>
-            /// <item><description>Valid values of N: 1 to 10. The tag key cannot be an empty string.</description></item>
-            /// <item><description>The number of instances that have the specified tags cannot exceed 100. If more than 100 instances have the specified tags, we recommend that you use batch tags such as batch: b1 to group the instances into batches of up to 100 instances.</description></item>
+            /// <item><description>The tag key cannot be an empty string.</description></item>
+            /// <item><description>The number of instances that have the specified tags cannot exceed 100. Otherwise, we recommend that you use batch tags, such as batch: b1, to group the instances into batches of up to 100 instances.</description></item>
             /// <item><description>The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</description></item>
             /// </list>
             /// 
@@ -354,7 +344,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The value of tag N of the instance.</para>
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>Valid values of N: 1 to 10.</description></item>
             /// <item><description>The tag value can be an empty string.</description></item>
             /// <item><description>The tag value can be up to 128 characters in length and cannot contain http:// or https://.</description></item>
             /// </list>
@@ -369,16 +358,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The description of the command. The description supports all character sets and can be up to 512 characters in length.</para>
+        /// <para>The tags to add to the command task. You can leave this parameter empty or specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<RunCommandShrinkRequestTag> Tag { get; set; }
         public class RunCommandShrinkRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-            /// <para>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a>.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The key of tag N to add to the command task. The tag key cannot be an empty string.</para>
+            /// <para>If a tag is specified to query resources, up to 1,000 resources that have this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all the tags can be displayed in the response. To query more than 1,000 resources that have the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -388,7 +377,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the command task. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
+            /// <para>The value of tag N to add to the command task. The tag value can be an empty string.</para>
             /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -439,7 +428,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The language type of the command. Valid values:</para>
+        /// <para>The type of the command. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>RunBatScript: batch command, applicable to Windows instances.</description></item>
         /// <item><description>RunPowerShellScript: PowerShell command, applicable to Windows instances.</description></item>

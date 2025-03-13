@@ -13,10 +13,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public ModifyInstanceAttributeRequestCpuOptions CpuOptions { get; set; }
         public class ModifyInstanceAttributeRequestCpuOptions : TeaModel {
+            /// <summary>
+            /// <para>The number of CPU cores. This parameter cannot be specified but only uses its default value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("Core")]
             [Validation(Required=false)]
             public int? Core { get; set; }
 
+            /// <summary>
+            /// <para>The number of threads per CPU core. The following formula is used to calculate the number of vCPUs of the instance: <c>CpuOptions.Core</c> value × <c>CpuOptions.ThreadsPerCore</c> value.</para>
+            /// <list type="bullet">
+            /// <item><description>If <c>CpuOptionsThreadPerCore</c> is set to 1, Hyper-Threading (HT) is disabled.</description></item>
+            /// <item><description>This parameter is applicable only to specific instance types.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("ThreadsPerCore")]
             [Validation(Required=false)]
             public int? ThreadsPerCore { get; set; }

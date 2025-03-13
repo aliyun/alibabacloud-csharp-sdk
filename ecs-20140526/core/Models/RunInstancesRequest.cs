@@ -1643,18 +1643,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <remarks>
-        /// <para> This parameter is in invitational preview and is not publicly available.</para>
-        /// </remarks>
+        /// <para>The private domain name options of the instance.</para>
+        /// <para>For information about the resolution of ECS private domain names, see <a href="https://help.aliyun.com/document_detail/2844797.html">ECS private DNS resolution</a>.</para>
         /// </summary>
         [NameInMap("PrivateDnsNameOptions")]
         [Validation(Required=false)]
         public RunInstancesRequestPrivateDnsNameOptions PrivateDnsNameOptions { get; set; }
         public class RunInstancesRequestPrivateDnsNameOptions : TeaModel {
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
+            /// <para>Specifies whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv6 Address (AAAA Record) is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1664,9 +1666,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableInstanceIdDnsAAAARecord { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
+            /// <para>Specifies whether DNS Resolution from the Instance ID-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -1676,9 +1681,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableInstanceIdDnsARecord { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
+            /// <para>Specifies whether DNS Resolution from the IP Address-based Hostname to the Instance Primary Private IPv4 Address (A Record) is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1688,9 +1696,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableIpDnsARecord { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
+            /// <para>Specifies whether Reverse DNS Resolution from the Instance Primary Private IPv4 Address to the IP Address-based Hostname (PTR Record) is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -1700,9 +1711,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableIpDnsPtrRecord { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
+            /// <para>The type of hostname. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Custom: custom hostname</description></item>
+            /// <item><description>IpBased: IP address-based hostname</description></item>
+            /// <item><description>InstanceIdBased: instance ID-based hostname</description></item>
+            /// </list>
+            /// <para>Default value: Custom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom</para>
@@ -1829,7 +1844,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
         /// <item><description>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
         /// </list>
-        /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</para>
+        /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. The preemptible instance is billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

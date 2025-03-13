@@ -278,10 +278,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public DescribeImagesResponseBodyImagesImageFeatures Features { get; set; }
                 public class DescribeImagesResponseBodyImagesImageFeatures : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>supported</para>
+                    /// </summary>
                     [NameInMap("CpuOnlineDowngrade")]
                     [Validation(Required=false)]
                     public string CpuOnlineDowngrade { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>supported</para>
+                    /// </summary>
                     [NameInMap("CpuOnlineUpgrade")]
                     [Validation(Required=false)]
                     public string CpuOnlineUpgrade { get; set; }
@@ -300,10 +308,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string ImdsSupport { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>unsupported</para>
+                    /// </summary>
                     [NameInMap("MemoryOnlineDowngrade")]
                     [Validation(Required=false)]
                     public string MemoryOnlineDowngrade { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>unsupported</para>
+                    /// </summary>
                     [NameInMap("MemoryOnlineUpgrade")]
                     [Validation(Required=false)]
                     public string MemoryOnlineUpgrade { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDisksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the disks.</para>
+        /// <para>Details about the disks.</para>
         /// </summary>
         [NameInMap("Disks")]
         [Validation(Required=false)]
@@ -712,7 +712,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <remarks>
+        /// <para> This parameter will be removed in the future. We recommend that you use <c>NextToken</c> and <c>MaxResults</c> for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -722,7 +724,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <remarks>
+        /// <para> This parameter will be removed in the future. We recommend that you use <c>NextToken</c> and <c>MaxResults</c> for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
