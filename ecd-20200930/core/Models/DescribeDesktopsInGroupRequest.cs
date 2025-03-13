@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? CustomStartTimePeriod { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer pool.</para>
+        /// <para>The ID of the cloud computer share.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? IgnoreDeleted { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The maximum number of entries per page.</para>
+        /// <list type="bullet">
+        /// <item><description>Default value: 10.</description></item>
+        /// <item><description>Maximum value: 100.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -64,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the desktop group.</para>
+        /// <para>The billing method of the cloud computer share.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>

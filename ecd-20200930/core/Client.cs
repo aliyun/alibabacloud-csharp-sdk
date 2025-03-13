@@ -10712,15 +10712,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a desktop group.</para>
+        /// <para>Releases a cloud computer share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.</para>
+        /// <para>  Before releasing a cloud computer share, ensure that no cloud computers within it are in the Connected state and that no end users have access permissions to it.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.</description></item>
-        /// <item><description>If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.</description></item>
+        /// <item><description>You cannot delete a cloud computer share with an active subscription if it contains cloud computers that have not yet expired.</description></item>
+        /// <item><description>Deleting a pay-as-you-go cloud computer share will release all pay-as-you-go cloud computers within it.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10774,15 +10774,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a desktop group.</para>
+        /// <para>Releases a cloud computer share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.</para>
+        /// <para>  Before releasing a cloud computer share, ensure that no cloud computers within it are in the Connected state and that no end users have access permissions to it.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.</description></item>
-        /// <item><description>If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.</description></item>
+        /// <item><description>You cannot delete a cloud computer share with an active subscription if it contains cloud computers that have not yet expired.</description></item>
+        /// <item><description>Deleting a pay-as-you-go cloud computer share will release all pay-as-you-go cloud computers within it.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10836,15 +10836,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a desktop group.</para>
+        /// <para>Releases a cloud computer share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.</para>
+        /// <para>  Before releasing a cloud computer share, ensure that no cloud computers within it are in the Connected state and that no end users have access permissions to it.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.</description></item>
-        /// <item><description>If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.</description></item>
+        /// <item><description>You cannot delete a cloud computer share with an active subscription if it contains cloud computers that have not yet expired.</description></item>
+        /// <item><description>Deleting a pay-as-you-go cloud computer share will release all pay-as-you-go cloud computers within it.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10863,15 +10863,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a desktop group.</para>
+        /// <para>Releases a cloud computer share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.</para>
+        /// <para>  Before releasing a cloud computer share, ensure that no cloud computers within it are in the Connected state and that no end users have access permissions to it.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.</description></item>
-        /// <item><description>If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.</description></item>
+        /// <item><description>You cannot delete a cloud computer share with an active subscription if it contains cloud computers that have not yet expired.</description></item>
+        /// <item><description>Deleting a pay-as-you-go cloud computer share will release all pay-as-you-go cloud computers within it.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16836,7 +16836,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cloud computers in a cloud computer pool by billing method.</para>
+        /// <para>Queries the cloud computers in a share by billing method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16913,7 +16913,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cloud computers in a cloud computer pool by billing method.</para>
+        /// <para>Queries the cloud computers in a share by billing method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16990,7 +16990,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cloud computers in a cloud computer pool by billing method.</para>
+        /// <para>Queries the cloud computers in a share by billing method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17008,7 +17008,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cloud computers in a cloud computer pool by billing method.</para>
+        /// <para>Queries the cloud computers in a share by billing method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23636,7 +23636,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables cloud desktops in a desktop group.</para>
+        /// <para>Disables specific cloud computers in a cloud computer share. After you call this operation to disable specific cloud computers, they enter the unavailable state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23693,7 +23693,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables cloud desktops in a desktop group.</para>
+        /// <para>Disables specific cloud computers in a cloud computer share. After you call this operation to disable specific cloud computers, they enter the unavailable state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23750,7 +23750,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables cloud desktops in a desktop group.</para>
+        /// <para>Disables specific cloud computers in a cloud computer share. After you call this operation to disable specific cloud computers, they enter the unavailable state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23768,7 +23768,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables cloud desktops in a desktop group.</para>
+        /// <para>Disables specific cloud computers in a cloud computer share. After you call this operation to disable specific cloud computers, they enter the unavailable state.</para>
         /// </summary>
         /// 
         /// <param name="request">

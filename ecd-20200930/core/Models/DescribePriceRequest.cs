@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>The number of cloud computers in the cloud computer pool. Default value: 1.</para>
+        /// <para>The number of cloud computer shares. Default value: 1.</para>
         /// <remarks>
         /// <para> This parameter takes effect only if you set <c>ResourceType</c> to <c>DesktopGroup</c>.</para>
         /// </remarks>
@@ -62,34 +62,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? GroupDesktopCount { get; set; }
 
         /// <summary>
-        /// <para>The resource specifications.</para>
+        /// <para>The specifications of the resource.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set <c>ResourceType</c> to <c>Desktop</c>, you must specify this parameter.</para>
-        /// <list type="bullet">
-        /// <item><description>ecd.basic.small</description></item>
-        /// <item><description>ecd.basic.large</description></item>
-        /// <item><description>ecd.advanced.large</description></item>
-        /// <item><description>ecd.advanced.xlarge</description></item>
-        /// <item><description>ecd.performance.2xlarge</description></item>
-        /// <item><description>ecd.graphics.xlarge</description></item>
-        /// <item><description>ecd.graphics.2xlarge</description></item>
-        /// <item><description>ecd.advanced.xlarge_s8d2</description></item>
-        /// <item><description>ecd.advanced.xlarge_s8d7</description></item>
-        /// <item><description>ecd.graphics.1g72c</description></item>
-        /// <item><description>eds.general.2c2g</description></item>
-        /// <item><description>eds.general.2c4g</description></item>
-        /// <item><description>eds.general.2c8g</description></item>
-        /// <item><description>eds.general.4c8g</description></item>
-        /// <item><description>eds.general.4c16g</description></item>
-        /// <item><description>eds.general.8c16g</description></item>
-        /// <item><description>eds.general.8c32g</description></item>
-        /// <item><description>eds.general.16c32g</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>If you set <c>ResourceType</c> to <c>DesktopGroup</c>, set the value of this parameter to <c>large</c>.</para>
-        /// </description></item>
-        /// <item><description><para>If you set <c>ResourceType</c> to <c>Bandwidth</c>, you can leave this parameter empty.</para>
-        /// </description></item>
+        /// <item><description>This parameter is required if you set <c>ResourceType</c> to <c>Desktop</c>. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> to query the available cloud computer types that correspond to the value of <c>DesktopTypeId</c>.</description></item>
+        /// <item><description>If you set <c>ResourceType</c> to <c>DesktopGroup</c>, set the value of this parameter to <c>large</c>.</description></item>
+        /// <item><description>If you set <c>ResourceType</c> to <c>Bandwidth</c>, you can leave this parameter empty.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -183,13 +160,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The type of the resource.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DesktopMonthPackage: the monthly subscription plan (also known as the 120-hour or 250-hour computing plan).</description></item>
-        /// <item><description>Desktop (default): the pay-as-you-go cloud computer or the monthly subscription cloud computer (also known as the Unlimited computing plan).</description></item>
-        /// <item><description>Bandwidth: the premium bandwidth plan.</description></item>
-        /// <item><description>DesktopGroup: the cloud computer pool.</description></item>
+        /// <item><description>DesktopMonthPackage: monthly subscription cloud computers that use hourly limit plans.</description></item>
+        /// <item><description>Desktop (default): pay-as-you-go cloud computers/monthly subscription cloud computers that use unlimited plans.</description></item>
+        /// <item><description>Bandwidth: premium bandwidth plans.</description></item>
+        /// <item><description>DesktopGroup: cloud computer shares.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -200,6 +177,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>The category of the system disk.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cloud_efficiency: the ultra disk</description></item>
+        /// <item><description>cloud_auto: the standard SSD.</description></item>
+        /// <item><description>cloud_essd: the Enterprise SSD (ESSD). Take note that only specific cloud computer types support ESSDs.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>40</para>
         /// </summary>
@@ -218,6 +203,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? RootDiskSizeGib { get; set; }
 
         /// <summary>
+        /// <para>The category of the data disk.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cloud_efficiency: the ultra disk</description></item>
+        /// <item><description>cloud_auto: the standard SSD.</description></item>
+        /// <item><description>cloud_essd: the ESSD. Take note that only specific cloud computer types support ESSDs.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>80</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteDesktopGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the desktop group.</para>
+        /// <para>The ID of the cloud computer share.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

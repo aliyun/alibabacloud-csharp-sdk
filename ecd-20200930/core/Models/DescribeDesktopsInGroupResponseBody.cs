@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopsInGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.
+        /// If NextToken is empty, no next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? OnlinePrePaidDesktopsCount { get; set; }
 
         /// <summary>
-        /// <para>The details about subscription cloud computers.</para>
+        /// <para>The subscription cloud computers.</para>
         /// </summary>
         [NameInMap("PaidDesktops")]
         [Validation(Required=false)]
@@ -184,7 +185,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DiskType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the authorized user of the cloud computer.</para>
+            /// <para>The ID of the authorized user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alice</para>
@@ -194,7 +195,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</para>
+            /// <para>The IDs of the end users who are connected to the cloud computers in the cloud computer share. If no end users are connected, no values are returned for this parameter.</para>
             /// </summary>
             [NameInMap("EndUserIds")]
             [Validation(Required=false)]
@@ -211,7 +212,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserName { get; set; }
 
             /// <summary>
-            /// <para>The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</para>
+            /// <para>The usernames of the end users who are connected to the cloud computers in the cloud computer share. If no end users are connected, no values are returned for this parameter.</para>
             /// </summary>
             [NameInMap("EndUserNames")]
             [Validation(Required=false)]
@@ -385,7 +386,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The total number of queried subscription cloud computers.</para>
+        /// <para>The total number of subscription cloud computers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -395,7 +396,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PaidDesktopsCount { get; set; }
 
         /// <summary>
-        /// <para>The details about pay-as-you-go cloud computers.</para>
+        /// <para>The pay-as-you-go cloud computers.</para>
         /// </summary>
         [NameInMap("PostPaidDesktops")]
         [Validation(Required=false)]
@@ -435,7 +436,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// <para>The retention period of the cloud computer.</para>
+            /// <para>The retention period. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4153958447</para>
@@ -780,7 +781,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The total number of queried pay-as-you-go cloud computers.</para>
+        /// <para>The total number of pay-as-you-go cloud computers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

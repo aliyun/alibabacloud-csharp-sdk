@@ -138,6 +138,60 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DataDiskSize { get; set; }
 
+            [NameInMap("DesktopDurationList")]
+            [Validation(Required=false)]
+            public List<DescribeDesktopsResponseBodyDesktopsDesktopDurationList> DesktopDurationList { get; set; }
+            public class DescribeDesktopsResponseBodyDesktopsDesktopDurationList : TeaModel {
+                [NameInMap("OrderInstanceId")]
+                [Validation(Required=false)]
+                public string OrderInstanceId { get; set; }
+
+                [NameInMap("PackageCreationTime")]
+                [Validation(Required=false)]
+                public string PackageCreationTime { get; set; }
+
+                [NameInMap("PackageExpiredTime")]
+                [Validation(Required=false)]
+                public string PackageExpiredTime { get; set; }
+
+                [NameInMap("PackageId")]
+                [Validation(Required=false)]
+                public string PackageId { get; set; }
+
+                [NameInMap("PackageStatus")]
+                [Validation(Required=false)]
+                public string PackageStatus { get; set; }
+
+                [NameInMap("PackageType")]
+                [Validation(Required=false)]
+                public string PackageType { get; set; }
+
+                [NameInMap("PackageUsedUpStrategy")]
+                [Validation(Required=false)]
+                public string PackageUsedUpStrategy { get; set; }
+
+                [NameInMap("PeriodEndTime")]
+                [Validation(Required=false)]
+                public string PeriodEndTime { get; set; }
+
+                [NameInMap("PeriodStartTime")]
+                [Validation(Required=false)]
+                public string PeriodStartTime { get; set; }
+
+                [NameInMap("PostPaidLimitFee")]
+                [Validation(Required=false)]
+                public float? PostPaidLimitFee { get; set; }
+
+                [NameInMap("TotalDuration")]
+                [Validation(Required=false)]
+                public long? TotalDuration { get; set; }
+
+                [NameInMap("UsedDuration")]
+                [Validation(Required=false)]
+                public long? UsedDuration { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID of the cloud computer pool to which cloud computers belong. Default value: null.``</para>
             /// 

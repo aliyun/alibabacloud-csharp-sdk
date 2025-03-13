@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribePriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The price information.</para>
+        /// <para>The price details.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
