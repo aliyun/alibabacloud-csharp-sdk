@@ -1,3 +1,6 @@
+2025-03-13 Version: 1.71.1
+- Generated csharp 2018-11-01 for dms-enterprise.
+
 2025-03-13 Version: 1.71.0
 - Support API TryRunTaskFlow.
 - Update API BatchCreateDataLakePartitions: add param WorkspaceId.
