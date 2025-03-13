@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAppInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the application instances.</para>
+        /// <para>The app instances.</para>
         /// </summary>
         [NameInMap("AppInstanceModels")]
         [Validation(Required=false)]
@@ -65,6 +65,19 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             }
 
+            /// <summary>
+            /// <para>The billing method of the app instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>PrePaid</b>: subscription.</description></item>
+            /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the app instance belongs is set to Node.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PostPaid</para>
+            /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
@@ -99,6 +112,19 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string MainEthPublicIp { get; set; }
 
+            [NameInMap("NetworkInterfaceIp")]
+            [Validation(Required=false)]
+            public string NetworkInterfaceIp { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the node on which the app instance runs.</para>
+            /// <remarks>
+            /// <para> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the app instance belongs is set to Node.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-bp13********</para>
+            /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
             public string NodeId { get; set; }

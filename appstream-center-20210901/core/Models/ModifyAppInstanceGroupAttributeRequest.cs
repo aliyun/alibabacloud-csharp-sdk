@@ -109,6 +109,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         }
 
+        /// <summary>
+        /// <para>Specifies whether only one application can be opened in a session.</para>
+        /// <list type="bullet">
+        /// <item><description>After you enable this feature, the system assigns a session to each application if you open multiple applications in a delivery group. This consumes a larger number of sessions.</description></item>
+        /// </list>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("PerSessionPerApp")]
         [Validation(Required=false)]
         public bool? PerSessionPerApp { get; set; }
@@ -216,14 +230,34 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public List<string> StorageTypeList { get; set; }
 
+            /// <summary>
+            /// <para>The configurations of user data roaming.</para>
+            /// </summary>
             [NameInMap("UserProfile")]
             [Validation(Required=false)]
             public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile UserProfile { get; set; }
             public class ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile : TeaModel {
+                /// <summary>
+                /// <para>The ID of the File Storage NAS (NAS) file system used to store user data.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>06ae94****</para>
+                /// </summary>
                 [NameInMap("FileSystemId")]
                 [Validation(Required=false)]
                 public string FileSystemId { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether user data roaming is enabled.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("UserProfileSwitch")]
                 [Validation(Required=false)]
                 public bool? UserProfileSwitch { get; set; }

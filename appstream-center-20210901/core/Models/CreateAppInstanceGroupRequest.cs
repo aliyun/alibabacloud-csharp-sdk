@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
+        [NameInMap("AppPackageType")]
+        [Validation(Required=false)]
+        public string AppPackageType { get; set; }
+
         [NameInMap("AppPolicyId")]
         [Validation(Required=false)]
         public string AppPolicyId { get; set; }
@@ -72,6 +76,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
+
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
 
         [NameInMap("Network")]
         [Validation(Required=false)]
@@ -332,6 +340,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string DebugMode { get; set; }
 
+            [NameInMap("PerSessionPerApp")]
+            [Validation(Required=false)]
+            public bool? PerSessionPerApp { get; set; }
+
+            [NameInMap("SessionPreOpen")]
+            [Validation(Required=false)]
+            public string SessionPreOpen { get; set; }
+
             /// <summary>
             /// <para>会话类型。</para>
             /// 
@@ -341,6 +357,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("SessionType")]
             [Validation(Required=false)]
             public string SessionType { get; set; }
+
+            [NameInMap("SessionUserGenerationMode")]
+            [Validation(Required=false)]
+            public string SessionUserGenerationMode { get; set; }
 
         }
 
@@ -384,7 +404,29 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public List<string> StorageTypeList { get; set; }
 
+            [NameInMap("UserProfile")]
+            [Validation(Required=false)]
+            public CreateAppInstanceGroupRequestStoragePolicyUserProfile UserProfile { get; set; }
+            public class CreateAppInstanceGroupRequestStoragePolicyUserProfile : TeaModel {
+                [NameInMap("RemoteStoragePath")]
+                [Validation(Required=false)]
+                public string RemoteStoragePath { get; set; }
+
+                [NameInMap("RemoteStorageType")]
+                [Validation(Required=false)]
+                public string RemoteStorageType { get; set; }
+
+                [NameInMap("UserProfileSwitch")]
+                [Validation(Required=false)]
+                public bool? UserProfileSwitch { get; set; }
+
+            }
+
         }
+
+        [NameInMap("SubPayType")]
+        [Validation(Required=false)]
+        public string SubPayType { get; set; }
 
         [NameInMap("UserDefinePolicy")]
         [Validation(Required=false)]

@@ -25,13 +25,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The delivery groups.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you configure this parameter, the system assigns application instances only among the specified authorized delivery groups.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter is required if you configure <c>AppInstanceId</c> or <c>AppInstancePersistentId</c>.</para>
-        /// </description></item>
+        /// <item><description>If you configure this parameter, the system assigns application instances only among the specified authorized delivery groups. </description></item>
+        /// <item><description>This parameter is required if you configure <c>AppInstanceId</c> or <c>AppInstancePersistentId</c>.</description></item>
         /// </list>
+        /// </remarks>
         /// </summary>
         [NameInMap("AppInstanceGroupIdList")]
         [Validation(Required=false)]
@@ -40,13 +38,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The ID of the application instance.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you configure this parameter, the system attempts to assign only the specified application instance.</para>
-        /// </description></item>
-        /// <item><description><para>If you configure this parameter, you must also configure <c>AppInstanceGroupIdList</c> and the number of delivery groups specified by <c>AppInstanceGroupIdList</c> must be 1.</para>
-        /// </description></item>
+        /// <item><description>If you configure this parameter, the system attempts to assign only the specified application instance.</description></item>
+        /// <item><description>If you configure this parameter, you must also configure <c>AppInstanceGroupIdList</c> and the number of delivery groups specified by <c>AppInstanceGroupIdList</c> must be 1.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ai-1rznfnrvsa99d****</para>
@@ -66,7 +62,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstancePersistentId { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are configured to start the application. For information about how to obtain these parameters, see <a href="https://help.aliyun.com/zh/wuying-appstreaming/user-guide/create-an-application?#how-to-get-installation-and-startup-para">Obtain parameters configured to install and start an application</a>.</para>
+        /// <para>The parameters that are configured to start the application. For information about how to obtain these parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">Obtain parameters configured to install and start an application</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/q /n</para>

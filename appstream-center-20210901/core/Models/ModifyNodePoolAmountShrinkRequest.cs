@@ -8,25 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
-    public class ListRegionsRequest : TeaModel {
+    public class ModifyNodePoolAmountShrinkRequest : TeaModel {
         /// <summary>
-        /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
-        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>aig-9ciijz60n4xsv****</para>
         /// </summary>
-        [NameInMap("BizSource")]
+        [NameInMap("AppInstanceGroupId")]
         [Validation(Required=false)]
-        public string BizSource { get; set; }
+        public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The product type.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: App Streaming</description></item>
-        /// </list>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("NodePool")]
+        [Validation(Required=false)]
+        public string NodePoolShrink { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CloudApp</para>

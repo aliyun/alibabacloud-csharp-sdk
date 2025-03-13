@@ -29,11 +29,24 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
+        /// <item><description>cn-hangzhou: China (Hangzhou)</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("BizRegionId")]
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource specification that you purchase. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain the ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>appstreaming.vgpu.4c8g.2g</para>
         /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. The value cannot be greater than <c>100</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -74,6 +89,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

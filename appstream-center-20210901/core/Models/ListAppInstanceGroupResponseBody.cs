@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAppInstanceGroupResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The delivery groups.</para>
+        /// </summary>
         [NameInMap("AppInstanceGroupModels")]
         [Validation(Required=false)]
         public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModels> AppInstanceGroupModels { get; set; }
@@ -50,8 +53,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceType { get; set; }
 
             /// <summary>
-            /// <para>策略ID。</para>
-            /// 
             /// <b>Example:</b>
             /// <para>pg-g3k5wa2ms2****</para>
             /// </summary>
@@ -72,8 +73,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> Apps { get; set; }
             public class ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps : TeaModel {
                 /// <summary>
-                /// <para>应用图标。</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://app-center-icon-****.png">https://app-center-icon-****.png</a></para>
                 /// </summary>
@@ -94,8 +93,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>应用版本。</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
                 /// </summary>
@@ -103,12 +100,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public string AppVersion { get; set; }
 
-                /// <summary>
-                /// <para>应用版本名称。</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>初始版本</para>
-                /// </summary>
                 [NameInMap("AppVersionName")]
                 [Validation(Required=false)]
                 public string AppVersionName { get; set; }
@@ -116,8 +107,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>售卖模式。</para>
-            /// 
             /// <b>Example:</b>
             /// <para>Node</para>
             /// </summary>
@@ -165,6 +154,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public int? MinAmount { get; set; }
 
+            /// <summary>
+            /// <para>The resource groups.</para>
+            /// </summary>
             [NameInMap("NodePool")]
             [Validation(Required=false)]
             public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool> NodePool { get; set; }
@@ -177,6 +169,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public int? Amount { get; set; }
 
+                /// <summary>
+                /// <para>The maximum number of idle sessions. After you specify a value for this parameter, auto scaling is triggered only if the number of idle sessions in the delivery group is smaller than the specified value and the session usage exceeds the value specified for <c>ScalingUsageThreshold</c>. Otherwise, the system determines that the idle sessions in the delivery group are sufficient and does not perform auto scaling.`` You can use this parameter to flexibly manage auto scaling and reduce costs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("MaxIdleAppInstanceAmount")]
                 [Validation(Required=false)]
                 public int? MaxIdleAppInstanceAmount { get; set; }
@@ -360,6 +358,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
+            /// <para>The type of the operating system.</para>
+            /// <para>Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description>Windows</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Windows</para>
             /// </summary>
@@ -444,6 +448,36 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("ResourceStatus")]
             [Validation(Required=false)]
             public string ResourceStatus { get; set; }
+
+            /// <summary>
+            /// <para>The tags added to the resources.</para>
+            /// </summary>
+            [NameInMap("ResourceTags")]
+            [Validation(Required=false)]
+            public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsResourceTags> ResourceTags { get; set; }
+            public class ListAppInstanceGroupResponseBodyAppInstanceGroupModelsResourceTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// <para>The tag type. Valid values: Custom and System.</para>
+                /// </summary>
+                [NameInMap("Scope")]
+                [Validation(Required=false)]
+                public string Scope { get; set; }
+
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>

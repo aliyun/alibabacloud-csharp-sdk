@@ -1,3 +1,20 @@
+2025-03-13 Version: 3.1.0
+- Support API ListNodes.
+- Support API ListTagCloudResources.
+- Support API ModifyNodePoolAmount.
+- Support API TagCloudResources.
+- Support API UntagCloudResources.
+- Update API CreateAppInstanceGroup: add param AppPackageType.
+- Update API CreateAppInstanceGroup: add param ClusterId.
+- Update API CreateAppInstanceGroup: add param SubPayType.
+- Update API CreateAppInstanceGroup: update param RuntimePolicy.
+- Update API CreateAppInstanceGroup: update param StoragePolicy.
+- Update API ListAppInstanceGroup: update response param.
+- Update API ListAppInstances: add param UserIdList.
+- Update API ListAppInstances: update response param.
+- Update API ModifyAppInstanceGroupAttribute: update param StoragePolicy.
+
+
 2025-02-18 Version: 3.0.1
 - Update API ListAppInstances: update response param.
 - Update API ModifyAppInstanceGroupAttribute: update param StoragePolicy.

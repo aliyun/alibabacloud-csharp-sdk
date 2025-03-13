@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AppInstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the information about deleted application instances. If you set this parameter to true, you must configure AppInstanceIdList. Otherwise, a parameter error is reported.</para>
+        /// <para>Specifies whether to query the information about deleted app instances. If you set this parameter to true, you must configure AppInstanceIdList. Otherwise, a parameter error is reported.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? IncludeDeleted { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <c>1</c>. We recommend that you configure this parameter.</para>
+        /// <para>The page number. Default value: <c>1</c>. We recommend that you specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The value cannot be greater than <c>100</c>. Default value: <c>20</c>. We recommend that you configure this parameter.</para>
+        /// <para>The number of entries per page. The value cannot be greater than <c>100</c>. Default value: <c>20</c>. We recommend that you specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -84,6 +84,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }
+
+        /// <summary>
+        /// <para>The user IDs. You can specify up to 100 IDs.</para>
+        /// </summary>
+        [NameInMap("UserIdList")]
+        [Validation(Required=false)]
+        public List<string> UserIdList { get; set; }
 
     }
 

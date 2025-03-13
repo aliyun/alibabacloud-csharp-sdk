@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
+        [NameInMap("AppPackageType")]
+        [Validation(Required=false)]
+        public string AppPackageType { get; set; }
+
         [NameInMap("AppPolicyId")]
         [Validation(Required=false)]
         public string AppPolicyId { get; set; }
@@ -72,6 +76,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
+
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
 
         [NameInMap("Network")]
         [Validation(Required=false)]
@@ -145,6 +153,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("StoragePolicy")]
         [Validation(Required=false)]
         public string StoragePolicyShrink { get; set; }
+
+        [NameInMap("SubPayType")]
+        [Validation(Required=false)]
+        public string SubPayType { get; set; }
 
         [NameInMap("UserDefinePolicy")]
         [Validation(Required=false)]
