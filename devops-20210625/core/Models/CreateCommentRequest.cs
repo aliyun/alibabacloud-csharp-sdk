@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [Validation(Required=false)]
         public string FilePath { get; set; }
 
+        [NameInMap("fromPachSetBizId")]
+        [Validation(Required=false)]
+        public string FromPachSetBizId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,6 +85,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
         [NameInMap("resolved")]
         [Validation(Required=false)]
         public bool? Resolved { get; set; }
+
+        [NameInMap("toPatchSetBizId")]
+        [Validation(Required=false)]
+        public string ToPatchSetBizId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

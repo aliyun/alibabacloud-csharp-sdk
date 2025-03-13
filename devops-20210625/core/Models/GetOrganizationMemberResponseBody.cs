@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para><a href="mailto:123@mail.com">123@mail.com</a></para>
+            /// <para>(敏感字段，暂不返回)</para>
             /// </summary>
             [NameInMap("email")]
             [Validation(Required=false)]
@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>373***</para>
+            /// </summary>
             [NameInMap("jobNumber")]
             [Validation(Required=false)]
             public string JobNumber { get; set; }
@@ -109,7 +113,7 @@ namespace AlibabaCloud.SDK.Devops20210625.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1390000****</para>
+            /// <para>(敏感字段，暂不返回)</para>
             /// </summary>
             [NameInMap("mobile")]
             [Validation(Required=false)]
