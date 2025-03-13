@@ -73,6 +73,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? Uid { get; set; }
 
+        /// <summary>
+        /// <para>The UID of the String type. If you specify this parameter, the UID of the Long type is replaced.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>322824****:dmstest.wu@A201***</para>
+        /// </summary>
         [NameInMap("UidString")]
         [Validation(Required=false)]
         public string UidString { get; set; }

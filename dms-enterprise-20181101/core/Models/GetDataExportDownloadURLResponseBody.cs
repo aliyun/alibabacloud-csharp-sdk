@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetDataExportDownloadURLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the download URL of the file that records the export results for the ticket.</para>
+        /// <para>The details of the download URL of the file that records the export results for the ticket.</para>
         /// </summary>
         [NameInMap("DownloadURLResult")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             /// <summary>
             /// <para>Indicates whether export results are available for download. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Export results are available for download.</description></item>
-            /// <item><description><b>false</b>: No export results are available for download.</description></item>
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error code returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4BF24EA5-9013-4C85-AE68-6C23AF5E0097</para>
@@ -85,8 +85,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

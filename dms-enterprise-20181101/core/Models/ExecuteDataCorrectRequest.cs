@@ -39,6 +39,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the Alibaba Cloud account that is used to call the API operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21400447956867****</para>
+        /// </summary>
         [NameInMap("RealLoginUserUid")]
         [Validation(Required=false)]
         public string RealLoginUserUid { get; set; }

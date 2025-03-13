@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string SearchKey { get; set; }
 
+        [NameInMap("SessionToken")]
+        [Validation(Required=false)]
+        public string SessionToken { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>3</para>

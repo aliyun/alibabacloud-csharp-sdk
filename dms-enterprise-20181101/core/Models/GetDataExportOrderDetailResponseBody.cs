@@ -17,12 +17,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public GetDataExportOrderDetailResponseBodyDataExportOrderDetail DataExportOrderDetail { get; set; }
         public class GetDataExportOrderDetailResponseBodyDataExportOrderDetail : TeaModel {
             /// <summary>
-            /// <para>The information about the ticket.</para>
+            /// <para>The status information.</para>
             /// </summary>
             [NameInMap("KeyInfo")]
             [Validation(Required=false)]
             public GetDataExportOrderDetailResponseBodyDataExportOrderDetailKeyInfo KeyInfo { get; set; }
             public class GetDataExportOrderDetailResponseBodyDataExportOrderDetailKeyInfo : TeaModel {
+                /// <summary>
+                /// <para>Export task ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1385****</para>
+                /// </summary>
                 [NameInMap("JobId")]
                 [Validation(Required=false)]
                 public long? JobId { get; set; }

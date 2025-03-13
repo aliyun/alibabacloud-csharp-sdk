@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public CreateDataCorrectOrderRequestParam Param { get; set; }
         public class CreateDataCorrectOrderRequestParam : TeaModel {
             /// <summary>
-            /// <para>The key of the attachment that contains the SQL statements used to change data. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of the AttachmentKey parameter.</para>
+            /// <para>The key of the attachment that contains the SQL statements used to change data. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of AttachmentKey.</para>
             /// <remarks>
-            /// <para> This parameter is required if you set the <b>SqlType</b> parameter to <b>ATTACHMENT</b>.</para>
+            /// <para> This parameter is required if you set <b>SqlType</b> to <b>ATTACHMENT</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string Classify { get; set; }
 
             /// <summary>
-            /// <para>The databases in which you want to change data.</para>
+            /// <para>The databases whose data you want to change.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("DbItemList")]
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public List<CreateDataCorrectOrderRequestParamDbItemList> DbItemList { get; set; }
             public class CreateDataCorrectOrderRequestParamDbItemList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the database. The database can be a physical database or a logical database.</para>
+                /// <para>The database ID. The database can be a physical database or a logical database.</para>
                 /// <list type="bullet">
-                /// <item><description>To obtain the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</description></item>
-                /// <item><description>To obtain the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</description></item>
+                /// <item><description>To query the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</description></item>
+                /// <item><description>To query the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -83,6 +83,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public long? DbId { get; set; }
 
+                /// <summary>
+                /// <para>The instance ID. You can call the ListInstances or GetInstance operation to query the instance ID.</para>
+                /// <remarks>
+                /// <para>The instance change feature is supported only by ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and AnalyticDB for MySQL clusters.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1860****</para>
+                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public long? InstanceId { get; set; }
@@ -104,7 +113,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             }
 
             /// <summary>
-            /// <para>The estimated number of data rows to be affected by the data change.</para>
+            /// <para>The estimated number of data rows that may be affected by the data change.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -115,11 +124,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public long? EstimateAffectRows { get; set; }
 
             /// <summary>
-            /// <para>The execution mode of the ticket after the ticket is approved. Valid values:</para>
+            /// <para>The mode in which the data change ticket is executed after the ticket is approved. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>COMMITOR</b>: The data change is performed by the user who submits the ticket.</description></item>
-            /// <item><description><b>AUTO</b>: The data change is automatically performed after the ticket is approved.</description></item>
-            /// <item><description><b>LAST_AUDITOR</b>: The data change is performed by the last approver of the ticket.</description></item>
+            /// <item><description><b>COMMITOR</b>: The ticket is executed by the user who submits the ticket.</description></item>
+            /// <item><description><b>AUTO</b>: The ticket is automatically executed after the ticket is approved.</description></item>
+            /// <item><description><b>LAST_AUDITOR</b>: The ticket is executed by the last approver of the ticket.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -130,10 +139,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string ExecMode { get; set; }
 
             /// <summary>
-            /// <para>The SQL statements that you want to execute to change data.</para>
+            /// <para>The SQL statements for data change.</para>
             /// <remarks>
-            /// <para> This parameter is required if you set the <b>SqlType</b> parameter to <b>TEXT</b>.</para>
             /// </remarks>
+            /// <list type="bullet">
+            /// <item><description><para>This parameter is required if you set <b>SqlType</b> to <b>TEXT</b>.</para>
+            /// </description></item>
+            /// <item><description><para>The size of the SQL statement cannot exceed 15 MB.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>update base_user set id = 1 where id  = 1;</para>
@@ -143,9 +157,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string ExecSQL { get; set; }
 
             /// <summary>
-            /// <para>The key of the attachment that contains the SQL statements used to roll back the data change. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to the attachment key from the value of the AttachmentKey parameter.</para>
+            /// <para>The key of the attachment that contains the SQL statements used to roll back the data change. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of AttachmentKey.</para>
             /// <remarks>
-            /// <para> This parameter is required if you set the <b>RollbackSqlType</b> parameter to <b>ATTACHMENT</b>.</para>
+            /// <para> This parameter is required if you set <b>RollbackSqlType</b> to <b>ATTACHMENT</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -156,9 +170,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string RollbackAttachmentName { get; set; }
 
             /// <summary>
-            /// <para>The SQL statements used to roll back the data change.</para>
+            /// <para>The SQL statements for rolling back the data change.</para>
             /// <remarks>
-            /// <para>This parameter is required if you set the <b>RollbackSqlType</b> parameter to <b>TEXT</b>.</para>
+            /// <para> This parameter is required if you set <b>RollbackSqlType</b> to <b>TEXT</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -171,8 +185,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             /// <summary>
             /// <para>The format of the SQL statements used to roll back the data change. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>TEXT</b>: text</description></item>
-            /// <item><description><b>ATTACHMENT</b>: attachment</description></item>
+            /// <item><description><b>TEXT</b></description></item>
+            /// <item><description><b>ATTACHMENT</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -185,8 +199,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             /// <summary>
             /// <para>The format of the SQL statements used to change data. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>TEXT</b>: text</description></item>
-            /// <item><description><b>ATTACHMENT</b>: attachment</description></item>
+            /// <item><description><b>TEXT</b></description></item>
+            /// <item><description><b>ATTACHMENT</b></description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -199,6 +213,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         }
 
+        /// <summary>
+        /// <para>The ID of the Alibaba Cloud account that is used to call the API operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21400447956867****</para>
+        /// </summary>
         [NameInMap("RealLoginUserUid")]
         [Validation(Required=false)]
         public string RealLoginUserUid { get; set; }

@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public long? WorkspaceId { get; set; }
+
     }
 
 }
