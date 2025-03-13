@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
             /// <summary>
             /// <para>The cluster name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test1</para>
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]

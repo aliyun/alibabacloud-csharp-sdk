@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifySecurityIPListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifySecurityIPListResponseBodyData Data { get; set; }
         public class ModifySecurityIPListResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cc-xxxx</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public int? DBInstanceID { get; set; }
 
             /// <summary>
+            /// <para>The cluster name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cc-xxxx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
+            /// <para>The name of the whitelist.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string GroupName { get; set; }
 
             /// <summary>
+            /// <para>The tag of the whitelist.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string GroupTag { get; set; }
 
             /// <summary>
+            /// <para>The IP addresses and CIDR blocks in the whitelist.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192.168.0.0/24,172.16.0.0/24</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string SecurityIPList { get; set; }
 
             /// <summary>
+            /// <para>The IP address type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ipv4</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string SecurityIPType { get; set; }
 
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public int? TaskId { get; set; }
 
             /// <summary>
+            /// <para>The network type of the whitelist.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mix</para>
             /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx-xxx-xxx</para>
         /// </summary>

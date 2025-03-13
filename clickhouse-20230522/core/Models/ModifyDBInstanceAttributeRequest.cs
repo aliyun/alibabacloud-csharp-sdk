@@ -25,6 +25,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string AttributeType { get; set; }
 
         /// <summary>
+        /// <para>The new value of the configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,6 +36,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string AttributeValue { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,6 +57,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string Product { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

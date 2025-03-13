@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DeleteEndpointRequest : TeaModel {
         /// <summary>
+        /// <para>The prefix of the endpoint, which indicates the prefix of the value of the ConnectionString parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

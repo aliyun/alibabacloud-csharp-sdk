@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceConnectionStringResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -46,6 +46,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
+            /// <summary>
+            /// <para>The disabled database ports.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>9001,8123</para>
+            /// </summary>
             [NameInMap("DisabledPorts")]
             [Validation(Required=false)]
             public string DisabledPorts { get; set; }

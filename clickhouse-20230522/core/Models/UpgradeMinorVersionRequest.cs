@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class UpgradeMinorVersionRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -28,6 +31,11 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The update time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para> If you set SwitchTimeMode to SpecifyTime, you must configure this parameter to specify the update time.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-01-09T05:00:00Z</para>
         /// </summary>
@@ -51,6 +59,11 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string SwitchTimeMode { get; set; }
 
         /// <summary>
+        /// <para>The minor engine version to which you want to update.</para>
+        /// <remarks>
+        /// <para> By default, TargetMinorVersion is not set and the minor engine version of the cluster is updated to the latest version.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>23.8.1.41495_6</para>
         /// </summary>

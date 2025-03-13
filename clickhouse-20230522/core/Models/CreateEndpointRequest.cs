@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateEndpointRequest : TeaModel {
         /// <summary>
+        /// <para>The prefix of the new endpoint. The prefix of the ConnectionString parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ConnectionPrefix { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,6 +32,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
         /// <summary>
         /// <para>The network type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Public</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Public</para>
@@ -38,6 +45,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceNetType { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

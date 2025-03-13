@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string Account { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

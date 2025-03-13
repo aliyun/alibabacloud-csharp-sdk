@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateAccountShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,6 +36,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string AccountType { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +46,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The description of the account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Used for account</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -56,6 +64,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DmlAuthSettingShrink { get; set; }
 
         /// <summary>
+        /// <para>The password of the database account. The password must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>The following special characters are supported: ! @ # $ % ^ &amp; * ( ) _ + - =</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,6 +90,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string Product { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

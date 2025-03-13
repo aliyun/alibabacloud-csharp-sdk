@@ -40,6 +40,19 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description><para>The database port that you want to disable. If you need to specify multiple database ports, separate the database ports with commas (,).</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is available only in clusters whose engine version is 24.10.1.11098_1 or later.</para>
+        /// <para>**</para>
+        /// <para><b>Note</b> If you create a cluster whose version is earlier than 24.10.1.11098_1, the cluster does not support this parameter even after being upgraded to 24.10.1.11098_1 or later.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9001,8123</para>
+        /// </summary>
         [NameInMap("DisablePorts")]
         [Validation(Required=false)]
         public string DisablePorts { get; set; }

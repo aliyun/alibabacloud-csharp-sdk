@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeDBInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster IDs. Separate multiple cluster IDs with commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cc-xxxxx,cx-xxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceIds { get; set; }
 
         /// <summary>
+        /// <para>The cluster status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>active</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceStatus { get; set; }
 
         /// <summary>
+        /// <para>The cluster description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-4690g37929****</para>
         /// </summary>

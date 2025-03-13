@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账号</para>
+        /// <para>Creates a database account for an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账号</para>
+        /// <para>Creates a database account for an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账号</para>
+        /// <para>Creates a database account for an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账号</para>
+        /// <para>Creates a database account for an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据库</para>
+        /// <para>Creates an ApsaraDB for ClickHouse database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -349,7 +349,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据库</para>
+        /// <para>Creates an ApsaraDB for ClickHouse database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -410,7 +410,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据库</para>
+        /// <para>Creates an ApsaraDB for ClickHouse database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -428,7 +428,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据库</para>
+        /// <para>Creates an ApsaraDB for ClickHouse database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -446,7 +446,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建企业版Clickhouse实例</para>
+        /// <para>Creates an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -469,6 +469,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
                 request.MultiZoneShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultiZone, "MultiZone", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetId))
+            {
+                query["BackupSetId"] = request.BackupSetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -504,6 +508,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleMin))
             {
                 query["ScaleMin"] = request.ScaleMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDBInstanceId))
+            {
+                query["SourceDBInstanceId"] = request.SourceDBInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -545,7 +553,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建企业版Clickhouse实例</para>
+        /// <para>Creates an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -568,6 +576,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
                 request.MultiZoneShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultiZone, "MultiZone", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetId))
+            {
+                query["BackupSetId"] = request.BackupSetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -603,6 +615,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleMin))
             {
                 query["ScaleMin"] = request.ScaleMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDBInstanceId))
+            {
+                query["SourceDBInstanceId"] = request.SourceDBInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -644,7 +660,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建企业版Clickhouse实例</para>
+        /// <para>Creates an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -662,7 +678,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建企业版Clickhouse实例</para>
+        /// <para>Creates an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -680,7 +696,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请外网地址</para>
+        /// <para>Applies for a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -741,7 +757,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请外网地址</para>
+        /// <para>Applies for a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -802,7 +818,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请外网地址</para>
+        /// <para>Applies for a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -820,7 +836,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请外网地址</para>
+        /// <para>Applies for a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -838,7 +854,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账号</para>
+        /// <para>Deletes a database account from an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -899,7 +915,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账号</para>
+        /// <para>Deletes a database account from an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -960,7 +976,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账号</para>
+        /// <para>Deletes a database account from an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -978,7 +994,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账号</para>
+        /// <para>Deletes a database account from an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -996,7 +1012,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库</para>
+        /// <para>Deletes an ApsaraDB for ClickHouse database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1053,7 +1069,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库</para>
+        /// <para>Deletes an ApsaraDB for ClickHouse database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1110,7 +1126,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库</para>
+        /// <para>Deletes an ApsaraDB for ClickHouse database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1128,7 +1144,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库</para>
+        /// <para>Deletes an ApsaraDB for ClickHouse database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1146,7 +1162,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放实例</para>
+        /// <para>Releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1199,7 +1215,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放实例</para>
+        /// <para>Releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1252,7 +1268,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放实例</para>
+        /// <para>Releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1270,7 +1286,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放实例</para>
+        /// <para>Releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1288,7 +1304,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除链接地址</para>
+        /// <para>Releases a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1345,7 +1361,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除链接地址</para>
+        /// <para>Releases a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1402,7 +1418,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除链接地址</para>
+        /// <para>Releases a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1420,7 +1436,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除链接地址</para>
+        /// <para>Releases a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1438,7 +1454,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号的授权信息</para>
+        /// <para>Queries the permissions of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1495,7 +1511,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号的授权信息</para>
+        /// <para>Queries the permissions of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1552,7 +1568,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号的授权信息</para>
+        /// <para>Queries the permissions of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1570,7 +1586,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号的授权信息</para>
+        /// <para>Queries the permissions of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1588,7 +1604,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号列表</para>
+        /// <para>Queries database accounts for an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1653,7 +1669,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号列表</para>
+        /// <para>Queries database accounts for an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1718,7 +1734,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号列表</para>
+        /// <para>Queries database accounts for an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1736,7 +1752,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号列表</para>
+        /// <para>Queries database accounts for an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1754,7 +1770,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例详情</para>
+        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1807,7 +1823,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例详情</para>
+        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1860,7 +1876,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例详情</para>
+        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1878,7 +1894,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例详情</para>
+        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1896,7 +1912,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DB或者Table数据结构</para>
+        /// <para>Queries the schema of a database or a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1957,7 +1973,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DB或者Table数据结构</para>
+        /// <para>Queries the schema of a database or a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2018,7 +2034,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DB或者Table数据结构</para>
+        /// <para>Queries the schema of a database or a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2036,7 +2052,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DB或者Table数据结构</para>
+        /// <para>Queries the schema of a database or a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2054,7 +2070,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries a list of ApsaraDB for ClickHouse clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2127,7 +2143,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries a list of ApsaraDB for ClickHouse clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2200,7 +2216,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries a list of ApsaraDB for ClickHouse clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2218,7 +2234,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries a list of ApsaraDB for ClickHouse clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2236,7 +2252,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例访问地址</para>
+        /// <para>Queries the endpoint of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2289,7 +2305,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例访问地址</para>
+        /// <para>Queries the endpoint of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2342,7 +2358,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例访问地址</para>
+        /// <para>Queries the endpoint of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2360,7 +2376,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例访问地址</para>
+        /// <para>Queries the endpoint of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2900,7 +2916,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>慢查询趋势</para>
+        /// <para>Queries the trend of slow query logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2969,7 +2985,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>慢查询趋势</para>
+        /// <para>Queries the trend of slow query logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3038,7 +3054,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>慢查询趋势</para>
+        /// <para>Queries the trend of slow query logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3056,7 +3072,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>慢查询趋势</para>
+        /// <para>Queries the trend of slow query logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3224,7 +3240,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改账号的授权信息</para>
+        /// <para>Modifies the permissions of a database account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3291,7 +3307,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改账号的授权信息</para>
+        /// <para>Modifies the permissions of a database account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3358,7 +3374,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改账号的授权信息</para>
+        /// <para>Modifies the permissions of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3376,7 +3392,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改账号的授权信息</para>
+        /// <para>Modifies the permissions of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3394,7 +3410,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改账号备注</para>
+        /// <para>Modifies the description of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3455,7 +3471,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改账号备注</para>
+        /// <para>Modifies the description of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3516,7 +3532,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改账号备注</para>
+        /// <para>Modifies the description of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3534,7 +3550,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改账号备注</para>
+        /// <para>Modifies the description of a database account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3552,7 +3568,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的配置属性，包括名称、运维时间等</para>
+        /// <para>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3617,7 +3633,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的配置属性，包括名称、运维时间等</para>
+        /// <para>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3682,7 +3698,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的配置属性，包括名称、运维时间等</para>
+        /// <para>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3700,7 +3716,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例的配置属性，包括名称、运维时间等</para>
+        /// <para>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3718,7 +3734,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例弹性配置</para>
+        /// <para>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3734,7 +3750,23 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
         public ModifyDBInstanceClassResponse ModifyDBInstanceClassWithOptions(ModifyDBInstanceClassRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleMax))
+            {
+                query["ScaleMax"] = request.ScaleMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleMin))
+            {
+                query["ScaleMin"] = request.ScaleMin;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3745,7 +3777,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
                 Version = "2023-05-22",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -3763,7 +3795,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例弹性配置</para>
+        /// <para>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3779,7 +3811,23 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
         public async Task<ModifyDBInstanceClassResponse> ModifyDBInstanceClassWithOptionsAsync(ModifyDBInstanceClassRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleMax))
+            {
+                query["ScaleMax"] = request.ScaleMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleMin))
+            {
+                query["ScaleMin"] = request.ScaleMin;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3790,7 +3838,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
                 Version = "2023-05-22",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -3808,7 +3856,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例弹性配置</para>
+        /// <para>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3826,7 +3874,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例弹性配置</para>
+        /// <para>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4010,7 +4058,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变更白名单</para>
+        /// <para>Modifies the whitelist settings of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4075,7 +4123,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变更白名单</para>
+        /// <para>Modifies the whitelist settings of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4140,7 +4188,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变更白名单</para>
+        /// <para>Modifies the whitelist settings of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4158,7 +4206,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变更白名单</para>
+        /// <para>Modifies the whitelist settings of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4176,7 +4224,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置账号密码</para>
+        /// <para>Resets the password of a database account for an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4241,7 +4289,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置账号密码</para>
+        /// <para>Resets the password of a database account for an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4306,7 +4354,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置账号密码</para>
+        /// <para>Resets the password of a database account for an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4324,7 +4372,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置账号密码</para>
+        /// <para>Resets the password of a database account for an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4768,7 +4816,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级实例内核小版本</para>
+        /// <para>Updates the minor engine version of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4833,7 +4881,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级实例内核小版本</para>
+        /// <para>Updates the minor engine version of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4898,7 +4946,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级实例内核小版本</para>
+        /// <para>Updates the minor engine version of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4916,7 +4964,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级实例内核小版本</para>
+        /// <para>Updates the minor engine version of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <param name="request">

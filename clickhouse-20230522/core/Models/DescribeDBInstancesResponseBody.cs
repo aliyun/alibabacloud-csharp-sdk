@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeDBInstancesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDBInstancesResponseBodyData Data { get; set; }
         public class DescribeDBInstancesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The clusters.</para>
+            /// </summary>
             [NameInMap("DBInstances")]
             [Validation(Required=false)]
             public List<DescribeDBInstancesResponseBodyDataDBInstances> DBInstances { get; set; }
             public class DescribeDBInstancesResponseBodyDataDBInstances : TeaModel {
                 /// <summary>
+                /// <para>The user ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1294****</para>
                 /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string AliUid { get; set; }
 
                 /// <summary>
+                /// <para>The channel ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>186681****</para>
                 /// </summary>
@@ -34,6 +44,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Bid { get; set; }
 
                 /// <summary>
+                /// <para>The billing method. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>PrePaid: subscription</description></item>
+                /// <item><description>PostPaid: pay-as-you-go</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>PostPaid</para>
                 /// </summary>
@@ -42,6 +58,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string ChargeType { get; set; }
 
                 /// <summary>
+                /// <para>The time when the cluster was created.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2022-12-04 21:16:15</para>
                 /// </summary>
@@ -50,6 +68,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>The cluster ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cc-xxxxxxx</para>
                 /// </summary>
@@ -58,6 +78,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the release protection feature is enabled for the cluster.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>False</para>
                 /// </summary>
@@ -66,6 +88,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string DeletionProtection { get; set; }
 
                 /// <summary>
+                /// <para>The cluster description.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test_desc</para>
                 /// </summary>
@@ -74,6 +98,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The engine type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>clickhouse</para>
                 /// </summary>
@@ -82,6 +108,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Engine { get; set; }
 
                 /// <summary>
+                /// <para>The engine version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>22.8</para>
                 /// </summary>
@@ -90,6 +118,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string EngineVersion { get; set; }
 
                 /// <summary>
+                /// <para>The time when the cluster expires.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-02-16 11:51:06</para>
                 /// </summary>
@@ -98,6 +128,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string ExpireTime { get; set; }
 
                 /// <summary>
+                /// <para>The lock mode.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -106,6 +138,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string LockMode { get; set; }
 
                 /// <summary>
+                /// <para>The reason why the cluster was locked.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
                 /// </summary>
@@ -114,6 +148,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string LockReason { get; set; }
 
                 /// <summary>
+                /// <para>The end time of the maintenance window.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>04:00:00Z</para>
                 /// </summary>
@@ -122,6 +158,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string MaintainEndTime { get; set; }
 
                 /// <summary>
+                /// <para>The start time of the maintenance window.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>00:00Z</para>
                 /// </summary>
@@ -130,6 +168,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string MaintainStartTime { get; set; }
 
                 /// <summary>
+                /// <para>The region ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
                 /// </summary>
@@ -138,6 +178,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
+                /// <para>The resource group ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>rg-acfmzy****</para>
                 /// </summary>
@@ -146,6 +188,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
+                /// <para>The maximum capacity for elastic scaling.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>13</para>
                 /// </summary>
@@ -154,6 +198,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public int? ScaleMax { get; set; }
 
                 /// <summary>
+                /// <para>The minimum capacity for elastic scaling.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -162,6 +208,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public int? ScaleMin { get; set; }
 
                 /// <summary>
+                /// <para>The cluster status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>active</para>
                 /// </summary>
@@ -169,11 +217,16 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// <para>The tags.</para>
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<DescribeDBInstancesResponseBodyDataDBInstancesTags> Tags { get; set; }
                 public class DescribeDBInstancesResponseBodyDataDBInstancesTags : TeaModel {
                     /// <summary>
+                    /// <para>The tag key.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>tag</para>
                     /// </summary>
@@ -182,6 +235,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                     public string Key { get; set; }
 
                     /// <summary>
+                    /// <para>The tag value.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
                     /// </summary>
@@ -192,6 +247,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 }
 
                 /// <summary>
+                /// <para>The vSwitch ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vsw-8vb5mw****</para>
                 /// </summary>
@@ -200,7 +257,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>VPC ID。</para>
+                /// <para>The virtual private cloud (VPC) ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf6kg****</para>
@@ -210,6 +267,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
+                /// <para>The zone ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-i</para>
                 /// </summary>
@@ -220,6 +279,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -228,6 +289,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
@@ -236,6 +299,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -246,6 +311,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx-xxx-xxx</para>
         /// </summary>

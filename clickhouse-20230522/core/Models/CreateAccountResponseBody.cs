@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateAccountResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateAccountResponseBodyData Data { get; set; }
         public class CreateAccountResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The name of the database account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Account { get; set; }
 
             /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cc-bp100p4q1g9z3****</para>
             /// </summary>

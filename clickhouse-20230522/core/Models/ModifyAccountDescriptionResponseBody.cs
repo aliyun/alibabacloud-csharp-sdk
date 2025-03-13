@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public ModifyAccountDescriptionResponseBodyData Data { get; set; }
         public class ModifyAccountDescriptionResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The name of the database account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testuser</para>
             /// </summary>

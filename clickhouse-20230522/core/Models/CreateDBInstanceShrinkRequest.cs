@@ -10,6 +10,18 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateDBInstanceShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The backup set ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("BackupSetId")]
+        [Validation(Required=false)]
+        public string BackupSetId { get; set; }
+
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token. Make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AB</para>
         /// </summary>
@@ -17,16 +29,32 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The cluster description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Used for test</para>
+        /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
+        /// <summary>
+        /// <para>The deployment status of the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>multi_az</para>
+        /// </summary>
         [NameInMap("DeploySchema")]
         [Validation(Required=false)]
         public string DeploySchema { get; set; }
 
         /// <summary>
         /// <para>The engine type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>clickhouse</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>clickhouse</para>
@@ -36,6 +64,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string Engine { get; set; }
 
         /// <summary>
+        /// <para>The engine version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23.8</para>
         /// </summary>
@@ -43,11 +73,15 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        /// <summary>
+        /// <para>The configurations of multi-zone deployment.</para>
+        /// </summary>
         [NameInMap("MultiZone")]
         [Validation(Required=false)]
         public string MultiZoneShrink { get; set; }
 
         /// <summary>
+        /// <para>The region ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +92,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The maximum capacity for auto scaling.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32</para>
         /// </summary>
@@ -66,6 +102,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ScaleMax { get; set; }
 
         /// <summary>
+        /// <para>The minimum capacity for auto scaling.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>
@@ -74,7 +112,17 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ScaleMin { get; set; }
 
         /// <summary>
-        /// <para>VPC ID。</para>
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc-2ze1*********</para>
+        /// </summary>
+        [NameInMap("SourceDBInstanceId")]
+        [Validation(Required=false)]
+        public string SourceDBInstanceId { get; set; }
+
+        /// <summary>
+        /// <para>The virtual private cloud (VPC) ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-uf6xmupdn7v6ui9f****</para>
@@ -84,6 +132,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string VpcId { get; set; }
 
         /// <summary>
+        /// <para>The vSwitch ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-uf632qye9oqt4x4sr****</para>
         /// </summary>
@@ -92,6 +142,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string VswitchId { get; set; }
 
         /// <summary>
+        /// <para>The zone ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>
         /// </summary>
