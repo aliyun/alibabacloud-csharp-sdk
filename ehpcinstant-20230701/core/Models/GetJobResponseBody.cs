@@ -33,10 +33,18 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 [Validation(Required=false)]
                 public string AllocationSpec { get; set; }
 
+                [NameInMap("Level")]
+                [Validation(Required=false)]
+                public string Level { get; set; }
+
                 [NameInMap("Network")]
                 [Validation(Required=false)]
                 public GetJobResponseBodyJobInfoDeploymentPolicyNetwork Network { get; set; }
                 public class GetJobResponseBodyJobInfoDeploymentPolicyNetwork : TeaModel {
+                    [NameInMap("EnableENIMapping")]
+                    [Validation(Required=false)]
+                    public bool? EnableENIMapping { get; set; }
+
                     [NameInMap("EnableExternalIpAddress")]
                     [Validation(Required=false)]
                     public bool? EnableExternalIpAddress { get; set; }

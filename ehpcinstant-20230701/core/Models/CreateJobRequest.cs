@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string AllocationSpec { get; set; }
 
+            [NameInMap("Level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+
             [NameInMap("Network")]
             [Validation(Required=false)]
             public CreateJobRequestDeploymentPolicyNetwork Network { get; set; }

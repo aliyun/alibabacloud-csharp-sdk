@@ -1,3 +1,8 @@
+2025-03-13 Version: 2.0.1
+- Update API CreateJob: update param DeploymentPolicy.
+- Update API GetJob: update response param.
+
+
 2025-02-12 Version: 2.0.0
 - Update API CreateJob: add param SecurityPolicy.
 - Update API ListExecutors: update param PageNumber.
