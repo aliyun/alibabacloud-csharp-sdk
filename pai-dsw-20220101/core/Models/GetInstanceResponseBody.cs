@@ -115,6 +115,14 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [Validation(Required=false)]
             public string DatasetId { get; set; }
 
+            [NameInMap("DatasetVersion")]
+            [Validation(Required=false)]
+            public string DatasetVersion { get; set; }
+
+            [NameInMap("MountAccess")]
+            [Validation(Required=false)]
+            public string MountAccess { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>/mnt/data</para>
