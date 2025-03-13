@@ -94,15 +94,24 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("EnableIpv6")]
         [Validation(Required=false)]
         public bool? EnableIpv6 { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to enable GPU acceleration.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (true)</description></item>
+        /// <item><description>true: enables GPU acceleration.</description></item>
+        /// <item><description>false (default): disables GPU acceleration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,7 +135,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>The name of the instance group.</para>
         /// <remarks>
-        /// <para>The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with http:// or https://.</para>
+        /// <para> The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -153,13 +162,23 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string InstanceGroupSpec { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para> This parameter is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("Ipv6Bandwidth")]
         [Validation(Required=false)]
         public int? Ipv6Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The ID of the key pair. When you create an instance group and specify a valid key pair ID, all cloud phone instances within the group will automatically be bound to that key pair upon creation. This eliminates the need to manually call the operation to bind key pairs to individual cloud phone instances.</para>
-        /// <para>Take note that binding key pairs to cloud phone instances is currently not supported during instance group resizing.</para>
+        /// <para>The ID of the key pair. When you create an instance group and specify a valid key pair ID, all cloud phone instances within the group will automatically be bound to that key pair upon creation. This eliminates the need to manually bind key pairs to individual cloud phone instances.</para>
+        /// <remarks>
+        /// <para> Binding key pairs to cloud phone instances is currently not supported during instance group resizing.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>kp-7o9xywwfutc1l****</para>
@@ -228,14 +247,29 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The tags</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateAndroidInstanceGroupRequestTag> Tag { get; set; }
         public class CreateAndroidInstanceGroupRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
