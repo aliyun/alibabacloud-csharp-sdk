@@ -1,3 +1,6 @@
+2025-03-13 Version: 4.2.1
+- Generated csharp 2023-09-30 for eds-aic.
+
 2025-03-13 Version: 4.2.0
 - Support API ModifyInstanceChargeType.
 
