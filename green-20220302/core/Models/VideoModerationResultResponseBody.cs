@@ -330,6 +330,52 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                         }
 
+                        [NameInMap("LogoData")]
+                        [Validation(Required=false)]
+                        public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData> LogoData { get; set; }
+                        public class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData : TeaModel {
+                            [NameInMap("Location")]
+                            [Validation(Required=false)]
+                            public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation Location { get; set; }
+                            public class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation : TeaModel {
+                                [NameInMap("H")]
+                                [Validation(Required=false)]
+                                public int? H { get; set; }
+
+                                [NameInMap("W")]
+                                [Validation(Required=false)]
+                                public int? W { get; set; }
+
+                                [NameInMap("X")]
+                                [Validation(Required=false)]
+                                public int? X { get; set; }
+
+                                [NameInMap("Y")]
+                                [Validation(Required=false)]
+                                public int? Y { get; set; }
+
+                            }
+
+                            [NameInMap("Logo")]
+                            [Validation(Required=false)]
+                            public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo> Logo { get; set; }
+                            public class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo : TeaModel {
+                                [NameInMap("confidence")]
+                                [Validation(Required=false)]
+                                public long? Confidence { get; set; }
+
+                                [NameInMap("label")]
+                                [Validation(Required=false)]
+                                public string Label { get; set; }
+
+                                [NameInMap("name")]
+                                [Validation(Required=false)]
+                                public string Name { get; set; }
+
+                            }
+
+                        }
+
                         /// <summary>
                         /// <para>If the video contains a specific figure, the code of the identified figure is returned.</para>
                         /// </summary>
