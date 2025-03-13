@@ -13,6 +13,13 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
+        /// <summary>
+        /// <para>The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Bearer AT8csE2seYxxxxxij</para>
+        /// </summary>
         [NameInMap("Authorization")]
         [Validation(Required=false)]
         public string Authorization { get; set; }

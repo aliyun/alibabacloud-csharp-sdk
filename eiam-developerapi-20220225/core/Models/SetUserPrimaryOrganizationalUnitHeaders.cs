@@ -13,6 +13,12 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Bearer xxxx</para>
+        /// </summary>
         [NameInMap("Authorization")]
         [Validation(Required=false)]
         public string Authorization { get; set; }
