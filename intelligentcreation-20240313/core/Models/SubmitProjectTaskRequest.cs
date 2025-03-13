@@ -218,6 +218,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                 [Validation(Required=false)]
                 public string AudioUrl { get; set; }
 
+                [NameInMap("emotion")]
+                [Validation(Required=false)]
+                public string Emotion { get; set; }
+
+                [NameInMap("pitchRate")]
+                [Validation(Required=false)]
+                public string PitchRate { get; set; }
+
                 [NameInMap("speechOpen")]
                 [Validation(Required=false)]
                 public bool? SpeechOpen { get; set; }
@@ -241,6 +249,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
+
+                [NameInMap("voiceLanguage")]
+                [Validation(Required=false)]
+                public string VoiceLanguage { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

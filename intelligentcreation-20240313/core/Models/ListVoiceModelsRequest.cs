@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string UseScene { get; set; }
 
+        [NameInMap("voiceLanguage")]
+        [Validation(Required=false)]
+        public string VoiceLanguage { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>PRIVATE_VOICE</para>

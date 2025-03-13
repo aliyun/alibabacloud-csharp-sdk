@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string AgentId { get; set; }
 
+        [NameInMap("bitRate")]
+        [Validation(Required=false)]
+        public string BitRate { get; set; }
+
+        [NameInMap("frameRate")]
+        [Validation(Required=false)]
+        public string FrameRate { get; set; }
+
         [NameInMap("frames")]
         [Validation(Required=false)]
         public List<SaveAvatarProjectRequestFrames> Frames { get; set; }
@@ -109,6 +117,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                 [Validation(Required=false)]
                 public string SpeedRate { get; set; }
 
+                [NameInMap("voiceLanguage")]
+                [Validation(Required=false)]
+                public string VoiceLanguage { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -172,6 +184,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [NameInMap("scaleType")]
         [Validation(Required=false)]
         public string ScaleType { get; set; }
+
+        [NameInMap("synchronizedDisplay")]
+        [Validation(Required=false)]
+        public string SynchronizedDisplay { get; set; }
 
     }
 

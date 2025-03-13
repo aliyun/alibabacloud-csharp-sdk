@@ -225,6 +225,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("nameList")]
+                [Validation(Required=false)]
+                public List<string> NameList { get; set; }
+
+                [NameInMap("operators")]
+                [Validation(Required=false)]
+                public string Operators { get; set; }
+
                 [NameInMap("parameters")]
                 [Validation(Required=false)]
                 public List<GetAICoachScriptResponseBodyPointsAnswerListParameters> Parameters { get; set; }

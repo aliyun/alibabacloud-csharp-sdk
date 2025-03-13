@@ -8,30 +8,28 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
-    public class GetOssUploadTokenRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>8021678.png</para>
-        /// </summary>
-        [NameInMap("fileName")]
+    public class KnowledgeBaseListResult : TeaModel {
+        [NameInMap("knowledgeBases")]
         [Validation(Required=false)]
-        public string FileName { get; set; }
+        public List<KnowledgeBaseInfo> KnowledgeBases { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3239281273464326823</para>
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ProductImage</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("fileType")]
+        [NameInMap("total")]
         [Validation(Required=false)]
-        public string FileType { get; set; }
-
-        [NameInMap("uploadType")]
-        [Validation(Required=false)]
-        public int? UploadType { get; set; }
+        public int? Total { get; set; }
 
     }
 

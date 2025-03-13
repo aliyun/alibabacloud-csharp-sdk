@@ -199,6 +199,150 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量添加知识文档</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchAddDocumentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchAddDocumentResponse
+        /// </returns>
+        public BatchAddDocumentResponse BatchAddDocumentWithOptions(string knowledgeBaseId, BatchAddDocumentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddDocumentInfos))
+            {
+                body["addDocumentInfos"] = request.AddDocumentInfos;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchAddDocument",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/knowledge-base/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/documents",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<BatchAddDocumentResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<BatchAddDocumentResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加知识文档</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchAddDocumentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchAddDocumentResponse
+        /// </returns>
+        public async Task<BatchAddDocumentResponse> BatchAddDocumentWithOptionsAsync(string knowledgeBaseId, BatchAddDocumentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddDocumentInfos))
+            {
+                body["addDocumentInfos"] = request.AddDocumentInfos;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchAddDocument",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/knowledge-base/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/documents",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<BatchAddDocumentResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<BatchAddDocumentResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加知识文档</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchAddDocumentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchAddDocumentResponse
+        /// </returns>
+        public BatchAddDocumentResponse BatchAddDocument(string knowledgeBaseId, BatchAddDocumentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchAddDocumentWithOptions(knowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加知识文档</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchAddDocumentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchAddDocumentResponse
+        /// </returns>
+        public async Task<BatchAddDocumentResponse> BatchAddDocumentAsync(string knowledgeBaseId, BatchAddDocumentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchAddDocumentWithOptionsAsync(knowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>批量发布剧本任务</para>
         /// </summary>
         /// 
@@ -511,6 +655,326 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await BatchGetProjectTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询声音复刻任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchGetTrainTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetTrainTaskResponse
+        /// </returns>
+        public BatchGetTrainTaskResponse BatchGetTrainTaskWithOptions(BatchGetTrainTaskRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchGetTrainTaskShrinkRequest request = new BatchGetTrainTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIdList))
+            {
+                request.TaskIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIdList, "taskIdList", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunMainId))
+            {
+                query["aliyunMainId"] = request.AliyunMainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdListShrink))
+            {
+                query["taskIdList"] = request.TaskIdListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetTrainTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/train/task/batchGetTrainTaskInfo",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<BatchGetTrainTaskResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<BatchGetTrainTaskResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询声音复刻任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchGetTrainTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetTrainTaskResponse
+        /// </returns>
+        public async Task<BatchGetTrainTaskResponse> BatchGetTrainTaskWithOptionsAsync(BatchGetTrainTaskRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchGetTrainTaskShrinkRequest request = new BatchGetTrainTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIdList))
+            {
+                request.TaskIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIdList, "taskIdList", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunMainId))
+            {
+                query["aliyunMainId"] = request.AliyunMainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdListShrink))
+            {
+                query["taskIdList"] = request.TaskIdListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetTrainTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/train/task/batchGetTrainTaskInfo",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<BatchGetTrainTaskResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<BatchGetTrainTaskResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询声音复刻任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetTrainTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetTrainTaskResponse
+        /// </returns>
+        public BatchGetTrainTaskResponse BatchGetTrainTask(BatchGetTrainTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchGetTrainTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询声音复刻任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetTrainTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetTrainTaskResponse
+        /// </returns>
+        public async Task<BatchGetTrainTaskResponse> BatchGetTrainTaskAsync(BatchGetTrainTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchGetTrainTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询视频切片任务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchGetVideoClipTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetVideoClipTaskResponse
+        /// </returns>
+        public BatchGetVideoClipTaskResponse BatchGetVideoClipTaskWithOptions(BatchGetVideoClipTaskRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchGetVideoClipTaskShrinkRequest request = new BatchGetVideoClipTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIdList))
+            {
+                request.TaskIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIdList, "taskIdList", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdListShrink))
+            {
+                query["taskIdList"] = request.TaskIdListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetVideoClipTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/video/clip/batchGetVideoClipTask",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<BatchGetVideoClipTaskResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<BatchGetVideoClipTaskResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询视频切片任务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchGetVideoClipTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetVideoClipTaskResponse
+        /// </returns>
+        public async Task<BatchGetVideoClipTaskResponse> BatchGetVideoClipTaskWithOptionsAsync(BatchGetVideoClipTaskRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchGetVideoClipTaskShrinkRequest request = new BatchGetVideoClipTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIdList))
+            {
+                request.TaskIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIdList, "taskIdList", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdListShrink))
+            {
+                query["taskIdList"] = request.TaskIdListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetVideoClipTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/video/clip/batchGetVideoClipTask",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<BatchGetVideoClipTaskResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<BatchGetVideoClipTaskResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询视频切片任务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetVideoClipTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetVideoClipTaskResponse
+        /// </returns>
+        public BatchGetVideoClipTaskResponse BatchGetVideoClipTask(BatchGetVideoClipTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchGetVideoClipTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询视频切片任务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetVideoClipTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetVideoClipTaskResponse
+        /// </returns>
+        public async Task<BatchGetVideoClipTaskResponse> BatchGetVideoClipTaskAsync(BatchGetVideoClipTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchGetVideoClipTaskWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2475,6 +2939,374 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>提交声音复刻任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrainTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrainTaskResponse
+        /// </returns>
+        public CreateTrainTaskResponse CreateTrainTaskWithOptions(CreateTrainTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunMainId))
+            {
+                body["aliyunMainId"] = request.AliyunMainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResSpecType))
+            {
+                body["resSpecType"] = request.ResSpecType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["taskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseScene))
+            {
+                body["useScene"] = request.UseScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceGender))
+            {
+                body["voiceGender"] = request.VoiceGender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceLanguage))
+            {
+                body["voiceLanguage"] = request.VoiceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceName))
+            {
+                body["voiceName"] = request.VoiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoicePath))
+            {
+                body["voicePath"] = request.VoicePath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTrainTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/train/task/createTrainTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateTrainTaskResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateTrainTaskResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交声音复刻任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrainTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrainTaskResponse
+        /// </returns>
+        public async Task<CreateTrainTaskResponse> CreateTrainTaskWithOptionsAsync(CreateTrainTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunMainId))
+            {
+                body["aliyunMainId"] = request.AliyunMainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResSpecType))
+            {
+                body["resSpecType"] = request.ResSpecType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["taskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseScene))
+            {
+                body["useScene"] = request.UseScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceGender))
+            {
+                body["voiceGender"] = request.VoiceGender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceLanguage))
+            {
+                body["voiceLanguage"] = request.VoiceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceName))
+            {
+                body["voiceName"] = request.VoiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoicePath))
+            {
+                body["voicePath"] = request.VoicePath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTrainTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/train/task/createTrainTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateTrainTaskResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateTrainTaskResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交声音复刻任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrainTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrainTaskResponse
+        /// </returns>
+        public CreateTrainTaskResponse CreateTrainTask(CreateTrainTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateTrainTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交声音复刻任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrainTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrainTaskResponse
+        /// </returns>
+        public async Task<CreateTrainTaskResponse> CreateTrainTaskAsync(CreateTrainTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateTrainTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频切片任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoClipTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoClipTaskResponse
+        /// </returns>
+        public CreateVideoClipTaskResponse CreateVideoClipTaskWithOptions(CreateVideoClipTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunMainId))
+            {
+                body["aliyunMainId"] = request.AliyunMainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKeys))
+            {
+                body["ossKeys"] = request.OssKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Requirement))
+            {
+                body["requirement"] = request.Requirement;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVideoClipTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/video/clip/createVideoClipTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateVideoClipTaskResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateVideoClipTaskResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频切片任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoClipTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoClipTaskResponse
+        /// </returns>
+        public async Task<CreateVideoClipTaskResponse> CreateVideoClipTaskWithOptionsAsync(CreateVideoClipTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunMainId))
+            {
+                body["aliyunMainId"] = request.AliyunMainId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKeys))
+            {
+                body["ossKeys"] = request.OssKeys;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Requirement))
+            {
+                body["requirement"] = request.Requirement;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVideoClipTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/video/clip/createVideoClipTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateVideoClipTaskResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateVideoClipTaskResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频切片任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoClipTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoClipTaskResponse
+        /// </returns>
+        public CreateVideoClipTaskResponse CreateVideoClipTask(CreateVideoClipTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateVideoClipTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频切片任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoClipTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoClipTaskResponse
+        /// </returns>
+        public async Task<CreateVideoClipTaskResponse> CreateVideoClipTaskAsync(CreateVideoClipTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateVideoClipTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除个性化文案项目</para>
         /// </summary>
         /// 
@@ -2759,6 +3591,122 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteIndividuationTextWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询文档信息与状态</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDocumentResponse
+        /// </returns>
+        public DescribeDocumentResponse DescribeDocumentWithOptions(string knowledgeBaseId, string documentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDocument",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/knowledge-base/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/documents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(documentId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDocumentResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDocumentResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询文档信息与状态</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDocumentResponse
+        /// </returns>
+        public async Task<DescribeDocumentResponse> DescribeDocumentWithOptionsAsync(string knowledgeBaseId, string documentId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDocument",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/knowledge-base/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/documents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(documentId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDocumentResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDocumentResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询文档信息与状态</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeDocumentResponse
+        /// </returns>
+        public DescribeDocumentResponse DescribeDocument(string knowledgeBaseId, string documentId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeDocumentWithOptions(knowledgeBaseId, documentId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询文档信息与状态</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeDocumentResponse
+        /// </returns>
+        public async Task<DescribeDocumentResponse> DescribeDocumentAsync(string knowledgeBaseId, string documentId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeDocumentWithOptionsAsync(knowledgeBaseId, documentId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3639,6 +4587,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             {
                 query["fileType"] = request.FileType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadType))
+            {
+                query["uploadType"] = request.UploadType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3695,6 +4647,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
             {
                 query["fileType"] = request.FileType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadType))
+            {
+                query["uploadType"] = request.UploadType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4803,6 +5759,190 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>分页查询智能体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentsResponse
+        /// </returns>
+        public ListAgentsResponse ListAgentsWithOptions(ListAgentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentScene))
+            {
+                query["agentScene"] = request.AgentScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgents",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/agent/listAgents",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListAgentsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListAgentsResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询智能体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentsResponse
+        /// </returns>
+        public async Task<ListAgentsResponse> ListAgentsWithOptionsAsync(ListAgentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentScene))
+            {
+                query["agentScene"] = request.AgentScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgents",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/agent/listAgents",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListAgentsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListAgentsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询智能体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentsResponse
+        /// </returns>
+        public ListAgentsResponse ListAgents(ListAgentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAgentsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询智能体</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentsResponse
+        /// </returns>
+        public async Task<ListAgentsResponse> ListAgentsAsync(ListAgentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAgentsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取数字人模特列表</para>
         /// </summary>
         /// 
@@ -5155,6 +6295,166 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListAvatarProjectWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询知识库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseResponse
+        /// </returns>
+        public ListKnowledgeBaseResponse ListKnowledgeBaseWithOptions(ListKnowledgeBaseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["knowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBase",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/knowledge-base",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListKnowledgeBaseResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询知识库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseResponse> ListKnowledgeBaseWithOptionsAsync(ListKnowledgeBaseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["knowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBase",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/knowledge-base",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListKnowledgeBaseResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询知识库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseResponse
+        /// </returns>
+        public ListKnowledgeBaseResponse ListKnowledgeBase(ListKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListKnowledgeBaseWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询知识库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseResponse> ListKnowledgeBaseAsync(ListKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListKnowledgeBaseWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5539,6 +6839,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             {
                 query["useScene"] = request.UseScene;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceLanguage))
+            {
+                query["voiceLanguage"] = request.VoiceLanguage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceType))
             {
                 query["voiceType"] = request.VoiceType;
@@ -5607,6 +6911,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseScene))
             {
                 query["useScene"] = request.UseScene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceLanguage))
+            {
+                query["voiceLanguage"] = request.VoiceLanguage;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceType))
             {
@@ -6599,6 +7907,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             {
                 body["agentId"] = request.AgentId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BitRate))
+            {
+                body["bitRate"] = request.BitRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameRate))
+            {
+                body["frameRate"] = request.FrameRate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Frames))
             {
                 body["frames"] = request.Frames;
@@ -6626,6 +7942,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleType))
             {
                 body["scaleType"] = request.ScaleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynchronizedDisplay))
+            {
+                body["synchronizedDisplay"] = request.SynchronizedDisplay;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6680,6 +8000,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             {
                 body["agentId"] = request.AgentId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BitRate))
+            {
+                body["bitRate"] = request.BitRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameRate))
+            {
+                body["frameRate"] = request.FrameRate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Frames))
             {
                 body["frames"] = request.Frames;
@@ -6707,6 +8035,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleType))
             {
                 body["scaleType"] = request.ScaleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynchronizedDisplay))
+            {
+                body["synchronizedDisplay"] = request.SynchronizedDisplay;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
