@@ -1,3 +1,6 @@
+2025-03-13 Version: 9.0.1
+- Generated csharp 2019-09-01 for OceanBasePro.
+
 2025-03-12 Version: 9.0.0
 - Support API DescribeProxyService.
 - Update API CreateProject: update param FullTransferConfig.
