@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
     public class SubmitVideoAnalysisTaskShrinkRequest : TeaModel {
+        [NameInMap("faceIdentitySimilarityMinScore")]
+        [Validation(Required=false)]
+        public float? FaceIdentitySimilarityMinScore { get; set; }
+
         [NameInMap("frameSampleMethod")]
         [Validation(Required=false)]
         public string FrameSampleMethodShrink { get; set; }
@@ -53,6 +57,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public double? SnapshotInterval { get; set; }
 
+        [NameInMap("textProcessTasks")]
+        [Validation(Required=false)]
+        public string TextProcessTasksShrink { get; set; }
+
         [NameInMap("videoExtraInfo")]
         [Validation(Required=false)]
         public string VideoExtraInfo { get; set; }
@@ -72,6 +80,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [NameInMap("videoRoles")]
         [Validation(Required=false)]
         public string VideoRolesShrink { get; set; }
+
+        [NameInMap("videoShotFaceIdentityCount")]
+        [Validation(Required=false)]
+        public int? VideoShotFaceIdentityCount { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

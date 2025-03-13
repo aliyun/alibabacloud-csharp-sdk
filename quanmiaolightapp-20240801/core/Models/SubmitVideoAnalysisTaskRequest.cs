@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
     public class SubmitVideoAnalysisTaskRequest : TeaModel {
+        [NameInMap("faceIdentitySimilarityMinScore")]
+        [Validation(Required=false)]
+        public float? FaceIdentitySimilarityMinScore { get; set; }
+
         [NameInMap("frameSampleMethod")]
         [Validation(Required=false)]
         public SubmitVideoAnalysisTaskRequestFrameSampleMethod FrameSampleMethod { get; set; }
@@ -79,6 +83,24 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public double? SnapshotInterval { get; set; }
 
+        [NameInMap("textProcessTasks")]
+        [Validation(Required=false)]
+        public List<SubmitVideoAnalysisTaskRequestTextProcessTasks> TextProcessTasks { get; set; }
+        public class SubmitVideoAnalysisTaskRequestTextProcessTasks : TeaModel {
+            [NameInMap("modelCustomPromptTemplate")]
+            [Validation(Required=false)]
+            public string ModelCustomPromptTemplate { get; set; }
+
+            [NameInMap("modelCustomPromptTemplateId")]
+            [Validation(Required=false)]
+            public string ModelCustomPromptTemplateId { get; set; }
+
+            [NameInMap("modelId")]
+            [Validation(Required=false)]
+            public string ModelId { get; set; }
+
+        }
+
         [NameInMap("videoExtraInfo")]
         [Validation(Required=false)]
         public string VideoExtraInfo { get; set; }
@@ -112,6 +134,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
             public List<string> Urls { get; set; }
 
         }
+
+        [NameInMap("videoShotFaceIdentityCount")]
+        [Validation(Required=false)]
+        public int? VideoShotFaceIdentityCount { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

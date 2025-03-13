@@ -253,6 +253,22 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                         [Validation(Required=false)]
                         public bool? GenerateFinished { get; set; }
 
+                        [NameInMap("index")]
+                        [Validation(Required=false)]
+                        public int? Index { get; set; }
+
+                        [NameInMap("modelId")]
+                        [Validation(Required=false)]
+                        public string ModelId { get; set; }
+
+                        [NameInMap("modelReduce")]
+                        [Validation(Required=false)]
+                        public bool? ModelReduce { get; set; }
+
+                        [NameInMap("reasonText")]
+                        [Validation(Required=false)]
+                        public string ReasonText { get; set; }
+
                         /// <summary>
                         /// <b>Example:</b>
                         /// <para>xxx</para>
@@ -285,6 +301,50 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                             /// <b>Example:</b>
                             /// <para>2</para>
                             /// </summary>
+                            [NameInMap("totalTokens")]
+                            [Validation(Required=false)]
+                            public long? TotalTokens { get; set; }
+
+                        }
+
+                    }
+
+                    [NameInMap("videoGenerateResults")]
+                    [Validation(Required=false)]
+                    public List<GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults> VideoGenerateResults { get; set; }
+                    public class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults : TeaModel {
+                        [NameInMap("generateFinished")]
+                        [Validation(Required=false)]
+                        public bool? GenerateFinished { get; set; }
+
+                        [NameInMap("index")]
+                        [Validation(Required=false)]
+                        public int? Index { get; set; }
+
+                        [NameInMap("modelId")]
+                        [Validation(Required=false)]
+                        public string ModelId { get; set; }
+
+                        [NameInMap("reasonText")]
+                        [Validation(Required=false)]
+                        public string ReasonText { get; set; }
+
+                        [NameInMap("text")]
+                        [Validation(Required=false)]
+                        public string Text { get; set; }
+
+                        [NameInMap("usage")]
+                        [Validation(Required=false)]
+                        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResultsUsage Usage { get; set; }
+                        public class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResultsUsage : TeaModel {
+                            [NameInMap("inputTokens")]
+                            [Validation(Required=false)]
+                            public long? InputTokens { get; set; }
+
+                            [NameInMap("outputTokens")]
+                            [Validation(Required=false)]
+                            public long? OutputTokens { get; set; }
+
                             [NameInMap("totalTokens")]
                             [Validation(Required=false)]
                             public long? TotalTokens { get; set; }
