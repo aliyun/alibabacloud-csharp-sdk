@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
+                [NameInMap("DashboardUsed")]
+                [Validation(Required=false)]
+                public bool? DashboardUsed { get; set; }
+
                 /// <summary>
                 /// <para>The IP address.</para>
                 /// 
@@ -227,10 +231,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string Nodes { get; set; }
 
+            /// <summary>
+            /// <para>The global consistency timeout policy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: sends the request to the primary node.</description></item>
+            /// <item><description><b>2</b>: downgrades the consistency level of a query to inconsistent read when a global consistent read in the query times out. No error message is returned to the client.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("PolarSccTimeoutAction")]
             [Validation(Required=false)]
             public string PolarSccTimeoutAction { get; set; }
 
+            /// <summary>
+            /// <para>Global consistency timeout.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("PolarSccWaitTimeout")]
             [Validation(Required=false)]
             public string PolarSccWaitTimeout { get; set; }
@@ -249,6 +269,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string ReadWriteMode { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>on</b>: enabled.</description></item>
+            /// <item><description><b>off</b>: disabled</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>on</para>
+            /// </summary>
             [NameInMap("SccMode")]
             [Validation(Required=false)]
             public string SccMode { get; set; }

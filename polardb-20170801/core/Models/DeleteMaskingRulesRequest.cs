@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("InterfaceVersion")]
+        [Validation(Required=false)]
+        public string InterfaceVersion { get; set; }
+
         /// <summary>
         /// <para>The name of the masking rule. You can specify multiple masking rules at a time. Separate the masking rules with commas (,).</para>
         /// <remarks>

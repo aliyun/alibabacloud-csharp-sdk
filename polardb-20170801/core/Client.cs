@@ -1579,6 +1579,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBName"] = request.DBName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                query["NodeType"] = request.NodeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -1675,6 +1679,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
             {
                 query["DBName"] = request.DBName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                query["NodeType"] = request.NodeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -7447,6 +7455,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterfaceVersion))
+            {
+                query["InterfaceVersion"] = request.InterfaceVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleNameList))
             {
                 query["RuleNameList"] = request.RuleNameList;
@@ -7499,6 +7511,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterfaceVersion))
+            {
+                query["InterfaceVersion"] = request.InterfaceVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleNameList))
             {
@@ -7933,6 +7949,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                query["NodeType"] = request.NodeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -8009,6 +8029,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                query["NodeType"] = request.NodeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -16129,6 +16153,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterfaceVersion))
+            {
+                query["InterfaceVersion"] = request.InterfaceVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleNameList))
             {
                 query["RuleNameList"] = request.RuleNameList;
@@ -16181,6 +16209,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterfaceVersion))
+            {
+                query["InterfaceVersion"] = request.InterfaceVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleNameList))
             {
@@ -22562,6 +22594,164 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>变更standby模式</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBClusterArchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBClusterArchResponse
+        /// </returns>
+        public ModifyDBClusterArchResponse ModifyDBClusterArchWithOptions(ModifyDBClusterArchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotStandbyCluster))
+            {
+                query["HotStandbyCluster"] = request.HotStandbyCluster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyAZ))
+            {
+                query["StandbyAZ"] = request.StandbyAZ;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBClusterArch",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDBClusterArchResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDBClusterArchResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变更standby模式</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBClusterArchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBClusterArchResponse
+        /// </returns>
+        public async Task<ModifyDBClusterArchResponse> ModifyDBClusterArchWithOptionsAsync(ModifyDBClusterArchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotStandbyCluster))
+            {
+                query["HotStandbyCluster"] = request.HotStandbyCluster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyAZ))
+            {
+                query["StandbyAZ"] = request.StandbyAZ;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDBClusterArch",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDBClusterArchResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDBClusterArchResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变更standby模式</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBClusterArchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBClusterArchResponse
+        /// </returns>
+        public ModifyDBClusterArchResponse ModifyDBClusterArch(ModifyDBClusterArchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDBClusterArchWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>变更standby模式</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDBClusterArchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDBClusterArchResponse
+        /// </returns>
+        public async Task<ModifyDBClusterArchResponse> ModifyDBClusterArchAsync(ModifyDBClusterArchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDBClusterArchWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Enables or disables SQL collector for a PolarDB cluster. The features related to SQL collector include Audit Logs and SQL Explorer.</para>
         /// </summary>
         /// 
@@ -28055,6 +28245,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["Enable"] = request.Enable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterfaceVersion))
+            {
+                query["InterfaceVersion"] = request.InterfaceVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConfig))
             {
                 query["RuleConfig"] = request.RuleConfig;
@@ -28123,6 +28317,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 query["Enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterfaceVersion))
+            {
+                query["InterfaceVersion"] = request.InterfaceVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConfig))
             {

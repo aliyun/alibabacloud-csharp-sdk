@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string BackupRetentionPolicyOnClusterDeletion { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("BurstingEnabled")]
         [Validation(Required=false)]
         public string BurstingEnabled { get; set; }
@@ -237,7 +241,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// &lt;props=&quot;china&quot;&gt;&gt; - For a Serverless cluster in both PolarDB PostgreSQL (Oracle Compatible) and PolarDB PostgreSQL, enter <b>polar.pg.sl.small.c</b>.</description></item>
         /// </list>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polar.mysql.x4.medium</para>
@@ -686,10 +689,33 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string StorageAutoScale { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable disk encryption. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter takes effect only when <b>DBType</b> is set to <b>MySQL</b>.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para> This parameter takes effect only when <b>StorageType</b> is set to one of the Standard Edition storage types.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("StorageEncryption")]
         [Validation(Required=false)]
         public bool? StorageEncryption { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the custom key that is used for disk encryption in the region in which the instance resides. If this parameter is specified, disk encryption is automatically enabled and cannot be disabled afterwards. If you want to use the default service key for disk encryption, leave this parameter empty.</para>
+        /// <para>You can obtain the ID of the key in the KMS console or create a key.</para>
+        /// <remarks>
+        /// <para> This parameter takes effect only when <b>DBType</b> is set to <b>MySQL</b>.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para> This parameter takes effect only when <b>StorageType</b> is set to one of the Standard Edition storage types.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("StorageEncryptionKey")]
         [Validation(Required=false)]
         public string StorageEncryptionKey { get; set; }
@@ -709,13 +735,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StoragePayType { get; set; }
 
         /// <summary>
-        /// <para>Storage space for pay-by-space (subscription) billing. Unit: GB.</para>
+        /// <para>The storage that is billed based on the subscription billing method. Unit: GB.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>For PolarDB MySQL Standard Edition, the storage space range is 20 to 32000.</description></item>
-        /// <item><description>When the Standard Edition storage type is ESSDAUTOPL, the storage space range is 40 to 64000, with a minimum step size of 10, meaning you can only enter values like 40, 50, 60, and so on.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>Valid values for the subscription storage capacity of a PolarDB for MySQL Standard Edition cluster: 20 to 32000.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values for the subscription storage capacity of a Standard Edition cluster that uses the ESSD AUTOPL storage type: 40 to 64000, in increments of 10.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

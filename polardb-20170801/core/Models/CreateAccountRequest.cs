@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBName { get; set; }
 
+        [NameInMap("NodeType")]
+        [Validation(Required=false)]
+        public string NodeType { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

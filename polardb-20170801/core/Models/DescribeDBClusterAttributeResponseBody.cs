@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? BlktagUsed { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("BurstingEnabled")]
         [Validation(Required=false)]
         public string BurstingEnabled { get; set; }
@@ -219,6 +223,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string DBNodeClass { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("DBNodeDescription")]
             [Validation(Required=false)]
             public string DBNodeDescription { get; set; }
@@ -620,6 +628,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ImciAutoIndex { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether failover with hot replica is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c></description></item>
+        /// <item><description><c>false</c> (default)</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("ImperceptibleSwitch")]
         [Validation(Required=false)]
         public string ImperceptibleSwitch { get; set; }

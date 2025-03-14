@@ -193,6 +193,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description><b>ON</b></description></item>
         /// <item><description><b>OFF</b></description></item>
         /// </list>
+        /// <para>Enumerated values:</para>
+        /// <list type="bullet">
+        /// <item><description>on</description></item>
+        /// <item><description>off</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
