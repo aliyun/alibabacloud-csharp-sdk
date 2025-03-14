@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
         [Validation(Required=false)]
         public RunDataAnalysisResponseBodyData Data { get; set; }
         public class RunDataAnalysisResponseBodyData : TeaModel {
+            [NameInMap("attempts")]
+            [Validation(Required=false)]
+            public List<object> Attempts { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Access was denied, message: No such namespace namespaces/tech-scp-chain7.</para>
