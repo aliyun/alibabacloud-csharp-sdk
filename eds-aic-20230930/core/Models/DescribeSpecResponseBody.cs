@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public int? Core { get; set; }
 
+            [NameInMap("MaxPhoneCount")]
+            [Validation(Required=false)]
+            public string MaxPhoneCount { get; set; }
+
             /// <summary>
             /// <para>Memory size.</para>
             /// 
@@ -55,6 +59,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("Memory")]
             [Validation(Required=false)]
             public int? Memory { get; set; }
+
+            [NameInMap("MinPhoneCount")]
+            [Validation(Required=false)]
+            public string MinPhoneCount { get; set; }
 
             [NameInMap("PhoneCount")]
             [Validation(Required=false)]

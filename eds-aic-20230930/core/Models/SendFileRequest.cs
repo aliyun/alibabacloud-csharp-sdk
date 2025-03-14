@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string SourceFilePath { get; set; }
 
+        [NameInMap("TargetFileName")]
+        [Validation(Required=false)]
+        public string TargetFileName { get; set; }
+
         /// <summary>
         /// <para>The endpoint of the OSS bucket in which the file is stored.</para>
         /// <remarks>

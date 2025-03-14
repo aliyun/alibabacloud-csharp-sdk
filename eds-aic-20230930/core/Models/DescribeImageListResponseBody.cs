@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string ImageType { get; set; }
 
+            [NameInMap("ImageVersion")]
+            [Validation(Required=false)]
+            public string ImageVersion { get; set; }
+
             /// <summary>
             /// <para>The language of the image.</para>
             /// 

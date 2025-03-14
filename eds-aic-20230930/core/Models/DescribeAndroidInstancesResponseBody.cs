@@ -195,6 +195,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
+            [NameInMap("ImageId")]
+            [Validation(Required=false)]
+            public string ImageId { get; set; }
+
             /// <summary>
             /// <para>The version of the image.</para>
             /// 

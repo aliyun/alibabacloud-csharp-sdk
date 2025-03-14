@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             }
 
+            [NameInMap("EnableIpv6")]
+            [Validation(Required=false)]
+            public bool? EnableIpv6 { get; set; }
+
             /// <summary>
             /// <para>The error code.</para>
             /// 
@@ -204,6 +208,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("InstanceGroupStatus")]
             [Validation(Required=false)]
             public string InstanceGroupStatus { get; set; }
+
+            [NameInMap("Ipv6Bandwidth")]
+            [Validation(Required=false)]
+            public int? Ipv6Bandwidth { get; set; }
 
             /// <summary>
             /// <para>The memory size.</para>

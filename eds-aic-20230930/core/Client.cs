@@ -8518,6 +8518,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["SourceFilePath"] = request.SourceFilePath;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFileName))
+            {
+                query["TargetFileName"] = request.TargetFileName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
             {
                 query["UploadEndpoint"] = request.UploadEndpoint;
@@ -8587,6 +8591,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFilePath))
             {
                 query["SourceFilePath"] = request.SourceFilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFileName))
+            {
+                query["TargetFileName"] = request.TargetFileName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
             {
