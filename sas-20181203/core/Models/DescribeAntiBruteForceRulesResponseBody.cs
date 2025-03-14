@@ -162,6 +162,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("ProtocolType")]
+            [Validation(Required=false)]
+            public DescribeAntiBruteForceRulesResponseBodyRulesProtocolType ProtocolType { get; set; }
+            public class DescribeAntiBruteForceRulesResponseBodyRulesProtocolType : TeaModel {
+                [NameInMap("Rdp")]
+                [Validation(Required=false)]
+                public string Rdp { get; set; }
+
+                [NameInMap("SqlServer")]
+                [Validation(Required=false)]
+                public string SqlServer { get; set; }
+
+                [NameInMap("Ssh")]
+                [Validation(Required=false)]
+                public string Ssh { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The period of time during which logon failures from an account are measured. Unit: minutes. If <b>Span</b> is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP address of attackers cannot be used to log on to the server in the specified period of time.</para>
             /// 

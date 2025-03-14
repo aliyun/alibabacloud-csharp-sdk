@@ -86,6 +86,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("ProtocolType")]
+        [Validation(Required=false)]
+        public ModifyAntiBruteForceRuleRequestProtocolType ProtocolType { get; set; }
+        public class ModifyAntiBruteForceRuleRequestProtocolType : TeaModel {
+            [NameInMap("Rdp")]
+            [Validation(Required=false)]
+            public string Rdp { get; set; }
+
+            [NameInMap("SqlServer")]
+            [Validation(Required=false)]
+            public string SqlServer { get; set; }
+
+            [NameInMap("Ssh")]
+            [Validation(Required=false)]
+            public string Ssh { get; set; }
+
+        }
+
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }

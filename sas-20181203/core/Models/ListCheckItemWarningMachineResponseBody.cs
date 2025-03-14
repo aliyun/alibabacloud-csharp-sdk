@@ -266,13 +266,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Uuid { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The information about the baselines on which the risk item is detected.</para>
             /// </summary>
             [NameInMap("WarningRiskList")]
             [Validation(Required=false)]
+            [Obsolete]
             public List<ListCheckItemWarningMachineResponseBodyListWarningRiskList> WarningRiskList { get; set; }
             public class ListCheckItemWarningMachineResponseBodyListWarningRiskList : TeaModel {
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
                 /// <para>The ID of the baseline.</para>
                 /// 
@@ -281,8 +286,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// </summary>
                 [NameInMap("RiskId")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public long? RiskId { get; set; }
 
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
                 /// <para>The name of the baseline.</para>
                 /// 
@@ -291,6 +299,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// </summary>
                 [NameInMap("RiskName")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string RiskName { get; set; }
 
             }

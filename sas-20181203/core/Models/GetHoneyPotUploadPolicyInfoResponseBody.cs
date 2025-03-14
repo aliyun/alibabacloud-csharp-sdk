@@ -77,6 +77,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Policy { get; set; }
 
             /// <summary>
+            /// <para>The security token.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <hr>
+            /// </summary>
+            [NameInMap("SecurityToken")]
+            [Validation(Required=false)]
+            public string SecurityToken { get; set; }
+
+            /// <summary>
             /// <para>The signature that is calculated based on <b>AccessKeySecret</b> and <b>Policy</b>. When you call an Object Storage Service (OSS) API operation, OSS uses the signature information to verify the POST request.</para>
             /// 
             /// <b>Example:</b>

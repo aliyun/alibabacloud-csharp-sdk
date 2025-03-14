@@ -70,6 +70,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The security token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
+        /// </summary>
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
+
+        /// <summary>
         /// <para>The OSS signature.</para>
         /// 
         /// <b>Example:</b>
