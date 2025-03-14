@@ -46787,6 +46787,176 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>提交拆条任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSegmentationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSegmentationJobResponse
+        /// </returns>
+        public SubmitSegmentationJobResponse SubmitSegmentationJobWithOptions(SubmitSegmentationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParams))
+            {
+                query["JobParams"] = request.JobParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                body["InputConfig"] = request.InputConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSegmentationJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitSegmentationJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitSegmentationJobResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交拆条任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSegmentationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSegmentationJobResponse
+        /// </returns>
+        public async Task<SubmitSegmentationJobResponse> SubmitSegmentationJobWithOptionsAsync(SubmitSegmentationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParams))
+            {
+                query["JobParams"] = request.JobParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                body["InputConfig"] = request.InputConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSegmentationJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SubmitSegmentationJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SubmitSegmentationJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交拆条任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSegmentationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSegmentationJobResponse
+        /// </returns>
+        public SubmitSegmentationJobResponse SubmitSegmentationJob(SubmitSegmentationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitSegmentationJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交拆条任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSegmentationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSegmentationJobResponse
+        /// </returns>
+        public async Task<SubmitSegmentationJobResponse> SubmitSegmentationJobAsync(SubmitSegmentationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitSegmentationJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Submits a smart tagging job.</para>
         /// </summary>
         /// 
