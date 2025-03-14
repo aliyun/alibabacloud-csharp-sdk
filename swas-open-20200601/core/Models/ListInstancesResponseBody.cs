@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the simple application servers.</para>
+        /// <para>Details about the queried simple application servers.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string DisableReason { get; set; }
 
             /// <summary>
-            /// <para>The disks that are attached to the simple application server.</para>
+            /// <para>The information about the disks on the simple application server.</para>
             /// </summary>
             [NameInMap("Disks")]
             [Validation(Required=false)]
@@ -203,10 +203,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 }
 
                 /// <summary>
-                /// <para>The disk type. Valid values:</para>
+                /// <para>The type of the disk. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>system: system disk</description></item>
-                /// <item><description>data: data disk</description></item>
+                /// <item><description>system: system disk.</description></item>
+                /// <item><description>data: data disk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The disk size. Unit: GiB.</para>
+                /// <para>The size of the disk. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -400,6 +400,28 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            [NameInMap("NetworkAttributes")]
+            [Validation(Required=false)]
+            public List<ListInstancesResponseBodyInstancesNetworkAttributes> NetworkAttributes { get; set; }
+            public class ListInstancesResponseBodyInstancesNetworkAttributes : TeaModel {
+                [NameInMap("PeakBandwidth")]
+                [Validation(Required=false)]
+                public int? PeakBandwidth { get; set; }
+
+                [NameInMap("PrivateIpAddress")]
+                [Validation(Required=false)]
+                public string PrivateIpAddress { get; set; }
+
+                [NameInMap("PublicIpAddress")]
+                [Validation(Required=false)]
+                public string PublicIpAddress { get; set; }
+
+                [NameInMap("PublicIpDdosStatus")]
+                [Validation(Required=false)]
+                public string PublicIpDdosStatus { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID of the instance plan.</para>
             /// 
@@ -441,14 +463,14 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the resource.</para>
+            /// <para>The specifications of the resources on the simple application server.</para>
             /// </summary>
             [NameInMap("ResourceSpec")]
             [Validation(Required=false)]
             public ListInstancesResponseBodyInstancesResourceSpec ResourceSpec { get; set; }
             public class ListInstancesResponseBodyInstancesResourceSpec : TeaModel {
                 /// <summary>
-                /// <para>The bandwidth of the server. Unit: Mbps.</para>
+                /// <para>The bandwidth. Unit: Mbit/s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -483,7 +505,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public string DiskCategory { get; set; }
 
                 /// <summary>
-                /// <para>The disk size. Unit: GiB.</para>
+                /// <para>The size of the disk. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -507,7 +529,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
                 public double? Flow { get; set; }
 
                 /// <summary>
-                /// <para>The memory size of the server. Unit: GiB.</para>
+                /// <para>The size of the memory. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>

@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         /// <summary>
         /// <para>The interval at which the monitoring data is queried. Valid values: 60, 300, and 900. Unit: seconds.</para>
         /// <remarks>
-        /// <para>If MetricName is set to FLOW_USED, Period is set to 3600 (one hour). In other cases, set Period based on your business requirements.</para>
+        /// <para> If you set the MetricName request parameter to FLOW_USED, the value of Period is 3600 (one hour).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

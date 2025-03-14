@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
 {
     public class ListImagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the image.</para>
+        /// <para>Details of the queried images.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
