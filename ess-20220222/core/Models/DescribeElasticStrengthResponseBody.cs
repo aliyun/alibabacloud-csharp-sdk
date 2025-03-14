@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeElasticStrengthResponseBody : TeaModel {
+        [NameInMap("ElasticStrength")]
+        [Validation(Required=false)]
+        public string ElasticStrength { get; set; }
+
         /// <summary>
         /// <para>The scaling strength models.</para>
         /// </summary>
@@ -232,6 +236,28 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
+            [NameInMap("InventoryHealth")]
+            [Validation(Required=false)]
+            public DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth InventoryHealth { get; set; }
+            public class DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth : TeaModel {
+                [NameInMap("AdequacyScore")]
+                [Validation(Required=false)]
+                public int? AdequacyScore { get; set; }
+
+                [NameInMap("HealthScore")]
+                [Validation(Required=false)]
+                public int? HealthScore { get; set; }
+
+                [NameInMap("HotScore")]
+                [Validation(Required=false)]
+                public int? HotScore { get; set; }
+
+                [NameInMap("SupplyScore")]
+                [Validation(Required=false)]
+                public int? SupplyScore { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The error message returned when the scaling strength is the weakest.</para>
             /// 
@@ -241,6 +267,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("Msg")]
             [Validation(Required=false)]
             public string Msg { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
             /// <summary>
             /// <para>The scaling strength of the resource pool.</para>

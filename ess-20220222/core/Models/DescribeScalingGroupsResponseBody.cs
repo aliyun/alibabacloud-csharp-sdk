@@ -174,6 +174,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public int? OnDemandPercentageAboveBaseCapacity { get; set; }
 
+                /// <summary>
+                /// <para>The price comparison mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>PricePerUnit: compares prices based on capacity. The capacity of instances in a scaling group is determined by the weights of the instance types used. If no weight is specified, the default weight is 1.</description></item>
+                /// <item><description>PricePerVCpu: compares prices based on the price per vCPU.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PricePerUnit</para>
+                /// </summary>
                 [NameInMap("PriceComparisonMode")]
                 [Validation(Required=false)]
                 public string PriceComparisonMode { get; set; }

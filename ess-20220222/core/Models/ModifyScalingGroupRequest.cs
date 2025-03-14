@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public ModifyScalingGroupRequestCapacityOptions CapacityOptions { get; set; }
         public class ModifyScalingGroupRequestCapacityOptions : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to automatically create pay-as-you-go instances to meet the requirements on the number of ECS instances in the scaling group when the number of preemptible instances cannot be reached due to reasons such as cost-related issues and insufficient resources. This parameter takes effect only if you set <c>MultiAZPolicy</c> in the <c>CreateScalingGroup</c> operation to <c>COST_OPTIMIZED</c>. Valid values:</para>
+            /// <para>Specifies whether to automatically create pay-as-you-go ECS instances to reach the required number of ECS instances when preemptible ECS instances cannot be created due to high prices or insufficient inventory of resources. This parameter takes effect only if you set <c>MultiAZPolicy</c> in the <c>CreateScalingGroup</c> operation to <c>COST_OPTIMIZED</c>. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false</description></item>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? CompensateWithOnDemand { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of pay-as-you-go instances that must be contained in the scaling group. When the actual number of pay-as-you-go instances in the scaling group drops below the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</para>
+            /// <para>The minimum number of pay-as-you-go instances required in the scaling group. When the number of pay-as-you-go instances drops below the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</para>
             /// <para>If you set <c>MultiAZPolicy</c> to <c>COMPOSABLE</c>, the default value is 0.</para>
             /// 
             /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? OnDemandBaseCapacity { get; set; }
 
             /// <summary>
-            /// <para>The percentage of pay-as-you-go instances in the excess instances when the minimum number of pay-as-you-go instances is reached. <c>OnDemandBaseCapacity</c> specifies the minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 100</para>
+            /// <para>The percentage of additional pay-as-you-go instances beyond the minimum required by <c>OnDemandBaseCapacity</c> in the scaling group. Valid values: 0 to 100</para>
             /// <para>If you set <c>MultiAZPolicy</c> to <c>COMPOSABLE</c>, the default value is 100.</para>
             /// 
             /// <b>Example:</b>
@@ -92,12 +92,26 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public int? OnDemandPercentageAboveBaseCapacity { get; set; }
 
+            /// <summary>
+            /// <para>The price comparison mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>PricePerUnit: compares prices based on capacity.</para>
+            /// <para>The capacity of instances in a scaling group is determined by the weights of the instance types used. If no weight is specified, the default weight is 1, which specifies that each instance in the scaling group has a capacity of 1.</para>
+            /// </description></item>
+            /// <item><description><para>PricePerVCpu: compares prices based on the price per vCPU.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>Default value: PricePerUnit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PricePerUnit</para>
+            /// </summary>
             [NameInMap("PriceComparisonMode")]
             [Validation(Required=false)]
             public string PriceComparisonMode { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to replace pay-as-you-go ECS instances with preemptible ECS instances. If you specify <c>CompensateWithOnDemand</c>, it may result in a higher percentage of pay-as-you-go instances compared to the value of <c>OnDemandPercentageAboveBaseCapacity</c>. In this scenario, Auto Scaling will try to deploy preemptible ECS instances to replace the surplus pay-as-you-go ECS instances. When <c>CompensateWithOnDemand</c> is specified, Auto Scaling creates pay-as-you-go ECS instances if there are not enough preemptible instance types. To avoid keeping these pay-as-you-go ECS instances for long periods, Auto Scaling tries to replace them with preemptible instances as soon as enough of preemptible instance types become available. Valid values:</para>
+            /// <para>Specifies whether to replace pay-as-you-go instances with preemptible instances. If you specify <c>CompensateWithOnDemand</c>, it may result in a higher percentage of pay-as-you-go instances compared to the value of <c>OnDemandPercentageAboveBaseCapacity</c>. In this case, Auto Scaling will try to deploy preemptible instances to replace the surplus pay-as-you-go instances. When <c>CompensateWithOnDemand</c> is specified, Auto Scaling creates pay-as-you-go instances if there are not enough preemptible instance types. To avoid keeping these pay-as-you-go ECS instances for long periods, Auto Scaling tries to replace them with preemptible instances as soon as enough of preemptible instance types become available. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false</description></item>

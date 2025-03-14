@@ -126,6 +126,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public int? OnDemandPercentageAboveBaseCapacity { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PricePerUnit</para>
+            /// </summary>
             [NameInMap("PriceComparisonMode")]
             [Validation(Required=false)]
             public string PriceComparisonMode { get; set; }
@@ -868,7 +872,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<CreateScalingGroupRequestTags> Tags { get; set; }
         public class CreateScalingGroupRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tag key that you want to add to the scaling group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Department</para>
@@ -878,10 +882,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to propagate the tag that you want to add. Valid values:</para>
+            /// <para>Specifies whether to propagate the tag that you want to add to the scaling group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: propagates the tag to new instances.</description></item>
-            /// <item><description>false: does not propagate the tag to any instance.</description></item>
+            /// <item><description>true: propagates the tag to only instances that are newly created.</description></item>
+            /// <item><description>false: does not propagate the tag to any instances.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -893,7 +897,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? Propagate { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The tag value that you want to add to the scaling group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Finance</para>
