@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
     public class SkuSaleInfo : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>不可售</para>
+        /// </summary>
+        [NameInMap("canNotSellReason")]
+        [Validation(Required=false)]
+        public string CanNotSellReason { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("canSell")]

@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
 {
     public class SkuQueryParam : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("buyAmount")]
+        [Validation(Required=false)]
+        public int? BuyAmount { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
