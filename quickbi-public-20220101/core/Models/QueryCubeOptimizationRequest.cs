@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryCubeOptimizationRequest : TeaModel {
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

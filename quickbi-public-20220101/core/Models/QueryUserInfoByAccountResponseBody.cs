@@ -104,6 +104,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public string Phone { get; set; }
 
+            /// <summary>
+            /// <para>用户绑定的组织角色ID列表。</para>
+            /// </summary>
             [NameInMap("RoleIdList")]
             [Validation(Required=false)]
             public List<long?> RoleIdList { get; set; }

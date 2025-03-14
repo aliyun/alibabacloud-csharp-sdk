@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public bool? AuthAdminUser { get; set; }
 
+                [NameInMap("IsDeleted")]
+                [Validation(Required=false)]
+                public bool? IsDeleted { get; set; }
+
                 [NameInMap("JoinedDate")]
                 [Validation(Required=false)]
                 public long? JoinedDate { get; set; }

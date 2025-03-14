@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class DataSetBloodResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>46e537a5****,3dadsu****</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Array of works.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<DataSetBloodResponseBodyResult> Result { get; set; }
         public class DataSetBloodResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>Work ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ccd3428c-<b><b>-</b></b>-a608-26bae29dffee</para>
             /// </summary>
@@ -30,6 +37,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string WorksId { get; set; }
 
             /// <summary>
+            /// <para>Work types: - REPORT: </para>
+            /// <list type="bullet">
+            /// <item><description>REPORT: Workbooks</description></item>
+            /// <item><description>dashboardOfflineQuery: Downloads</description></item>
+            /// <item><description>DASHBOARD: Dashboard</description></item>
+            /// <item><description>ANALYSIS: Ad Hoc Analysis</description></item>
+            /// <item><description>SCREEN: Visualization Screen</description></item>
+            /// <item><description>PAGE: Old dashboard</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>PAGE</para>
             /// </summary>
@@ -40,6 +57,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Request succeeded</description></item>
+        /// <item><description>false: Request failed</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

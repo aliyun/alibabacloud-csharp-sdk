@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ManualRunMailTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the email task in the subscription management interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

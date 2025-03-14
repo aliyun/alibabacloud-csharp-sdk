@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class DeleteUserGroupMembersRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the user group(s) to exit.</para>
+        /// <list type="bullet">
+        /// <item><description>Supports batch parameters, separate IDs with a comma (,).</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserGroupIds { get; set; }
 
         /// <summary>
+        /// <para>The UserID of the user to be removed from the user group. Note that this UserID refers to the Quick BI UserID, not the Alibaba Cloud UID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

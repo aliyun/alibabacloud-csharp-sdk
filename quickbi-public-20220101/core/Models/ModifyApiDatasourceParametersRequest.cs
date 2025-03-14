@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ModifyApiDatasourceParametersRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the API data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string ApiId { get; set; }
 
         /// <summary>
+        /// <para>The configuration of API data parameters in the JSONArray format. You can modify a maximum of 10 parameters.</para>
+        /// <list type="bullet">
+        /// <item><description>name: the name of a common parameter or a parameter in a query statement</description></item>
+        /// <item><description>value: the value of a common parameter or a parameter in a query statement.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +36,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string Parameters { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

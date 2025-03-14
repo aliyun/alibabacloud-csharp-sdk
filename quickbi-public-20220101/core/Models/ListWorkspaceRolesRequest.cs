@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListWorkspaceRolesRequest : TeaModel {
         /// <summary>
+        /// <para>Workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

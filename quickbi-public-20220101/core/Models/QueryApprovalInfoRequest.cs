@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryApprovalInfoRequest : TeaModel {
         /// <summary>
+        /// <para>Page number, default is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>Number of rows per page, default is 1000.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -26,6 +30,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Approval status:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Pending</description></item>
+        /// <item><description>1: Processed</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +45,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>Current approver user ID, qbi user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

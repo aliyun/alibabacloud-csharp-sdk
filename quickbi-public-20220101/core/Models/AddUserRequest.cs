@@ -13,14 +13,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:xxxxxx@163.com">xxxxxx@163.com</a></para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
+        [Obsolete]
         public string AccountName { get; set; }
 
         /// <summary>

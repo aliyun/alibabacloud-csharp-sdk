@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <item><description>If the organization user is a RAM user, such as a <a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>, the query account format is the head of the RAM user, that is, the RAM user to be entered is zhangsan.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>ID：</para>
+        /// <item><description><para>ID:</para>
         /// <list type="bullet">
         /// <item><description>Enter the UID of the account to query the account information.</description></item>
         /// </list>
@@ -33,6 +33,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string Account { get; set; }
 
+        /// <summary>
+        /// <para>当查询子账号出现重复报错时，输入主账号的账号名，
+        /// 例如<a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a></para>
+        /// </summary>
         [NameInMap("ParentAccountName")]
         [Validation(Required=false)]
         public string ParentAccountName { get; set; }

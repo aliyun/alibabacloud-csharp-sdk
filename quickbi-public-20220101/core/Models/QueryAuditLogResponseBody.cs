@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public string OperatorType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1113***************8500</para>
+            /// </summary>
             [NameInMap("TargetId")]
             [Validation(Required=false)]
             public string TargetId { get; set; }

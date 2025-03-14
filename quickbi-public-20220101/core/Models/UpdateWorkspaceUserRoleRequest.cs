@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateWorkspaceUserRoleRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>25</para>
         /// </summary>
         [NameInMap("RoleId")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? RoleId { get; set; }
 
         [NameInMap("RoleIds")]

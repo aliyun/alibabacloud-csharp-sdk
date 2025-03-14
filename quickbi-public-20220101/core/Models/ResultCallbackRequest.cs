@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ResultCallbackRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the approval process.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,13 +21,22 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The reason for the approval.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>You are not a Division A analyst.</para>
         /// </summary>
         [NameInMap("HandleReason")]
         [Validation(Required=false)]
         public string HandleReason { get; set; }
 
         /// <summary>
+        /// <para>Approval result:</para>
+        /// <list type="bullet">
+        /// <item><description>1: passed</description></item>
+        /// <item><description>2: rejected</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

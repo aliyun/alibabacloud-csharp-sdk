@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListDataSourceRequest : TeaModel {
         /// <summary>
+        /// <para>Data source type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mysql</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string DsType { get; set; }
 
         /// <summary>
+        /// <para>Workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

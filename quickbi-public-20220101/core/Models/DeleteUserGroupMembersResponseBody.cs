@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class DeleteUserGroupMembersResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>ABBAD906-3925-5D18-B23D-714053AB0AA2</para>
+        /// <para>ABBAD906-****-5D18-B23D-****53AB0AA2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Returns the result of the interface execution. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Execution succeeded</description></item>
+        /// <item><description>false: Execution failed</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +34,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? Result { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Request succeeded</description></item>
+        /// <item><description>false: Request failed</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

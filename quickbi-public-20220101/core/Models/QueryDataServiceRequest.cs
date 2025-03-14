@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDataServiceRequest : TeaModel {
         /// <summary>
-        /// <para>Call an API that is created in DataService Studio.</para>
+        /// <para>The API ID in the data service. For more information, see <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,41 +21,42 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string ApiId { get; set; }
 
         /// <summary>
-        /// <h1>Prerequisites</h1>
-        /// <para>You can use the Quick BI data service to create an API for the data service. For more information, see <a href="https://help.aliyun.com/document_detail/144980.html">Data service</a>.</para>
-        /// <h1>Limits</h1>
+        /// <para>The query conditions for the data service, passed in as Key-Value pairs. This is a map-type string. Here, Key is the name of the request parameter, and Value is the value of the request parameter. Keys and Values must appear in pairs.</para>
+        /// <para><b>Note:</b></para>
         /// <list type="bullet">
-        /// <item><description>The Data Service feature is available only to Professional customers.</description></item>
-        /// <item><description>The timeout period for API calls is 60s. The QPS of a single API is 10 times per second.</description></item>
-        /// <item><description>If row-level permissions are enabled for datasets that are referenced by a Data Service API, the API may be blocked by row-level permission policies.</description></item>
+        /// <item><description><para>When the operator of the request parameter is set to <b>enumeration filter</b>, the value can contain multiple values. In this case, the format of the value is a JSON list. For example: <c>area=[&quot;East China&quot;,&quot;North China&quot;,&quot;South China&quot;]</c>     </para>
+        /// </description></item>
+        /// <item><description><para>For dates, different formats are provided based on the type:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Year: 2019</para>
+        /// </description></item>
+        /// <item><description><para>Quarter: 2019Q1</para>
+        /// </description></item>
+        /// <item><description><para>Month: 201901 (with leading zero)</para>
+        /// </description></item>
+        /// <item><description><para>Week: 2019-52</para>
+        /// </description></item>
+        /// <item><description><para>Day: 20190101</para>
+        /// </description></item>
+        /// <item><description><para>Hour: 14:00:00 (minutes and seconds are 00)</para>
+        /// </description></item>
+        /// <item><description><para>Minute: 14:12:00 (seconds are 00)</para>
+        /// </description></item>
+        /// <item><description><para>Second: 14:34:34</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>For more information about API IDs in DataService, see <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</para>
+        /// <para>{ &quot;area&quot;: [&quot;华东&quot;, &quot;华北&quot;],  &quot;shopping_date&quot;: &quot;2019Q1&quot;,  }</para>
         /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]
         public string Conditions { get; set; }
 
         /// <summary>
-        /// <para>The query conditions of the data service. The query conditions are specified in the form of keys and values. A string of the map type. Key is the name of the request parameters parameter, and Value is the value of the request parameters parameter. Key and Value must appear in pairs.</para>
-        /// <para><b>Note:</b></para>
-        /// <list type="bullet">
-        /// <item><description><para>If a value contains multiple values, the value is a List in the JSON format. Example: <c>area=[&quot;East China&quot;,&quot;North China&quot;,&quot;South China&quot;]</c></para>
-        /// </description></item>
-        /// <item><description><para>For dates, different input parameter formats are provided based on different types:</para>
-        /// <list type="bullet">
-        /// <item><description>Year: 2019</description></item>
-        /// <item><description>Season: 2019Q1</description></item>
-        /// <item><description>Month: 201901 (carry 0)</description></item>
-        /// <item><description>Week: 2019-52</description></item>
-        /// <item><description>Day: 20190101</description></item>
-        /// <item><description>Hours: 14:00:00 (minutes and seconds are 00)</description></item>
-        /// <item><description>Minutes: 14:12:00 (seconds are 00)</description></item>
-        /// <item><description>Seconds: 14:34:34</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
+        /// <para>A list of parameter names to be returned, as a List-type string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;area&quot;, &quot;city&quot;, &quot;price&quot;, &quot;date&quot;]</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryComponentPerformanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BCE45E6D-9304-4F94-86BB-5A772B1615FF</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public List<QueryComponentPerformanceResponseBodyResult> Result { get; set; }
         public class QueryComponentPerformanceResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The average duration of cache hits.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.3</para>
             /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public double? CacheCostTimeAvg { get; set; }
 
             /// <summary>
+            /// <para>The number of cache hits.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? CacheQueryCount { get; set; }
 
             /// <summary>
+            /// <para>The component ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0696083a-ca72-4d89-8e7a-c017910e0***</para>
             /// </summary>
@@ -45,11 +53,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public string ComponentId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the add-on.</para>
+            /// </summary>
             [NameInMap("ComponentName")]
             [Validation(Required=false)]
             public string ComponentName { get; set; }
 
             /// <summary>
+            /// <para>The average query duration associated with the SQL pattern.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.3</para>
             /// </summary>
@@ -58,6 +71,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public double? CostTimeAvg { get; set; }
 
             /// <summary>
+            /// <para>The number of queries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -66,6 +81,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? QueryCount { get; set; }
 
             /// <summary>
+            /// <para>The average number of queries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.3</para>
             /// </summary>
@@ -74,6 +91,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public double? QueryCountAvg { get; set; }
 
             /// <summary>
+            /// <para>The query exceeds the 5S number of queries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -82,6 +101,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public double? QueryOverFivePercentNum { get; set; }
 
             /// <summary>
+            /// <para>Query the proportion of more than 5S.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.3</para>
             /// </summary>
@@ -90,6 +111,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string QueryOverFiveSecPercent { get; set; }
 
             /// <summary>
+            /// <para>The percentage of queries that exceed 10s.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.3</para>
             /// </summary>
@@ -98,6 +121,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string QueryOverTenSecPercent { get; set; }
 
             /// <summary>
+            /// <para>The percentage of queries that exceed 10s.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.3</para>
             /// </summary>
@@ -106,6 +131,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public double? QueryOverTenSecPercentNum { get; set; }
 
             /// <summary>
+            /// <para>The number of times that the chart query times out.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -114,6 +141,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? QueryTimeoutCount { get; set; }
 
             /// <summary>
+            /// <para>The percentage of timeout times for chart queries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.3</para>
             /// </summary>
@@ -122,6 +151,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public double? QueryTimeoutCountPercent { get; set; }
 
             /// <summary>
+            /// <para>The average time consumed by the Quick engine query.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.3</para>
             /// </summary>
@@ -130,6 +161,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public double? QuickIndexCostTimeAvg { get; set; }
 
             /// <summary>
+            /// <para>The number of times that the Quick engine is hit.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -138,6 +171,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? QuickIndexQueryCount { get; set; }
 
             /// <summary>
+            /// <para>The proportion of duplicate queries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.3</para>
             /// </summary>
@@ -146,6 +181,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string RepeatQueryPercent { get; set; }
 
             /// <summary>
+            /// <para>The number of duplicate queries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -154,6 +191,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public double? RepeatQueryPercentNum { get; set; }
 
             /// <summary>
+            /// <para>The number of times the query is repeated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -162,6 +201,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? RepeatSqlQueryCount { get; set; }
 
             /// <summary>
+            /// <para>The proportion of duplicate queries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.3</para>
             /// </summary>
@@ -170,6 +211,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string RepeatSqlQueryPercent { get; set; }
 
             /// <summary>
+            /// <para>The ID of the work.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6b407e50-e774-406b-9956-da2425c2****</para>
             /// </summary>
@@ -178,6 +221,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ReportId { get; set; }
 
             /// <summary>
+            /// <para>The name of the report.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ClusterRiskReport</para>
             /// </summary>
@@ -186,6 +231,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ReportName { get; set; }
 
             /// <summary>
+            /// <para>The format of the report.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>report</para>
             /// </summary>
@@ -194,6 +241,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ReportType { get; set; }
 
             /// <summary>
+            /// <para>The unique ID of the space.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>89713491-cb4f-4579-b889-e82c35f1****</para>
             /// </summary>
@@ -201,6 +250,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public string WorkspaceId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the group.</para>
+            /// </summary>
             [NameInMap("WorkspaceName")]
             [Validation(Required=false)]
             public string WorkspaceName { get; set; }
@@ -208,6 +260,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
