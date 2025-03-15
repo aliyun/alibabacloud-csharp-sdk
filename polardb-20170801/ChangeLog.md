@@ -1,3 +1,6 @@
+2025-03-15 Version: 5.5.1
+- Generated csharp 2017-08-01 for polardb.
+
 2025-03-14 Version: 5.5.0
 - Support API ModifyDBClusterArch.
 - Update API CreateAccount: add param NodeType.
