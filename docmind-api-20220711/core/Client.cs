@@ -3151,6 +3151,14 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             {
                 query["ForceExportInnerImage"] = request.ForceExportInnerImage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormulaEnhancement))
+            {
+                query["FormulaEnhancement"] = request.FormulaEnhancement;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Option))
+            {
+                query["Option"] = request.Option;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucket))
             {
                 query["OssBucket"] = request.OssBucket;
@@ -3215,6 +3223,14 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceExportInnerImage))
             {
                 query["ForceExportInnerImage"] = request.ForceExportInnerImage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormulaEnhancement))
+            {
+                query["FormulaEnhancement"] = request.FormulaEnhancement;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Option))
+            {
+                query["Option"] = request.Option;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucket))
             {

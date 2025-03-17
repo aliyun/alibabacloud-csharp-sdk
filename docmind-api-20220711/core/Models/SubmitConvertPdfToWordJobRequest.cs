@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public bool? ForceExportInnerImage { get; set; }
 
+        [NameInMap("FormulaEnhancement")]
+        [Validation(Required=false)]
+        public bool? FormulaEnhancement { get; set; }
+
+        [NameInMap("Option")]
+        [Validation(Required=false)]
+        public string Option { get; set; }
+
         [NameInMap("OssBucket")]
         [Validation(Required=false)]
         public string OssBucket { get; set; }
