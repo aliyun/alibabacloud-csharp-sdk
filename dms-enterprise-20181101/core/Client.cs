@@ -6284,6 +6284,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["ModelOption"] = request.ModelOption;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayOption))
+            {
+                query["NatGatewayOption"] = request.NatGatewayOption;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssPath))
             {
                 query["OssPath"] = request.OssPath;
@@ -6554,6 +6558,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelOption))
             {
                 query["ModelOption"] = request.ModelOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayOption))
+            {
+                query["NatGatewayOption"] = request.NatGatewayOption;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssPath))
             {
@@ -27942,13 +27950,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["SearchKey"] = request.SearchKey;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionToken))
-            {
-                query["SessionToken"] = request.SessionToken;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
                 query["Tid"] = request.Tid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -28003,13 +28011,13 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["SearchKey"] = request.SearchKey;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionToken))
-            {
-                query["SessionToken"] = request.SessionToken;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
                 query["Tid"] = request.Tid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

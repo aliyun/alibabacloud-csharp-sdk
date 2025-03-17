@@ -116,6 +116,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ModelOption { get; set; }
 
+        [NameInMap("NatGatewayOption")]
+        [Validation(Required=false)]
+        public string NatGatewayOption { get; set; }
+
         [NameInMap("OssPath")]
         [Validation(Required=false)]
         public string OssPath { get; set; }
