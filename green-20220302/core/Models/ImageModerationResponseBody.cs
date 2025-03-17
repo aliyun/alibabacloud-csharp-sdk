@@ -903,6 +903,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
+                [NameInMap("RiskLevel")]
+                [Validation(Required=false)]
+                public string RiskLevel { get; set; }
+
             }
 
             /// <summary>
