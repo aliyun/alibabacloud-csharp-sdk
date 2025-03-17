@@ -1,3 +1,6 @@
+2025-03-17 Version: 1.3.6
+- Generated csharp 2024-08-23 for DataAnalysisGBI.
+
 2025-03-14 Version: 1.3.5
 - Generated csharp 2024-08-23 for DataAnalysisGBI.
 
