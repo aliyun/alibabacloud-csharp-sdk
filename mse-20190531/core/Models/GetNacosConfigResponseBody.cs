@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetNacosConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration information.</para>
+        /// <para>Configuration information.</para>
         /// </summary>
         [NameInMap("Configuration")]
         [Validation(Required=false)]
         public GetNacosConfigResponseBodyConfiguration Configuration { get; set; }
         public class GetNacosConfigResponseBodyConfiguration : TeaModel {
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>Application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The list of IP addresses where the beta release of the configuration is performed.</para>
+            /// <para>List of IPs for Beta release.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1.1.XX.XX,2.2.XX.XX</para>
+            /// <para>1.1.XX.XX，2.2.XX.XX</para>
             /// </summary>
             [NameInMap("BetaIps")]
             [Validation(Required=false)]
             public string BetaIps { get; set; }
 
             /// <summary>
-            /// <para>The content of the configuration.</para>
+            /// <para>Configuration content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>log.level=error</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The ID of the configuration.</para>
+            /// <para>Configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>log.yaml</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DataId { get; set; }
 
             /// <summary>
-            /// <para>The description of the configuration.</para>
+            /// <para>Configuration description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>For testing</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Desc { get; set; }
 
             /// <summary>
-            /// <para>The encryption key.</para>
+            /// <para>Encrypted key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key</para>
@@ -76,22 +76,49 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string EncryptedDataKey { get; set; }
 
+            /// <summary>
+            /// <para>Current gray version information</para>
+            /// </summary>
             [NameInMap("GrayVersions")]
             [Validation(Required=false)]
             public List<GetNacosConfigResponseBodyConfigurationGrayVersions> GrayVersions { get; set; }
             public class GetNacosConfigResponseBodyConfigurationGrayVersions : TeaModel {
+                /// <summary>
+                /// <para>Gray version name</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The priority of the current gray rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
                 [NameInMap("Priority")]
                 [Validation(Required=false)]
                 public int? Priority { get; set; }
 
+                /// <summary>
+                /// <para>Rules of the current gray version</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>a=b</para>
+                /// </summary>
                 [NameInMap("Rule")]
                 [Validation(Required=false)]
                 public string Rule { get; set; }
 
+                /// <summary>
+                /// <para>Gray type</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Beta</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -99,7 +126,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The name of the configuration group.</para>
+            /// <para>Configuration group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -109,7 +136,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Group { get; set; }
 
             /// <summary>
-            /// <para>The message digest of the configuration.</para>
+            /// <para>Message digest of the configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123rfsdf3</para>
@@ -119,7 +146,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>The tags of the configuration.</para>
+            /// <para>Tags of the configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>context</para>
@@ -129,7 +156,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Tags { get; set; }
 
             /// <summary>
-            /// <para>The format of the configuration.</para>
+            /// <para>Format of the configuration content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text</para>
@@ -141,7 +168,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>Error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -151,7 +178,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>Message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -161,7 +188,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B4EAB48C-BB4B-5B8D-B33B-35D69606C5AD</para>
@@ -171,7 +198,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The result of the request, with values as follows:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: The request was successful.</description></item>
         /// <item><description><c>false</c>: The request failed.</description></item>

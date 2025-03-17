@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The language in which the response is displayed. Values: zh (default): Chinese, en: English</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>Target resource group</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>Resource ID, which is the ID of the registration and configuration center instance or the unique ID of the gateway</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,6 +43,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>Region ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,6 +54,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceRegionId { get; set; }
 
         /// <summary>
+        /// <para>Resource type, such as a registration and configuration center cluster or gateway instance</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Cluster,Gateway</para>
         /// </summary>

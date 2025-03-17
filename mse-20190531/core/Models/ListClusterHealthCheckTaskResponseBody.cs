@@ -160,6 +160,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    [NameInMap("DescriptionEn")]
+                    [Validation(Required=false)]
+                    public string DescriptionEn { get; set; }
+
                     /// <summary>
                     /// <para>The ID.</para>
                     /// 
@@ -249,6 +253,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public string RiskName { get; set; }
 
+                    [NameInMap("RiskNameEn")]
+                    [Validation(Required=false)]
+                    public string RiskNameEn { get; set; }
+
                     /// <summary>
                     /// <para>The type of the risk.</para>
                     /// 
@@ -269,6 +277,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public string Situation { get; set; }
 
+                    [NameInMap("SituationEn")]
+                    [Validation(Required=false)]
+                    public string SituationEn { get; set; }
+
                     /// <summary>
                     /// <para>The suggestion.</para>
                     /// 
@@ -278,6 +290,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [NameInMap("Suggestion")]
                     [Validation(Required=false)]
                     public string Suggestion { get; set; }
+
+                    [NameInMap("SuggestionEn")]
+                    [Validation(Required=false)]
+                    public string SuggestionEn { get; set; }
 
                     /// <summary>
                     /// <para>The ID of the associated parent task.</para>

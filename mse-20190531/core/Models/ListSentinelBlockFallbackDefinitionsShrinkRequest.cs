@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListSentinelBlockFallbackDefinitionsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The name of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,11 +34,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        /// <summary>
+        /// <para>Behavior Classification Set.</para>
+        /// </summary>
         [NameInMap("ClassificationSet")]
         [Validation(Required=false)]
         public string ClassificationSetShrink { get; set; }
 
         /// <summary>
+        /// <para>The name of the Microservices namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

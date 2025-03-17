@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CloneNacosConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <b>ErrMessage</b> parameter.</para>
-        /// <remarks>
-        /// <para> If the return value of the <b>ErrMessage</b> parameter is <b>The Value of Input Parameter %s is not valid</b> and the return value of the <b>DynamicMessage</b> parameter is <b>DtsJobId</b>, the specified <b>DtsJobId</b> parameter is invalid.</para>
-        /// </remarks>
+        /// <para>Response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -23,21 +20,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>Data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CloneNacosConfigResponseBodyData Data { get; set; }
         public class CloneNacosConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of the failed configurations.</para>
+            /// <para>Failed configuration information.</para>
             /// </summary>
             [NameInMap("FailData")]
             [Validation(Required=false)]
             public List<CloneNacosConfigResponseBodyDataFailData> FailData { get; set; }
             public class CloneNacosConfigResponseBodyDataFailData : TeaModel {
                 /// <summary>
-                /// <para>mse-200-105</para>
+                /// <para>Data ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test2.yaml</para>
@@ -47,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string DataId { get; set; }
 
                 /// <summary>
-                /// <para>duplicatedClusterAliasName</para>
+                /// <para>Group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -56,6 +53,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Group { get; set; }
 
+                /// <summary>
+                /// <para>The reason for the current operation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>param not support</para>
+                /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
                 public string Reason { get; set; }
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The data structure.</para>
+            /// <para>Number of skips.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -73,14 +76,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? SkipCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data.</para>
+            /// <para>Skipped configuration information.</para>
             /// </summary>
             [NameInMap("SkipData")]
             [Validation(Required=false)]
             public List<CloneNacosConfigResponseBodyDataSkipData> SkipData { get; set; }
             public class CloneNacosConfigResponseBodyDataSkipData : TeaModel {
                 /// <summary>
-                /// <para>The details of the failed configurations.</para>
+                /// <para>Data ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test.yaml</para>
@@ -90,7 +93,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string DataId { get; set; }
 
                 /// <summary>
-                /// <para>The data structure.</para>
+                /// <para>Group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>public</para>
@@ -102,7 +105,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The details of the skipped configurations.</para>
+            /// <para>Number of successes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -114,7 +117,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The number of successful operations.</para>
+        /// <para>Dynamic error message, used to replace the <b>%s</b> in the <b>ErrMessage</b> error message.</para>
+        /// <remarks>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b>, and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the input request parameter <b>DtsJobId</b> is invalid.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>The specified parameter is invalid.</para>
@@ -124,7 +130,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>Error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -134,11 +140,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
-        /// </list>
+        /// <para>HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -148,7 +150,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>Response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Clone Completed Successfully</para>
@@ -158,7 +160,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6678DBA9-5600-5948-ACF8-ED3105B288A3</para>
@@ -168,7 +170,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The response code returned.</para>
+        /// <para>Request result, with the following values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: Request succeeded.</description></item>
+        /// <item><description><c>false</c>: Request failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -1,3 +1,9 @@
+2025-03-17 Version: 6.17.0
+- Support API UpdateGatewayConfig.
+- Update API GetGatewayConfig: update response param.
+- Update API ListClusterHealthCheckTask: update response param.
+
+
 2025-01-20 Version: 6.16.3
 - Update API CloneSentinelRuleFromAhas: add param MseAppName.
 

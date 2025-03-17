@@ -139,6 +139,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string FallbackObject { get; set; }
 
+                /// <summary>
+                /// <para>Requests source application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>spring-cloud-a</para>
+                /// </summary>
                 [NameInMap("LimitApp")]
                 [Validation(Required=false)]
                 public string LimitApp { get; set; }
@@ -193,6 +199,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Resource { get; set; }
 
+                /// <summary>
+                /// <para>Interface resource type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public int? ResourceType { get; set; }
@@ -253,6 +265,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

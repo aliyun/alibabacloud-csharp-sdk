@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetNacosConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>Language type of the returned information:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
         /// <item><description>en: English</description></item>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a beta release. Valid values:</para>
+        /// <para>Whether it is a Beta release.</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: yes</description></item>
-        /// <item><description><c>false</c>: no</description></item>
+        /// <item><description><c>true</c>: Yes</description></item>
+        /// <item><description><c>false</c>: No</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Beta { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data.</para>
+        /// <para>Data ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DataId { get; set; }
 
         /// <summary>
-        /// <para>The name of the configuration group.</para>
+        /// <para>Configuration group information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Group { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace.</para>
+        /// <para>Namespace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ddaf8f12-****-b1c1-86e7c72e266b</para>

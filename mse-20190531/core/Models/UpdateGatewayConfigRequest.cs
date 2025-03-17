@@ -8,14 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class ListSentinelBlockFallbackDefinitionsRequest : TeaModel {
+    public class UpdateGatewayConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -24,33 +18,34 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>spring-cloud-a</para>
+        /// <para>EnableK8sSourceWorkloadFilter</para>
         /// </summary>
-        [NameInMap("AppName")]
+        [NameInMap("ConfigName")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public string ConfigName { get; set; }
 
         /// <summary>
-        /// <para>Behavior Classification Set.</para>
-        /// </summary>
-        [NameInMap("ClassificationSet")]
-        [Validation(Required=false)]
-        public List<int?> ClassificationSet { get; set; }
-
-        /// <summary>
-        /// <para>The name of the Microservices namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>default</para>
+        /// <para>{&quot;enable&quot;:true,&quot;filterOpt&quot;:&quot;EQUAL&quot;,&quot;labelKey&quot;:&quot;key&quot;,&quot;labelValue&quot;:&quot;value&quot;}</para>
         /// </summary>
-        [NameInMap("Namespace")]
+        [NameInMap("ConfigValue")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
+        public string ConfigValue { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-b525dc1adf3c486ab96224a6346*****</para>
+        /// </summary>
+        [NameInMap("GatewayUniqueId")]
+        [Validation(Required=false)]
+        public string GatewayUniqueId { get; set; }
 
     }
 

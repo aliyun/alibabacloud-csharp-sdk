@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CloneNacosConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>Language type of the returned message:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
         /// <item><description>en: English</description></item>
@@ -24,7 +24,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The configuration items that you want to clone. The value of this parameter is the combination of the values of the dataId and group parameters. Separate multiple configuration items with commas (,).</para>
+        /// <para>Configuration items to be cloned, in the format of dataId+group, with multiple items separated by commas.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test+test,test1+test1</para>
         /// </summary>
         [NameInMap("DataIds")]
         [Validation(Required=false)]
@@ -33,7 +36,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The list of configuration IDs.</para>
+        /// <para>List of configuration IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>253661,253662</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Ids { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination namespace.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,12 +58,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The policy used when a write conflict occurs.</para>
-        /// <list type="bullet">
-        /// <item><description>ABORT</description></item>
-        /// <item><description>SKIP</description></item>
-        /// <item><description>OVERWRITE</description></item>
-        /// </list>
+        /// <para>Source namespace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>be821963-6d48-4ea5-9910-6057d****</para>
@@ -70,10 +68,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OriginNamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The strategy used when a write conflict occurs.</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>ABORT</description></item>
+        /// <item><description>SKIP</description></item>
+        /// <item><description>OVERWRITE</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -85,7 +84,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>The IDs of configurations.</para>
+        /// <para>Target namespace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08be4b5d-2d1c-4e6e-aa85-83b9****</para>

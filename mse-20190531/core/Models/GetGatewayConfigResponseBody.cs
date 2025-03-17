@@ -101,6 +101,28 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public bool? EnableHttp3 { get; set; }
 
+            [NameInMap("EnableK8sSourceWorkloadFilter")]
+            [Validation(Required=false)]
+            public GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter EnableK8sSourceWorkloadFilter { get; set; }
+            public class GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter : TeaModel {
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+                [NameInMap("FilterOpt")]
+                [Validation(Required=false)]
+                public string FilterOpt { get; set; }
+
+                [NameInMap("LabelKey")]
+                [Validation(Required=false)]
+                public string LabelKey { get; set; }
+
+                [NameInMap("LabelValue")]
+                [Validation(Required=false)]
+                public string LabelValue { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>true</para>
@@ -124,6 +146,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("EnableWaf")]
             [Validation(Required=false)]
             public bool? EnableWaf { get; set; }
+
+            [NameInMap("EnableXffTrustedCidrs")]
+            [Validation(Required=false)]
+            public GetGatewayConfigResponseBodyDataEnableXffTrustedCidrs EnableXffTrustedCidrs { get; set; }
+            public class GetGatewayConfigResponseBodyDataEnableXffTrustedCidrs : TeaModel {
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+                [NameInMap("IpListContent")]
+                [Validation(Required=false)]
+                public string IpListContent { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>

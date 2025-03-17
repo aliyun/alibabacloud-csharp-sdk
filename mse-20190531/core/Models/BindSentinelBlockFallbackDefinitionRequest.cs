@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class BindSentinelBlockFallbackDefinitionRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The name of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +35,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>Behavior ID. 0:the default behavior.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +46,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? FallbackId { get; set; }
 
         /// <summary>
+        /// <para>The microservice namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +57,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>Interface Name: The resource to which the rule applies. It must match the interface name in the console\&quot;s interface details.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +68,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Resource { get; set; }
 
         /// <summary>
+        /// <para>Target rule type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -50,6 +50,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? IsAHASPublicRegion { get; set; }
 
+        /// <summary>
+        /// <para>The name of the MSE application after migration. If this parameter is not specified, the name of the Application High Availability Service (AHAS) application is used by default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>spring-cloud-a</para>
+        /// </summary>
         [NameInMap("MseAppName")]
         [Validation(Required=false)]
         public string MseAppName { get; set; }
