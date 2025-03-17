@@ -497,6 +497,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> EndUserId { get; set; }
 
+        [NameInMap("ExtendInfo")]
+        [Validation(Required=false)]
+        public string ExtendInfo { get; set; }
+
         /// <summary>
         /// <para>The ID of the cloud computer pool.</para>
         /// 
