@@ -1,3 +1,7 @@
+2025-03-17 Version: 2.5.2
+- Update API RunHotTopicSummary: update param stepForCustomSummaryStyleConfig.
+
+
 2025-03-13 Version: 2.5.1
 - Update API GetVideoAnalysisTask: update response param.
 - Update API RunVideoAnalysis: add param faceIdentitySimilarityMinScore.

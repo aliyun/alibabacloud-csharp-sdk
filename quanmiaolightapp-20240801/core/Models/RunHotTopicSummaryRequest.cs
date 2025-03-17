@@ -35,8 +35,6 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
             public int? SummaryImageCount { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>qwen-max</para>
             /// </summary>
