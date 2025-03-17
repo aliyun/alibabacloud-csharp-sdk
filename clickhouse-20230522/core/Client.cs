@@ -1329,6 +1329,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceNetType))
+            {
+                query["DBInstanceNetType"] = request.DBInstanceNetType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -1385,6 +1389,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceNetType))
+            {
+                query["DBInstanceNetType"] = request.DBInstanceNetType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3921,6 +3929,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceNetType))
+            {
+                query["DBInstanceNetType"] = request.DBInstanceNetType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisablePorts))
             {
                 query["DisablePorts"] = request.DisablePorts;
@@ -3985,6 +3997,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceNetType))
+            {
+                query["DBInstanceNetType"] = request.DBInstanceNetType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisablePorts))
             {

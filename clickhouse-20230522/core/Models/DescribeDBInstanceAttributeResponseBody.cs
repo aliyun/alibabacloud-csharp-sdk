@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeDBInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The result returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,11 +37,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Bid { get; set; }
 
             /// <summary>
-            /// <para>The billing method. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Prepaid: subscription</description></item>
-            /// <item><description>PostPaid: pay-as-you-go</description></item>
-            /// </list>
+            /// <para>The billing method. Enterprise Edition clusters use the pay-as-you-go billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
@@ -81,12 +77,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public bool? DeletionProtection { get; set; }
 
             /// <summary>
-            /// <para>集群可用区部署状态，支持single_az和multi_az两种类型。</para>
+            /// <para>The deployment mode of the cluster. Valid values: single_az and multi_az.</para>
             /// <list type="bullet">
-            /// <item><description>single_az：server部署到主可用区ZoneId。</description></item>
-            /// <item><description>multi_az：server部署到多可用区MultiZones。</description></item>
+            /// <item><description>single_az: indicates that the server nodes are deployed in the primary zone. The ID of the primary zone is specified by the ZoneID parameter.</description></item>
+            /// <item><description>multi_az: indicates that the server nodes are deployed in multiple zones. The information about the zones is specified by the MultiZones parameter.</description></item>
             /// </list>
-            /// <para>keeper始终部署到多可用区MultiZones。</para>
+            /// <para>The keeper nodes are deployed in multiple zones.</para>
             /// 
             /// <b>Example:</b>
             /// <para>single_az</para>
@@ -209,21 +205,21 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string MaintainStartTime { get; set; }
 
             /// <summary>
-            /// <para>多可用信息。</para>
+            /// <para>The information about the zones.</para>
             /// </summary>
             [NameInMap("MultiZones")]
             [Validation(Required=false)]
             public List<DescribeDBInstanceAttributeResponseBodyDataMultiZones> MultiZones { get; set; }
             public class DescribeDBInstanceAttributeResponseBodyDataMultiZones : TeaModel {
                 /// <summary>
-                /// <para>交换机ID数组。</para>
+                /// <para>The vSwitch IDs.</para>
                 /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
                 public List<string> VSwitchIds { get; set; }
 
                 /// <summary>
-                /// <para>可用区ID。</para>
+                /// <para>The zone ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-h</para>

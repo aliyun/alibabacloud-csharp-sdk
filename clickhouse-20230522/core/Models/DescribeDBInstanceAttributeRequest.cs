@@ -22,6 +22,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
         /// <summary>
         /// <para>The region ID.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cn-beijing</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

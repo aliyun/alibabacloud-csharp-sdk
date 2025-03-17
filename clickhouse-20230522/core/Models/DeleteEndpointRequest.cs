@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("DBInstanceNetType")]
+        [Validation(Required=false)]
+        public string DBInstanceNetType { get; set; }
+
         /// <summary>
         /// <para>The region ID.</para>
         /// 
