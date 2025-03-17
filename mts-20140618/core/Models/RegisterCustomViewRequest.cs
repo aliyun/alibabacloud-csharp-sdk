@@ -40,14 +40,16 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         public string CustomGroupId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>http://<c>127.66.**.**</c>/image.jpeg</para>
         /// </summary>
         [NameInMap("ImageUrl")]
         [Validation(Required=false)]
         public string ImageUrl { get; set; }
+
+        [NameInMap("LabelPrompt")]
+        [Validation(Required=false)]
+        public string LabelPrompt { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

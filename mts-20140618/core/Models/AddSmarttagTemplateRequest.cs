@@ -69,6 +69,14 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public string KnowledgeConfig { get; set; }
 
+        [NameInMap("LabelCustomCategoryIds")]
+        [Validation(Required=false)]
+        public string LabelCustomCategoryIds { get; set; }
+
+        [NameInMap("LabelCustomParamsConfig")]
+        [Validation(Required=false)]
+        public string LabelCustomParamsConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>hmi</para>
