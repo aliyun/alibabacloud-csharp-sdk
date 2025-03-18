@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
-    public class DescribePopApiVersionListResponse : TeaModel {
+    public class DescribeNotifyTemplateListResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DescribePopApiVersionListResponseBody Body { get; set; }
+        public DescribeNotifyTemplateListResponseBody Body { get; set; }
 
     }
 

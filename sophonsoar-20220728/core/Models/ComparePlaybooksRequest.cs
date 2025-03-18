@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the second version.</para>
+        /// <para>The ID of the second version.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the UUIDs of versions.</para>
+        /// <para> You can call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation to query the IDs of versions. The system automatically generates IDs for new versions.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public int? NewPlaybookReleaseId { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the first version.</para>
+        /// <para>The ID of the first version.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the UUIDs of versions.</para>
+        /// <para> You can call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation to query the IDs of versions. The system automatically generates IDs for new versions.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

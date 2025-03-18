@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class CreatePlaybookRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the playbook.</para>
+        /// <para>Description of the playbook.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a new version</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the playbook.</para>
+        /// <para>Name of the playbook.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>Language type for receiving messages. Values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -44,6 +44,16 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>Playbook TaskFlow type.</para>
+        /// <list type="bullet">
+        /// <item><description><b>x6</b> : x6</description></item>
+        /// <item><description><b>bpmn</b>: bpmn</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>x6</para>
+        /// </summary>
         [NameInMap("TaskflowType")]
         [Validation(Required=false)]
         public string TaskflowType { get; set; }

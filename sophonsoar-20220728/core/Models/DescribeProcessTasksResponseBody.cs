@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public string ErrTip { get; set; }
 
+            [NameInMap("EventUuid")]
+            [Validation(Required=false)]
+            public string EventUuid { get; set; }
+
             /// <summary>
             /// <para>The creation time of the handling task. The value is a 13-digit timestamp.</para>
             /// 
@@ -179,6 +183,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public long? RemoveTime { get; set; }
 
+            [NameInMap("ReqUuid")]
+            [Validation(Required=false)]
+            public string ReqUuid { get; set; }
+
             /// <summary>
             /// <para>The scenario code of the handling task.</para>
             /// 
@@ -238,6 +246,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [NameInMap("TaskStatus")]
             [Validation(Required=false)]
             public int? TaskStatus { get; set; }
+
+            [NameInMap("TriggerSource")]
+            [Validation(Required=false)]
+            public string TriggerSource { get; set; }
 
             /// <summary>
             /// <para>The code of the cloud service that is associated with the handling task.</para>

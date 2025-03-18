@@ -41,7 +41,11 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public bool? New { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the configurations of the two versions are the same. Valid values: <b>true</b> and <b>false</b>.</para>
+            /// <para>Indicates whether the configurations of the two versions are the same. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

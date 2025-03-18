@@ -17,16 +17,6 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public DescribePlaybookResponseBodyPlaybook Playbook { get; set; }
         public class DescribePlaybookResponseBodyPlaybook : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to create the playbook.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>124xxxxx3435</para>
-            /// </summary>
-            [NameInMap("Creator")]
-            [Validation(Required=false)]
-            public string Creator { get; set; }
-
-            /// <summary>
             /// <para>The description of the playbook.</para>
             /// 
             /// <b>Example:</b>
@@ -108,16 +98,6 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [NameInMap("LastExeTime")]
             [Validation(Required=false)]
             public long? LastExeTime { get; set; }
-
-            /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to modify the playbook.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>124xxxxx3435</para>
-            /// </summary>
-            [NameInMap("Modifier")]
-            [Validation(Required=false)]
-            public string Modifier { get; set; }
 
             /// <summary>
             /// <para>The status of the playbook. Valid values:</para>

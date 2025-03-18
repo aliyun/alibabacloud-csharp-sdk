@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
-    public class DescribeApiListResponse : TeaModel {
+    public class ConvertPlaybookResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DescribeApiListResponseBody Body { get; set; }
+        public ConvertPlaybookResponseBody Body { get; set; }
 
     }
 

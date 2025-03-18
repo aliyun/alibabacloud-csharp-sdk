@@ -8,25 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
-    public class DescribePopApiVersionListRequest : TeaModel {
+    public class DescribeOpenApiListRequest : TeaModel {
         /// <summary>
-        /// <para>The environment in which the API operation parameters are used. Set the value to <b>online</b>.</para>
+        /// <b>Example:</b>
+        /// <para>DescribePopApiItemList</para>
+        /// </summary>
+        [NameInMap("ApiName")]
+        [Validation(Required=false)]
+        public string ApiName { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>online</para>
+        /// <para>2021-10-01</para>
         /// </summary>
-        [NameInMap("Env")]
+        [NameInMap("ApiVersion")]
         [Validation(Required=false)]
-        public string Env { get; set; }
+        public string ApiVersion { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -35,10 +36,6 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The POP code of the Alibaba Cloud service.</para>
-        /// <remarks>
-        /// <para> You can call the <a href="~~DescribeApiList~~">DescribeApiList</a> operation to query the POP code.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,6 +44,22 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [NameInMap("PopCode")]
         [Validation(Required=false)]
         public string PopCode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>137602xxx8718726</para>
+        /// </summary>
+        [NameInMap("RoleFor")]
+        [Validation(Required=false)]
+        public long? RoleFor { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("RoleType")]
+        [Validation(Required=false)]
+        public string RoleType { get; set; }
 
     }
 

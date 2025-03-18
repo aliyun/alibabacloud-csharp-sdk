@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribePlaybooksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>Pagination query information.</para>
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public DescribePlaybooksResponseBodyPage Page { get; set; }
         public class DescribePlaybooksResponseBodyPage : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number in pagination queries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of items per page in pagination queries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of items found.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -49,17 +49,17 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The playbooks.</para>
+        /// <para>List of playbooks.</para>
         /// </summary>
         [NameInMap("Playbooks")]
         [Validation(Required=false)]
         public List<DescribePlaybooksResponseBodyPlaybooks> Playbooks { get; set; }
         public class DescribePlaybooksResponseBodyPlaybooks : TeaModel {
             /// <summary>
-            /// <para>The playbook status. Valid values:</para>
+            /// <para>The status indicator of the playbook. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: The playbook is started.</description></item>
-            /// <item><description><b>0</b>: The playbook is stopped.</description></item>
+            /// <item><description><b>1</b>: Indicates the playbook is activated.</description></item>
+            /// <item><description><b>0</b>: Indicates the playbook is deactivated.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The time when the playbook was created. The value is a 13-digit timestamp.</para>
+            /// <para>The creation time of the playbook, in 13-digit timestamp format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683526277415</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the playbook was modified.</para>
+            /// <para>The modification time of the playbook.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1681396398000</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The time when the playbook was last run. The value is a 13-digit timestamp.</para>
+            /// <para>The last execution time of the playbook, in 13-digit timestamp format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683526277415</para>
@@ -110,10 +110,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public long? LastRuntime { get; set; }
 
             /// <summary>
-            /// <para>The type of the playbook. Valid values:</para>
+            /// <para>The type of the playbook. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>preset</b>: predefined playbook</description></item>
-            /// <item><description><b>user</b>: custom playbook</description></item>
+            /// <item><description><b>preset</b>: Predefined playbook.</description></item>
+            /// <item><description><b>user</b>: Custom playbook.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,6 +123,22 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public string OwnType { get; set; }
 
+            /// <summary>
+            /// <para>The trigger method for the playbook, with a default value of <b>query all</b>. Possible values are:</para>
+            /// <list type="bullet">
+            /// <item><description><b>template-incident</b>: Security incident.</description></item>
+            /// <item><description><b>template-ip</b>: IP entity.</description></item>
+            /// <item><description><b>template-file</b>: File entity.</description></item>
+            /// <item><description><b>template-process</b>: Process entity.</description></item>
+            /// <item><description><b>template-alert</b>: Security alert.</description></item>
+            /// <item><description><b>template-domain</b>: Domain entity.</description></item>
+            /// <item><description><b>template-container</b>: Container entity.</description></item>
+            /// <item><description><b>template-host</b>: Host entity.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>template-alert</para>
+            /// </summary>
             [NameInMap("ParamType")]
             [Validation(Required=false)]
             public string ParamType { get; set; }
@@ -140,10 +156,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the current request, generated by Alibaba Cloud as a unique identifier for troubleshooting and problem localization.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>138B5AB7-7F2B-5814-87A3-E3ECFE1F207E</para>
+        /// <para>138B5AB7-<b><b>-5814-87A3-E3E</b></b>F207E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

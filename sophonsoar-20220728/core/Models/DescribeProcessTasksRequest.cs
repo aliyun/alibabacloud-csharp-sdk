@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [Validation(Required=false)]
         public string EntityUuid { get; set; }
 
+        [NameInMap("EventUuid")]
+        [Validation(Required=false)]
+        public string EventUuid { get; set; }
+
         /// <summary>
         /// <para>The field that you use to sort the result.</para>
         /// <remarks>
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string PageNumber { get; set; }
+        public long? PageNumber { get; set; }
 
         /// <summary>
         /// <para>The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.</para>
@@ -224,6 +228,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [NameInMap("TaskStatus")]
         [Validation(Required=false)]
         public string TaskStatus { get; set; }
+
+        [NameInMap("TriggerSource")]
+        [Validation(Required=false)]
+        public string TriggerSource { get; set; }
 
         /// <summary>
         /// <para>The cloud service that is associated with the handling task. The value is a string. Valid values:</para>

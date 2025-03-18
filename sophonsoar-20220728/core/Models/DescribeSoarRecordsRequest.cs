@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeSoarRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The value is a 13-digit timestamp.</para>
+        /// <para>The end time of the task execution, in 13-digit timestamp format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683772744953</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? EndMillis { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Set the language type for requests and received messages. The default is <b>zh</b>. Values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1. Pages start from page 1.</para>
+        /// <para>Set which page to start displaying the query results from. The default value is 1, indicating the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.</para>
+        /// <para>Specify the maximum number of data entries per page when performing a paginated query. The default number of entries per page is 20. If the PageSize parameter is empty, it will return 10 entries by default.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>It is recommended not to leave the PageSize value empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The playbook UUID.</para>
+        /// <para>The UUID of the playbook.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</para>
+        /// <para>You can obtain this parameter by calling the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> interface.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,7 +71,20 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string PlaybookUuid { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a 13-byte timestamp.</para>
+        /// <para>UUID of the playbook task execution.</para>
+        /// <remarks>
+        /// <para>You can obtain this parameter by calling the <a href="https://help.aliyun.com/document_detail/2627455.html">DescribeSoarRecords</a> interface.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6d412cfa-0905-4567-8a83-xxxxxx</para>
+        /// </summary>
+        [NameInMap("RequestUuid")]
+        [Validation(Required=false)]
+        public string RequestUuid { get; set; }
+
+        /// <summary>
+        /// <para>The start time of the task execution, in 13-digit timestamp format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683526284584</para>
@@ -81,11 +94,11 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? StartMillis { get; set; }
 
         /// <summary>
-        /// <para>The status of the task. Valid values:</para>
+        /// <para>The status of the task execution. Values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>failed</b></description></item>
-        /// <item><description><b>inprogress</b></description></item>
+        /// <item><description><b>success</b>: Successful task.</description></item>
+        /// <item><description><b>failed</b>: Failed task.</description></item>
+        /// <item><description><b>inprogress</b>: Task in progress</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +109,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>The MD5 value of the playbook.</para>
+        /// <para>The MD5 value of the playbook configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>be0a4ef084dd174abe478df52xxxxx</para>
@@ -106,7 +119,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string TaskflowMd5 { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that is used to execute the task.</para>
+        /// <para>The Alibaba Cloud account ID that executed the playbook task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127xxxx4392</para>
