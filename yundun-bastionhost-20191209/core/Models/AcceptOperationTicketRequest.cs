@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class AcceptOperationTicketRequest : TeaModel {
+        /// <summary>
+        /// <para>The review description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>O\&amp;M allowed</para>
+        /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
@@ -16,11 +22,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The maximum number of logons allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: The number of logons is unlimited. The O\&amp;M engineer can log on to the specified asset for an unlimited number of times during the validity period.</description></item>
-        /// <item><description>1: The O\&amp;M engineer can log on to the specified asset only once during the validity period.</description></item>
+        /// <item><description><b>0</b>: The number of logons is unlimited. The O\&amp;M engineer can log on to the specified asset for unlimited times during the validity period.</description></item>
+        /// <item><description><b>1</b>: The O\&amp;M engineer can log on to the specified asset only once during the validity period.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can set this parameter only to 0 if you review an O\&amp;M application on a database.</para>
+        /// <list type="bullet">
+        /// <item><description>You can set this parameter only to 0 if you review an O\&amp;M application on a database.</description></item>
+        /// <item><description>If you do not specify this parameter, the default value 0 is used.</description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>

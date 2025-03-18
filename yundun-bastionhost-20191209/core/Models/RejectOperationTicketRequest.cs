@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class RejectOperationTicketRequest : TeaModel {
+        /// <summary>
+        /// <para>The review remarks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>comment</para>
+        /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }

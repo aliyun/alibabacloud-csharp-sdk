@@ -66,6 +66,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public long? RenewCount { get; set; }
 
+            /// <summary>
+            /// <para>The single sign-on (SSO) URL.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sso://eyJOT0RFX0NPTU1PTiI6eyJNb2R******</para>
+            /// </summary>
             [NameInMap("SsoUrl")]
             [Validation(Required=false)]
             public string SsoUrl { get; set; }

@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string ApplyUsername { get; set; }
 
+            /// <summary>
+            /// <para>The remarks entered when the O\&amp;M personnel applies for O\&amp;M permissions.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Apply for O\&amp;M</para>
+            /// </summary>
             [NameInMap("ApproveComment")]
             [Validation(Required=false)]
             public string ApproveComment { get; set; }
@@ -146,14 +152,36 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public long? CreatedTime { get; set; }
 
+            /// <summary>
+            /// <para>The maximum number of logons applied by the O\&amp;M engineer. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: The number of logons is unlimited. The O\&amp;M engineer can log on to the specified asset for unlimited times during the validity period.</description></item>
+            /// <item><description><b>1</b>: The O\&amp;M engineer can log on to the specified asset only once during the validity period.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("EffectCount")]
             [Validation(Required=false)]
             public int? EffectCount { get; set; }
 
+            /// <summary>
+            /// <para>The end time of the validity period. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1679393152</para>
+            /// </summary>
             [NameInMap("EffectEndTime")]
             [Validation(Required=false)]
             public int? EffectEndTime { get; set; }
 
+            /// <summary>
+            /// <para>The start time of the validity period. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1685600242</para>
+            /// </summary>
             [NameInMap("EffectStartTime")]
             [Validation(Required=false)]
             public int? EffectStartTime { get; set; }

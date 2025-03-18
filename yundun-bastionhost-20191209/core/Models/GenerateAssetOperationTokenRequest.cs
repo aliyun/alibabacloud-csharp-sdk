@@ -89,6 +89,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string AssetType { get; set; }
 
+        /// <summary>
+        /// <para>The name of the database. If you set OperationMode to Sso and AssetAccountProtocolName to PostgreSQL or Oracle and you select Custom Account for the Database Account parameter, you must specify this parameter.</para>
+        /// <remarks>
+        /// <para>This parameter is available only for bastion hosts that run V3.2.44 or later.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>orcl</para>
+        /// </summary>
         [NameInMap("DatabaseSchema")]
         [Validation(Required=false)]
         public string DatabaseSchema { get; set; }
@@ -107,13 +116,43 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The logon attribute. If you set OperationMode to Sso and AssetAccountProtocolName to Oracle, you must specify this parameter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>SERVICENAME</b></description></item>
+        /// <item><description><b>SID</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is available only for bastion hosts that run V3.2.44 or later.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SID</para>
+        /// </summary>
         [NameInMap("LoginAttribute")]
         [Validation(Required=false)]
         public string LoginAttribute { get; set; }
 
+        /// <summary>
+        /// <para>The O\&amp;M logon method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>WebToken</b>: O\&amp;M token-based logon.</description></item>
+        /// <item><description><b>Sso</b>: Local client-based logon.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is available only for bastion hosts that run V3.2.44 or later. If you do not specify this parameter, the default value WebToken is used.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sso</para>
+        /// </summary>
         [NameInMap("OperationMode")]
         [Validation(Required=false)]
         public string OperationMode { get; set; }
+
+        [NameInMap("OperationNote")]
+        [Validation(Required=false)]
+        public string OperationNote { get; set; }
 
         /// <summary>
         /// <para>The region ID of the bastion host.</para>
@@ -128,6 +167,19 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The type of the local client that you want to perform O\&amp;M operations on Linux assets. If you set OperationMode to Sso and AssetAccountProtocolName to SSH, you must specify this parameter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ssh</b>: Perform O\&amp;M operations on Linux assets by connecting to a bastion host from an SSH client.</description></item>
+        /// <item><description><b>sftp</b>: Perform O\&amp;M operations on Linux assets by connecting to a bastion host from a Secure File Transfer Protocol (SFTP) client.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is available only for bastion hosts that run V3.2.44 or later.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ssh</para>
+        /// </summary>
         [NameInMap("SsoClient")]
         [Validation(Required=false)]
         public string SsoClient { get; set; }

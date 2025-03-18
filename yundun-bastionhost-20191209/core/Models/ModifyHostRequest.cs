@@ -104,6 +104,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string OSType { get; set; }
 
+        [NameInMap("PrefKex")]
+        [Validation(Required=false)]
+        public string PrefKex { get; set; }
+
         /// <summary>
         /// <para>The region ID of the bastion host on which you want to modify the information about the host.</para>
         /// <remarks>

@@ -1,3 +1,28 @@
+2025-03-18 Version: 1.3.1
+- Update API GenerateAssetOperationToken: add param OperationNote.
+- Update API GenerateAssetOperationToken: update param AssetAccountId.
+- Update API GenerateAssetOperationToken: update param AssetAccountName.
+- Update API GenerateAssetOperationToken: update param AssetAccountPassword.
+- Update API GenerateAssetOperationToken: update param AssetAccountProtocolName.
+- Update API GenerateAssetOperationToken: update param AssetId.
+- Update API GenerateAssetOperationToken: update param AssetType.
+- Update API GenerateAssetOperationToken: update param LoginAttribute.
+- Update API GenerateAssetOperationToken: update param OperationMode.
+- Update API GenerateAssetOperationToken: update response param.
+- Update API GetHost: update param HostId.
+- Update API GetHost: update response param.
+- Update API GetNetworkDomain: update response param.
+- Update API ModifyHost: add param PrefKex.
+- Update API ModifyHost: update param Comment.
+- Update API ModifyHost: update param HostId.
+- Update API ModifyHost: update param HostName.
+- Update API ModifyHost: update param HostPrivateAddress.
+- Update API ModifyHost: update param HostPublicAddress.
+- Update API ModifyHost: update param NetworkDomainId.
+- Update API ModifyHost: update param OSType.
+- Update API ModifyNetworkDomain: update param Proxies.
+
+
 2024-12-02 Version: 1.3.0
 - Support API CreateExportConfigJob.
 - Support API CreateOperationTicket.
