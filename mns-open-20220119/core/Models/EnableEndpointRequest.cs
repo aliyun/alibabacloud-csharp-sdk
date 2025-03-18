@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         /// <summary>
         /// <para>The type of the endpoint. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description><b>public</b>: indicates a public endpoint. (Only public endpoint is supported.)</description></item>
+        /// <item><description><b>public</b>: indicates public endpoint. (Only the public is supported.)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

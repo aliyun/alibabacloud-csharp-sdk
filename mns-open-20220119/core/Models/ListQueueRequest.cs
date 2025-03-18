@@ -39,11 +39,16 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public string QueueName { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListQueueRequestTag> Tag { get; set; }
         public class ListQueueRequestTag : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tag1</para>
             /// </summary>
@@ -52,6 +57,8 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>

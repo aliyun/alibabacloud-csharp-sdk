@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public long? DelaySeconds { get; set; }
 
+        /// <summary>
+        /// <para>The dead-letter queue policy.</para>
+        /// </summary>
         [NameInMap("DlqPolicy")]
         [Validation(Required=false)]
         public string DlqPolicyShrink { get; set; }
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? MaximumMessageSize { get; set; }
 
         /// <summary>
-        /// <para>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</para>
+        /// <para>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is consumed. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>345600</para>
@@ -79,11 +82,16 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public string QueueName { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateQueueShrinkRequestTag> Tag { get; set; }
         public class CreateQueueShrinkRequestTag : TeaModel {
             /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tag1</para>
             /// </summary>
@@ -92,6 +100,8 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>

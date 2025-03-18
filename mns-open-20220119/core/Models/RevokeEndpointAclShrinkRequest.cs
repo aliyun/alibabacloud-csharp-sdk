@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class RevokeEndpointAclShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ACL policy. Valid value:</para>
+        /// <para>The ACL policy. Value:</para>
         /// <list type="bullet">
-        /// <item><description><b>allow</b>: indicates that the operation is initiated from an endpoint in CIDR whitelist. (Only allow is supported)</description></item>
+        /// <item><description><b>allow</b>: indicates that this operation is included in the Cidr whitelist. (Only the allow is supported.)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string AclStrategy { get; set; }
 
         /// <summary>
-        /// <para>The CIDR blocks.</para>
+        /// <para>The list of CIDR block.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CidrList")]
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string CidrListShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the endpoint. Valid value:</para>
+        /// <para>The type of the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>public</b>: indicates an public endpoint. (Only public endpoint is supported.)</description></item>
+        /// <item><description><b>public</b>: indicates public endpoint. (Only the public is supported.)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -19,18 +19,39 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public long? DelaySeconds { get; set; }
 
+        /// <summary>
+        /// <para>The dead-letter queue policy.</para>
+        /// </summary>
         [NameInMap("DlqPolicy")]
         [Validation(Required=false)]
         public SetQueueAttributesRequestDlqPolicy DlqPolicy { get; set; }
         public class SetQueueAttributesRequestDlqPolicy : TeaModel {
+            /// <summary>
+            /// <para>The queue to which dead-letter messages are delivered.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>deadLetterTargetQueue</para>
+            /// </summary>
             [NameInMap("DeadLetterTargetQueue")]
             [Validation(Required=false)]
             public string DeadLetterTargetQueue { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable the dead-letter message delivery.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
+            /// <summary>
+            /// <para>The maximum number of retries.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("MaxReceiveCount")]
             [Validation(Required=false)]
             public int? MaxReceiveCount { get; set; }

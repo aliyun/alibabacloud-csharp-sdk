@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -36,14 +36,29 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The dead-letter queue policy.</para>
+            /// </summary>
             [NameInMap("DlqPolicy")]
             [Validation(Required=false)]
             public GetSubscriptionAttributesResponseBodyDataDlqPolicy DlqPolicy { get; set; }
             public class GetSubscriptionAttributesResponseBodyDataDlqPolicy : TeaModel {
+                /// <summary>
+                /// <para>The queue to which dead-letter messages are delivered.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>deadLetterTargetQueue</para>
+                /// </summary>
                 [NameInMap("DeadLetterTargetQueue")]
                 [Validation(Required=false)]
                 public string DeadLetterTargetQueue { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether to enable the dead-letter message delivery.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("Enabled")]
                 [Validation(Required=false)]
                 public bool? Enabled { get; set; }

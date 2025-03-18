@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class RevokeEndpointAclResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06273500-249F-5863-121D-74D51123****</para>

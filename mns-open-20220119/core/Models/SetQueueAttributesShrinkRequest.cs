@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public long? DelaySeconds { get; set; }
 
+        /// <summary>
+        /// <para>The dead-letter queue policy.</para>
+        /// </summary>
         [NameInMap("DlqPolicy")]
         [Validation(Required=false)]
         public string DlqPolicyShrink { get; set; }

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public List<ListQueueResponseBodyDataPageData> PageData { get; set; }
             public class ListQueueResponseBodyDataPageData : TeaModel {
                 /// <summary>
-                /// <para>The total number of messages that are in the Active state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</para>
+                /// <para>The total number of messages that are in the Active state in the queue. The value is an approximate number. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The total number of messages that are in the Delayed state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</para>
+                /// <para>The total number of the messages that are in the Delayed state in the queue. The value is an approximate number. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -73,18 +73,39 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 [Validation(Required=false)]
                 public long? DelaySeconds { get; set; }
 
+                /// <summary>
+                /// <para>The dead-letter queue policy.</para>
+                /// </summary>
                 [NameInMap("DlqPolicy")]
                 [Validation(Required=false)]
                 public ListQueueResponseBodyDataPageDataDlqPolicy DlqPolicy { get; set; }
                 public class ListQueueResponseBodyDataPageDataDlqPolicy : TeaModel {
+                    /// <summary>
+                    /// <para>The queue to which dead-letter messages are delivered.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>deadLetterTargetQueue</para>
+                    /// </summary>
                     [NameInMap("DeadLetterTargetQueue")]
                     [Validation(Required=false)]
                     public string DeadLetterTargetQueue { get; set; }
 
+                    /// <summary>
+                    /// <para>Specifies whether to enable the dead-letter message delivery.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("Enabled")]
                     [Validation(Required=false)]
                     public bool? Enabled { get; set; }
 
+                    /// <summary>
+                    /// <para>The maximum number of retries.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3</para>
+                    /// </summary>
                     [NameInMap("MaxReceiveCount")]
                     [Validation(Required=false)]
                     public string MaxReceiveCount { get; set; }
@@ -92,7 +113,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 }
 
                 /// <summary>
-                /// <para>The total number of messages that are in the Inactive state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</para>
+                /// <para>The total number of the messages that are in the Inactive state in the queue. The value is an approximate number. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class GetEndpointAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,23 +20,23 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetEndpointAttributeResponseBodyData Data { get; set; }
         public class GetEndpointAttributeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The CIDR blocks.</para>
+            /// <para>The list of CIDR block.</para>
             /// </summary>
             [NameInMap("CidrList")]
             [Validation(Required=false)]
             public List<GetEndpointAttributeResponseBodyDataCidrList> CidrList { get; set; }
             public class GetEndpointAttributeResponseBodyDataCidrList : TeaModel {
                 /// <summary>
-                /// <para>The ACL policy. Valid value:</para>
+                /// <para>The ACL policy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>allow</b>: indicates that the current endpoint allows access from the corresponding CIDR block. (Only allow is supported)</description></item>
+                /// <item><description><b>allow</b>: indicates that the current endpoint allows access from the corresponding CIDR block. (Only allow is supported.)</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public string Cidr { get; set; }
 
                 /// <summary>
-                /// <para>The time when the list was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1701951224000</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success</para>

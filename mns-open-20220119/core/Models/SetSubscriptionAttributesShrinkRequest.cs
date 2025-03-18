@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class SetSubscriptionAttributesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The dead-letter queue policy.</para>
+        /// </summary>
         [NameInMap("DlqPolicy")]
         [Validation(Required=false)]
         public string DlqPolicyShrink { get; set; }

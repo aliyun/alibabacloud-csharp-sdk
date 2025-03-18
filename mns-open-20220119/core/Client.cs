@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more ACLrules for an endpoint of a specified type.</para>
+        /// <para>You can call this operation to add one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more ACLrules for an endpoint of a specified type.</para>
+        /// <para>You can call this operation to add one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more ACLrules for an endpoint of a specified type.</para>
+        /// <para>You can call this operation to add one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more ACLrules for an endpoint of a specified type.</para>
+        /// <para>You can call this operation to add one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -197,6 +197,200 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AuthorizeEndpointAclWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建事件规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateEventRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventRuleResponse
+        /// </returns>
+        public CreateEventRuleResponse CreateEventRuleWithOptions(CreateEventRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateEventRuleShrinkRequest request = new CreateEventRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Endpoints))
+            {
+                request.EndpointsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Endpoints, "Endpoints", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventTypes))
+            {
+                request.EventTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventTypes, "EventTypes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MatchRules))
+            {
+                request.MatchRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MatchRules, "MatchRules", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointsShrink))
+            {
+                query["Endpoints"] = request.EndpointsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventTypesShrink))
+            {
+                query["EventTypes"] = request.EventTypesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchRulesShrink))
+            {
+                query["MatchRules"] = request.MatchRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductName))
+            {
+                query["ProductName"] = request.ProductName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEventRule",
+                Version = "2022-01-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateEventRuleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateEventRuleResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建事件规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateEventRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventRuleResponse
+        /// </returns>
+        public async Task<CreateEventRuleResponse> CreateEventRuleWithOptionsAsync(CreateEventRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateEventRuleShrinkRequest request = new CreateEventRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Endpoints))
+            {
+                request.EndpointsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Endpoints, "Endpoints", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventTypes))
+            {
+                request.EventTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventTypes, "EventTypes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MatchRules))
+            {
+                request.MatchRulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MatchRules, "MatchRules", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointsShrink))
+            {
+                query["Endpoints"] = request.EndpointsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventTypesShrink))
+            {
+                query["EventTypes"] = request.EventTypesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchRulesShrink))
+            {
+                query["MatchRules"] = request.MatchRulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductName))
+            {
+                query["ProductName"] = request.ProductName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEventRule",
+                Version = "2022-01-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateEventRuleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateEventRuleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建事件规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEventRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventRuleResponse
+        /// </returns>
+        public CreateEventRuleResponse CreateEventRule(CreateEventRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateEventRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建事件规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEventRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEventRuleResponse
+        /// </returns>
+        public async Task<CreateEventRuleResponse> CreateEventRuleAsync(CreateEventRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateEventRuleWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -573,6 +767,148 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除事件规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEventRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventRuleResponse
+        /// </returns>
+        public DeleteEventRuleResponse DeleteEventRuleWithOptions(DeleteEventRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductName))
+            {
+                query["ProductName"] = request.ProductName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEventRule",
+                Version = "2022-01-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteEventRuleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteEventRuleResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除事件规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEventRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventRuleResponse
+        /// </returns>
+        public async Task<DeleteEventRuleResponse> DeleteEventRuleWithOptionsAsync(DeleteEventRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductName))
+            {
+                query["ProductName"] = request.ProductName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEventRule",
+                Version = "2022-01-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteEventRuleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteEventRuleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除事件规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEventRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventRuleResponse
+        /// </returns>
+        public DeleteEventRuleResponse DeleteEventRule(DeleteEventRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteEventRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除事件规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEventRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventRuleResponse
+        /// </returns>
+        public async Task<DeleteEventRuleResponse> DeleteEventRuleAsync(DeleteEventRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteEventRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a queue.</para>
         /// </summary>
         /// 
@@ -841,7 +1177,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to disable an endpoint of a specified type. After the endpoint is disabled, requests from the endpoint are blocked and an error is returned.</para>
+        /// <para>You can call this operation to disenable the endpoint of a type. After the endpoint is disabled, all requests from the endpoint are blocked and an error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -890,7 +1226,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to disable an endpoint of a specified type. After the endpoint is disabled, requests from the endpoint are blocked and an error is returned.</para>
+        /// <para>You can call this operation to disenable the endpoint of a type. After the endpoint is disabled, all requests from the endpoint are blocked and an error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -939,7 +1275,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to disable an endpoint of a specified type. After the endpoint is disabled, requests from the endpoint are blocked and an error is returned.</para>
+        /// <para>You can call this operation to disenable the endpoint of a type. After the endpoint is disabled, all requests from the endpoint are blocked and an error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -957,7 +1293,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to disable an endpoint of a specified type. After the endpoint is disabled, requests from the endpoint are blocked and an error is returned.</para>
+        /// <para>You can call this operation to disenable the endpoint of a type. After the endpoint is disabled, all requests from the endpoint are blocked and an error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -975,7 +1311,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to enable an endpoint of a specified type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
+        /// <para>You can call this operation to enable the endpoint of a type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1024,7 +1360,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to enable an endpoint of a specified type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
+        /// <para>You can call this operation to enable the endpoint of a type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1073,7 +1409,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to enable an endpoint of a specified type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
+        /// <para>You can call this operation to enable the endpoint of a type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1091,7 +1427,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to enable an endpoint of a specified type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
+        /// <para>You can call this operation to enable the endpoint of a type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2143,7 +2479,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more ACLs from an endpoint of a specified type.</para>
+        /// <para>You can call this operation to delete one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2206,7 +2542,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more ACLs from an endpoint of a specified type.</para>
+        /// <para>You can call this operation to delete one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2269,7 +2605,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more ACLs from an endpoint of a specified type.</para>
+        /// <para>You can call this operation to delete one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2287,7 +2623,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more ACLs from an endpoint of a specified type.</para>
+        /// <para>You can call this operation to delete one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
         /// </summary>
         /// 
         /// <param name="request">

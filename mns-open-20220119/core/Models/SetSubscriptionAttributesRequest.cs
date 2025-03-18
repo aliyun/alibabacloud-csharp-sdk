@@ -9,14 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class SetSubscriptionAttributesRequest : TeaModel {
+        /// <summary>
+        /// <para>The dead-letter queue policy.</para>
+        /// </summary>
         [NameInMap("DlqPolicy")]
         [Validation(Required=false)]
         public SetSubscriptionAttributesRequestDlqPolicy DlqPolicy { get; set; }
         public class SetSubscriptionAttributesRequestDlqPolicy : TeaModel {
+            /// <summary>
+            /// <para>The queue to which dead-letter messages are delivered.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>deadLetterTargetQueue</para>
+            /// </summary>
             [NameInMap("DeadLetterTargetQueue")]
             [Validation(Required=false)]
             public string DeadLetterTargetQueue { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable the dead-letter message delivery.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }

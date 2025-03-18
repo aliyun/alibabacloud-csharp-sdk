@@ -66,18 +66,39 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             [Validation(Required=false)]
             public long? DelaySeconds { get; set; }
 
+            /// <summary>
+            /// <para>The dead-letter queue policy.</para>
+            /// </summary>
             [NameInMap("DlqPolicy")]
             [Validation(Required=false)]
             public GetQueueAttributesResponseBodyDataDlqPolicy DlqPolicy { get; set; }
             public class GetQueueAttributesResponseBodyDataDlqPolicy : TeaModel {
+                /// <summary>
+                /// <para>The queue to which dead-letter messages are delivered.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>deadLetterTargetQueue</para>
+                /// </summary>
                 [NameInMap("DeadLetterTargetQueue")]
                 [Validation(Required=false)]
                 public string DeadLetterTargetQueue { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether to enable the dead-letter message delivery.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("Enabled")]
                 [Validation(Required=false)]
                 public bool? Enabled { get; set; }
 
+                /// <summary>
+                /// <para>The maximum number of retries.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("MaxReceiveCount")]
                 [Validation(Required=false)]
                 public string MaxReceiveCount { get; set; }
@@ -158,11 +179,16 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             [Validation(Required=false)]
             public string QueueName { get; set; }
 
+            /// <summary>
+            /// <para>The tag.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<GetQueueAttributesResponseBodyDataTags> Tags { get; set; }
             public class GetQueueAttributesResponseBodyDataTags : TeaModel {
                 /// <summary>
+                /// <para>The tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>tag1</para>
                 /// </summary>
@@ -171,6 +197,8 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
+                /// <para>The tag value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
