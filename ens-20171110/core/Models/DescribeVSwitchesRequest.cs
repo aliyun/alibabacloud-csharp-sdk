@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeVSwitchesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the edge node.</para>
+        /// <para>The ID of the ENS node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-xian-unicom</para>
@@ -20,7 +20,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the vSwitches belong.</para>
+        /// <para>The node information.</para>
+        /// </summary>
+        [NameInMap("EnsRegionIds")]
+        [Validation(Required=false)]
+        public List<string> EnsRegionIds { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the VPC to which the vSwitch belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-25cdvfeq58pl****</para>
@@ -30,18 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The order in which you want to sort the returned data. Example: {&quot;EnsRegionId&quot;:&quot;desc&quot;}.</para>
-        /// <para>By default, the nodes are sorted by IDs in descending order.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{&quot;EnsRegionId&quot;:&quot;desc&quot;}</para>
-        /// </summary>
-        [NameInMap("OrderByParams")]
-        [Validation(Required=false)]
-        public string OrderByParams { get; set; }
-
-        /// <summary>
-        /// <para>The page number of the returned page. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -69,6 +65,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
+
+        /// <summary>
+        /// <para>The list of vSwitches in the network.</para>
+        /// </summary>
+        [NameInMap("VSwitchIds")]
+        [Validation(Required=false)]
+        public List<string> VSwitchIds { get; set; }
 
         /// <summary>
         /// <para>The name of the vSwitch.</para>

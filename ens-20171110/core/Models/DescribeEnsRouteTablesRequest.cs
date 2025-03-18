@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsRouteTablesRequest : TeaModel {
+        [NameInMap("AssociateType")]
+        [Validation(Required=false)]
+        public string AssociateType { get; set; }
+
         /// <summary>
         /// <para>The ID of the ENS node.</para>
         /// 
@@ -18,6 +22,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
+
+        /// <summary>
+        /// <para>The IDs of the Edge Node Service (ENS) nodes.</para>
+        /// </summary>
+        [NameInMap("EnsRegionIds")]
+        [Validation(Required=false)]
+        public List<string> EnsRegionIds { get; set; }
 
         /// <summary>
         /// <para>The ID of the network.</para>
@@ -58,6 +69,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
         public string RouteTableId { get; set; }
+
+        [NameInMap("RouteTableName")]
+        [Validation(Required=false)]
+        public string RouteTableName { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

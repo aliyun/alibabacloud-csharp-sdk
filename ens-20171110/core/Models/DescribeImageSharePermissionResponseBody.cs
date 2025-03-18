@@ -18,7 +18,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public class DescribeImageSharePermissionResponseBodyAccounts : TeaModel {
             [NameInMap("Account")]
             [Validation(Required=false)]
-            public List<string> Account { get; set; }
+            public List<DescribeImageSharePermissionResponseBodyAccountsAccount> Account { get; set; }
+            public class DescribeImageSharePermissionResponseBodyAccountsAccount : TeaModel {
+                [NameInMap("AliyunUid")]
+                [Validation(Required=false)]
+                public string AliyunUid { get; set; }
+
+            }
 
         }
 

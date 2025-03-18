@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateSecurityGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the security group. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</para>
+        /// <para>The description. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -20,7 +20,143 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). By default, this parameter is empty.</para>
+        /// <para>Schema of Response</para>
+        /// </summary>
+        [NameInMap("Permissions")]
+        [Validation(Required=false)]
+        public List<CreateSecurityGroupRequestPermissions> Permissions { get; set; }
+        public class CreateSecurityGroupRequestPermissions : TeaModel {
+            /// <summary>
+            /// <para>The description of the SDG.</para>
+            /// <remarks>
+            /// <para> We recommend that you specify this parameter in details for subsequent queries.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testDescription</para>
+            /// </summary>
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
+            /// <para>The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</para>
+            /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0.0.0/0</para>
+            /// </summary>
+            [NameInMap("DestCidrIp")]
+            [Validation(Required=false)]
+            public string DestCidrIp { get; set; }
+
+            /// <summary>
+            /// <para>The direction in which the security group rule is applied.</para>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ingress</para>
+            /// </summary>
+            [NameInMap("Direction")]
+            [Validation(Required=false)]
+            public string Direction { get; set; }
+
+            /// <summary>
+            /// <para>The protocol. The values of this parameter are case-insensitive. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>TCP.</description></item>
+            /// <item><description>UDP.</description></item>
+            /// <item><description>ICMP.</description></item>
+            /// <item><description>ICMPv6.</description></item>
+            /// <item><description>GRE.</description></item>
+            /// <item><description>ALL: All protocols are supported.</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TCP</para>
+            /// </summary>
+            [NameInMap("IpProtocol")]
+            [Validation(Required=false)]
+            public string IpProtocol { get; set; }
+
+            /// <summary>
+            /// <para>The action of the security group rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>accept: allows inbound access.</description></item>
+            /// <item><description>drop: denies inbound access and returns no responses. In this case, the request times out or the connection cannot be established.</description></item>
+            /// </list>
+            /// <para>Default value: accept.</para>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Accept</para>
+            /// </summary>
+            [NameInMap("Policy")]
+            [Validation(Required=false)]
+            public string Policy { get; set; }
+
+            /// <summary>
+            /// <para>The range of destination port numbers for the protocols specified in the security group rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
+            /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
+            /// <item><description>If you set IpProtocol to GRE, the port number range is -1/-1.</description></item>
+            /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</description></item>
+            /// </list>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80/80</para>
+            /// </summary>
+            [NameInMap("PortRange")]
+            [Validation(Required=false)]
+            public string PortRange { get; set; }
+
+            /// <summary>
+            /// <para>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</para>
+            /// <para>Default value: 1.</para>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+
+            /// <summary>
+            /// <para>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</para>
+            /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.0.0.0/0</para>
+            /// </summary>
+            [NameInMap("SourceCidrIp")]
+            [Validation(Required=false)]
+            public string SourceCidrIp { get; set; }
+
+            /// <summary>
+            /// <para>The range of source port numbers for the protocols specified in the security group rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
+            /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
+            /// <item><description>If you set IpProtocol to GRE, the port number range is -1/-1.</description></item>
+            /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</description></item>
+            /// </list>
+            /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>22/22</para>
+            /// </summary>
+            [NameInMap("SourcePortRange")]
+            [Validation(Required=false)]
+            public string SourcePortRange { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The name of the security group. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (<em>), and hyphens (-). It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (</em>), and hyphens (-). By default, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Dcdn1:2_3-4</para>

@@ -32,7 +32,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The type of next hop of the custom route entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Instance: an ENS instance.</description></item>
+        /// <item><description>Instance (default): an ENS instance.</description></item>
+        /// <item><description>HaVip: a high-availability virtual IP address (HAVIP).</description></item>
+        /// <item><description>NetworkPeer: VPC peering connection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +100,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// <para>The ID of the route table that you want to query.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-hp3wdhynneo7fsclox8hs</para>

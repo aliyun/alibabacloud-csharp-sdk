@@ -56,6 +56,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>The mappings between disks and snapshots in the image.</para>
+                /// </summary>
                 [NameInMap("DiskDeviceMappings")]
                 [Validation(Required=false)]
                 public DescribeImageInfosResponseBodyImagesImageDiskDeviceMappings DiskDeviceMappings { get; set; }
@@ -64,18 +67,44 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     [Validation(Required=false)]
                     public List<DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping> DiskDeviceMapping { get; set; }
                     public class DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping : TeaModel {
+                        /// <summary>
+                        /// <para>The format of the image.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The format of the image.
+                        /// raw
+                        /// qcow2</para>
+                        /// </summary>
                         [NameInMap("Format")]
                         [Validation(Required=false)]
                         public string Format { get; set; }
 
+                        /// <summary>
+                        /// <para>The size of the image. Unit: GB.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>100</para>
+                        /// </summary>
                         [NameInMap("Size")]
                         [Validation(Required=false)]
                         public string Size { get; set; }
 
+                        /// <summary>
+                        /// <para>The type of the disk. Valid values: System and Data.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Data</para>
+                        /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
 
+                        /// <summary>
+                        /// <para>The ID of the image.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>i-test</para>
+                        /// </summary>
                         [NameInMap("imageId")]
                         [Validation(Required=false)]
                         public string ImageId { get; set; }
@@ -133,6 +162,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("OSType")]
                 [Validation(Required=false)]
                 public string OSType { get; set; }
+
+                /// <summary>
+                /// <para>The ID of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-shenzhen</para>
+                /// </summary>
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
 
             }
 

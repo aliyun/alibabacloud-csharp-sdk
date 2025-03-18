@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerListenersRequest : TeaModel {
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("ListenerPort")]
+        [Validation(Required=false)]
+        public int? ListenerPort { get; set; }
+
         /// <summary>
         /// <para>The ID of the ELB instance.</para>
         /// <para>This parameter is required.</para>

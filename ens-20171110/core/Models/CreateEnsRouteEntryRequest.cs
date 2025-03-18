@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string RouteTableId { get; set; }
 
+        [NameInMap("SourceCidrBlock")]
+        [Validation(Required=false)]
+        public string SourceCidrBlock { get; set; }
+
     }
 
 }

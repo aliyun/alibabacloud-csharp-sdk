@@ -142,6 +142,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols> ListenerPortsAndProtocols { get; set; }
         public class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols : TeaModel {
+            [NameInMap("BackendServerPort")]
+            [Validation(Required=false)]
+            public int? BackendServerPort { get; set; }
+
             /// <summary>
             /// <para>The description of the listener.</para>
             /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateLoadBalancerHTTPListenerRequest : TeaModel {
         /// <summary>
-        /// <para>负载均衡实例后端服务器使用的端口，取值：<b>1</b>~<b>65535</b>。</para>
+        /// <para>The port used by the backend ELB server of the ELB instance. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8080</para>

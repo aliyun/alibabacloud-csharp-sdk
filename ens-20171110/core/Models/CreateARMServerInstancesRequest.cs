@@ -59,6 +59,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        /// <summary>
+        /// <para>Set one or more environment variables during EAIS instance initialization.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[object Object]</para>
+        /// </summary>
         [NameInMap("EnvironmentVar")]
         [Validation(Required=false)]
         public string EnvironmentVar { get; set; }

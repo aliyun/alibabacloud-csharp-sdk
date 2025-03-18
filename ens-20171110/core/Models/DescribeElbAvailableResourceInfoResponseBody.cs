@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<DescribeElbAvailableResourceInfoResponseBodyElbAvailableResourceInfo> ElbAvailableResourceInfo { get; set; }
         public class DescribeElbAvailableResourceInfoResponseBodyElbAvailableResourceInfo : TeaModel {
+            [NameInMap("Ability")]
+            [Validation(Required=false)]
+            public List<string> Ability { get; set; }
+
             /// <summary>
             /// <para>The ID of the region.</para>
             /// 

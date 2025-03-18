@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateSnatEntryRequest : TeaModel {
+        [NameInMap("EipAffinity")]
+        [Validation(Required=false)]
+        public bool? EipAffinity { get; set; }
+
         /// <summary>
         /// <para>The timeout period for idle connections. Valid values: <b>1</b> to <b>86400</b>. Unit: seconds.</para>
         /// 
@@ -19,6 +23,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? IdleTimeout { get; set; }
 
+        /// <summary>
+        /// <para>Whether to enable operator affinity. Value taking:</para>
+        /// <list type="bullet">
+        /// <item><description>false:Do not open.</description></item>
+        /// <item><description>true:Open.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IspAffinity")]
         [Validation(Required=false)]
         public bool? IspAffinity { get; set; }

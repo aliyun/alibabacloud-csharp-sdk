@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSDGDeploymentStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The deployment information of the SDG.</para>
+        /// <para>The list of SDG deployment information.</para>
         /// </summary>
         [NameInMap("DeploymentStatus")]
         [Validation(Required=false)]
@@ -41,6 +41,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string MountType { get; set; }
 
+            /// <summary>
+            /// <para>The deployment phase of the SDG.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>attach</para>
+            /// </summary>
             [NameInMap("Phase")]
             [Validation(Required=false)]
             public string Phase { get; set; }
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>the deployment status of the shared data group SDG.</para>
+            /// <para>The deployment status of the SDG.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>sdg_deploying</description></item>
@@ -104,7 +110,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68B85217-03B8-5141-9216-EA4D7C496B9A</para>

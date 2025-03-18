@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string SnatIp { get; set; }
 
+        [NameInMap("SnatIps")]
+        [Validation(Required=false)]
+        public List<string> SnatIps { get; set; }
+
         /// <summary>
         /// <para>The source CIDR block specified in the SNAT entry.</para>
         /// 

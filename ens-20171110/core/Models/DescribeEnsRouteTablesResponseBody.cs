@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<DescribeEnsRouteTablesResponseBodyRouteTables> RouteTables { get; set; }
         public class DescribeEnsRouteTablesResponseBodyRouteTables : TeaModel {
+            [NameInMap("AssociateType")]
+            [Validation(Required=false)]
+            public string AssociateType { get; set; }
+
             /// <summary>
             /// <para>The time when the route table was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
             /// <summary>
             /// <para>The ID of the edge node.</para>
             /// 
@@ -65,6 +73,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [NameInMap("EnsRegionId")]
             [Validation(Required=false)]
             public string EnsRegionId { get; set; }
+
+            [NameInMap("IsDefaultGatewayRouteTable")]
+            [Validation(Required=false)]
+            public bool? IsDefaultGatewayRouteTable { get; set; }
 
             /// <summary>
             /// <para>The ID of the network.</para>
@@ -86,6 +98,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string RouteTableId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test-tf-vtb7</para>
+            /// </summary>
             [NameInMap("RouteTableName")]
             [Validation(Required=false)]
             public string RouteTableName { get; set; }

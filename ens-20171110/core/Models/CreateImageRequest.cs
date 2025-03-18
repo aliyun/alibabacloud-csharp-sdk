@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <list type="bullet">
         /// <item><description>true: The image is released when the instance is released.</description></item>
         /// <item><description>false: The image is retained when the instance is released.</description></item>
-        /// <item><description>If you leave this parameter empty, the default value is used.</description></item>
+        /// <item><description>If you leave this property empty, false is used by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,6 +54,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]
         public string SnapshotId { get; set; }
+
+        /// <summary>
+        /// <para>The region of the target OSS where the image is to be stored.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
+        [NameInMap("TargetOSSRegionId")]
+        [Validation(Required=false)]
+        public string TargetOSSRegionId { get; set; }
 
     }
 

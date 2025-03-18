@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DetachInstanceSDGResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data object.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DetachInstanceSDGResponseBodyData Data { get; set; }
         public class DetachInstanceSDGResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The response message. Success is returned for a successful request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>success</para>
             /// </summary>
@@ -21,11 +26,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string Message { get; set; }
 
+            /// <summary>
+            /// <para>The execution result of the synchronization request.</para>
+            /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public DetachInstanceSDGResponseBodyDataResult Result { get; set; }
             public class DetachInstanceSDGResponseBodyDataResult : TeaModel {
                 /// <summary>
+                /// <para>The number of failed tasks.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -33,11 +43,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public long? FailedCount { get; set; }
 
+                /// <summary>
+                /// <para>Details about failed tasks.</para>
+                /// </summary>
                 [NameInMap("FailedItems")]
                 [Validation(Required=false)]
                 public List<DetachInstanceSDGResponseBodyDataResultFailedItems> FailedItems { get; set; }
                 public class DetachInstanceSDGResponseBodyDataResultFailedItems : TeaModel {
                     /// <summary>
+                    /// <para>The error message.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>sdg not found</para>
                     /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public string ErrMessage { get; set; }
 
                     /// <summary>
+                    /// <para>The ID of the instance.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>aic-xxxxx-0</para>
                     /// </summary>
@@ -56,6 +73,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
+                /// <para>The number of successful tasks.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -66,6 +85,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
+            /// <para>Indicates whether all tasks are successful. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: All tasks are successful.</description></item>
+            /// <item><description>false: Failed tasks exist.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -76,6 +101,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
         /// </summary>

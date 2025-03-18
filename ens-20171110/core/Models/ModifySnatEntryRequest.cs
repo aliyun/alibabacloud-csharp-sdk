@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifySnatEntryRequest : TeaModel {
+        [NameInMap("EipAffinity")]
+        [Validation(Required=false)]
+        public bool? EipAffinity { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
@@ -34,6 +38,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("SnatEntryName")]
         [Validation(Required=false)]
         public string SnatEntryName { get; set; }
+
+        [NameInMap("SnatIp")]
+        [Validation(Required=false)]
+        public string SnatIp { get; set; }
 
     }
 

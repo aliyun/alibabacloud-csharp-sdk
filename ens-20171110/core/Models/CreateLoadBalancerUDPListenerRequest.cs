@@ -47,6 +47,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EipTransmit { get; set; }
 
         /// <summary>
+        /// <para>The timeout period of a connection. Valid values: <b>10</b> to <b>900</b>. Default value: <b>900</b>. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>500</para>
         /// </summary>

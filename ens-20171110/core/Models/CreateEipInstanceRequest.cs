@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? Bandwidth { get; set; }
 
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>26C28756-2586-17AF-B802-0DC50D8FDEBB</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// <para>The description of the EIP.</para>
         /// 
         /// <b>Example:</b>
@@ -87,14 +97,34 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateEipInstanceRequestTag> Tag { get; set; }
         public class CreateEipInstanceRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The key of tag N of the instance. Valid values of N: <b>1</b> to <b>20</b>.</para>
+            /// <list type="bullet">
+            /// <item><description>The key cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</description></item>
+            /// <item><description>The key must be up to 64 characters in length.</description></item>
+            /// <item><description>The tag key cannot be an empty string.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>team</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The value of tag N that is added to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tagValue</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

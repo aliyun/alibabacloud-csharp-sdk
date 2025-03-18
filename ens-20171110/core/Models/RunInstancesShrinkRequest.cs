@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AutoReleaseTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal for the premium bandwidth plan. Examples:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>.</description></item>
         /// <item><description><b>false</b> (default).</description></item>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceChargeStrategy { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. Valid values:</para>
+        /// <para>The billing method of the instance. Examples:</para>
         /// <list type="bullet">
         /// <item><description><b>PrePaid</b>: subscription.</description></item>
         /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
@@ -209,11 +209,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
-        /// <para>The type of the IP address. Examples:</para>
+        /// <para>The type of the IP address. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ipv4</b> (default).</description></item>
         /// <item><description><b>ipv6</b>.</description></item>
-        /// <item><description><b>ipv4Andipv6</b>.</description></item>
+        /// <item><description><b>ipv4Andipv6</b> (single stack).</description></item>
+        /// <item><description><b>ipv4Withipv6</b> (dual stack).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -361,7 +362,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ScheduleAreaLevel { get; set; }
 
         /// <summary>
-        /// <para>The scheduling price policy. Valid values:</para>
+        /// <para>The scheduling price policy. Examples:</para>
         /// <list type="bullet">
         /// <item><description><b>PriceHighPriority</b>: The high price prevails.</description></item>
         /// <item><description><b>PriceLowPriority</b>: The low price prevails.</description></item>
@@ -401,6 +402,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string SecurityId { get; set; }
 
+        /// <summary>
+        /// <para>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+        /// <item><description>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+        /// </list>
+        /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("SpotDuration")]
         [Validation(Required=false)]
         public int? SpotDuration { get; set; }
@@ -408,7 +420,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The bidding policy for the pay-as-you-go instance. This parameter is valid only when the <c>InstanceChargeType</c> parameter is set to <c>PostPaid</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NoSpot: The instance is created as a regular pay-as-you-go instance.</description></item>
+        /// <item><description>NoSpot: The elastic container instances are pay-as-you-go instances.</description></item>
         /// <item><description>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</description></item>
         /// </list>
         /// <para>Default value: NoSpot.</para>

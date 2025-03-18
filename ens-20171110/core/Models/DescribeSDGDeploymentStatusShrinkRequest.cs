@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSDGDeploymentStatusShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The deployment type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>shared</para>
+        /// </summary>
         [NameInMap("DeploymentType")]
         [Validation(Required=false)]
         public string DeploymentType { get; set; }
 
+        /// <summary>
+        /// <para>IDs of Android in Container (AIC) instances.</para>
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIdsShrink { get; set; }
@@ -28,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -37,6 +46,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the nodes.</para>
+        /// </summary>
         [NameInMap("RegionIds")]
         [Validation(Required=false)]
         public string RegionIdsShrink { get; set; }
@@ -52,6 +64,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string SDGId { get; set; }
 
+        /// <summary>
+        /// <para>The deployment status of the SDG.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

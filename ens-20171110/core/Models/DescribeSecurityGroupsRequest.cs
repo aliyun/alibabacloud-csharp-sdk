@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The page number.</para>
         /// <list type="bullet">
         /// <item><description>Pages start from page 1.</description></item>
-        /// <item><description>Default value: 1.</description></item>
+        /// <item><description>Default value: 1</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <list type="bullet">
         /// <item><description>Maximum value: 50.</description></item>
         /// <item><description>Default value: 10</description></item>

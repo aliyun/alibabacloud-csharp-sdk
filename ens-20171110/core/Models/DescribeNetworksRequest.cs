@@ -20,6 +20,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
+        /// <para>The node information.</para>
+        /// </summary>
+        [NameInMap("EnsRegionIds")]
+        [Validation(Required=false)]
+        public List<string> EnsRegionIds { get; set; }
+
+        /// <summary>
         /// <para>The ID of the network.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +35,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("NetworkId")]
         [Validation(Required=false)]
         public string NetworkId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of Network.</para>
+        /// </summary>
+        [NameInMap("NetworkIds")]
+        [Validation(Required=false)]
+        public List<string> NetworkIds { get; set; }
 
         /// <summary>
         /// <para>The name of the network.</para>

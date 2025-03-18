@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeLoadBalancerListenersResponseBodyListenersListener> Listener { get; set; }
             public class DescribeLoadBalancerListenersResponseBodyListenersListener : TeaModel {
+                [NameInMap("BackendServerPort")]
+                [Validation(Required=false)]
+                public int? BackendServerPort { get; set; }
+
                 /// <summary>
                 /// <para>The timestamp when the listener was created.</para>
                 /// 

@@ -116,10 +116,26 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                         [Validation(Required=false)]
                         public int? DiskSize { get; set; }
 
+                        /// <summary>
+                        /// <para>The KMS key ID used by the cloud drive.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>0e478b7a-4262-4802-b8cb-00d3fxxxxx</para>
+                        /// </summary>
                         [NameInMap("EncryptKeyId")]
                         [Validation(Required=false)]
                         public string EncryptKeyId { get; set; }
 
+                        /// <summary>
+                        /// <para>Specifies whether to encrypt the new system disk. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><b>true</b></description></item>
+                        /// <item><description><b>false</b> (default): no</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>true</para>
+                        /// </summary>
                         [NameInMap("Encrypted")]
                         [Validation(Required=false)]
                         public bool? Encrypted { get; set; }
@@ -337,6 +353,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public int? InternetMaxBandwidthOut { get; set; }
 
+                /// <summary>
+                /// <para>The name of the SSH key pair.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>terraform-example</para>
+                /// </summary>
                 [NameInMap("KeyPairName")]
                 [Validation(Required=false)]
                 public string KeyPairName { get; set; }
@@ -393,6 +415,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
                 }
 
+                /// <summary>
+                /// <para>The ENI attached to the instance.</para>
+                /// </summary>
                 [NameInMap("NetworkInterfaces")]
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces NetworkInterfaces { get; set; }
@@ -401,6 +426,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     [Validation(Required=false)]
                     public List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces> NetworkInterfaces { get; set; }
                     public class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces : TeaModel {
+                        /// <summary>
+                        /// <para>The IPv6 addresses of the ENI. This parameter has a value only when <c>AdditionalAttributes.N</c> is set to <c>NETWORK_PRIMARY_ENI_IP</c>.</para>
+                        /// </summary>
                         [NameInMap("Ipv6Sets")]
                         [Validation(Required=false)]
                         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6Sets Ipv6Sets { get; set; }
@@ -409,6 +437,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                             [Validation(Required=false)]
                             public List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6SetsIpv6Set> Ipv6Set { get; set; }
                             public class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6SetsIpv6Set : TeaModel {
+                                /// <summary>
+                                /// <para>IPv6 addresses N of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>2408:4005:396:3200:****:6609:821e:df7a</para>
+                                /// </summary>
                                 [NameInMap("Ipv6Address")]
                                 [Validation(Required=false)]
                                 public string Ipv6Address { get; set; }
@@ -417,18 +451,39 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
                         }
 
+                        /// <summary>
+                        /// <para>The MAC address of the ENI.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>00:16:3e:4f:5f:ca</para>
+                        /// </summary>
                         [NameInMap("MacAddress")]
                         [Validation(Required=false)]
                         public string MacAddress { get; set; }
 
+                        /// <summary>
+                        /// <para>The ID of the ENI.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>eni-0wlonoy6jo8532gfzuama****</para>
+                        /// </summary>
                         [NameInMap("NetworkInterfaceId")]
                         [Validation(Required=false)]
                         public string NetworkInterfaceId { get; set; }
 
+                        /// <summary>
+                        /// <para>The primary IP address of the ENI.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <hr>
+                        /// </summary>
                         [NameInMap("PrimaryIpAddress")]
                         [Validation(Required=false)]
                         public string PrimaryIpAddress { get; set; }
 
+                        /// <summary>
+                        /// <para>The private IP addresses of the ENI.</para>
+                        /// </summary>
                         [NameInMap("PrivateIpSets")]
                         [Validation(Required=false)]
                         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSets PrivateIpSets { get; set; }
@@ -437,10 +492,29 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                             [Validation(Required=false)]
                             public List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSetsPrivateIpSet> PrivateIpSet { get; set; }
                             public class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSetsPrivateIpSet : TeaModel {
+                                /// <summary>
+                                /// <para>Indicates whether the IP address is the primary private IP address. Valid values:</para>
+                                /// <list type="bullet">
+                                /// <item><description>true</description></item>
+                                /// <item><description>false</description></item>
+                                /// </list>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>true</para>
+                                /// </summary>
                                 [NameInMap("Primary")]
                                 [Validation(Required=false)]
                                 public bool? Primary { get; set; }
 
+                                /// <summary>
+                                /// <para>The private IP address.</para>
+                                /// <remarks>
+                                /// <para> This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs. If you specify a private IP address, the number of instances must be 1. The private IP address takes effect only when the private IP address and the vSwitch ID are not empty.</para>
+                                /// </remarks>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>10.75.66.***</para>
+                                /// </summary>
                                 [NameInMap("PrivateIpAddress")]
                                 [Validation(Required=false)]
                                 public string PrivateIpAddress { get; set; }
@@ -449,6 +523,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
                         }
 
+                        /// <summary>
+                        /// <para>The type of the disk. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>system: system disk.</description></item>
+                        /// <item><description>data: data disk.</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Secondary</para>
+                        /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
@@ -583,6 +667,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
                 }
 
+                /// <summary>
+                /// <para>The ID of your Alibaba Cloud account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Deleting</para>
+                /// </summary>
                 [NameInMap("ServiceStatus")]
                 [Validation(Required=false)]
                 public string ServiceStatus { get; set; }

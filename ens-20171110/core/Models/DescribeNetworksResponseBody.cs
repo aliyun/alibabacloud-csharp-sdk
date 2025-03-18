@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
 
+                [NameInMap("GatewayRouteTableId")]
+                [Validation(Required=false)]
+                public string GatewayRouteTableId { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the network access control list (ACL).</para>
                 /// 
@@ -89,6 +93,23 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("NetworkName")]
                 [Validation(Required=false)]
                 public string NetworkName { get; set; }
+
+                [NameInMap("RouteTableId")]
+                [Validation(Required=false)]
+                public string RouteTableId { get; set; }
+
+                /// <summary>
+                /// <para>The ID of the route table. Valid values of <b>N</b> are <b>1</b> to <b>20</b>, which specifies that you can disassociate a gateway endpoint from at most 20 route tables at a time.</para>
+                /// </summary>
+                [NameInMap("RouteTableIds")]
+                [Validation(Required=false)]
+                public DescribeNetworksResponseBodyNetworksNetworkRouteTableIds RouteTableIds { get; set; }
+                public class DescribeNetworksResponseBodyNetworksNetworkRouteTableIds : TeaModel {
+                    [NameInMap("RouteTableId")]
+                    [Validation(Required=false)]
+                    public List<string> RouteTableId { get; set; }
+
+                }
 
                 /// <summary>
                 /// <para>The route table ID.</para>

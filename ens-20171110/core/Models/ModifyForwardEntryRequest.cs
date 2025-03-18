@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyForwardEntryRequest : TeaModel {
+        [NameInMap("ExternalIp")]
+        [Validation(Required=false)]
+        public string ExternalIp { get; set; }
+
+        [NameInMap("ExternalPort")]
+        [Validation(Required=false)]
+        public string ExternalPort { get; set; }
+
         /// <summary>
         /// <para>The ID of the DNAT entry.</para>
         /// <para>This parameter is required.</para>
@@ -39,6 +47,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("HealthCheckPort")]
         [Validation(Required=false)]
         public int? HealthCheckPort { get; set; }
+
+        [NameInMap("InternalIp")]
+        [Validation(Required=false)]
+        public string InternalIp { get; set; }
+
+        [NameInMap("InternalPort")]
+        [Validation(Required=false)]
+        public string InternalPort { get; set; }
+
+        [NameInMap("IpProtocol")]
+        [Validation(Required=false)]
+        public string IpProtocol { get; set; }
 
     }
 

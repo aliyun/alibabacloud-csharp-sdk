@@ -84,6 +84,62 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        [NameInMap("GatewayRouteTableId")]
+        [Validation(Required=false)]
+        public string GatewayRouteTableId { get; set; }
+
+        /// <summary>
+        /// <para>List of HaVipIds.</para>
+        /// </summary>
+        [NameInMap("HaVipIds")]
+        [Validation(Required=false)]
+        public DescribeNetworkAttributeResponseBodyHaVipIds HaVipIds { get; set; }
+        public class DescribeNetworkAttributeResponseBodyHaVipIds : TeaModel {
+            [NameInMap("HaVipId")]
+            [Validation(Required=false)]
+            public List<string> HaVipId { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The instance IDs.</para>
+        /// </summary>
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public DescribeNetworkAttributeResponseBodyInstanceIds InstanceIds { get; set; }
+        public class DescribeNetworkAttributeResponseBodyInstanceIds : TeaModel {
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public List<string> InstanceId { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>List of ELB instances.</para>
+        /// </summary>
+        [NameInMap("LoadBalancerIds")]
+        [Validation(Required=false)]
+        public DescribeNetworkAttributeResponseBodyLoadBalancerIds LoadBalancerIds { get; set; }
+        public class DescribeNetworkAttributeResponseBodyLoadBalancerIds : TeaModel {
+            [NameInMap("LoadBalancerId")]
+            [Validation(Required=false)]
+            public List<string> LoadBalancerId { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>List of NAT Gateways.</para>
+        /// </summary>
+        [NameInMap("NatGatewayIds")]
+        [Validation(Required=false)]
+        public DescribeNetworkAttributeResponseBodyNatGatewayIds NatGatewayIds { get; set; }
+        public class DescribeNetworkAttributeResponseBodyNatGatewayIds : TeaModel {
+            [NameInMap("NatGatewayId")]
+            [Validation(Required=false)]
+            public List<string> NatGatewayId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the network access control list (ACL).</para>
         /// 
@@ -105,6 +161,19 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkId { get; set; }
 
         /// <summary>
+        /// <para>A list of multicast source IDs.</para>
+        /// </summary>
+        [NameInMap("NetworkInterfaceIds")]
+        [Validation(Required=false)]
+        public DescribeNetworkAttributeResponseBodyNetworkInterfaceIds NetworkInterfaceIds { get; set; }
+        public class DescribeNetworkAttributeResponseBodyNetworkInterfaceIds : TeaModel {
+            [NameInMap("NetworkInterfaceId")]
+            [Validation(Required=false)]
+            public List<string> NetworkInterfaceId { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The name of the network.</para>
         /// 
         /// <b>Example:</b>
@@ -123,6 +192,23 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("RouteTableId")]
+        [Validation(Required=false)]
+        public string RouteTableId { get; set; }
+
+        /// <summary>
+        /// <para>List of routing table IDs.</para>
+        /// </summary>
+        [NameInMap("RouteTableIds")]
+        [Validation(Required=false)]
+        public DescribeNetworkAttributeResponseBodyRouteTableIds RouteTableIds { get; set; }
+        public class DescribeNetworkAttributeResponseBodyRouteTableIds : TeaModel {
+            [NameInMap("RouteTableId")]
+            [Validation(Required=false)]
+            public List<string> RouteTableId { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The ID of the route table.</para>

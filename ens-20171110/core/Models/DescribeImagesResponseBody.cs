@@ -50,6 +50,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
+                /// <summary>
+                /// <para>The mappings between the disk and the snapshot in the image.</para>
+                /// </summary>
                 [NameInMap("DiskDeviceMappings")]
                 [Validation(Required=false)]
                 public DescribeImagesResponseBodyImagesImageDiskDeviceMappings DiskDeviceMappings { get; set; }
@@ -58,18 +61,48 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     [Validation(Required=false)]
                     public List<DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping> DiskDeviceMapping { get; set; }
                     public class DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping : TeaModel {
+                        /// <summary>
+                        /// <para>The format of the image.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>The format of the image.
+                        /// raw
+                        /// qcow2</para>
+                        /// </summary>
                         [NameInMap("Format")]
                         [Validation(Required=false)]
                         public string Format { get; set; }
 
+                        /// <summary>
+                        /// <para>The size of the disk. Unit: GiB.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>100</para>
+                        /// </summary>
                         [NameInMap("Size")]
                         [Validation(Required=false)]
                         public string Size { get; set; }
 
+                        /// <summary>
+                        /// <para>The type of the disk. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>system: system disk.</description></item>
+                        /// <item><description>data: data disk.</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Data</para>
+                        /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
 
+                        /// <summary>
+                        /// <para>The ID of image.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>i-test</para>
+                        /// </summary>
                         [NameInMap("imageId")]
                         [Validation(Required=false)]
                         public string ImageId { get; set; }
@@ -136,6 +169,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("Platform")]
                 [Validation(Required=false)]
                 public string Platform { get; set; }
+
+                /// <summary>
+                /// <para>The ID of the Edge Node Service (ENS) node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-qingdao</para>
+                /// </summary>
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the snapshot.</para>

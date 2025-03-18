@@ -20,6 +20,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
+        /// <para>The node information.</para>
+        /// </summary>
+        [NameInMap("EnsRegionIds")]
+        [Validation(Required=false)]
+        public List<string> EnsRegionIds { get; set; }
+
+        /// <summary>
         /// <para>The ID of the instance.</para>
         /// 
         /// <b>Example:</b>
@@ -55,6 +62,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
         public string NetworkInterfaceId { get; set; }
+
+        /// <summary>
+        /// <para>A list of multicast source IDs.</para>
+        /// </summary>
+        [NameInMap("NetworkInterfaceIds")]
+        [Validation(Required=false)]
+        public List<string> NetworkInterfaceIds { get; set; }
 
         /// <summary>
         /// <para>The name of the ENI.</para>
@@ -127,8 +141,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The type of the ENI. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Primary: primary ENI.</description></item>
-        /// <item><description>Secondary: secondary ENI.</description></item>
+        /// <item><description>Primary: the primary ENI.</description></item>
+        /// <item><description>Secondary: the secondary ENI.</description></item>
         /// </list>
         /// <para>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</para>
         /// 

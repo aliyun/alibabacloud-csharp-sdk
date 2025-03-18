@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeVSwitchesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string CidrBlock { get; set; }
 
                 /// <summary>
-                /// <para>The time when the vSwitch was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+                /// <para>The time when the VPC was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-06-16T06:33:15Z</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the edge node.</para>
+                /// <para>The ID of the ENS node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-xian-unicom</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? FreeIpCount { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the network.</para>
+                /// <para>The ID of the virtual private cloud (VPC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-25cdvfeq58pl****</para>

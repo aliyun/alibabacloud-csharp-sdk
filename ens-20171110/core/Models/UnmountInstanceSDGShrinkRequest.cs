@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UnmountInstanceSDGShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the instances.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The ID of the SDG.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

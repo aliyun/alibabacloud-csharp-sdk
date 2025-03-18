@@ -62,14 +62,34 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string NetworkName { get; set; }
 
+        /// <summary>
+        /// <para>The resource tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateNetworkRequestTag> Tag { get; set; }
         public class CreateNetworkRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag that are to add to the instance. Valid values of N: <b>1</b> to <b>20</b>.</para>
+            /// <list type="bullet">
+            /// <item><description>The key cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</description></item>
+            /// <item><description>The key must be up to 64 characters in length.</description></item>
+            /// <item><description>The tag key cannot be an empty string.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tagValue</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

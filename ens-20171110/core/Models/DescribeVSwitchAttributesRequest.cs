@@ -8,21 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class UnAssociateEnsEipAddressRequest : TeaModel {
+    public class DescribeVSwitchAttributesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the EIP.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>eip-5sqa431nx3vee8heqxfxp****</para>
+        /// <para>vsw-5****</para>
         /// </summary>
-        [NameInMap("AllocationId")]
+        [NameInMap("VSwitchId")]
         [Validation(Required=false)]
-        public string AllocationId { get; set; }
-
-        [NameInMap("Force")]
-        [Validation(Required=false)]
-        public bool? Force { get; set; }
+        public string VSwitchId { get; set; }
 
     }
 

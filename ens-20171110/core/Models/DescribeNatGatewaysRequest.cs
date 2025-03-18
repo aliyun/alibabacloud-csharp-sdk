@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        [NameInMap("EnsRegionIds")]
+        [Validation(Required=false)]
+        public List<string> EnsRegionIds { get; set; }
+
         /// <summary>
         /// <para>The name of the NAT gateway.</para>
         /// 
@@ -38,6 +42,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
+
+        [NameInMap("NatGatewayIds")]
+        [Validation(Required=false)]
+        public List<string> NatGatewayIds { get; set; }
 
         /// <summary>
         /// <para>The ID of the network.</para>

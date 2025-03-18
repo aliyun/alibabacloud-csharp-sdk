@@ -40,12 +40,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the route.</para>
+        /// <para>The information about the routes.</para>
         /// </summary>
         [NameInMap("RouteEntrys")]
         [Validation(Required=false)]
         public List<DescribeEnsRouteEntryListResponseBodyRouteEntrys> RouteEntrys { get; set; }
         public class DescribeEnsRouteEntryListResponseBodyRouteEntrys : TeaModel {
+            [NameInMap("CreationTime")]
+            [Validation(Required=false)]
+            public string CreationTime { get; set; }
+
             /// <summary>
             /// <para>Enter a description for the route.</para>
             /// 
@@ -82,6 +86,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("NextHopId")]
                 [Validation(Required=false)]
                 public string NextHopId { get; set; }
+
+                /// <summary>
+                /// <para>The instance ID of the next hop.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testInstance</para>
+                /// </summary>
+                [NameInMap("NextHopName")]
+                [Validation(Required=false)]
+                public string NextHopName { get; set; }
 
                 /// <summary>
                 /// <para>The type of the next hop. Valid values:</para>
@@ -124,6 +138,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [NameInMap("RouteTableId")]
             [Validation(Required=false)]
             public string RouteTableId { get; set; }
+
+            [NameInMap("SourceCidrBlock")]
+            [Validation(Required=false)]
+            public string SourceCidrBlock { get; set; }
 
             /// <summary>
             /// <para>The status of the route entry. Valid values:</para>

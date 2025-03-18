@@ -31,6 +31,19 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource> SupportResource { get; set; }
             public class DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource : TeaModel {
                 /// <summary>
+                /// <para>Node product capability.</para>
+                /// </summary>
+                [NameInMap("Ability")]
+                [Validation(Required=false)]
+                public DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResourceAbility Ability { get; set; }
+                public class DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResourceAbility : TeaModel {
+                    [NameInMap("Ability")]
+                    [Validation(Required=false)]
+                    public List<string> Ability { get; set; }
+
+                }
+
+                /// <summary>
                 /// <para>The number of disks that you can purchase.</para>
                 /// 
                 /// <b>Example:</b>

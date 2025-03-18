@@ -8,20 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class ReleaseInstanceResponseBody : TeaModel {
+    public class ModifyEnsRouteEntryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
+        /// <para>C0003E8B-B930-4F59-ADC0-0E209A9012A8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
 
     }
 

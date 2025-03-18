@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup> SecurityGroup { get; set; }
             public class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup : TeaModel {
                 /// <summary>
-                /// <para>The time when the security group was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.</para>
+                /// <para>The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-11-01T06:08:46Z</para>
@@ -79,6 +79,32 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("InstanceCount")]
                 [Validation(Required=false)]
                 public int? InstanceCount { get; set; }
+
+                /// <summary>
+                /// <para>The list of instance IDs.</para>
+                /// </summary>
+                [NameInMap("InstanceIds")]
+                [Validation(Required=false)]
+                public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupInstanceIds InstanceIds { get; set; }
+                public class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupInstanceIds : TeaModel {
+                    [NameInMap("InstanceId")]
+                    [Validation(Required=false)]
+                    public List<string> InstanceId { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The IDs of ENIs.</para>
+                /// </summary>
+                [NameInMap("NetworkInterfaceIds")]
+                [Validation(Required=false)]
+                public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupNetworkInterfaceIds NetworkInterfaceIds { get; set; }
+                public class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupNetworkInterfaceIds : TeaModel {
+                    [NameInMap("NetworkInterfaceId")]
+                    [Validation(Required=false)]
+                    public List<string> NetworkInterfaceId { get; set; }
+
+                }
 
                 /// <summary>
                 /// <para>The ID of the security group.</para>

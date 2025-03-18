@@ -8,20 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class ReleaseInstanceResponseBody : TeaModel {
+    public class ListProductAbilitiesResponseBody : TeaModel {
+        [NameInMap("ProductAbilities")]
+        [Validation(Required=false)]
+        public List<string> ProductAbilities { get; set; }
+
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
+        /// <para>xxxxx-75ED-422E-A022-7121FA18C968</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
 
     }
 

@@ -36,6 +36,24 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string EnsRegionId { get; set; }
 
+            [NameInMap("IpLists")]
+            [Validation(Required=false)]
+            public List<DescribeNatGatewaysResponseBodyNatGatewaysIpLists> IpLists { get; set; }
+            public class DescribeNatGatewaysResponseBodyNatGatewaysIpLists : TeaModel {
+                [NameInMap("AllocationId")]
+                [Validation(Required=false)]
+                public string AllocationId { get; set; }
+
+                [NameInMap("IpAddress")]
+                [Validation(Required=false)]
+                public string IpAddress { get; set; }
+
+                [NameInMap("UsingStatus")]
+                [Validation(Required=false)]
+                public string UsingStatus { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The name of the NAT gateway.</para>
             /// 
@@ -75,6 +93,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [NameInMap("Spec")]
             [Validation(Required=false)]
             public string Spec { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
             /// <summary>
             /// <para>The ID of the vSwitch.</para>
