@@ -10,16 +10,6 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListVectorQueryResultRequest : TeaModel {
         /// <summary>
-        /// <para>The instance endpoint.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>127.0.0.1</para>
-        /// </summary>
-        [NameInMap("address")]
-        [Validation(Required=false)]
-        public string Address { get; set; }
-
-        /// <summary>
         /// <para>The request body.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +18,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public Dictionary<string, object> Body { get; set; }
+
+        [NameInMap("path")]
+        [Validation(Required=false)]
+        public string Path { get; set; }
 
         /// <summary>
         /// <para>The query type. Valid values: vector, primary_key, and vector_text.</para>

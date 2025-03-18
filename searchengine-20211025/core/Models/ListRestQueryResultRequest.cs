@@ -10,16 +10,6 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
 {
     public class ListRestQueryResultRequest : TeaModel {
         /// <summary>
-        /// <para>The instance endpoint.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>127.0.0.1</para>
-        /// </summary>
-        [NameInMap("address")]
-        [Validation(Required=false)]
-        public string Address { get; set; }
-
-        /// <summary>
         /// <para>The name of the index table.</para>
         /// 
         /// <b>Example:</b>
