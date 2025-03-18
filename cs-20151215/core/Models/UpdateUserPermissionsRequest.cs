@@ -60,13 +60,19 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The predefined role. Valid values:</para>
+            /// <para>The predefined role name. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>admin</c>: administrator</description></item>
+            /// <item><description><c>admin-view</c>: read-only administrator</description></item>
             /// <item><description><c>ops</c>: O\&amp;M engineer</description></item>
             /// <item><description><c>dev</c>: developer</description></item>
             /// <item><description><c>restricted</c>: restricted user</description></item>
             /// <item><description>Custom role</description></item>
+            /// </list>
+            /// <para>Note:</para>
+            /// <list type="bullet">
+            /// <item><description>You cannot grant <b>namespace-level</b> permissions to the <c>admin</c>, <c>admin-view</c>, and <c>ops</c> roles.</description></item>
+            /// <item><description>You cannot grant <b>all cluster-level</b> permissions to the <c>admin-view</c> role.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,7 +86,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The authorization type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>cluster</c>: authorizes the RAM user or RAM role to manage the specified clusters.</description></item>
-            /// <item><description><c>namespace</c>: authorizes the RAM user or RAM role to manage the specified namepsaces.</description></item>
+            /// <item><description><c>namespace</c>: authorizes the RAM user or RAM role to manage the specified namespaces.</description></item>
             /// <item><description><c>all-clusters</c>: authorizes the RAM user or RAM role to manage all clusters.</description></item>
             /// </list>
             /// 
@@ -97,8 +103,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The authorization method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>apply</c>: updates all permissions of the RAM user or RAM role. If you use this method, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</description></item>
-        /// <item><description><c>delete</c>: revokes the specified permissions from the RAM user or RAM role. If you use this method, only the permissions that you specify are revoked, other permissions of the RAM user or RAM role on the cluster are not affected.</description></item>
-        /// <item><description><c>patch</c>: grants the specified permissions to the RAM user or role. If you use this method, only the permissions that you specify are granted, other permissions of the RAM user or RAM role on the cluster are not affected.</description></item>
+        /// <item><description><c>delete</c>: revokes the specified permissions from the RAM user or RAM role. If you use this method, only the permissions that you specify are revoked, while other permissions of the RAM user or RAM role on the cluster are not affected.</description></item>
+        /// <item><description><c>patch</c>: grants the specified permissions to the RAM user or role. If you use this method, only the permissions that you specify are granted, while other permissions of the RAM user or RAM role on the cluster are not affected.</description></item>
         /// </list>
         /// <para>Default value: <c>apply</c>.</para>
         /// 

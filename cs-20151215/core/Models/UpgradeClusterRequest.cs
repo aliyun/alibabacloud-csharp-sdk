@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para>This parameter is deprecated. No need to pass values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>k8s</para>
@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ComponentName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to update only the master nodes. Valid values:</para>
+        /// <para>Specifies whether to upgrade only master nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: updates only the master nodes.</description></item>
-        /// <item><description>false: updates the master nodes and worker nodes.</description></item>
+        /// <item><description>true: upgrades master nodes only.</description></item>
+        /// <item><description>false: upgrades both master and worker nodes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? MasterOnly { get; set; }
 
         /// <summary>
-        /// <para>The Kubernetes version to which you want to update the cluster.</para>
+        /// <para>The target Kubernetes version for cluster upgrade.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.16.9-aliyun.1</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NextVersion { get; set; }
 
         /// <summary>
-        /// <para>The rotation configuration.</para>
+        /// <para>The rolling update configuration.</para>
         /// </summary>
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
         public UpgradeClusterRequestRollingPolicy RollingPolicy { get; set; }
         public class UpgradeClusterRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// <para>The maximum size of each batch.</para>
+            /// <para>The maximum number of nodes concurrently upgraded per batch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated. Specify the Kubernetes version by using the next_version parameter.</para>
+        /// <para>This parameter is deprecated. Use next_version to specify the upgrade target Kubernetes version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.14.8-aliyun.1</para>

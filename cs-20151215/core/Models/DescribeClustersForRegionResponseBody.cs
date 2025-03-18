@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClustersForRegionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the clusters.</para>
+        /// <para>The information about the clusters returned.</para>
         /// </summary>
         [NameInMap("clusters")]
         [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NextVersion { get; set; }
 
             /// <summary>
-            /// <para>The subtype of the cluster. Valid values:</para>
+            /// <para>The subtype of the clusters. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Default: ACK managed clusters. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</description></item>
             /// <item><description>Edge: ACK Edge clusters. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</description></item>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The list of tags.</para>
+            /// <para>The list of cluster tags.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The vSwitches for the control plane of the cluster.</para>
+            /// <para>The list of vSwitches on the control plane of the cluster.</para>
             /// </summary>
             [NameInMap("vswitch_ids")]
             [Validation(Required=false)]

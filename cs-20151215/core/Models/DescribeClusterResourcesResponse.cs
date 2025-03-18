@@ -112,14 +112,32 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public List<DescribeClusterResourcesResponseBodyDependencies> Dependencies { get; set; }
             public class DescribeClusterResourcesResponseBodyDependencies : TeaModel {
+                /// <summary>
+                /// <para>The ID of the cluster to which the dependent resource is related.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cc5ee03f63e43425cb6f71f1a1756****</para>
+                /// </summary>
                 [NameInMap("cluster_id")]
                 [Validation(Required=false)]
                 public string ClusterId { get; set; }
 
+                /// <summary>
+                /// <para>The dependent resource type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALIYUN::VPC::NatGateway</para>
+                /// </summary>
                 [NameInMap("resource_type")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
+                /// <summary>
+                /// <para>The dependent resource ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ngw-wz9sphwk42sdtjixo****</para>
+                /// </summary>
                 [NameInMap("instance_id")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }

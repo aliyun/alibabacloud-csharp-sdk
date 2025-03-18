@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InterconnectMode { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the cluster.</para>
+            /// <para>The configurations of the cluster in which the node pool is deployed.</para>
             /// </summary>
             [NameInMap("kubernetes_config")]
             [Validation(Required=false)]
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string RuntimeVersion { get; set; }
 
                 /// <summary>
-                /// <para>The taints of the nodes in the node pool. Taints can be used together with tolerations to prevent pods from being scheduled to specific nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</para>
+                /// <para>The taints of the nodes in the node pool. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</para>
                 /// </summary>
                 [NameInMap("taints")]
                 [Validation(Required=false)]
@@ -505,7 +505,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig NodeConfig { get; set; }
             public class DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig : TeaModel {
                 /// <summary>
-                /// <para>The configurations of the kubelet.</para>
+                /// <para>The parameter settings of the kubelet.</para>
                 /// </summary>
                 [NameInMap("kubelet_configuration")]
                 [Validation(Required=false)]
@@ -633,8 +633,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? AutoRenew { get; set; }
 
                 /// <summary>
-                /// <para>The auto-renewal duration. This parameter takes effect and is required only if <c>instance_charge_type</c> is set to <c>PrePaid</c>.</para>
-                /// <para>If you set <c>period_unit</c> to Month, the valid values of this parameter are 1, 2, 3, 6, and 12.</para>
+                /// <para>The auto-renewal period. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Valid values when PeriodUnit is set to Week: 1, 2, and 3</description></item>
+                /// <item><description>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60</description></item>
+                /// </list>
+                /// <para>Default value: 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -671,7 +675,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? CompensateWithOnDemand { get; set; }
 
                 /// <summary>
-                /// <para>The configurations of the data disks that are mounted to the nodes in the node pool. The configurations include the disk type and disk size.</para>
+                /// <para>The configurations of the data disks that are mounted to the nodes in the node pool. The configurations include the disk category and disk size.</para>
                 /// </summary>
                 [NameInMap("data_disks")]
                 [Validation(Required=false)]
@@ -1085,7 +1089,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? SystemDiskBurstingEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The types of system disks. The system attempts to create system disks of a disk type with a lower priority if the disk type with a higher priority is unavailable. Valid values: Valid values: cloud (basic disk), cloud_efficiency (ultra disk), cloud_ssd (standard SSD), cloud_essd (Enterprise SSD).</para>
+                /// <para>The categories of system disks. The system creates system disks of a disk category with a lower priority if the disk category with a higher priority is unavailable. Valid values: cloud (basic disk), cloud_efficiency (ultra disk). cloud_ssd (standard SSD), cloud_essd (Enterprise SSD).</para>
                 /// </summary>
                 [NameInMap("system_disk_categories")]
                 [Validation(Required=false)]
@@ -1106,7 +1110,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string SystemDiskCategory { get; set; }
 
                 /// <summary>
-                /// <para>The encryption algorithm that is used to encrypt the system disk. The value is aes-256.</para>
+                /// <para>The encryption algorithm that is used to encrypt the system disk. Set the value to aes-256.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aes-256</para>
@@ -1172,7 +1176,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
                 /// <summary>
                 /// <para>The labels that you want to add only to Elastic Compute Service (ECS) instances.</para>
-                /// <para>The tag key must be unique and cannot exceed 128 characters in length. The tag key and value must not start with aliyun or acs: or contain https:// or http://.</para>
+                /// <para>The key must be unique and cannot exceed 128 characters in length. The key and value must not start with aliyun or acs: or contain https:// or http://.</para>
                 /// </summary>
                 [NameInMap("tags")]
                 [Validation(Required=false)]

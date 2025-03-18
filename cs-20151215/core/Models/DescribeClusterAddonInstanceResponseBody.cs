@@ -33,12 +33,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The status of the component. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>initial: The component is being installed.</description></item>
-        /// <item><description>active: The component is installed.</description></item>
+        /// <item><description>active: The component has been installed.</description></item>
         /// <item><description>unhealthy: The component is in an abnormal state.</description></item>
-        /// <item><description>upgrading: The component is being updated.</description></item>
-        /// <item><description>updating: The component is being modified.</description></item>
+        /// <item><description>upgrading: The component is undergoing an upgrade.</description></item>
+        /// <item><description>updating: Component configuration changes are being applied.</description></item>
         /// <item><description>deleting: The component is being uninstalled.</description></item>
-        /// <item><description>deleted: The component is deleted.</description></item>
+        /// <item><description>deleted: The component has been deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

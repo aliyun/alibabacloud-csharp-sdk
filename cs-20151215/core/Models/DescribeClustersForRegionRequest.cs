@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The specification of the cluster.</para>
+        /// <para>The specification of the clusters to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ack.pro.small: ACK Pro clusters.</description></item>
+        /// <item><description>ack.standard: ACK Basic clusters.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ack.standard</para>
@@ -30,7 +34,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
-        /// <para>The type of the cluster.</para>
+        /// <para>The type of the clusters to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Kubernetes: ACK dedicated clusters.</description></item>
+        /// <item><description>ManagedKubernetes: ACK managed clusters. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</description></item>
+        /// <item><description>ExternalKubernetes: registered clusters.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Kubernetes</para>
@@ -70,7 +79,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the cluster.</para>
+        /// <para>The subtype of the clusters to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Default: ACK managed clusters. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</description></item>
+        /// <item><description>Edge: ACK Edge clusters. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</description></item>
+        /// <item><description>Serverless: ACK Serverless clusters. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</description></item>
+        /// <item><description>Lingjun: ACK Lingjun Pro clusters.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Serverless</para>

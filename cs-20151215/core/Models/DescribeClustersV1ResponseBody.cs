@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClustersV1ResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the clusters.</para>
+        /// <para>The queried cluster(s) details.</para>
         /// </summary>
         [NameInMap("clusters")]
         [Validation(Required=false)]
@@ -363,12 +363,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>initial</c>: The cluster is being created.</description></item>
             /// <item><description><c>failed</c>: The cluster failed to be created.</description></item>
             /// <item><description><c>running</c>: The cluster is running.</description></item>
-            /// <item><description><c>updating</c>: The cluster is being updated.</description></item>
-            /// <item><description><c>updating_failed</c>: The cluster failed to be updated.</description></item>
-            /// <item><description><c>scaling</c>: The cluster is being scaled.</description></item>
-            /// <item><description><c>stopped</c>: The cluster is stopped.</description></item>
+            /// <item><description><c>upgrading</c>: The cluster is undergoing an upgrade.</description></item>
+            /// <item><description><c>updating</c>: Cluster specification changes are being applied.</description></item>
+            /// <item><description><c>removing</c>: Nodes are being removed from the node pool.</description></item>
+            /// <item><description><c>draining</c>: Node draining is in progress.</description></item>
+            /// <item><description><c>scaling</c>: Auto-scaling operation is in progress for the cluster.</description></item>
+            /// <item><description><c>stopped</c>: The cluster has stopped running.</description></item>
             /// <item><description><c>deleting</c>: The cluster is being deleted.</description></item>
-            /// <item><description><c>deleted</c>: The cluster is deleted.</description></item>
+            /// <item><description><c>deleted</c>: The cluster has been deleted.</description></item>
             /// <item><description><c>delete_failed</c>: The cluster failed to be deleted.</description></item>
             /// </list>
             /// 

@@ -17,7 +17,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<CheckServiceRoleResponseBodyRoles> Roles { get; set; }
         public class CheckServiceRoleResponseBodyRoles : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the service role is granted required permissions.</para>
+            /// <para>Indicates whether the service role is assigned to ACK.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: The role is assigned to ACK.</description></item>
+            /// <item><description>false: The role is not assigned to ACK.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +32,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Granted { get; set; }
 
             /// <summary>
-            /// <para>The message returned if the service role is not granted required permissions.</para>
+            /// <para>The message that is displayed for a role that is not assigned to ACK.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The role does not exist: AliyunCSManagedAutoScalerRole</para>
@@ -37,7 +42,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The service role name.</para>
+            /// <para>The name of the service role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliyunCSManagedAutoScalerRole</para>

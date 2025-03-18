@@ -108,6 +108,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <para>Indicates whether the pods in the edge node pool can use the host network.</para>
+        /// <para><c>true</c>: sets to host network.</para>
+        /// <para><c>false</c>: sets to container network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -176,7 +178,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The network type of the edge node pool. Valid values: basic and enhanced. This parameter takes effect only for edge node pools.</para>
+        /// <para>The network type of the edge node pool. This parameter takes effect only if you set the type parameter of the node pool to edge. Valid values:</para>
+        /// <para><c>basic</c>: Internet.</para>
+        /// <para><c>private</c>: private network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>improved</para>
@@ -186,7 +190,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string InterconnectMode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether all nodes in the edge node pool can communicate with each other at Layer 3.</para>
+        /// <para>Specifies whether all nodes in the edge node pool can communicate with each other at Layer 3.</para>
+        /// <para><c>true</c>: The nodes in the edge node pool can communicate with each other at Layer 3.</para>
+        /// <para><c>false</c>: The nodes in the edge node pool cannot communicate with each other at Layer 3.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -196,7 +202,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Intranet { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the cluster.</para>
+        /// <para>The configurations of the cluster in which the node pool is deployed.</para>
         /// </summary>
         [NameInMap("kubernetes_config")]
         [Validation(Required=false)]
@@ -257,7 +263,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodeNameMode { get; set; }
 
             /// <summary>
-            /// <para>The custom script to be executed before nodes in the node pool are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</para>
+            /// <para>The user-defined script that is executed before nodes are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dGhpcyBpcyBhIGV4YW1wbGU</para>
@@ -494,7 +500,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of nodes that are supported by the edge node pool. The value of this parameter must be equal to or greater than 0. A value of 0 indicates that the number of nodes in the node pool is limited only by the quota of nodes in the cluster. In most cases, this parameter is set to a value larger than 0 for edge node pools. This parameter is set to 0 for node pools whose types are ess or default edge node pools.</para>
+        /// <para>This parameter is deprecated.</para>
+        /// <para>The maximum number of nodes allowed in an edge node pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

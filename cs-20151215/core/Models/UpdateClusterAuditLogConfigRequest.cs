@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Disable { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/48873.html">Simple Log Service project</a> to which the <a href="https://help.aliyun.com/document_detail/48873.html">Logstore</a> that stores the cluster audit logs belongs.</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/48873.html">Simple Log Service project</a> to which the <a href="https://help.aliyun.com/document_detail/48873.html">Logstore</a> storing the cluster audit logs belongs.</para>
         /// <list type="bullet">
         /// <item><description>Default value: k8s-log-{clusterid}.</description></item>
-        /// <item><description>After the cluster audit log feature is enabled, a Logstore is created in the specified SLS project to store the cluster audit logs.</description></item>
+        /// <item><description>After the cluster audit log feature is enabled, a Logstore is created in the specified Simple Log Service project to store cluster audit logs.</description></item>
         /// <item><description>If you want to change the project after audit logging is enabled for the cluster, you can use this parameter to specify another project. You can perform this operation only in ACK managed clusters.</description></item>
         /// </list>
         /// 

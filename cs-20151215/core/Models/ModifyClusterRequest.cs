@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ApiServerEipId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster.</para>
+        /// <para>The cluster name.</para>
         /// <para>The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The cluster name cannot start with a hyphen (-).</para>
         /// 
         /// <b>Example:</b>
@@ -89,12 +89,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public ModifyClusterRequestControlPlaneConfig ControlPlaneConfig { get; set; }
         public class ModifyClusterRequestControlPlaneConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable auto-renewal for the instance. This parameter takes effect only when <c>charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
+            /// <para>Specifies whether to enable auto-renewal for control plane nodes. This parameter takes effect only when <c>charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>true</c>: enables auto-renewal.</description></item>
             /// <item><description><c>false</c>: disables auto-renewal.</description></item>
             /// </list>
-            /// <para>Default value: <c>false</c>.</para>
+            /// <para>Default value: <c>false</c></para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The auto-renewal period of the instance. Valid values: 1, 2, 3, 6, and 12.</para>
+            /// <para>The auto-renewal period of control plane nodes. Valid values: 1, 2, 3, 6, and 12.</para>
             /// <para>Default value: 1.</para>
             /// 
             /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? AutoRenewPeriod { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the instance. Valid values:</para>
+            /// <para>The billing method of control plane nodes. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>PrePaid</c>: subscription.</description></item>
             /// <item><description><c>PostPaid</c>: pay-as-you-go.</description></item>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ImageType { get; set; }
 
             /// <summary>
-            /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</para>
+            /// <para>The type of instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</para>
             /// </summary>
             [NameInMap("instance_types")]
             [Validation(Required=false)]
@@ -241,8 +241,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Period { get; set; }
 
             /// <summary>
-            /// <para>The billing cycle of the instance. This parameter takes effect only when <c>instance_charge_type</c> is set to <c>PrePaid</c>.</para>
-            /// <para>Valid value: <c>Month</c>.</para>
+            /// <para>The billing cycle of control plane nodes. This parameter takes effect only when <c>instance_charge_type</c> is set to <c>PrePaid</c>.</para>
+            /// <para>Set the value to <c>Month</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Month</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>true</c>: enables Alibaba Cloud Linux Security Hardening.</description></item>
             /// <item><description><c>false</c>: disables Alibaba Cloud Linux Security Hardening.</description></item>
             /// </list>
-            /// <para>Default value: <c>false</c>.</para>
+            /// <para>Default value: <c>false</c></para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -322,12 +322,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SystemDiskBurstingEnabled { get; set; }
 
             /// <summary>
-            /// <para>The type of the node system disk. Valid values:</para>
+            /// <para>The category of the system disk for nodes. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>cloud</c>: basic disk.</description></item>
             /// <item><description><c>cloud_efficiency</c>: ultra disk.</description></item>
             /// <item><description><c>cloud_ssd</c>: standard SSD.</description></item>
-            /// <item><description><c>cloud_essd</c>: enhanced SSD (ESSD).</description></item>
+            /// <item><description><c>cloud_essd</c>: Enterprise ESSD (ESSD).</description></item>
             /// <item><description><c>cloud_auto</c>: ESSD AutoPL disk.</description></item>
             /// <item><description><c>cloud_essd_entry</c>: ESSD Entry disk.</description></item>
             /// </list>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskPerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The preset read/write input/output operations per second (IOPS) of the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS} Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
+            /// <para>The preset read/write input/output operations per second (IOPS) of the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
             /// <para>This parameter is effective only when <c>system_disk_category</c> is set to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
             /// 
             /// <b>Example:</b>
@@ -388,7 +388,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description><c>true</c>: enables cluster deletion protection.</description></item>
         /// <item><description><c>false</c>: disables cluster deletion protection.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>.</para>
+        /// <para>Default value: <c>false</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -417,7 +417,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description><c>true</c>: remaps the test domain name of the cluster.</description></item>
         /// <item><description><c>false</c>: does not remap the test domain name of the cluster.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>.</para>
+        /// <para>Default value: <c>false</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -442,7 +442,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description><c>true</c>: enables instance deletion protection.</description></item>
         /// <item><description><c>false</c>: disables instance deletion protection.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>.</para>
+        /// <para>Default value: <c>false</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -473,7 +473,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public ModifyClusterRequestOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
             public class ModifyClusterRequestOperationPolicyClusterAutoUpgrade : TeaModel {
                 /// <summary>
-                /// <para>The frequency of automatic cluster updates. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</para>
+                /// <para>The frequency of auto cluster update. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>patch: the latest patch version.</description></item>
@@ -512,6 +512,27 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the security group for the control plane. </para>
+        /// <list type="bullet">
+        /// <item><description><para>If block rules are configured in the security group, ensure the security group rules allow traffic for protocols and ports required by the cluster. For recommended security group rules, see <a href="https://www.alibabacloud.com/help/en/ack/ack-managed-and-ack-dedicated/user-guide/configure-security-group-rules-to-enforce-access-control-on-ack-clusters?spm=a2c63.p38356.help-menu-85222.d_2_0_4_3.43e35d09s8oSlR">Configure and manage security groups for an ACK cluster</a>.</para>
+        /// </description></item>
+        /// <item><description><para>For non-ACK dedicated clusters: </para>
+        /// <list type="bullet">
+        /// <item><description>During security group updates, the cluster control plane and managed components (e.g., terway-controlplane) will restart briefly. Perform this operation during off-peak hours.</description></item>
+        /// <item><description>After updating the control plane security group, the Elastic Network Interfaces (ENIs) used by the control plane and managed components will automatically join the new security group.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>For ACK dedicated clusters:</para>
+        /// <list type="bullet">
+        /// <item><description>After updating the control plane security group, newly scaled-out master nodes will automatically apply the new security group. Existing control plane nodes remain unaffected.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sg-bp1h6rk3pgct2a08***</para>
+        /// </summary>
         [NameInMap("security_group_id")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
@@ -545,6 +566,36 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// <para>The time zone configuration for the cluster.</para>
+        /// <list type="bullet">
+        /// <item><description><para>After modifying the time zone, cluster inspection configurations will adopt the new time zone.</para>
+        /// </description></item>
+        /// <item><description><para>For ACK managed clusters:</para>
+        /// <list type="bullet">
+        /// <item><description>During time zone updates, the cluster control plane and managed components (e.g., terway-controlplane) will restart briefly. Perform this operation during off-peak hours.</description></item>
+        /// <item><description>After updating the time zone:<list type="bullet">
+        /// <item><description>Newly scaled-out nodes will automatically apply the new time zone.</description></item>
+        /// <item><description>Existing nodes remain unaffected. Reset the node to apply changes to existing nodes.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>For ACK dedicated clusters:</para>
+        /// <list type="bullet">
+        /// <item><description>After updating the time zone:<list type="bullet">
+        /// <item><description>Newly scaled-out nodes (including control plane nodes) automatically apply the new time zone.</description></item>
+        /// <item><description>Existing nodes (including control plane nodes) remain unaffected. Reset the node to apply changes to existing nodes.</description></item>
+        /// <item><description>For control plane nodes, perform a scale-out followed by a scale-in to apply the new time zone to all control plane nodes.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Asia/Shanghai</para>
+        /// </summary>
         [NameInMap("timezone")]
         [Validation(Required=false)]
         public string Timezone { get; set; }
@@ -553,7 +604,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The vSwitches of the control plane. This parameter can be used to change the vSwitches of the control plane in an ACK managed cluster. Take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>This parameter overwrites the existing configuration. You must specify all vSwitches of the control plane.</description></item>
-        /// <item><description>The control plane restarts during the change process. Exercise caution when you perform this operation.</description></item>
+        /// <item><description>The control plane components restarts during the change process. Exercise caution when you perform this operation.</description></item>
         /// <item><description>Ensure that all security groups of the cluster, including the security groups of the control plane, all node pools, and container network, are allowed to access the CIDR blocks of the new vSwitches. This ensures that the nodes and containers can connect to the API server.</description></item>
         /// <item><description>If the new vSwitches of the control plane are configured with an ACL, ensure that the ACL allows communication between the new vSwitches and CIDR blocks such as those of the cluster nodes and the container network.</description></item>
         /// </list>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class StartAlertRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the alert rule set to be enabled.</para>
+        /// <para>The name of the alert rule group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sample</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string AlertRuleGroupName { get; set; }
 
         /// <summary>
-        /// <para>The name of the alert rule to be enabled. If you do not specify an alert rule name, the alert rule set is enabled.</para>
+        /// <para>The name of the alert rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sample</para>

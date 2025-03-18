@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The type of policy.</para>
+            /// <para>The type of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k8s-general</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>Creation time (deprecated, do not use).</para>
+            /// <para>The creation time of the instance. This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-29T18:09:12+08:00</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>Update time (deprecated, do not use).</para>
+            /// <para>The update time of the instance. This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-29T18:09:12+08:00</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>Resource ID (deprecated, do not use).</para>
+            /// <para>The ID of the resource. This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456***</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>Violation count processing in the cluster (deprecated, do not use).</para>
+            /// <para>The number of violations processed in the cluster. This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>Deletion status (deprecated, do not use).</para>
+            /// <para>The status of the deletion. This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
