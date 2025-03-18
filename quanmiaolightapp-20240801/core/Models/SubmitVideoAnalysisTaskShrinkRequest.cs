@@ -57,6 +57,14 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public double? SnapshotInterval { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("splitInterval")]
+        [Validation(Required=false)]
+        public int? SplitInterval { get; set; }
+
         [NameInMap("textProcessTasks")]
         [Validation(Required=false)]
         public string TextProcessTasksShrink { get; set; }

@@ -77,6 +77,14 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("splitInterval")]
+        [Validation(Required=false)]
+        public int? SplitInterval { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>a3d1c2ac-f086-4a21-9069-f5631542f5a2</para>
         /// </summary>
         [NameInMap("taskId")]
