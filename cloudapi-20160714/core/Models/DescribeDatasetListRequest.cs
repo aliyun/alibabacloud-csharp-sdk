@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string DatasetIds { get; set; }
 
+        [NameInMap("DatasetName")]
+        [Validation(Required=false)]
+        public string DatasetName { get; set; }
+
         /// <summary>
         /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
         /// 
