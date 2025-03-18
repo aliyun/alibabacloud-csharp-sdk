@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
                 [Validation(Required=false)]
                 public RunDataAnalysisResponseBodyDataVisualizationData Data { get; set; }
                 public class RunDataAnalysisResponseBodyDataVisualizationData : TeaModel {
+                    [NameInMap("option")]
+                    [Validation(Required=false)]
+                    public string Option { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>bar</para>
@@ -114,6 +118,10 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
                     [NameInMap("plotType")]
                     [Validation(Required=false)]
                     public string PlotType { get; set; }
+
+                    [NameInMap("stack")]
+                    [Validation(Required=false)]
+                    public bool? Stack { get; set; }
 
                     [NameInMap("xAxis")]
                     [Validation(Required=false)]
