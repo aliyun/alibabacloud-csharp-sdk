@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string DocId { get; set; }
 
+        [NameInMap("KeyPointPrompt")]
+        [Validation(Required=false)]
+        public string KeyPointPrompt { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
+
+        [NameInMap("SummaryPrompt")]
+        [Validation(Required=false)]
+        public string SummaryPrompt { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

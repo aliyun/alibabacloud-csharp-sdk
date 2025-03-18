@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Sentiment { get; set; }
 
+        [NameInMap("SessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>

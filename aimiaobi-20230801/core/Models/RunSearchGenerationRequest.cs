@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
                 }
 
+                [NameInMap("SkipCurrentSupplement")]
+                [Validation(Required=false)]
+                public bool? SkipCurrentSupplement { get; set; }
+
             }
 
         }

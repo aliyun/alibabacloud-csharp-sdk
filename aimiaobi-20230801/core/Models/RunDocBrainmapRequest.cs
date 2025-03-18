@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunDocBrainmapRequest : TeaModel {
+        [NameInMap("CleanCache")]
+        [Validation(Required=false)]
+        public bool? CleanCache { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -19,6 +23,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string DocId { get; set; }
 
+        [NameInMap("NodeNumber")]
+        [Validation(Required=false)]
+        public int? NodeNumber { get; set; }
+
+        [NameInMap("Prompt")]
+        [Validation(Required=false)]
+        public string Prompt { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,6 +40,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
+
+        [NameInMap("WordNumber")]
+        [Validation(Required=false)]
+        public int? WordNumber { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

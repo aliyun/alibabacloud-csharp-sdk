@@ -62,8 +62,6 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             public int? SummaryImageCount { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>摘要模型</para>
             /// </summary>

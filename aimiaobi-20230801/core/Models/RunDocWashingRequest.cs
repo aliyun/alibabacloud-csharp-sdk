@@ -8,51 +8,51 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
-    public class RunDocTranslationRequest : TeaModel {
-        [NameInMap("CleanCache")]
+    public class RunDocWashingRequest : TeaModel {
+        [NameInMap("Prompt")]
         [Validation(Required=false)]
-        public bool? CleanCache { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>12345</para>
-        /// </summary>
-        [NameInMap("DocId")]
-        [Validation(Required=false)]
-        public string DocId { get; set; }
-
-        [NameInMap("RecommendContent")]
-        [Validation(Required=false)]
-        public string RecommendContent { get; set; }
+        public string Prompt { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2e6b3987-f743-4d4c-8326-d9c41a6af3ee</para>
         /// </summary>
+        [NameInMap("ReferenceContent")]
+        [Validation(Required=false)]
+        public string ReferenceContent { get; set; }
+
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        [NameInMap("Topic")]
+        [Validation(Required=false)]
+        public string Topic { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
-        /// <para>toChinese
-        /// toEnglish</para>
+        /// <para>500</para>
         /// </summary>
-        [NameInMap("TransType")]
+        [NameInMap("WordNumber")]
         [Validation(Required=false)]
-        public string TransType { get; set; }
+        public int? WordNumber { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>llm-xxx</para>
+        /// <para>llm-2setzb9x4ewsd</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
+
+        [NameInMap("WritingTypeName")]
+        [Validation(Required=false)]
+        public string WritingTypeName { get; set; }
+
+        [NameInMap("WritingTypeRefDoc")]
+        [Validation(Required=false)]
+        public string WritingTypeRefDoc { get; set; }
 
     }
 

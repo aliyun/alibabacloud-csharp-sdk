@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunDocSummaryRequest : TeaModel {
+        [NameInMap("CleanCache")]
+        [Validation(Required=false)]
+        public bool? CleanCache { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>12345</para>

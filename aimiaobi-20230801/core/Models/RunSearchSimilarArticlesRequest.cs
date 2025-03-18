@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                     [Validation(Required=false)]
                     public string Code { get; set; }
 
+                    [NameInMap("DatasetName")]
+                    [Validation(Required=false)]
+                    public string DatasetName { get; set; }
+
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }

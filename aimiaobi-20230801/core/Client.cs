@@ -13806,9 +13806,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["DocId"] = request.DocId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPointPrompt))
+            {
+                body["KeyPointPrompt"] = request.KeyPointPrompt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SummaryPrompt))
+            {
+                body["SummaryPrompt"] = request.SummaryPrompt;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -13863,9 +13871,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["DocId"] = request.DocId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPointPrompt))
+            {
+                body["KeyPointPrompt"] = request.KeyPointPrompt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SummaryPrompt))
+            {
+                body["SummaryPrompt"] = request.SummaryPrompt;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -14140,6 +14156,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["Sentiment"] = request.SentimentShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMaterial))
             {
                 body["SourceMaterial"] = request.SourceMaterial;
@@ -14238,6 +14258,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SentimentShrink))
             {
                 body["Sentiment"] = request.SentimentShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceMaterial))
             {
@@ -14866,13 +14890,29 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanCache))
+            {
+                body["CleanCache"] = request.CleanCache;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
             {
                 body["DocId"] = request.DocId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNumber))
+            {
+                body["NodeNumber"] = request.NodeNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["Prompt"] = request.Prompt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordNumber))
+            {
+                body["WordNumber"] = request.WordNumber;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -14923,13 +14963,29 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanCache))
+            {
+                body["CleanCache"] = request.CleanCache;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
             {
                 body["DocId"] = request.DocId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNumber))
+            {
+                body["NodeNumber"] = request.NodeNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["Prompt"] = request.Prompt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordNumber))
+            {
+                body["WordNumber"] = request.WordNumber;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -15015,14 +15071,31 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         public RunDocIntroductionResponse RunDocIntroductionWithOptions(RunDocIntroductionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanCache))
+            {
+                query["CleanCache"] = request.CleanCache;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
             {
                 body["DocId"] = request.DocId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntroductionPrompt))
+            {
+                body["IntroductionPrompt"] = request.IntroductionPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPointPrompt))
+            {
+                body["KeyPointPrompt"] = request.KeyPointPrompt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SummaryPrompt))
+            {
+                body["SummaryPrompt"] = request.SummaryPrompt;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -15030,6 +15103,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -15072,14 +15146,31 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         public async Task<RunDocIntroductionResponse> RunDocIntroductionWithOptionsAsync(RunDocIntroductionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanCache))
+            {
+                query["CleanCache"] = request.CleanCache;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
             {
                 body["DocId"] = request.DocId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntroductionPrompt))
+            {
+                body["IntroductionPrompt"] = request.IntroductionPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPointPrompt))
+            {
+                body["KeyPointPrompt"] = request.KeyPointPrompt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SummaryPrompt))
+            {
+                body["SummaryPrompt"] = request.SummaryPrompt;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -15087,6 +15178,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -15534,6 +15626,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanCache))
+            {
+                body["CleanCache"] = request.CleanCache;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
             {
                 body["DocId"] = request.DocId;
@@ -15599,6 +15695,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanCache))
+            {
+                body["CleanCache"] = request.CleanCache;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
             {
                 body["DocId"] = request.DocId;
@@ -15700,6 +15800,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanCache))
+            {
+                body["CleanCache"] = request.CleanCache;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
             {
                 body["DocId"] = request.DocId;
@@ -15765,6 +15869,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanCache))
+            {
+                body["CleanCache"] = request.CleanCache;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
             {
                 body["DocId"] = request.DocId;
@@ -15845,6 +15953,196 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RunDocTranslationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档改写</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDocWashingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDocWashingResponse
+        /// </returns>
+        public RunDocWashingResponse RunDocWashingWithOptions(RunDocWashingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["Prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceContent))
+            {
+                body["ReferenceContent"] = request.ReferenceContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["Topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordNumber))
+            {
+                body["WordNumber"] = request.WordNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WritingTypeName))
+            {
+                body["WritingTypeName"] = request.WritingTypeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WritingTypeRefDoc))
+            {
+                body["WritingTypeRefDoc"] = request.WritingTypeRefDoc;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunDocWashing",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RunDocWashingResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RunDocWashingResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档改写</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDocWashingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDocWashingResponse
+        /// </returns>
+        public async Task<RunDocWashingResponse> RunDocWashingWithOptionsAsync(RunDocWashingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["Prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceContent))
+            {
+                body["ReferenceContent"] = request.ReferenceContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
+            {
+                body["Topic"] = request.Topic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WordNumber))
+            {
+                body["WordNumber"] = request.WordNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WritingTypeName))
+            {
+                body["WritingTypeName"] = request.WritingTypeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WritingTypeRefDoc))
+            {
+                body["WritingTypeRefDoc"] = request.WritingTypeRefDoc;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunDocWashing",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RunDocWashingResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RunDocWashingResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档改写</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDocWashingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDocWashingResponse
+        /// </returns>
+        public RunDocWashingResponse RunDocWashing(RunDocWashingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunDocWashingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档改写</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDocWashingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDocWashingResponse
+        /// </returns>
+        public async Task<RunDocWashingResponse> RunDocWashingAsync(RunDocWashingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunDocWashingWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

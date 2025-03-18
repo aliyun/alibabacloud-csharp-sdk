@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public List<RunSearchSimilarArticlesResponseBodyPayloadOutputArticles> Articles { get; set; }
                 public class RunSearchSimilarArticlesResponseBodyPayloadOutputArticles : TeaModel {
+                    [NameInMap("DocId")]
+                    [Validation(Required=false)]
+                    public string DocId { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>a26c2c1</para>
