@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public long? AppKey { get; set; }
 
+        [NameInMap("IdempotentToken")]
+        [Validation(Required=false)]
+        public string IdempotentToken { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>

@@ -425,6 +425,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public string HarmonyUri { get; set; }
 
+        [NameInMap("IdempotentToken")]
+        [Validation(Required=false)]
+        public string IdempotentToken { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>123</para>
