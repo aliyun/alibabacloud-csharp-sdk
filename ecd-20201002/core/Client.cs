@@ -3029,6 +3029,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             {
                 query["LoginToken"] = request.LoginToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsUpdate))
+            {
+                query["OsUpdate"] = request.OsUpdate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3113,6 +3117,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginToken))
             {
                 query["LoginToken"] = request.LoginToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsUpdate))
+            {
+                query["OsUpdate"] = request.OsUpdate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -4964,6 +4972,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             {
                 query["LoginToken"] = request.LoginToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsUpdate))
+            {
+                query["OsUpdate"] = request.OsUpdate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -5049,6 +5061,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginToken))
             {
                 query["LoginToken"] = request.LoginToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsUpdate))
+            {
+                query["OsUpdate"] = request.OsUpdate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

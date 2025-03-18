@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string LoginToken { get; set; }
 
+        [NameInMap("OsUpdate")]
+        [Validation(Required=false)]
+        public bool? OsUpdate { get; set; }
+
         /// <summary>
         /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>

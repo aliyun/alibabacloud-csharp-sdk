@@ -1,3 +1,8 @@
+2025-03-18 Version: 1.2.2
+- Update API RebootDesktops: add param OsUpdate.
+- Update API StopDesktops: add param OsUpdate.
+
+
 2025-02-26 Version: 1.2.1
 - Update API ApproveFotaUpdate: add param TargetStatus.
 - Update API DescribeUserResources: update response param.
