@@ -14,7 +14,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <remarks>
         /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-xxxxxxxxx</para>
@@ -84,6 +83,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("Table")]
         [Validation(Required=false)]
         public string Table { get; set; }
+
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

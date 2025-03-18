@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDBInstanceRequest : TeaModel {
+        [NameInMap("AINodeSpecInfos")]
+        [Validation(Required=false)]
+        public List<CreateDBInstanceRequestAINodeSpecInfos> AINodeSpecInfos { get; set; }
+        public class CreateDBInstanceRequestAINodeSpecInfos : TeaModel {
+            [NameInMap("AINodeNum")]
+            [Validation(Required=false)]
+            public string AINodeNum { get; set; }
+
+            [NameInMap("AINodeSpec")]
+            [Validation(Required=false)]
+            public string AINodeSpec { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Backup set ID.</para>
         /// <remarks>
@@ -142,10 +156,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DeployMode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to enable SSL encryption. The values are as follows:</para>
+        /// <para>Specifies whether to enable SSL encryption. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enable SSL encryption.</description></item>
-        /// <item><description><b>false</b> (default): Do not enable SSL encryption.</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -272,6 +286,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string InstanceSpec { get; set; }
 
         /// <summary>
+        /// <para>This parameter must be specified if you want to change coordinator nodes to AI coordinator nodes.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You cannot specify the MasterAISpec and MasterCU parameters at the same time.</description></item>
+        /// <item><description>You can change coordinator nodes to AI coordinator nodes only in specific regions and zones.</description></item>
+        /// <item><description>Only AnalyticDB for PostgreSQL V7.0 instances of Basic Edition support AI coordinator nodes.</description></item>
+        /// <item><description>You can view the valid values of this parameter on the configuration change page of coordinator nodes.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ADB.AIMedium.2</para>
+        /// </summary>
+        [NameInMap("MasterAISpec")]
+        [Validation(Required=false)]
+        public string MasterAISpec { get; set; }
+
+        /// <summary>
         /// <para>Master resources, with the following values: </para>
         /// <list type="bullet">
         /// <item><description>2 CU </description></item>
@@ -306,17 +338,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Billing type. The values are as follows:</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: Pay-as-you-go</description></item>
-        /// <item><description><b>Prepaid</b>: Subscription</description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>Prepaid</b>: subscription.</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>If not specified, it will default to pay-as-you-go.</description></item>
-        /// <item><description>When using the subscription billing model, there may be discounts for purchasing one year or longer at once. It is recommended to choose the billing type according to your needs.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If you do not specify this parameter, Postpaid is used.</para>
+        /// </description></item>
+        /// <item><description><para>You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Prepaid</para>
@@ -394,8 +428,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>IP whitelist.</para>
-        /// <para>127.0.0.1 indicates that no external IP addresses are allowed to access. You can modify the IP whitelist by calling the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> interface after the instance is created.</para>
+        /// <para>The IP address whitelist of the instance.</para>
+        /// <para>A value of 127.0.0.1 denies access from any external IP address. You can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP address whitelist after you create an instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
@@ -405,18 +439,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// <para>ESSD cloud disk performance level. The values are as follows:</para>
+        /// <para>The performance level of ESSDs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pl0</b>: PL0 level.</description></item>
-        /// <item><description><b>pl1</b>: PL1 level.</description></item>
-        /// <item><description><b>pl2</b>: PL2 level.</description></item>
+        /// <item><description><b>pl0</b></description></item>
+        /// <item><description><b>pl1</b></description></item>
+        /// <item><description><b>pl2</b></description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter is effective only if the disk storage type is ESSD cloud disk.</description></item>
-        /// <item><description>If not specified, it defaults to PL1 level.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter takes effect only when SegStorageType is set to cloud_essd.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify this parameter, pl1 is used.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>pl1</para>

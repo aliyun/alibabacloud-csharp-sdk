@@ -232,6 +232,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RelationalTableFilterShrink { get; set; }
 
+        [NameInMap("SparseVector")]
+        [Validation(Required=false)]
+        public string SparseVectorShrink { get; set; }
+
         /// <summary>
         /// <para>Set the number of top results to return.</para>
         /// <para>This parameter is required.</para>

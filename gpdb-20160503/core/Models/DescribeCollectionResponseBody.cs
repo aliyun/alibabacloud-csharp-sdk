@@ -108,6 +108,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SparseVectorMetrics")]
+        [Validation(Required=false)]
+        public string SparseVectorMetrics { get; set; }
+
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
@@ -121,6 +125,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("SupportSparse")]
+        [Validation(Required=false)]
+        public bool? SupportSparse { get; set; }
 
     }
 

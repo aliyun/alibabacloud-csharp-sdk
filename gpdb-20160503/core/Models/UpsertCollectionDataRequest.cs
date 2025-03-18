@@ -87,6 +87,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public Dictionary<string, string> Metadata { get; set; }
 
+            [NameInMap("SparseVector")]
+            [Validation(Required=false)]
+            public UpsertCollectionDataRequestRowsSparseVector SparseVector { get; set; }
+            public class UpsertCollectionDataRequestRowsSparseVector : TeaModel {
+                [NameInMap("Indices")]
+                [Validation(Required=false)]
+                public List<long?> Indices { get; set; }
+
+                [NameInMap("Values")]
+                [Validation(Required=false)]
+                public List<double?> Values { get; set; }
+
+            }
+
             /// <summary>
             /// <para>This parameter is required.</para>
             /// </summary>

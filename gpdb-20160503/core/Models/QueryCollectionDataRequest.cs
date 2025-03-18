@@ -274,6 +274,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         }
 
+        [NameInMap("SparseVector")]
+        [Validation(Required=false)]
+        public QueryCollectionDataRequestSparseVector SparseVector { get; set; }
+        public class QueryCollectionDataRequestSparseVector : TeaModel {
+            [NameInMap("Indices")]
+            [Validation(Required=false)]
+            public List<long?> Indices { get; set; }
+
+            [NameInMap("Values")]
+            [Validation(Required=false)]
+            public List<double?> Values { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Set the number of top results to return.</para>
         /// <para>This parameter is required.</para>

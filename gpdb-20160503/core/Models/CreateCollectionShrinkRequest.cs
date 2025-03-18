@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class CreateCollectionRequest : TeaModel {
+    public class CreateCollectionShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The name of the collection that you want to create.</para>
         /// <remarks>
@@ -224,17 +224,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         [NameInMap("SparseVectorIndexConfig")]
         [Validation(Required=false)]
-        public CreateCollectionRequestSparseVectorIndexConfig SparseVectorIndexConfig { get; set; }
-        public class CreateCollectionRequestSparseVectorIndexConfig : TeaModel {
-            [NameInMap("HnswEfConstruction")]
-            [Validation(Required=false)]
-            public int? HnswEfConstruction { get; set; }
-
-            [NameInMap("HnswM")]
-            [Validation(Required=false)]
-            public int? HnswM { get; set; }
-
-        }
+        public string SparseVectorIndexConfigShrink { get; set; }
 
         [NameInMap("SupportSparse")]
         [Validation(Required=false)]

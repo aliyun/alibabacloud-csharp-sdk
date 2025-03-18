@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("DownloadTaskType")]
+        [Validation(Required=false)]
+        public string DownloadTaskType { get; set; }
+
     }
 
 }

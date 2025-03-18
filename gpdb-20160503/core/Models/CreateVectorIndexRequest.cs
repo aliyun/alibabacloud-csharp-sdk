@@ -42,7 +42,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <remarks>
         /// <para>This value must be consistent with the length of the vector data (Rows. Vector) uploaded via the <a href="https://help.aliyun.com/document_detail/2401493.html">UpsertCollectionData</a> API.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -66,6 +65,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("ExternalStorage")]
         [Validation(Required=false)]
         public int? ExternalStorage { get; set; }
+
+        [NameInMap("HnswEfConstruction")]
+        [Validation(Required=false)]
+        public int? HnswEfConstruction { get; set; }
 
         /// <summary>
         /// <para>The maximum number of neighbors in the HNSW algorithm, ranging from 1 to 1000. The API will automatically set this value based on the vector dimension, and it generally does not need to be manually set.</para>
@@ -167,6 +170,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

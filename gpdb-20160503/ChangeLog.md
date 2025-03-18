@@ -1,3 +1,7 @@
+2025-03-18 Version: 2.2.2
+- Update API DescribeDownloadRecords: add param DownloadTaskType.
+
+
 2025-01-10 Version: 2.2.0
 - Support API CreateBackup.
 - Support API DeleteBackup.

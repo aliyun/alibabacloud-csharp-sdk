@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EmrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The Id of External Data Service</para>
+        /// <para>The ID of the external data service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2988</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string MapReduceConf { get; set; }
 
         /// <summary>
-        /// <para>The time when the service was last modified.</para>
+        /// <para>The time when the data source was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-08-23T02:11:47Z</para>

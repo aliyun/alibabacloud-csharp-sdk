@@ -422,6 +422,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string MaintainStartTime { get; set; }
 
                 /// <summary>
+                /// <para>The specifications of AI coordinator node resources of the instance. If the coordinator nodes of the instance are not AI nodes, null is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ADB.AIMedium.2</para>
+                /// </summary>
+                [NameInMap("MasterAISpec")]
+                [Validation(Required=false)]
+                public string MasterAISpec { get; set; }
+
+                /// <summary>
                 /// <para>Master resources.</para>
                 /// 
                 /// <b>Example:</b>
@@ -609,6 +619,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [NameInMap("SegNodeNum")]
                 [Validation(Required=false)]
                 public int? SegNodeNum { get; set; }
+
+                /// <summary>
+                /// <para>The specifications of AI compute node resources of the instance. If the compute nodes of the instance are not AI nodes, null is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ADB.AIMedium.2</para>
+                /// </summary>
+                [NameInMap("SegmentAISpec")]
+                [Validation(Required=false)]
+                public string SegmentAISpec { get; set; }
 
                 /// <summary>
                 /// <para>Number of compute groups.</para>

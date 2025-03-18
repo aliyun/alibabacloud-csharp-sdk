@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The region ID of the instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2361846.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

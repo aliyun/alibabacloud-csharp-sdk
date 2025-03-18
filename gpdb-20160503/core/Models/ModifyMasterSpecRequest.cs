@@ -34,6 +34,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>This parameter must be specified if you want to change coordinator nodes to AI coordinator nodes.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You cannot specify the MasterAISpec and MasterCU parameters at the same time.</description></item>
+        /// <item><description>You can change coordinator nodes to AI coordinator nodes only in specific regions and zones.</description></item>
+        /// <item><description>Only AnalyticDB for PostgreSQL V7.0 instances of Basic Edition support AI coordinator nodes.</description></item>
+        /// <item><description>You can view the valid values of this parameter on the configuration change page of coordinator nodes.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ADB.AIMedium.2</para>
+        /// </summary>
+        [NameInMap("MasterAISpec")]
+        [Validation(Required=false)]
+        public string MasterAISpec { get; set; }
+
+        /// <summary>
         /// <para>The specifications of coordinator node resources. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>2 CU</description></item>
@@ -45,7 +63,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <remarks>
         /// <para> You are charged for coordinator node resources of more than 8 compute units (CUs).</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8 CU</para>

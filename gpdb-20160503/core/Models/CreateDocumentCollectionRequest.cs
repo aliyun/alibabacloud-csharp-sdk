@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("Dimension")]
+        [Validation(Required=false)]
+        public int? Dimension { get; set; }
+
         /// <summary>
         /// <para>The vectorization algorithm.</para>
         /// <remarks>
@@ -107,6 +111,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("FullTextRetrievalFields")]
         [Validation(Required=false)]
         public string FullTextRetrievalFields { get; set; }
+
+        [NameInMap("HnswEfConstruction")]
+        [Validation(Required=false)]
+        public string HnswEfConstruction { get; set; }
 
         /// <summary>
         /// <para>The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. Valid values: 1 to 1000. In most cases, this parameter is automatically configured based on the value of the Dimension parameter. You do not need to configure this parameter.</para>
