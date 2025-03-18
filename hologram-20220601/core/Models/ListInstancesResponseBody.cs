@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of queried instances.</para>
+        /// <para>The instances.</para>
         /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]

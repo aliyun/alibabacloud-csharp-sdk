@@ -263,6 +263,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public long? StorageSize { get; set; }
 
+        [NameInMap("storageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
+
         /// <summary>
         /// <para>The ID of the vSwitch. The zone in which the vSwitch resides must be the same as the zone in which the Hologres instance resides.</para>
         /// <para>This parameter is required.</para>

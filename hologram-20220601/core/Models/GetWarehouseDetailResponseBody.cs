@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The values returned.</para>
+        /// <para>The returned values.</para>
         /// </summary>
         [NameInMap("WarehouseDetail")]
         [Validation(Required=false)]

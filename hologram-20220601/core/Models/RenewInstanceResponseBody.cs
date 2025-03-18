@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
             /// <summary>
             /// <para>The error details.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>InvalidChargeType.UnRenewable</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]

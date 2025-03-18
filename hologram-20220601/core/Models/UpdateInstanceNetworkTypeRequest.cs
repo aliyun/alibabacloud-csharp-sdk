@@ -13,19 +13,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <para>Specifies whether to change the network type from AnyTunnel to SingleTunnel. This parameter is invalid for new instances. For new instances, this parameter is set to null by default.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>others/null</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
+        /// <item><description>others/null: The network type is not changed from AnyTunnel to SingleTunnel.</description></item>
+        /// <item><description>true: The network type is changed from AnyTunnel to SingleTunnel.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +25,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string AnyTunnelToSingleTunnel { get; set; }
 
         /// <summary>
-        /// <para>A list of network types that you want to enable. The list of enabled network types is randomly ordered. For example, the Internet, internal network, and VPCSingleTunnel network types are enabled. If you want to disable the Internet type, set this parameter to Intranet,VPCSingleTunnel.</para>
+        /// <para>A list of network types that you want to enable. The network types are randomly ordered in the list. For example, the Internet, Intranet, and VPCSingleTunnel network types are enabled. If you want to disable the Internet type, set this parameter to Intranet,VPCSingleTunnel.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>VPCSingleTunnel: virtual private cloud (VPC).</description></item>
+        /// <item><description>Intranet: internal network.</description></item>
+        /// <item><description>VPCAnyTunnel: compatibility requirements. This value is not supported by new instances.</description></item>
+        /// <item><description>Internet: Internet.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Internet,VPCSingleTunnel</para>
@@ -46,7 +42,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string NetworkTypes { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID.</para>
+        /// <para>The ID of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2vccsiymtqr9aavew0vo3</para>
@@ -56,7 +52,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the instance belongs.</para>
+        /// <para>The ID of the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-t4netc3y5etlondfb5ra7</para>
@@ -66,7 +62,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The owner ID of the VPC, which is the ID of the Alibaba Cloud account.</para>
+        /// <para>The ID of the Alibaba Cloud account to which the VPC belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1999365732646672</para>
@@ -76,7 +72,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string VpcOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPC.</para>
+        /// <para>The region in which the VPC resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

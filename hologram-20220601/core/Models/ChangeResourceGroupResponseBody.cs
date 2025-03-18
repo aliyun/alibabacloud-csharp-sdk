@@ -10,6 +10,24 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ChangeResourceGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned data.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true</para>
+        /// <!-- -->
+        /// 
+        /// <!-- -->
+        /// 
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// <!-- -->
+        /// 
+        /// <!-- -->
+        /// 
+        /// <!-- --></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

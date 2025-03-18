@@ -228,6 +228,12 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public string EnableHiveAccess { get; set; }
 
+            /// <summary>
+            /// <para>EnableServerless</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("EnableServerless")]
             [Validation(Required=false)]
             public bool? EnableServerless { get; set; }
@@ -582,6 +588,17 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>Disaster recovery instance role. </para>
+            /// <list type="bullet">
+            /// <item><description>Active: Primary disaster recovery instance.</description></item>
+            /// <item><description>Passive: Disaster tolerance instance.</description></item>
+            /// <item><description>PreActive: Primary disaster recovery instance not yet in final state.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Active</para>
+            /// </summary>
             [NameInMap("ReplicaRole")]
             [Validation(Required=false)]
             public string ReplicaRole { get; set; }
@@ -596,6 +613,16 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The storage type.</para>
+            /// <list type="bullet">
+            /// <item><description>redundant: 3 copies</description></item>
+            /// <item><description>local: single copy</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>redundant</para>
+            /// </summary>
             [NameInMap("StorageType")]
             [Validation(Required=false)]
             public string StorageType { get; set; }
