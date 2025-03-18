@@ -656,6 +656,38 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string OsType { get; set; }
 
+            [NameInMap("OsUpdate")]
+            [Validation(Required=false)]
+            public DescribeDesktopsResponseBodyDesktopsOsUpdate OsUpdate { get; set; }
+            public class DescribeDesktopsResponseBodyDesktopsOsUpdate : TeaModel {
+                [NameInMap("CheckId")]
+                [Validation(Required=false)]
+                public string CheckId { get; set; }
+
+                [NameInMap("PackageCount")]
+                [Validation(Required=false)]
+                public int? PackageCount { get; set; }
+
+                [NameInMap("Packages")]
+                [Validation(Required=false)]
+                public List<DescribeDesktopsResponseBodyDesktopsOsUpdatePackages> Packages { get; set; }
+                public class DescribeDesktopsResponseBodyDesktopsOsUpdatePackages : TeaModel {
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    [NameInMap("Kb")]
+                    [Validation(Required=false)]
+                    public string Kb { get; set; }
+
+                    [NameInMap("Title")]
+                    [Validation(Required=false)]
+                    public string Title { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <para>The information about the OS platform.</para>
             /// <para>Valid values:</para>

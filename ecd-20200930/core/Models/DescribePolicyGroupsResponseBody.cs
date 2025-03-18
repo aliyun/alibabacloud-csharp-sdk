@@ -609,6 +609,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string EndUserGroupCoordinate { get; set; }
 
+            [NameInMap("FileMigrate")]
+            [Validation(Required=false)]
+            public string FileMigrate { get; set; }
+
             /// <summary>
             /// <para>Transfers files.</para>
             /// 
@@ -1653,6 +1657,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("WatermarkType")]
             [Validation(Required=false)]
             public string WatermarkType { get; set; }
+
+            [NameInMap("WuyingKeeper")]
+            [Validation(Required=false)]
+            public string WuyingKeeper { get; set; }
 
             /// <summary>
             /// <para>Specifies whether to provide the AI Assistant function in the DesktopAssistant when the cloud computer is accessed from the Alibaba Cloud Workspace desktop clients (including the Windows client and the macOS client).</para>
