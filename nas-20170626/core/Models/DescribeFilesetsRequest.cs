@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>fset-12345678,fset-12345679</para>
+            /// <para>fset-1902718ea0ae****,fset-3212718ea0ae****</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -92,10 +92,35 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The condition by which the results are sorted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>FileCountLimit: the file quantity quota</description></item>
+        /// <item><description>SizeLimit: the capacity quota</description></item>
+        /// <item><description>FileCountUsage: the usage of the file quantity quota</description></item>
+        /// <item><description>SpaceUsage: the capacity usage</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FileCountLimit</para>
+        /// </summary>
         [NameInMap("OrderByField")]
         [Validation(Required=false)]
         public string OrderByField { get; set; }
 
+        /// <summary>
+        /// <para>The order in which you want to sort the results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>asc (default): ascending order</description></item>
+        /// <item><description>desc: descending order</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter takes effect only if you specify the OrderByField parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>asc</para>
+        /// </summary>
         [NameInMap("SortOrder")]
         [Validation(Required=false)]
         public string SortOrder { get; set; }

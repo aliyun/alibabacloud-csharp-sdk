@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
+        [NameInMap("FsetIds")]
+        [Validation(Required=false)]
+        public List<string> FsetIds { get; set; }
+
         /// <summary>
         /// <para>The name of the lifecycle policy. The name must be 3 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
         /// <para>This parameter is required.</para>
@@ -40,7 +44,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>DEFAULT_ATIME_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</description></item>
         /// <item><description>DEFAULT_ATIME_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DEFAULT_ATIME_14</para>
@@ -48,6 +51,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [NameInMap("LifecycleRuleName")]
         [Validation(Required=false)]
         public string LifecycleRuleName { get; set; }
+
+        [NameInMap("LifecycleRuleType")]
+        [Validation(Required=false)]
+        public string LifecycleRuleType { get; set; }
 
         /// <summary>
         /// <para>The absolute path of the directory that is associated with the lifecycle policy.</para>

@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
+        [NameInMap("FileSystemType")]
+        [Validation(Required=false)]
+        public string FileSystemType { get; set; }
+
+        [NameInMap("FsetId")]
+        [Validation(Required=false)]
+        public string FsetId { get; set; }
+
         /// <summary>
         /// <para>The name of the lifecycle policy. The name must meet the following conventions:</para>
         /// <para>The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).</para>

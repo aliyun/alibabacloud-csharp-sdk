@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <summary>
                 /// <para>The quota information.</para>
                 /// <remarks>
-                /// <para> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</para>
+                /// <para> Only CPFS for Lingjun V2.7.0 and later support this parameter.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("Quota")]
@@ -119,9 +119,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public DescribeFilesetsResponseBodyEntriesEntrieQuota Quota { get; set; }
                 public class DescribeFilesetsResponseBodyEntriesEntrieQuota : TeaModel {
                     /// <summary>
-                    /// <para>The limit of the file quantity of the quota. Valid values:</para>
-                    /// <para>Minimum value: 10000.</para>
-                    /// <para>Maximum value: 10000000000.</para>
+                    /// <para>The file quantity quota. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Minimum value: 10000.</description></item>
+                    /// <item><description>Maximum value: 10000000000.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10000</para>
@@ -131,10 +133,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                     public long? FileCountLimit { get; set; }
 
                     /// <summary>
-                    /// <para>The limit of the quota capacity. Unit: bytes.</para>
-                    /// <para>Minimum value: 10737418240 (10 GiB).</para>
-                    /// <para>Maximum value: 1073741824000 (1024000 GiB).</para>
-                    /// <para>Step size: 1073741824 (1 GiB).</para>
+                    /// <para>The capacity quota. Unit: bytes.</para>
+                    /// <list type="bullet">
+                    /// <item><description>Minimum value: 10737418240 (10 GiB).</description></item>
+                    /// <item><description>Step size: 1073741824 (1 GiB).</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10737418240</para>

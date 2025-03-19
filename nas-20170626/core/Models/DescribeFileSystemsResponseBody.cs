@@ -560,6 +560,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                [NameInMap("SecondaryBandwidth")]
+                [Validation(Required=false)]
+                public int? SecondaryBandwidth { get; set; }
+
+                [NameInMap("SecondaryCapacity")]
+                [Validation(Required=false)]
+                public long? SecondaryCapacity { get; set; }
+
                 /// <summary>
                 /// <para>The status of the file system. Valid values:</para>
                 /// <list type="bullet">
