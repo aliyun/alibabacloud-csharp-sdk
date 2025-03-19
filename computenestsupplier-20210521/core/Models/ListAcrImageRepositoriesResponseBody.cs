@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
 
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
+
             /// <summary>
             /// <para>The image repo ID.</para>
             /// 

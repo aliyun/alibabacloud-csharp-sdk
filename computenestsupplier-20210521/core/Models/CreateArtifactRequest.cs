@@ -68,10 +68,23 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 [Validation(Required=false)]
                 public string Branch { get; set; }
 
+                /// <summary>
+                /// <para>The endpoint. 
+                /// The URL address used to access the privately deployed GitLab instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://121.40.25.0">http://121.40.25.0</a></para>
+                /// </summary>
                 [NameInMap("Endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
+                /// <summary>
+                /// <para>The organization ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>455231</para>
+                /// </summary>
                 [NameInMap("OrgId")]
                 [Validation(Required=false)]
                 public string OrgId { get; set; }
@@ -96,6 +109,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 /// </description></item>
                 /// <item><description><para>gitee</para>
                 /// </description></item>
+                /// <item><description><para>gitlab</para>
+                /// </description></item>
+                /// <item><description><para>codeup</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -105,6 +122,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 [Validation(Required=false)]
                 public string Platform { get; set; }
 
+                /// <summary>
+                /// <para>The repository ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>103</para>
+                /// </summary>
                 [NameInMap("RepoId")]
                 [Validation(Required=false)]
                 public long? RepoId { get; set; }

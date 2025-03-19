@@ -4889,11 +4889,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>@param request GetSupplierInformationRequest</description></item>
-        /// </list>
+        /// <para>获取服务商信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetSupplierInformationRequest
+        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4937,11 +4938,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>@param request GetSupplierInformationRequest</description></item>
-        /// </list>
+        /// <para>获取服务商信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetSupplierInformationRequest
+        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4985,10 +4987,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>@param request GetSupplierInformationRequest</description></item>
-        /// </list>
+        /// <para>获取服务商信息</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSupplierInformationRequest
+        /// </param>
         /// 
         /// <returns>
         /// GetSupplierInformationResponse
@@ -5001,10 +5005,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>@param request GetSupplierInformationRequest</description></item>
-        /// </list>
+        /// <para>获取服务商信息</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSupplierInformationRequest
+        /// </param>
         /// 
         /// <returns>
         /// GetSupplierInformationResponse

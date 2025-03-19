@@ -1,3 +1,8 @@
+2025-03-19 Version: 6.0.2
+- Update API GetSupplierInformation: update response param.
+- Update API ListAcrImageRepositories: update response param.
+
+
 2025-03-12 Version: 6.0.1
 - Update API CreateArtifact: update param ArtifactBuildProperty.
 - Update API ListServiceInstanceResources: update param NextToken.

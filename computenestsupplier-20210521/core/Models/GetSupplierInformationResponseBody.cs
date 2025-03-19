@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetSupplierInformationResponseBody : TeaModel {
         /// <summary>
+        /// <para>Acr container namespace</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>computenest</para>
+        /// </summary>
+        [NameInMap("AcrNamespace")]
+        [Validation(Required=false)]
+        public string AcrNamespace { get; set; }
+
+        /// <summary>
         /// <para>The delivery settings.</para>
         /// </summary>
         [NameInMap("DeliverySettings")]
