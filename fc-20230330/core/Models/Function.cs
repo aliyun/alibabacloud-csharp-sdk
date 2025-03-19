@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("disableOndemand")]
+        [Validation(Required=false)]
+        public bool? DisableOndemand { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>512</para>

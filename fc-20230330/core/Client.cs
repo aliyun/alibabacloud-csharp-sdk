@@ -1491,7 +1491,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a function version.</para>
+        /// <para><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1534,7 +1534,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a function version.</para>
+        /// <para><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1577,7 +1577,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a function version.</para>
+        /// <para><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></para>
         /// </summary>
         /// 
         /// <returns>
@@ -1592,7 +1592,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a function version.</para>
+        /// <para><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></para>
         /// </summary>
         /// 
         /// <returns>
@@ -4728,7 +4728,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// <para>列出函数。</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListFunctionsRequest
         /// </param>
         /// <param name="headers">
@@ -4741,9 +4741,15 @@ namespace AlibabaCloud.SDK.FC20230330
         /// <returns>
         /// ListFunctionsResponse
         /// </returns>
-        public ListFunctionsResponse ListFunctionsWithOptions(ListFunctionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListFunctionsResponse ListFunctionsWithOptions(ListFunctionsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListFunctionsShrinkRequest request = new ListFunctionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FcVersion))
             {
@@ -4760,6 +4766,10 @@ namespace AlibabaCloud.SDK.FC20230330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
             {
                 query["prefix"] = request.Prefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4793,7 +4803,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// <para>列出函数。</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListFunctionsRequest
         /// </param>
         /// <param name="headers">
@@ -4806,9 +4816,15 @@ namespace AlibabaCloud.SDK.FC20230330
         /// <returns>
         /// ListFunctionsResponse
         /// </returns>
-        public async Task<ListFunctionsResponse> ListFunctionsWithOptionsAsync(ListFunctionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListFunctionsResponse> ListFunctionsWithOptionsAsync(ListFunctionsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListFunctionsShrinkRequest request = new ListFunctionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FcVersion))
             {
@@ -4825,6 +4841,10 @@ namespace AlibabaCloud.SDK.FC20230330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
             {
                 query["prefix"] = request.Prefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

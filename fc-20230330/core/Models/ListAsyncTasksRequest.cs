@@ -103,14 +103,15 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <summary>
         /// <para>The state of asynchronous tasks. The following items list the states of an asynchronous task:</para>
         /// <list type="bullet">
-        /// <item><description>Enqueued: The asynchronous invocation is enqueued and is waiting to be executed.</description></item>
+        /// <item><description>Enqueued: The asynchronous invocation is enqueued and waiting to be executed.</description></item>
+        /// <item><description>Dequeued: The asynchronous invocation is dequeued and waiting to be triggered.</description></item>
+        /// <item><description>Running: The invocation is being executed.</description></item>
         /// <item><description>Succeeded: The invocation is successful.</description></item>
         /// <item><description>Failed: The invocation fails.</description></item>
-        /// <item><description>Running: The invocation is being executed.</description></item>
         /// <item><description>Stopped: The invocation is terminated.</description></item>
         /// <item><description>Stopping: The invocation is being terminated.</description></item>
+        /// <item><description>Expired: The maximum validity period of messages is specified for asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period of messages expires.</description></item>
         /// <item><description>Invalid: The invocation is invalid and not executed due to specific reasons. For example, the function is deleted.</description></item>
-        /// <item><description>Expired: The maximum validity period of messages is specified for asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period has elapsed.</description></item>
         /// <item><description>Retrying: The asynchronous invocation is being retried due to an execution error.</description></item>
         /// </list>
         /// 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class ListFunctionsRequest : TeaModel {
+    public class ListFunctionsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The version of Function Compute to which the functions belong. Valid values: v3 and v2. v3: only lists functions of Function Compute 3.0. v2: only lists functions of Function Compute 2.0. By default, this parameter is left empty and functions in both Function Compute 3.0 and Function Compute 2.0 are listed.</para>
         /// 
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         [NameInMap("tags")]
         [Validation(Required=false)]
-        public List<Tag> Tags { get; set; }
+        public string TagsShrink { get; set; }
 
     }
 

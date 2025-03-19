@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string ResourceIdShrink { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The type of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

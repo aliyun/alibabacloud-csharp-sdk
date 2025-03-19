@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.FC20230330</AssemblyName>
-    <Version>4.1.6</Version>
+    <Version>4.1.7</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud Function Compute (20230330) SDK Library for .NET</Description>
@@ -41,7 +41,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.19"/>
-    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.12"/>
+    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.13"/>
     <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.1.2"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
     <PackageReference Include="Tea" Version="1.1.3"/>
