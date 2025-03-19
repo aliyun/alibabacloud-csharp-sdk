@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Appstream_center20210903.Models
 {
-    public class ListLFUAppResponse : TeaModel {
+    public class ResetAppResourcesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ListLFUAppResponseBody Body { get; set; }
+        public ResetAppResourcesResponseBody Body { get; set; }
 
     }
 

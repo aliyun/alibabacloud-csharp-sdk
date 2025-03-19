@@ -33,17 +33,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         [Validation(Required=false)]
         public GetConnectionTicketResponseBodyBindQueueInfo BindQueueInfo { get; set; }
         public class GetConnectionTicketResponseBodyBindQueueInfo : TeaModel {
-            [NameInMap("Length")]
+            [NameInMap("QueueStatus")]
             [Validation(Required=false)]
-            public int? Length { get; set; }
+            public string QueueStatus { get; set; }
 
             [NameInMap("Rank")]
             [Validation(Required=false)]
             public int? Rank { get; set; }
 
-            [NameInMap("RemainingTimeMin")]
+            [NameInMap("ReadyTimeout")]
             [Validation(Required=false)]
-            public int? RemainingTimeMin { get; set; }
+            public long? ReadyTimeout { get; set; }
+
+            [NameInMap("RemainingTime")]
+            [Validation(Required=false)]
+            public long? RemainingTime { get; set; }
 
             [NameInMap("RequestKey")]
             [Validation(Required=false)]
@@ -53,9 +57,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
             [Validation(Required=false)]
             public string TargetId { get; set; }
 
-            [NameInMap("WaitTimeMin")]
+            [NameInMap("WaitTime")]
             [Validation(Required=false)]
-            public int? WaitTimeMin { get; set; }
+            public long? WaitTime { get; set; }
 
         }
 
