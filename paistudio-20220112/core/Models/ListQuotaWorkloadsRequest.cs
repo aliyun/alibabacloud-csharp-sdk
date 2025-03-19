@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string UserIds { get; set; }
 
+        [NameInMap("WithHistoricalData")]
+        [Validation(Required=false)]
+        public bool? WithHistoricalData { get; set; }
+
         [NameInMap("WorkloadCreatedTimeRange")]
         [Validation(Required=false)]
         public TimeRangeFilter WorkloadCreatedTimeRange { get; set; }

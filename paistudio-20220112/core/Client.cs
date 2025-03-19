@@ -5014,6 +5014,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             {
                 query["GPUType"] = request.GPUType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineGroupIds))
+            {
+                query["MachineGroupIds"] = request.MachineGroupIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNames))
             {
                 query["NodeNames"] = request.NodeNames;
@@ -5122,6 +5126,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GPUType))
             {
                 query["GPUType"] = request.GPUType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineGroupIds))
+            {
+                query["MachineGroupIds"] = request.MachineGroupIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeNames))
             {
@@ -5306,6 +5314,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             {
                 query["UserIds"] = request.UserIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithHistoricalData))
+            {
+                query["WithHistoricalData"] = request.WithHistoricalData;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkloadCreatedTimeRange))
             {
                 query["WorkloadCreatedTimeRange"] = request.WorkloadCreatedTimeRange;
@@ -5426,6 +5438,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIds))
             {
                 query["UserIds"] = request.UserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithHistoricalData))
+            {
+                query["WithHistoricalData"] = request.WithHistoricalData;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkloadCreatedTimeRange))
             {
@@ -5790,6 +5806,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             {
                 query["EcsSpec"] = request.EcsSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineGroupIDs))
+            {
+                query["MachineGroupIDs"] = request.MachineGroupIDs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -5886,6 +5906,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsSpec))
             {
                 query["EcsSpec"] = request.EcsSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineGroupIDs))
+            {
+                query["MachineGroupIDs"] = request.MachineGroupIDs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {

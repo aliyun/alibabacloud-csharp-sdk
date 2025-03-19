@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string EcsSpec { get; set; }
 
+        [NameInMap("MachineGroupIDs")]
+        [Validation(Required=false)]
+        public string MachineGroupIDs { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>test</para>

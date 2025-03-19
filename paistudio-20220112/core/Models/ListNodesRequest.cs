@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string GPUType { get; set; }
 
+        [NameInMap("MachineGroupIds")]
+        [Validation(Required=false)]
+        public string MachineGroupIds { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>lingjxxxx</para>

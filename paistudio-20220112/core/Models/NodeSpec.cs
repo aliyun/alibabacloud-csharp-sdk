@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class NodeSpec : TeaModel {
+        [NameInMap("BindingPolicy")]
+        [Validation(Required=false)]
+        public BindingPolicy BindingPolicy { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>10</para>

@@ -1,3 +1,8 @@
+2025-03-19 Version: 2.1.2
+- Update API ListNodes: add param MachineGroupIds.
+- Update API ListResourceGroupMachineGroups: add param MachineGroupIDs.
+
+
 2025-01-23 Version: 2.1.1
 - Generated csharp 2022-01-12 for PaiStudio.
 
