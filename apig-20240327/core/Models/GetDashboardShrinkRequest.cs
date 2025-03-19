@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetDashboardShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>zh: Chinese
+        /// en: English</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -17,15 +20,30 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// <para>API ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>api-c9uuekzmia8q2****</para>
+        /// </summary>
         [NameInMap("apiId")]
         [Validation(Required=false)]
         public string ApiId { get; set; }
 
+        /// <summary>
+        /// <para>Filter configuration</para>
+        /// </summary>
         [NameInMap("filter")]
         [Validation(Required=false)]
         public string FilterShrink { get; set; }
 
         /// <summary>
+        /// <para>Dashboard name:</para>
+        /// <list type="bullet">
+        /// <item><description>LOG: Access log</description></item>
+        /// <item><description>PLUGIN: Plugin log</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>PLUGIN</para>
         /// </summary>
@@ -34,6 +52,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Plugin ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pls-dn82a9djd8z****</para>
         /// </summary>
@@ -42,6 +62,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PluginClassId { get; set; }
 
         /// <summary>
+        /// <para>Dashboard source:</para>
+        /// <list type="bullet">
+        /// <item><description>SLS: Log dashboard</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>SLS</para>
         /// </summary>

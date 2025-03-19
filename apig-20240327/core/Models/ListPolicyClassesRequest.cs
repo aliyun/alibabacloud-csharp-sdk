@@ -10,6 +10,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPolicyClassesRequest : TeaModel {
         /// <summary>
+        /// <para>Types of attachment points supported by the policy.</para>
+        /// <list type="bullet">
+        /// <item><description>HttpApi: HttpApi.</description></item>
+        /// <item><description>Operation: Operation of HttpApi.</description></item>
+        /// <item><description>GatewayRoute: Gateway route.</description></item>
+        /// <item><description>GatewayService: Gateway service.</description></item>
+        /// <item><description>GatewayServicePort: Gateway service port.</description></item>
+        /// <item><description>Domain: Gateway domain.</description></item>
+        /// <item><description>Gateway: Gateway.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Operation</para>
         /// </summary>
@@ -18,6 +29,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
+        /// <para>Direction of the policy.</para>
+        /// <list type="bullet">
+        /// <item><description>Outbound: OutBound.</description></item>
+        /// <item><description>Inbound: InBound.</description></item>
+        /// <item><description>Both directions: Both.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>InBound</para>
         /// </summary>
@@ -26,6 +44,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Direction { get; set; }
 
         /// <summary>
+        /// <para>Page number, default is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +54,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,6 +64,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Type of the policy template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FlowControl</para>
         /// </summary>

@@ -36,10 +36,22 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string Algorithm { get; set; }
 
+            /// <summary>
+            /// <para>CA certificate identifier</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>876****-cn-hangzhou</para>
+            /// </summary>
             [NameInMap("caCertIdentifier")]
             [Validation(Required=false)]
             public string CaCertIdentifier { get; set; }
 
+            /// <summary>
+            /// <para>Certificate Identifier</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>645****-cn-hangzhou</para>
+            /// </summary>
             [NameInMap("certIdentifier")]
             [Validation(Required=false)]
             public string CertIdentifier { get; set; }
@@ -53,6 +65,23 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [NameInMap("certName")]
             [Validation(Required=false)]
             public string CertName { get; set; }
+
+            /// <summary>
+            /// <para>Client CA Cert</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>-----BEGIN CERTIFICATE-----
+            /// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/mpTQwDQYJKoZIhvcNAQEL
+            /// BxSbrGeJ8i0576Gn7Qezyho9abZOUhGaPeoB
+            /// AIHWWl428uUSG/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            /// yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy+ZMJ8r4swA4swHwYDVR0jBBgwFoAU
+            /// qroVyYKk7ylhcSn+ZMJ8r4swA4swDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0B
+            /// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=
+            /// -----END CERTIFICATE-----</para>
+            /// </summary>
+            [NameInMap("clientCACert")]
+            [Validation(Required=false)]
+            public string ClientCACert { get; set; }
 
             /// <summary>
             /// <para>Where it was created from.</para>
@@ -125,6 +154,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Issuer { get; set; }
 
             /// <summary>
+            /// <para>true</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("mTLSEnabled")]
+            [Validation(Required=false)]
+            public bool? MTLSEnabled { get; set; }
+
+            /// <summary>
             /// <para>Domain name.</para>
             /// 
             /// <b>Example:</b>
@@ -168,6 +207,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-aekzvlxzgo5b4si</para>
+            /// </summary>
             [NameInMap("resourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -182,20 +227,35 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string Sans { get; set; }
 
+            /// <summary>
+            /// <para>The array of domain related resource information</para>
+            /// </summary>
             [NameInMap("statisticsInfo")]
             [Validation(Required=false)]
             public GetDomainResponseBodyDataStatisticsInfo StatisticsInfo { get; set; }
             public class GetDomainResponseBodyDataStatisticsInfo : TeaModel {
+                /// <summary>
+                /// <para>The array of related resource infomations.</para>
+                /// </summary>
                 [NameInMap("resourceStatistics")]
                 [Validation(Required=false)]
                 public List<ResourceStatistic> ResourceStatistics { get; set; }
 
+                /// <summary>
+                /// <para>The total number of entries returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("totalCount")]
                 [Validation(Required=false)]
                 public string TotalCount { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The TLS cipher suites config.</para>
+            /// </summary>
             [NameInMap("tlsCipherSuitesConfig")]
             [Validation(Required=false)]
             public TlsCipherSuitesConfig TlsCipherSuitesConfig { get; set; }

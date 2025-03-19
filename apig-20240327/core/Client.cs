@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Resource Group Transfer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Resource Group Transfer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Resource Group Transfer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Resource Group Transfer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -400,6 +400,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["certIdentifier"] = request.CertIdentifier;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCACert))
+            {
+                body["clientCACert"] = request.ClientCACert;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceHttps))
             {
                 body["forceHttps"] = request.ForceHttps;
@@ -407,6 +411,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Http2Option))
             {
                 body["http2Option"] = request.Http2Option;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MTLSEnabled))
+            {
+                body["mTLSEnabled"] = request.MTLSEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -494,6 +502,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["certIdentifier"] = request.CertIdentifier;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCACert))
+            {
+                body["clientCACert"] = request.ClientCACert;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceHttps))
             {
                 body["forceHttps"] = request.ForceHttps;
@@ -501,6 +513,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Http2Option))
             {
                 body["http2Option"] = request.Http2Option;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MTLSEnabled))
+            {
+                body["mTLSEnabled"] = request.MTLSEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -1199,7 +1215,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a route for HttpApi</para>
+        /// <para>Creates a route for an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1272,7 +1288,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a route for HttpApi</para>
+        /// <para>Creates a route for an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1345,7 +1361,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a route for HttpApi</para>
+        /// <para>Creates a route for an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1364,7 +1380,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a route for HttpApi</para>
+        /// <para>Creates a route for an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1383,7 +1399,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建策略</para>
+        /// <para>Create Policy</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1448,7 +1464,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建策略</para>
+        /// <para>Create Policy</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1513,7 +1529,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建策略</para>
+        /// <para>Create Policy</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1532,7 +1548,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建策略</para>
+        /// <para>Create Policy</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1551,7 +1567,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建策略资源挂载</para>
+        /// <para>Create policy resource mount</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1620,7 +1636,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建策略资源挂载</para>
+        /// <para>Create policy resource mount</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1689,7 +1705,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建策略资源挂载</para>
+        /// <para>Create policy resource mount</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1708,7 +1724,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建策略资源挂载</para>
+        /// <para>Create policy resource mount</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1727,8 +1743,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务</para>
+        /// <para>Create Service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The interface supports creating multiple services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateServiceRequest
@@ -1792,8 +1813,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务</para>
+        /// <para>Create Service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The interface supports creating multiple services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateServiceRequest
@@ -1857,8 +1883,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务</para>
+        /// <para>Create Service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The interface supports creating multiple services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateServiceRequest
@@ -1876,8 +1907,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务</para>
+        /// <para>Create Service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The interface supports creating multiple services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateServiceRequest
@@ -2411,7 +2447,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete HTTP API</para>
+        /// <para>Deletes an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2454,7 +2490,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete HTTP API</para>
+        /// <para>Deletes an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2497,7 +2533,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete HTTP API</para>
+        /// <para>Deletes an HTTP API.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2512,7 +2548,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete HTTP API</para>
+        /// <para>Deletes an HTTP API.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2759,7 +2795,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除策略</para>
+        /// <para>Delete Policy</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2802,7 +2838,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除策略</para>
+        /// <para>Delete Policy</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2845,7 +2881,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除策略</para>
+        /// <para>Delete Policy</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2860,7 +2896,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除策略</para>
+        /// <para>Delete Policy</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2875,7 +2911,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除策略资源挂载</para>
+        /// <para>Delete policy resource attachment</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2918,7 +2954,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除策略资源挂载</para>
+        /// <para>Delete policy resource attachment</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2961,7 +2997,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除策略资源挂载</para>
+        /// <para>Delete policy resource attachment</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2976,7 +3012,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除策略资源挂载</para>
+        /// <para>Delete policy resource attachment</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2991,7 +3027,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署HttpApi</para>
+        /// <para>Deploy HttpApi</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3048,7 +3084,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署HttpApi</para>
+        /// <para>Deploy HttpApi</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3105,7 +3141,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署HttpApi</para>
+        /// <para>Deploy HttpApi</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3124,7 +3160,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署HttpApi</para>
+        /// <para>Deploy HttpApi</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3259,7 +3295,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取监控/日志大盘接口</para>
+        /// <para>Get Monitoring/Logging Dashboard Interface</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3338,7 +3374,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取监控/日志大盘接口</para>
+        /// <para>Get Monitoring/Logging Dashboard Interface</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3417,7 +3453,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取监控/日志大盘接口</para>
+        /// <para>Get Monitoring/Logging Dashboard Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3436,7 +3472,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取监控/日志大盘接口</para>
+        /// <para>Get Monitoring/Logging Dashboard Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4355,7 +4391,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询策略资源挂载</para>
+        /// <para>Query Policy Resource Attachment</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4398,7 +4434,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询策略资源挂载</para>
+        /// <para>Query Policy Resource Attachment</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4441,7 +4477,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询策略资源挂载</para>
+        /// <para>Query Policy Resource Attachment</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4456,7 +4492,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询策略资源挂载</para>
+        /// <para>Query Policy Resource Attachment</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4471,7 +4507,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源概览信息</para>
+        /// <para>Get resource overview information</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4514,7 +4550,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源概览信息</para>
+        /// <para>Get resource overview information</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4557,7 +4593,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源概览信息</para>
+        /// <para>Get resource overview information</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4572,7 +4608,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源概览信息</para>
+        /// <para>Get resource overview information</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4587,7 +4623,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务详情</para>
+        /// <para>Get Service Details</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4630,7 +4666,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务详情</para>
+        /// <para>Get Service Details</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4673,7 +4709,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务详情</para>
+        /// <para>Get Service Details</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4688,7 +4724,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务详情</para>
+        /// <para>Get Service Details</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4703,7 +4739,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取链路追踪配置</para>
+        /// <para>Retrieve Tracing Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4756,7 +4792,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取链路追踪配置</para>
+        /// <para>Retrieve Tracing Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4809,7 +4845,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取链路追踪配置</para>
+        /// <para>Retrieve Tracing Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4828,7 +4864,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取链路追踪配置</para>
+        /// <para>Retrieve Tracing Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5875,7 +5911,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建HttpApi的路由</para>
+        /// <para>Create a route for HttpApi</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5976,7 +6012,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建HttpApi的路由</para>
+        /// <para>Create a route for HttpApi</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6077,7 +6113,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建HttpApi的路由</para>
+        /// <para>Create a route for HttpApi</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6096,7 +6132,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建HttpApi的路由</para>
+        /// <para>Create a route for HttpApi</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6363,7 +6399,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListPolicyClasses。</para>
+        /// <para>ListPolicyClasses</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6432,7 +6468,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListPolicyClasses。</para>
+        /// <para>ListPolicyClasses</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6501,7 +6537,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListPolicyClasses。</para>
+        /// <para>ListPolicyClasses</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6520,7 +6556,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListPolicyClasses。</para>
+        /// <para>ListPolicyClasses</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6539,7 +6575,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务列表</para>
+        /// <para>Get Service List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6612,7 +6648,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务列表</para>
+        /// <para>Get Service List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6685,7 +6721,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务列表</para>
+        /// <para>Get Service List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6704,7 +6740,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务列表</para>
+        /// <para>Get Service List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6723,7 +6759,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSslCerts。</para>
+        /// <para>ListSslCerts</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6788,7 +6824,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSslCerts。</para>
+        /// <para>ListSslCerts</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6853,7 +6889,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSslCerts。</para>
+        /// <para>ListSslCerts</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6872,7 +6908,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSslCerts。</para>
+        /// <para>ListSslCerts</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6891,7 +6927,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云原生API网关region下的可用区</para>
+        /// <para>Retrieve the availability zones under a cloud-native API gateway region</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6934,7 +6970,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云原生API网关region下的可用区</para>
+        /// <para>Retrieve the availability zones under a cloud-native API gateway region</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6977,7 +7013,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云原生API网关region下的可用区</para>
+        /// <para>Retrieve the availability zones under a cloud-native API gateway region</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6992,7 +7028,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云原生API网关region下的可用区</para>
+        /// <para>Retrieve the availability zones under a cloud-native API gateway region</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7123,8 +7159,165 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>取消部署HttpApi</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UndeployHttpApiRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UndeployHttpApiResponse
+        /// </returns>
+        public UndeployHttpApiResponse UndeployHttpApiWithOptions(string httpApiId, UndeployHttpApiRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                body["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteId))
+            {
+                body["routeId"] = request.RouteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UndeployHttpApi",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-apis/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(httpApiId) + "/undeploy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UndeployHttpApiResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UndeployHttpApiResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消部署HttpApi</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UndeployHttpApiRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UndeployHttpApiResponse
+        /// </returns>
+        public async Task<UndeployHttpApiResponse> UndeployHttpApiWithOptionsAsync(string httpApiId, UndeployHttpApiRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentId))
+            {
+                body["environmentId"] = request.EnvironmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteId))
+            {
+                body["routeId"] = request.RouteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UndeployHttpApi",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-apis/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(httpApiId) + "/undeploy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UndeployHttpApiResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UndeployHttpApiResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消部署HttpApi</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UndeployHttpApiRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UndeployHttpApiResponse
+        /// </returns>
+        public UndeployHttpApiResponse UndeployHttpApi(string httpApiId, UndeployHttpApiRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UndeployHttpApiWithOptions(httpApiId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消部署HttpApi</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UndeployHttpApiRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UndeployHttpApiResponse
+        /// </returns>
+        public async Task<UndeployHttpApiResponse> UndeployHttpApiAsync(string httpApiId, UndeployHttpApiRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UndeployHttpApiWithOptionsAsync(httpApiId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>UpdateDomain</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>只有类型为<b>容器服务</b>的来源允许更新监听Ingress的配置。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDomainRequest
@@ -7151,6 +7344,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["certIdentifier"] = request.CertIdentifier;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCACert))
+            {
+                body["clientCACert"] = request.ClientCACert;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceHttps))
             {
                 body["forceHttps"] = request.ForceHttps;
@@ -7158,6 +7355,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Http2Option))
             {
                 body["http2Option"] = request.Http2Option;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MTLSEnabled))
+            {
+                body["mTLSEnabled"] = request.MTLSEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
             {
@@ -7207,6 +7408,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>UpdateDomain</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>只有类型为<b>容器服务</b>的来源允许更新监听Ingress的配置。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateDomainRequest
         /// </param>
@@ -7232,6 +7438,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["certIdentifier"] = request.CertIdentifier;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCACert))
+            {
+                body["clientCACert"] = request.ClientCACert;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceHttps))
             {
                 body["forceHttps"] = request.ForceHttps;
@@ -7239,6 +7449,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Http2Option))
             {
                 body["http2Option"] = request.Http2Option;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MTLSEnabled))
+            {
+                body["mTLSEnabled"] = request.MTLSEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
             {
@@ -7288,6 +7502,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>UpdateDomain</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>只有类型为<b>容器服务</b>的来源允许更新监听Ingress的配置。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateDomainRequest
         /// </param>
@@ -7306,6 +7525,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>UpdateDomain</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>只有类型为<b>容器服务</b>的来源允许更新监听Ingress的配置。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDomainRequest
@@ -7787,7 +8011,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update HTTP API</para>
+        /// <para>Updates an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7872,7 +8096,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update HTTP API</para>
+        /// <para>Updates an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7957,7 +8181,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update HTTP API</para>
+        /// <para>Updates an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7976,7 +8200,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update HTTP API</para>
+        /// <para>Updates an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8315,7 +8539,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新策略</para>
+        /// <para>Update Policy</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8376,7 +8600,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新策略</para>
+        /// <para>Update Policy</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8437,7 +8661,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新策略</para>
+        /// <para>Update Policy</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8456,7 +8680,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新策略</para>
+        /// <para>Update Policy</para>
         /// </summary>
         /// 
         /// <param name="request">

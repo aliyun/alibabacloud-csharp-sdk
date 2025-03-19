@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetResourceOverviewResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Resource information.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetResourceOverviewResponseBodyData Data { get; set; }
         public class GetResourceOverviewResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>API information.</para>
+            /// </summary>
             [NameInMap("api")]
             [Validation(Required=false)]
             public GetResourceOverviewResponseBodyDataApi Api { get; set; }
             public class GetResourceOverviewResponseBodyDataApi : TeaModel {
                 /// <summary>
+                /// <para>Number of published APIs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? PublishedCount { get; set; }
 
                 /// <summary>
+                /// <para>Number of APIs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -43,11 +55,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             }
 
+            /// <summary>
+            /// <para>Gateway information.</para>
+            /// </summary>
             [NameInMap("gateway")]
             [Validation(Required=false)]
             public GetResourceOverviewResponseBodyDataGateway Gateway { get; set; }
             public class GetResourceOverviewResponseBodyDataGateway : TeaModel {
                 /// <summary>
+                /// <para>Number of running gateways.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -56,6 +73,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? RunningCount { get; set; }
 
                 /// <summary>
+                /// <para>Number of gateway instances.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -68,6 +87,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>Response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -76,6 +97,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DD19A442-93C5-5C97-AFA0-B9C57EBD781B</para>
         /// </summary>

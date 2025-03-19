@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }
 
+        [NameInMap("clientCACert")]
+        [Validation(Required=false)]
+        public string ClientCACert { get; set; }
+
         [NameInMap("createFrom")]
         [Validation(Required=false)]
         public string CreateFrom { get; set; }
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("forceHttps")]
         [Validation(Required=false)]
         public bool? ForceHttps { get; set; }
+
+        [NameInMap("mTLSEnabled")]
+        [Validation(Required=false)]
+        public bool? MTLSEnabled { get; set; }
 
         [NameInMap("name")]
         [Validation(Required=false)]

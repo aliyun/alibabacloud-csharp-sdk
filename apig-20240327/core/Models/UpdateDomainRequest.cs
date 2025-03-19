@@ -9,13 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateDomainRequest : TeaModel {
+        /// <summary>
+        /// <para>CA certificate identifier</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1ef1da5f-38ed-69b3-****-037781890265</para>
+        /// </summary>
         [NameInMap("caCertIdentifier")]
         [Validation(Required=false)]
         public string CaCertIdentifier { get; set; }
 
+        /// <summary>
+        /// <para>Certificate identifier</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1ef1da5f-38ed-69b3-****-037781890265</para>
+        /// </summary>
         [NameInMap("certIdentifier")]
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }
+
+        /// <summary>
+        /// <para>Client CA Certificate</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-----BEGIN CERTIFICATE-----
+        /// MIIFBTCCAu2gAwIBAgIUORLpYPGSFD1YOP6PMbE7Wd/mpTQwDQYJKoZIhvcNAQEL
+        /// BQAwE************************************************2VwVOJ2gqX3
+        /// YuGaxvIbDy0iQJ1GMerPRyzJTeVEtdIKT29u0PdFRr4KZWom35qX7G4=
+        /// -----END CERTIFICATE-----</para>
+        /// </summary>
+        [NameInMap("clientCACert")]
+        [Validation(Required=false)]
+        public string ClientCACert { get; set; }
 
         /// <summary>
         /// <para>Set the HTTPS protocol type, whether to enable forced HTTPS redirection.</para>
@@ -36,6 +62,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("http2Option")]
         [Validation(Required=false)]
         public string Http2Option { get; set; }
+
+        /// <summary>
+        /// <para>Whether to enable mTLS mutual authentication</para>
+        /// </summary>
+        [NameInMap("mTLSEnabled")]
+        [Validation(Required=false)]
+        public bool? MTLSEnabled { get; set; }
 
         /// <summary>
         /// <para>The protocol type supported by the domain.</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateServiceResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
         /// </summary>
@@ -17,10 +19,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Response data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateServiceResponseBodyData Data { get; set; }
         public class CreateServiceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>List of service IDs.</para>
+            /// </summary>
             [NameInMap("serviceIds")]
             [Validation(Required=false)]
             public List<string> ServiceIds { get; set; }
@@ -28,6 +36,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>Response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -36,6 +46,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C67DED2B-F19B-5BEC-88C1-D6EB854CD0D4</para>
         /// </summary>

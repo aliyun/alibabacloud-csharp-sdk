@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListSslCertsRequest : TeaModel {
         /// <summary>
+        /// <para>Name matching keyword.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ali</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CertNameLike { get; set; }
 
         /// <summary>
+        /// <para>Domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>fun.iot.evideocloud.com.cn</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>Page number, default is 1</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size, default is 10</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

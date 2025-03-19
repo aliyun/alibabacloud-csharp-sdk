@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdatePolicyRequest : TeaModel {
         /// <summary>
+        /// <para>Policy configuration</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Config { get; set; }
 
+        /// <summary>
+        /// <para>Description</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>this is a timeout policy description</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Policy name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

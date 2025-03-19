@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetDashboardResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>Response data</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetDashboardResponseBodyData Data { get; set; }
         public class GetDashboardResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Gateway unique identifier</para>
+            /// 
             /// <b>Example:</b>
             /// <para>gw-co370icmjeu****</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
+            /// <para>Dashboard name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PLUGIN</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Dashboard title</para>
+            /// 
             /// <b>Example:</b>
             /// <para>APIG Plugin</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Title { get; set; }
 
             /// <summary>
+            /// <para>Dashboard URL link</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://sls.console.aliyun.com/lognext/project/xxxxx">https://sls.console.aliyun.com/lognext/project/xxxxx</a></para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>Backend error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -72,7 +89,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</para>
@@ -82,6 +99,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the request was successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

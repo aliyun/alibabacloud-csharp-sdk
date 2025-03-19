@@ -314,6 +314,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// <para>List of sub domain information</para>
+                /// </summary>
                 [NameInMap("subDomainInfos")]
                 [Validation(Required=false)]
                 public List<SubDomainInfo> SubDomainInfos { get; set; }
