@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class GetResourceDirectoryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CD76D376-2517-4924-92C5-DBC52262F93A</para>
         /// </summary>
@@ -17,11 +19,22 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The information about the resource directory.</para>
+        /// </summary>
         [NameInMap("ResourceDirectory")]
         [Validation(Required=false)]
         public GetResourceDirectoryResponseBodyResourceDirectory ResourceDirectory { get; set; }
         public class GetResourceDirectoryResponseBodyResourceDirectory : TeaModel {
             /// <summary>
+            /// <para>The status of the Control Policy feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Enabled: The feature is enabled.</description></item>
+            /// <item><description>PendingEnable: The feature is being enabled.</description></item>
+            /// <item><description>Disabled: The feature is disabled.</description></item>
+            /// <item><description>PendingDisable: The feature is being disabled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Enabled</para>
             /// </summary>
@@ -30,6 +43,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             public string ControlPolicyStatus { get; set; }
 
             /// <summary>
+            /// <para>The time when the resource directory was enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2019-02-18T15:32:10.473Z</para>
             /// </summary>
@@ -37,11 +52,19 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The real-name verification information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>*** Co., Ltd.</para>
+            /// </summary>
             [NameInMap("IdentityInformation")]
             [Validation(Required=false)]
             public string IdentityInformation { get; set; }
 
             /// <summary>
+            /// <para>The ID of the management account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>172845045600****</para>
             /// </summary>
@@ -50,6 +73,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             public string MasterAccountId { get; set; }
 
             /// <summary>
+            /// <para>The name of the management account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>aliyun-admin</para>
             /// </summary>
@@ -57,11 +82,27 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             [Validation(Required=false)]
             public string MasterAccountName { get; set; }
 
+            /// <summary>
+            /// <para>The status of the Member Display Name Synchronization feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Enabled</description></item>
+            /// <item><description>Disabled</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Enabled</para>
+            /// </summary>
             [NameInMap("MemberAccountDisplayNameSyncStatus")]
             [Validation(Required=false)]
             public string MemberAccountDisplayNameSyncStatus { get; set; }
 
             /// <summary>
+            /// <para>The status of the member deletion feature. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Enabled: The feature is enabled. You can call the <a href="~~DeleteAccount~~">DeleteAccount</a> operation to delete members of the resource account type.</description></item>
+            /// <item><description>Disabled: The feature is disabled. You cannot delete members of the resource account type.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Enabled</para>
             /// </summary>
@@ -70,6 +111,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             public string MemberDeletionStatus { get; set; }
 
             /// <summary>
+            /// <para>The ID of the resource directory.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rd-St****</para>
             /// </summary>
@@ -78,6 +121,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             public string ResourceDirectoryId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the Root folder.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>r-Zo****</para>
             /// </summary>

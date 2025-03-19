@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number.</para>
+        /// <para>Page starts from page 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -63,14 +63,29 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         [Validation(Required=false)]
         public string PolicyType { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListControlPoliciesRequestTag> Tag { get; set; }
         public class ListControlPoliciesRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tag_key</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tag_value</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class ListControlPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the access control policies.</para>
+        /// <para>The access control policies.</para>
         /// </summary>
         [NameInMap("ControlPolicies")]
         [Validation(Required=false)]
@@ -98,6 +98,9 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                 [Validation(Required=false)]
                 public string PolicyType { get; set; }
 
+                /// <summary>
+                /// <para>The tags.</para>
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public ListControlPoliciesResponseBodyControlPoliciesControlPolicyTags Tags { get; set; }
@@ -106,10 +109,22 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
                     [Validation(Required=false)]
                     public List<ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag> Tag { get; set; }
                     public class ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag : TeaModel {
+                        /// <summary>
+                        /// <para>The tag key.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>tag_key</para>
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// <para>The tag value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>tag_value</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

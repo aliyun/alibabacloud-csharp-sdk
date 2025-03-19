@@ -5286,7 +5286,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>\<em>\</em>\* Co., Ltd.</para>
+        /// <para>Queries the information of a resource directory. If you use a management account to call this API operation, the system returns the information of the resource directory that is enabled by using the management account. If you use a member to call this operation, the system returns the information of</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5326,7 +5326,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>\<em>\</em>\* Co., Ltd.</para>
+        /// <para>Queries the information of a resource directory. If you use a management account to call this API operation, the system returns the information of the resource directory that is enabled by using the management account. If you use a member to call this operation, the system returns the information of</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5366,7 +5366,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>\<em>\</em>\* Co., Ltd.</para>
+        /// <para>Queries the information of a resource directory. If you use a management account to call this API operation, the system returns the information of the resource directory that is enabled by using the management account. If you use a member to call this operation, the system returns the information of</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5380,7 +5380,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>\<em>\</em>\* Co., Ltd.</para>
+        /// <para>Queries the information of a resource directory. If you use a management account to call this API operation, the system returns the information of the resource directory that is enabled by using the management account. If you use a member to call this operation, the system returns the information of</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5560,7 +5560,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the members in a resource directory.</para>
+        /// <para>Queries a list of members in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5638,7 +5638,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the members in a resource directory.</para>
+        /// <para>Queries a list of members in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5716,7 +5716,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the members in a resource directory.</para>
+        /// <para>Queries a list of members in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5739,7 +5739,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the members in a resource directory.</para>
+        /// <para>Queries a list of members in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9730,6 +9730,140 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Enables or disables the Member Display Name Synchronization feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetMemberDisplayNameSyncStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetMemberDisplayNameSyncStatusResponse
+        /// </returns>
+        public SetMemberDisplayNameSyncStatusResponse SetMemberDisplayNameSyncStatusWithOptions(SetMemberDisplayNameSyncStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetMemberDisplayNameSyncStatus",
+                Version = "2022-04-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SetMemberDisplayNameSyncStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SetMemberDisplayNameSyncStatusResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Member Display Name Synchronization feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetMemberDisplayNameSyncStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetMemberDisplayNameSyncStatusResponse
+        /// </returns>
+        public async Task<SetMemberDisplayNameSyncStatusResponse> SetMemberDisplayNameSyncStatusWithOptionsAsync(SetMemberDisplayNameSyncStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetMemberDisplayNameSyncStatus",
+                Version = "2022-04-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SetMemberDisplayNameSyncStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SetMemberDisplayNameSyncStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Member Display Name Synchronization feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetMemberDisplayNameSyncStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetMemberDisplayNameSyncStatusResponse
+        /// </returns>
+        public SetMemberDisplayNameSyncStatusResponse SetMemberDisplayNameSyncStatus(SetMemberDisplayNameSyncStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetMemberDisplayNameSyncStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Member Display Name Synchronization feature.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetMemberDisplayNameSyncStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetMemberDisplayNameSyncStatusResponse
+        /// </returns>
+        public async Task<SetMemberDisplayNameSyncStatusResponse> SetMemberDisplayNameSyncStatusAsync(SetMemberDisplayNameSyncStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetMemberDisplayNameSyncStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds tags to the members in a resource directory.</para>
         /// </summary>
         /// 
@@ -10706,7 +10840,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新成员的结算账号</para>
+        /// <para>Updates the billing account of a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10759,7 +10893,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新成员的结算账号</para>
+        /// <para>Updates the billing account of a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10812,7 +10946,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新成员的结算账号</para>
+        /// <para>Updates the billing account of a member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10830,7 +10964,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新成员的结算账号</para>
+        /// <para>Updates the billing account of a member.</para>
         /// </summary>
         /// 
         /// <param name="request">

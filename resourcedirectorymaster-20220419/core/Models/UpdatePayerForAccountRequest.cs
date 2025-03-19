@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 {
     public class UpdatePayerForAccountRequest : TeaModel {
         /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         public string AccountId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the billing account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

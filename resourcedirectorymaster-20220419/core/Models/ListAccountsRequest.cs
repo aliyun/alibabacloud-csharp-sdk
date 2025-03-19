@@ -23,10 +23,23 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
         [Validation(Required=false)]
         public bool? IncludeTags { get; set; }
 
+        /// <summary>
+        /// <para>The number of entries per page. After you configure this parameter, token-based paging is preferentially used.</para>
+        /// <para>Valid values: 1 to 100. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TGlzdFJlc291cm****</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }

@@ -202,6 +202,12 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
 
         }
 
+        /// <summary>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TGlzdFJlc291cm****</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
