@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListServiceUsagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>LobeChat社区版</para>
+            /// <para>LobelChat</para>
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public long? UserAliUid { get; set; }
 
             /// <summary>
-            /// <para>The information about the applicant.</para>
+            /// <para>The information about the applicants.</para>
             /// </summary>
             [NameInMap("UserInformation")]
             [Validation(Required=false)]
@@ -141,6 +141,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 
         }
 
+        /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

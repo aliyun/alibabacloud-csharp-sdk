@@ -10,28 +10,6 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListServiceInstanceResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>End time of resource usage. 
-        /// <notice>Note: Only supports querying service instances on private deployments.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2022-03-01T12:00:00</para>
-        /// </summary>
-        [NameInMap("ExpireTimeEnd")]
-        [Validation(Required=false)]
-        public string ExpireTimeEnd { get; set; }
-
-        /// <summary>
-        /// <para>Start time of resource usage. 
-        /// <notice>Note: Only supports querying service instances on private deployments.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2022-01-01T12:00:00</para>
-        /// </summary>
-        [NameInMap("ExpireTimeStart")]
-        [Validation(Required=false)]
-        public string ExpireTimeStart { get; set; }
-
-        /// <summary>
         /// <para>The filter conditions. Vaild values:</para>
         /// <list type="bullet">
         /// <item><description><para>ExpireTimeStart：
@@ -109,20 +87,6 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the read-only instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
-        /// <item><description><b>Prepaid</b>: subscription</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Subscription</para>
-        /// </summary>
-        [NameInMap("PayType")]
-        [Validation(Required=false)]
-        public string PayType { get; set; }
-
-        /// <summary>
         /// <para>The region ID. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>cn-hangzhou: China (Hangzhou).</description></item>
@@ -135,13 +99,6 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of a resource.</para>
-        /// </summary>
-        [NameInMap("ResourceARN")]
-        [Validation(Required=false)]
-        public List<string> ResourceARN { get; set; }
 
         /// <summary>
         /// <para>The ID of the service instance.</para>
