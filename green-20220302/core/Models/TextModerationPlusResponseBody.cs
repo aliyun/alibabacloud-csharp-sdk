@@ -65,6 +65,71 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
             }
 
+            /// <summary>
+            /// <para>The level of prompt attack</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>none</para>
+            /// </summary>
+            [NameInMap("AttackLevel")]
+            [Validation(Required=false)]
+            public string AttackLevel { get; set; }
+
+            /// <summary>
+            /// <para>The result of prompt attack detect</para>
+            /// </summary>
+            [NameInMap("AttackResult")]
+            [Validation(Required=false)]
+            public List<TextModerationPlusResponseBodyDataAttackResult> AttackResult { get; set; }
+            public class TextModerationPlusResponseBodyDataAttackResult : TeaModel {
+                /// <summary>
+                /// <para>The level of prompt attack</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>none</para>
+                /// </summary>
+                [NameInMap("AttackLevel")]
+                [Validation(Required=false)]
+                public string AttackLevel { get; set; }
+
+                /// <summary>
+                /// <para>The confidence</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("Confidence")]
+                [Validation(Required=false)]
+                public float? Confidence { get; set; }
+
+                /// <summary>
+                /// <para>Description</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>safe</para>
+                /// </summary>
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// <para>The label</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>safe</para>
+                /// </summary>
+                [NameInMap("Label")]
+                [Validation(Required=false)]
+                public string Label { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The id of data</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>text1234</para>
+            /// </summary>
             [NameInMap("DataId")]
             [Validation(Required=false)]
             public string DataId { get; set; }
@@ -166,6 +231,62 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [NameInMap("Score")]
             [Validation(Required=false)]
             public float? Score { get; set; }
+
+            /// <summary>
+            /// <para>The level of sensitivity data</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>S0</para>
+            /// </summary>
+            [NameInMap("SensitiveLevel")]
+            [Validation(Required=false)]
+            public string SensitiveLevel { get; set; }
+
+            /// <summary>
+            /// <para>The result of sensitivity data detect</para>
+            /// </summary>
+            [NameInMap("SensitiveResult")]
+            [Validation(Required=false)]
+            public List<TextModerationPlusResponseBodyDataSensitiveResult> SensitiveResult { get; set; }
+            public class TextModerationPlusResponseBodyDataSensitiveResult : TeaModel {
+                /// <summary>
+                /// <para>Description</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xxx</para>
+                /// </summary>
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// <para>The label</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1234</para>
+                /// </summary>
+                [NameInMap("Label")]
+                [Validation(Required=false)]
+                public string Label { get; set; }
+
+                /// <summary>
+                /// <para>The sensitive data.</para>
+                /// </summary>
+                [NameInMap("SensitiveData")]
+                [Validation(Required=false)]
+                public List<string> SensitiveData { get; set; }
+
+                /// <summary>
+                /// <para>The level of sensitivity data</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>S1</para>
+                /// </summary>
+                [NameInMap("SensitiveLevel")]
+                [Validation(Required=false)]
+                public string SensitiveLevel { get; set; }
+
+            }
 
         }
 
