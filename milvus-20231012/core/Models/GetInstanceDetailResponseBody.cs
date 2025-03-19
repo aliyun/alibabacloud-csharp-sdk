@@ -323,6 +323,20 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [Validation(Required=false)]
             public string SgId { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetInstanceDetailResponseBodyDataTags> Tags { get; set; }
+            public class GetInstanceDetailResponseBodyDataTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2.4.1-1.0-0.0.1</para>

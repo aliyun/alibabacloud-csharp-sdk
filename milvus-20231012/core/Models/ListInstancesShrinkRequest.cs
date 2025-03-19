@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
-    public class ListInstancesRequest : TeaModel {
+    public class ListInstancesShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>c-123xxx</para>
@@ -59,17 +59,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<ListInstancesRequestTag> Tag { get; set; }
-        public class ListInstancesRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagShrink { get; set; }
 
     }
 

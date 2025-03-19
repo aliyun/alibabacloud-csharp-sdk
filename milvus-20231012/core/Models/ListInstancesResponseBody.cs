@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         [Validation(Required=false)]
         public List<ListInstancesResponseBodyData> Data { get; set; }
         public class ListInstancesResponseBodyData : TeaModel {
+            [NameInMap("AutoBackup")]
+            [Validation(Required=false)]
+            public bool? AutoBackup { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1718608505000</para>
@@ -228,6 +232,20 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [NameInMap("SgId")]
             [Validation(Required=false)]
             public string SgId { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListInstancesResponseBodyDataTags> Tags { get; set; }
+            public class ListInstancesResponseBodyDataTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>
