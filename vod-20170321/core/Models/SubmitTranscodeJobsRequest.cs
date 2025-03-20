@@ -65,6 +65,12 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string Priority { get; set; }
 
+        /// <summary>
+        /// <para>The custom identifier for deduplication. If you send a request, an error is returned if a request with the same identifier was sent in the last 7 days. A custom identifier can be up to 50 characters in length and can contain letters, digits, hyphens (-), and underscores (_). If you do not specify this parameter or leave this parameter empty, duplicate requests are not filtered.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5c62d40299034bbaa4c195da330****</para>
+        /// </summary>
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }

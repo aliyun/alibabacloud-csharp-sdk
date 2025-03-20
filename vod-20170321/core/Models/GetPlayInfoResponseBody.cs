@@ -40,6 +40,18 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public string Bitrate { get; set; }
 
+                /// <summary>
+                /// <para>The encoding type. The possible values are:</para>
+                /// <list type="bullet">
+                /// <item><description><para>H264</para>
+                /// </description></item>
+                /// <item><description><para>H265</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>H264</para>
+                /// </summary>
                 [NameInMap("CodecName")]
                 [Validation(Required=false)]
                 public string CodecName { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodSSLCertificateListRequest : TeaModel {
         /// <summary>
+        /// <para>The accelerated domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Valid values: integers from 1 to 1000.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The keyword that is used to query certificates.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>certabc</para>
         /// </summary>

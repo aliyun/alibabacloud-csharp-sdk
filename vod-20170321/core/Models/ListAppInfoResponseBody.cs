@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ModificationTime { get; set; }
 
             /// <summary>
-            /// <para>地域。</para>
+            /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>

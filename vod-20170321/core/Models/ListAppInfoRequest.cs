@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzko7fsuj****</para>

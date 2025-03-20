@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetTranscodeTaskResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The nonexistent job ID.</para>
+        /// </summary>
         [NameInMap("NonExistJobIds")]
         [Validation(Required=false)]
         public List<string> NonExistJobIds { get; set; }
@@ -23,108 +26,276 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>List of transcode job information.</para>
+        /// </summary>
         [NameInMap("TranscodeJobInfoList")]
         [Validation(Required=false)]
         public List<GetTranscodeTaskResponseBodyTranscodeJobInfoList> TranscodeJobInfoList { get; set; }
         public class GetTranscodeTaskResponseBodyTranscodeJobInfoList : TeaModel {
+            /// <summary>
+            /// <para>The complete time of the transcoding job. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (UTC time).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2019-02-26T08:30:16Z</para>
+            /// </summary>
             [NameInMap("CompleteTime")]
             [Validation(Required=false)]
             public string CompleteTime { get; set; }
 
+            /// <summary>
+            /// <para>The creation time of the transcoding job. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (UTC time).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2019-02-26T08:27:16Z</para>
+            /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            /// <summary>
+            /// <para>The clarity and audio quality types are defined as follows:</para>
+            /// <list type="bullet">
+            /// <item><description>SD: Standard Definition.</description></item>
+            /// <item><description>HD: High Definition.</description></item>
+            /// <item><description>FHD: Full High Definition.</description></item>
+            /// <item><description>OD: Original Definition.</description></item>
+            /// <item><description>2K: 2K.</description></item>
+            /// <item><description>4K: 4K.</description></item>
+            /// <item><description>SQ: Standard Audio Quality.</description></item>
+            /// <item><description>HQ: High Audio Quality.</description></item>
+            /// <item><description>AUTO: Adaptive Bitrate.  This is only available when the transcoding template is configured with packaging settings. Please refer to <a href="https://api.aliyun-inc.com/~~52839~~?spm=openapi-amp.newDocPublishment.0.0.65b0281fNUFIXC">the Transcoding Template Configuration - Package Setting</a> for more details.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>This value represents the clarity label configured in the transcoding template and does not indicate the actual resolution range of the transcoded output file.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>LD</para>
+            /// </summary>
             [NameInMap("Definition")]
             [Validation(Required=false)]
             public string Definition { get; set; }
 
+            /// <summary>
+            /// <para>The error code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>200</para>
+            /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
 
+            /// <summary>
+            /// <para>The error message returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ErrorMessage</para>
+            /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
+            /// <summary>
+            /// <para>The OSS address of the source file for transcoding.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/customerTrans/5b95e568f8e*****47f38e/31f1184c-*****b2a2-f94-c213f.wmv">http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/customerTrans/5b95e568f8e*****47f38e/31f1184c-*****b2a2-f94-c213f.wmv</a></para>
+            /// </summary>
             [NameInMap("InputFileUrl")]
             [Validation(Required=false)]
             public string InputFileUrl { get; set; }
 
+            /// <summary>
+            /// <para>Information about the transcoded output files.</para>
+            /// </summary>
             [NameInMap("OutputFile")]
             [Validation(Required=false)]
             public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile OutputFile { get; set; }
             public class GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile : TeaModel {
+                /// <summary>
+                /// <para>List of audio streams.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot;AudioStreamList&quot;: &quot;[{\&quot;Bitrate\&quot;:\&quot;64.533\&quot;,\&quot;ChannelLayout\&quot;:\&quot;stereo\&quot;,\&quot;Channels\&quot;:\&quot;2\&quot;,\&quot;CodecLongName\&quot;:\&quot;AAC (Advanced Audio Coding)\&quot;,\&quot;CodecName\&quot;:\&quot;aac\&quot;,\&quot;CodecTag\&quot;:\&quot;0x6134706d\&quot;,\&quot;CodecTagString\&quot;:\&quot;mp4a\&quot;,\&quot;CodecTimeBase\&quot;:\&quot;1/44100\&quot;,\&quot;Duration\&quot;:\&quot;12.615533\&quot;,\&quot;Index\&quot;:\&quot;1\&quot;,\&quot;Lang\&quot;:\&quot;und\&quot;,\&quot;SampleFmt\&quot;:\&quot;fltp\&quot;,\&quot;Samplerate\&quot;:\&quot;44100\&quot;,\&quot;StartTime\&quot;:\&quot;-0.046440\&quot;,\&quot;Timebase\&quot;:\&quot;1/44100\&quot;}]</para>
+                /// </summary>
                 [NameInMap("AudioStreamList")]
                 [Validation(Required=false)]
                 public string AudioStreamList { get; set; }
 
+                /// <summary>
+                /// <para>Average bitrate of the transcoded output file. Unit: Kbps.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>964</para>
+                /// </summary>
                 [NameInMap("Bitrate")]
                 [Validation(Required=false)]
                 public string Bitrate { get; set; }
 
+                /// <summary>
+                /// <para>Duration of the transcoded output file. Unit: seconds (s).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12</para>
+                /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public string Duration { get; set; }
 
+                /// <summary>
+                /// <para>Encryption configuration used for the transcoded output file. Values:</para>
+                /// <list type="bullet">
+                /// <item><description>AliyunVoDEncryption: Alibaba Cloud Video Encryption (private encryption).</description></item>
+                /// <item><description>HLSEncryption: HLS standard encryption.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{\&quot;EncryptType\&quot;:\&quot;AliyunVoDEncryption\&quot;}</para>
+                /// </summary>
                 [NameInMap("Encryption")]
                 [Validation(Required=false)]
                 public string Encryption { get; set; }
 
+                /// <summary>
+                /// <para>Size of the transcoded output file. Unit: bytes (B).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>851076</para>
+                /// </summary>
                 [NameInMap("Filesize")]
                 [Validation(Required=false)]
                 public long? Filesize { get; set; }
 
+                /// <summary>
+                /// <para>Container format of the transcoded output file.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>m3u8</para>
+                /// </summary>
                 [NameInMap("Format")]
                 [Validation(Required=false)]
                 public string Format { get; set; }
 
+                /// <summary>
+                /// <para>Frame rate of the transcoded output file. Unit: frames per second (fps).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>25</para>
+                /// </summary>
                 [NameInMap("Fps")]
                 [Validation(Required=false)]
                 public string Fps { get; set; }
 
+                /// <summary>
+                /// <para>Height of the video frame in the transcoded output file. Unit: pixels (px).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>360</para>
+                /// </summary>
                 [NameInMap("Height")]
                 [Validation(Required=false)]
                 public string Height { get; set; }
 
+                /// <summary>
+                /// <para>OSS address of the transcoded output file.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/883f5d*****f20aaa352f/c3be4f073*****7d5193ec8-%7BDestMd5%7D-od-S00000001-200000.mp4">http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/883f5d*****f20aaa352f/c3be4f073*****7d5193ec8-{DestMd5}-od-S00000001-200000.mp4</a></para>
+                /// </summary>
                 [NameInMap("OutputFileUrl")]
                 [Validation(Required=false)]
                 public string OutputFileUrl { get; set; }
 
+                /// <summary>
+                /// <para>List of subtitle streams.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[]</para>
+                /// </summary>
                 [NameInMap("SubtitleStreamList")]
                 [Validation(Required=false)]
                 public string SubtitleStreamList { get; set; }
 
+                /// <summary>
+                /// <para>List of video streams.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[{\&quot;AvgFPS\&quot;:\&quot;30.0\&quot;,\&quot;Bitrate\&quot;:\&quot;933.814\&quot;,\&quot;CodecLongName\&quot;:\&quot;H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10\&quot;,\&quot;CodecName\&quot;:\&quot;h264\&quot;,\&quot;CodecTag\&quot;:\&quot;0x31637661\&quot;,\&quot;CodecTagString\&quot;:\&quot;avc1\&quot;,\&quot;CodecTimeBase\&quot;:\&quot;1/60\&quot;,\&quot;Dar\&quot;:\&quot;9:16\&quot;,\&quot;Duration\&quot;:\&quot;12.033333\&quot;,\&quot;Fps\&quot;:\&quot;30.0\&quot;,\&quot;HasBFrames\&quot;:\&quot;2\&quot;,\&quot;Height\&quot;:\&quot;360\&quot;,\&quot;Index\&quot;:\&quot;0\&quot;,\&quot;Lang\&quot;:\&quot;und\&quot;,\&quot;Level\&quot;:\&quot;30\&quot;,\&quot;PixFmt\&quot;:\&quot;yuv420p\&quot;,\&quot;Profile\&quot;:\&quot;High\&quot;,\&quot;Sar\&quot;:\&quot;81:256\&quot;,\&quot;StartTime\&quot;:\&quot;0.000000\&quot;,\&quot;Timebase\&quot;:\&quot;1/15360\&quot;,\&quot;Width\&quot;:\&quot;640\&quot;}]</para>
+                /// </summary>
                 [NameInMap("VideoStreamList")]
                 [Validation(Required=false)]
                 public string VideoStreamList { get; set; }
 
+                /// <summary>
+                /// <para>List of watermarks used for transcoding.</para>
+                /// </summary>
                 [NameInMap("WatermarkIdList")]
                 [Validation(Required=false)]
                 public List<string> WatermarkIdList { get; set; }
 
+                /// <summary>
+                /// <para>Width of the video frame in the transcoded output file. Unit: pixels (px).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>640</para>
+                /// </summary>
                 [NameInMap("Width")]
                 [Validation(Required=false)]
                 public string Width { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The priority of the transcoding task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6</para>
+            /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public string Priority { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the transcode job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>38f0e513c88*****85515f9d50be188</para>
+            /// </summary>
             [NameInMap("TranscodeJobId")]
             [Validation(Required=false)]
             public string TranscodeJobId { get; set; }
 
+            /// <summary>
+            /// <para>The status of the transcoding job:</para>
+            /// <para>Transcoding: Transcoding in progress.
+            /// TranscodeSuccess: Transcoding successful.
+            /// TranscodeFail: Transcoding failed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Transcoding</para>
+            /// </summary>
             [NameInMap("TranscodeJobStatus")]
             [Validation(Required=false)]
             public string TranscodeJobStatus { get; set; }
 
+            /// <summary>
+            /// <para>The processing progress of the transcoding job. The value range is [0, 100].</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
+            /// </summary>
             [NameInMap("TranscodeProgress")]
             [Validation(Required=false)]
             public long? TranscodeProgress { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the template used for the transcode job.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>174b0534fea3*****b51c8f0ad1374</para>
+            /// </summary>
             [NameInMap("TranscodeTemplateId")]
             [Validation(Required=false)]
             public string TranscodeTemplateId { get; set; }

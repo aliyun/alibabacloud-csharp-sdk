@@ -1,3 +1,8 @@
+2025-03-20 Version: 3.6.3
+- Update API DescribeVodTieringStorageData: add param AppId.
+- Update API DescribeVodTieringStorageRetrievalData: add param AppId.
+
+
 2025-01-08 Version: 3.6.1
 - Update API BatchGetMediaInfos: update response param.
 

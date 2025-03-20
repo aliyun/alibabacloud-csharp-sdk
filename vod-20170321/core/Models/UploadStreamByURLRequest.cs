@@ -85,6 +85,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string StreamURL { get; set; }
 
+        /// <summary>
+        /// <para>Metadata information for uploading media files, in JSON string format.</para>
+        /// <para>For more information, please refer to the table below for UploadMetadata.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;AddressMapping&quot;:&quot;1&quot;,&quot;CustomPath&quot;:&quot;test/xxx&quot;,&quot;CustomFileName&quot;:&quot;xxx.mp4&quot;,&quot;isOverwritePath&quot;:&quot;0&quot;}</para>
+        /// </summary>
         [NameInMap("UploadMetadata")]
         [Validation(Required=false)]
         public string UploadMetadata { get; set; }

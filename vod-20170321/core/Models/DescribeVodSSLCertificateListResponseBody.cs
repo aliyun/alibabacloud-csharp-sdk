@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodSSLCertificateListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about certificates.</para>
+        /// </summary>
         [NameInMap("CertificateListModel")]
         [Validation(Required=false)]
         public DescribeVodSSLCertificateListResponseBodyCertificateListModel CertificateListModel { get; set; }
         public class DescribeVodSSLCertificateListResponseBodyCertificateListModel : TeaModel {
+            /// <summary>
+            /// <para>The list of certificates.</para>
+            /// </summary>
             [NameInMap("CertList")]
             [Validation(Required=false)]
             public DescribeVodSSLCertificateListResponseBodyCertificateListModelCertList CertList { get; set; }
@@ -22,6 +28,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public List<DescribeVodSSLCertificateListResponseBodyCertificateListModelCertListCert> Cert { get; set; }
                 public class DescribeVodSSLCertificateListResponseBodyCertificateListModelCertListCert : TeaModel {
                     /// <summary>
+                    /// <para>The ID of the certificate.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>235437</para>
                     /// </summary>
@@ -30,6 +38,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public long? CertId { get; set; }
 
                     /// <summary>
+                    /// <para>The name of the certificate.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>video-ssl</para>
                     /// </summary>
@@ -38,6 +48,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string CertName { get; set; }
 
                     /// <summary>
+                    /// <para>The region of the certificate. Valid values: <b>cn-hangzhou</b> and <b>ap-southeast-1</b>. Default value: <b>cn-hangzhou</b>.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou</para>
                     /// </summary>
@@ -46,6 +58,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string CertRegion { get; set; }
 
                     /// <summary>
+                    /// <para>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
                     /// </summary>
@@ -54,6 +68,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Common { get; set; }
 
                     /// <summary>
+                    /// <para>The fingerprint of the certificate.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <hr>
                     /// </summary>
@@ -62,6 +78,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Fingerprint { get; set; }
 
                     /// <summary>
+                    /// <para>The certificate authority (CA) that issued the certificate.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <hr>
                     /// </summary>
@@ -70,6 +88,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Issuer { get; set; }
 
                     /// <summary>
+                    /// <para>The time when the certificate was last modified. Unit: milliseconds.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1512388610</para>
                     /// </summary>
@@ -82,6 +102,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
+            /// <para>The number of certificates that are returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -90,6 +112,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public int? Count { get; set; }
 
             /// <summary>
+            /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -98,6 +122,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page. Valid values: integers from 1 to 1000.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -108,6 +134,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>25818875-5F78-4AF6-D7393642CA58****</para>
         /// </summary>
