@@ -54,6 +54,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string AliyunResourceGroupId { get; set; }
 
                 /// <summary>
+                /// <para>Alibaba Cloud tag list</para>
+                /// </summary>
+                [NameInMap("AliyunResourceTags")]
+                [Validation(Required=false)]
+                public List<ListResourceGroupsResponseBodyPagingInfoResourceGroupListAliyunResourceTags> AliyunResourceTags { get; set; }
+                public class ListResourceGroupsResponseBodyPagingInfoResourceGroupListAliyunResourceTags : TeaModel {
+                    /// <summary>
+                    /// <para>Tag Key</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Key</para>
+                    /// </summary>
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    /// <summary>
+                    /// <para>Tag Value</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Value</para>
+                    /// </summary>
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                /// <summary>
                 /// <para>The creation time, which is a 64-bit timestamp.</para>
                 /// 
                 /// <b>Example:</b>
@@ -144,7 +173,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// <para>The type of resource group. Valid values:</para>
+                /// <para>The type of the resource group. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>CommonV2: serverless resource group</description></item>
                 /// <item><description>ExclusiveDataIntegration: exclusive resource group for Data Integration</description></item>
@@ -194,13 +223,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <item><description>Normal: The resource group is running or in use.</description></item>
                 /// <item><description>Stop: The resource group is expired.</description></item>
                 /// <item><description>Deleted: The resource group is released or destroyed.</description></item>
-                /// <item><description>Creating: The resource group is being started.</description></item>
-                /// <item><description>CreateFailed: The resource group fails to be started.</description></item>
+                /// <item><description>Creating: The resource group is being created.</description></item>
+                /// <item><description>CreateFailed: The resource group fails to be created.</description></item>
                 /// <item><description>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</description></item>
                 /// <item><description>UpdateFailed: The resource group fails to be scaled out or upgraded.</description></item>
                 /// <item><description>Deleting: The resource group is being released or destroyed.</description></item>
                 /// <item><description>DeleteFailed: The resource group fails to be released or destroyed.</description></item>
                 /// <item><description>Timeout: The operations that are performed on the resource group time out.</description></item>
+                /// <item><description>Freezed: The resource group is frozen.</description></item>
+                /// <item><description>Starting: The resource group is being started.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

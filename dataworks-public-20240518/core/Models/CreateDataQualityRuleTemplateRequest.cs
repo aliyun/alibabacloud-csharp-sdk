@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <item><description>GroupCount: the field value and the number of rows for each field value.</description></item>
             /// <item><description>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</description></item>
             /// <item><description>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</description></item>
-            /// <item><description>UserDefinedSql: indicates that data is sampled by executing custom SQL statements.</description></item>
+            /// <item><description>UserDefinedSql: specifies that data is sampled by executing custom SQL statements.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

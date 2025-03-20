@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical Critical { get; set; }
                     public class UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical : TeaModel {
                         /// <summary>
-                        /// <para>阈值表达式。</para>
-                        /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
+                        /// <para>The threshold expression.</para>
+                        /// <para>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</para>
                         /// <list type="bullet">
-                        /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
-                        /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
-                        /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
+                        /// <item><description>$checkValue &gt; 0.01</description></item>
+                        /// <item><description>$checkValue &lt; -0.01</description></item>
+                        /// <item><description>abs($checkValue) &gt; 0.01</description></item>
                         /// </list>
-                        /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</para>
+                        /// <para>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>$checkValue &gt; 0.01</para>
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected Expected { get; set; }
                     public class UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected : TeaModel {
                         /// <summary>
-                        /// <para>阈值表达式。</para>
-                        /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
+                        /// <para>The threshold expression.</para>
+                        /// <para>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</para>
                         /// <list type="bullet">
-                        /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
-                        /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
-                        /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
+                        /// <item><description>$checkValue &gt; 0.01</description></item>
+                        /// <item><description>$checkValue &lt; -0.01</description></item>
+                        /// <item><description>abs($checkValue) &gt; 0.01</description></item>
                         /// </list>
-                        /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</para>
+                        /// <para>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>$checkValue &gt; 0.01</para>
@@ -157,14 +157,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned Warned { get; set; }
                     public class UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned : TeaModel {
                         /// <summary>
-                        /// <para>阈值表达式。</para>
-                        /// <para>波动率类型规则必须使用表达式方式表示波动阈值。如：</para>
+                        /// <para>The threshold expression.</para>
+                        /// <para>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</para>
                         /// <list type="bullet">
-                        /// <item><description>波动上升大于0.01： $checkValue &gt; 0.01 </description></item>
-                        /// <item><description>波动下降大于0.01：$checkValue &lt; -0.01 </description></item>
-                        /// <item><description>波动率绝对值：abs($checkValue) &gt; 0.01</description></item>
+                        /// <item><description>$checkValue &gt; 0.01</description></item>
+                        /// <item><description>$checkValue &lt; -0.01</description></item>
+                        /// <item><description>abs($checkValue) &gt; 0.01</description></item>
                         /// </list>
-                        /// <para>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</para>
+                        /// <para>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>$checkValue &gt; 0.01</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The threshold calculation method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Fluctuation</description></item>
+                /// <item><description>Fluctation</description></item>
                 /// <item><description>Auto</description></item>
                 /// <item><description>FluctationDiscreate</description></item>
                 /// <item><description>Average</description></item>
@@ -305,24 +305,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public UpdateDataQualityEvaluationTaskRequestDataQualityRulesSamplingConfig SamplingConfig { get; set; }
             public class UpdateDataQualityEvaluationTaskRequestDataQualityRulesSamplingConfig : TeaModel {
                 /// <summary>
-                /// <para>The metrics used for sampling.
-                /// Valid values:</para>
+                /// <para>The metrics used for sampling. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</description></item>
-                /// <item><description>DuplicatedCount: the number of duplicated values of the field.</description></item>
-                /// <item><description>TableSize: the table size.</description></item>
-                /// <item><description>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</description></item>
-                /// <item><description>Max: the maximum value of the field.</description></item>
-                /// <item><description>GroupCount: the field value and the number of rows for each field value.</description></item>
                 /// <item><description>Count: the number of rows in the table.</description></item>
-                /// <item><description>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</description></item>
                 /// <item><description>Min: the minimum value of the field.</description></item>
+                /// <item><description>Max: the maximum value of the field.</description></item>
                 /// <item><description>Avg: the average value of the field.</description></item>
                 /// <item><description>DistinctCount: the number of unique values of the field after deduplication.</description></item>
-                /// <item><description>NullValueCount: the number of rows in which the field value is null.</description></item>
-                /// <item><description>UserDefinedSql: specifies that data is sampled by executing custom SQL statements.</description></item>
-                /// <item><description>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</description></item>
                 /// <item><description>DistinctPercent: the proportion of the number of unique values of the field after deduplication to the number of rows in the table.</description></item>
+                /// <item><description>DuplicatedCount: the number of duplicated values of the field.</description></item>
+                /// <item><description>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</description></item>
+                /// <item><description>TableSize: the table size.</description></item>
+                /// <item><description>NullValueCount: the number of rows in which the field value is null.</description></item>
+                /// <item><description>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</description></item>
+                /// <item><description>GroupCount: the field value and the number of rows for each field value.</description></item>
+                /// <item><description>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</description></item>
+                /// <item><description>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</description></item>
+                /// <item><description>UserDefinedSql: specifies that data is sampled by executing custom SQL statements.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

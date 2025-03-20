@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateWorkflowShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client-side unique code of the workflow for asynchronous and idempotent implementation. If not specified during creation, the system will automatically generate the code, which will be uniquely bound to the resource ID. If you specify this parameter when updating and deleting resources, it should be consistent with the client unique code when creating resources.</para>
+        /// <para>The unique code of the client. This parameter is used to create a workflow asynchronously and implement the idempotence of the workflow. If you do not specify this parameter when you create the workflow, the system automatically generates a unique code. The unique code is uniquely associated with the workflow ID. If you specify this parameter when you update or delete the workflow, the value of this parameter must be the unique code that is used to create the workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Workflow_0bc5213917368545132902xxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientUniqueCode { get; set; }
 
         /// <summary>
-        /// <para>Dependency information.</para>
+        /// <para>The dependency information.</para>
         /// </summary>
         [NameInMap("Dependencies")]
         [Validation(Required=false)]
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The project environment.</para>
+        /// <para>The environment of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod: Production</description></item>
-        /// <item><description>Dev: Development</description></item>
+        /// <item><description>Prod: production environment</description></item>
+        /// <item><description>Dev: development environment</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workflow.</para>
+        /// <para>The workflow ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The name.</para>
+        /// <para>The name of the workflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The list of parameters.</para>
+        /// <para>The parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>para1=$bizdate para2=$[yyyymmdd]</para>
@@ -101,14 +101,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The list of workflow tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of tasks.</para>
+        /// <para>The tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]

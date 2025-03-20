@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ExecuteAdhocWorkflowInstanceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>业务日期。</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The data timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>

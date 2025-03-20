@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ExecuteAdhocWorkflowInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>业务日期。</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The data timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>
@@ -149,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the variable.</para>
+                    /// <para>The value of the variable. You must configure this parameter in the <c>The ancestor output: The output variable name of the ancestor task</c> format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Value1</para>
@@ -217,7 +216,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the variable. Valid values:</para>
+                    /// <para>The type. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>System</description></item>
                     /// <item><description>Constant</description></item>

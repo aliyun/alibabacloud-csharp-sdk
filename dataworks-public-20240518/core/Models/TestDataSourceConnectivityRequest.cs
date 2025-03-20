@@ -8,28 +8,36 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class DeleteFunctionRequest : TeaModel {
+    public class TestDataSourceConnectivityRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the UDF.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>860438872620113XXXX</para>
+        /// <para>144544</para>
         /// </summary>
-        [NameInMap("Id")]
+        [NameInMap("DataSourceId")]
         [Validation(Required=false)]
-        public long? Id { get; set; }
+        public long? DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID. You can use this parameter to specify the DataWorks workspace on which you want to perform the API operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>10001</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
     }
 

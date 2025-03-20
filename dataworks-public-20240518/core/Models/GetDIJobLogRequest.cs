@@ -52,10 +52,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Node type. Currently, it is only applicable in the view resource group 2.0 task:</para>
+        /// <list type="bullet">
+        /// <item><description>MASTER: obtains logs of JobManager.</description></item>
+        /// <item><description>WORKER: obtains logs of TaskManager.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MASTER</para>
+        /// </summary>
         [NameInMap("NodeType")]
         [Validation(Required=false)]
         public string NodeType { get; set; }
 
+        /// <summary>
+        /// <para>The page number of the pagination query. The value is a positive integer greater than or equal to 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }

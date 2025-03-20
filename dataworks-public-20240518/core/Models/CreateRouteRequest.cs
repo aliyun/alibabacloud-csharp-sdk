@@ -31,6 +31,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? NetworkId { get; set; }
 
+        /// <summary>
+        /// <para>Unique identifier of the serverless resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
     }
 
 }

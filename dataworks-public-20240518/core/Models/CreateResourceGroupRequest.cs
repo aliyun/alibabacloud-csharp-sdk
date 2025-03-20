@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2kqofrgXXXXX</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? AutoRenewEnabled { get; set; }
 
         /// <summary>
-        /// <para>The idempotent identifier of the client is used to ensure idempotent operation of creating a common resource group.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of a common resource group. It must start with a letter and can contain letters, numbers, and underscores (_). It can be up to 128 characters in length.</para>
+        /// <para>The name of the serverless resource group. The name can be a maximum of 128 characters in length and can contain letters, digits, and underscores (_). The name must start with a letter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The duration of the payment.</para>
+        /// <para>The subscription duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>Note for creating a common resource group, which can contain letters, Chinese characters, numbers, underscores (_), and a maximum of 128 characters.</para>
+        /// <para>The description of the serverless resource group. The description can be a maximum of 128 characters in length and can contain letters, digits, and underscores (_).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Create a serverless resource group for common tasks</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the resource group. Unit: compute unit (CU). This parameter is required only when you set the PaymentType parameter to PrePaid.</para>
+        /// <para>The specifications of the serverless resource group. Unit: CU. This parameter is required only if you set the PaymentType parameter to PrePaid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The times when the workflow was last modified. This value is a UNIX timestamp.</para>
+                /// <para>The time when the workflow was last modified. This value is a UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1698057323000</para>

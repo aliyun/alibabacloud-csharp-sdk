@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client unique code of the task, which uniquely identifies a task. It is used to implement asynchronous and idempotent functions. If it is not specified during creation, the system will automatically generate the code, which will be uniquely bound to the resource ID. If you specify this parameter when updating and deleting resources, it should be consistent with the client unique code when creating resources.</para>
+        /// <para>The unique code of the client. This code uniquely identifies a task. This parameter is used to create a task asynchronously and implement the idempotence of the task. If you do not specify this parameter when you create the task, the system automatically generates a unique code. The unique code is uniquely associated with the task ID. If you specify this parameter when you update or delete the task, the value of this parameter must be the unique code that is used to create the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Task_0bc5213917368545132902xxxxxxxx</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientUniqueCode { get; set; }
 
         /// <summary>
-        /// <para>The associated data source information.</para>
+        /// <para>The information about the associated data source.</para>
         /// </summary>
         [NameInMap("DataSource")]
         [Validation(Required=false)]
         public string DataSourceShrink { get; set; }
 
         /// <summary>
-        /// <para>Dependency information.</para>
+        /// <para>The dependency information.</para>
         /// </summary>
         [NameInMap("Dependencies")]
         [Validation(Required=false)]
         public string DependenciesShrink { get; set; }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The description of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The project environment.</para>
+        /// <para>The environment of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod: Production</description></item>
-        /// <item><description>Dev: Development</description></item>
+        /// <item><description>Prod: production environment</description></item>
+        /// <item><description>Dev: development environment</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,17 +69,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Enter information.</para>
+        /// <para>The input information.</para>
         /// </summary>
         [NameInMap("Inputs")]
         [Validation(Required=false)]
         public string InputsShrink { get; set; }
 
         /// <summary>
-        /// <para>The instance generation mode.</para>
+        /// <para>The instance generation mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T +1 (second born)</description></item>
-        /// <item><description>Immediately (generate now)</description></item>
+        /// <item><description>T+1</description></item>
+        /// <item><description>Immediately</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string InstanceMode { get; set; }
 
         /// <summary>
-        /// <para>The name.</para>
+        /// <para>The name of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string OutputsShrink { get; set; }
 
         /// <summary>
-        /// <para>The account ID of the owner of the task.</para>
+        /// <para>The account ID of the task owner.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The retry interval, in seconds.</para>
+        /// <para>The rerun interval. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -129,11 +129,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? RerunInterval { get; set; }
 
         /// <summary>
-        /// <para>The configuration of whether the task is allowed to rerun.</para>
+        /// <para>The rerun mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AllDenied: failure or success cannot be rerun.</description></item>
-        /// <item><description>FailureAllowed: only failures can be rerun</description></item>
-        /// <item><description>AllAllowed: you can run again if you fail or succeed.</description></item>
+        /// <item><description>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</description></item>
+        /// <item><description>FailureAllowed: The task can be rerun only after it fails to run.</description></item>
+        /// <item><description>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RerunMode { get; set; }
 
         /// <summary>
-        /// <para>The number of retries that take effect when the task is set to rerun.</para>
+        /// <para>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? RerunTimes { get; set; }
 
         /// <summary>
-        /// <para>Configuration of the runtime environment, such as resource group information.</para>
+        /// <para>The configurations of the runtime environment, such as the resource group information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RuntimeResource")]
@@ -163,21 +163,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RuntimeResourceShrink { get; set; }
 
         /// <summary>
-        /// <para>Run the script information.</para>
+        /// <para>The script information.</para>
         /// </summary>
         [NameInMap("Script")]
         [Validation(Required=false)]
         public string ScriptShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of task tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of the task execution, in seconds.</para>
+        /// <para>The timeout period of task running. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The trigger method of the task.</para>
+        /// <para>The trigger method.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Trigger")]

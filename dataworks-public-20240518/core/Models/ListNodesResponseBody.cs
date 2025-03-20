@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>The scope of the variable. Valid value:</para>
+                        /// <para>The scope of the variable. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>NodeParameter</description></item>
                         /// <item><description>NodeContext</description></item>
@@ -368,7 +368,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Scope { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the variable. Valid value:</para>
+                        /// <para>The type of the variable. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>NoKvVariableExpression</description></item>
                         /// <item><description>Constant</description></item>
@@ -587,7 +587,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The tag value.</para>
+                    /// <para>The tag value</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>

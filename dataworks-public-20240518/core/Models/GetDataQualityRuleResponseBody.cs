@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public GetDataQualityRuleResponseBodyDataQualityRuleCheckingConfig CheckingConfig { get; set; }
             public class GetDataQualityRuleResponseBodyDataQualityRuleCheckingConfig : TeaModel {
                 /// <summary>
-                /// <para>Some types of thresholds need to query some reference samples, and then summarize the values of the reference samples to obtain the threshold for comparison. Here, an expression is used to represent the query method of the reference samples.</para>
+                /// <para>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference values. In this example, an expression is used to indicate the query method of referenced samples.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</para>
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Expression { get; set; }
 
                         /// <summary>
-                        /// <para>Comparison character:</para>
+                        /// <para>The comparison operator. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>\&gt;</description></item>
-                        /// <item><description>% =</description></item>
+                        /// <item><description>\&gt;=</description></item>
                         /// <item><description>&lt;</description></item>
                         /// <item><description>&lt;=</description></item>
-                        /// <item><description>! =</description></item>
-                        /// <item><description>=</description></item>
+                        /// <item><description>!=</description></item>
+                        /// <item><description>\=</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -106,14 +106,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Expression { get; set; }
 
                         /// <summary>
-                        /// <para>Comparison character:</para>
+                        /// <para>The comparison operator. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>\&gt;</description></item>
-                        /// <item><description>% =</description></item>
+                        /// <item><description>\&gt;=</description></item>
                         /// <item><description>&lt;</description></item>
                         /// <item><description>&lt;=</description></item>
-                        /// <item><description>! =</description></item>
-                        /// <item><description>=</description></item>
+                        /// <item><description>!=</description></item>
+                        /// <item><description>\=</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -154,14 +154,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Expression { get; set; }
 
                         /// <summary>
-                        /// <para>Comparison character:</para>
+                        /// <para>The comparison operator. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>\&gt;</description></item>
-                        /// <item><description>% =</description></item>
+                        /// <item><description>\&gt;=</description></item>
                         /// <item><description>&lt;</description></item>
                         /// <item><description>&lt;=</description></item>
-                        /// <item><description>! =</description></item>
-                        /// <item><description>=</description></item>
+                        /// <item><description>!=</description></item>
+                        /// <item><description>\=</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>Threshold Calculation method:</para>
+                /// <para>The threshold calculation method. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Fixed</description></item>
                 /// <item><description>Fluctation</description></item>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The description of the rule. It can be up to 500 characters in length.</para>
+            /// <para>The description of the rule. The description can be up to 500 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>this is a odps _sql task</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Whether the rule is enabled.</para>
+            /// <para>Indicates whether the rule is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -227,14 +227,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The list of quality rule verification problem processors.</para>
+            /// <para>The operations that you can perform after the rule-based check fails.</para>
             /// </summary>
             [NameInMap("ErrorHandlers")]
             [Validation(Required=false)]
             public List<GetDataQualityRuleResponseBodyDataQualityRuleErrorHandlers> ErrorHandlers { get; set; }
             public class GetDataQualityRuleResponseBodyDataQualityRuleErrorHandlers : TeaModel {
                 /// <summary>
-                /// <para>For custom SQL rules, you must specify SQL to filter problem data.</para>
+                /// <para>The SQL statement that is used to filter failed tasks. If you define the rule by using custom SQL statements, you must specify an SQL statement to filter failed tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SELECT * FROM tb_api_log WHERE id IS NULL</para>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The ID of the rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16033</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The table cannot be empty.</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the DataWorks workspace.</para>
+            /// <para>The DataWorks workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1948</para>
@@ -289,30 +289,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The settings required for sample collection.</para>
+            /// <para>The sampling settings.</para>
             /// </summary>
             [NameInMap("SamplingConfig")]
             [Validation(Required=false)]
             public GetDataQualityRuleResponseBodyDataQualityRuleSamplingConfig SamplingConfig { get; set; }
             public class GetDataQualityRuleResponseBodyDataQualityRuleSamplingConfig : TeaModel {
                 /// <summary>
-                /// <para>The name of the sampled metric:</para>
+                /// <para>The metrics used for sampling. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Count: number of table rows</description></item>
-                /// <item><description>Min: minimum value of the field</description></item>
-                /// <item><description>Max: The maximum value of the field.</description></item>
-                /// <item><description>Avg: field mean</description></item>
-                /// <item><description>DistinctCount: number of unique field values</description></item>
-                /// <item><description>DistinctPercent: the ratio of the number of unique field values to the number of data rows.</description></item>
-                /// <item><description>DuplicatedCount: number of duplicate field values</description></item>
-                /// <item><description>DuplicatedPercent: the ratio of the number of duplicate field values to the number of data rows.</description></item>
-                /// <item><description>TableSize: table size</description></item>
-                /// <item><description>NullValueCount: number of rows with empty fields</description></item>
-                /// <item><description>NullValuePercent: the proportion of fields that are empty.</description></item>
-                /// <item><description>GroupCount: aggregate each value by field value and the corresponding number of data rows</description></item>
-                /// <item><description>CountNotIn: the enumerated value does not match the number of rows.</description></item>
-                /// <item><description>CountDistinctNotIn: the number of unique values that the enumerated values do not match.</description></item>
-                /// <item><description>UserDefinedSql: use custom SQL to collect samples</description></item>
+                /// <item><description>Count: the number of rows in the table.</description></item>
+                /// <item><description>Min: the minimum value of the field.</description></item>
+                /// <item><description>Max: the maximum value of the field.</description></item>
+                /// <item><description>Avg: the average value of the field.</description></item>
+                /// <item><description>DistinctCount: the number of unique values of the field after deduplication.</description></item>
+                /// <item><description>DistinctPercent: the proportion of the number of unique values of the field after deduplication to the number of rows in the table.</description></item>
+                /// <item><description>DuplicatedCount: the number of duplicated values of the field.</description></item>
+                /// <item><description>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</description></item>
+                /// <item><description>TableSize: the table size.</description></item>
+                /// <item><description>NullValueCount: the number of rows in which the field value is null.</description></item>
+                /// <item><description>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</description></item>
+                /// <item><description>GroupCount: the field value and the number of rows for each field value.</description></item>
+                /// <item><description>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</description></item>
+                /// <item><description>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</description></item>
+                /// <item><description>UserDefinedSql: indicates that data is sampled by executing custom SQL statements.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -323,7 +323,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Metric { get; set; }
 
                 /// <summary>
-                /// <para>Parameters required for sample collection.</para>
+                /// <para>The parameters required for sampling.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{ &quot;Columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] , &quot;SQL&quot;: &quot;select count(1) from table;&quot;}</para>
@@ -333,7 +333,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string MetricParameters { get; set; }
 
                 /// <summary>
-                /// <para>The condition for secondary filtering of data that is not concerned during sampling, which can be up to 16777215 characters in length.</para>
+                /// <para>The statements that are used to filter unnecessary data during sampling. The statements can be up to 16,777,215 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>id IS NULL</para>
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SamplingFilter { get; set; }
 
                 /// <summary>
-                /// <para>Before executing the sample statement, insert some runtime parameter setting statements, which can be up to 1000 characters in length. Currently, only MaxCompute is supported.</para>
+                /// <para>The statements that are used to configure the parameters required for sampling before you execute the sampling statements. The statements can be up to 1,000 characters in length. Only the MaxCompute database is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SET odps.sql.udf.timeout=600s; 
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Severity { get; set; }
 
             /// <summary>
-            /// <para>The object monitored by the rule.</para>
+            /// <para>The monitored object of the rule.</para>
             /// </summary>
             [NameInMap("Target")]
             [Validation(Required=false)]
@@ -396,7 +396,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DatabaseType { get; set; }
 
                 /// <summary>
-                /// <para>Partition settings for partitioned tables.</para>
+                /// <para>The configuration of the partitioned table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ds=$[yyyymmdd-1]</para>
@@ -406,7 +406,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string PartitionSpec { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the table used by the rule in the data map.</para>
+                /// <para>The ID of the table that is limited by the rule in Data Map.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps.unit_test.tb_unit_test</para>

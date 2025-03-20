@@ -170,6 +170,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Spec { get; set; }
 
             /// <summary>
+            /// <para>The ID of the workflow on the scheduling side after publishing.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>700006657495</para>
             /// </summary>
