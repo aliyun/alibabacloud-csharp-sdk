@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("PlanType")]
+        [Validation(Required=false)]
+        public string PlanType { get; set; }
+
         /// <summary>
         /// <para>The public IP addresses of the simple application servers. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,).</para>
         /// <remarks>

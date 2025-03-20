@@ -10799,6 +10799,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanType))
+            {
+                query["PlanType"] = request.PlanType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicIpAddresses))
             {
                 query["PublicIpAddresses"] = request.PublicIpAddresses;
@@ -10888,6 +10892,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanType))
+            {
+                query["PlanType"] = request.PlanType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicIpAddresses))
             {

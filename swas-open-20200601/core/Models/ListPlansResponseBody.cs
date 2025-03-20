@@ -131,6 +131,24 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public string SupportPlatform { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListPlansResponseBodyPlansTags> Tags { get; set; }
+            public class ListPlansResponseBodyPlansTags : TeaModel {
+                [NameInMap("CnTitle")]
+                [Validation(Required=false)]
+                public string CnTitle { get; set; }
+
+                [NameInMap("Color")]
+                [Validation(Required=false)]
+                public string Color { get; set; }
+
+                [NameInMap("EnTitle")]
+                [Validation(Required=false)]
+                public string EnTitle { get; set; }
+
+            }
+
         }
 
         /// <summary>

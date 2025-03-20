@@ -432,6 +432,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public string PlanId { get; set; }
 
+            [NameInMap("PlanType")]
+            [Validation(Required=false)]
+            public string PlanType { get; set; }
+
             /// <summary>
             /// <para>The public IP address.</para>
             /// 
