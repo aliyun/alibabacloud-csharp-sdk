@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Architecture { get; set; }
 
+        [NameInMap("AutoUpgradeMinorVersion")]
+        [Validation(Required=false)]
+        public string AutoUpgradeMinorVersion { get; set; }
+
         /// <summary>
         /// <para>Maximum number of blktags in the file system.</para>
         /// 
