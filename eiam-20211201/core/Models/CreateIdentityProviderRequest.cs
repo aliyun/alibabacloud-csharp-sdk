@@ -626,6 +626,32 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string IncrementalCallbackStatus { get; set; }
 
+            [NameInMap("PeriodicSyncConfig")]
+            [Validation(Required=false)]
+            public CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig PeriodicSyncConfig { get; set; }
+            public class CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0 45 1 * * ?</para>
+                /// </summary>
+                [NameInMap("PeriodicSyncCron")]
+                [Validation(Required=false)]
+                public string PeriodicSyncCron { get; set; }
+
+                [NameInMap("PeriodicSyncTimes")]
+                [Validation(Required=false)]
+                public List<int?> PeriodicSyncTimes { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cron</para>
+                /// </summary>
+                [NameInMap("PeriodicSyncType")]
+                [Validation(Required=false)]
+                public string PeriodicSyncType { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>disabled</para>

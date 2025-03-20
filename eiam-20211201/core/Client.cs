@@ -17302,6 +17302,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["LdapUdPullConfig"] = request.LdapUdPullConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodicSyncConfig))
+            {
+                query["PeriodicSyncConfig"] = request.PeriodicSyncConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodicSyncStatus))
             {
                 query["PeriodicSyncStatus"] = request.PeriodicSyncStatus;
@@ -17378,6 +17382,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LdapUdPullConfig))
             {
                 query["LdapUdPullConfig"] = request.LdapUdPullConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodicSyncConfig))
+            {
+                query["PeriodicSyncConfig"] = request.PeriodicSyncConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodicSyncStatus))
             {
