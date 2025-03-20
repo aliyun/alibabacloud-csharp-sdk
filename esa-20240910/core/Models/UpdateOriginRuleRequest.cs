@@ -128,6 +128,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Range { get; set; }
 
+        [NameInMap("RangeChunkSize")]
+        [Validation(Required=false)]
+        public string RangeChunkSize { get; set; }
+
         /// <summary>
         /// <para>Rule content, used to match user requests with conditional expressions. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
         /// <list type="bullet">

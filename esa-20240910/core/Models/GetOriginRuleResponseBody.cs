@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Range { get; set; }
 
+        [NameInMap("RangeChunkSize")]
+        [Validation(Required=false)]
+        public string RangeChunkSize { get; set; }
+
         /// <summary>
         /// <para>Request ID.</para>
         /// 

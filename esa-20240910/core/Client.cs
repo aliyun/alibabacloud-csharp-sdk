@@ -6492,6 +6492,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["Range"] = request.Range;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RangeChunkSize))
+            {
+                query["RangeChunkSize"] = request.RangeChunkSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
             {
                 query["Rule"] = request.Rule;
@@ -6592,6 +6596,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
             {
                 query["Range"] = request.Range;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RangeChunkSize))
+            {
+                query["RangeChunkSize"] = request.RangeChunkSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
             {
@@ -40292,6 +40300,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["Range"] = request.Range;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RangeChunkSize))
+            {
+                query["RangeChunkSize"] = request.RangeChunkSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
             {
                 query["Rule"] = request.Rule;
@@ -40392,6 +40404,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Range))
             {
                 query["Range"] = request.Range;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RangeChunkSize))
+            {
+                query["RangeChunkSize"] = request.RangeChunkSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
             {
