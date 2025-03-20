@@ -494,6 +494,160 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>导出审计日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuditLogExportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuditLogExportResponse
+        /// </returns>
+        public AuditLogExportResponse AuditLogExportWithOptions(AuditLogExportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["file_name"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                body["language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["order_by"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuditLogExport",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/audit_log/export",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AuditLogExportResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出审计日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuditLogExportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuditLogExportResponse
+        /// </returns>
+        public async Task<AuditLogExportResponse> AuditLogExportWithOptionsAsync(AuditLogExportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["file_name"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                body["language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["order_by"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuditLogExport",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/audit_log/export",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AuditLogExportResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出审计日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuditLogExportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuditLogExportResponse
+        /// </returns>
+        public AuditLogExportResponse AuditLogExport(AuditLogExportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AuditLogExportWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出审计日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuditLogExportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuditLogExportResponse
+        /// </returns>
+        public async Task<AuditLogExportResponse> AuditLogExportAsync(AuditLogExportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AuditLogExportWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Requests permissions by using OAuth 2.0.</para>
         /// </summary>
         /// 
@@ -17892,7 +18046,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取视频的DRM License</para>
+        /// <para>Obtain the digital rights management (DRM) license of a video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17942,7 +18096,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取视频的DRM License</para>
+        /// <para>Obtain the digital rights management (DRM) license of a video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17992,7 +18146,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取视频的DRM License</para>
+        /// <para>Obtain the digital rights management (DRM) license of a video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18011,7 +18165,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取视频的DRM License</para>
+        /// <para>Obtain the digital rights management (DRM) license of a video.</para>
         /// </summary>
         /// 
         /// <param name="request">
