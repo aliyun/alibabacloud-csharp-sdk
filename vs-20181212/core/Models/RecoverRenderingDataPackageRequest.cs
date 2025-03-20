@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string DataPackageId { get; set; }
 
+        [NameInMap("LoadMode")]
+        [Validation(Required=false)]
+        public string LoadMode { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

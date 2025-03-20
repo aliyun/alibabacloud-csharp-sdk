@@ -19055,6 +19055,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 query["DataPackageId"] = request.DataPackageId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadMode))
+            {
+                query["LoadMode"] = request.LoadMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
             {
                 query["RenderingInstanceId"] = request.RenderingInstanceId;
@@ -19107,6 +19111,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataPackageId))
             {
                 query["DataPackageId"] = request.DataPackageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadMode))
+            {
+                query["LoadMode"] = request.LoadMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceId))
             {
