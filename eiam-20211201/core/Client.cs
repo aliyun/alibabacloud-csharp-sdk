@@ -1133,6 +1133,232 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Create Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Create Conditional Access Policy</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateConditionalAccessPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConditionalAccessPolicyResponse
+        /// </returns>
+        public CreateConditionalAccessPolicyResponse CreateConditionalAccessPolicyWithOptions(CreateConditionalAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyName))
+            {
+                query["ConditionalAccessPolicyName"] = request.ConditionalAccessPolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyType))
+            {
+                query["ConditionalAccessPolicyType"] = request.ConditionalAccessPolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionsConfig))
+            {
+                query["ConditionsConfig"] = request.ConditionsConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecisionConfig))
+            {
+                query["DecisionConfig"] = request.DecisionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecisionType))
+            {
+                query["DecisionType"] = request.DecisionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluateAt))
+            {
+                query["EvaluateAt"] = request.EvaluateAt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateConditionalAccessPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateConditionalAccessPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateConditionalAccessPolicyResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Create Conditional Access Policy</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateConditionalAccessPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConditionalAccessPolicyResponse
+        /// </returns>
+        public async Task<CreateConditionalAccessPolicyResponse> CreateConditionalAccessPolicyWithOptionsAsync(CreateConditionalAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyName))
+            {
+                query["ConditionalAccessPolicyName"] = request.ConditionalAccessPolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyType))
+            {
+                query["ConditionalAccessPolicyType"] = request.ConditionalAccessPolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionsConfig))
+            {
+                query["ConditionsConfig"] = request.ConditionsConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecisionConfig))
+            {
+                query["DecisionConfig"] = request.DecisionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecisionType))
+            {
+                query["DecisionType"] = request.DecisionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluateAt))
+            {
+                query["EvaluateAt"] = request.EvaluateAt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateConditionalAccessPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateConditionalAccessPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateConditionalAccessPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Create Conditional Access Policy</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateConditionalAccessPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConditionalAccessPolicyResponse
+        /// </returns>
+        public CreateConditionalAccessPolicyResponse CreateConditionalAccessPolicy(CreateConditionalAccessPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateConditionalAccessPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Create Conditional Access Policy</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateConditionalAccessPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConditionalAccessPolicyResponse
+        /// </returns>
+        public async Task<CreateConditionalAccessPolicyResponse> CreateConditionalAccessPolicyAsync(CreateConditionalAccessPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateConditionalAccessPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建域名。</para>
         /// </summary>
         /// 
@@ -2865,6 +3091,168 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteApplicationClientSecretWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When deleting a specified conditional access policy, please ensure that the policy is no longer in use. After deletion, all configuration data will be removed and cannot be recovered.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteConditionalAccessPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConditionalAccessPolicyResponse
+        /// </returns>
+        public DeleteConditionalAccessPolicyResponse DeleteConditionalAccessPolicyWithOptions(DeleteConditionalAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyId))
+            {
+                query["ConditionalAccessPolicyId"] = request.ConditionalAccessPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteConditionalAccessPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteConditionalAccessPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteConditionalAccessPolicyResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When deleting a specified conditional access policy, please ensure that the policy is no longer in use. After deletion, all configuration data will be removed and cannot be recovered.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteConditionalAccessPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConditionalAccessPolicyResponse
+        /// </returns>
+        public async Task<DeleteConditionalAccessPolicyResponse> DeleteConditionalAccessPolicyWithOptionsAsync(DeleteConditionalAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyId))
+            {
+                query["ConditionalAccessPolicyId"] = request.ConditionalAccessPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteConditionalAccessPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteConditionalAccessPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteConditionalAccessPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When deleting a specified conditional access policy, please ensure that the policy is no longer in use. After deletion, all configuration data will be removed and cannot be recovered.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteConditionalAccessPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConditionalAccessPolicyResponse
+        /// </returns>
+        public DeleteConditionalAccessPolicyResponse DeleteConditionalAccessPolicy(DeleteConditionalAccessPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteConditionalAccessPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When deleting a specified conditional access policy, please ensure that the policy is no longer in use. After deletion, all configuration data will be removed and cannot be recovered.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteConditionalAccessPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConditionalAccessPolicyResponse
+        /// </returns>
+        public async Task<DeleteConditionalAccessPolicyResponse> DeleteConditionalAccessPolicyAsync(DeleteConditionalAccessPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteConditionalAccessPolicyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4905,6 +5293,168 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Disable Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When changing a conditional access policy from an enabled state to a disabled state, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableConditionalAccessPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableConditionalAccessPolicyResponse
+        /// </returns>
+        public DisableConditionalAccessPolicyResponse DisableConditionalAccessPolicyWithOptions(DisableConditionalAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyId))
+            {
+                query["ConditionalAccessPolicyId"] = request.ConditionalAccessPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableConditionalAccessPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DisableConditionalAccessPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DisableConditionalAccessPolicyResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disable Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When changing a conditional access policy from an enabled state to a disabled state, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableConditionalAccessPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableConditionalAccessPolicyResponse
+        /// </returns>
+        public async Task<DisableConditionalAccessPolicyResponse> DisableConditionalAccessPolicyWithOptionsAsync(DisableConditionalAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyId))
+            {
+                query["ConditionalAccessPolicyId"] = request.ConditionalAccessPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableConditionalAccessPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DisableConditionalAccessPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DisableConditionalAccessPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disable Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When changing a conditional access policy from an enabled state to a disabled state, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableConditionalAccessPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableConditionalAccessPolicyResponse
+        /// </returns>
+        public DisableConditionalAccessPolicyResponse DisableConditionalAccessPolicy(DisableConditionalAccessPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisableConditionalAccessPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disable Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When changing a conditional access policy from an enabled state to a disabled state, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableConditionalAccessPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableConditionalAccessPolicyResponse
+        /// </returns>
+        public async Task<DisableConditionalAccessPolicyResponse> DisableConditionalAccessPolicyAsync(DisableConditionalAccessPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisableConditionalAccessPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>禁用指定域名代理Token。</para>
         /// </summary>
         /// 
@@ -6191,6 +6741,168 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Enable Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When changing the status of a conditional access policy from enabled to disabled, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableConditionalAccessPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableConditionalAccessPolicyResponse
+        /// </returns>
+        public EnableConditionalAccessPolicyResponse EnableConditionalAccessPolicyWithOptions(EnableConditionalAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyId))
+            {
+                query["ConditionalAccessPolicyId"] = request.ConditionalAccessPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableConditionalAccessPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EnableConditionalAccessPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EnableConditionalAccessPolicyResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enable Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When changing the status of a conditional access policy from enabled to disabled, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableConditionalAccessPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableConditionalAccessPolicyResponse
+        /// </returns>
+        public async Task<EnableConditionalAccessPolicyResponse> EnableConditionalAccessPolicyWithOptionsAsync(EnableConditionalAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyId))
+            {
+                query["ConditionalAccessPolicyId"] = request.ConditionalAccessPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableConditionalAccessPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EnableConditionalAccessPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EnableConditionalAccessPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enable Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When changing the status of a conditional access policy from enabled to disabled, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableConditionalAccessPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableConditionalAccessPolicyResponse
+        /// </returns>
+        public EnableConditionalAccessPolicyResponse EnableConditionalAccessPolicy(EnableConditionalAccessPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableConditionalAccessPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enable Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When changing the status of a conditional access policy from enabled to disabled, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableConditionalAccessPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableConditionalAccessPolicyResponse
+        /// </returns>
+        public async Task<EnableConditionalAccessPolicyResponse> EnableConditionalAccessPolicyAsync(EnableConditionalAccessPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableConditionalAccessPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>启用指定域名代理Token。</para>
         /// </summary>
         /// 
@@ -7465,6 +8177,168 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetApplicationSsoConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query Conditional Access Policy</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetConditionalAccessPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConditionalAccessPolicyResponse
+        /// </returns>
+        public GetConditionalAccessPolicyResponse GetConditionalAccessPolicyWithOptions(GetConditionalAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyId))
+            {
+                query["ConditionalAccessPolicyId"] = request.ConditionalAccessPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConditionalAccessPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetConditionalAccessPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetConditionalAccessPolicyResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query Conditional Access Policy</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetConditionalAccessPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConditionalAccessPolicyResponse
+        /// </returns>
+        public async Task<GetConditionalAccessPolicyResponse> GetConditionalAccessPolicyWithOptionsAsync(GetConditionalAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyId))
+            {
+                query["ConditionalAccessPolicyId"] = request.ConditionalAccessPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConditionalAccessPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetConditionalAccessPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetConditionalAccessPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query Conditional Access Policy</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetConditionalAccessPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConditionalAccessPolicyResponse
+        /// </returns>
+        public GetConditionalAccessPolicyResponse GetConditionalAccessPolicy(GetConditionalAccessPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetConditionalAccessPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query Conditional Access Policy</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetConditionalAccessPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConditionalAccessPolicyResponse
+        /// </returns>
+        public async Task<GetConditionalAccessPolicyResponse> GetConditionalAccessPolicyAsync(GetConditionalAccessPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetConditionalAccessPolicyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10547,6 +11421,346 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>List of Conditional Access Policies</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Paginated query for the list of conditional access policies</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConditionalAccessPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConditionalAccessPoliciesResponse
+        /// </returns>
+        public ListConditionalAccessPoliciesResponse ListConditionalAccessPoliciesWithOptions(ListConditionalAccessPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviousToken))
+            {
+                query["PreviousToken"] = request.PreviousToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConditionalAccessPolicies",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListConditionalAccessPoliciesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListConditionalAccessPoliciesResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List of Conditional Access Policies</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Paginated query for the list of conditional access policies</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConditionalAccessPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConditionalAccessPoliciesResponse
+        /// </returns>
+        public async Task<ListConditionalAccessPoliciesResponse> ListConditionalAccessPoliciesWithOptionsAsync(ListConditionalAccessPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviousToken))
+            {
+                query["PreviousToken"] = request.PreviousToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConditionalAccessPolicies",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListConditionalAccessPoliciesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListConditionalAccessPoliciesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List of Conditional Access Policies</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Paginated query for the list of conditional access policies</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConditionalAccessPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConditionalAccessPoliciesResponse
+        /// </returns>
+        public ListConditionalAccessPoliciesResponse ListConditionalAccessPolicies(ListConditionalAccessPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListConditionalAccessPoliciesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List of Conditional Access Policies</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Paginated query for the list of conditional access policies</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConditionalAccessPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConditionalAccessPoliciesResponse
+        /// </returns>
+        public async Task<ListConditionalAccessPoliciesResponse> ListConditionalAccessPoliciesAsync(ListConditionalAccessPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListConditionalAccessPoliciesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List Conditional Access Policies Associated with Network Areas</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>List Conditional Access Policies Associated with Network Zones</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConditionalAccessPoliciesForNetworkZoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConditionalAccessPoliciesForNetworkZoneResponse
+        /// </returns>
+        public ListConditionalAccessPoliciesForNetworkZoneResponse ListConditionalAccessPoliciesForNetworkZoneWithOptions(ListConditionalAccessPoliciesForNetworkZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkZoneId))
+            {
+                query["NetworkZoneId"] = request.NetworkZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConditionalAccessPoliciesForNetworkZone",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListConditionalAccessPoliciesForNetworkZoneResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListConditionalAccessPoliciesForNetworkZoneResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List Conditional Access Policies Associated with Network Areas</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>List Conditional Access Policies Associated with Network Zones</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConditionalAccessPoliciesForNetworkZoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConditionalAccessPoliciesForNetworkZoneResponse
+        /// </returns>
+        public async Task<ListConditionalAccessPoliciesForNetworkZoneResponse> ListConditionalAccessPoliciesForNetworkZoneWithOptionsAsync(ListConditionalAccessPoliciesForNetworkZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkZoneId))
+            {
+                query["NetworkZoneId"] = request.NetworkZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConditionalAccessPoliciesForNetworkZone",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListConditionalAccessPoliciesForNetworkZoneResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListConditionalAccessPoliciesForNetworkZoneResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List Conditional Access Policies Associated with Network Areas</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>List Conditional Access Policies Associated with Network Zones</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConditionalAccessPoliciesForNetworkZoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConditionalAccessPoliciesForNetworkZoneResponse
+        /// </returns>
+        public ListConditionalAccessPoliciesForNetworkZoneResponse ListConditionalAccessPoliciesForNetworkZone(ListConditionalAccessPoliciesForNetworkZoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListConditionalAccessPoliciesForNetworkZoneWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List Conditional Access Policies Associated with Network Areas</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>List Conditional Access Policies Associated with Network Zones</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConditionalAccessPoliciesForNetworkZoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConditionalAccessPoliciesForNetworkZoneResponse
+        /// </returns>
+        public async Task<ListConditionalAccessPoliciesForNetworkZoneResponse> ListConditionalAccessPoliciesForNetworkZoneAsync(ListConditionalAccessPoliciesForNetworkZoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListConditionalAccessPoliciesForNetworkZoneWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>列表查询域名代理Token信息。</para>
         /// </summary>
         /// 
@@ -12311,7 +13525,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表某个网络访问端点下的访问路径。</para>
+        /// <para>列表查询某个网络访问端点下的访问路径。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12364,7 +13578,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表某个网络访问端点下的访问路径。</para>
+        /// <para>列表查询某个网络访问端点下的访问路径。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12417,7 +13631,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表某个网络访问端点下的访问路径。</para>
+        /// <para>列表查询某个网络访问端点下的访问路径。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12435,7 +13649,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表某个网络访问端点下的访问路径。</para>
+        /// <para>列表查询某个网络访问端点下的访问路径。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17493,6 +18707,378 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateApplicationDescriptionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Update Conditional Access Policy</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConditionalAccessPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConditionalAccessPolicyResponse
+        /// </returns>
+        public UpdateConditionalAccessPolicyResponse UpdateConditionalAccessPolicyWithOptions(UpdateConditionalAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyId))
+            {
+                query["ConditionalAccessPolicyId"] = request.ConditionalAccessPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyName))
+            {
+                query["ConditionalAccessPolicyName"] = request.ConditionalAccessPolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionsConfig))
+            {
+                query["ConditionsConfig"] = request.ConditionsConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecisionConfig))
+            {
+                query["DecisionConfig"] = request.DecisionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecisionType))
+            {
+                query["DecisionType"] = request.DecisionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConditionalAccessPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateConditionalAccessPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateConditionalAccessPolicyResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Update Conditional Access Policy</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConditionalAccessPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConditionalAccessPolicyResponse
+        /// </returns>
+        public async Task<UpdateConditionalAccessPolicyResponse> UpdateConditionalAccessPolicyWithOptionsAsync(UpdateConditionalAccessPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyId))
+            {
+                query["ConditionalAccessPolicyId"] = request.ConditionalAccessPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyName))
+            {
+                query["ConditionalAccessPolicyName"] = request.ConditionalAccessPolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionsConfig))
+            {
+                query["ConditionsConfig"] = request.ConditionsConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecisionConfig))
+            {
+                query["DecisionConfig"] = request.DecisionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecisionType))
+            {
+                query["DecisionType"] = request.DecisionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConditionalAccessPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateConditionalAccessPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateConditionalAccessPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Update Conditional Access Policy</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConditionalAccessPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConditionalAccessPolicyResponse
+        /// </returns>
+        public UpdateConditionalAccessPolicyResponse UpdateConditionalAccessPolicy(UpdateConditionalAccessPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateConditionalAccessPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update Conditional Access Policy</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Update Conditional Access Policy</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConditionalAccessPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConditionalAccessPolicyResponse
+        /// </returns>
+        public async Task<UpdateConditionalAccessPolicyResponse> UpdateConditionalAccessPolicyAsync(UpdateConditionalAccessPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateConditionalAccessPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update Conditional Access Policy Description</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Update Conditional Access Policy Description</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConditionalAccessPolicyDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConditionalAccessPolicyDescriptionResponse
+        /// </returns>
+        public UpdateConditionalAccessPolicyDescriptionResponse UpdateConditionalAccessPolicyDescriptionWithOptions(UpdateConditionalAccessPolicyDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyId))
+            {
+                query["ConditionalAccessPolicyId"] = request.ConditionalAccessPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConditionalAccessPolicyDescription",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateConditionalAccessPolicyDescriptionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateConditionalAccessPolicyDescriptionResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update Conditional Access Policy Description</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Update Conditional Access Policy Description</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConditionalAccessPolicyDescriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConditionalAccessPolicyDescriptionResponse
+        /// </returns>
+        public async Task<UpdateConditionalAccessPolicyDescriptionResponse> UpdateConditionalAccessPolicyDescriptionWithOptionsAsync(UpdateConditionalAccessPolicyDescriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConditionalAccessPolicyId))
+            {
+                query["ConditionalAccessPolicyId"] = request.ConditionalAccessPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConditionalAccessPolicyDescription",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateConditionalAccessPolicyDescriptionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateConditionalAccessPolicyDescriptionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update Conditional Access Policy Description</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Update Conditional Access Policy Description</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConditionalAccessPolicyDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConditionalAccessPolicyDescriptionResponse
+        /// </returns>
+        public UpdateConditionalAccessPolicyDescriptionResponse UpdateConditionalAccessPolicyDescription(UpdateConditionalAccessPolicyDescriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateConditionalAccessPolicyDescriptionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update Conditional Access Policy Description</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Update Conditional Access Policy Description</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConditionalAccessPolicyDescriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConditionalAccessPolicyDescriptionResponse
+        /// </returns>
+        public async Task<UpdateConditionalAccessPolicyDescriptionResponse> UpdateConditionalAccessPolicyDescriptionAsync(UpdateConditionalAccessPolicyDescriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateConditionalAccessPolicyDescriptionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
