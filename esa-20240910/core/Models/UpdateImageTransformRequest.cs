@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateImageTransformRequest : TeaModel {
         /// <summary>
-        /// <para>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> API.</para>
+        /// <para>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Indicates whether to enable image transformation. Possible values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Enable { get; set; }
 
         /// <summary>
-        /// <para>Rule content, which specifies the strategy or condition expression to be implemented.</para>
+        /// <para>Rule content, used to match user requests with conditional expressions. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>To match all incoming requests: Set the value to true.</description></item>
+        /// <item><description>To match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>(http.request.uri.path.file_name eq \&quot;jpg\&quot;)</para>
@@ -45,10 +49,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. Possible values:</para>
+        /// <para>Rule switch. This parameter is not required when adding a global configuration. Possible values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enabled.</description></item>
-        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +63,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name.</para>
+        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -69,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
+        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

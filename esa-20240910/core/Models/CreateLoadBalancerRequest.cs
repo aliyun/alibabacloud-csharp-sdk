@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? FallbackPool { get; set; }
 
         /// <summary>
-        /// <para>Monitor configuration for health checks.</para>
+        /// <para>Monitor configuration, used for health checks.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public CreateLoadBalancerRequestMonitor Monitor { get; set; }
         public class CreateLoadBalancerRequestMonitor : TeaModel {
             /// <summary>
-            /// <para>Number of consecutive failed probes required to consider the target as down, such as <c>5</c>.</para>
+            /// <para>Number of consecutive failed probes required to consider the target unhealthy, such as <c>5</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? ConsecutiveDown { get; set; }
 
             /// <summary>
-            /// <para>Number of consecutive successful probes required to consider the target as up, such as <c>3</c>.</para>
+            /// <para>Number of consecutive successful probes required to consider the target healthy, such as <c>3</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? FollowRedirects { get; set; }
 
             /// <summary>
-            /// <para>Header information included during the probe, which is an HTTP header.</para>
+            /// <para>Header information included in the probe, which is the HTTP header.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public object Header { get; set; }
 
             /// <summary>
-            /// <para>Monitoring interval, such as <c>60</c> seconds, indicating the frequency of checks.</para>
+            /// <para>Monitoring interval, such as <c>60</c> seconds, representing the frequency of checks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Method { get; set; }
 
             /// <summary>
-            /// <para>Monitor check path, such as <c>/healthcheck</c>, which is an HTTP request path.</para>
+            /// <para>Monitor check path, such as <c>/healthcheck</c>, which is the HTTP request path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/health</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Timeout { get; set; }
 
             /// <summary>
-            /// <para>Monitor protocol type, such as HTTP, used for health checks. When the value is <c>off</c>, it indicates that no check will be performed.</para>
+            /// <para>Monitor protocol type, such as HTTP, used for health checks. When set to <c>off</c>, no check is performed.</para>
             /// <list type="bullet">
             /// <item><description>TCP</description></item>
             /// <item><description>UDP</description></item>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The name of the load balancer, which must meet domain name format validation and be a subdomain under the site.</para>
+        /// <para>The name of the load balancer, which must meet the domain name format validation and be a subdomain under the site.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public CreateLoadBalancerRequestRandomSteering RandomSteering { get; set; }
         public class CreateLoadBalancerRequestRandomSteering : TeaModel {
             /// <summary>
-            /// <para>Default weight for all pools that do not have individual weights specified. The value range is an integer between 0 and 100.</para>
+            /// <para>Default weight for round-robin, used for all pools that do not have a specific weight set. The value range is an integer between 0 and 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>Modify the corresponding load balancing configuration after matching the rule. The configured fields will override the corresponding fields in the load balancer configuration.</para>
+            /// <para>Modify the corresponding load balancing configuration after matching the rule. The fields in the configuration will override the corresponding fields in the load balancer configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -402,7 +402,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public object Overrides { get; set; }
 
             /// <summary>
-            /// <para>Matching rule information.</para>
+            /// <para>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding global configurations. There are two usage scenarios:</para>
+            /// <list type="bullet">
+            /// <item><description>Match all incoming requests: Set the value to true</description></item>
+            /// <item><description>Match specific requests: Set the value to a custom expression, e.g., (http.host eq \&quot;video.example.com\&quot;)</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>(http.request.method eq &quot;GET&quot; and http.request.version eq &quot;HTTP/1.0&quot;) or (ip.geoip.country eq &quot;CN&quot;) or (http.host eq &quot;<a href="http://www.example.com">www.example.com</a>&quot;)</para>
@@ -412,10 +416,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>Rule switch.</para>
+            /// <para>Rule switch. This parameter does not need to be set when adding global configurations. Value range:</para>
             /// <list type="bullet">
-            /// <item><description>on: Enable the rule.</description></item>
-            /// <item><description>off: Disable the rule.</description></item>
+            /// <item><description>on: Enable.</description></item>
+            /// <item><description>off: Disable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -426,7 +430,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleEnable { get; set; }
 
             /// <summary>
-            /// <para>Rule name.</para>
+            /// <para>Rule name. This parameter does not need to be set when adding global configurations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule_1</para>
@@ -436,7 +440,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>Rule execution order. It can be left blank, in which case the rules will be executed in the list order. If filled, it should be a positive integer greater than 0.</para>
+            /// <para>The execution order of the rule. It can be left blank, in which case the rules will be executed in the order they appear in the list. If specified, it should be an integer greater than 0, with higher values indicating a higher priority for execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -449,7 +453,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>Whether to terminate the execution of subsequent rules.</para>
             /// <list type="bullet">
             /// <item><description>true: Yes.</description></item>
-            /// <item><description>false: No.</description></item>
+            /// <item><description>false: No, default value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -462,11 +466,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Session persistence, with values:</para>
+        /// <para>Session persistence, with possible values:</para>
         /// <list type="bullet">
         /// <item><description>off: Not enabled.</description></item>
         /// <item><description>ip: Session persistence by IP.</description></item>
-        /// <item><description>cookie: Not enabled for session persistence.</description></item>
+        /// <item><description>cookie: Session persistence by cookie.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -490,7 +494,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Load balancing strategy.</para>
         /// <list type="bullet">
-        /// <item><description>geo: Geographical strategy.</description></item>
+        /// <item><description>geo: Geographic strategy.</description></item>
         /// <item><description>random: Weighted round-robin.</description></item>
         /// <item><description>order: Primary and backup method.</description></item>
         /// </list>
@@ -504,7 +508,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SteeringPolicy { get; set; }
 
         /// <summary>
-        /// <para>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, you can use a comma-separated list of secondary regions as the key.</para>
+        /// <para>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, the keys can be concatenated with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</para>

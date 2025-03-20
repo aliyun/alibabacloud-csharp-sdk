@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListHttpResponseHeaderModificationRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration list of modifying a response header.</para>
+        /// <para>List of modified HTTP response headers.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public List<ListHttpResponseHeaderModificationRulesResponseBodyConfigs> Configs { get; set; }
         public class ListHttpResponseHeaderModificationRulesResponseBodyConfigs : TeaModel {
             /// <summary>
-            /// <para>The configuration ID.</para>
+            /// <para>Configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>35281609698****</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ConfigId { get; set; }
 
             /// <summary>
-            /// <para>The type of the configuration. Valid values:</para>
+            /// <para>Configuration type. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description>global: global configuration.</description></item>
-            /// <item><description>rule: rule configuration.</description></item>
+            /// <item><description>global: Global configuration.</description></item>
+            /// <item><description>rule: Rule configuration.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ConfigType { get; set; }
 
             /// <summary>
-            /// <para>The configurations of modifying response headers. You can add, delete, or modify a response header.</para>
+            /// <para>Modify response headers, supporting add, delete, and modify operations.</para>
             /// </summary>
             [NameInMap("ResponseHeaderModification")]
             [Validation(Required=false)]
             public List<ListHttpResponseHeaderModificationRulesResponseBodyConfigsResponseHeaderModification> ResponseHeaderModification { get; set; }
             public class ListHttpResponseHeaderModificationRulesResponseBodyConfigsResponseHeaderModification : TeaModel {
                 /// <summary>
-                /// <para>The name of the response header.</para>
+                /// <para>Name of the response header.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>headerName</para>
@@ -58,11 +58,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The action. Valid values:</para>
+                /// <para>Operation type. The value range is as follows:</para>
                 /// <list type="bullet">
-                /// <item><description>add: adds a response header.</description></item>
-                /// <item><description>del: deletes a response header.</description></item>
-                /// <item><description>modify: modifies a response header.</description></item>
+                /// <item><description>add: Add.</description></item>
+                /// <item><description>del: Delete</description></item>
+                /// <item><description>modify: Modify.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Operation { get; set; }
 
                 /// <summary>
-                /// <para>The value of the response header.</para>
+                /// <para>Response header value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>headerValue</para>
@@ -85,7 +85,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The rule content.</para>
+            /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+            /// <list type="bullet">
+            /// <item><description>Match all incoming requests: Set the value to true</description></item>
+            /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>(http.host eq &quot;video.example.com&quot;)</para>
@@ -95,10 +99,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule is enabled. Valid values:</para>
+            /// <para>Rule switch. This parameter is not required when adding a global configuration. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description>on</description></item>
-            /// <item><description>off</description></item>
+            /// <item><description>on: Enable.</description></item>
+            /// <item><description>off: Disable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +113,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleEnable { get; set; }
 
             /// <summary>
-            /// <para>The rule name.</para>
+            /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule_example</para>
@@ -119,7 +123,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The order in which the rule is executed.</para>
+            /// <para>Rule execution order. The smaller the value, the higher the priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -129,7 +133,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Sequence { get; set; }
 
             /// <summary>
-            /// <para>The version number of the website configurations.</para>
+            /// <para>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, with the default being version 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -141,7 +145,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>Page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -151,7 +155,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -161,7 +165,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</para>
@@ -171,7 +175,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>Total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>14</para>
@@ -181,7 +185,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>Total pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

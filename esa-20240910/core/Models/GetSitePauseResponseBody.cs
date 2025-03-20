@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetSitePauseResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether acceleration has been paused. Possible values:</para>
+        /// <para>Indicates whether ESA is paused on the website. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The site\&quot;s acceleration is paused.</description></item>
-        /// <item><description>false: The site is accelerating normally.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Paused { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</para>

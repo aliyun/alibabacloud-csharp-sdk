@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ResponseHeaderModificationShrink { get; set; }
 
         /// <summary>
-        /// <para>Rule content.</para>
+        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>To match all incoming requests: Set the value to true</description></item>
+        /// <item><description>To match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>(http.host eq &quot;video.example.com&quot;)</para>
@@ -28,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. Possible values:</para>
+        /// <para>Rule switch. This parameter is not required when adding a global configuration. Possible values:</para>
         /// <list type="bullet">
         /// <item><description>on: Enable.</description></item>
         /// <item><description>off: Disable.</description></item>
@@ -42,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name.</para>
+        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>

@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CacheReserveEligibility { get; set; }
 
         /// <summary>
-        /// <para>When generating the cache key, check if the cookie exists. If it does, add the cookie name (case-insensitive) to the cache key. Supports multiple cookie names, separated by spaces.</para>
+        /// <para>When generating the cache key, check if the cookie exists. If it does, add the cookie name (cookie names are case-insensitive) to the cache key. Supports multiple cookie names, separated by spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cookiename</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CheckPresenceCookie { get; set; }
 
         /// <summary>
-        /// <para>When generating the cache key, check if the header exists. If it does, add the header name (case-insensitive) to the cache key. Supports multiple header names, separated by spaces.</para>
+        /// <para>When generating the cache key, check if the header exists. If it does, add the header name (header names are case-insensitive) to the cache key. Supports multiple header names, separated by spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>headername</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Edge cache mode. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>follow_origin: Follow origin cache policy (if exists), otherwise use default cache policy.</description></item>
+        /// <item><description>follow_origin: Follow origin cache policy (if exists), otherwise use the default cache policy.</description></item>
         /// <item><description>no_cache: Do not cache.</description></item>
         /// <item><description>override_origin: Override origin cache policy.</description></item>
         /// <item><description>follow_origin_bypass: Follow origin cache policy (if exists), otherwise do not cache.</description></item>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string IncludeHeader { get; set; }
 
         /// <summary>
-        /// <para>Query strings to be retained or deleted. Supports multiple values, separated by spaces.</para>
+        /// <para>The query strings to be retained or deleted, supporting multiple values separated by spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -223,7 +223,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Rule content.</para>
+        /// <para>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding a global configuration. There are two usage scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Match all incoming requests: Set the value to true</description></item>
+        /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>(http.host eq \&quot;video.example.com\&quot;)</para>
@@ -233,10 +237,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. Value range:</para>
+        /// <para>Rule switch. This parameter does not need to be set when adding a global configuration. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -247,7 +251,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name.</para>
+        /// <para>Rule name. This parameter does not need to be set when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -257,7 +261,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Rule execution sequence.</para>
+        /// <para>Rule execution order. The smaller the value, the higher the priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -281,7 +285,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ServeStale { get; set; }
 
         /// <summary>
-        /// <para>Site version number.</para>
+        /// <para>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, defaulting to version 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -293,8 +297,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Query string sorting. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

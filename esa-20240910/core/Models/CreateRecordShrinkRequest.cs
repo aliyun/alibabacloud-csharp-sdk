@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The origin host policy. This policy takes effect when the record type is CNAME. You can set the policy in two modes:</para>
         /// <list type="bullet">
-        /// <item><description><b>follow_hostname</b>: Follow the host record.</description></item>
-        /// <item><description><b>follow_origin_domain</b>: match the origin\&quot;s domain name.</description></item>
+        /// <item><description>follow_hostname: Follow the host record.</description></item>
+        /// <item><description>follow_origin_domain: match the origin\&quot;s domain name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

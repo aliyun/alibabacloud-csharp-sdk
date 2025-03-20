@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetCertificateResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The certificate ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>babaffe176ae44e2ad16d3e309b9e506</para>
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }

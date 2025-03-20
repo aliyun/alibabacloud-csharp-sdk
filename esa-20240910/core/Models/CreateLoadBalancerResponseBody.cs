@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateLoadBalancerResponseBody : TeaModel {
         /// <summary>
-        /// <para>Load Balancer ID.</para>
+        /// <para>Load balancer ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>99867648760****</para>

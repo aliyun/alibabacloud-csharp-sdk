@@ -49,6 +49,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string OriginHttpsPort { get; set; }
 
+        /// <summary>
+        /// <para>mTLS switch. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
         [NameInMap("OriginMtls")]
         [Validation(Required=false)]
         public string OriginMtls { get; set; }
@@ -69,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OriginScheme { get; set; }
 
         /// <summary>
-        /// <para>The SNI carried in the origin request.</para>
+        /// <para>SNI carried in the origin request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>origin.example.com</para>
@@ -78,12 +88,22 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string OriginSni { get; set; }
 
+        /// <summary>
+        /// <para>Origin certificate verification switch. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
         [NameInMap("OriginVerify")]
         [Validation(Required=false)]
         public string OriginVerify { get; set; }
 
         /// <summary>
-        /// <para>Use range chunking for downloading files from the origin. Possible values:</para>
+        /// <para>Use range chunking for origin downloads. Possible values:</para>
         /// <list type="bullet">
         /// <item><description>on: Enable</description></item>
         /// <item><description>off: Disable</description></item>
@@ -98,7 +118,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Range { get; set; }
 
         /// <summary>
-        /// <para>Rule content.</para>
+        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding global configurations. There are two usage scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Match all incoming requests: Set the value to true</description></item>
+        /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>(http.host eq \&quot;video.example.com\&quot;)</para>
@@ -108,7 +132,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. Possible values:</para>
+        /// <para>Rule switch. This parameter is not required when adding global configurations. Possible values:</para>
         /// <list type="bullet">
         /// <item><description>on: Enable.</description></item>
         /// <item><description>off: Disable.</description></item>
@@ -122,7 +146,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name.</para>
+        /// <para>Rule name. This parameter is not required when adding global configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>

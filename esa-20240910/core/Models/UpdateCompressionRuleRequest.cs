@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Brotli compression. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: enabled.</description></item>
-        /// <item><description>off: disabled.</description></item>
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Gzip compression. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: enabled.</description></item>
-        /// <item><description>off: disabled.</description></item>
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Gzip { get; set; }
 
         /// <summary>
-        /// <para>Rule content.</para>
+        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>To match all incoming requests: Set the value to true</description></item>
+        /// <item><description>To match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>(http.host eq &quot;video.example.com&quot;)</para>
@@ -59,10 +63,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule enable status, supports:</para>
+        /// <para>Rule switch. This parameter is not required when adding a global configuration. Value range:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: indicates enabled.</description></item>
-        /// <item><description><b>off</b>: indicates disabled.</description></item>
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name.</para>
+        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -93,6 +97,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public long? SiteId { get; set; }
 
+        /// <summary>
+        /// <para>Zstd compression. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
         [NameInMap("Zstd")]
         [Validation(Required=false)]
         public string Zstd { get; set; }

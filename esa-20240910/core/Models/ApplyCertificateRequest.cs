@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Certificate type. Possible values: lets_encrypt: Let\&quot;s Encrypt certificate; digicert_single: Digicert single domain certificate; digicert_wildcard: Digicert wildcard certificate.</para>
+        /// <para>The certificate type. Valid values: lets_encrypt, digicert_single, and digicert_wildcard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lets_encrypt</para>

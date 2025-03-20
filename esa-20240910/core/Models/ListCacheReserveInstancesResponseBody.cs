@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListCacheReserveInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of cache reserve instances.</para>
+        /// <para>The cache reserve instances.</para>
         /// </summary>
         [NameInMap("InstanceInfo")]
         [Validation(Required=false)]
@@ -81,12 +81,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Instance status. Values:</para>
+            /// <para>The status of the cache reserve instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: Normal service status.</description></item>
-            /// <item><description><b>offline</b>: Expired but not overdue, in an unavailable state.</description></item>
-            /// <item><description><b>disable</b>: Released status.</description></item>
-            /// <item><description><b>overdue</b>: Overdue and suspended status.</description></item>
+            /// <item><description><b>online</b>: The instance is in service.</description></item>
+            /// <item><description><b>offline</b>: The instance has expired within an allowable period. In this state, it is unavailable.</description></item>
+            /// <item><description><b>disable</b>: The instance has been released.</description></item>
+            /// <item><description><b>overdue</b>: The instance has been stopped due to overdue payments.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRewriteUrlRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Query string after rewriting.</para>
+        /// <para>The query string after rewriting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example=123</para>
@@ -22,7 +22,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Query string rewrite type. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>static: Static mode.</description></item>
+        /// <item><description>static: static mode.</description></item>
+        /// <item><description>dynamic: dynamic mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +39,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>URI rewrite type. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>static: Static mode.</description></item>
+        /// <item><description>static: static mode.</description></item>
+        /// <item><description>dynamic: dynamic mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +54,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RewriteUriType { get; set; }
 
         /// <summary>
-        /// <para>Rule content.</para>
+        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Match all incoming requests: set the value to true</description></item>
+        /// <item><description>Match specific requests: set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>(http.host eq &quot;video.example.com&quot;)</para>
@@ -62,10 +68,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. Value range:</para>
+        /// <para>Rule switch. This parameter is not required when adding a global configuration. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description>on: enable.</description></item>
+        /// <item><description>off: disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +82,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name.</para>
+        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Version number of the site configuration. For sites with version management enabled, this parameter can specify the version to which the configuration applies, defaulting to version 0.</para>
+        /// <para>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? SiteVersion { get; set; }
 
         /// <summary>
-        /// <para>Target URI after rewriting.</para>
+        /// <para>The target URI after rewriting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/image/example.jpg</para>

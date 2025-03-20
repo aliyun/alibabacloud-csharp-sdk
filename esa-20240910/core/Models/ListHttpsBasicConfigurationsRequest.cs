@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description>global: Query global configuration.</description></item>
         /// <item><description>rule: Query rule configuration.</description></item>
         /// </list>
-        /// <para>This parameter is optional; if not provided, it will not distinguish between global and rule configurations.</para>
+        /// <para>This parameter is optional. If not provided, it does not distinguish between global and rule configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>global</para>

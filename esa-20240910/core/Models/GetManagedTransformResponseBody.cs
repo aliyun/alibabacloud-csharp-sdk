@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetManagedTransformResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether to include the header that indicates the geographical location of a client in an origin request. Valid values:</para>
+        /// <para>Add visitor geolocation header. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AddClientGeolocationHeader { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to include the &quot;ali-real-client-ip&quot; header that contains the client\&quot;s real IP address in an origin request. Valid values:</para>
+        /// <para>Add the &quot;ali-real-client-ip&quot; header containing the real client IP. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AddRealClientIpHeader { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the website.</para>
+        /// <para>The version number of the site. For sites with version management enabled, this parameter can be used to specify the site version for which the configuration takes effect, defaulting to version 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

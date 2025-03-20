@@ -24,7 +24,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Enable { get; set; }
 
         /// <summary>
-        /// <para>Rule content, specifically the strategy or condition expression being implemented.</para>
+        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>To match all incoming requests: Set the value to true</description></item>
+        /// <item><description>To match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>(http.request.uri.path.file_name eq \&quot;jpg\&quot;)</para>
@@ -34,10 +38,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. Values:</para>
+        /// <para>Rule switch. This parameter is not required when adding a global configuration. Possible values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enabled.</description></item>
-        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name.</para>
+        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

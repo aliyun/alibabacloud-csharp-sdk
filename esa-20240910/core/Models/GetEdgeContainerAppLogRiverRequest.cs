@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetEdgeContainerAppLogRiverRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>app-880688675****88</para>
         /// </summary>

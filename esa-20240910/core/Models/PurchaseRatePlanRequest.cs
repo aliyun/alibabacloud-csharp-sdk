@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// <para>Automatic payment.</para>
+        /// <para>Specifies whether to enable auto payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Billing type</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PREPAY: Prepaid.</description></item>
-        /// <item><description>POSTPAY: Postpaid.</description></item>
+        /// <item><description>PREPAY: subscription.</description></item>
+        /// <item><description>POSTPAY: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,11 +52,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>Acceleration area:</para>
+        /// <para>The service location. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>domestic: Mainland China only.</description></item>
-        /// <item><description>global: Worldwide.</description></item>
-        /// <item><description>overseas: Global (excluding Mainland China).</description></item>
+        /// <item><description>domestic: the Chinese mainland.</description></item>
+        /// <item><description>global: global.</description></item>
+        /// <item><description>overseas: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteName { get; set; }
 
         /// <summary>
-        /// <para>Site access type:</para>
+        /// <para>The DNS setup option for the website. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NS: NS access.</description></item>
-        /// <item><description>CNAME: CNAME access.</description></item>
+        /// <item><description>NS</description></item>
+        /// <item><description>CNAME</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

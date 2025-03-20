@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRedirectRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration list of the the URL redirect rule.</para>
+        /// <para>List of redirect configurations.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public List<ListRedirectRulesResponseBodyConfigs> Configs { get; set; }
         public class ListRedirectRulesResponseBodyConfigs : TeaModel {
             /// <summary>
-            /// <para>The configuration ID.</para>
+            /// <para>Configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>35281609698****</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ConfigId { get; set; }
 
             /// <summary>
-            /// <para>The type of the configuration. Valid values:</para>
+            /// <para>Configuration type. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description>global: global configuration.</description></item>
-            /// <item><description>rule: rule configuration.</description></item>
+            /// <item><description>global: Global configuration.</description></item>
+            /// <item><description>rule: Rule configuration.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ConfigType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the feature of retaining the query string is enabled. Valid values:</para>
+            /// <para>Preserve query string. Value range:</para>
             /// <list type="bullet">
-            /// <item><description>on</description></item>
-            /// <item><description>off</description></item>
+            /// <item><description>on: enabled.</description></item>
+            /// <item><description>off: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ReserveQueryString { get; set; }
 
             /// <summary>
-            /// <para>The rule content.</para>
+            /// <para>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding a global configuration. There are two usage scenarios:</para>
+            /// <list type="bullet">
+            /// <item><description>Match all incoming requests: Set the value to true</description></item>
+            /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>(http.host eq &quot;video.example.com&quot;)</para>
@@ -65,10 +69,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule is enabled. Valid values:</para>
+            /// <para>Rule switch. This parameter does not need to be set when adding a global configuration. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description>on</description></item>
-            /// <item><description>off</description></item>
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +83,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleEnable { get; set; }
 
             /// <summary>
-            /// <para>The rule name.</para>
+            /// <para>Rule name. This parameter does not need to be set when adding a global configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule_example</para>
@@ -89,7 +93,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The order in which the rule is executed.</para>
+            /// <para>Rule execution order. The smaller the value, the higher the priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -99,7 +103,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Sequence { get; set; }
 
             /// <summary>
-            /// <para>The version of the website configurations.</para>
+            /// <para>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, with the default being version 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -109,7 +113,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? SiteVersion { get; set; }
 
             /// <summary>
-            /// <para>The response code that you want to use to indicate URL redirection. Valid values:</para>
+            /// <para>Response status code used by the node to respond to the client with the redirect address. Possible values:</para>
             /// <list type="bullet">
             /// <item><description>301</description></item>
             /// <item><description>302</description></item>
@@ -126,7 +130,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string StatusCode { get; set; }
 
             /// <summary>
-            /// <para>The destination URL to which requests are redirected.</para>
+            /// <para>Target URL after redirection.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.exapmle.com/index.html">http://www.exapmle.com/index.html</a></para>
@@ -136,9 +140,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string TargetUrl { get; set; }
 
             /// <summary>
-            /// <para>The redirect type. Valid values:</para>
+            /// <para>Redirect type. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description>static</description></item>
+            /// <item><description>static: Static mode.</description></item>
+            /// <item><description>dynamic: Dynamic mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -151,7 +156,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The page number returned.</para>
+        /// <para>Current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -161,7 +166,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -171,7 +176,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</para>
@@ -181,7 +186,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>Total number of items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -191,7 +196,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>Total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

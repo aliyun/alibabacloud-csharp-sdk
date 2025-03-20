@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string BrowserCacheMode { get; set; }
 
         /// <summary>
-        /// <para>Browser cache expiration time in seconds.</para>
+        /// <para>Browser cache expiration time, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string BypassCache { get; set; }
 
         /// <summary>
-        /// <para>Cache deception protection. Used to defend against web cache deception attacks, only the cache content that passes the validation will be cached. Value range:</para>
+        /// <para>Cache deception defense. Used to defend against web cache deception attacks; only the verified cache content will be cached. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EdgeCacheMode { get; set; }
 
         /// <summary>
-        /// <para>Edge cache expiration time in seconds.</para>
+        /// <para>Edge cache expiration time, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EdgeCacheTtl { get; set; }
 
         /// <summary>
-        /// <para>Status code cache expiration time in seconds.</para>
+        /// <para>Status code cache expiration time, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -189,7 +189,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QueryStringMode { get; set; }
 
         /// <summary>
-        /// <para>Rule content.</para>
+        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Match all incoming requests: Set the value to true</description></item>
+        /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>(http.host eq \&quot;video.example.com\&quot;)</para>
@@ -199,7 +203,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. Possible values:</para>
+        /// <para>Rule switch. This parameter is not required when adding a global configuration. Possible values:</para>
         /// <list type="bullet">
         /// <item><description>on: Enable.</description></item>
         /// <item><description>off: Disable.</description></item>
@@ -213,7 +217,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name.</para>
+        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -223,10 +227,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Serve stale cache. When enabled, the node can still respond to user requests with expired cached files when the origin server is unavailable. Value range:</para>
+        /// <para>Serve stale cache. When enabled, the node can still use the expired cached files to respond to user requests even if the origin server is unavailable. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -272,7 +276,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortQueryStringForCache { get; set; }
 
         /// <summary>
-        /// <para>When generating the cache key, add the client device type. Possible values:</para>
+        /// <para>When generating the cache key, include the client device type. Possible values:</para>
         /// <list type="bullet">
         /// <item><description>on: Enable.</description></item>
         /// <item><description>off: Disable.</description></item>
@@ -286,7 +290,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string UserDeviceType { get; set; }
 
         /// <summary>
-        /// <para>When generating the cache key, add the client\&quot;s geographic location. Possible values:</para>
+        /// <para>Include the client\&quot;s geographical location when generating the cache key. Value range:</para>
         /// <list type="bullet">
         /// <item><description>on: Enable.</description></item>
         /// <item><description>off: Disable.</description></item>
@@ -300,7 +304,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string UserGeo { get; set; }
 
         /// <summary>
-        /// <para>When generating cache keys, include the client\&quot;s language type. The value can be: - on: enabled. - off: disabled.</para>
+        /// <para>Include the client\&quot;s language type when generating the cache key. Value range:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>

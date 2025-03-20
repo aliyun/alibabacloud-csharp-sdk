@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("FingerprintSha256")]
+            [Validation(Required=false)]
+            public string FingerprintSha256 { get; set; }
+
             /// <summary>
             /// <para>The certificate ID.</para>
             /// 
@@ -145,6 +149,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [NameInMap("SAN")]
             [Validation(Required=false)]
             public string SAN { get; set; }
+
+            [NameInMap("SerialNumber")]
+            [Validation(Required=false)]
+            public string SerialNumber { get; set; }
 
             /// <summary>
             /// <para>The signature algorithm of the certificate.</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetSiteNameExclusiveResponseBody : TeaModel {
         /// <summary>
-        /// <para>Feature switch. Possible values:</para>
+        /// <para>Indicates whether site hold is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description>on</description></item>
+        /// <item><description>off</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Enable { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35C66C7B-671H-4297-9187-2C4477247A78</para>

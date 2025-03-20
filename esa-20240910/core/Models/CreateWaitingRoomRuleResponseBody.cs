@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateWaitingRoomRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</para>
@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Waiting room bypass rule ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>420072638347264</para>
+        /// </summary>
         [NameInMap("WaitingRoomRuleId")]
         [Validation(Required=false)]
         public long? WaitingRoomRuleId { get; set; }

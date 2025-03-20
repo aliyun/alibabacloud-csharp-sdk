@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateHttpsApplicationConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>Feature switch, default is disabled. Values:</para>
+        /// <para>Feature switch, default is disabled. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AltSvc { get; set; }
 
         /// <summary>
-        /// <para>Whether the Alt-Svc header includes the clear parameter, default is disabled. Values:</para>
+        /// <para>Whether the Alt-Svc header includes the clear parameter, default is disabled. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AltSvcClear { get; set; }
 
         /// <summary>
-        /// <para>Alt-Svc validity period in seconds, default is 86400 seconds.</para>
+        /// <para>Alt-Svc validity period, in seconds, default is 86400 seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86400</para>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AltSvcMa { get; set; }
 
         /// <summary>
-        /// <para>Whether the Alt-Svc header includes the persist parameter, default is disabled. Values:</para>
+        /// <para>Whether the Alt-Svc header includes the persist parameter, default is disabled. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,10 +73,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable HSTS, default is disabled. Values:</para>
+        /// <para>Whether to enable HSTS, default is disabled. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Hsts { get; set; }
 
         /// <summary>
-        /// <para>Whether to include subdomains in HSTS, default is disabled. Values:</para>
+        /// <para>Whether to include subdomains in HSTS, default is disabled. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string HstsIncludeSubdomains { get; set; }
 
         /// <summary>
-        /// <para>HSTS expiration time in seconds.</para>
+        /// <para>HSTS expiration time, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -111,10 +111,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string HstsMaxAge { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable HSTS preload, default is disabled. Values:</para>
+        /// <para>Whether to enable HSTS preload, default is disabled. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,10 +125,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string HstsPreload { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable forced HTTPS, default is disabled. Values:</para>
+        /// <para>Whether to enable forced HTTPS, default is disabled. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string HttpsForce { get; set; }
 
         /// <summary>
-        /// <para>Forced HTTPS redirect status code. Values:</para>
+        /// <para>Forced HTTPS redirect status code, value range:</para>
         /// <list type="bullet">
         /// <item><description>301</description></item>
         /// <item><description>302</description></item>
@@ -155,7 +155,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string HttpsForceCode { get; set; }
 
         /// <summary>
-        /// <para>Rule content.</para>
+        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Match all incoming requests: Set the value to true</description></item>
+        /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>(http.host eq \&quot;video.example.com\&quot;)</para>
@@ -165,10 +169,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. Values:</para>
+        /// <para>Rule switch. This parameter is not required when adding a global configuration. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -179,7 +183,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name.</para>
+        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>

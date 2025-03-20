@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetHttpResponseHeaderModificationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration ID, which can be obtained by calling the <a href="~~ListHttpResponseHeaderModificationRules~~">ListHttpResponseHeaderModificationRules</a> operation.</para>
+        /// <para>Configuration ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpResponseHeaderModificationRules</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

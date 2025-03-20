@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string OriginHost { get; set; }
 
             /// <summary>
-            /// <para>The origin server port accessed when using the HTTP protocol.</para>
+            /// <para>The port of the origin server to access when using the HTTP protocol for origin requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8080</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string OriginHttpPort { get; set; }
 
             /// <summary>
-            /// <para>The origin server port to access when using the HTTPS protocol for back-to-origin requests.</para>
+            /// <para>The port of the origin server to access when using the HTTPS protocol for origin requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4433</para>
@@ -80,6 +80,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string OriginHttpsPort { get; set; }
 
+            /// <summary>
+            /// <para>mTLS switch. Value range:</para>
+            /// <list type="bullet">
+            /// <item><description>on: Enable.</description></item>
+            /// <item><description>off: Disable.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>on</para>
+            /// </summary>
             [NameInMap("OriginMtls")]
             [Validation(Required=false)]
             public string OriginMtls { get; set; }
@@ -87,9 +97,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>Protocol used for the origin request. Value range:</para>
             /// <list type="bullet">
-            /// <item><description>http: Use HTTP protocol for origin requests.</description></item>
-            /// <item><description>https: Use HTTPS protocol for origin requests.</description></item>
-            /// <item><description>follow: Follow the client\&quot;s protocol for origin requests.</description></item>
+            /// <item><description>http: Use HTTP protocol for origin.</description></item>
+            /// <item><description>https: Use HTTPS protocol for origin.</description></item>
+            /// <item><description>follow: Follow the client\&quot;s protocol for origin.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string OriginScheme { get; set; }
 
             /// <summary>
-            /// <para>SNI carried in the origin request.</para>
+            /// <para>SNI carried in the back-to-origin request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>origin.example.com</para>
@@ -109,16 +119,26 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string OriginSni { get; set; }
 
+            /// <summary>
+            /// <para>Origin certificate verification switch. Value range:</para>
+            /// <list type="bullet">
+            /// <item><description>on: Enable.</description></item>
+            /// <item><description>off: Disable.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>on</para>
+            /// </summary>
             [NameInMap("OriginVerify")]
             [Validation(Required=false)]
             public string OriginVerify { get; set; }
 
             /// <summary>
-            /// <para>Use range slicing to download files from the origin. The value range is:</para>
+            /// <para>Use range slicing to download files from the origin. Value range:</para>
             /// <list type="bullet">
-            /// <item><description>on: enabled</description></item>
-            /// <item><description>off: disabled</description></item>
-            /// <item><description>force: forced</description></item>
+            /// <item><description>on: Enable</description></item>
+            /// <item><description>off: Disable</description></item>
+            /// <item><description>force: Force</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,7 +149,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Range { get; set; }
 
             /// <summary>
-            /// <para>Rule content.</para>
+            /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+            /// <list type="bullet">
+            /// <item><description>Match all incoming requests: Set the value to true</description></item>
+            /// <item><description>Match specific requests: Set the value to a custom expression, e.g., (http.host eq \&quot;video.example.com\&quot;)</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>(http.host eq \&quot;video.example.com\&quot;)</para>
@@ -139,10 +163,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>Rule switch. Value range:</para>
+            /// <para>Rule switch. This parameter is not required when adding a global configuration. Value range:</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled</description></item>
-            /// <item><description>off: Disabled</description></item>
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -153,7 +177,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleEnable { get; set; }
 
             /// <summary>
-            /// <para>Rule name.</para>
+            /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule_example</para>
@@ -163,7 +187,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>Rule execution sequence.</para>
+            /// <para>Rule execution order. The smaller the value, the higher the priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -173,7 +197,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Sequence { get; set; }
 
             /// <summary>
-            /// <para>Site version number.</para>
+            /// <para>Version number of the site configuration. For sites with version management enabled, this parameter can specify the version of the site for which the configuration is effective, defaulting to version 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -185,7 +209,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>Current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -195,7 +219,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The size of each page.</para>
+        /// <para>Page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -215,7 +239,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>Total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

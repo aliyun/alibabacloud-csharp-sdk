@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRewriteUrlRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The URL rewrite configuration list.</para>
+        /// <para>List of rewrite URL configurations.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public List<ListRewriteUrlRulesResponseBodyConfigs> Configs { get; set; }
         public class ListRewriteUrlRulesResponseBodyConfigs : TeaModel {
             /// <summary>
-            /// <para>The configuration ID.</para>
+            /// <para>Configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>39538644977****</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ConfigId { get; set; }
 
             /// <summary>
-            /// <para>The type of the configuration. Valid values:</para>
+            /// <para>Configuration type. Value range:</para>
             /// <list type="bullet">
-            /// <item><description>global: global configuration.</description></item>
-            /// <item><description>rule: rule configuration.</description></item>
+            /// <item><description>global: Global configuration;</description></item>
+            /// <item><description>rule: Rule configuration;</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ConfigType { get; set; }
 
             /// <summary>
-            /// <para>The desired query string to which you want to rewrite the query string in the original request.</para>
+            /// <para>The rewritten query string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example=123</para>
@@ -51,9 +51,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string QueryString { get; set; }
 
             /// <summary>
-            /// <para>The query string rewrite method. Valid values:</para>
+            /// <para>Query string rewrite type. Value range:</para>
             /// <list type="bullet">
-            /// <item><description>static</description></item>
+            /// <item><description>static: Static mode.</description></item>
+            /// <item><description>dynamic: Dynamic mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,9 +65,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RewriteQueryStringType { get; set; }
 
             /// <summary>
-            /// <para>The path rewrite method. Valid values:</para>
+            /// <para>URI rewrite type. Value range:</para>
             /// <list type="bullet">
-            /// <item><description>static</description></item>
+            /// <item><description>static: Static mode.</description></item>
+            /// <item><description>dynamic: Dynamic mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,7 +79,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RewriteUriType { get; set; }
 
             /// <summary>
-            /// <para>The rule content.</para>
+            /// <para>Rule content, using conditional expressions to match user requests. Not required when adding a global configuration. There are two usage scenarios:</para>
+            /// <list type="bullet">
+            /// <item><description>Match all incoming requests: Set the value to true</description></item>
+            /// <item><description>Match specific requests: Set the value to a custom expression, e.g., (http.host eq \&quot;video.example.com\&quot;)</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>(http.host eq &quot;video.example.com&quot;)</para>
@@ -87,10 +93,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule is enabled. Valid values:</para>
+            /// <para>Rule switch. Not required when adding a global configuration. Value range:</para>
             /// <list type="bullet">
-            /// <item><description>on</description></item>
-            /// <item><description>off</description></item>
+            /// <item><description>on: Enabled.</description></item>
+            /// <item><description>off: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleEnable { get; set; }
 
             /// <summary>
-            /// <para>The rule name.</para>
+            /// <para>Rule name. Not required when adding a global configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule_example</para>
@@ -111,7 +117,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The order in which the rule is executed.</para>
+            /// <para>Rule execution order. The smaller the value, the higher the priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Sequence { get; set; }
 
             /// <summary>
-            /// <para>The version number of the website configurations.</para>
+            /// <para>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, defaulting to version 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -131,7 +137,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? SiteVersion { get; set; }
 
             /// <summary>
-            /// <para>The desired URI to which you want to rewrite the path in the original request.</para>
+            /// <para>Target URI after rewriting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/image.example.com/index.html</para>
@@ -143,7 +149,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The page number returned.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -153,7 +159,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The size of the page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -163,7 +169,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</para>
@@ -173,7 +179,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -183,7 +189,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>Total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

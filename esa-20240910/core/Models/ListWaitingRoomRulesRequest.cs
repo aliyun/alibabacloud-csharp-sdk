@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWaitingRoomRulesRequest : TeaModel {
         /// <summary>
-        /// <para>Optional. The rule name, which can be used to query a specific bypass rule.</para>
+        /// <para>Rule name, optional, used for querying by the name of the waiting room bypass rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the waiting room to be bypassed, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWatingRooms</a> operation.</para>
+        /// <para>The ID of the waiting room to bypass, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRooms</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string WaitingRoomId { get; set; }
 
         /// <summary>
-        /// <para>Optional. The rule ID, which can be used to query a specific rule.</para>
+        /// <para>The ID of the waiting room bypass rule to update, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> interface.</para>
         /// 
         /// <b>Example:</b>
         /// <para>37286782688****</para>

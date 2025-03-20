@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateIPv6Request : TeaModel {
         /// <summary>
-        /// <para>Switch. Values:</para>
+        /// <para>Specifies whether to enable IPv6. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enable.</description></item>
-        /// <item><description><b>off</b>: Disable.</description></item>
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Enable { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</para>
+        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

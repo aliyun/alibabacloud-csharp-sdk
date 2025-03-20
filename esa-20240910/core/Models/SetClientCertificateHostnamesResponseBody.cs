@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetClientCertificateHostnamesResponseBody : TeaModel {
+        [NameInMap("Hostnames")]
+        [Validation(Required=false)]
+        public List<string> Hostnames { get; set; }
+
         /// <summary>
         /// <para>The ID of the client CA certificate.</para>
         /// 

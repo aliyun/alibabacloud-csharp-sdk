@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Certificate information.</para>
+        /// <para>The certificate information.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetCertificateResponseBodyResult Result { get; set; }
         public class GetCertificateResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Certificate application error code.</para>
+            /// <para>The error code returned for certificate application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ApplyCode { get; set; }
 
             /// <summary>
-            /// <para>Certificate application error message.</para>
+            /// <para>The error message returned for certificate application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>canceled</para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>DCV information.</para>
+            /// <para>The Domain Control Validation (DCV) information.</para>
             /// </summary>
             [NameInMap("DCV")]
             [Validation(Required=false)]
             public List<GetCertificateResponseBodyResultDCV> DCV { get; set; }
             public class GetCertificateResponseBodyResultDCV : TeaModel {
                 /// <summary>
-                /// <para>DCV ID.</para>
+                /// <para>The DCV ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bababf7cdd1546a2ad04c0def1f4c980</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>DCV name. For the DNS type, it is the TXT record name; for the HTTP type, it is the URL.</para>
+                /// <para>The DCV name. It is a TXT record name if Type is DNS or URL if Type is HTTP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow">http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow</a></para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>Verification status.</para>
+                /// <para>The verification status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pending</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>DCV type. Possible values: DNS; HTTP.</para>
+                /// <para>The DCV type. Valid values: DNS and HTTP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>DCV content.</para>
+                /// <para>The DCV content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow.KfzYo4LH3EgOt7a73G-RqZkbR0eYtLfEUmtmqGmr4FQ</para>

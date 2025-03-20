@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateLoadBalancerShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Configuration for cross-pool origin fallback.</para>
+        /// <para>Configuration for failover across pools.</para>
         /// </summary>
         [NameInMap("AdaptiveRouting")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DefaultPoolsShrink { get; set; }
 
         /// <summary>
-        /// <para>Detailed description of the load balancer, which is useful for management and identification.</para>
+        /// <para>Detailed description of the load balancer, for easier management and identification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>负载均衡器描述</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? FallbackPool { get; set; }
 
         /// <summary>
-        /// <para>Load balancer ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> interface.</para>
+        /// <para>Load balancer ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RandomSteeringShrink { get; set; }
 
         /// <summary>
-        /// <para>Address pools corresponding to the primary region.</para>
+        /// <para>Address pool corresponding to the primary region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -111,11 +111,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RulesShrink { get; set; }
 
         /// <summary>
-        /// <para>Session persistence, with values:</para>
+        /// <para>Session persistence, with possible values:</para>
         /// <list type="bullet">
         /// <item><description>off: Not enabled.</description></item>
         /// <item><description>ip: Session persistence by IP.</description></item>
-        /// <item><description>cookie: Not enabled for session persistence.</description></item>
+        /// <item><description>cookie: Session persistence by cookie.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SteeringPolicy { get; set; }
 
         /// <summary>
-        /// <para>Address pools corresponding to the secondary region. When multiple secondary regions share a set of address pools, you can use a comma-separated list of secondary regions as the key.</para>
+        /// <para>Address pool corresponding to the secondary region. When multiple secondary regions share the same address pool, the keys can be concatenated with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public object SubRegionPools { get; set; }
 
         /// <summary>
-        /// <para>TTL value, the time-to-live for DNS records. The default is 30, and the range is 10-600.</para>
+        /// <para>TTL value, the time-to-live for DNS records, with a default of 30 and a range of 10-600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>

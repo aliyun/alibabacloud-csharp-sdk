@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Sorting method. Values:</para>
+        /// <para>The criterion by which you want to sort the queried instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ExpireTime</b>: Expiration time.</description></item>
-        /// <item><description><b>CreateTime</b>: Purchase time.</description></item>
+        /// <item><description><b>ExpireTime</b></description></item>
+        /// <item><description><b>CreateTime</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>Sorting order. Supported values:</para>
+        /// <para>The order by which you want to sort the queried instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asc</b>: Ascending.</description></item>
-        /// <item><description><b>desc</b>: Descending.</description></item>
+        /// <item><description><b>asc</b></description></item>
+        /// <item><description><b>desc</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,12 +68,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>Cache reserve instance status. Supported values:</para>
+        /// <para>The status of the cache reserve instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>online</b>: Normal service status.</description></item>
-        /// <item><description><b>offline</b>: Expired but not overdue, in an unavailable state.</description></item>
-        /// <item><description><b>disable</b>: Released status.</description></item>
-        /// <item><description><b>overdue</b>: Overdue and suspended status.</description></item>
+        /// <item><description><b>online</b>: The instance is in service.</description></item>
+        /// <item><description><b>offline</b>: The instance has expired within an allowable period. In this state, it is unavailable.</description></item>
+        /// <item><description><b>disable</b>: The instance has been released.</description></item>
+        /// <item><description><b>overdue</b>: The instance has been stopped due to overdue payments.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

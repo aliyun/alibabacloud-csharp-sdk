@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateManagedTransformRequest : TeaModel {
         /// <summary>
-        /// <para>Add visitor geolocation header. Value range:</para>
+        /// <para>Specifies whether to include the header that indicates the geographical location of a client in an origin request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description>on</description></item>
+        /// <item><description>off</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AddClientGeolocationHeader { get; set; }
 
         /// <summary>
-        /// <para>Add the &quot;ali-real-client-ip&quot; header containing the real client IP. Value range:</para>
+        /// <para>Specifies whether to include the &quot;ali-real-client-ip&quot; header that indicates the client\&quot;s real IP address in an origin request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description>on</description></item>
+        /// <item><description>off</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AddRealClientIpHeader { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
+        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration will take effect, defaulting to version 0.</para>
+        /// <para>The version number of the website. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

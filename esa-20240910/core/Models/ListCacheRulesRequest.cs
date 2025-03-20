@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description>global: Query global configuration.</description></item>
         /// <item><description>rule: Query rule-based configuration.</description></item>
         /// </list>
-        /// <para>This parameter is optional; if not provided, it does not distinguish between global and rule-based configurations.</para>
+        /// <para>This parameter is optional; if not provided, it will not distinguish between global and rule-based configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>global</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Rule name, which can be used to find the rule with the specified name.</para>
+        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Site version number. For sites with version management enabled, this parameter can specify the version for which the configuration is effective, defaulting to version 0.</para>
+        /// <para>Site version number. For sites with version management enabled, this parameter can specify the site version for which the configuration takes effect, defaulting to version 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

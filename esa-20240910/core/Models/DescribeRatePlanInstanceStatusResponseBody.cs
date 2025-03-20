@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeRatePlanInstanceStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xcdn-91fknmb80f0g***</para>
@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Instance status, with possible values:</para>
+        /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>running: Running</description></item>
-        /// <item><description>renewing: Renewing</description></item>
-        /// <item><description>upgrading: Upgrading</description></item>
-        /// <item><description>releasePrepaidService: Prepaid service released due to expiration</description></item>
-        /// <item><description>creating: Creating</description></item>
-        /// <item><description>downgrading: Downgrading</description></item>
-        /// <item><description>ceasePrepaidService: Prepaid service ceased upon expiration</description></item>
+        /// <item><description>running: The instance is running.</description></item>
+        /// <item><description>renewing: The instance is being renewed.</description></item>
+        /// <item><description>upgrading: The configuration of the instance is being upgraded.</description></item>
+        /// <item><description>releasePrepaidService: The instance is released due to expiration.</description></item>
+        /// <item><description>creating: The instance is being created.</description></item>
+        /// <item><description>downgrading: The configuration of the instance is being downgraded.</description></item>
+        /// <item><description>ceasePrepaidService: The instance has expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60423A7F-A83D-1E24-B80E-86DD25790759</para>

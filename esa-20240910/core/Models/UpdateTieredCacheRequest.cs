@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateTieredCacheRequest : TeaModel {
         /// <summary>
-        /// <para>Multi-level cache architecture mode. Possible values:</para>
+        /// <para>The tiered cache architecture mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>edge: Edge cache layer.</description></item>
-        /// <item><description>edge_smart: Edge cache layer + intelligent cache layer.</description></item>
-        /// <item><description>edge_regional: Edge cache layer + regional cache layer.</description></item>
-        /// <item><description>edge_regional_smart: Edge cache layer + regional cache layer + intelligent cache layer.</description></item>
+        /// <item><description>edge: edge tiered cache.</description></item>
+        /// <item><description>edge_smart: edge tiered cache + smart tiered cache.</description></item>
+        /// <item><description>edge_regional: edge tiered cache + regional tiered cache.</description></item>
+        /// <item><description>edge_regional_smart: edge tiered cache + regional tiered cache + smart tiered cache.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CacheArchitectureMode { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</para>
+        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

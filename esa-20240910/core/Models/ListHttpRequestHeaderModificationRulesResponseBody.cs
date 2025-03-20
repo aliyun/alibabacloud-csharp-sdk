@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public List<ListHttpRequestHeaderModificationRulesResponseBodyConfigsRequestHeaderModification> RequestHeaderModification { get; set; }
             public class ListHttpRequestHeaderModificationRulesResponseBodyConfigsRequestHeaderModification : TeaModel {
                 /// <summary>
-                /// <para>Request header name.</para>
+                /// <para>The name of the request header.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>headerName</para>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Operation method. Value range:</para>
+                /// <para>The operation type. The value range is as follows:</para>
                 /// <list type="bullet">
-                /// <item><description>add: Add. </description></item>
-                /// <item><description>del: Delete. </description></item>
+                /// <item><description>add: Add.</description></item>
+                /// <item><description>del: Delete.</description></item>
                 /// <item><description>modify: Modify.</description></item>
                 /// </list>
                 /// 
@@ -85,7 +85,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>Rule content.</para>
+            /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+            /// <list type="bullet">
+            /// <item><description>Match all incoming requests: Set the value to true</description></item>
+            /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>(http.host eq &quot;video.example.com&quot;)</para>
@@ -95,10 +99,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>Rule switch. Possible values:</para>
+            /// <para>Rule switch. This parameter is not required when adding a global configuration. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description>on: Enabled.</description></item>
-            /// <item><description>off: Disabled.</description></item>
+            /// <item><description>on: Enable.</description></item>
+            /// <item><description>off: Disable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +113,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleEnable { get; set; }
 
             /// <summary>
-            /// <para>Rule name.</para>
+            /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule_example</para>
@@ -119,7 +123,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>Rule execution sequence.</para>
+            /// <para>Rule execution order. The smaller the value, the higher the priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -129,7 +133,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Sequence { get; set; }
 
             /// <summary>
-            /// <para>Version number of the site configuration.</para>
+            /// <para>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, defaulting to version 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -151,7 +155,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size, default is <b>500</b>, range: <b>1~500</b>.</para>
+        /// <para>Page size, default <b>500</b>, with a range of <b>1~500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

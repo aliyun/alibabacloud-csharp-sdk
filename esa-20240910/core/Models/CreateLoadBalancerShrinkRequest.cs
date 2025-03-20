@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? FallbackPool { get; set; }
 
         /// <summary>
-        /// <para>Monitor configuration for health checks.</para>
+        /// <para>Monitor configuration, used for health checks.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string MonitorShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the load balancer, which must meet domain name format validation and be a subdomain under the site.</para>
+        /// <para>The name of the load balancer, which must meet the domain name format validation and be a subdomain under the site.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -134,11 +134,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RulesShrink { get; set; }
 
         /// <summary>
-        /// <para>Session persistence, with values:</para>
+        /// <para>Session persistence, with possible values:</para>
         /// <list type="bullet">
         /// <item><description>off: Not enabled.</description></item>
         /// <item><description>ip: Session persistence by IP.</description></item>
-        /// <item><description>cookie: Not enabled for session persistence.</description></item>
+        /// <item><description>cookie: Session persistence by cookie.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Load balancing strategy.</para>
         /// <list type="bullet">
-        /// <item><description>geo: Geographical strategy.</description></item>
+        /// <item><description>geo: Geographic strategy.</description></item>
         /// <item><description>random: Weighted round-robin.</description></item>
         /// <item><description>order: Primary and backup method.</description></item>
         /// </list>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SteeringPolicy { get; set; }
 
         /// <summary>
-        /// <para>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, you can use a comma-separated list of secondary regions as the key.</para>
+        /// <para>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, the keys can be concatenated with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</para>

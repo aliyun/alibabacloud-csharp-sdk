@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateWaitingRoomRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The rule content, which is a policy or conditional expression.</para>
+        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding global configuration. There are two usage scenarios:</para>
+        /// <list type="bullet">
+        /// <item><description>Match all incoming requests: Set the value to true</description></item>
+        /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +25,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the rule. Valid values:</para>
+        /// <para>Rule switch. This parameter is not required when adding global configuration. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description>on: Enable.</description></item>
+        /// <item><description>off: Disable.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>The rule name.</para>
+        /// <para>Rule name. This parameter is not required when adding global configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +62,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the waiting room bypass rule that you want to update. You can call <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> to obtain the ID.</para>
+        /// <para>The ID of the waiting room bypass rule to be updated, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

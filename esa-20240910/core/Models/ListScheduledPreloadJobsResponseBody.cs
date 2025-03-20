@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string ErrorInfo { get; set; }
 
+            [NameInMap("ExecutionCount")]
+            [Validation(Required=false)]
+            public int? ExecutionCount { get; set; }
+
             /// <summary>
             /// <para>The URL of the OSS object that stores a list of URLs that failed the conditional check for prefetching.</para>
             /// 

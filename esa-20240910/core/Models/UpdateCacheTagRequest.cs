@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateCacheTagRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to ignore case. Value range:</para>
+        /// <para>Specifies whether to ignore case sensitivity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled, ignores case.</description></item>
-        /// <item><description>off: Disabled, does not ignore case.</description></item>
+        /// <item><description>on</description></item>
+        /// <item><description>off</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CaseInsensitive { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
+        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</para>
+        /// <para>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? SiteVersion { get; set; }
 
         /// <summary>
-        /// <para>Custom CacheTag name.</para>
+        /// <para>The name of the custom cache tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
