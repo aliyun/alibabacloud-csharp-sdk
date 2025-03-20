@@ -8,56 +8,52 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class ListKeywordLibsResponseBody : TeaModel {
+    public class QueryAnswerSampleByPageResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("Code")]
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public int? CurrentPage { get; set; }
 
-        [NameInMap("Data")]
+        [NameInMap("Items")]
         [Validation(Required=false)]
-        public List<ListKeywordLibsResponseBodyData> Data { get; set; }
-        public class ListKeywordLibsResponseBodyData : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2022-11-30 16:30:29</para>
-            /// </summary>
-            [NameInMap("GmtModified")]
+        public List<QueryAnswerSampleByPageResponseBodyItems> Items { get; set; }
+        public class QueryAnswerSampleByPageResponseBodyItems : TeaModel {
+            [NameInMap("Answer")]
             [Validation(Required=false)]
-            public string GmtModified { get; set; }
+            public string Answer { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>2023-07-31 06:16:06</para>
             /// </summary>
-            [NameInMap("KeywordCount")]
+            [NameInMap("GmtCreate")]
             [Validation(Required=false)]
-            public string KeywordCount { get; set; }
+            public string GmtCreate { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>custom_xxxxx</para>
+            /// <para>1666</para>
+            /// </summary>
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>custom_xxxx</para>
             /// </summary>
             [NameInMap("LibId")]
             [Validation(Required=false)]
             public string LibId { get; set; }
 
-            [NameInMap("LibName")]
-            [Validation(Required=false)]
-            public string LibName { get; set; }
-
-            [NameInMap("ServiceCodes")]
-            [Validation(Required=false)]
-            public string ServiceCodes { get; set; }
-
             /// <summary>
             /// <para>UID。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>19964*****086772</para>
+            /// <para>104813*****2399</para>
             /// </summary>
             [NameInMap("Uid")]
             [Validation(Required=false)]
@@ -67,11 +63,11 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("Msg")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string Msg { get; set; }
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -83,11 +79,11 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>58</para>
         /// </summary>
-        [NameInMap("Success")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public long? TotalCount { get; set; }
 
     }
 

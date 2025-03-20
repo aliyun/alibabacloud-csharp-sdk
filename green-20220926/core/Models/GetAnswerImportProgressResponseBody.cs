@@ -8,54 +8,58 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetServiceConfResponseBody : TeaModel {
-        [NameInMap("Classify")]
-        [Validation(Required=false)]
-        public string Classify { get; set; }
-
+    public class GetAnswerImportProgressResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>xxx</para>
         /// </summary>
-        [NameInMap("Code")]
+        [NameInMap("I18nKey")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string I18nKey { get; set; }
+
+        [NameInMap("IllegalLengthSamples")]
+        [Validation(Required=false)]
+        public List<string> IllegalLengthSamples { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("CustomServiceConf")]
+        [NameInMap("InvalidCount")]
         [Validation(Required=false)]
-        public Dictionary<string, object> CustomServiceConf { get; set; }
+        public int? InvalidCount { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2023-01-17 12:29:56</para>
+        /// <para>alxxxx</para>
         /// </summary>
-        [NameInMap("GmtModified")]
+        [NameInMap("LibId")]
         [Validation(Required=false)]
-        public string GmtModified { get; set; }
+        public string LibId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>100</para>
         /// </summary>
-        [NameInMap("Msg")]
+        [NameInMap("Progress")]
         [Validation(Required=false)]
-        public string Msg { get; set; }
+        public int? Progress { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("Option")]
+        [NameInMap("RepeatCount")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Option { get; set; }
+        public int? RepeatCount { get; set; }
+
+        [NameInMap("RepeatSamples")]
+        [Validation(Required=false)]
+        public List<string> RepeatSamples { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>6CF2815C-<b><b>-</b></b>-B52E-FF6E2****492</para>
+        /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -63,37 +67,35 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>image</para>
+        /// <para>8</para>
         /// </summary>
-        [NameInMap("ResourceType")]
+        [NameInMap("SuccessCount")]
         [Validation(Required=false)]
-        public string ResourceType { get; set; }
+        public int? SuccessCount { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>baselineCheck</para>
+        /// <para>alAxbbxxxx-xxx</para>
         /// </summary>
-        [NameInMap("ServiceCode")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string ServiceCode { get; set; }
+        public string TaskId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>xxxxx</para>
         /// </summary>
-        [NameInMap("Success")]
+        [NameInMap("Tips")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string Tips { get; set; }
 
         /// <summary>
-        /// <para>UID。</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>17726*****370735</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("Uid")]
+        [NameInMap("TotalCount")]
         [Validation(Required=false)]
-        public string Uid { get; set; }
+        public int? TotalCount { get; set; }
 
     }
 

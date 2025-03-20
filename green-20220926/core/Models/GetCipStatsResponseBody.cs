@@ -25,6 +25,24 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public List<GetCipStatsResponseBodyDataLabelStatChart> LabelStatChart { get; set; }
             public class GetCipStatsResponseBodyDataLabelStatChart : TeaModel {
+                [NameInMap("ImageTreeChar")]
+                [Validation(Required=false)]
+                public List<GetCipStatsResponseBodyDataLabelStatChartImageTreeChar> ImageTreeChar { get; set; }
+                public class GetCipStatsResponseBodyDataLabelStatChartImageTreeChar : TeaModel {
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>nickNameDetection</para>
@@ -45,6 +63,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [Validation(Required=false)]
                 public List<GetCipStatsResponseBodyDataLabelStatChartTreeChart> TreeChart { get; set; }
                 public class GetCipStatsResponseBodyDataLabelStatChartTreeChart : TeaModel {
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>nickNameDetection</para>
@@ -67,6 +89,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [Validation(Required=false)]
                 public List<GetCipStatsResponseBodyDataLabelStatChartVoiceTreeChart> VoiceTreeChart { get; set; }
                 public class GetCipStatsResponseBodyDataLabelStatChartVoiceTreeChart : TeaModel {
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>nickNameDetection</para>
@@ -108,6 +134,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 }
 
             }
+
+            [NameInMap("TotalStat")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> TotalStat { get; set; }
 
             [NameInMap("Uids")]
             [Validation(Required=false)]

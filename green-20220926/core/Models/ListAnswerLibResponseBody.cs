@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class ListKeywordLibsResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>200</para>
-        /// </summary>
-        [NameInMap("Code")]
-        [Validation(Required=false)]
-        public int? Code { get; set; }
-
+    public class ListAnswerLibResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<ListKeywordLibsResponseBodyData> Data { get; set; }
-        public class ListKeywordLibsResponseBodyData : TeaModel {
+        public List<ListAnswerLibResponseBodyData> Data { get; set; }
+        public class ListAnswerLibResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>2022-11-30 16:30:29</para>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("AnswerCount")]
+            [Validation(Required=false)]
+            public int? AnswerCount { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2024-06-03 18:15:01</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
@@ -31,15 +31,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>10</para>
-            /// </summary>
-            [NameInMap("KeywordCount")]
-            [Validation(Required=false)]
-            public string KeywordCount { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>custom_xxxxx</para>
+            /// <para>alxxx</para>
             /// </summary>
             [NameInMap("LibId")]
             [Validation(Required=false)]
@@ -49,15 +41,11 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public string LibName { get; set; }
 
-            [NameInMap("ServiceCodes")]
-            [Validation(Required=false)]
-            public string ServiceCodes { get; set; }
-
             /// <summary>
             /// <para>UID。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>19964*****086772</para>
+            /// <para>1643953****74290</para>
             /// </summary>
             [NameInMap("Uid")]
             [Validation(Required=false)]
@@ -67,27 +55,11 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
-        /// </summary>
-        [NameInMap("Msg")]
-        [Validation(Required=false)]
-        public string Msg { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>True</para>
-        /// </summary>
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

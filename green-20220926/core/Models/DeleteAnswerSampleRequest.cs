@@ -8,10 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetUserBuyStatusRequest : TeaModel {
-        [NameInMap("CommodityCode")]
+    public class DeleteAnswerSampleRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[15463605]</para>
+        /// </summary>
+        [NameInMap("Ids")]
         [Validation(Required=false)]
-        public string CommodityCode { get; set; }
+        public string Ids { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>alxxx</para>
+        /// </summary>
+        [NameInMap("LibId")]
+        [Validation(Required=false)]
+        public string LibId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

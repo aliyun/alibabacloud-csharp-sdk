@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetUserBuyStatusResponseBody : TeaModel {
+    public class GetImageSceneLabelConfResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>200</para>
@@ -19,39 +19,15 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetUserBuyStatusResponseBodyData Data { get; set; }
-        public class GetUserBuyStatusResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>Bid。</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>26842</para>
-            /// </summary>
-            [NameInMap("Bid")]
-            [Validation(Required=false)]
-            public long? Bid { get; set; }
+        public List<Dictionary<string, object>> Data { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>True</para>
-            /// </summary>
-            [NameInMap("Buy")]
-            [Validation(Required=false)]
-            public bool? Buy { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>False</para>
-            /// </summary>
-            [NameInMap("Indebt")]
-            [Validation(Required=false)]
-            public bool? Indebt { get; set; }
-
-            [NameInMap("Tag")]
-            [Validation(Required=false)]
-            public string Tag { get; set; }
-
-        }
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

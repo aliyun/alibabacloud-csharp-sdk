@@ -169,6 +169,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     [Validation(Required=false)]
                     public string Confidence { get; set; }
 
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>politics</para>
@@ -178,6 +182,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     public string Label { get; set; }
 
                 }
+
+                [NameInMap("RiskLevel")]
+                [Validation(Required=false)]
+                public string RiskLevel { get; set; }
 
                 [NameInMap("RiskTips")]
                 [Validation(Required=false)]

@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetUserBuyStatusRequest : TeaModel {
-        [NameInMap("CommodityCode")]
-        [Validation(Required=false)]
-        public string CommodityCode { get; set; }
-
+    public class GetAnswerImportProgressRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -20,6 +16,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>alAxbbxxxx-xxx</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 

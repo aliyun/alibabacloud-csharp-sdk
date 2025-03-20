@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetUserBuyStatusRequest : TeaModel {
-        [NameInMap("CommodityCode")]
+    public class DeleteAnswerLibRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>alxxx</para>
+        /// </summary>
+        [NameInMap("LibId")]
         [Validation(Required=false)]
-        public string CommodityCode { get; set; }
+        public string LibId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

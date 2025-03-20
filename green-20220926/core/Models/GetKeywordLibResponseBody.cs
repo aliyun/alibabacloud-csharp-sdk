@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetUserBuyStatusResponseBody : TeaModel {
+    public class GetKeywordLibResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>200</para>
@@ -19,37 +19,43 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetUserBuyStatusResponseBodyData Data { get; set; }
-        public class GetUserBuyStatusResponseBodyData : TeaModel {
+        public GetKeywordLibResponseBodyData Data { get; set; }
+        public class GetKeywordLibResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Bid。</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>26842</para>
+            /// <para>2024-01-29 10:26:00</para>
             /// </summary>
-            [NameInMap("Bid")]
+            [NameInMap("GmtModified")]
             [Validation(Required=false)]
-            public long? Bid { get; set; }
+            public string GmtModified { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>True</para>
+            /// <para>100</para>
             /// </summary>
-            [NameInMap("Buy")]
+            [NameInMap("KeywordCount")]
             [Validation(Required=false)]
-            public bool? Buy { get; set; }
+            public string KeywordCount { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>False</para>
+            /// <para>customxx_xxx</para>
             /// </summary>
-            [NameInMap("Indebt")]
+            [NameInMap("LibId")]
             [Validation(Required=false)]
-            public bool? Indebt { get; set; }
+            public string LibId { get; set; }
 
-            [NameInMap("Tag")]
+            [NameInMap("LibName")]
             [Validation(Required=false)]
-            public string Tag { get; set; }
+            public string LibName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1825457112123838</para>
+            /// </summary>
+            [NameInMap("Uid")]
+            [Validation(Required=false)]
+            public string Uid { get; set; }
 
         }
 

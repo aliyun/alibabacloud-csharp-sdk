@@ -8,10 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetUserBuyStatusRequest : TeaModel {
-        [NameInMap("CommodityCode")]
+    public class QueryCallbackByPageRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string CommodityCode { get; set; }
+        public int? CurrentPage { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

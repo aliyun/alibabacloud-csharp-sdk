@@ -8,11 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetUserBuyStatusRequest : TeaModel {
-        [NameInMap("CommodityCode")]
-        [Validation(Required=false)]
-        public string CommodityCode { get; set; }
-
+    public class ListAnswerLibRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

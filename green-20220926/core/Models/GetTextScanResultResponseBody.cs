@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public List<GetTextScanResultResponseBodyDataItems> Items { get; set; }
             public class GetTextScanResultResponseBodyDataItems : TeaModel {
+                [NameInMap("BailianRequestId")]
+                [Validation(Required=false)]
+                public string BailianRequestId { get; set; }
+
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
@@ -97,6 +101,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     [Validation(Required=false)]
                     public float? Confidence { get; set; }
 
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>political_n</para>
@@ -106,6 +114,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     public string Label { get; set; }
 
                 }
+
+                [NameInMap("RiskLevel")]
+                [Validation(Required=false)]
+                public string RiskLevel { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

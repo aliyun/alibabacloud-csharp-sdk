@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        [NameInMap("ServiceCode")]
+        [Validation(Required=false)]
+        public string ServiceCode { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2024-03-10 10:00:00</para>
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [NameInMap("SubUid")]
         [Validation(Required=false)]
         public string SubUid { get; set; }
+
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 
