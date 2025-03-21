@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
         [Validation(Required=false)]
         public int? Size { get; set; }
 
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>QUOTA</para>

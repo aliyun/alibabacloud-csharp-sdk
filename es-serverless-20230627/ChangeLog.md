@@ -1,3 +1,7 @@
+2025-03-21 Version: 2.1.2
+- Update API ListSpecReviewTasks: add param status.
+
+
 2025-01-09 Version: 2.1.1
 - Update API ListSpecReviewTasks: add param pageNumber.
 - Update API ListSpecReviewTasks: add param pageSize.
