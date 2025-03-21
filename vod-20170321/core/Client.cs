@@ -19023,6 +19023,148 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>支持区域化媒资ID级别播放数据查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDailyPlayRegionStatisRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDailyPlayRegionStatisResponse
+        /// </returns>
+        public GetDailyPlayRegionStatisResponse GetDailyPlayRegionStatisWithOptions(GetDailyPlayRegionStatisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Date))
+            {
+                query["Date"] = request.Date;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaRegion))
+            {
+                query["MediaRegion"] = request.MediaRegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDailyPlayRegionStatis",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDailyPlayRegionStatisResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDailyPlayRegionStatisResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支持区域化媒资ID级别播放数据查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDailyPlayRegionStatisRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDailyPlayRegionStatisResponse
+        /// </returns>
+        public async Task<GetDailyPlayRegionStatisResponse> GetDailyPlayRegionStatisWithOptionsAsync(GetDailyPlayRegionStatisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Date))
+            {
+                query["Date"] = request.Date;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaRegion))
+            {
+                query["MediaRegion"] = request.MediaRegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDailyPlayRegionStatis",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetDailyPlayRegionStatisResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetDailyPlayRegionStatisResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支持区域化媒资ID级别播放数据查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDailyPlayRegionStatisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDailyPlayRegionStatisResponse
+        /// </returns>
+        public GetDailyPlayRegionStatisResponse GetDailyPlayRegionStatis(GetDailyPlayRegionStatisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDailyPlayRegionStatisWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支持区域化媒资ID级别播放数据查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDailyPlayRegionStatisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDailyPlayRegionStatisResponse
+        /// </returns>
+        public async Task<GetDailyPlayRegionStatisResponse> GetDailyPlayRegionStatisAsync(GetDailyPlayRegionStatisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDailyPlayRegionStatisWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries information about the default AI template.</para>
         /// </summary>
         /// 
