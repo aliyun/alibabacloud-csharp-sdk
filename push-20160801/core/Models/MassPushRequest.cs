@@ -324,25 +324,31 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Obsolete]
             public string AndroidXiaoMiNotifyTitle { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://f6.market.xiaomi.com/download/MiPass/aaa/bbb.png">https://f6.market.xiaomi.com/download/MiPass/aaa/bbb.png</a></para>
             /// </summary>
             [NameInMap("AndroidXiaomiBigPictureUrl")]
             [Validation(Required=false)]
+            [Obsolete]
             public string AndroidXiaomiBigPictureUrl { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://imag.example.com/image.png">https://imag.example.com/image.png</a></para>
             /// </summary>
             [NameInMap("AndroidXiaomiImageUrl")]
             [Validation(Required=false)]
+            [Obsolete]
             public string AndroidXiaomiImageUrl { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>hello</para>
             /// </summary>
@@ -573,6 +579,34 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [NameInMap("iOSInterruptionLevel")]
             [Validation(Required=false)]
             public string IOSInterruptionLevel { get; set; }
+
+            [NameInMap("iOSLiveActivityAttributes")]
+            [Validation(Required=false)]
+            public string IOSLiveActivityAttributes { get; set; }
+
+            [NameInMap("iOSLiveActivityAttributesType")]
+            [Validation(Required=false)]
+            public string IOSLiveActivityAttributesType { get; set; }
+
+            [NameInMap("iOSLiveActivityContentState")]
+            [Validation(Required=false)]
+            public string IOSLiveActivityContentState { get; set; }
+
+            [NameInMap("iOSLiveActivityDismissalDate")]
+            [Validation(Required=false)]
+            public long? IOSLiveActivityDismissalDate { get; set; }
+
+            [NameInMap("iOSLiveActivityEvent")]
+            [Validation(Required=false)]
+            public string IOSLiveActivityEvent { get; set; }
+
+            [NameInMap("iOSLiveActivityId")]
+            [Validation(Required=false)]
+            public string IOSLiveActivityId { get; set; }
+
+            [NameInMap("iOSLiveActivityStaleDate")]
+            [Validation(Required=false)]
+            public long? IOSLiveActivityStaleDate { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

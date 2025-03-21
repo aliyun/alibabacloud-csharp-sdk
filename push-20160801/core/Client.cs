@@ -2211,6 +2211,34 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["iOSInterruptionLevel"] = request.IOSInterruptionLevel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityAttributes))
+            {
+                query["iOSLiveActivityAttributes"] = request.IOSLiveActivityAttributes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityAttributesType))
+            {
+                query["iOSLiveActivityAttributesType"] = request.IOSLiveActivityAttributesType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityContentState))
+            {
+                query["iOSLiveActivityContentState"] = request.IOSLiveActivityContentState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityDismissalDate))
+            {
+                query["iOSLiveActivityDismissalDate"] = request.IOSLiveActivityDismissalDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityEvent))
+            {
+                query["iOSLiveActivityEvent"] = request.IOSLiveActivityEvent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityId))
+            {
+                query["iOSLiveActivityId"] = request.IOSLiveActivityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityStaleDate))
+            {
+                query["iOSLiveActivityStaleDate"] = request.IOSLiveActivityStaleDate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSMusic))
             {
                 query["iOSMusic"] = request.IOSMusic;
@@ -2651,6 +2679,34 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSInterruptionLevel))
             {
                 query["iOSInterruptionLevel"] = request.IOSInterruptionLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityAttributes))
+            {
+                query["iOSLiveActivityAttributes"] = request.IOSLiveActivityAttributes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityAttributesType))
+            {
+                query["iOSLiveActivityAttributesType"] = request.IOSLiveActivityAttributesType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityContentState))
+            {
+                query["iOSLiveActivityContentState"] = request.IOSLiveActivityContentState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityDismissalDate))
+            {
+                query["iOSLiveActivityDismissalDate"] = request.IOSLiveActivityDismissalDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityEvent))
+            {
+                query["iOSLiveActivityEvent"] = request.IOSLiveActivityEvent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityId))
+            {
+                query["iOSLiveActivityId"] = request.IOSLiveActivityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSLiveActivityStaleDate))
+            {
+                query["iOSLiveActivityStaleDate"] = request.IOSLiveActivityStaleDate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IOSMusic))
             {
