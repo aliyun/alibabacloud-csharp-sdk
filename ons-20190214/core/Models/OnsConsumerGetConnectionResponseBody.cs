@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
 
             }
 
+            [NameInMap("MessageModel")]
+            [Validation(Required=false)]
+            public string MessageModel { get; set; }
+
         }
 
         /// <summary>

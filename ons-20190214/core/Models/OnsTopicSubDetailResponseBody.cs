@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Ons20190214.Models
                     [Validation(Required=false)]
                     public string MessageModel { get; set; }
 
+                    [NameInMap("Online")]
+                    [Validation(Required=false)]
+                    public string Online { get; set; }
+
                     /// <summary>
                     /// <para>The expression based on which consumers in the consumer group subscribe to the topic.</para>
                     /// 
