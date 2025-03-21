@@ -21,6 +21,20 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
         [Validation(Required=false)]
         public GetTextGenerationResponseBodyResult Result { get; set; }
         public class GetTextGenerationResponseBodyResult : TeaModel {
+            [NameInMap("search_results")]
+            [Validation(Required=false)]
+            public List<GetTextGenerationResponseBodyResultSearchResults> SearchResults { get; set; }
+            public class GetTextGenerationResponseBodyResultSearchResults : TeaModel {
+                [NameInMap("title")]
+                [Validation(Required=false)]
+                public string Title { get; set; }
+
+                [NameInMap("url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
+            }
+
             [NameInMap("text")]
             [Validation(Required=false)]
             public string Text { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
         [Validation(Required=false)]
         public string CsiLevel { get; set; }
 
+        [NameInMap("enable_search")]
+        [Validation(Required=false)]
+        public bool? EnableSearch { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -32,7 +36,7 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
 
         [NameInMap("parameters")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Parameters { get; set; }
+        public Dictionary<string, object> Parameters { get; set; }
 
         [NameInMap("stream")]
         [Validation(Required=false)]

@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Searchplat20240529
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Searchplat";
             AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
             this._spi = gatewayClient;
             this._endpointRule = "";
@@ -1414,6 +1415,10 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             {
                 body["csi_level"] = request.CsiLevel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSearch))
+            {
+                body["enable_search"] = request.EnableSearch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
             {
                 body["messages"] = request.Messages;
@@ -1471,6 +1476,10 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsiLevel))
             {
                 body["csi_level"] = request.CsiLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSearch))
+            {
+                body["enable_search"] = request.EnableSearch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
             {
@@ -1686,6 +1695,152 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetTextSparseEmbeddingWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>联网搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWebSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWebSearchResponse
+        /// </returns>
+        public GetWebSearchResponse GetWebSearchWithOptions(string workspaceName, string serviceId, GetWebSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                body["top_k"] = request.TopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Way))
+            {
+                body["way"] = request.Way;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWebSearch",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/web-search/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWebSearchResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>联网搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWebSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWebSearchResponse
+        /// </returns>
+        public async Task<GetWebSearchResponse> GetWebSearchWithOptionsAsync(string workspaceName, string serviceId, GetWebSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                body["top_k"] = request.TopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Way))
+            {
+                body["way"] = request.Way;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWebSearch",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/web-search/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWebSearchResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>联网搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWebSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWebSearchResponse
+        /// </returns>
+        public GetWebSearchResponse GetWebSearch(string workspaceName, string serviceId, GetWebSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetWebSearchWithOptions(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>联网搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWebSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWebSearchResponse
+        /// </returns>
+        public async Task<GetWebSearchResponse> GetWebSearchAsync(string workspaceName, string serviceId, GetWebSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetWebSearchWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
         }
 
     }
