@@ -15,9 +15,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>true</b>: yes</description></item>
         /// <item><description><b>false</b>: no</description></item>
         /// </list>
-        /// <remarks>
-        /// <para> If no defense rule is created for a server, the default rule is applied to the server.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,15 +37,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The period of time during which logons from an account are not allowed. Unit: minutes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>5</b>: 5 minutes</description></item>
-        /// <item><description><b>15</b>: 15 minutes</description></item>
-        /// <item><description><b>30</b>: 30 minutes</description></item>
-        /// <item><description><b>60</b>: 1 hour</description></item>
-        /// <item><description><b>120</b>: 2 hours</description></item>
-        /// <item><description><b>360</b>: 6 hours</description></item>
-        /// <item><description><b>720</b>: 12 hours</description></item>
-        /// <item><description><b>1440</b>: 24 hours</description></item>
-        /// <item><description><b>10080</b>: 7 days</description></item>
+        /// <item><description><b>5</b></description></item>
+        /// <item><description><b>15</b></description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>60</b></description></item>
+        /// <item><description><b>120</b></description></item>
+        /// <item><description><b>360</b></description></item>
+        /// <item><description><b>720</b></description></item>
+        /// <item><description><b>1440</b></description></item>
+        /// <item><description><b>10080</b></description></item>
         /// <item><description><b>52560000</b>: permanent</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -71,6 +68,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The types of protocols supported for interception by the brute force attack rule creation.</para>
+        /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolTypeShrink { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCycleTaskListRequest : TeaModel {
+        [NameInMap("ConfigId")]
+        [Validation(Required=false)]
+        public string ConfigId { get; set; }
+
         /// <summary>
         /// <para>The number of the page to return.</para>
         /// 
@@ -51,7 +55,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>IMAGE_SCAN</b>: image scan task</description></item>
         /// <item><description><b>EMG_VUL_SCHEDULE_SCAN</b>: urgent vulnerability scan task</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IMAGE_SCAN</para>

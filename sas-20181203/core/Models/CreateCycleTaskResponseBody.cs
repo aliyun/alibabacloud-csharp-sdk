@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateCycleTaskResponseBody : TeaModel {
+        [NameInMap("ConfigId")]
+        [Validation(Required=false)]
+        public string ConfigId { get; set; }
+
         /// <summary>
         /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
         /// 

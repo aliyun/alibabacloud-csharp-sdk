@@ -86,18 +86,51 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The protocol types supported by the anti-brute force rule for interception.</para>
+        /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public ModifyAntiBruteForceRuleRequestProtocolType ProtocolType { get; set; }
         public class ModifyAntiBruteForceRuleRequestProtocolType : TeaModel {
+            /// <summary>
+            /// <para>Whether to modify the RDP interception method, which is enabled by default. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>on</b>: Enable</description></item>
+            /// <item><description><b>off</b>: Disable</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>on</para>
+            /// </summary>
             [NameInMap("Rdp")]
             [Validation(Required=false)]
             public string Rdp { get; set; }
 
+            /// <summary>
+            /// <para>Whether to modify the SQL Server interception method, which is disabled by default. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>on</b>: Enable</description></item>
+            /// <item><description><b>off</b>: Disable</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>off</para>
+            /// </summary>
             [NameInMap("SqlServer")]
             [Validation(Required=false)]
             public string SqlServer { get; set; }
 
+            /// <summary>
+            /// <para>Whether to modify the SSH interception method, which is enabled by default. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>on</b>: Enable</description></item>
+            /// <item><description><b>off</b>: Disable</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>on</para>
+            /// </summary>
             [NameInMap("Ssh")]
             [Validation(Required=false)]
             public string Ssh { get; set; }

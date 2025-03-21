@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the details of the defense rule.</para>
+        /// <para>An array that consists of the defense rules returned.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<DescribeAntiBruteForceRulesResponseBodyRules> Rules { get; set; }
         public class DescribeAntiBruteForceRulesResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>The timestamp when the rule was created. Unit: milliseconds.</para>
+            /// <para>防暴力破解规则创建时间戳。单位：毫秒。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669800181000</para>
@@ -88,11 +88,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the defense rule is the default rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The defense rule is the default rule.</description></item>
-            /// <item><description><b>false</b>: The defense rule is not the default rule.</description></item>
+            /// <item><description><b>true</b>: yes</description></item>
+            /// <item><description><b>false</b>: no</description></item>
             /// </list>
             /// <remarks>
-            /// <para>The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.</para>
+            /// <para> The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? EnableSmartRule { get; set; }
 
             /// <summary>
-            /// <para>The threshold of logon failures that is specified in the defense rule.</para>
+            /// <para>The threshold of logon failures that you specify.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -162,18 +162,51 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The types of protocols that the brute force cracking rule supports to intercept.</para>
+            /// </summary>
             [NameInMap("ProtocolType")]
             [Validation(Required=false)]
             public DescribeAntiBruteForceRulesResponseBodyRulesProtocolType ProtocolType { get; set; }
             public class DescribeAntiBruteForceRulesResponseBodyRulesProtocolType : TeaModel {
+                /// <summary>
+                /// <para>RDP interception method, values: </para>
+                /// <list type="bullet">
+                /// <item><description><b>on</b>: enable </description></item>
+                /// <item><description><b>off</b>: disable</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>on</para>
+                /// </summary>
                 [NameInMap("Rdp")]
                 [Validation(Required=false)]
                 public string Rdp { get; set; }
 
+                /// <summary>
+                /// <para>SqlServer interception mode, with values: </para>
+                /// <list type="bullet">
+                /// <item><description><b>on</b>: enable </description></item>
+                /// <item><description><b>off</b>: disable</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>off</para>
+                /// </summary>
                 [NameInMap("SqlServer")]
                 [Validation(Required=false)]
                 public string SqlServer { get; set; }
 
+                /// <summary>
+                /// <para>SSH interception method, with values: </para>
+                /// <list type="bullet">
+                /// <item><description><b>on</b>: enabled </description></item>
+                /// <item><description><b>off</b>: disabled</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>on</para>
+                /// </summary>
                 [NameInMap("Ssh")]
                 [Validation(Required=false)]
                 public string Ssh { get; set; }
