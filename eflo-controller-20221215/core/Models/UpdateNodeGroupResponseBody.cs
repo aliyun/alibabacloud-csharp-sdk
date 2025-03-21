@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
-    public class ChangeResourceGroupResponseBody : TeaModel {
+    public class UpdateNodeGroupResponseBody : TeaModel {
         /// <summary>
         /// <para>Id of the request</para>
         /// 

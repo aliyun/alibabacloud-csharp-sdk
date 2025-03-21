@@ -8,16 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
-    public class ChangeResourceGroupResponseBody : TeaModel {
+    public class DescribeDiagnosticResultRequest : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>8F065DDD-6996-5973-9691-9EC57BD0072E</para>
+        /// <para>diag-i151942361720577788844</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("DiagnosticId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DiagnosticId { get; set; }
 
     }
 

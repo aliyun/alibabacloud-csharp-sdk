@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
-    public class ChangeResourceGroupResponseBody : TeaModel {
+    public class DeleteNodeGroupResponseBody : TeaModel {
         /// <summary>
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8F065DDD-6996-5973-9691-9EC57BD0072E</para>
+        /// <para>887FA855-89F4-5DB3-B305-C5879EC480E6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
