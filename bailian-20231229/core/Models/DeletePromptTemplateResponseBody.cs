@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class DeletePromptTemplateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9B6CBF-47E6-5D76-9C5D-B814DD5ABxxx</para>
         /// </summary>

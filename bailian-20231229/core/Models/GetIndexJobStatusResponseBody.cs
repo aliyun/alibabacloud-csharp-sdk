@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 [Validation(Required=false)]
                 public string DocName { get; set; }
 
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
+                public long? GmtModified { get; set; }
+
                 /// <summary>
                 /// <para>The error message.</para>
                 /// 

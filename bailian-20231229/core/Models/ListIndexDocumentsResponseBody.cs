@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 [Validation(Required=false)]
                 public string DocumentType { get; set; }
 
+                [NameInMap("GmtModified")]
+                [Validation(Required=false)]
+                public long? GmtModified { get; set; }
+
                 /// <summary>
                 /// <para>The primary key ID of the document.</para>
                 /// 
