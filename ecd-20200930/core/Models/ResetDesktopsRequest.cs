@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ResetDesktopsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud computer pool. If you specify the <c>DesktopId</c> parameter, ignore the <c>DesktopGroupId</c> parameter. If you do not specify the <c>DesktopId</c> parameter, specify the <c>DesktopGroupId</c> parameter in the call to request all IDs of the cloud computers in the specified pool.</para>
+        /// <para>The ID of the cloud computer share.</para>
+        /// <list type="bullet">
+        /// <item><description>If you specify <c>DesktopId</c>, ignore <c>DesktopGroupId</c>.</description></item>
+        /// <item><description>If you leave <c>DesktopId</c> empty, the system obtains the IDs of all cloud computers within the share specified by <c>DesktopGroupId</c>.``</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>dg-07if7qsxoxkb6****</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud computer pools.</para>
+        /// <para>The IDs of the cloud computer shares.</para>
         /// </summary>
         [NameInMap("DesktopGroupIds")]
         [Validation(Required=false)]
@@ -44,10 +48,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The billing method.</para>
+        /// <para>The billing method of the cloud computer share.</para>
         /// <remarks>
-        /// <para>This parameter is available only when you reset cloud computer pools. If you leave this parameter empty, all cloud computers in the specified cloud computer pool are reset, regardless of how the cloud computers are billed.</para>
+        /// <para> This parameter takes effect when you reset a cloud computer share. If you leave this parameter empty, all cloud computers in that share are reset.</para>
         /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// <item><description>PrePaid: subscription.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>

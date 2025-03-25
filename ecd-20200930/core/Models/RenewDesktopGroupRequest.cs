@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer pool.</para>
+        /// <para>The ID of the shared group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

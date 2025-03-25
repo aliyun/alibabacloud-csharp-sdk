@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The download address from which you can export desktop groups.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://cn-shanghai-servicemanager.oss-cn-shanghai.aliyuncs.com/A0_CLIENT_EVENT/EDS_Events%20List_20220519234611_w5HuD83KGs.csv?Expires=1652975773&OSSAccessKeyId=LTYL****8tso&Signature=4erMG*********k%3D">https://cn-shanghai-servicemanager.oss-cn-shanghai.aliyuncs.com/A0_CLIENT_EVENT/EDS_Events%20List_20220519234611_w5HuD83KGs.csv?Expires=1652975773&amp;OSSAccessKeyId=LTYL****8tso&amp;Signature=4erMG*********k%3D</a></para>
+        /// <para><a href="https://cn-shanghai-servicemanager.oss-cn-shanghai.aliyuncs.com/A0_CLIENT_EVENT/EDS_Events%20List_20220519234611_w5HuD83KGs.csv?Expires=1652975773&OSSAccessKeyId=****&Signature=4erMG*********k%3D">https://cn-shanghai-servicemanager.oss-cn-shanghai.aliyuncs.com/A0_CLIENT_EVENT/EDS_Events%20List_20220519234611_w5HuD83KGs.csv?Expires=1652975773&amp;OSSAccessKeyId=****&amp;Signature=4erMG*********k%3D</a></para>
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

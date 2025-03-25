@@ -744,7 +744,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds authorized end users of a desktop group.</para>
+        /// <para>Adds authorized users for a cloud computer share. The system automatically assigns cloud computers from a share to authorized users based on administrator-configured rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -781,6 +781,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserOuPath))
+            {
+                query["UserOuPath"] = request.UserOuPath;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -809,7 +813,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds authorized end users of a desktop group.</para>
+        /// <para>Adds authorized users for a cloud computer share. The system automatically assigns cloud computers from a share to authorized users based on administrator-configured rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -846,6 +850,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserOuPath))
+            {
+                query["UserOuPath"] = request.UserOuPath;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -874,7 +882,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds authorized end users of a desktop group.</para>
+        /// <para>Adds authorized users for a cloud computer share. The system automatically assigns cloud computers from a share to authorized users based on administrator-configured rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -892,7 +900,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds authorized end users of a desktop group.</para>
+        /// <para>Adds authorized users for a cloud computer share. The system automatically assigns cloud computers from a share to authorized users based on administrator-configured rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6723,6 +6731,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["TimerGroupId"] = request.TimerGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserOuPath))
+            {
+                query["UserOuPath"] = request.UserOuPath;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeEncryptionEnabled))
             {
                 query["VolumeEncryptionEnabled"] = request.VolumeEncryptionEnabled;
@@ -6999,6 +7011,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimerGroupId))
             {
                 query["TimerGroupId"] = request.TimerGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserOuPath))
+            {
+                query["UserOuPath"] = request.UserOuPath;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VolumeEncryptionEnabled))
             {
@@ -22672,7 +22688,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about authorized users in a cloud computer pool, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</para>
+        /// <para>Queries the information about authorized users of a cloud computer share, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22757,7 +22773,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about authorized users in a cloud computer pool, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</para>
+        /// <para>Queries the information about authorized users of a cloud computer share, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22842,7 +22858,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about authorized users in a cloud computer pool, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</para>
+        /// <para>Queries the information about authorized users of a cloud computer share, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22860,7 +22876,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about authorized users in a cloud computer pool, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</para>
+        /// <para>Queries the information about authorized users of a cloud computer share, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24474,7 +24490,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports cloud computer pools. The list of cloud computer pools is saved as an XLSX file. Each entry of cloud computer pool data includes the ID and name of the cloud computer pool, the ID and name of the office network, the cloud computer pool template, and the name of the security policy.</para>
+        /// <para>Exports cloud computer shares and saves the list as an XLSX file. Each entry includes the ID and name of the cloud computer share, the ID and name of the office network, the cloud computer share template, and the name of the security policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24567,7 +24583,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports cloud computer pools. The list of cloud computer pools is saved as an XLSX file. Each entry of cloud computer pool data includes the ID and name of the cloud computer pool, the ID and name of the office network, the cloud computer pool template, and the name of the security policy.</para>
+        /// <para>Exports cloud computer shares and saves the list as an XLSX file. Each entry includes the ID and name of the cloud computer share, the ID and name of the office network, the cloud computer share template, and the name of the security policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24660,7 +24676,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports cloud computer pools. The list of cloud computer pools is saved as an XLSX file. Each entry of cloud computer pool data includes the ID and name of the cloud computer pool, the ID and name of the office network, the cloud computer pool template, and the name of the security policy.</para>
+        /// <para>Exports cloud computer shares and saves the list as an XLSX file. Each entry includes the ID and name of the cloud computer share, the ID and name of the office network, the cloud computer share template, and the name of the security policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24678,7 +24694,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports cloud computer pools. The list of cloud computer pools is saved as an XLSX file. Each entry of cloud computer pool data includes the ID and name of the cloud computer pool, the ID and name of the office network, the cloud computer pool template, and the name of the security policy.</para>
+        /// <para>Exports cloud computer shares and saves the list as an XLSX file. Each entry includes the ID and name of the cloud computer share, the ID and name of the office network, the cloud computer share template, and the name of the security policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35232,7 +35248,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the end users of a cloud computer pool into new end users.</para>
+        /// <para>Replaces the existing authorized users of a cloud computer share with different users</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35293,7 +35309,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the end users of a cloud computer pool into new end users.</para>
+        /// <para>Replaces the existing authorized users of a cloud computer share with different users</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35354,7 +35370,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the end users of a cloud computer pool into new end users.</para>
+        /// <para>Replaces the existing authorized users of a cloud computer share with different users</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35372,7 +35388,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the end users of a cloud computer pool into new end users.</para>
+        /// <para>Replaces the existing authorized users of a cloud computer share with different users</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36142,7 +36158,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes authorized users of cloud computer pools. The removed users can no longer connect to cloud computers in the cloud computer pool.</para>
+        /// <para>Revokes user access permissions for a cloud computer share. Once access permissions for a cloud computer share are revoked from a user, the user can no longer access any cloud computers within that share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36175,6 +36191,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserOuPath))
+            {
+                query["UserOuPath"] = request.UserOuPath;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -36203,7 +36223,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes authorized users of cloud computer pools. The removed users can no longer connect to cloud computers in the cloud computer pool.</para>
+        /// <para>Revokes user access permissions for a cloud computer share. Once access permissions for a cloud computer share are revoked from a user, the user can no longer access any cloud computers within that share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36236,6 +36256,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserOuPath))
+            {
+                query["UserOuPath"] = request.UserOuPath;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -36264,7 +36288,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes authorized users of cloud computer pools. The removed users can no longer connect to cloud computers in the cloud computer pool.</para>
+        /// <para>Revokes user access permissions for a cloud computer share. Once access permissions for a cloud computer share are revoked from a user, the user can no longer access any cloud computers within that share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36282,7 +36306,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes authorized users of cloud computer pools. The removed users can no longer connect to cloud computers in the cloud computer pool.</para>
+        /// <para>Revokes user access permissions for a cloud computer share. Once access permissions for a cloud computer share are revoked from a user, the user can no longer access any cloud computers within that share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36458,7 +36482,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renew a subscription cloud computer pool.</para>
+        /// <para>Renews a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36527,7 +36551,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renew a subscription cloud computer pool.</para>
+        /// <para>Renews a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36596,7 +36620,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renew a subscription cloud computer pool.</para>
+        /// <para>Renews a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36614,7 +36638,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renew a subscription cloud computer pool.</para>
+        /// <para>Renews a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37154,13 +37178,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets cloud computers.</para>
+        /// <para>Resets cloud computers of a cloud computer share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You can call this operation to reset only cloud computers in a cloud computer pool.</para>
+        /// <para> You can call this operation to reset only cloud computers from a cloud computer share.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -37238,13 +37262,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets cloud computers.</para>
+        /// <para>Resets cloud computers of a cloud computer share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You can call this operation to reset only cloud computers in a cloud computer pool.</para>
+        /// <para> You can call this operation to reset only cloud computers from a cloud computer share.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -37322,13 +37346,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets cloud computers.</para>
+        /// <para>Resets cloud computers of a cloud computer share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You can call this operation to reset only cloud computers in a cloud computer pool.</para>
+        /// <para> You can call this operation to reset only cloud computers from a cloud computer share.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -37347,13 +37371,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets cloud computers.</para>
+        /// <para>Resets cloud computers of a cloud computer share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You can call this operation to reset only cloud computers in a cloud computer pool.</para>
+        /// <para> You can call this operation to reset only cloud computers from a cloud computer share.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -38412,7 +38436,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a scheduled task for a cloud computer pool, such as starting, stopping, restarting or resting cloud computers in the pool.</para>
+        /// <para>Configures a scheduled start, stop, restart, or reset task for a cloud computer share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38481,7 +38505,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a scheduled task for a cloud computer pool, such as starting, stopping, restarting or resting cloud computers in the pool.</para>
+        /// <para>Configures a scheduled start, stop, restart, or reset task for a cloud computer share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38550,7 +38574,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a scheduled task for a cloud computer pool, such as starting, stopping, restarting or resting cloud computers in the pool.</para>
+        /// <para>Configures a scheduled start, stop, restart, or reset task for a cloud computer share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38568,7 +38592,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a scheduled task for a cloud computer pool, such as starting, stopping, restarting or resting cloud computers in the pool.</para>
+        /// <para>Configures a scheduled start, stop, restart, or reset task for a cloud computer share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38586,7 +38610,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the status of a scheduled task for a cloud computer pool. For example, you enable or disable the scheduled task.</para>
+        /// <para>Sets the status of a scheduled task for a cloud computer share, such as enabling or disabling it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38647,7 +38671,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the status of a scheduled task for a cloud computer pool. For example, you enable or disable the scheduled task.</para>
+        /// <para>Sets the status of a scheduled task for a cloud computer share, such as enabling or disabling it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38708,7 +38732,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the status of a scheduled task for a cloud computer pool. For example, you enable or disable the scheduled task.</para>
+        /// <para>Sets the status of a scheduled task for a cloud computer share, such as enabling or disabling it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38726,7 +38750,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the status of a scheduled task for a cloud computer pool. For example, you enable or disable the scheduled task.</para>
+        /// <para>Sets the status of a scheduled task for a cloud computer share, such as enabling or disabling it.</para>
         /// </summary>
         /// 
         /// <param name="request">

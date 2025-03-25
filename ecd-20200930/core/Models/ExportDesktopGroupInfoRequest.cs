@@ -10,13 +10,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ExportDesktopGroupInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The billing method of the cloud computer pool.</para>
+        /// <para>The billing method of the cloud computer share.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PostPaid: pay-as-you-go.</para>
-        /// </description></item>
-        /// <item><description><para>PrePaid: subscription.</para>
-        /// </description></item>
+        /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// <item><description>PrePaid: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,14 +25,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud computer pools.</para>
+        /// <para>The IDs of the cloud computer shares.</para>
         /// </summary>
         [NameInMap("DesktopGroupId")]
         [Validation(Required=false)]
         public List<string> DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud computer pool.</para>
+        /// <para>The name of the cloud computer share.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -44,14 +42,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupName { get; set; }
 
         /// <summary>
-        /// <para>The authorized user IDs of cloud computer pools.</para>
+        /// <para>The IDs of the users to be authorized.</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public List<string> EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The time when the subscription cloud computer pool expires.</para>
+        /// <para>The expiration date of the subscription cloud computer share.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-12-31T15:59Z</para>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the office network to which the cloud computer pool belongs.</para>
+        /// <para>The ID of the office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-467671****</para>
@@ -103,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy that is associated with the cloud computer pool.</para>
+        /// <para>The ID of the security policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-53iyi2aar0nd6****</para>
@@ -124,14 +122,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tags attached to the cloud computer pool. You can specify 1 to 20 tags.</para>
+        /// <para>The tags. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ExportDesktopGroupInfoRequestTag> Tag { get; set; }
         public class ExportDesktopGroupInfoRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. If you specify the <c>Tag</c> parameter, you must also specify the <c>Key</c> parameter. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>. You cannot specify an empty string as a tag key.</para>
+            /// <para>The tag key. You cannot specify an empty string as a tag key. A tag key can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -141,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. You can specify an empty string as a tag key. A tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

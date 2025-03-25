@@ -20,18 +20,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The URL from which you can download the exported cloud computer pools. The details of the cloud computer pools include:</para>
+        /// <para>The download URL of the XLSX file that contains cloud computer shares. The XLSX file provides the following information:</para>
         /// <list type="bullet">
-        /// <item><description>IDs and names of the cloud computer pools</description></item>
-        /// <item><description>IDs and names of the office networks</description></item>
-        /// <item><description>Cloud computer pool templates</description></item>
-        /// <item><description>Number of CPU cores and memory size</description></item>
-        /// <item><description>System disks and data disks</description></item>
-        /// <item><description>Names of security policies</description></item>
-        /// <item><description>Number of current authorized users</description></item>
-        /// <item><description>Billing methods</description></item>
-        /// <item><description>The time when the cloud computer pools were created</description></item>
-        /// <item><description>The time when the cloud computer pools expire</description></item>
+        /// <item><description>Cloud computer share ID/name</description></item>
+        /// <item><description>Office network ID/name</description></item>
+        /// <item><description>Cloud computer share template</description></item>
+        /// <item><description>vCPUs/Memory size</description></item>
+        /// <item><description>System disk/Data disk</description></item>
+        /// <item><description>Security policy name</description></item>
+        /// <item><description>Number of authorized users</description></item>
+        /// <item><description>Billing method</description></item>
+        /// <item><description>Creation time</description></item>
+        /// <item><description>Expiration time</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

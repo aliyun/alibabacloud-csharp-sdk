@@ -647,6 +647,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             }
 
+            [NameInMap("UserOuPath")]
+            [Validation(Required=false)]
+            public string UserOuPath { get; set; }
+
             /// <summary>
             /// <para>The version number of the cloud computer pool.</para>
             /// 

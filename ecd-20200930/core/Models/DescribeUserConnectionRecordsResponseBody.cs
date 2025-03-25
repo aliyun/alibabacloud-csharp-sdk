@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUserConnectionRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about connection records of the end user.</para>
+        /// <para>The connection records.</para>
         /// </summary>
         [NameInMap("ConnectionRecords")]
         [Validation(Required=false)]
         public List<DescribeUserConnectionRecordsResponseBodyConnectionRecords> ConnectionRecords { get; set; }
         public class DescribeUserConnectionRecordsResponseBodyConnectionRecords : TeaModel {
             /// <summary>
-            /// <para>The duration for which the end user is connected to the cloud computer. Unit: seconds.</para>
+            /// <para>The connection duration. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3405035000</para>

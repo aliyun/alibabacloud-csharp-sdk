@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? ConnectState { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer pool.</para>
+        /// <para>The ID of the cloud computer share.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

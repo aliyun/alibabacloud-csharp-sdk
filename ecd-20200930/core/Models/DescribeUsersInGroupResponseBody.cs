@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The total number of authorized users that is connected to cloud computers in the cloud computer pool.</para>
+        /// <para>The total number of authorized users that are connected to cloud computers of the cloud computer share.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -290,8 +290,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("UserOuPath")]
+        [Validation(Required=false)]
+        public string UserOuPath { get; set; }
+
         /// <summary>
-        /// <para>The total number of authorized users of the cloud computer pool.</para>
+        /// <para>The total number of authorized users of the cloud computer share.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

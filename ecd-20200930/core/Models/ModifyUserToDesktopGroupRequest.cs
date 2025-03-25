@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyUserToDesktopGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud computer pool whose end users you want to change.</para>
+        /// <para>The ID of the cloud computer share.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

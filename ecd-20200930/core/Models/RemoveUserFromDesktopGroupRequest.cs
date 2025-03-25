@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RemoveUserFromDesktopGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud computer pool for which you want to remove the authorized users.</para>
+        /// <para>The ID of the cloud computer share.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-2i8qxpv6t1a03****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of cloud computer pools.</para>
+        /// <para>The IDs of the cloud computer shares.</para>
         /// </summary>
         [NameInMap("DesktopGroupIds")]
         [Validation(Required=false)]
@@ -28,7 +28,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The IDs of the authorized users that you want to remove.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
@@ -44,6 +43,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("UserOuPath")]
+        [Validation(Required=false)]
+        public string UserOuPath { get; set; }
 
     }
 

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the desktop group that you want to assign to more regular users.</para>
+        /// <para>The ID of the cloud computer share.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-2i8qxpv6t1a03****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the desktop groups.</para>
+        /// <para>The IDs of the cloud computer shares.</para>
         /// </summary>
         [NameInMap("DesktopGroupIds")]
         [Validation(Required=false)]
@@ -38,7 +38,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The regular users to whom you want to assign the desktop group.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
@@ -54,6 +53,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("UserOuPath")]
+        [Validation(Required=false)]
+        public string UserOuPath { get; set; }
 
     }
 
