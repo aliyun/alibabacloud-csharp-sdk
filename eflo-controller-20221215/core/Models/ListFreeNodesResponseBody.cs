@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public List<ListFreeNodesResponseBodyNodes> Nodes { get; set; }
         public class ListFreeNodesResponseBodyNodes : TeaModel {
+            [NameInMap("CommodityCode")]
+            [Validation(Required=false)]
+            public string CommodityCode { get; set; }
+
             /// <summary>
             /// <para>Creation time</para>
             /// 
@@ -76,6 +80,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string NodeId { get; set; }
 
+            [NameInMap("OperatingState")]
+            [Validation(Required=false)]
+            public string OperatingState { get; set; }
+
             /// <summary>
             /// <para>Resource group ID</para>
             /// 
@@ -95,6 +103,20 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [NameInMap("Sn")]
             [Validation(Required=false)]
             public string Sn { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListFreeNodesResponseBodyNodesTags> Tags { get; set; }
+            public class ListFreeNodesResponseBodyNodesTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             /// <summary>
             /// <para>Availability zone ID</para>

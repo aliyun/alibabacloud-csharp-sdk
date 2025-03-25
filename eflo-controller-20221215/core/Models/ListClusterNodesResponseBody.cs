@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public List<ListClusterNodesResponseBodyNodes> Nodes { get; set; }
         public class ListClusterNodesResponseBodyNodes : TeaModel {
+            [NameInMap("CommodityCode")]
+            [Validation(Required=false)]
+            public string CommodityCode { get; set; }
+
             /// <summary>
             /// <para>Creation time</para>
             /// 
@@ -75,6 +79,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
+
+            [NameInMap("ImageName")]
+            [Validation(Required=false)]
+            public string ImageName { get; set; }
 
             /// <summary>
             /// <para>Machine type</para>
@@ -185,10 +193,40 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string Sn { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListClusterNodesResponseBodyNodesTags> Tags { get; set; }
+            public class ListClusterNodesResponseBodyNodesTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
+
+            /// <summary>
+            /// <para>专有网络交换机ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-bp1mxqhw8o20tgv3xk47h</para>
+            /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
+            /// <summary>
+            /// <para>专有网络ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-0jltf9vinjz3if3lltdy7</para>
+            /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
