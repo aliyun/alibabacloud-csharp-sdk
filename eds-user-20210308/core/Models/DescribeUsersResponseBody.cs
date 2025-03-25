@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public string EndUserId { get; set; }
 
+            [NameInMap("ExternalName")]
+            [Validation(Required=false)]
+            public string ExternalName { get; set; }
+
             [NameInMap("Extras")]
             [Validation(Required=false)]
             public DescribeUsersResponseBodyUsersExtras Extras { get; set; }
@@ -240,6 +244,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [NameInMap("Phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }
+
+            [NameInMap("Properties")]
+            [Validation(Required=false)]
+            public List<DescribeUsersResponseBodyUsersProperties> Properties { get; set; }
+            public class DescribeUsersResponseBodyUsersProperties : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             [NameInMap("RealNickName")]
             [Validation(Required=false)]

@@ -78,6 +78,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public bool? IncludeDesktopGroupCount { get; set; }
 
+        [NameInMap("IncludeOrgInfo")]
+        [Validation(Required=false)]
+        public bool? IncludeOrgInfo { get; set; }
+
+        [NameInMap("IncludeSupportIdps")]
+        [Validation(Required=false)]
+        public bool? IncludeSupportIdps { get; set; }
+
         [NameInMap("IsQueryAllSubOrgs")]
         [Validation(Required=false)]
         public bool? IsQueryAllSubOrgs { get; set; }

@@ -171,6 +171,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public bool? IsTenantManager { get; set; }
 
+            [NameInMap("OrgList")]
+            [Validation(Required=false)]
+            public List<FilterUsersResponseBodyUsersOrgList> OrgList { get; set; }
+            public class FilterUsersResponseBodyUsersOrgList : TeaModel {
+                [NameInMap("OrgId")]
+                [Validation(Required=false)]
+                public string OrgId { get; set; }
+
+                [NameInMap("OrgName")]
+                [Validation(Required=false)]
+                public string OrgName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The type of the account ownership.</para>
             /// <para>Valid values:</para>
@@ -249,6 +263,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public long? Status { get; set; }
+
+            [NameInMap("SupportLoginIdps")]
+            [Validation(Required=false)]
+            public List<FilterUsersResponseBodyUsersSupportLoginIdps> SupportLoginIdps { get; set; }
+            public class FilterUsersResponseBodyUsersSupportLoginIdps : TeaModel {
+                [NameInMap("IdpId")]
+                [Validation(Required=false)]
+                public string IdpId { get; set; }
+
+                [NameInMap("IdpName")]
+                [Validation(Required=false)]
+                public string IdpName { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The information about the properties.</para>

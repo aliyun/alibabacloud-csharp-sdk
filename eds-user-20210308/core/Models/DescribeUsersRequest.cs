@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        [NameInMap("FilterWithAssignedResource")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> FilterWithAssignedResource { get; set; }
+
         [NameInMap("FilterWithAssignedResources")]
         [Validation(Required=false)]
         public Dictionary<string, bool?> FilterWithAssignedResources { get; set; }
