@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [Validation(Required=false)]
             public int? Flow { get; set; }
 
+            [NameInMap("IspType")]
+            [Validation(Required=false)]
+            public string IspType { get; set; }
+
             /// <summary>
             /// <para>The memory size. Unit: GB.</para>
             /// 
@@ -95,7 +99,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]
-            public int? Memory { get; set; }
+            public float? Memory { get; set; }
 
             /// <summary>
             /// <para>The monthly price of the plan.</para>
@@ -105,7 +109,7 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             /// </summary>
             [NameInMap("OriginPrice")]
             [Validation(Required=false)]
-            public double? OriginPrice { get; set; }
+            public string OriginPrice { get; set; }
 
             /// <summary>
             /// <para>The ID of the plan.</para>
@@ -120,6 +124,10 @@ namespace AlibabaCloud.SDK.SWAS_OPEN20200601.Models
             [NameInMap("PlanType")]
             [Validation(Required=false)]
             public string PlanType { get; set; }
+
+            [NameInMap("PublicIpNum")]
+            [Validation(Required=false)]
+            public string PublicIpNum { get; set; }
 
             /// <summary>
             /// <para>The operating system types supported by the plan.</para>
