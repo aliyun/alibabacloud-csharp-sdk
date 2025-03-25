@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string Calendar { get; set; }
 
+        [NameInMap("ChildJobId")]
+        [Validation(Required=false)]
+        public string ChildJobId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

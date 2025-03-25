@@ -1,3 +1,11 @@
+2025-03-25 Version: 1.0.4
+- Update API CreateJob: add param ChildJobId.
+- Update API CreateJob: update param NoticeContacts.
+- Update API ListJobs: update response param.
+- Update API UpdateJob: add param ChildJobId.
+- Update API UpdateJob: update param NoticeContacts.
+
+
 2024-12-26 Version: 1.0.3
 - Generated csharp 2024-06-24 for SchedulerX3.
 
