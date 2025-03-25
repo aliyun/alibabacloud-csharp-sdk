@@ -32284,10 +32284,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["Collection"] = request.Collection;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
-            {
-                query["Content"] = request.Content;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
@@ -32360,9 +32356,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["UseFullTextRetrieval"] = request.UseFullTextRetrieval;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -32419,10 +32421,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["Collection"] = request.Collection;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
-            {
-                query["Content"] = request.Content;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
@@ -32495,9 +32493,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["UseFullTextRetrieval"] = request.UseFullTextRetrieval;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {

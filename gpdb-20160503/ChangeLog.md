@@ -1,3 +1,7 @@
+2025-03-25 Version: 2.2.3
+- Update API QueryContent: update param Content.
+
+
 2025-03-18 Version: 2.2.2
 - Update API DescribeDownloadRecords: add param DownloadTaskType.
 
