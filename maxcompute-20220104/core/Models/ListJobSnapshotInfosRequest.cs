@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListJobSnapshotInfosRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to sort query results in ascending or descending order.</para>
+        /// <para>Specifies whether to sort data in ascending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public List<string> TypeList { get; set; }
 
         /// <summary>
-        /// <para>The column based on which you want to sort query results.</para>
+        /// <para>The sorting column.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cpuUsage</para>

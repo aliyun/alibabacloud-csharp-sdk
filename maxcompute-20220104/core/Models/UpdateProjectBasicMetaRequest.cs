@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             [Validation(Required=false)]
             public bool? EnableDecimal2 { get; set; }
 
+            [NameInMap("enableDr")]
+            [Validation(Required=false)]
+            public bool? EnableDr { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the routing of the Tunnel resource group is enabled.</para>
             /// <list type="bullet">

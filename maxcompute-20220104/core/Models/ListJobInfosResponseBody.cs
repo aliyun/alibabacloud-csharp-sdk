@@ -94,6 +94,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string ExtPlantFrom { get; set; }
 
                 /// <summary>
+                /// <para>The amount of scanned data for the job. Unit: byte.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1234</para>
+                /// </summary>
+                [NameInMap("inputBytes")]
+                [Validation(Required=false)]
+                public double? InputBytes { get; set; }
+
+                /// <summary>
                 /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>

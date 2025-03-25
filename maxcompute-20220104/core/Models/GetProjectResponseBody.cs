@@ -138,6 +138,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public bool? AllowFullScan { get; set; }
 
+                [NameInMap("autoMvQuotaGb")]
+                [Validation(Required=false)]
+                public long? AutoMvQuotaGb { get; set; }
+
                 /// <summary>
                 /// <para>The Tunnel parent resource group that is bound to the project. You do not need to pay attention to this group.</para>
                 /// 
@@ -148,6 +152,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string ElderTunnelQuota { get; set; }
 
+                [NameInMap("enableAutoMv")]
+                [Validation(Required=false)]
+                public bool? EnableAutoMv { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether the DECIMAL type of the MaxCompute V2.0 data type edition is enabled.</para>
                 /// 
@@ -157,6 +165,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [NameInMap("enableDecimal2")]
                 [Validation(Required=false)]
                 public bool? EnableDecimal2 { get; set; }
+
+                [NameInMap("enableDr")]
+                [Validation(Required=false)]
+                public bool? EnableDr { get; set; }
 
                 /// <summary>
                 /// <para>Indicates whether external table caching is forcefully enabled.</para>

@@ -1,3 +1,7 @@
+2025-03-25 Version: 1.4.3
+- Update API UpdateProjectBasicMeta: update param body.
+
+
 2025-02-18 Version: 2.0.0
 - Support API ApplyComputeQuotaPlan.
 - Support API CreateComputeQuotaPlan.

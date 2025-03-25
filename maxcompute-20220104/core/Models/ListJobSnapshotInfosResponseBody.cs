@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListJobSnapshotInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListJobSnapshotInfosResponseBodyData Data { get; set; }
         public class ListJobSnapshotInfosResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of jobs snapshot information</para>
+            /// <para>The job snapshots.</para>
             /// </summary>
             [NameInMap("jobInfoList")]
             [Validation(Required=false)]
             public List<ListJobSnapshotInfosResponseBodyDataJobInfoList> JobInfoList { get; set; }
             public class ListJobSnapshotInfosResponseBodyDataJobInfoList : TeaModel {
+                /// <summary>
+                /// <para>The CPU request amount of the job at the snapshot time point. Unit: Core.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>200</para>
+                /// </summary>
                 [NameInMap("cpuRequest")]
                 [Validation(Required=false)]
                 public long? CpuRequest { get; set; }
@@ -37,6 +43,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public long? CpuUsage { get; set; }
 
+                /// <summary>
+                /// <para>The CPU satisfaction ratio of the job at the snapshot time point (cpuUsage/cpuRequest).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.5</para>
+                /// </summary>
                 [NameInMap("cpuUsageToRequestRatio")]
                 [Validation(Required=false)]
                 public double? CpuUsageToRequestRatio { get; set; }
@@ -121,6 +133,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public double? MaxMemoryPct { get; set; }
 
+                /// <summary>
+                /// <para>The Memory request amount of the job at the snapshot time point. Unit: MB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>409600</para>
+                /// </summary>
                 [NameInMap("memoryRequest")]
                 [Validation(Required=false)]
                 public long? MemoryRequest { get; set; }
@@ -135,6 +153,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public long? MemoryUsage { get; set; }
 
+                /// <summary>
+                /// <para>The Memory satisfaction ratio of the job at the snapshot time point (memoryUsage/memoryRequest).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("memoryUsageToRequestRatio")]
                 [Validation(Required=false)]
                 public double? MemoryUsageToRequestRatio { get; set; }
