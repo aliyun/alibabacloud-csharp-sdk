@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class ListNamespacesRequest : TeaModel {
+    public class ListNamespacesShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -53,17 +53,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<ListNamespacesRequestTag> Tag { get; set; }
-        public class ListNamespacesRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagShrink { get; set; }
 
     }
 

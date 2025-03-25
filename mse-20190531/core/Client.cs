@@ -4521,7 +4521,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <para>Creates an application.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateApplicationRequest
         /// </param>
         /// <param name="runtime">
@@ -4531,9 +4531,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// CreateApplicationResponse
         /// </returns>
-        public CreateApplicationResponse CreateApplicationWithOptions(CreateApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateApplicationResponse CreateApplicationWithOptions(CreateApplicationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateApplicationShrinkRequest request = new CreateApplicationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -4566,6 +4572,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchEnable))
             {
                 query["SwitchEnable"] = request.SwitchEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4598,7 +4608,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <para>Creates an application.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateApplicationRequest
         /// </param>
         /// <param name="runtime">
@@ -4608,9 +4618,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// CreateApplicationResponse
         /// </returns>
-        public async Task<CreateApplicationResponse> CreateApplicationWithOptionsAsync(CreateApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateApplicationResponse> CreateApplicationWithOptionsAsync(CreateApplicationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateApplicationShrinkRequest request = new CreateApplicationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -4643,6 +4659,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchEnable))
             {
                 query["SwitchEnable"] = request.SwitchEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7535,7 +7555,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <para>CreateNamespace</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateNamespaceRequest
         /// </param>
         /// <param name="runtime">
@@ -7545,9 +7565,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// CreateNamespaceResponse
         /// </returns>
-        public CreateNamespaceResponse CreateNamespaceWithOptions(CreateNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateNamespaceResponse CreateNamespaceWithOptions(CreateNamespaceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateNamespaceShrinkRequest request = new CreateNamespaceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -7560,6 +7586,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7592,7 +7622,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <para>CreateNamespace</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateNamespaceRequest
         /// </param>
         /// <param name="runtime">
@@ -7602,9 +7632,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// CreateNamespaceResponse
         /// </returns>
-        public async Task<CreateNamespaceResponse> CreateNamespaceWithOptionsAsync(CreateNamespaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateNamespaceResponse> CreateNamespaceWithOptionsAsync(CreateNamespaceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateNamespaceShrinkRequest request = new CreateNamespaceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -7617,6 +7653,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -14711,7 +14751,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <para>Obtains the list of applications.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetApplicationListRequest
         /// </param>
         /// <param name="runtime">
@@ -14721,9 +14761,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// GetApplicationListResponse
         /// </returns>
-        public GetApplicationListResponse GetApplicationListWithOptions(GetApplicationListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetApplicationListResponse GetApplicationListWithOptions(GetApplicationListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetApplicationListShrinkRequest request = new GetApplicationListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -14768,6 +14814,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchEnable))
             {
                 query["SwitchEnable"] = request.SwitchEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -14800,7 +14850,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <para>Obtains the list of applications.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetApplicationListRequest
         /// </param>
         /// <param name="runtime">
@@ -14810,9 +14860,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// GetApplicationListResponse
         /// </returns>
-        public async Task<GetApplicationListResponse> GetApplicationListWithOptionsAsync(GetApplicationListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetApplicationListResponse> GetApplicationListWithOptionsAsync(GetApplicationListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetApplicationListShrinkRequest request = new GetApplicationListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -14857,6 +14913,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchEnable))
             {
                 query["SwitchEnable"] = request.SwitchEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -27239,7 +27299,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <para>展示命名空间列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListNamespacesRequest
         /// </param>
         /// <param name="runtime">
@@ -27249,9 +27309,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// ListNamespacesResponse
         /// </returns>
-        public ListNamespacesResponse ListNamespacesWithOptions(ListNamespacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListNamespacesResponse ListNamespacesWithOptions(ListNamespacesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListNamespacesShrinkRequest request = new ListNamespacesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -27272,6 +27338,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -27304,7 +27374,7 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <para>展示命名空间列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListNamespacesRequest
         /// </param>
         /// <param name="runtime">
@@ -27314,9 +27384,15 @@ namespace AlibabaCloud.SDK.Mse20190531
         /// <returns>
         /// ListNamespacesResponse
         /// </returns>
-        public async Task<ListNamespacesResponse> ListNamespacesWithOptionsAsync(ListNamespacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListNamespacesResponse> ListNamespacesWithOptionsAsync(ListNamespacesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListNamespacesShrinkRequest request = new ListNamespacesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
@@ -27337,6 +27413,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["Tag"] = request.TagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

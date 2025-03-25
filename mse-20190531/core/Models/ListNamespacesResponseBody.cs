@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> Tags { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>2024-09-02T09:49:48.000+0000</para>

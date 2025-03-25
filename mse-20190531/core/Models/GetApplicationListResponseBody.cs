@@ -133,6 +133,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public long? Status { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> Tags { get; set; }
+
                 /// <summary>
                 /// <para>The user ID.</para>
                 /// 

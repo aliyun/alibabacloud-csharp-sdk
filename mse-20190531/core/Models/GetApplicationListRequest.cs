@@ -126,6 +126,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? SwitchEnable { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<GetApplicationListRequestTags> Tags { get; set; }
+        public class GetApplicationListRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

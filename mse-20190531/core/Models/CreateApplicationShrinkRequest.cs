@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
-    public class CreateApplicationRequest : TeaModel {
+    public class CreateApplicationShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
@@ -97,17 +97,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public List<CreateApplicationRequestTags> Tags { get; set; }
-        public class CreateApplicationRequestTags : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagsShrink { get; set; }
 
     }
 
