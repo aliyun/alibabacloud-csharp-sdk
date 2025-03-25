@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

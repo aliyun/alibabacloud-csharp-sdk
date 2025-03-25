@@ -63,7 +63,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The fault injection method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CrashSQLInjection: <c>Crash SQL</c>-based fault injection.</description></item>
+        /// <item><description>0: <c>Crash SQL</c>-based fault injection.</description></item>
+        /// </list>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CrashSQLInjection: CrashSQLInjection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

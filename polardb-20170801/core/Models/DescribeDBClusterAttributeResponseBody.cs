@@ -465,6 +465,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string SubCluster { get; set; }
 
+            [NameInMap("SubGroupDescription")]
+            [Validation(Required=false)]
+            public string SubGroupDescription { get; set; }
+
             /// <summary>
             /// <para>Availability zone ID.</para>
             /// 

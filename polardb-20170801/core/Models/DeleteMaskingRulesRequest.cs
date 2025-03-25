@@ -23,6 +23,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>Deletes data masking or encryption rules. Valid values:</para>
+        /// <para>v1: deletes data masking rules. v2: deletes data encryption rules.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v1</para>
+        /// </summary>
         [NameInMap("InterfaceVersion")]
         [Validation(Required=false)]
         public string InterfaceVersion { get; set; }

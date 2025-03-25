@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic association of newly added nodes with the cluster endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b>: enables automatic association of newly added nodes with the cluster endpoint.</description></item>
-        /// <item><description><b>Disable</b> (default): disables automatic association of newly added nodes with the cluster endpoint.</description></item>
+        /// <item><description><b>Enable</b></description></item>
+        /// <item><description><b>Disable</b> (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -192,11 +192,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <list type="bullet">
         /// <item><description><b>ON</b></description></item>
         /// <item><description><b>OFF</b></description></item>
-        /// </list>
-        /// <para>Enumerated values:</para>
-        /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

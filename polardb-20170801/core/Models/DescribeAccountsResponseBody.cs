@@ -78,8 +78,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The type of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b>: a standard account</description></item>
-            /// <item><description><b>Super</b>: a privileged account</description></item>
+            /// <item><description><b>Normal</b>: standard account.</description></item>
+            /// <item><description><b>Super</b>: privileged account.</description></item>
+            /// <item><description><b>ReadOnly</b>: global read-only account.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
