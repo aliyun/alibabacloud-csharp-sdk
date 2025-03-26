@@ -1230,6 +1230,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        [NameInMap("ResourcePoolOptions")]
+        [Validation(Required=false)]
+        public CreateScalingConfigurationRequestResourcePoolOptions ResourcePoolOptions { get; set; }
+        public class CreateScalingConfigurationRequestResourcePoolOptions : TeaModel {
+            [NameInMap("PrivatePoolIds")]
+            [Validation(Required=false)]
+            public List<string> PrivatePoolIds { get; set; }
+
+            [NameInMap("Strategy")]
+            [Validation(Required=false)]
+            public string Strategy { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</para>
         /// <para>The name of the scaling configuration must be unique in a region. If you do not specify this parameter, the scaling configuration ID is used.</para>

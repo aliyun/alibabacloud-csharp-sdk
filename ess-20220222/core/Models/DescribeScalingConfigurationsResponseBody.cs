@@ -1002,6 +1002,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            [NameInMap("ResourcePoolOptions")]
+            [Validation(Required=false)]
+            public DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions ResourcePoolOptions { get; set; }
+            public class DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions : TeaModel {
+                [NameInMap("PrivatePoolIds")]
+                [Validation(Required=false)]
+                public List<string> PrivatePoolIds { get; set; }
+
+                [NameInMap("Strategy")]
+                [Validation(Required=false)]
+                public string Strategy { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID of the scaling configuration.</para>
             /// 

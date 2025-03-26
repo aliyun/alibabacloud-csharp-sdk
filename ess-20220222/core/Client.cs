@@ -4696,6 +4696,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourcePoolOptions))
+            {
+                query["ResourcePoolOptions"] = request.ResourcePoolOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingConfigurationName))
             {
                 query["ScalingConfigurationName"] = request.ScalingConfigurationName;
@@ -5001,6 +5005,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourcePoolOptions))
+            {
+                query["ResourcePoolOptions"] = request.ResourcePoolOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingConfigurationName))
             {
@@ -16375,9 +16383,9 @@ namespace AlibabaCloud.SDK.Ess20220222
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</para>
+        /// <para>  To rename a scaling configuration in a scaling group, ensure the new name is unique within that group.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/459378.html">ModifyEciScalingConfiguration</a> operation to check the modification result.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/459374.html">DescribeEciScalingConfigurations</a> operation to check the modification result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16632,9 +16640,9 @@ namespace AlibabaCloud.SDK.Ess20220222
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</para>
+        /// <para>  To rename a scaling configuration in a scaling group, ensure the new name is unique within that group.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/459378.html">ModifyEciScalingConfiguration</a> operation to check the modification result.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/459374.html">DescribeEciScalingConfigurations</a> operation to check the modification result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16889,9 +16897,9 @@ namespace AlibabaCloud.SDK.Ess20220222
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</para>
+        /// <para>  To rename a scaling configuration in a scaling group, ensure the new name is unique within that group.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/459378.html">ModifyEciScalingConfiguration</a> operation to check the modification result.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/459374.html">DescribeEciScalingConfigurations</a> operation to check the modification result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16915,9 +16923,9 @@ namespace AlibabaCloud.SDK.Ess20220222
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</para>
+        /// <para>  To rename a scaling configuration in a scaling group, ensure the new name is unique within that group.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/459378.html">ModifyEciScalingConfiguration</a> operation to check the modification result.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/459374.html">DescribeEciScalingConfigurations</a> operation to check the modification result.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17745,6 +17753,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourcePoolOptions))
+            {
+                query["ResourcePoolOptions"] = request.ResourcePoolOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingConfigurationId))
             {
                 query["ScalingConfigurationId"] = request.ScalingConfigurationId;
@@ -18039,6 +18051,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourcePoolOptions))
+            {
+                query["ResourcePoolOptions"] = request.ResourcePoolOptions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingConfigurationId))
             {

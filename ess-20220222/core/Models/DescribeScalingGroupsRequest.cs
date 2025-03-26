@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// <para>The page number. Minimum value: 1.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>Default value: 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

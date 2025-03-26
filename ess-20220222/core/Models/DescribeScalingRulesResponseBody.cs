@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? EstimatedInstanceWarmup { get; set; }
 
             /// <summary>
-            /// <para>The Hybrid Cloud Monitoring metrics.</para>
+            /// <para>The Hybrid Cloud Monitoring metrics. For more information, see <a href="https://help.aliyun.com/document_detail/2852162.html">Create a custom target tracking scaling rule</a>.</para>
             /// </summary>
             [NameInMap("HybridMetrics")]
             [Validation(Required=false)]

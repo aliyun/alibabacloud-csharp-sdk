@@ -1246,6 +1246,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        [NameInMap("ResourcePoolOptions")]
+        [Validation(Required=false)]
+        public ModifyScalingConfigurationShrinkRequestResourcePoolOptions ResourcePoolOptions { get; set; }
+        public class ModifyScalingConfigurationShrinkRequestResourcePoolOptions : TeaModel {
+            [NameInMap("PrivatePoolIds")]
+            [Validation(Required=false)]
+            public List<string> PrivatePoolIds { get; set; }
+
+            [NameInMap("Strategy")]
+            [Validation(Required=false)]
+            public string Strategy { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the scaling configuration that you want to modify.</para>
         /// <para>This parameter is required.</para>
