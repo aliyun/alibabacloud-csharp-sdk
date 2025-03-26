@@ -13,6 +13,16 @@ namespace AlibabaCloud.SDK.DataAnalysisGBI20240823.Models
         [Validation(Required=false)]
         public RunSqlGenerationResponseBodyData Data { get; set; }
         public class RunSqlGenerationResponseBodyData : TeaModel {
+            [NameInMap("chat")]
+            [Validation(Required=false)]
+            public RunSqlGenerationResponseBodyDataChat Chat { get; set; }
+            public class RunSqlGenerationResponseBodyDataChat : TeaModel {
+                [NameInMap("text")]
+                [Validation(Required=false)]
+                public string Text { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Access was denied, message: No such namespace namespaces/tech-scp-chain7.</para>
