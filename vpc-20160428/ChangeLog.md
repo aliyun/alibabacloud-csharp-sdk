@@ -1,3 +1,9 @@
+2025-03-26 Version: 6.12.1
+- Update API AllocateEipAddress: add request parameters Tag.
+- Update API AllocateEipAddressPro: add request parameters Tag.
+- Update API CreateCommonBandwidthPackage: add request parameters Tag.
+
+
 2025-02-27 Version: 6.12.0
 - Support API ModifyEipForwardMode.
 - Update API CreateFlowLog: update param LogStoreName.

@@ -11,8 +11,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateBgpPeerRequest : TeaModel {
         /// <summary>
         /// <para>The BFD hop count. Valid values: <b>1</b> to <b>255</b>.</para>
-        /// <para>This parameter is required only if you enable BFD.</para>
-        /// <para>The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. Set a value based on your network topology.</para>
+        /// <para>This parameter is required only if you enable BFD. The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. Set a value based on your network topology.</para>
+        /// <remarks>
+        /// <para>If you use BFD in a multi-cloud environment or a fiber-optic direct connection network without any bridge device, you need to change the default BFD hop count from <b>255</b> to <b>1</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

@@ -277,6 +277,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public List<string> SecurityProtectionTypes { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<AllocateEipAddressRequestTag> Tag { get; set; }
+        public class AllocateEipAddressRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The zone of the EIP.</para>
         /// <para>When the service type of the IP address pool specified by <b>PublicIpAddressPoolId</b> is CloudBox, the default value is the zone of the IP address pool.</para>
