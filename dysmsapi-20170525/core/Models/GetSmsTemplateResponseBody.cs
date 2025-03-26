@@ -256,6 +256,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string VariableAttribute { get; set; }
 
+        [NameInMap("VendorAuditStatus")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> VendorAuditStatus { get; set; }
+
     }
 
 }
