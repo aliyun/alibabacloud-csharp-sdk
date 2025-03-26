@@ -12,7 +12,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The number of RDS Custom instances that you want to create. The parameter is available if you want to create multiple RDS Custom instances at a time.</para>
         /// <para>Valid values: <b>1</b> to <b>10</b>. Default value: <b>1</b>.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -304,6 +303,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
+
+        [NameInMap("UserDataInBase64")]
+        [Validation(Required=false)]
+        public bool? UserDataInBase64 { get; set; }
 
         /// <summary>
         /// <para>The vSwitch ID of the instance. You must specify this parameter when you create an instance of the virtual private cloud (VPC) type. The specified vSwitch and security group must belong to the same VPC.</para>

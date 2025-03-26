@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public List<DescribeRCSecurityGroupPermissionResponseBodySecurityGroupPermissions> SecurityGroupPermissions { get; set; }
         public class DescribeRCSecurityGroupPermissionResponseBodySecurityGroupPermissions : TeaModel {
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
             [NameInMap("DestCidrIp")]
             [Validation(Required=false)]
             public string DestCidrIp { get; set; }

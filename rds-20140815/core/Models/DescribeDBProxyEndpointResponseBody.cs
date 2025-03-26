@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBProxyEndpointResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The consistency read timeout period. Unit: milliseconds. Default value: <b>10</b> Unit: milliseconds. Valid values: <b>0 to 60000</b></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("CausalConsistReadTimeout")]
         [Validation(Required=false)]
         public string CausalConsistReadTimeout { get; set; }
@@ -84,6 +90,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>ConnectionPersist</b>: the status of the connection pooling feature. Valid values: <b>0</b>, <b>1</b>, and <b>2</b>. The value 0 indicates that the connection pooling feature is disabled. The value 1 indicates that the session-level connection pooling feature is enabled. The value 2 indicates that the transaction-level connection pooling feature is enabled.</description></item>
         /// <item><description><b>ReadWriteSpliting</b>: the status of the read/write splitting feature. Valid values: <b>0</b> and <b>1</b>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</description></item>
         /// <item><description><b>AZProximityAccess</b>: the status of the nearest access feature. Valid values: <b>0</b> and <b>1</b>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</description></item>
+        /// <item><description><b>CausalConsistRead</b>: the read consistency settings. Valid values: <b>0</b>, <b>1</b>, and <b>2</b>. The value 0 indicates eventual consistency. The value 1 indicates session consistency. The value 2 indicates global consistency.</description></item>
         /// <item><description><b>PinPreparedStmt</b>: an internal parameter that is available only for ApsaraDB RDS for PostgrSQL instances.</description></item>
         /// </list>
         /// <remarks>
@@ -166,6 +173,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DbProxyEndpointReadWriteMode { get; set; }
 
+        /// <summary>
+        /// <para>The virtual private cloud (VPC) ID of the proxy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-****</para>
+        /// </summary>
         [NameInMap("DbProxyEndpointVpcId")]
         [Validation(Required=false)]
         public string DbProxyEndpointVpcId { get; set; }

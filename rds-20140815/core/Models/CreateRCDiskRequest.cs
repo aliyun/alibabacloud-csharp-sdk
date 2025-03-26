@@ -65,7 +65,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>elastic_ephemeral_disk_standard</b>: standard elastic ephemeral disk</description></item>
         /// <item><description><b>elastic_ephemeral_disk_premium</b>: premium elastic ephemeral disk</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_ssd</para>
@@ -94,6 +93,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         /// <summary>
         /// <para>The performance level (PL) of the disk if the disk is an ESSD. Valid values:</para>
@@ -200,7 +203,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The zone ID.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-a</para>

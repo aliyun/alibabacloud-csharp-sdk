@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCInstancesRequest : TeaModel {
+        [NameInMap("HostIp")]
+        [Validation(Required=false)]
+        public string HostIp { get; set; }
+
         /// <summary>
         /// <para>The instance ID.</para>
         /// 
@@ -18,6 +22,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public string InstanceIds { get; set; }
 
         /// <summary>
         /// <para>The page number.</para>
@@ -42,6 +50,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("PublicIp")]
+        [Validation(Required=false)]
+        public string PublicIp { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>

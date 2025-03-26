@@ -60,6 +60,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? DBInstanceStorage { get; set; }
 
         /// <summary>
+        /// <para>The storage type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>local_ssd</b>: local SSD. This is the recommended storage type.</description></item>
+        /// <item><description><b>general_essd</b>: general Enterprise SSD (ESSD). This is the recommended storage type.</description></item>
+        /// <item><description><b>cloud_essd</b>: PL1 ESSD</description></item>
+        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
+        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
+        /// <item><description><b>cloud_ssd</b>: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.</description></item>
+        /// </list>
+        /// <para>The default value of this parameter is determined by the instance type specified by the <b>DBInstanceClass</b> parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>If the instance type specifies the local SSD storage type, the default value of this parameter is <b>local_ssd</b>.</description></item>
+        /// <item><description>If the instance type specifies the standard SSD or ESSD storage type, the default value of this parameter is <b>cloud_essd</b>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> Serverless instances support only PL1 ESSDs and general ESSDs.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>local_ssd</para>
+        /// </summary>
+        [NameInMap("DBInstanceStorageType")]
+        [Validation(Required=false)]
+        public string DBInstanceStorageType { get; set; }
+
+        /// <summary>
         /// <para>The time when you want the change to take effect. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Immediately</b> (default): The change immediately takes effect.</description></item>

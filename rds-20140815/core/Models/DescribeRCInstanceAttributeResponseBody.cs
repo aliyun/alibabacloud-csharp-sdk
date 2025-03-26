@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? Cpu { get; set; }
 
+        [NameInMap("CreateMode")]
+        [Validation(Required=false)]
+        public int? CreateMode { get; set; }
+
         /// <summary>
         /// <para>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</para>
         /// 

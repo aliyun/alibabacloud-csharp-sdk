@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBProxyEndpointRequest : TeaModel {
+        /// <summary>
+        /// <para>Consistency read timeout, in milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("CausalConsistReadTimeout")]
         [Validation(Required=false)]
         public string CausalConsistReadTimeout { get; set; }
@@ -263,6 +269,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
+        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-2zeusejj******</para>
         /// </summary>

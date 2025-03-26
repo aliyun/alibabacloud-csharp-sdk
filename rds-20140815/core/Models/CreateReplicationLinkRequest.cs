@@ -115,6 +115,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? SourcePort { get; set; }
 
+        [NameInMap("TargetAddress")]
+        [Validation(Required=false)]
+        public string TargetAddress { get; set; }
+
         /// <summary>
         /// <para>The task ID of the successful dry run.</para>
         /// 

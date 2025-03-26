@@ -114,6 +114,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
+
+            [NameInMap("InstanceTypeFamily")]
+            [Validation(Required=false)]
+            public string InstanceTypeFamily { get; set; }
+
+            [NameInMap("PublicIp")]
+            [Validation(Required=false)]
+            public string PublicIp { get; set; }
+
             /// <summary>
             /// <para>The region ID.</para>
             /// 
@@ -123,6 +135,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
 
             [NameInMap("SpotStrategy")]
             [Validation(Required=false)]

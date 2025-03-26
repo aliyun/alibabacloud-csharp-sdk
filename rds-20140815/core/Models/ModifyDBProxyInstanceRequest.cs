@@ -175,6 +175,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string DestVSwitchId { get; set; }
 
+            /// <summary>
+            /// <para>The target vpc id corresponding to the proxy instance migration.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-2vcicu73rdylp****</para>
+            /// </summary>
             [NameInMap("destVpcId")]
             [Validation(Required=false)]
             public string DestVpcId { get; set; }

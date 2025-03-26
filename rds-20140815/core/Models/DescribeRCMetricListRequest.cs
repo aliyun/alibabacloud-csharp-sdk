@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCMetricListRequest : TeaModel {
+        [NameInMap("Dimensions")]
+        [Validation(Required=false)]
+        public string Dimensions { get; set; }
+
         /// <summary>
         /// <para>The end of the time range to query. The end time must be later than the start time. Example: <c>2024-08-06 10:15:00</c>.</para>
         /// 

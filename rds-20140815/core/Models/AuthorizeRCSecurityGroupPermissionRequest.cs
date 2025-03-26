@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
             [NameInMap("Priority")]
             [Validation(Required=false)]
-            public string Priority { get; set; }
+            public int? Priority { get; set; }
 
             [NameInMap("SourceCidrIp")]
             [Validation(Required=false)]

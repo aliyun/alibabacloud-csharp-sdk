@@ -23,6 +23,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string BackupSetId { get; set; }
 
         /// <summary>
+        /// <para>The region where the backup set is located.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
+        [NameInMap("BackupSetRegion")]
+        [Validation(Required=false)]
+        public string BackupSetRegion { get; set; }
+
+        /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>

@@ -50,6 +50,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("DiskDeviceMappings")]
+            [Validation(Required=false)]
+            public List<DescribeRCImageListResponseBodyImagesDiskDeviceMappings> DiskDeviceMappings { get; set; }
+            public class DescribeRCImageListResponseBodyImagesDiskDeviceMappings : TeaModel {
+                [NameInMap("Device")]
+                [Validation(Required=false)]
+                public string Device { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
+                public string Size { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The image ID.</para>
             /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceReplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether to enable the native replication mode. Valid values:</para>
+        /// <para>Indicates whether the native replication mods is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ON</b></description></item>
         /// <item><description><b>OFF</b></description></item>
@@ -55,6 +55,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The current replication status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Running</b></description></item>
+        /// <item><description><b>Connecting</b></description></item>
+        /// <item><description><b>Stopped</b></description></item>
+        /// <item><description><b>Error</b></description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Running
