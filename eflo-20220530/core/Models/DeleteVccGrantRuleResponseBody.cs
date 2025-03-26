@@ -10,6 +10,19 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
 {
     public class DeleteVccGrantRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// <remarks>
+        /// <para> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
+        /// <summary>
         /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>

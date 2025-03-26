@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
 {
     public class ListVccFlowInfosResponseBody : TeaModel {
         /// <summary>
+        /// <para>访问被拒绝的详细原因。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
+        /// <summary>
         /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>

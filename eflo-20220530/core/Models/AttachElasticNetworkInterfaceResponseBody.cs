@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
 {
     public class AttachElasticNetworkInterfaceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The detailed reason why the access was denied.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
+        /// <summary>
         /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>

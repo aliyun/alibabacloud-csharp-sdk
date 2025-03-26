@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
 {
     public class GetLniPrivateIpAddressResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
+        /// <summary>
         /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
@@ -115,6 +125,16 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// <para>The subnet instance ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>subnet-aj93mko8</para>
+            /// </summary>
+            [NameInMap("SubnetId")]
+            [Validation(Required=false)]
+            public string SubnetId { get; set; }
 
         }
 
