@@ -8,54 +8,54 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody : TeaModel {
+    public class CreateAccessWarrantRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>[]</para>
+        /// <para>a123</para>
         /// </summary>
-        [NameInMap("data")]
+        [NameInMap("appId")]
         [Validation(Required=false)]
-        public List<AliyunConsoleServiceInfoDTO> Data { get; set; }
+        public string AppId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>UNKNOWN_ERROR</para>
+        /// <para>e32fac43df0b0b0be32fac43df0b0b0b</para>
         /// </summary>
-        [NameInMap("errCode")]
+        [NameInMap("requestSign")]
         [Validation(Required=false)]
-        public string ErrCode { get; set; }
+        public string RequestSign { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>1701000000</para>
         /// </summary>
-        [NameInMap("errMessage")]
+        [NameInMap("timestamp")]
         [Validation(Required=false)]
-        public string ErrMessage { get; set; }
+        public string Timestamp { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>110.25.23.12</para>
         /// </summary>
-        [NameInMap("httpStatusCode")]
+        [NameInMap("userClientIp")]
         [Validation(Required=false)]
-        public int? HttpStatusCode { get; set; }
+        public string UserClientIp { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
+        /// <para>sn123</para>
         /// </summary>
-        [NameInMap("requestId")]
+        [NameInMap("userId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string UserId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>7200</para>
         /// </summary>
-        [NameInMap("success")]
+        [NameInMap("warrantAvailable")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public int? WarrantAvailable { get; set; }
 
     }
 

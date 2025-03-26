@@ -8,14 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody : TeaModel {
+    public class QueryApplicationAccessIdResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public List<AliyunConsoleServiceInfoDTO> Data { get; set; }
+        public QueryApplicationAccessIdResponseBodyData Data { get; set; }
+        public class QueryApplicationAccessIdResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1234567890</para>
+            /// </summary>
+            [NameInMap("applicationAccessId")]
+            [Validation(Required=false)]
+            public string ApplicationAccessId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>MyAppSecret</para>
+            /// </summary>
+            [NameInMap("applicationAccessSecret")]
+            [Validation(Required=false)]
+            public string ApplicationAccessSecret { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>

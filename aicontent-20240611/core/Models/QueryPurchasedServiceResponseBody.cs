@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody : TeaModel {
+    public class QueryPurchasedServiceResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>[]</para>
