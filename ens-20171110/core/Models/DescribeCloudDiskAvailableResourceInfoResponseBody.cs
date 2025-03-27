@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The type of the disk.</para>
                 /// <list type="bullet">
-                /// <item><description>cloud_efficiency: ultra disk.</description></item>
-                /// <item><description>cloud_ssd: all-flash disk.</description></item>
-                /// <item><description>local_hdd: local HDD.</description></item>
-                /// <item><description>local_ssd: local SSD.</description></item>
+                /// <item><description>cloud_efficiency:ultra disk.</description></item>
+                /// <item><description>cloud_ssd:all-flash disk.</description></item>
+                /// <item><description>local_hdd:local HDD.</description></item>
+                /// <item><description>local_ssd:local SSD.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

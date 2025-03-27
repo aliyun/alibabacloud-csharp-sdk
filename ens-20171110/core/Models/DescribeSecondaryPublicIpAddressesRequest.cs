@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        [NameInMap("EnsRegionIds")]
+        [Validation(Required=false)]
+        public List<string> EnsRegionIds { get; set; }
+
         /// <summary>
         /// <para>The Internet service provider. Valid values:</para>
         /// <list type="bullet">

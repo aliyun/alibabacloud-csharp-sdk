@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string TargetOSSRegionId { get; set; }
 
+        [NameInMap("WithDataDisks")]
+        [Validation(Required=false)]
+        public bool? WithDataDisks { get; set; }
+
     }
 
 }

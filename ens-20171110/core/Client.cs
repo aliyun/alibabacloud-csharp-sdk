@@ -367,132 +367,6 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures Network Address Translation (NAT) rules for an instance. This operation is an asynchronous API operation. For more information about the configurations, see the API documentation of GetDeviceInternetPort.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// AddDeviceInternetPortRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// AddDeviceInternetPortResponse
-        /// </returns>
-        public AddDeviceInternetPortResponse AddDeviceInternetPortWithOptions(AddDeviceInternetPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "AddDeviceInternetPort",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddDeviceInternetPortResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddDeviceInternetPortResponse>(Execute(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Configures Network Address Translation (NAT) rules for an instance. This operation is an asynchronous API operation. For more information about the configurations, see the API documentation of GetDeviceInternetPort.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// AddDeviceInternetPortRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// AddDeviceInternetPortResponse
-        /// </returns>
-        public async Task<AddDeviceInternetPortResponse> AddDeviceInternetPortWithOptionsAsync(AddDeviceInternetPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "AddDeviceInternetPort",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddDeviceInternetPortResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddDeviceInternetPortResponse>(await ExecuteAsync(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Configures Network Address Translation (NAT) rules for an instance. This operation is an asynchronous API operation. For more information about the configurations, see the API documentation of GetDeviceInternetPort.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// AddDeviceInternetPortRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// AddDeviceInternetPortResponse
-        /// </returns>
-        public AddDeviceInternetPortResponse AddDeviceInternetPort(AddDeviceInternetPortRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return AddDeviceInternetPortWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Configures Network Address Translation (NAT) rules for an instance. This operation is an asynchronous API operation. For more information about the configurations, see the API documentation of GetDeviceInternetPort.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// AddDeviceInternetPortRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// AddDeviceInternetPortResponse
-        /// </returns>
-        public async Task<AddDeviceInternetPortResponse> AddDeviceInternetPortAsync(AddDeviceInternetPortRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await AddDeviceInternetPortWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>Adds an IPv6 network interface controller (NIC). A public IP address is automatically assigned at the same time.</para>
         /// </summary>
         /// 
@@ -5220,6 +5094,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["TargetOSSRegionId"] = request.TargetOSSRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithDataDisks))
+            {
+                query["WithDataDisks"] = request.WithDataDisks;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5284,6 +5162,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetOSSRegionId))
             {
                 query["TargetOSSRegionId"] = request.TargetOSSRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithDataDisks))
+            {
+                query["WithDataDisks"] = request.WithDataDisks;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10165,132 +10047,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteBucketLifecycleWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes Network Address Translation (NAT) rules for a server or container based on the ID.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteDeviceInternetPortRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteDeviceInternetPortResponse
-        /// </returns>
-        public DeleteDeviceInternetPortResponse DeleteDeviceInternetPortWithOptions(DeleteDeviceInternetPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteDeviceInternetPort",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteDeviceInternetPortResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteDeviceInternetPortResponse>(Execute(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes Network Address Translation (NAT) rules for a server or container based on the ID.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteDeviceInternetPortRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteDeviceInternetPortResponse
-        /// </returns>
-        public async Task<DeleteDeviceInternetPortResponse> DeleteDeviceInternetPortWithOptionsAsync(DeleteDeviceInternetPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DeleteDeviceInternetPort",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteDeviceInternetPortResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteDeviceInternetPortResponse>(await ExecuteAsync(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes Network Address Translation (NAT) rules for a server or container based on the ID.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteDeviceInternetPortRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteDeviceInternetPortResponse
-        /// </returns>
-        public DeleteDeviceInternetPortResponse DeleteDeviceInternetPort(DeleteDeviceInternetPortRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DeleteDeviceInternetPortWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Deletes Network Address Translation (NAT) rules for a server or container based on the ID.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DeleteDeviceInternetPortRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DeleteDeviceInternetPortResponse
-        /// </returns>
-        public async Task<DeleteDeviceInternetPortResponse> DeleteDeviceInternetPortAsync(DeleteDeviceInternetPortRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DeleteDeviceInternetPortWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -17714,6 +17470,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["EnsRegionId"] = request.EnsRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionIds))
+            {
+                query["EnsRegionIds"] = request.EnsRegionIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -17794,6 +17554,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionIds))
+            {
+                query["EnsRegionIds"] = request.EnsRegionIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -22047,6 +21811,164 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeInstanceBandwidthDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改启动配置，只支持异构实例(PCFarm裸金属)。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceBootConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceBootConfigurationResponse
+        /// </returns>
+        public DescribeInstanceBootConfigurationResponse DescribeInstanceBootConfigurationWithOptions(DescribeInstanceBootConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BootSet))
+            {
+                query["BootSet"] = request.BootSet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BootType))
+            {
+                query["BootType"] = request.BootType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSet))
+            {
+                query["DiskSet"] = request.DiskSet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceBootConfiguration",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstanceBootConfigurationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstanceBootConfigurationResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改启动配置，只支持异构实例(PCFarm裸金属)。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceBootConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceBootConfigurationResponse
+        /// </returns>
+        public async Task<DescribeInstanceBootConfigurationResponse> DescribeInstanceBootConfigurationWithOptionsAsync(DescribeInstanceBootConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BootSet))
+            {
+                query["BootSet"] = request.BootSet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BootType))
+            {
+                query["BootType"] = request.BootType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSet))
+            {
+                query["DiskSet"] = request.DiskSet;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceBootConfiguration",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstanceBootConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstanceBootConfigurationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改启动配置，只支持异构实例(PCFarm裸金属)。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceBootConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceBootConfigurationResponse
+        /// </returns>
+        public DescribeInstanceBootConfigurationResponse DescribeInstanceBootConfiguration(DescribeInstanceBootConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInstanceBootConfigurationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改启动配置，只支持异构实例(PCFarm裸金属)。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceBootConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceBootConfigurationResponse
+        /// </returns>
+        public async Task<DescribeInstanceBootConfigurationResponse> DescribeInstanceBootConfigurationAsync(DescribeInstanceBootConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInstanceBootConfigurationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -27380,6 +27302,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["EnsRegionId"] = request.EnsRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionIds))
+            {
+                query["EnsRegionIds"] = request.EnsRegionIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Isp))
             {
                 query["Isp"] = request.Isp;
@@ -27448,6 +27374,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionIds))
+            {
+                query["EnsRegionIds"] = request.EnsRegionIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Isp))
             {
@@ -31245,132 +31175,6 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network address translation (NAT) rule details of a device such as a server or container by its ID.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// GetDeviceInternetPortRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetDeviceInternetPortResponse
-        /// </returns>
-        public GetDeviceInternetPortResponse GetDeviceInternetPortWithOptions(GetDeviceInternetPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetDeviceInternetPort",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetDeviceInternetPortResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetDeviceInternetPortResponse>(Execute(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the network address translation (NAT) rule details of a device such as a server or container by its ID.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// GetDeviceInternetPortRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetDeviceInternetPortResponse
-        /// </returns>
-        public async Task<GetDeviceInternetPortResponse> GetDeviceInternetPortWithOptionsAsync(GetDeviceInternetPortRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetDeviceInternetPort",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetDeviceInternetPortResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetDeviceInternetPortResponse>(await ExecuteAsync(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the network address translation (NAT) rule details of a device such as a server or container by its ID.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// GetDeviceInternetPortRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetDeviceInternetPortResponse
-        /// </returns>
-        public GetDeviceInternetPortResponse GetDeviceInternetPort(GetDeviceInternetPortRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetDeviceInternetPortWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the network address translation (NAT) rule details of a device such as a server or container by its ID.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// GetDeviceInternetPortRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetDeviceInternetPortResponse
-        /// </returns>
-        public async Task<GetDeviceInternetPortResponse> GetDeviceInternetPortAsync(GetDeviceInternetPortRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetDeviceInternetPortWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>Queries the storage usage in the previous billing cycle and the cumulative number of calls in this month.</para>
         /// </summary>
         /// 
@@ -31639,6 +31443,240 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetOssUsageDataWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用ImportImage导入一份您的镜像文件到云服务器。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ImportImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportImageResponse
+        /// </returns>
+        public ImportImageResponse ImportImageWithOptions(ImportImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ImportImageShrinkRequest request = new ImportImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DiskDeviceMapping))
+            {
+                request.DiskDeviceMappingShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DiskDeviceMapping, "DiskDeviceMapping", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Architecture))
+            {
+                query["Architecture"] = request.Architecture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeType))
+            {
+                query["ComputeType"] = request.ComputeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskDeviceMappingShrink))
+            {
+                query["DiskDeviceMapping"] = request.DiskDeviceMappingShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageFormat))
+            {
+                query["ImageFormat"] = request.ImageFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                query["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSBucket))
+            {
+                query["OSSBucket"] = request.OSSBucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSObject))
+            {
+                query["OSSObject"] = request.OSSObject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSRegion))
+            {
+                query["OSSRegion"] = request.OSSRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSType))
+            {
+                query["OSType"] = request.OSType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSVersion))
+            {
+                query["OSVersion"] = request.OSVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
+            {
+                query["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetOSSRegionId))
+            {
+                query["TargetOSSRegionId"] = request.TargetOSSRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportImage",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ImportImageResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ImportImageResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用ImportImage导入一份您的镜像文件到云服务器。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ImportImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportImageResponse
+        /// </returns>
+        public async Task<ImportImageResponse> ImportImageWithOptionsAsync(ImportImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ImportImageShrinkRequest request = new ImportImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DiskDeviceMapping))
+            {
+                request.DiskDeviceMappingShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DiskDeviceMapping, "DiskDeviceMapping", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Architecture))
+            {
+                query["Architecture"] = request.Architecture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeType))
+            {
+                query["ComputeType"] = request.ComputeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskDeviceMappingShrink))
+            {
+                query["DiskDeviceMapping"] = request.DiskDeviceMappingShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageFormat))
+            {
+                query["ImageFormat"] = request.ImageFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                query["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSBucket))
+            {
+                query["OSSBucket"] = request.OSSBucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSObject))
+            {
+                query["OSSObject"] = request.OSSObject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSRegion))
+            {
+                query["OSSRegion"] = request.OSSRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSType))
+            {
+                query["OSType"] = request.OSType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSVersion))
+            {
+                query["OSVersion"] = request.OSVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
+            {
+                query["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetOSSRegionId))
+            {
+                query["TargetOSSRegionId"] = request.TargetOSSRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportImage",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ImportImageResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ImportImageResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用ImportImage导入一份您的镜像文件到云服务器。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportImageResponse
+        /// </returns>
+        public ImportImageResponse ImportImage(ImportImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用ImportImage导入一份您的镜像文件到云服务器。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportImageResponse
+        /// </returns>
+        public async Task<ImportImageResponse> ImportImageAsync(ImportImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportImageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -41085,132 +41123,6 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets an instance including its image.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ResetDeviceInstanceRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ResetDeviceInstanceResponse
-        /// </returns>
-        public ResetDeviceInstanceResponse ResetDeviceInstanceWithOptions(ResetDeviceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ResetDeviceInstance",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResetDeviceInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResetDeviceInstanceResponse>(Execute(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Resets an instance including its image.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ResetDeviceInstanceRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ResetDeviceInstanceResponse
-        /// </returns>
-        public async Task<ResetDeviceInstanceResponse> ResetDeviceInstanceWithOptionsAsync(ResetDeviceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ResetDeviceInstance",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ResetDeviceInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ResetDeviceInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Resets an instance including its image.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ResetDeviceInstanceRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ResetDeviceInstanceResponse
-        /// </returns>
-        public ResetDeviceInstanceResponse ResetDeviceInstance(ResetDeviceInstanceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ResetDeviceInstanceWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Resets an instance including its image.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ResetDeviceInstanceRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ResetDeviceInstanceResponse
-        /// </returns>
-        public async Task<ResetDeviceInstanceResponse> ResetDeviceInstanceAsync(ResetDeviceInstanceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ResetDeviceInstanceWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>Rolls back a disk by using a snapshot.</para>
         /// </summary>
         /// 
@@ -41535,132 +41447,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResizeDiskWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Restarts applications deployed on an instance and returns the restart results in a synchronous manner.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// RestartDeviceInstanceRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// RestartDeviceInstanceResponse
-        /// </returns>
-        public RestartDeviceInstanceResponse RestartDeviceInstanceWithOptions(RestartDeviceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RestartDeviceInstance",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RestartDeviceInstanceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RestartDeviceInstanceResponse>(Execute(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Restarts applications deployed on an instance and returns the restart results in a synchronous manner.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// RestartDeviceInstanceRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// RestartDeviceInstanceResponse
-        /// </returns>
-        public async Task<RestartDeviceInstanceResponse> RestartDeviceInstanceWithOptionsAsync(RestartDeviceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RestartDeviceInstance",
-                Version = "2017-11-10",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RestartDeviceInstanceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RestartDeviceInstanceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Restarts applications deployed on an instance and returns the restart results in a synchronous manner.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// RestartDeviceInstanceRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// RestartDeviceInstanceResponse
-        /// </returns>
-        public RestartDeviceInstanceResponse RestartDeviceInstance(RestartDeviceInstanceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return RestartDeviceInstanceWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Restarts applications deployed on an instance and returns the restart results in a synchronous manner.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// RestartDeviceInstanceRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// RestartDeviceInstanceResponse
-        /// </returns>
-        public async Task<RestartDeviceInstanceResponse> RestartDeviceInstanceAsync(RestartDeviceInstanceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await RestartDeviceInstanceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
