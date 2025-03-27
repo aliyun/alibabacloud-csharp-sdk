@@ -3569,6 +3569,174 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>进行对话-流式输出</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteTextbookAssistantSseDialogueRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteTextbookAssistantSseDialogueResponse
+        /// </returns>
+        public ExecuteTextbookAssistantSseDialogueResponse ExecuteTextbookAssistantSseDialogueWithOptions(ExecuteTextbookAssistantSseDialogueRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthToken))
+            {
+                body["authToken"] = request.AuthToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scenario))
+            {
+                body["scenario"] = request.Scenario;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMessage))
+            {
+                body["userMessage"] = request.UserMessage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteTextbookAssistantSseDialogue",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/textbookAssistant/dialogue/ExecuteSseDialogue",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ExecuteTextbookAssistantSseDialogueResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ExecuteTextbookAssistantSseDialogueResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行对话-流式输出</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteTextbookAssistantSseDialogueRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteTextbookAssistantSseDialogueResponse
+        /// </returns>
+        public async Task<ExecuteTextbookAssistantSseDialogueResponse> ExecuteTextbookAssistantSseDialogueWithOptionsAsync(ExecuteTextbookAssistantSseDialogueRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthToken))
+            {
+                body["authToken"] = request.AuthToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scenario))
+            {
+                body["scenario"] = request.Scenario;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMessage))
+            {
+                body["userMessage"] = request.UserMessage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteTextbookAssistantSseDialogue",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/textbookAssistant/dialogue/ExecuteSseDialogue",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ExecuteTextbookAssistantSseDialogueResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ExecuteTextbookAssistantSseDialogueResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行对话-流式输出</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteTextbookAssistantSseDialogueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteTextbookAssistantSseDialogueResponse
+        /// </returns>
+        public ExecuteTextbookAssistantSseDialogueResponse ExecuteTextbookAssistantSseDialogue(ExecuteTextbookAssistantSseDialogueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecuteTextbookAssistantSseDialogueWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行对话-流式输出</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteTextbookAssistantSseDialogueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteTextbookAssistantSseDialogueResponse
+        /// </returns>
+        public async Task<ExecuteTextbookAssistantSseDialogueResponse> ExecuteTextbookAssistantSseDialogueAsync(ExecuteTextbookAssistantSseDialogueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecuteTextbookAssistantSseDialogueWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>开启自由对话</para>
         /// </summary>
         /// 
@@ -4585,6 +4753,158 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量获取文章详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTextbookAssistantArticleDetailsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTextbookAssistantArticleDetailsResponse
+        /// </returns>
+        public ListTextbookAssistantArticleDetailsResponse ListTextbookAssistantArticleDetailsWithOptions(ListTextbookAssistantArticleDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArticleIdList))
+            {
+                body["articleIdList"] = request.ArticleIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthToken))
+            {
+                body["authToken"] = request.AuthToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTextbookAssistantArticleDetails",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/textbookAssistant/teachingResource/ListArticleDetails",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTextbookAssistantArticleDetailsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTextbookAssistantArticleDetailsResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量获取文章详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTextbookAssistantArticleDetailsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTextbookAssistantArticleDetailsResponse
+        /// </returns>
+        public async Task<ListTextbookAssistantArticleDetailsResponse> ListTextbookAssistantArticleDetailsWithOptionsAsync(ListTextbookAssistantArticleDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArticleIdList))
+            {
+                body["articleIdList"] = request.ArticleIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthToken))
+            {
+                body["authToken"] = request.AuthToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTextbookAssistantArticleDetails",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/textbookAssistant/teachingResource/ListArticleDetails",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTextbookAssistantArticleDetailsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTextbookAssistantArticleDetailsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量获取文章详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTextbookAssistantArticleDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTextbookAssistantArticleDetailsResponse
+        /// </returns>
+        public ListTextbookAssistantArticleDetailsResponse ListTextbookAssistantArticleDetails(ListTextbookAssistantArticleDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListTextbookAssistantArticleDetailsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量获取文章详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTextbookAssistantArticleDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTextbookAssistantArticleDetailsResponse
+        /// </returns>
+        public async Task<ListTextbookAssistantArticleDetailsResponse> ListTextbookAssistantArticleDetailsAsync(ListTextbookAssistantArticleDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListTextbookAssistantArticleDetailsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取文章列表</para>
         /// </summary>
         /// 
@@ -5237,6 +5557,158 @@ namespace AlibabaCloud.SDK.AiContent20240611
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListTextbookAssistantGradeVolumesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文章内容详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTextbookAssistantSceneDetailsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTextbookAssistantSceneDetailsResponse
+        /// </returns>
+        public ListTextbookAssistantSceneDetailsResponse ListTextbookAssistantSceneDetailsWithOptions(ListTextbookAssistantSceneDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthToken))
+            {
+                body["authToken"] = request.AuthToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneIdList))
+            {
+                body["sceneIdList"] = request.SceneIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTextbookAssistantSceneDetails",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/textbookAssistant/teachingResource/ListSceneDetails",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTextbookAssistantSceneDetailsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTextbookAssistantSceneDetailsResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文章内容详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTextbookAssistantSceneDetailsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTextbookAssistantSceneDetailsResponse
+        /// </returns>
+        public async Task<ListTextbookAssistantSceneDetailsResponse> ListTextbookAssistantSceneDetailsWithOptionsAsync(ListTextbookAssistantSceneDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthToken))
+            {
+                body["authToken"] = request.AuthToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneIdList))
+            {
+                body["sceneIdList"] = request.SceneIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTextbookAssistantSceneDetails",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/textbookAssistant/teachingResource/ListSceneDetails",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTextbookAssistantSceneDetailsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTextbookAssistantSceneDetailsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文章内容详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTextbookAssistantSceneDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTextbookAssistantSceneDetailsResponse
+        /// </returns>
+        public ListTextbookAssistantSceneDetailsResponse ListTextbookAssistantSceneDetails(ListTextbookAssistantSceneDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListTextbookAssistantSceneDetailsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文章内容详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTextbookAssistantSceneDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTextbookAssistantSceneDetailsResponse
+        /// </returns>
+        public async Task<ListTextbookAssistantSceneDetailsResponse> ListTextbookAssistantSceneDetailsAsync(ListTextbookAssistantSceneDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListTextbookAssistantSceneDetailsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
