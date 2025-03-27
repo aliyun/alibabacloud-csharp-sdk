@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
+        [NameInMap("Sequence")]
+        [Validation(Required=false)]
+        public int? Sequence { get; set; }
+
         /// <summary>
         /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
         /// <para>This parameter is required.</para>

@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Enable { get; set; }
 
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 

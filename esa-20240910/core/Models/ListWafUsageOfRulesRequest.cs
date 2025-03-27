@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafUsageOfRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The WAF rule category.</para>
+        /// <para>Name of the WAF operation phase.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>http_anti_scan</para>
+        /// <para>http_custom</para>
         /// </summary>
         [NameInMap("Phase")]
         [Validation(Required=false)]
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ListWafUsageOfRules</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("SiteId")]
         [Validation(Required=false)]

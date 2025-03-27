@@ -226,6 +226,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
+        [NameInMap("Sequence")]
+        [Validation(Required=false)]
+        public int? Sequence { get; set; }
+
         /// <summary>
         /// <para>Serve stale cache. When enabled, the node can still use the expired cached files to respond to user requests even if the origin server is unavailable. Value range:</para>
         /// <list type="bullet">

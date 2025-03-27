@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetSiteWafSettingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The WAF configurations of the website.</para>
+        /// <para>Details of site WAF configuration.</para>
         /// </summary>
         [NameInMap("Settings")]
         [Validation(Required=false)]

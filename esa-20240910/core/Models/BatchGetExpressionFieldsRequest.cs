@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchGetExpressionFieldsRequest : TeaModel {
         /// <summary>
-        /// <para>The regular expressions.</para>
+        /// <para>List of expressions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_bot</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<BatchGetExpressionFieldsRequestExpressions> Expressions { get; set; }
         public class BatchGetExpressionFieldsRequestExpressions : TeaModel {
             /// <summary>
-            /// <para>The content of the regular expression.</para>
+            /// <para>Content of the expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ip.src eq 1.1.1.1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Expression { get; set; }
 
             /// <summary>
-            /// <para>The ID of the regular expression.</para>
+            /// <para>The sequence number of the expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The WAF rule category.</para>
+        /// <para>WAF Phase</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_bot</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>Site ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

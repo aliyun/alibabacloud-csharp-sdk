@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafPhasesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The WAF rule categories.</para>
+        /// <para>List of WAF operation phases.</para>
         /// </summary>
         [NameInMap("Phases")]
         [Validation(Required=false)]
         public List<ListWafPhasesResponseBodyPhases> Phases { get; set; }
         public class ListWafPhasesResponseBodyPhases : TeaModel {
             /// <summary>
-            /// <para>The name of the WAF rule category.</para>
+            /// <para>Name of the WAF operation phase.</para>
             /// 
             /// <b>Example:</b>
             /// <para>http_custom</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Phase { get; set; }
 
             /// <summary>
-            /// <para>The WAF rulesets.</para>
+            /// <para>List of WAF rulesets.</para>
             /// </summary>
             [NameInMap("Rulesets")]
             [Validation(Required=false)]
             public List<ListWafPhasesResponseBodyPhasesRulesets> Rulesets { get; set; }
             public class ListWafPhasesResponseBodyPhasesRulesets : TeaModel {
                 /// <summary>
-                /// <para>The ID of the WAF ruleset.<a href="~~2850233~~"></a></para>
+                /// <para>ID of the WAF ruleset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000001</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the WAF ruleset.</para>
+                /// <para>Name of the WAF ruleset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The rule configurations in the WAF ruleset.</para>
+                /// <para>List of rule configurations in the WAF ruleset.</para>
                 /// </summary>
                 [NameInMap("Rules")]
                 [Validation(Required=false)]
                 public List<WafRuleConfig> Rules { get; set; }
 
                 /// <summary>
-                /// <para>The configurations shared by the rules in the WAF ruleset.</para>
+                /// <para>Shared configuration for rules in the WAF ruleset.</para>
                 /// </summary>
                 [NameInMap("Shared")]
                 [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>

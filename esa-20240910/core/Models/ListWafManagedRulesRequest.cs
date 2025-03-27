@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafManagedRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The attack type. Valid values:</para>
+        /// <para>Attack type of the vulnerability protection event. Values:</para>
         /// <list type="bullet">
         /// <item><description>SQL injection</description></item>
         /// <item><description>Cross-site scripting</description></item>
@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description>CRLF</description></item>
         /// <item><description>Local file inclusion</description></item>
         /// <item><description>Remote file inclusion</description></item>
-        /// <item><description>webshell</description></item>
+        /// <item><description>Webshell</description></item>
         /// <item><description>Cross-site request forgery</description></item>
-        /// <item><description>Others</description></item>
+        /// <item><description>Other</description></item>
         /// <item><description>SEMA</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? AttackType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF rule.</para>
+        /// <para>ID of the WAF rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>Language type, which will be used to return the response. Value range:</para>
         /// <list type="bullet">
         /// <item><description><b>en</b>: English.</description></item>
         /// <item><description><b>zh</b>: Chinese.</description></item>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>Query page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Query page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? ProtectionLevel { get; set; }
 
         /// <summary>
-        /// <para>The query conditions.</para>
+        /// <para>Query conditions.</para>
         /// </summary>
         [NameInMap("QueryArgs")]
         [Validation(Required=false)]
         public ListWafManagedRulesRequestQueryArgs QueryArgs { get; set; }
         public class ListWafManagedRulesRequestQueryArgs : TeaModel {
             /// <summary>
-            /// <para>The action that you want WAF to perform on requests that match the rule.</para>
+            /// <para>Action.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deny</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The rule ID or name for fuzzy search.</para>
+            /// <para>Fuzzy search for rule ID or rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -109,14 +109,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string IdNameLike { get; set; }
 
             /// <summary>
-            /// <para>The protection levels of the rules.</para>
+            /// <para>List of rule protection levels.</para>
             /// </summary>
             [NameInMap("ProtectionLevels")]
             [Validation(Required=false)]
             public List<int?> ProtectionLevels { get; set; }
 
             /// <summary>
-            /// <para>The status of the rule.</para>
+            /// <para>Status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

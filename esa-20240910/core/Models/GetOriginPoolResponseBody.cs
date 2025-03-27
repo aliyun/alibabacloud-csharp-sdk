@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <para>The AccessKey required when AuthType is set to private_cross_account or private.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>LTAI5tSpj224hDfLmXEx****</para>
+                /// <para>yourAccessKeyID</para>
                 /// </summary>
                 [NameInMap("AccessKey")]
                 [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <para>The SecretKey required when AuthType is set to private_cross_account or private.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>tzXL8ub4GtjkjZOJhS****</para>
+                /// <para>yourAccessKeySecret</para>
                 /// </summary>
                 [NameInMap("SecretKey")]
                 [Validation(Required=false)]

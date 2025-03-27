@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     /// <para>The AccessKey required for private authentication.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>LTAI5tMfEib****ahybCpZqp</para>
+                    /// <para>yourAccessKeyID</para>
                     /// </summary>
                     [NameInMap("AccessKey")]
                     [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     /// <para>The SecretKey required for private authentication.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>VIxuvJSA2****fgYoZ3nkp208dy5w7</para>
+                    /// <para>yourAccessKeySecret</para>
                     /// </summary>
                     [NameInMap("SecretKey")]
                     [Validation(Required=false)]
