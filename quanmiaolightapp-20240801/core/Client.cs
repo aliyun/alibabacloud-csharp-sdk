@@ -3052,6 +3052,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             RunVideoAnalysisShrinkRequest request = new RunVideoAnalysisShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeGenerateOptions))
+            {
+                request.ExcludeGenerateOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeGenerateOptions, "excludeGenerateOptions", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FrameSampleMethod))
             {
                 request.FrameSampleMethodShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FrameSampleMethod, "frameSampleMethod", "json");
@@ -3069,6 +3073,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeGenerateOptionsShrink))
+            {
+                body["excludeGenerateOptions"] = request.ExcludeGenerateOptionsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceIdentitySimilarityMinScore))
             {
                 body["faceIdentitySimilarityMinScore"] = request.FaceIdentitySimilarityMinScore;
@@ -3191,6 +3199,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             RunVideoAnalysisShrinkRequest request = new RunVideoAnalysisShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeGenerateOptions))
+            {
+                request.ExcludeGenerateOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeGenerateOptions, "excludeGenerateOptions", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FrameSampleMethod))
             {
                 request.FrameSampleMethodShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FrameSampleMethod, "frameSampleMethod", "json");
@@ -3208,6 +3220,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeGenerateOptionsShrink))
+            {
+                body["excludeGenerateOptions"] = request.ExcludeGenerateOptionsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceIdentitySimilarityMinScore))
             {
                 body["faceIdentitySimilarityMinScore"] = request.FaceIdentitySimilarityMinScore;
@@ -3588,6 +3604,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SubmitVideoAnalysisTaskShrinkRequest request = new SubmitVideoAnalysisTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeGenerateOptions))
+            {
+                request.ExcludeGenerateOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeGenerateOptions, "excludeGenerateOptions", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FrameSampleMethod))
             {
                 request.FrameSampleMethodShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FrameSampleMethod, "frameSampleMethod", "json");
@@ -3605,6 +3625,14 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeduplicationId))
+            {
+                body["deduplicationId"] = request.DeduplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeGenerateOptionsShrink))
+            {
+                body["excludeGenerateOptions"] = request.ExcludeGenerateOptionsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceIdentitySimilarityMinScore))
             {
                 body["faceIdentitySimilarityMinScore"] = request.FaceIdentitySimilarityMinScore;
@@ -3719,6 +3747,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SubmitVideoAnalysisTaskShrinkRequest request = new SubmitVideoAnalysisTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeGenerateOptions))
+            {
+                request.ExcludeGenerateOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeGenerateOptions, "excludeGenerateOptions", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FrameSampleMethod))
             {
                 request.FrameSampleMethodShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FrameSampleMethod, "frameSampleMethod", "json");
@@ -3736,6 +3768,14 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeduplicationId))
+            {
+                body["deduplicationId"] = request.DeduplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeGenerateOptionsShrink))
+            {
+                body["excludeGenerateOptions"] = request.ExcludeGenerateOptionsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceIdentitySimilarityMinScore))
             {
                 body["faceIdentitySimilarityMinScore"] = request.FaceIdentitySimilarityMinScore;

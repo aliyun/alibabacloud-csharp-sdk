@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
     public class RunVideoAnalysisRequest : TeaModel {
+        [NameInMap("excludeGenerateOptions")]
+        [Validation(Required=false)]
+        public List<string> ExcludeGenerateOptions { get; set; }
+
         [NameInMap("faceIdentitySimilarityMinScore")]
         [Validation(Required=false)]
         public float? FaceIdentitySimilarityMinScore { get; set; }
