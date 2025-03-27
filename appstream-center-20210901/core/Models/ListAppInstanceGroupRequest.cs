@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAppInstanceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The image ID of the app. You can obtain the ID from the Images page in the App Streaming console.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>img-8z4nztpaqvay4****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppCenterImageId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the delivery group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aig-9ciijz60n4xsv****</para>
         /// </summary>
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstanceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the delivery groups to query. Fuzzy match is used for queries. For example, if you set this parameter to <c>Office App</c>, all delivery groups whose names contain <c>Office App</c> are queried, such as <c>My Office Apps</c> and <c>Office App A</c>.</para>
+        /// </summary>
         [NameInMap("AppInstanceGroupName")]
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
@@ -54,11 +61,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string NodeInstanceType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hongkong+dir-643067****</para>
+        /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -77,6 +90,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The product type.</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>CloudApp: App Streaming</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +107,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -99,6 +117,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Obsolete]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The status of the delivery groups.</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }

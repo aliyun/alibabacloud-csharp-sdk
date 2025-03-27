@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstanceGroupId { get; set; }
 
+        [NameInMap("AppInstancePersistentId")]
+        [Validation(Required=false)]
+        public string AppInstancePersistentId { get; set; }
+
         [NameInMap("AuthorizeUserIds")]
         [Validation(Required=false)]
         public List<string> AuthorizeUserIds { get; set; }

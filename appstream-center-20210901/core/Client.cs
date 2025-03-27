@@ -589,6 +589,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["AppInstanceGroupId"] = request.AppInstanceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstancePersistentId))
+            {
+                body["AppInstancePersistentId"] = request.AppInstancePersistentId;
+            }
             Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizeUserIds))
             {
@@ -665,6 +669,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
             {
                 body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstancePersistentId))
+            {
+                body["AppInstancePersistentId"] = request.AppInstancePersistentId;
             }
             Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizeUserIds))
@@ -1212,6 +1220,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["AppPolicyId"] = request.AppPolicyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMode))
+            {
+                body["AuthMode"] = request.AuthMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 body["AutoPay"] = request.AutoPay;
@@ -1396,6 +1408,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppPolicyId))
             {
                 body["AppPolicyId"] = request.AppPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMode))
+            {
+                body["AuthMode"] = request.AuthMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
@@ -4326,7 +4342,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点列表</para>
+        /// <para>Queries resource nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4387,7 +4403,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点列表</para>
+        /// <para>Queries resource nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4448,7 +4464,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点列表</para>
+        /// <para>Queries resource nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4466,7 +4482,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点列表</para>
+        /// <para>Queries resource nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5854,7 +5870,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>包年包月交付组节点数量升级</para>
+        /// <para>Changes the number of nodes in a subscription delivery group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5917,7 +5933,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>包年包月交付组节点数量升级</para>
+        /// <para>Changes the number of nodes in a subscription delivery group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5980,7 +5996,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>包年包月交付组节点数量升级</para>
+        /// <para>Changes the number of nodes in a subscription delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5998,7 +6014,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>包年包月交付组节点数量升级</para>
+        /// <para>Changes the number of nodes in a subscription delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyNodePoolAmountRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the delivery group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The parameters related to the configuration change of the node pool.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodePool")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public ModifyNodePoolAmountRequestNodePool NodePool { get; set; }
         public class ModifyNodePoolAmountRequestNodePool : TeaModel {
             /// <summary>
+            /// <para>The total number of subscription nodes after the change.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? NodeAmount { get; set; }
 
             /// <summary>
+            /// <para>The change mode of subscription nodes.</para>
+            /// <para>Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description>EXPAND_FROM_POST_PAID_EXPLICIT: changes from specified pay-as-you-go nodes</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>EXPAND_FROM_POST_PAID_EXPLICIT</para>
             /// </summary>
@@ -44,6 +53,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string PrePaidNodeAmountModifyMode { get; set; }
 
+            /// <summary>
+            /// <para>The nodes for which you want to change the billing method.</para>
+            /// </summary>
             [NameInMap("PrePaidNodeAmountModifyNodeIds")]
             [Validation(Required=false)]
             public List<string> PrePaidNodeAmountModifyNodeIds { get; set; }
@@ -51,6 +63,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
+        /// <para>The product type.</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>CloudApp: App Streaming</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -33,6 +33,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>App</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("AuthMode")]
+        [Validation(Required=false)]
+        public string AuthMode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
         [NameInMap("AutoPay")]
@@ -343,6 +354,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("PerSessionPerApp")]
             [Validation(Required=false)]
             public bool? PerSessionPerApp { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>DYNAMIC</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("PersistentAppInstanceScheduleMode")]
+            [Validation(Required=false)]
+            public string PersistentAppInstanceScheduleMode { get; set; }
 
             [NameInMap("SessionPreOpen")]
             [Validation(Required=false)]
