@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateGatewayIntranetLinkedVpcRequest : TeaModel {
+        [NameInMap("EnableAuthoritativeDns")]
+        [Validation(Required=false)]
+        public bool? EnableAuthoritativeDns { get; set; }
+
         /// <summary>
         /// <para>The vSwitch ID.</para>
         /// 

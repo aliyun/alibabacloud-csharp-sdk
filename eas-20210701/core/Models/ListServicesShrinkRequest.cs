@@ -110,6 +110,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
         /// <summary>
         /// <para>The server role.</para>
         /// <para>Valid values:</para>

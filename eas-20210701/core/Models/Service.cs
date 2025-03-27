@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string ExtraData { get; set; }
 
+        [NameInMap("Gateway")]
+        [Validation(Required=false)]
+        public string Gateway { get; set; }
+
         [NameInMap("Gpu")]
         [Validation(Required=false)]
         public int? Gpu { get; set; }
@@ -102,6 +106,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("PendingInstance")]
         [Validation(Required=false)]
         public int? PendingInstance { get; set; }
+
+        [NameInMap("QuotaId")]
+        [Validation(Required=false)]
+        public string QuotaId { get; set; }
 
         [NameInMap("Reason")]
         [Validation(Required=false)]

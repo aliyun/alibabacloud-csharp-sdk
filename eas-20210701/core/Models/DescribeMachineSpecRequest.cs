@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeMachineSpecRequest : TeaModel {
         /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>This parameter is deprecated.</para>
+        /// </summary>
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
         [Obsolete]
