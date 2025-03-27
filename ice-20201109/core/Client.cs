@@ -42320,6 +42320,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["OutputConfig"] = request.OutputConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateConfig))
+            {
+                query["TemplateConfig"] = request.TemplateConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
                 query["UserData"] = request.UserData;
@@ -42386,6 +42390,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
             {
                 query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateConfig))
+            {
+                query["TemplateConfig"] = request.TemplateConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {

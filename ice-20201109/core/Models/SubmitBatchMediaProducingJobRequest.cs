@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string OutputConfig { get; set; }
 
+        [NameInMap("TemplateConfig")]
+        [Validation(Required=false)]
+        public string TemplateConfig { get; set; }
+
         /// <summary>
         /// <para>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData</a>.</para>
         /// </summary>
