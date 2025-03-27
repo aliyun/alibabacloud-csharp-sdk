@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public List<DescribeDefenseRulesResponseBodyRules> Rules { get; set; }
         public class DescribeDefenseRulesResponseBodyRules : TeaModel {
+            [NameInMap("ActionExternal")]
+            [Validation(Required=false)]
+            public string ActionExternal { get; set; }
+
             /// <summary>
             /// <para>The details of the protection rule. The value is a string that contains multiple parameters in the JSON format. For more information, see the &quot;<b>Rule parameters</b>&quot; section in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</para>
             /// 
@@ -75,6 +79,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string DefenseScene { get; set; }
 
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("DetailRuleIds")]
+            [Validation(Required=false)]
+            public string DetailRuleIds { get; set; }
+
+            [NameInMap("ExternalInfo")]
+            [Validation(Required=false)]
+            public string ExternalInfo { get; set; }
+
+            [NameInMap("GmtCreate")]
+            [Validation(Required=false)]
+            public long? GmtCreate { get; set; }
+
             /// <summary>
             /// <para>The most recent time when the protection rule was modified.</para>
             /// 
@@ -104,6 +124,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
+
+            [NameInMap("RuleType")]
+            [Validation(Required=false)]
+            public string RuleType { get; set; }
 
             /// <summary>
             /// <para>The status of the protection rule. Valid values:</para>
