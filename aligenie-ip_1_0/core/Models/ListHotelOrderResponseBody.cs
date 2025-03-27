@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public List<ListHotelOrderResponseBodyResult> Result { get; set; }
         public class ListHotelOrderResponseBodyResult : TeaModel {
+            [NameInMap("Amt")]
+            [Validation(Required=false)]
+            public long? Amt { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>21.5</para>
@@ -86,6 +90,18 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [NameInMap("ApplyAmt")]
             [Validation(Required=false)]
             public long? ApplyAmt { get; set; }
+
+            [NameInMap("DeliveryMethod")]
+            [Validation(Required=false)]
+            public string DeliveryMethod { get; set; }
+
+            [NameInMap("DeliveryRoomName")]
+            [Validation(Required=false)]
+            public string DeliveryRoomName { get; set; }
+
+            [NameInMap("DeliveryTime")]
+            [Validation(Required=false)]
+            public long? DeliveryTime { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -95,6 +111,22 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
+            [NameInMap("Icon")]
+            [Validation(Required=false)]
+            public string Icon { get; set; }
+
+            [NameInMap("ItemId")]
+            [Validation(Required=false)]
+            public long? ItemId { get; set; }
+
+            [NameInMap("ItemType")]
+            [Validation(Required=false)]
+            public string ItemType { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>20220808180132000114508555527711</para>
@@ -102,6 +134,14 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [NameInMap("OrderNo")]
             [Validation(Required=false)]
             public string OrderNo { get; set; }
+
+            [NameInMap("OrderStatus")]
+            [Validation(Required=false)]
+            public string OrderStatus { get; set; }
+
+            [NameInMap("PaymentMethod")]
+            [Validation(Required=false)]
+            public string PaymentMethod { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -119,6 +159,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [Validation(Required=false)]
             public string RoomNo { get; set; }
 
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public long? StartTime { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>INIT</para>
@@ -126,6 +170,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("SumAmt")]
+            [Validation(Required=false)]
+            public long? SumAmt { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

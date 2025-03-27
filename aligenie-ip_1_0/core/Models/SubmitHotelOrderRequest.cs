@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
                 [Validation(Required=false)]
                 public long? Quantity { get; set; }
 
+                [NameInMap("Remark")]
+                [Validation(Required=false)]
+                public string Remark { get; set; }
+
             }
 
             /// <summary>
