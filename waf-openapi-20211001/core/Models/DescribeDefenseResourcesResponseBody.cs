@@ -182,14 +182,29 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string ResourceOrigin { get; set; }
 
+            /// <summary>
+            /// <para>The response header.</para>
+            /// </summary>
             [NameInMap("ResponseHeaders")]
             [Validation(Required=false)]
             public List<DescribeDefenseResourcesResponseBodyResourcesResponseHeaders> ResponseHeaders { get; set; }
             public class DescribeDefenseResourcesResponseBodyResourcesResponseHeaders : TeaModel {
+                /// <summary>
+                /// <para>Specifies the key for a custom response header.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Header-Key</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>Specifies the value for a custom response header.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Header-Value</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

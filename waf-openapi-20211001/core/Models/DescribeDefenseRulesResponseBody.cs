@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array of protection rules.</para>
+        /// <para>The protection rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
@@ -51,7 +51,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DefenseOrigin { get; set; }
 
             /// <summary>
-            /// <para>The scenario in which the protection rule is used. For more information, see the description of the <b>DefenseScene</b> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</para>
+            /// <para>The protection module for which the protection rule is created. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>waf_group</b>: the basic protection rule module.</description></item>
+            /// <item><description><b>waf_base_compliance</b>: the protocol compliance feature of the basic protection rule module.</description></item>
+            /// <item><description><b>waf_base_sema</b>: the semantic analysis feature of the basic protection rule module.</description></item>
+            /// <item><description><b>cc</b>: the HTTP flood protection module.</description></item>
+            /// <item><description><b>antiscan_dirscan</b>: the directory traversal blocking feature of the scan protection module.</description></item>
+            /// <item><description><b>antiscan_highfreq</b>: the high-frequency scanning blocking feature of the scan protection module.</description></item>
+            /// <item><description><b>antiscan_scantools</b>: the scanner blocking feature of the scan protection module.</description></item>
+            /// <item><description><b>ip_blacklist</b>: the IP address blacklist module.</description></item>
+            /// <item><description><b>custom_acl</b>: the custom rule module.</description></item>
+            /// <item><description><b>region_block</b>: the region blacklist module.</description></item>
+            /// <item><description><b>tamperproof</b>: the website tamper-proofing module.</description></item>
+            /// <item><description><b>dlp</b>: the data leakage prevention module.</description></item>
+            /// <item><description><b>custom_response_block</b>: the custom response module.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>waf_group</para>

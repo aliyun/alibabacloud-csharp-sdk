@@ -130,8 +130,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The name of the sorting field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>firstTime (default)</b>: first detection time</description></item>
-        /// <item><description><b>abnormalLevel</b>: risk level</description></item>
+        /// <item><description><b>discoverTime</b> (default): indicates the time when a risk was first detected.</description></item>
+        /// <item><description><b>abnormalLevel</b>: indicates the level of a risk.</description></item>
+        /// <item><description><b>latestDiscoverTime</b>: indicates the time when a risk was last detected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -190,7 +191,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the WAF instance. Valid value:</para>
+        /// <para>The region ID of the WAF instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
         /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>

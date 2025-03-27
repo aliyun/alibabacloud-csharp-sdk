@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the listeners.</para>
+        /// <para>The listener configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Listen")]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string OwnerUserId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the forwarding rule.</para>
+        /// <para>The forwarding configurations.</para>
         /// </summary>
         [NameInMap("Redirect")]
         [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the resource.</para>
+        /// <para>The tags. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateCloudResourceShrinkRequestTag> Tag { get; set; }
         public class CreateCloudResourceShrinkRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the resource. Valid values of N: 1 to 20.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagKey1</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the resource. Valid values of N: 1 to 20.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue1</para>

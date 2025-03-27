@@ -31,6 +31,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The type of punishment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>beian</b> (default): the filing center.</description></item>
+        /// <item><description><b>punishCenter</b>: the punishment center.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>beian</para>
         /// </summary>

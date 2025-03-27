@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time after which the IP address blacklist becomes invalid. Unit: seconds.</para>
+        /// <para>The timestamp after which the IP address blacklist becomes invalid. Unit: seconds.</para>
         /// <remarks>
-        /// <para> If you set the value to <b>0</b>, the blacklist is permanently valid.</para>
+        /// <para> If you set the parameter to <b>0</b>, the IP address blacklist is always valid.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string IpList { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region ID of the WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

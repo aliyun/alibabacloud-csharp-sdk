@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protected object in Web Application Firewall (WAF) that you want to manage.</para>
+        /// <para>The ID of the protected object that you want to manage.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. The value is fixed as defenseresource.</para>
+        /// <para>The resource type. Set the value to defenseresource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

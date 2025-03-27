@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</para>
+        /// <para> This parameter is available only in hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</para>
+        /// <para>The region ID of the WAF instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
         /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
@@ -62,10 +62,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of statistics to be detected. Valid values:</para>
+        /// <para>The type of the statistics. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>risk</b>: risk impact statistics</description></item>
-        /// <item><description><b>event</b>: attack impact statistics</description></item>
+        /// <item><description><b>risk</b>: risk-related statistics.</description></item>
+        /// <item><description><b>event</b>: event-related statistics.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

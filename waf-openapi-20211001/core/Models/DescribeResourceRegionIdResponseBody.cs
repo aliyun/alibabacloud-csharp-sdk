@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The region IDs.</para>
+        /// <para>The region IDs of the resources that are added to Web Application Firewall (WAF) by using the SDK integration mode.</para>
         /// </summary>
         [NameInMap("ResourceRegionIds")]
         [Validation(Required=false)]

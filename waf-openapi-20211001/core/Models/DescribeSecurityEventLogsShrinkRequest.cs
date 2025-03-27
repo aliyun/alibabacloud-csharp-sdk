@@ -8,63 +8,60 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class ModifyHybridCloudGroupExpansionServerRequest : TeaModel {
+    public class DescribeSecurityEventLogsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <para>The filter parameters for the query. Multiple parameters are evaluated by using a logical AND.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
         /// </summary>
-        [NameInMap("ClusterId")]
+        [NameInMap("Filter")]
         [Validation(Required=false)]
-        public long? ClusterId { get; set; }
+        public string FilterShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node group.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("GroupId")]
-        [Validation(Required=false)]
-        public long? GroupId { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>waf-cn-tl32ast****</para>
+        /// <para>waf_cdnsdf3****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>612929b133e7ff**0d0</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("Mids")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string Mids { get; set; }
+        public long? PageNumber { get; set; }
+
+        /// <summary>
+        /// <para>The number of entries per page. Maximum value: <b>100</b>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public long? PageSize { get; set; }
 
         /// <summary>
         /// <para>The region ID of the WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: Chinese mainland</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><b>cn-hangzhou</b>: The Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>ap-southeast-1</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

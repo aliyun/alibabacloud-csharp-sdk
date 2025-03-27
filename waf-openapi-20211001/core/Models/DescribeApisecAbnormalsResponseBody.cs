@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiTag { get; set; }
 
             /// <summary>
-            /// <para>The time at which the risk was detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <para>The time at which the risk was first detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684252800</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public List<string> Examples { get; set; }
 
             /// <summary>
-            /// <para>The time at which the risk was first detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <para>The time at which the API was first detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1701138088</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? IgnoreTime { get; set; }
 
             /// <summary>
-            /// <para>The time at which the risk was last active. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <para>The time at which the API was last accessed. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684252800</para>
@@ -185,6 +185,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? LastestTime { get; set; }
 
             /// <summary>
+            /// <para>The time at which the risk was last detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1684252800</para>
             /// </summary>

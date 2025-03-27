@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the listeners.</para>
+        /// <para>The listener configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Listen")]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ListenShrink { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the forwarding rule.</para>
+        /// <para>The forwarding configurations.</para>
         /// </summary>
         [NameInMap("Redirect")]
         [Validation(Required=false)]

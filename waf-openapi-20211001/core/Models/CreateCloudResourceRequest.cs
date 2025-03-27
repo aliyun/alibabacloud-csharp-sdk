@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the listeners.</para>
+        /// <para>The listener configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Listen")]
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public CreateCloudResourceRequestListen Listen { get; set; }
         public class CreateCloudResourceRequestListen : TeaModel {
             /// <summary>
-            /// <para>An array of certificates.</para>
+            /// <para>The certificates.</para>
             /// </summary>
             [NameInMap("Certificates")]
             [Validation(Required=false)]
             public List<CreateCloudResourceRequestListenCertificates> Certificates { get; set; }
             public class CreateCloudResourceRequestListenCertificates : TeaModel {
                 /// <summary>
-                /// <para>The type of the HTTPS certificate. Valid values:</para>
+                /// <para>The type of the certificate. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>default</b>: default certificate.</description></item>
                 /// <item><description><b>extension</b>: additional certificate.</description></item>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <para>The type of the cipher suites that you want to add. This parameter is available only if you specify <b>HttpsPorts</b>. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: all cipher suites.</description></item>
-            /// <item><description><b>2</b>: strong cipher suites. You can set the parameter to this value only if you set <b>TLSVersion</b> to <b>tlsv1.2</b>.</description></item>
+            /// <item><description><b>2</b>: strong cipher suites. This value is available only if you set <b>TLSVersion</b> to <b>tlsv1.2</b>.</description></item>
             /// <item><description><b>99</b>: custom cipher suites.</description></item>
             /// </list>
             /// 
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? Http2Enabled { get; set; }
 
             /// <summary>
-            /// <para>The port of the resource that you want to add to WAF.</para>
+            /// <para>The port of the cloud service.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The type of the protocol. Valid values:</para>
+            /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>http</b></description></item>
             /// <item><description><b>https</b></description></item>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource.</para>
+            /// <para>The instance ID of the cloud service.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -158,11 +158,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The cloud service. Valid values:</para>
+            /// <para>The type of the cloud service that you want to add. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>clb4</b>: Layer 4 CLB.</description></item>
             /// <item><description><b>clb7</b>: Layer 7 CLB.</description></item>
             /// <item><description><b>ecs</b>: ECS.</description></item>
+            /// <item><description><b>nlb</b>: Network Load Balancer (NLB).</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -174,7 +175,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceProduct { get; set; }
 
             /// <summary>
-            /// <para>The Transport Layer Security (TLS) version. This parameter is available only if you specify <b>HttpsPorts</b>. Valid values:</para>
+            /// <para>The Transport Layer Security (TLS) version that you want to add. This parameter is available only if you specify <b>HttpsPorts</b>. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>tlsv1</b></description></item>
             /// <item><description><b>tlsv1.1</b></description></item>
@@ -201,7 +202,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string OwnerUserId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the forwarding rule.</para>
+        /// <para>The forwarding configurations.</para>
         /// </summary>
         [NameInMap("Redirect")]
         [Validation(Required=false)]
@@ -211,7 +212,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <para>Specifies whether to enable the persistent connection feature. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b> (default)</description></item>
-            /// <item><description><b>false:</b></description></item>
+            /// <item><description><b>false</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -222,9 +223,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? Keepalive { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that reuse persistent connections. Valid values: 60 to 1000.</para>
+            /// <para>The number of reused persistent connections. Valid values: 60 to 1000.</para>
             /// <remarks>
-            /// <para> This parameter specifies the number of requests that can reuse persistent connections after you enable the persistent connection feature.</para>
+            /// <para> This parameter specifies the number of persistent connections that can be reused after you enable the persistent connection feature.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -235,9 +236,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? KeepaliveRequests { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for idle persistent connections. Valid values: 10 to 3600. Default value: 3600. Unit: seconds.</para>
+            /// <para>The timeout period of idle persistent connections. Valid values: 10 to 3600. Default value: 3600. Unit: seconds.</para>
             /// <remarks>
-            /// <para> If no new requests are initiated over the idle persistent connection within the specified timeout period, the connection is closed</para>
+            /// <para> This parameter specifies the period of time after which an idle persistent connection is closed.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -248,7 +249,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? KeepaliveTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for read connections. Unit: seconds. Valid values: 1 to 3600.</para>
+            /// <para>The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -258,9 +259,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? ReadTimeout { get; set; }
 
             /// <summary>
-            /// <para>The custom header fields. Specify the value in the [<b>{&quot;k&quot;:&quot;<em>key</em>&quot;,&quot;v&quot;:&quot;<em>value</em>&quot;}</b>] format. <em><b>key</b></em> specifies the key of the custom header field. <em><b>value</b></em> specifies the value of the custom header field.</para>
+            /// <para>The custom header fields. Specify the value in the [<b>{&quot;k&quot;:&quot;<em>key</em>&quot;,&quot;v&quot;:&quot;<em>value</em>&quot;}</b>] format. <em><b>key</b></em> specifies the key of a custom header field. <em><b>value</b></em> specifies the value of a custom header field.</para>
             /// <remarks>
-            /// <para> If the request contains the custom header field, WAF overwrites the original value of the field with the specified value.</para>
+            /// <para> If a request contains a custom header field, WAF overwrites the original value of the field with the specified value.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("RequestHeaders")]
@@ -290,7 +291,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The timeout period for write connections. Unit: seconds. Valid values: 1 to 3600.</para>
+            /// <para>The timeout period of write connections. Unit: seconds. Valid values: 1 to 3600.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -300,7 +301,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? WriteTimeout { get; set; }
 
             /// <summary>
-            /// <para>The method that WAF uses to obtain the originating IP address of a client. Valid values:</para>
+            /// <para>The method that is used to obtain the originating IP address of a client. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: No Layer 7 proxies are deployed in front of WAF.</description></item>
             /// <item><description><b>1</b>: WAF reads the first value of the X-Forwarded-For (XFF) header field as the originating IP address of the client.</description></item>
@@ -325,7 +326,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public List<string> XffHeaders { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use the X-Forward-For-Proto header to identify the protocol used by WAF to forward requests to the origin server. Valid values:</para>
+            /// <para>Specifies whether to use the X-Forward-For-Proto header field to pass the protocol used by WAF to forward requests to the origin server. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b> (default)</description></item>
             /// <item><description><b>false</b></description></item>
@@ -366,14 +367,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the resource.</para>
+        /// <para>The tags. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateCloudResourceRequestTag> Tag { get; set; }
         public class CreateCloudResourceRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the resource. Valid values of N: 1 to 20.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagKey1</para>
@@ -383,7 +384,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the resource. Valid values of N: 1 to 20.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue1</para>
