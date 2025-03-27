@@ -54,7 +54,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public object ConnectionProperties { get; set; }
 
                     /// <summary>
-                    /// <para>The mode in which the data source is added. The mode varies based on the data source type. Valid values: InstanceMode, UrlMode, and CdhMode. The value InstanceMode indicates the instance mode. The value UrlMode indicates the connection string mode. The value CdhMode indicates the CDH cluster mode.</para>
+                    /// <para>The mode in which the data source is added. The mode varies based on the data source type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>InstanceMode: instance mode</description></item>
+                    /// <item><description>UrlMode: connection string mode</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>UrlMode</para>

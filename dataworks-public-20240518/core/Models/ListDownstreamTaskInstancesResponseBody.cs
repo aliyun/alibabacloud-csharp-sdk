@@ -641,10 +641,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// 
                 /// <summary>
                 /// <para>The environment of the workspace. This parameter is deprecated and replaced by the EnvType parameter. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Prod: production environment</description></item>
-                /// <item><description>Dev: development environment</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Prod</para>

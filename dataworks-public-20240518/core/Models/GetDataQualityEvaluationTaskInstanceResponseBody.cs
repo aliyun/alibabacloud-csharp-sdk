@@ -104,17 +104,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Callback settings.</para>
+                /// <para>The hook.</para>
                 /// </summary>
                 [NameInMap("Hooks")]
                 [Validation(Required=false)]
                 public List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskHooks> Hooks { get; set; }
                 public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskHooks : TeaModel {
                     /// <summary>
-                    /// <para>Hook trigger condition. When this condition is met, hook action is triggered. Currently, only two conditional expressions are supported:</para>
+                    /// <para>The hook trigger condition. When this condition is met, the hook action is triggered. Only two conditional expressions are supported:</para>
                     /// <list type="bullet">
-                    /// <item><description>Specify only one set of rule severity types AND rule verification status, such as <c>${severity} = = &quot;High&quot; AND ${status} = = &quot;Critical&quot;</c>, which indicates that in the executed rule, if the rule verification result of severity High is Critical, the condition is met.</description></item>
-                    /// <item><description>Specify multiple sets of rule severity types AND rule verification status, such as <c>(${severity} = = &quot;High&quot; AND ${status} = &quot;Critical&quot;) OR (${severity} = &quot;Normal&quot; AND ${status} = &quot;Critical&quot;) OR (${severity} = &quot;Normal&quot; AND ${status} = &quot;Error&quot;)</c>, if the rule verification result of severity High is Critical, the rule verification result of severity Normal is Critical, or the rule verification result of severity Normal is Error, the enumeration that satisfies the condition expression severity is consistent with the enumeration DataQualityRule in severity, and the enumeration of status is consistent with the status in DataQualityResult.</description></item>
+                    /// <item><description>Specify only one group of rule strength type and rule check status, such as <c>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</c>. In this expression, the hook trigger condition is met if severity is High and status is Critical.</description></item>
+                    /// <item><description>Specify multiple groups of rule strength types and rule check status, such as <c>(${severity} == &quot;High&quot;AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</c>. In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -167,10 +167,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskNotifications Notifications { get; set; }
                 public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskNotifications : TeaModel {
                     /// <summary>
-                    /// <para>The notification trigger condition. When this condition is met, a message notification is triggered. Currently, only two conditional expressions are supported:</para>
+                    /// <para>The notification trigger condition. When this condition is met, the alert notification is triggered. Only two conditional expressions are supported:</para>
                     /// <list type="bullet">
-                    /// <item><description>Specify only one set of rule severity types AND rule verification status, such as <c>${severity} = = &quot;High&quot; AND ${status} = = &quot;Critical&quot;</c>, which indicates that in the executed rule, if the rule verification result of severity High is Critical, the condition is met.</description></item>
-                    /// <item><description>Specify multiple sets of rule severity types AND rule verification status, such as <c>(${severity} = = &quot;High&quot; AND ${status} = &quot;Critical&quot;) OR (${severity} = &quot;Normal&quot; AND ${status} = &quot;Critical&quot;) OR (${severity} = &quot;Normal&quot; AND ${status} = &quot;Error&quot;)</c>, if the rule verification result of severity High is Critical, the rule verification result of severity Normal is Critical, or the rule verification result of severity Normal is Error, the enumeration that satisfies the condition expression severity is consistent with the enumeration DataQualityRule in severity, and the enumeration of status is consistent with the status in DataQualityResult.</description></item>
+                    /// <item><description>Specify only one group of rule strength type and rule check status, such as <c>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</c>. In this expression, the hook trigger condition is met if severity is High and status is Critical.</description></item>
+                    /// <item><description>Specify multiple groups of rule strength types and rule check status, such as <c>(${severity} == &quot;High&quot;AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</c>. In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string RuntimeConf { get; set; }
 
                 /// <summary>
-                /// <para>For more information, see DataQualityTarget monitoring objects for the sample data quality verification task. For more information, see DataQualityTarget.</para>
+                /// <para>The monitored object of the monitor.</para>
                 /// </summary>
                 [NameInMap("Target")]
                 [Validation(Required=false)]
@@ -327,7 +327,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The trigger configuration of the data quality verification task.</para>
+                /// <para>The trigger configuration of the monitor.</para>
                 /// </summary>
                 [NameInMap("Trigger")]
                 [Validation(Required=false)]
@@ -341,10 +341,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public List<long?> TaskIds { get; set; }
 
                     /// <summary>
-                    /// <para>Quality Monitoring trigger type:</para>
+                    /// <para>The trigger type of the monitor. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>ByManual: manually triggered. Default value</description></item>
-                    /// <item><description>ByScheduledTaskInstance: triggered by associated scheduling tasks</description></item>
+                    /// <item><description>ByManual (default): The monitor is manually triggered.</description></item>
+                    /// <item><description>ByScheduledTaskInstance: The monitor is triggered by the associated scheduling tasks.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

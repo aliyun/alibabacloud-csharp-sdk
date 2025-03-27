@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Node type. Currently, it is only applicable in the view resource group 2.0 task:</para>
+        /// <para>The type of the node. This parameter is applicable only to the tasks that are run on serverless resource groups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MASTER: obtains logs of JobManager.</description></item>
-        /// <item><description>WORKER: obtains logs of TaskManager.</description></item>
+        /// <item><description><b>MASTER</b>: the master node, which is used to query the logs of JobManagers.</description></item>
+        /// <item><description><b>WORKER</b>: the worker node, which is used to query the logs of TaskManagers.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

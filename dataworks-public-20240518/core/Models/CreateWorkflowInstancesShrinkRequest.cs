@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>Runtime configuration.</para>
+        /// <para>The runtime configuration.</para>
         /// </summary>
         [NameInMap("DefaultRunProperties")]
         [Validation(Required=false)]
         public string DefaultRunPropertiesShrink { get; set; }
 
         /// <summary>
-        /// <para>The project environment.</para>
+        /// <para>The environment of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod (production)</description></item>
-        /// <item><description>Dev</description></item>
+        /// <item><description>Prod: production environment</description></item>
+        /// <item><description>Dev: development environment</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TaskParameters { get; set; }
 
         /// <summary>
-        /// <para>The type of the workflow instance.</para>
+        /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SupplementData: Retroactive data</description></item>
-        /// <item><description>ManualWorkflow: manual workflow</description></item>
+        /// <item><description>SupplementData</description></item>
+        /// <item><description>ManualWorkflow</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? DIJobId { get; set; }
 
                 /// <summary>
-                /// <para>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, Datahub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive. If you do not configure this parameter, the API operation returns synchronization tasks that use all type of destinations.</para>
+                /// <para>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, DataHub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Hologres</para>

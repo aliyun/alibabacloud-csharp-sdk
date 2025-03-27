@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</para>
+            /// <para>This parameter is deprecated and replaced by the MuteInterval parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The types of DDL operations for which the alert rule takes effect.</para>
+            /// <para>This parameter is deprecated and replaced by the DdlTypes parameter.</para>
             /// </summary>
             [NameInMap("DdlReportTags")]
             [Validation(Required=false)]

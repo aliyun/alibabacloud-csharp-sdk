@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class TestDataSourceConnectivityRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the data source for which you want to test the network connectivity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataSourceId { get; set; }
 
         /// <summary>
+        /// <para>The DataWorks workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

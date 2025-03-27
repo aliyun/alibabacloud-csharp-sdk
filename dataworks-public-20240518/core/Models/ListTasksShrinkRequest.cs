@@ -112,7 +112,29 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The type of the task.</para>
+        /// <para>The type of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ODPS_SQL</description></item>
+        /// <item><description>SPARK</description></item>
+        /// <item><description>PY_ODPS</description></item>
+        /// <item><description>PY_ODPS3</description></item>
+        /// <item><description>ODPS_SCRIPT</description></item>
+        /// <item><description>ODPS_MR</description></item>
+        /// <item><description>COMPONENT_SQL</description></item>
+        /// <item><description>EMR_HIVE</description></item>
+        /// <item><description>EMR_MR</description></item>
+        /// <item><description>EMR_SPARK_SQL</description></item>
+        /// <item><description>EMR_SPARK</description></item>
+        /// <item><description>EMR_SHELL</description></item>
+        /// <item><description>EMR_PRESTO</description></item>
+        /// <item><description>EMR_IMPALA</description></item>
+        /// <item><description>SPARK_STREAMING</description></item>
+        /// <item><description>EMR_KYUUBI</description></item>
+        /// <item><description>EMR_TRINO</description></item>
+        /// <item><description>HOLOGRES_SQL</description></item>
+        /// <item><description>HOLOGRES_SYNC_DDL</description></item>
+        /// <item><description>HOLOGRES_SYNC_DATA</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ODPS_SQL</para>

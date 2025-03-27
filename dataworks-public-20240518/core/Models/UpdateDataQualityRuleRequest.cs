@@ -368,7 +368,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The strength of the rule.</para>
+        /// <para>The strength of the rule. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Normal</description></item>
         /// <item><description>High</description></item>

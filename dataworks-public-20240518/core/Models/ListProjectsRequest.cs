@@ -138,19 +138,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <item><description>Updating</description></item>
         /// <item><description>UpdateFailed</description></item>
         /// </list>
-        /// <!---->
-        /// 
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>

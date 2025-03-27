@@ -30,25 +30,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>Runtime configuration.</para>
+        /// <para>The runtime configuration.</para>
         /// </summary>
         [NameInMap("DefaultRunProperties")]
         [Validation(Required=false)]
         public CreateWorkflowInstancesRequestDefaultRunProperties DefaultRunProperties { get; set; }
         public class CreateWorkflowInstancesRequestDefaultRunProperties : TeaModel {
             /// <summary>
-            /// <para>Alarm configuration.</para>
+            /// <para>The alert settings.</para>
             /// </summary>
             [NameInMap("Alert")]
             [Validation(Required=false)]
             public CreateWorkflowInstancesRequestDefaultRunPropertiesAlert Alert { get; set; }
             public class CreateWorkflowInstancesRequestDefaultRunPropertiesAlert : TeaModel {
                 /// <summary>
-                /// <para>The notification method.</para>
+                /// <para>The alert notification method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Sms: Sms only</description></item>
-                /// <item><description>Mail: Mail only</description></item>
-                /// <item><description>SmsMail: SMS and email.</description></item>
+                /// <item><description>Sms</description></item>
+                /// <item><description>Mail</description></item>
+                /// <item><description>SmsMail</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -59,11 +59,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string NoticeType { get; set; }
 
                 /// <summary>
-                /// <para>The alert policy.</para>
+                /// <para>The alerting policy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Success: successful alert</description></item>
-                /// <item><description>Failure: failed alarm</description></item>
-                /// <item><description>SuccessFailure: alerts for both success and failure</description></item>
+                /// <item><description>SUCCESS: An alert is reported when data backfill succeeds.</description></item>
+                /// <item><description>FAILURE: An alert is reported when data backfill fails.</description></item>
+                /// <item><description>SuccessFailure: An alert is reported regardless of whether data backfill succeeds or fails.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>Analyze the configuration.</para>
+            /// <para>The analysis of the configurations.</para>
             /// </summary>
             [NameInMap("Analysis")]
             [Validation(Required=false)]
             public CreateWorkflowInstancesRequestDefaultRunPropertiesAnalysis Analysis { get; set; }
             public class CreateWorkflowInstancesRequestDefaultRunPropertiesAnalysis : TeaModel {
                 /// <summary>
-                /// <para>Whether to block the operation if the analysis fails.</para>
+                /// <para>Specifies whether to block the running of the instance if the analysis fails.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? Blocked { get; set; }
 
                 /// <summary>
-                /// <para>Whether to enable analysis.</para>
+                /// <para>Specifies whether to enable the analysis feature.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -105,40 +105,40 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The list of project IDs that do not need to be run.</para>
+            /// <para>The IDs of the projects that do not need to be run.</para>
             /// </summary>
             [NameInMap("ExcludeProjectIds")]
             [Validation(Required=false)]
             public List<long?> ExcludeProjectIds { get; set; }
 
             /// <summary>
-            /// <para>The list of task IDs that you do not want to run.</para>
+            /// <para>The IDs of the tasks that do not need to be run.</para>
             /// </summary>
             [NameInMap("ExcludeTaskIds")]
             [Validation(Required=false)]
             public List<long?> ExcludeTaskIds { get; set; }
 
             /// <summary>
-            /// <para>The list of project IDs to be run.</para>
+            /// <para>The IDs of the projects that need to be run.</para>
             /// </summary>
             [NameInMap("IncludeProjectIds")]
             [Validation(Required=false)]
             public List<long?> IncludeProjectIds { get; set; }
 
             /// <summary>
-            /// <para>The list of task IDs to be run.</para>
+            /// <para>The IDs of the tasks that need to be run.</para>
             /// </summary>
             [NameInMap("IncludeTaskIds")]
             [Validation(Required=false)]
             public List<long?> IncludeTaskIds { get; set; }
 
             /// <summary>
-            /// <para>The data replenishment mode. The default value is ManualSelection.</para>
+            /// <para>The data backfill mode. Default value: ManualSelection. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>General: In normal mode, only one \&quot;roottaskkids\&quot; can be filled in, and \&quot;IncludeTaskIds\&quot; is optional. If not, the content in \&quot;roottaskkids\&quot; will be included by default.</description></item>
-            /// <item><description>ManualSelection: manually select, \&quot;roottaskkids\&quot; can be filled in multiple, \&quot;IncludeTaskIds\&quot; optional, if not, the content in \&quot;roottaskkids\&quot; will be included by default.</description></item>
-            /// <item><description>Chain: the link, \&quot;roottaskkids\&quot; is empty, and \&quot;IncludeTaskIds\&quot; is filled with two IDs, which are the start and end tasks respectively.</description></item>
-            /// <item><description>AllDownstream: all downstream, \&quot;roottaskkids\&quot; can only be filled in one</description></item>
+            /// <item><description>General: You can specify only one root task ID. The <c>IncludeTaskIds</c> parameter is optional. If you do not specify the IncludeTaskIds parameter, the tasks that are specified by the <c>RootTaskIds</c> parameter are included by default.``</description></item>
+            /// <item><description>ManualSelection: You can specify multiple root tasks IDs. The <c>IncludeTaskIds</c> parameter is optional. If you do not specify the IncludeTaskIds parameter, the tasks that are specified by the <c>RootTaskIds</c> parameter are included by default.``</description></item>
+            /// <item><description>Chain: The value of the <c>RootTaskIds</c> parameter is left empty. You must set the <c>IncludeTaskIds</c> parameter to the start task ID and the end task ID.</description></item>
+            /// <item><description>AllDownstream: You can specify only one root task ID.``</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,10 +149,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The running sequence. Default value: Asc.</para>
+            /// <para>The running order. Default value: Asc. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Asc: ascending order by business date.</description></item>
-            /// <item><description>Desc: descending order by business date.</description></item>
+            /// <item><description>Asc: The tasks are sorted by data timestamp in ascending order.</description></item>
+            /// <item><description>Desc: The tasks are sorted by data timestamp in descending order.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Order { get; set; }
 
             /// <summary>
-            /// <para>The number of rows that the task has. Values from 2 to 10 are parallelism and 1 is serial.</para>
+            /// <para>The number of tasks that can be run in parallel. If you specify the value to 2 to 10, the value indicates the number of tasks that can be run in parallel. If you specify the value to 1, the tasks are run one by one.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -173,21 +173,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? Parallelism { get; set; }
 
             /// <summary>
-            /// <para>The ID list of the root task.</para>
+            /// <para>The root task IDs.</para>
             /// </summary>
             [NameInMap("RootTaskIds")]
             [Validation(Required=false)]
             public List<long?> RootTaskIds { get; set; }
 
             /// <summary>
-            /// <para>Run the policy. If this field is empty, the task configuration is followed.</para>
+            /// <para>The data backfill policy. If you leave this parameter empty, the runtime configuration is used.</para>
             /// </summary>
             [NameInMap("RunPolicy")]
             [Validation(Required=false)]
             public CreateWorkflowInstancesRequestDefaultRunPropertiesRunPolicy RunPolicy { get; set; }
             public class CreateWorkflowInstancesRequestDefaultRunPropertiesRunPolicy : TeaModel {
                 /// <summary>
-                /// <para>The end runtime. This field is required if the policy is set.</para>
+                /// <para>The time when the instance finishes running. This parameter is required if you specify the RunPolicy parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>23:59:59</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The default value is false.</para>
+                /// <para>Specifies whether the instance can be run immediately during the time period in the future. Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? Immediately { get; set; }
 
                 /// <summary>
-                /// <para>The start time. This field is required if the policy is set.</para>
+                /// <para>The time when the instance starts to run. This parameter is required if you specify the RunPolicy parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00:00:00</para>
@@ -217,10 +217,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The type of the time period. This field is required if the policy is set.</para>
+                /// <para>The type of the time period during which the data is backfilled. This parameter is required if you specify the RunPolicy parameter. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Daily: every day</description></item>
-                /// <item><description>Weekend: Weekends only</description></item>
+                /// <item><description>Daily</description></item>
+                /// <item><description>Weekend</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The identifier of the custom scheduling Resource Group. If this field is empty, the task configuration is followed.</para>
+            /// <para>The identifier of the custom resource group for scheduling. If you leave this parameter empty, the runtime configuration is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>S_res_group_524258031846018_1684XXXXXXXXX</para>
@@ -245,10 +245,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The project environment.</para>
+        /// <para>The environment of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod (production)</description></item>
-        /// <item><description>Dev</description></item>
+        /// <item><description>Prod: production environment</description></item>
+        /// <item><description>Dev: development environment</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -357,10 +357,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TaskParameters { get; set; }
 
         /// <summary>
-        /// <para>The type of the workflow instance.</para>
+        /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SupplementData: Retroactive data</description></item>
-        /// <item><description>ManualWorkflow: manual workflow</description></item>
+        /// <item><description>SupplementData</description></item>
+        /// <item><description>ManualWorkflow</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -83,8 +83,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The type of the role. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>UserCustom: custom role</description></item>
-                    /// <item><description>System: built-in role</description></item>
+                    /// <item><description>UserCustom: user-defined role</description></item>
+                    /// <item><description>System: system role</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

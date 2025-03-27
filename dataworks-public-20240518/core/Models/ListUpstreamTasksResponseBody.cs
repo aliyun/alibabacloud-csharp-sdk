@@ -128,8 +128,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The instance generation mode. Valid values:</para>
-                /// <para>T+1</para>
-                /// <para>Immediately</para>
+                /// <list type="bullet">
+                /// <item><description>T+1</description></item>
+                /// <item><description>Immediately</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>T+1</para>
@@ -293,8 +295,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The scheduling dependency type. Valid values:</para>
-                /// <para>Normal: same-cycle scheduling dependency</para>
-                /// <para>CrossCycle: cross-cycle scheduling dependency</para>
+                /// <list type="bullet">
+                /// <item><description>Normal: same-cycle scheduling dependency</description></item>
+                /// <item><description>CrossCycle: cross-cycle scheduling dependency</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>

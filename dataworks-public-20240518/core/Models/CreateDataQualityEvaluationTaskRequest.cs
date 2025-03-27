@@ -391,6 +391,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -550,6 +551,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
         /// <para>You can use this parameter to specify the DataWorks workspace on which you want to perform the API operation.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -580,6 +582,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The monitored object of the monitor.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]
@@ -596,6 +599,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <item><description>emr</description></item>
             /// <item><description>analyticdb_for_postgresql</description></item>
             /// </list>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>maxcompute</para>
@@ -616,6 +620,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The ID of the table in Data Map.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>odps.api_test.ods_openapi_log_d</para>

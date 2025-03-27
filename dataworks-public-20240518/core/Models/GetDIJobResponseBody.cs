@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, Datahub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive.</para>
+            /// <para>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, LogHub, StarRocks, DataHub, AnalyticDB_For_MySQL, Kafka, Hive.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hologres</para>
@@ -286,6 +286,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string JobStatus { get; set; }
 
+            [NameInMap("JobType")]
+            [Validation(Required=false)]
+            public string JobType { get; set; }
+
             /// <summary>
             /// <para>The synchronization type. Valid values:</para>
             /// <list type="bullet">
@@ -459,7 +463,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The source type. Valid values: PolarDB, MySQL, Kafka, Loghub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SqlServer, Doris, and ClickHouse.</para>
+            /// <para>The source type. Valid values: PolarDB, MySQL, Kafka, LogHub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SQLServer, Doris, ClickHouse.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Mysql</para>

@@ -1934,7 +1934,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a monitor instance</para>
+        /// <para>Creates a monitor instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2001,7 +2001,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a monitor instance</para>
+        /// <para>Creates a monitor instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2068,7 +2068,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a monitor instance</para>
+        /// <para>Creates a monitor instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2086,7 +2086,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a monitor instance</para>
+        /// <para>Creates a monitor instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5066,7 +5066,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom alert monitoring rule.</para>
+        /// <para>Deletes a custom monitoring alert rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5115,7 +5115,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom alert monitoring rule.</para>
+        /// <para>Deletes a custom monitoring alert rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5164,7 +5164,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom alert monitoring rule.</para>
+        /// <para>Deletes a custom monitoring alert rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5182,7 +5182,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom alert monitoring rule.</para>
+        /// <para>Deletes a custom monitoring alert rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5200,8 +5200,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除认证文件</para>
+        /// <para>Deletes a certificate file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCertificateRequest
@@ -5253,8 +5261,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除认证文件</para>
+        /// <para>Deletes a certificate file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCertificateRequest
@@ -5306,8 +5322,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除认证文件</para>
+        /// <para>Deletes a certificate file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCertificateRequest
@@ -5324,8 +5348,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除认证文件</para>
+        /// <para>Deletes a certificate file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCertificateRequest
@@ -13068,7 +13100,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Imports a certificate file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13129,7 +13161,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Imports a certificate file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13190,7 +13222,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Imports a certificate file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13208,7 +13240,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证用</para>
+        /// <para>Imports a certificate file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23008,8 +23040,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试数据源在资源组上的连通性</para>
+        /// <para>Tests the network connectivity between a resource group and a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>Your account must be assigned one of the following roles of the desired workspace: Tenant Owner, Workspace Administrator, Deploy, Develop, Workspace Owner, and O\&amp;M</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// TestDataSourceConnectivityRequest
@@ -23065,8 +23105,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试数据源在资源组上的连通性</para>
+        /// <para>Tests the network connectivity between a resource group and a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>Your account must be assigned one of the following roles of the desired workspace: Tenant Owner, Workspace Administrator, Deploy, Develop, Workspace Owner, and O\&amp;M</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// TestDataSourceConnectivityRequest
@@ -23122,8 +23170,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试数据源在资源组上的连通性</para>
+        /// <para>Tests the network connectivity between a resource group and a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>Your account must be assigned one of the following roles of the desired workspace: Tenant Owner, Workspace Administrator, Deploy, Develop, Workspace Owner, and O\&amp;M</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// TestDataSourceConnectivityRequest
@@ -23140,8 +23196,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试数据源在资源组上的连通性</para>
+        /// <para>Tests the network connectivity between a resource group and a data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>Your account must be assigned one of the following roles of the desired workspace: Tenant Owner, Workspace Administrator, Deploy, Develop, Workspace Owner, and O\&amp;M</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// TestDataSourceConnectivityRequest

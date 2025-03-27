@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <item><description>Desc: descending order</description></item>
         /// <item><description>Asc: ascending order</description></item>
         /// </list>
-        /// <para>Default value: Asc</para>
+        /// <para>Default value: Desc</para>
         /// 
         /// <b>Example:</b>
         /// <para>Asc</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <item><description>Id</description></item>
         /// <item><description>Name</description></item>
         /// </list>
-        /// <para>Default value: Id</para>
+        /// <para>Default value: CreateTime</para>
         /// 
         /// <b>Example:</b>
         /// <para>Id</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The tag of the data source. This parameter specifies a filter condition.</para>
         /// <list type="bullet">
         /// <item><description>You can specify multiple tags, which are in the logical AND relation. For example, you can query the data sources that contain the following tags: <c>[&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]</c>.</description></item>
-        /// <item><description>If you do not configure this parameter, tag-based filtering is not performed.</description></item>
+        /// <item><description>If you do not configure this parameter, tag-based filtering is not performed. You can specify up to 10 tags.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

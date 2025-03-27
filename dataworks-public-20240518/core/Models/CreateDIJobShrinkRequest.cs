@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string JobSettingsShrink { get; set; }
 
+        [NameInMap("JobType")]
+        [Validation(Required=false)]
+        public string JobType { get; set; }
+
         /// <summary>
         /// <para>The synchronization type. Valid values:</para>
         /// <list type="bullet">

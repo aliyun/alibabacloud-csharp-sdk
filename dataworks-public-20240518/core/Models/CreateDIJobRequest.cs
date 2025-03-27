@@ -73,22 +73,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The channel control settings for the synchronization task. You can configure special channel control settings for the following synchronization links: data synchronization between Hologres data sources and data synchronization from Hologres to Kafka.</para>
             /// <ol>
-            /// <item><description>Data synchronization from Hologres to Kafka</description></item>
+            /// <item><description>Holo2Kafka</description></item>
             /// </ol>
             /// <list type="bullet">
             /// <item><description>Example: {&quot;destinationChannelSettings&quot;:{&quot;kafkaClientProperties&quot;:[{&quot;key&quot;:&quot;linger.ms&quot;,&quot;value&quot;:&quot;100&quot;}],&quot;keyColumns&quot;:[&quot;col3&quot;],&quot;writeMode&quot;:&quot;canal&quot;}}</description></item>
             /// <item><description>kafkaClientProperties: the parameters related to a Kafka producer, which are used when you write data to a Kafka data source.</description></item>
             /// <item><description>keyColumns: the names of Kafka columns to which you want to write data.</description></item>
-            /// <item><description>writeMode: the writing format. Valid values: json and canal.</description></item>
+            /// <item><description>writeMode: the writing format of the Kafka data source. Valid values: json and canal.</description></item>
             /// </list>
             /// <ol start="2">
-            /// <item><description>Data synchronization between Hologres data sources</description></item>
+            /// <item><description>Holo2Holo</description></item>
             /// </ol>
             /// <list type="bullet">
             /// <item><description>Example: {&quot;destinationChannelSettings&quot;:{&quot;conflictMode&quot;:&quot;replace&quot;,&quot;dynamicColumnAction&quot;:&quot;replay&quot;,&quot;writeMode&quot;:&quot;replay&quot;}}</description></item>
             /// <item><description>conflictMode: the policy used to handle a conflict that occurs during data writing to Hologres. Valid values: replace and ignore.</description></item>
             /// <item><description>writeMode: the mode in which you want to write data to Hologres. Valid values: replay and insert.</description></item>
-            /// <item><description>dynamicColumnAction: the method used to write data to dynamic columns in a Hologres table. Valid values: replay, insert, and ignore.</description></item>
+            /// <item><description>dynamicColumnAction: the mode in which you want to write data to dynamic columns in a Hologres table. Valid values: replay, insert, and ignore.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -225,8 +225,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <item><description>runtime.offline.concurrent: specifies the maximum number of parallel threads that are allowed for a batch synchronization task.</description></item>
                 /// <item><description>runtime.enable.auto.create.schema: specifies whether schemas are automatically created in the destination of a synchronization task.</description></item>
                 /// <item><description>runtime.realtime.concurrent: specifies the maximum number of parallel threads that are allowed for a real-time synchronization task.</description></item>
-                /// <item><description>runtime.realtime.failover.minute.dataxcdc: The maximum waiting duration before a synchronization task retries the next restart if the previous restart fails after failover occurs. Unit: minutes.</description></item>
-                /// <item><description>runtime.realtime.failover.times.dataxcdc: The maximum number of failures that are allowed for restarting a synchronization task after failovers occur.</description></item>
+                /// <item><description>runtime.realtime.failover.minute.dataxcdc: specifies the maximum waiting duration before a synchronization task retries the next restart if the previous restart fails after failover occurs. Unit: minutes.</description></item>
+                /// <item><description>runtime.realtime.failover.times.dataxcdc: specifies the maximum number of failures that are allowed for restarting a synchronization task after failovers occur.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -249,6 +249,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
         }
+
+        [NameInMap("JobType")]
+        [Validation(Required=false)]
+        public string JobType { get; set; }
 
         /// <summary>
         /// <para>The synchronization type. Valid values:</para>
