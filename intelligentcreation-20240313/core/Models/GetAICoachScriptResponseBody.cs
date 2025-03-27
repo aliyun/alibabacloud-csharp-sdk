@@ -221,6 +221,52 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public List<GetAICoachScriptResponseBodyPointsAnswerList> AnswerList { get; set; }
             public class GetAICoachScriptResponseBodyPointsAnswerList : TeaModel {
+                [NameInMap("answerValues")]
+                [Validation(Required=false)]
+                public List<GetAICoachScriptResponseBodyPointsAnswerListAnswerValues> AnswerValues { get; set; }
+                public class GetAICoachScriptResponseBodyPointsAnswerListAnswerValues : TeaModel {
+                    [NameInMap("answerName")]
+                    [Validation(Required=false)]
+                    public string AnswerName { get; set; }
+
+                    [NameInMap("answerWeight")]
+                    [Validation(Required=false)]
+                    public int? AnswerWeight { get; set; }
+
+                    [NameInMap("keywordValues")]
+                    [Validation(Required=false)]
+                    public List<GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesKeywordValues> KeywordValues { get; set; }
+                    public class GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesKeywordValues : TeaModel {
+                        [NameInMap("name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("weight")]
+                        [Validation(Required=false)]
+                        public int? Weight { get; set; }
+
+                    }
+
+                    [NameInMap("keywordWeight")]
+                    [Validation(Required=false)]
+                    public int? KeywordWeight { get; set; }
+
+                    [NameInMap("scoringRules")]
+                    [Validation(Required=false)]
+                    public List<GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesScoringRules> ScoringRules { get; set; }
+                    public class GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesScoringRules : TeaModel {
+                        [NameInMap("name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("enabledKeyword")]
+                [Validation(Required=false)]
+                public bool? EnabledKeyword { get; set; }
+
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
