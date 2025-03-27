@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetDesktopGroupDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the cloud computer pool.</para>
+        /// <para>The cloud computers within the share.</para>
         /// </summary>
         [NameInMap("Desktops")]
         [Validation(Required=false)]
         public GetDesktopGroupDetailResponseBodyDesktops Desktops { get; set; }
         public class GetDesktopGroupDetailResponseBodyDesktops : TeaModel {
             /// <summary>
-            /// <para>Indicates whether cloud computers can be automatically created in the subscription cloud computer pool.</para>
+            /// <para>Specifies whether to enable batch-based automatic creation of cloud computers in the subscription cloud computer share.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: false</description></item>
-            /// <item><description>1: true</description></item>
+            /// <item><description>0: enables batch-based automatic creation of cloud computers.</description></item>
+            /// <item><description>1: disables batch-based automatic creation of cloud computers.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? AllowAutoSetup { get; set; }
 
             /// <summary>
-            /// <para>The number of cloud computers that is allowed to be reserved in the pay-as-you-go cloud computer pool. Valid values:</para>
+            /// <para>This parameter applies to pay-as-you-go cloud computer shares and specifies the number of standby cloud computers that can be reserved per cloud computer share. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: does not allow the system to reserve cloud computers.</description></item>
-            /// <item><description>N: allows the system to reserve N cloud computers. (1≤ N ≤ 100)</description></item>
+            /// <item><description>0: does not reserve any cloud computers.</description></item>
+            /// <item><description>N: reserves N cloud computers (1≤ N ≤ 100).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? AllowBufferCount { get; set; }
 
             /// <summary>
-            /// <para>The number of concurrent sessions that is allowed for each cloud computer in a multi-session cloud computer pool.</para>
+            /// <para>The maximum number of concurrent sessions allowed per cloud computer within the multi-session many-to-many share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>This parameter has different meanings based on the billing method of the cloud computer pool. For a subscription pool, this parameter indicates the number of cloud computers that you purchase in the pool. Valid values: 0 to 200.</description></item>
-            /// <item><description>For a pay-as-you-go pool, this parameter indicates the minimum number of cloud computers that you can create in the pool. Default value: 1. Valid values: 0 to <c>MaxDesktopsCount</c>.</description></item>
+            /// <item><description>The number of purchased cloud computers in the subscription share. Valid values: 0 to 200.</description></item>
+            /// <item><description>The minimum initial number of cloud computers created in the pay-as-you-go share. Default value: 1. Valid values: 0 to <c>MaxDesktopsCount</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DataDiskSize { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud computer pool.</para>
+            /// <para>The ID of the cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dg-3uiojcc0j4kh7****</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud computer pool that is queried.</para>
+            /// <para>The name of the cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DesktopGroupDemo</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DirectoryType { get; set; }
 
             /// <summary>
-            /// <para>The time when the subscription cloud computer pool expires.</para>
+            /// <para>The expiration date of the subscription cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-31T15:59Z</para>
@@ -240,11 +240,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? KeepDuration { get; set; }
 
             /// <summary>
-            /// <para>The load balancing policy of the multi-session cloud computer pool.</para>
+            /// <para>The load balancing policy for the multi-session many-to-many share.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: depth-first</description></item>
-            /// <item><description>1: breadth-first</description></item>
+            /// <item><description>0: depth-first.</description></item>
+            /// <item><description>1: breadth-first.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? LoadPolicy { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of cloud computers that can be housed in the pay-as-you-go cloud computer pool.</para>
+            /// <para>The maximum number of cloud computers allowed in the pay-as-you-go cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of cloud computers that can be automatically created in the subscription cloud computer pool.</para>
+            /// <para>The number of cloud computers created in the initial batch within the subscription cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The name of the office network in which the cloud computer pool resides.</para>
+            /// <para>The name of the office network in which the cloud computer resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -362,11 +362,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OwnBundleName { get; set; }
 
             /// <summary>
-            /// <para>The type of the cloud computer pool.</para>
+            /// <para>The type of the cloud computer share.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: individual (single session)</description></item>
-            /// <item><description>1: shared (multiple sessions)</description></item>
+            /// <item><description>0: a one-to-many share.</description></item>
+            /// <item><description>1: a many-to-many share.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -394,7 +394,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the policy that is associated with the cloud computer pool.</para>
+            /// <para>The ID of the applied policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-9cktlowtxfl6****</para>
@@ -404,14 +404,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupId { get; set; }
 
             /// <summary>
-            /// <para>The IDs of policies that are associated with the cloud computer pool.</para>
+            /// <para>The IDs of the applied policies.</para>
             /// </summary>
             [NameInMap("PolicyGroupIds")]
             [Validation(Required=false)]
             public List<string> PolicyGroupIds { get; set; }
 
             /// <summary>
-            /// <para>The name of the policy that is associated with the cloud computer pool.</para>
+            /// <para>The name of the applied policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupName { get; set; }
 
             /// <summary>
-            /// <para>The names of policies that are associated with the cloud computer pool.</para>
+            /// <para>The names of the applied policies.</para>
             /// </summary>
             [NameInMap("PolicyGroupNames")]
             [Validation(Required=false)]
@@ -438,9 +438,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? ProfileFollowSwitch { get; set; }
 
             /// <summary>
-            /// <para>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session cloud computer pool. To calculate the ratio of connected sessions, use the following formula:</para>
-            /// <para><c>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</c></para>
-            /// <para>If the ratio of connected sessions is greater than the specified value, new cloud computers are created. If the ratio of connected sessions is smaller than the specified value, idle cloud computers are deleted.</para>
+            /// <para>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</para>
+            /// <para><c>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</c>.</para>
+            /// <para>If the session ratio exceeds the threshold, new cloud computers are provisioned. If it falls below the threshold, additional cloud computers are removed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.6</para>
@@ -481,7 +481,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? ResetType { get; set; }
 
             /// <summary>
-            /// <para>Details of the scheduled tasks.</para>
+            /// <para>The scheduled tasks.</para>
             /// </summary>
             [NameInMap("ScaleTimerInfos")]
             [Validation(Required=false)]
@@ -519,11 +519,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public long? KeepDuration { get; set; }
 
                 /// <summary>
-                /// <para>The load balancing policy of the multi-session cloud computer pool.</para>
+                /// <para>The load balancing policy for the multi-session many-to-many share.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: depth-first</description></item>
-                /// <item><description>1: breadth-first</description></item>
+                /// <item><description>0: depth-first.</description></item>
+                /// <item><description>1: breadth-first.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -554,9 +554,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? MinResAmount { get; set; }
 
                 /// <summary>
-                /// <para>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session cloud computer pool. To calculate the ratio of connected sessions, use the following formula:</para>
-                /// <para><c>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</c></para>
-                /// <para>If the ratio of connected sessions is greater than the specified value, new cloud computers are created. If the ratio of connected sessions is smaller than the specified value, idle cloud computers are deleted.</para>
+                /// <para>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</para>
+                /// <para><c>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</c>.</para>
+                /// <para>If the session ratio exceeds the threshold, new cloud computers are provisioned. If it falls below the threshold, additional cloud computers are removed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.5</para>
@@ -585,12 +585,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The payment status of the cloud computer pool.</para>
+            /// <para>The status of the cloud computer share.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: unpaid</description></item>
-            /// <item><description>1: paid</description></item>
-            /// <item><description>2: overdue or expired</description></item>
+            /// <item><description>0: The cloud computer share is unpaid.</description></item>
+            /// <item><description>1: The cloud computer share is normal.</description></item>
+            /// <item><description>2: The cloud computer share expired, or your account has an overdue payment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -703,7 +703,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string TimingStrategyInfo { get; set; }
 
             /// <summary>
-            /// <para>The version number of the cloud computer pool.</para>
+            /// <para>The version number of the cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

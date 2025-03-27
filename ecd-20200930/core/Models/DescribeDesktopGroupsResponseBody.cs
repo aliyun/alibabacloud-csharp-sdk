@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cloud computer pools.</para>
+        /// <para>The cloud computer shares.</para>
         /// </summary>
         [NameInMap("DesktopGroups")]
         [Validation(Required=false)]
         public List<DescribeDesktopGroupsResponseBodyDesktopGroups> DesktopGroups { get; set; }
         public class DescribeDesktopGroupsResponseBodyDesktopGroups : TeaModel {
             /// <summary>
-            /// <para>The number of concurrent sessions that is allowed for each cloud computer pool in a multi-session cloud computer pool.</para>
+            /// <para>The number of concurrent sessions per cloud computer within the multi-session many-to-many share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>This parameter has different meanings based on the billing method of the cloud computer pool. For a subscription pool, this parameter specifies the number of cloud computers to purchase in the pool. Valid values: 0 to 200.</description></item>
-            /// <item><description>For a pay-as-you-go pool, this parameter specifies the minimum number of cloud computers to create in the pool. Valid values: 0 to <c>MaxDesktopsCount</c>. Default value: 1.</description></item>
+            /// <item><description>For subscription cloud computer shares, this parameter indicates the number of purchased cloud computers. Valid values: 0 to 200.</description></item>
+            /// <item><description>For pay-as-you-go cloud computer shares, this parameter indicates the minimum number of cloud computers created in the initial batch. Default value: 1. Valid values: 0 to <c>MaxDesktopsCount</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? DesktopCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud computer pool.</para>
+            /// <para>The ID of the cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dg-2i8qxpv6t1a03****</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud computer pool.</para>
+            /// <para>The name of the cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test1</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopType { get; set; }
 
             /// <summary>
-            /// <para>The number of users that are granted permissions to use the cloud computer pool.</para>
+            /// <para>The number of users who can access the cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? EndUserCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the subscription cloud computer pool expires.</para>
+            /// <para>The expiration date of the subscription cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-17T16:00:00Z</para>
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? KeepDuration { get; set; }
 
             /// <summary>
-            /// <para>The load balancing policy of the multi-session cloud computer pool.</para>
+            /// <para>The load balancing policy for the multi-session many-to-many share.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>0: depth-first</description></item>
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? LoadPolicy { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of cloud computers that can be housed in the pay-as-you-go cloud computer pool.</para>
+            /// <para>The maximum number of cloud computers allowed in the pay-as-you-go cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -359,7 +359,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of cloud computers that can be automatically created in the subscription cloud computer pool.</para>
+            /// <para>The maximum number of cloud computers that can be automatically created in the subscription cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MinDesktopsCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the office network in which the cloud computer pool resides.</para>
+            /// <para>The ID of the office network in which the cloud computer network resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-467671****</para>
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the office network to which the cloud computer pool belongs.</para>
+            /// <para>The ID of the office network in which the cloud computer share resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testName</para>
@@ -452,11 +452,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OwnBundleName { get; set; }
 
             /// <summary>
-            /// <para>The type of the cloud computer pool.</para>
+            /// <para>The type of the cloud computer share.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: individual (single session)</description></item>
-            /// <item><description>1: shared (multiple sessions)</description></item>
+            /// <item><description>0: a single-session many-to-many share.</description></item>
+            /// <item><description>1: a multi-session many-to-many share.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -482,7 +482,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the policy that is associated with the cloud computer pool.</para>
+            /// <para>The ID of the applied policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-53iyi2aar0nd6c8qj</para>
@@ -492,7 +492,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the policy that is associated with the cloud computer pool.</para>
+            /// <para>The name of the applied policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-policy</para>
@@ -528,9 +528,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// <para>The threshold for the ratio of connected sessions. This parameter indicates the condition that triggers auto scaling in a multi-session cloud computer pool. The ratio of connected sessions is calculated by using the following formula:</para>
+            /// <para>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</para>
             /// <para><c>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</c>.</para>
-            /// <para>When the specified threshold is reached, new cloud computers are automatically created. When the specified threshold is not reached, idle cloud computers are released.</para>
+            /// <para>If the session ratio exceeds the threshold, new cloud computers are provisioned. If it falls below the threshold, additional cloud computers are removed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.85</para>
@@ -540,13 +540,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public float? RatioThreshold { get; set; }
 
             /// <summary>
-            /// <para>The disk reset type of the cloud computer pool.</para>
+            /// <para>The reset option for the cloud computer share.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: does not reset disks</description></item>
-            /// <item><description>1: resets only the system disks</description></item>
-            /// <item><description>2: resets only the user disks</description></item>
-            /// <item><description>3: resets the system disks and user disks</description></item>
+            /// <item><description>0: does not reset any disk.</description></item>
+            /// <item><description>1: resets only the system disk.</description></item>
+            /// <item><description>2: resets only the data disk.</description></item>
+            /// <item><description>3: resets the system disk and data disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -557,12 +557,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? ResetType { get; set; }
 
             /// <summary>
-            /// <para>The payment status of the cloud computer pool.</para>
+            /// <para>The status of the cloud computer share.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: unpaid</description></item>
-            /// <item><description>1: paid</description></item>
-            /// <item><description>2: overdue or expired</description></item>
+            /// <item><description>0: The cloud computer share is unpaid.</description></item>
+            /// <item><description>1: The cloud computer share is normal.</description></item>
+            /// <item><description>2: The cloud computer share expired, or your account has an overdue payment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -619,14 +619,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? SystemDiskSize { get; set; }
 
             /// <summary>
-            /// <para>The tags attached to the cloud computer pool.</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeDesktopGroupsResponseBodyDesktopGroupsTags> Tags { get; set; }
             public class DescribeDesktopGroupsResponseBodyDesktopGroupsTags : TeaModel {
                 /// <summary>
-                /// <para>The key of the tag.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>desktop_group_name</para>
@@ -636,7 +636,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the tag.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ds-dq2mybjr23yw*****</para>
@@ -647,12 +647,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             }
 
+            /// <summary>
+            /// <para>用户组织单元路径。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.com\wuying\users</para>
+            /// </summary>
             [NameInMap("UserOuPath")]
             [Validation(Required=false)]
             public string UserOuPath { get; set; }
 
             /// <summary>
-            /// <para>The version number of the cloud computer pool.</para>
+            /// <para>The version number of the cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

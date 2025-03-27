@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> BundleId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer pool.</para>
+        /// <para>The ID of the cloud computer share.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-2i8qxpv6t1a03****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud computer pool to query. Fuzzy search is supported.</para>
+        /// <para>The name of the cloud computer share that you want to query. Fuzzy search is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupName { get; set; }
 
         /// <summary>
-        /// <para>The authorized user IDs of cloud computer pools.</para>
+        /// <para>The IDs of the users who can access the cloud computer share.</para>
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the office network to which the cloud computer pool belongs.</para>
+        /// <para>The ID of the office network in which the cloud computer share resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-467671****</para>
@@ -113,14 +113,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud computer pool.</para>
+        /// <para>The type of the cloud computer share.</para>
         /// <remarks>
         /// <para> This parameter is not publicly available.</para>
         /// </remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: individual (single session)</description></item>
-        /// <item><description>1: shared (multiple sessions)</description></item>
+        /// <item><description>0: a single-session many-to-many share.</description></item>
+        /// <item><description>1: a multi-session many-to-many share.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,9 +131,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? OwnType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the cloud computer pool. The unit is specified by the <c>PeriodUnit</c> parameter.</para>
+        /// <para>The subscription duration of the cloud computer share. The unit is specified by <c>PeriodUnit</c>.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values if the <c>PeriodUnit</c> parameter is set to <c>Month</c>:</para>
+        /// <item><description><para>Valid values if you set <c>PeriodUnit</c> to <c>Month</c>:</para>
         /// <list type="bullet">
         /// <item><description>1</description></item>
         /// <item><description>2</description></item>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <item><description>6</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values if the <c>PeriodUnit</c> parameter is set to <c>Year</c>:</para>
+        /// <item><description><para>Valid values if you set <c>PeriodUnit</c> to <c>Year</c>:</para>
         /// <list type="bullet">
         /// <item><description>1</description></item>
         /// <item><description>2</description></item>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy that you want to associate with the cloud computer pool.</para>
+        /// <para>The ID of the applied policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-53iyi2aar0nd6****</para>
@@ -217,12 +217,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The payment status of the cloud computer pool.</para>
+        /// <para>The status of the cloud computer share.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: unpaid</description></item>
-        /// <item><description>1: paid</description></item>
-        /// <item><description>2: overdue or expired</description></item>
+        /// <item><description>0: The cloud computer share is unpaid.</description></item>
+        /// <item><description>1: The cloud computer share is normal.</description></item>
+        /// <item><description>2: The cloud computer share expired, or your account has an overdue payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -233,14 +233,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The tags attached to the cloud computer pool. You can specify 1 to 20 tags.</para>
+        /// <para>The tags that you want to add to the cloud computer share. You can specify 1 to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDesktopGroupsRequestTag> Tag { get; set; }
         public class DescribeDesktopGroupsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. If you specify the <c>Tag</c> parameter, you must also specify the <c>Key</c> parameter. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>. You cannot specify an empty string as a tag key.</para>
+            /// <para>The tag key. You cannot specify an empty string as a tag key. A tag key can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. You can specify an empty string as a tag key. A tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

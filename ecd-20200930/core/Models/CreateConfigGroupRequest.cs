@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? Interval { get; set; }
 
+            [NameInMap("NotificationTime")]
+            [Validation(Required=false)]
+            public int? NotificationTime { get; set; }
+
             /// <summary>
             /// <para>The type of the scheduled operation. If you set TimerType to NoConnect, you can specify this parameter.</para>
             /// <para>Valid values:</para>

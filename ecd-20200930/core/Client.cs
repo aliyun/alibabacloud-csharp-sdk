@@ -6944,8 +6944,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud disk.</para>
+        /// <para>Creates an enterprise drive.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and pricing of Enterprise Drive Service (formerly Cloud Drive Service). For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCloudDriveServiceRequest
@@ -7057,8 +7062,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud disk.</para>
+        /// <para>Creates an enterprise drive.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and pricing of Enterprise Drive Service (formerly Cloud Drive Service). For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCloudDriveServiceRequest
@@ -7170,8 +7180,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud disk.</para>
+        /// <para>Creates an enterprise drive.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and pricing of Enterprise Drive Service (formerly Cloud Drive Service). For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCloudDriveServiceRequest
@@ -7188,8 +7203,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud disk.</para>
+        /// <para>Creates an enterprise drive.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and pricing of Enterprise Drive Service (formerly Cloud Drive Service). For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCloudDriveServiceRequest
@@ -16352,7 +16372,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of desktop groups.</para>
+        /// <para>Queries cloud computer shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16473,7 +16493,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of desktop groups.</para>
+        /// <para>Queries cloud computer shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16594,7 +16614,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of desktop groups.</para>
+        /// <para>Queries cloud computer shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16612,7 +16632,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of desktop groups.</para>
+        /// <para>Queries cloud computer shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20596,6 +20616,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeKmsKeysWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the price for changing the specifications of a monthly subscription cloud computer with unlimited hours or a premium bandwidth plan.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeModificationPriceRequest
         /// </param>
@@ -20664,6 +20689,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the price for changing the specifications of a monthly subscription cloud computer with unlimited hours or a premium bandwidth plan.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeModificationPriceRequest
         /// </param>
@@ -20732,6 +20762,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the price for changing the specifications of a monthly subscription cloud computer with unlimited hours or a premium bandwidth plan.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeModificationPriceRequest
         /// </param>
@@ -20745,6 +20780,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return DescribeModificationPriceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the price for changing the specifications of a monthly subscription cloud computer with unlimited hours or a premium bandwidth plan.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeModificationPriceRequest
         /// </param>
@@ -22748,6 +22788,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the renewal price of an Alibaba Cloud Workspace service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRenewalPriceRequest
         /// </param>
@@ -22812,6 +22857,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the renewal price of an Alibaba Cloud Workspace service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRenewalPriceRequest
         /// </param>
@@ -22876,6 +22926,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the renewal price of an Alibaba Cloud Workspace service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRenewalPriceRequest
         /// </param>
@@ -22889,6 +22944,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return DescribeRenewalPriceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the renewal price of an Alibaba Cloud Workspace service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRenewalPriceRequest
         /// </param>
@@ -27082,7 +27142,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a cloud computer pool.</para>
+        /// <para>Queries the information about a cloud computer share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27135,7 +27195,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a cloud computer pool.</para>
+        /// <para>Queries the information about a cloud computer share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27188,7 +27248,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a cloud computer pool.</para>
+        /// <para>Queries the information about a cloud computer share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27206,7 +27266,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a cloud computer pool.</para>
+        /// <para>Queries the information about a cloud computer share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32938,12 +32998,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a cloud computer pool.</para>
+        /// <para>Modifies a cloud computer share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.</para>
+        /// <para>Once a cloud computer share is created, the system automatically provisions cloud computers according to the auto-scaling policy and user connections, all based on the same template and security policy. You can adjust the cloud computer share\&quot;s configurations, including the share name, template, and policy, for different business scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33092,12 +33152,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a cloud computer pool.</para>
+        /// <para>Modifies a cloud computer share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.</para>
+        /// <para>Once a cloud computer share is created, the system automatically provisions cloud computers according to the auto-scaling policy and user connections, all based on the same template and security policy. You can adjust the cloud computer share\&quot;s configurations, including the share name, template, and policy, for different business scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33246,12 +33306,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a cloud computer pool.</para>
+        /// <para>Modifies a cloud computer share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.</para>
+        /// <para>Once a cloud computer share is created, the system automatically provisions cloud computers according to the auto-scaling policy and user connections, all based on the same template and security policy. You can adjust the cloud computer share\&quot;s configurations, including the share name, template, and policy, for different business scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33269,12 +33329,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a cloud computer pool.</para>
+        /// <para>Modifies a cloud computer share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a cloud computer pool is created, the system creates a specific number of cloud computers in the pool based on the auto scaling policy and user connections. Cloud computers are created by using the same cloud computer template and security policy. You can modify the configurations of the pool, including the pool name, cloud computer template, and policy, in different business scenarios.</para>
+        /// <para>Once a cloud computer share is created, the system automatically provisions cloud computers according to the auto-scaling policy and user connections, all based on the same template and security policy. You can adjust the cloud computer share\&quot;s configurations, including the share name, template, and policy, for different business scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">

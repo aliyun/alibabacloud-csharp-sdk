@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether cloud computers can be automatically created in the subscription cloud computer pool. This parameter takes effect and is required only if you set <c>ChargeType</c> to <c>PrePaid</c>.</para>
+        /// <para>Specifies whether to enable auto-creation of cloud computers for the subscription cloud computer share. You must specify this parameter when <c>ChargeType</c> is set to <c>PrePaid</c>.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: false</description></item>
-        /// <item><description>1: true</description></item>
+        /// <item><description>0: disable auto-creation of cloud computers.</description></item>
+        /// <item><description>1: enables auto-creation of cloud computers.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,13 +25,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? AllowAutoSetup { get; set; }
 
         /// <summary>
-        /// <para>The number of cloud computers that can be reserved in the pay-as-you-go cloud computer pool. This parameter takes effect and is required only if you set <c>ChargeType</c> to <c>PostPaid</c>. Valid values:</para>
+        /// <para>The maximum number of standby cloud computers that can be reserved within the pay-as-you-go cloud computer share. You must specify this property only when <c>ChargeType</c> is set to <c>PostPaid</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: does not allow the system to reserve cloud computers.</description></item>
-        /// <item><description>N: allows the system to reserve N cloud computers (1≤ N ≤ 100).</description></item>
+        /// <item><description>0: does not reserve any cloud computer.</description></item>
+        /// <item><description>N: reserves N cloud computers (1≤ N ≤ 100).</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set this parameter to 0, the system must create and start cloud computers and then assign the cloud computers to end users when the end users request cloud computers. This process is time-consuming. To improve user experience, we recommend that you reserve a specific number of cloud computers.</para>
+        /// <para> Setting this parameter to 0 means no cloud computers will be reserved within the cloud computer share. In this case, the system must create, start, and assign cloud computers to end users upon request, which can be time-consuming. To improve user experience, we recommend that you reserve a specific number of cloud computers.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? AllowBufferCount { get; set; }
 
         /// <summary>
-        /// <para>The number of concurrent sessions that is allowed for each cloud computer in a multi-session cloud computer pool.</para>
+        /// <para>The number of concurrent sessions allowed for each cloud computer within the multi-session many-to-many share.</para>
         /// <remarks>
-        /// <para> This parameter is unavailable.</para>
+        /// <para> This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>This parameter has different meanings based on the billing method of the cloud computer pool. For a subscription pool, this parameter specifies the number of cloud computers to purchase in the pool. Valid values: 0 to 200.</description></item>
-        /// <item><description>For a pay-as-you-go pool, this parameter specifies the minimum number of cloud computers to create in the pool. Default value: 1. Valid values: 0 to <c>MaxDesktopsCount</c>.</description></item>
+        /// <item><description>For subscription cloud computer shares, this parameter specifies the number of purchased cloud computers. Valid values: 0 to 200.</description></item>
+        /// <item><description>For pay-as-you-go cloud computer shares, this parameter specifies the minimum number of cloud computers created in the initial batch. Default value: 1. Valid values: 0 to <c>MaxDesktopsCount</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,25 +68,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? BuyDesktopsCount { get; set; }
 
         /// <summary>
-        /// <para>The role that uses the cloud computer pool.</para>
+        /// <para>The type of the cloud computer share.</para>
         /// <remarks>
-        /// <para> This parameter is unavailable.</para>
+        /// <para> This parameter is not publicly available.</para>
         /// </remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>teacher</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>student</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
+        /// <item><description>teacher: teacher-oriented.</description></item>
+        /// <item><description>student: student-oriented.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectDuration { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer pool.</para>
+        /// <para>The ID of the cloud computer share.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -128,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud computer pool.</para>
+        /// <para>The name of the cloud computer share.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desktopGroupName1</para>
@@ -196,14 +185,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? KeepDuration { get; set; }
 
         /// <summary>
-        /// <para>The load balancing policy of the multi-session cloud computer pool.</para>
+        /// <para>The load balancing policy for the multi-session many-to-many share.</para>
         /// <remarks>
-        /// <para> This parameter is unavailable.</para>
+        /// <para> This parameter is not publicly available.</para>
         /// </remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: depth-first</description></item>
-        /// <item><description>1: breadth-first</description></item>
+        /// <item><description>0: depth first.</description></item>
+        /// <item><description>1: breadth first.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -214,7 +203,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? LoadPolicy { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of cloud computers that can be housed in the pay-as-you-go cloud computer pool. Valid values: 0 to 500.</para>
+        /// <para>The maximum number of cloud computers allowed in the pay-as-you-go cloud computer share. Valid values: 0 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -224,7 +213,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxDesktopsCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of cloud computers that can be automatically created in the subscription cloud computer pool. This parameter takes effect and is required only if you set <c>ChargeType</c> to <c>PrePaid</c>. Default value: 1. Valid values: 0 to <c>MaxDesktopsCount</c>.</para>
+        /// <para>The maximum number of auto-created cloud computers allowed in the subscription cloud computer share. You must specify this parameter when <c>ChargeType</c> is set to <c>PrePaid</c>. Default value: 1. Valid values: 0 to <c>MaxDesktopsCount</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -274,11 +263,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? ProfileFollowSwitch { get; set; }
 
         /// <summary>
-        /// <para>The threshold for the ratio of connected sessions. This parameter indicates the condition that triggers auto scaling in a multi-session cloud computer pool. The ratio of connected sessions IS calculated by using the following formula:</para>
+        /// <para>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</para>
         /// <para><c>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</c></para>
-        /// <para>If the ratio of connected sessions is greater than the specified value, new cloud computers are created. If the ratio of connected sessions is smaller than the specified value, idle cloud computers are deleted.</para>
+        /// <para>If the session ratio exceeds the threshold, new cloud computers are provisioned. If it falls below the threshold, additional cloud computers are removed.</para>
         /// <remarks>
-        /// <para> This parameter is unavailable.</para>
+        /// <para> This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
