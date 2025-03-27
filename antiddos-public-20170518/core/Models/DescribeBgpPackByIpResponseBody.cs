@@ -10,51 +10,68 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 {
     public class DescribeBgpPackByIpResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code of the request.
+        /// <para>The HTTP status code of the request.</para>
+        /// <para>For more information about status codes, see <a href="https://help.aliyun.com/document_detail/118841.html">Common parameters</a>.</para>
         /// 
-        /// For more information about status codes, see [Common parameters](https://help.aliyun.com/document_detail/118841.html).
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The configurations of the instance that is associated with the asset.
+        /// <para>The configurations of the instance that is associated with the asset.</para>
         /// </summary>
         [NameInMap("DdosbgpInfo")]
         [Validation(Required=false)]
         public DescribeBgpPackByIpResponseBodyDdosbgpInfo DdosbgpInfo { get; set; }
         public class DescribeBgpPackByIpResponseBodyDdosbgpInfo : TeaModel {
             /// <summary>
-            /// The basic protection threshold of the instance. Unit: Gbit/s.
+            /// <para>The basic protection threshold of the instance. Unit: Gbit/s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
             /// </summary>
             [NameInMap("BaseThreshold")]
             [Validation(Required=false)]
             public int? BaseThreshold { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// <para>The ID of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ddosbgp-cn-n6w1r7nz****</para>
             /// </summary>
             [NameInMap("DdosbgpInstanceId")]
             [Validation(Required=false)]
             public string DdosbgpInstanceId { get; set; }
 
             /// <summary>
-            /// The burstable protection threshold of the instance. Unit: Gbit/s.
+            /// <para>The burstable protection threshold of the instance. Unit: Gbit/s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>301</para>
             /// </summary>
             [NameInMap("ElasticThreshold")]
             [Validation(Required=false)]
             public int? ElasticThreshold { get; set; }
 
             /// <summary>
-            /// The expiration time of the instance. The value is a UNIX timestamp. Unit: milliseconds.
+            /// <para>The expiration time of the instance. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1640448000000</para>
             /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// The IP address of the asset.
+            /// <para>The IP address of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>118.31.XX.XX</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
@@ -63,17 +80,24 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>E46A08E4-A1CD-5BE9-B580-C4D6E9BC5484</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the request was successful. Valid values:
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
+        /// </list>
         /// 
-        /// *   **true**: yes
-        /// *   **false**: no
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

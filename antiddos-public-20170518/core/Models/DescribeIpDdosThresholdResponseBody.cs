@@ -10,89 +10,122 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 {
     public class DescribeIpDdosThresholdResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>025F1688-680B-551A-9A8E-1A0D796315CF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// An array that consists of the details of the threshold.
+        /// <para>An array that consists of the details of the threshold.</para>
         /// </summary>
         [NameInMap("Threshold")]
         [Validation(Required=false)]
         public DescribeIpDdosThresholdResponseBodyThreshold Threshold { get; set; }
         public class DescribeIpDdosThresholdResponseBodyThreshold : TeaModel {
             /// <summary>
-            /// If the value of the **DdosType** parameter is **defense**, the Bps parameter indicates the current traffic scrubbing threshold. Unit: Mbit/s.
+            /// <para>If the value of the <b>DdosType</b> parameter is <b>defense</b>, the Bps parameter indicates the current traffic scrubbing threshold. Unit: Mbit/s.</para>
+            /// <para>If the value of the <b>DdosType</b> parameter is <b>blackhole</b>, the Bps parameter indicates the basic protection threshold. Unit: Mbit/s.</para>
             /// 
-            /// If the value of the **DdosType** parameter is **blackhole**, the Bps parameter indicates the basic protection threshold. Unit: Mbit/s.
+            /// <b>Example:</b>
+            /// <para>7500</para>
             /// </summary>
             [NameInMap("Bps")]
             [Validation(Required=false)]
             public int? Bps { get; set; }
 
             /// <summary>
-            /// The type of the threshold. Valid values:
+            /// <para>The type of the threshold. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>defense</b>: traffic scrubbing threshold</description></item>
+            /// <item><description><b>blackhole</b>: DDoS mitigation threshold</description></item>
+            /// </list>
             /// 
-            /// *   **defense**: traffic scrubbing threshold
-            /// *   **blackhole**: DDoS mitigation threshold
+            /// <b>Example:</b>
+            /// <para>defense</para>
             /// </summary>
             [NameInMap("DdosType")]
             [Validation(Required=false)]
             public string DdosType { get; set; }
 
             /// <summary>
-            /// The burstable protection threshold (the maximum DDoS mitigation threshold). Unit: Mbit/s.
+            /// <para>The burstable protection threshold (the maximum DDoS mitigation threshold). Unit: Mbit/s.</para>
+            /// <remarks>
+            /// <para>This parameter is returned only when the value of the <b>DdosType</b> parameter is <b>blackhole</b>.</para>
+            /// </remarks>
             /// 
-            /// > This parameter is returned only when the value of the **DdosType** parameter is **blackhole**.
+            /// <b>Example:</b>
+            /// <para>12310</para>
             /// </summary>
             [NameInMap("ElasticBps")]
             [Validation(Required=false)]
             public int? ElasticBps { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// <para>The ID of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-bp1i88rqjza51s****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The IP address of the asset.
+            /// <para>The IP address of the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.0.XX.XX</para>
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// Indicates whether the threshold is automatically adjusted. Valid values:
+            /// <para>Indicates whether the threshold is automatically adjusted. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: The scrubbing thresholds are automatically adjusted based on the traffic load on the asset.</description></item>
+            /// <item><description><b>false</b>: The scrubbing thresholds are not automatically adjusted. You must manually specify the scrubbing thresholds.</description></item>
+            /// </list>
             /// 
-            /// *   **true**: The scrubbing thresholds are automatically adjusted based on the traffic load on the asset.
-            /// *   **false**: The scrubbing thresholds are not automatically adjusted. You must manually specify the scrubbing thresholds.
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("IsAuto")]
             [Validation(Required=false)]
             public bool? IsAuto { get; set; }
 
             /// <summary>
-            /// The maximum traffic scrubbing threshold. Unit: Mbit/s.
+            /// <para>The maximum traffic scrubbing threshold. Unit: Mbit/s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>7500</para>
             /// </summary>
             [NameInMap("MaxBps")]
             [Validation(Required=false)]
             public int? MaxBps { get; set; }
 
             /// <summary>
-            /// The maximum packet scrubbing threshold. Unit: pps.
+            /// <para>The maximum packet scrubbing threshold. Unit: pps.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5000000</para>
             /// </summary>
             [NameInMap("MaxPps")]
             [Validation(Required=false)]
             public int? MaxPps { get; set; }
 
             /// <summary>
-            /// The packet scrubbing threshold. Unit: packets per second (pps).
+            /// <para>The packet scrubbing threshold. Unit: packets per second (pps).</para>
+            /// <remarks>
+            /// <para>This parameter is returned only when the value of the <b>DdosType</b> parameter is <b>defense</b>.</para>
+            /// </remarks>
             /// 
-            /// > This parameter is returned only when the value of the **DdosType** parameter is **defense**.
+            /// <b>Example:</b>
+            /// <para>5000000</para>
             /// </summary>
             [NameInMap("Pps")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 {
     public class DescribeInstanceResponseBody : TeaModel {
         /// <summary>
-        /// An array that consists of the details of the asset.
+        /// <para>The details of the assets.</para>
         /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
@@ -21,91 +21,123 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
             public List<DescribeInstanceResponseBodyInstanceListInstance> Instance { get; set; }
             public class DescribeInstanceResponseBodyInstanceListInstance : TeaModel {
                 /// <summary>
-                /// The basic protection threshold for the asset. Unit: Mbit/s.
+                /// <para>The basic protection threshold for the asset. Unit: Mbit/s.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5200</para>
                 /// </summary>
                 [NameInMap("BlackholeThreshold")]
                 [Validation(Required=false)]
                 public int? BlackholeThreshold { get; set; }
 
                 /// <summary>
-                /// The traffic scrubbing threshold for the asset. Unit: Mbit/s.
+                /// <para>The traffic scrubbing threshold for the asset. Unit: Mbit/s.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>300</para>
                 /// </summary>
                 [NameInMap("DefenseBpsThreshold")]
                 [Validation(Required=false)]
                 public int? DefenseBpsThreshold { get; set; }
 
                 /// <summary>
-                /// The packet scrubbing threshold for the asset. Unit: packets per second (pps).
+                /// <para>The packet scrubbing threshold for the asset. Unit: packets per second (pps).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>70000</para>
                 /// </summary>
                 [NameInMap("DefensePpsThreshold")]
                 [Validation(Required=false)]
                 public int? DefensePpsThreshold { get; set; }
 
                 /// <summary>
-                /// The burstable protection threshold for the asset. Unit: Mbit/s.
+                /// <para>The burstable protection threshold for the asset. Unit: Mbit/s.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12310</para>
                 /// </summary>
                 [NameInMap("ElasticThreshold")]
                 [Validation(Required=false)]
                 public int? ElasticThreshold { get; set; }
 
                 /// <summary>
-                /// The ID of the asset.
+                /// <para>The ID of the asset.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-bp1cb6x80tfgocid****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// The IP address of the asset.
+                /// <para>The IP address of the asset.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>121.199.XX.XX</para>
                 /// </summary>
                 [NameInMap("InstanceIp")]
                 [Validation(Required=false)]
                 public string InstanceIp { get; set; }
 
                 /// <summary>
-                /// The name of the asset.
+                /// <para>The name of the asset.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>launch-advisor-2021****</para>
                 /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// The DDoS mitigation status of the asset. Valid values:
+                /// <para>The DDoS mitigation status of the asset. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>mitigating</b>: indicates that traffic scrubbing is triggered for the asset.</description></item>
+                /// <item><description><b>blackholed</b>: indicates that blackhole filtering is triggered for the asset.</description></item>
+                /// <item><description><b>normal</b>: indicates that the instance is normal.</description></item>
+                /// </list>
                 /// 
-                /// *   **mitigating**: indicates that traffic scrubbing is triggered for the asset.
-                /// *   **blackholed**: indicates that blackhole filtering is triggered for the asset.
-                /// *   **normal**: indicates that the instance is normal.
+                /// <b>Example:</b>
+                /// <para>normal</para>
                 /// </summary>
                 [NameInMap("InstanceStatus")]
                 [Validation(Required=false)]
                 public string InstanceStatus { get; set; }
 
                 /// <summary>
-                /// The type of the asset. Valid values:
+                /// <para>The type of the asset.</para>
                 /// 
-                /// *   **ecs**: ECS instance
-                /// *   **slb**: SLB instance
-                /// *   **eip**: EIP
+                /// <b>Example:</b>
+                /// <para>ecs</para>
                 /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// The IP protocol that is supported by the asset. Valid values:
+                /// <para>The IP protocol that is supported by the asset. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>v4</b>: IPv4</description></item>
+                /// <item><description><b>v6</b>: IPv6</description></item>
+                /// </list>
                 /// 
-                /// *   **v4**: IPv4
-                /// *   **v6**: IPv6
+                /// <b>Example:</b>
+                /// <para>v4</para>
                 /// </summary>
                 [NameInMap("IpVersion")]
                 [Validation(Required=false)]
                 public string IpVersion { get; set; }
 
                 /// <summary>
-                /// Indicates whether the asset is associated with an Anti-DDoS Origin Basic instance. Valid values:
+                /// <para>Indicates whether the asset is associated with an Anti-DDoS Origin Basic instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: yes</description></item>
+                /// <item><description><b>false</b>: no</description></item>
+                /// </list>
                 /// 
-                /// *   **true**: yes
-                /// *   **false**: no
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IsBgppack")]
                 [Validation(Required=false)]
@@ -116,14 +148,20 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C728D7E9-9A39-52E0-966B-5C33118BDBB0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of the assets.
+        /// <para>The total number of the assets.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]
