@@ -32,7 +32,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         /// <summary>
         /// <para>List of resource IDs</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
