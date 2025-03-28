@@ -93,6 +93,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
             /// <summary>
             /// <para>The error message returned if incremental data migration failed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The task has failed for too long and cannot be restored</para>
             /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
@@ -261,6 +264,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// <para>The name of the data migration task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL migration</para>
         /// </summary>
         [NameInMap("MigrationJobName")]
         [Validation(Required=false)]

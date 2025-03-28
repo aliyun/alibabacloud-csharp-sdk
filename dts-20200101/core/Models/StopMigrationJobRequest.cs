@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class StopMigrationJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// <para>The IDoftheAlibabaCloudaccount. Youdonotneed to specify this parameter because this parameter will be removed in the future.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -48,6 +48,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

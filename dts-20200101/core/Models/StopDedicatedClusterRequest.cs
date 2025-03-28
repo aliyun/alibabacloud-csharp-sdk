@@ -59,6 +59,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID. This parameter is a global parameter and not required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The resource group ID. This parameter is a global parameter and not required.</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

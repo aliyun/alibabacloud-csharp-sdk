@@ -97,13 +97,8 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置DTS任务</para>
+        /// <para>Configures a data migration or synchronization task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The name of the DTS instance.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ConfigureDtsJobRequest
@@ -171,6 +166,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["DestClientPassword"] = request.DestClientPassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPrimaryVswId))
+            {
+                query["DestPrimaryVswId"] = request.DestPrimaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestSecondaryVswId))
+            {
+                query["DestSecondaryVswId"] = request.DestSecondaryVswId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationEndpointDataBaseName))
             {
                 query["DestinationEndpointDataBaseName"] = request.DestinationEndpointDataBaseName;
@@ -347,6 +350,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["SrcClientPassword"] = request.SrcClientPassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPrimaryVswId))
+            {
+                query["SrcPrimaryVswId"] = request.SrcPrimaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcSecondaryVswId))
+            {
+                query["SrcSecondaryVswId"] = request.SrcSecondaryVswId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StructureInitialization))
             {
                 query["StructureInitialization"] = request.StructureInitialization;
@@ -381,18 +392,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureDtsJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureDtsJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureDtsJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置DTS任务</para>
+        /// <para>Configures a data migration or synchronization task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The name of the DTS instance.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ConfigureDtsJobRequest
@@ -460,6 +473,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["DestClientPassword"] = request.DestClientPassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPrimaryVswId))
+            {
+                query["DestPrimaryVswId"] = request.DestPrimaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestSecondaryVswId))
+            {
+                query["DestSecondaryVswId"] = request.DestSecondaryVswId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationEndpointDataBaseName))
             {
                 query["DestinationEndpointDataBaseName"] = request.DestinationEndpointDataBaseName;
@@ -636,6 +657,14 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["SrcClientPassword"] = request.SrcClientPassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPrimaryVswId))
+            {
+                query["SrcPrimaryVswId"] = request.SrcPrimaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcSecondaryVswId))
+            {
+                query["SrcSecondaryVswId"] = request.SrcSecondaryVswId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StructureInitialization))
             {
                 query["StructureInitialization"] = request.StructureInitialization;
@@ -670,18 +699,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureDtsJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置DTS任务</para>
+        /// <para>Configures a data migration or synchronization task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The name of the DTS instance.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ConfigureDtsJobRequest
@@ -698,13 +729,8 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置DTS任务</para>
+        /// <para>Configures a data migration or synchronization task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The name of the DTS instance.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ConfigureDtsJobRequest
@@ -888,12 +914,6 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <para>Configures a data migration task.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to start the task.
-        /// A data migration task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49433.html">DescribeMigrationJobStatus</a> operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the data migration task.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// ConfigureMigrationJobRequest
         /// </param>
@@ -974,19 +994,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureMigrationJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureMigrationJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureMigrationJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Configures a data migration task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to start the task.
-        /// A data migration task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49433.html">DescribeMigrationJobStatus</a> operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the data migration task.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ConfigureMigrationJobRequest
@@ -1068,19 +1089,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureMigrationJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Configures a data migration task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to start the task.
-        /// A data migration task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49433.html">DescribeMigrationJobStatus</a> operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the data migration task.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ConfigureMigrationJobRequest
@@ -1100,12 +1122,6 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <para>Configures a data migration task.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>After you call this operation to configure a data migration task, the task will be automatically started. You do not need to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to start the task.
-        /// A data migration task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49433.html">DescribeMigrationJobStatus</a> operation to query the error messages about precheck failures. Then, you can fix the issue based on the error messages. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the data migration task.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// ConfigureMigrationJobRequest
         /// </param>
@@ -1119,6 +1135,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ConfigureMigrationJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures alert settings to monitor a data migration instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigureMigrationJobAlertRequest
         /// </param>
@@ -1189,9 +1210,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureMigrationJobAlertResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureMigrationJobAlertResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureMigrationJobAlertResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures alert settings to monitor a data migration instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigureMigrationJobAlertRequest
         /// </param>
@@ -1262,9 +1295,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureMigrationJobAlertResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureMigrationJobAlertResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureMigrationJobAlertResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures alert settings to monitor a data migration instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigureMigrationJobAlertRequest
         /// </param>
@@ -1278,6 +1323,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ConfigureMigrationJobAlertWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures alert settings to monitor a data migration instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigureMigrationJobAlertRequest
         /// </param>
@@ -1291,6 +1341,18 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ConfigureMigrationJobAlertWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a change tracking task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can preview related API operation parameters when you configure a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConfigureSubscriptionRequest
         /// </param>
@@ -1477,9 +1539,28 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureSubscriptionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureSubscriptionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureSubscriptionResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a change tracking task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can preview related API operation parameters when you configure a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConfigureSubscriptionRequest
         /// </param>
@@ -1666,9 +1747,28 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureSubscriptionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a change tracking task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can preview related API operation parameters when you configure a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConfigureSubscriptionRequest
         /// </param>
@@ -1682,6 +1782,18 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ConfigureSubscriptionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a change tracking task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can preview related API operation parameters when you configure a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConfigureSubscriptionRequest
         /// </param>
@@ -1697,12 +1809,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
+        /// <para>Configures a change tracking instance of the previous version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The operation that you want to perform. Set the value to <b>ConfigureSubscriptionInstance</b>.</para>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1781,17 +1893,24 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureSubscriptionInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureSubscriptionInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureSubscriptionInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
+        /// <para>Configures a change tracking instance of the previous version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The operation that you want to perform. Set the value to <b>ConfigureSubscriptionInstance</b>.</para>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1870,17 +1989,24 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureSubscriptionInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureSubscriptionInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureSubscriptionInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
+        /// <para>Configures a change tracking instance of the previous version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The operation that you want to perform. Set the value to <b>ConfigureSubscriptionInstance</b>.</para>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1898,12 +2024,12 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
+        /// <para>Configures a change tracking instance of the previous version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The operation that you want to perform. Set the value to <b>ConfigureSubscriptionInstance</b>.</para>
+        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1919,6 +2045,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ConfigureSubscriptionInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures alert settings to monitor a change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigureSubscriptionInstanceAlertRequest
         /// </param>
@@ -1989,9 +2120,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureSubscriptionInstanceAlertResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureSubscriptionInstanceAlertResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureSubscriptionInstanceAlertResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures alert settings to monitor a change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigureSubscriptionInstanceAlertRequest
         /// </param>
@@ -2062,9 +2205,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureSubscriptionInstanceAlertResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureSubscriptionInstanceAlertResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureSubscriptionInstanceAlertResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures alert settings to monitor a change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigureSubscriptionInstanceAlertRequest
         /// </param>
@@ -2078,6 +2233,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ConfigureSubscriptionInstanceAlertWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures alert settings to monitor a change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigureSubscriptionInstanceAlertRequest
         /// </param>
@@ -2091,6 +2251,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ConfigureSubscriptionInstanceAlertWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a data synchronization task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</para>
@@ -2194,9 +2359,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureSynchronizationJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureSynchronizationJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureSynchronizationJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a data synchronization task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</para>
@@ -2300,9 +2477,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureSynchronizationJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a data synchronization task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</para>
@@ -2327,6 +2516,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ConfigureSynchronizationJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a data synchronization task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</para>
@@ -2351,6 +2545,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ConfigureSynchronizationJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures alert settings to monitor a data synchronization instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigureSynchronizationJobAlertRequest
         /// </param>
@@ -2425,9 +2624,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureSynchronizationJobAlertResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureSynchronizationJobAlertResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureSynchronizationJobAlertResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures alert settings to monitor a data synchronization instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigureSynchronizationJobAlertRequest
         /// </param>
@@ -2502,9 +2713,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureSynchronizationJobAlertResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureSynchronizationJobAlertResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureSynchronizationJobAlertResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures alert settings to monitor a data synchronization instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigureSynchronizationJobAlertRequest
         /// </param>
@@ -2518,6 +2741,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ConfigureSynchronizationJobAlertWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures alert settings to monitor a data synchronization instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ConfigureSynchronizationJobAlertRequest
         /// </param>
@@ -2531,11 +2759,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ConfigureSynchronizationJobAlertWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
-        /// After you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/199183.html">DescribeSynchronizationJobReplicatorCompare</a> operation to verify whether image matching is enabled for the data synchronization instance.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables image matching for a data synchronization instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ConfigureSynchronizationJobReplicatorCompareRequest
@@ -2599,14 +2826,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureSynchronizationJobReplicatorCompareResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureSynchronizationJobReplicatorCompareResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureSynchronizationJobReplicatorCompareResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
-        /// After you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/199183.html">DescribeSynchronizationJobReplicatorCompare</a> operation to verify whether image matching is enabled for the data synchronization instance.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables image matching for a data synchronization instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ConfigureSynchronizationJobReplicatorCompareRequest
@@ -2670,14 +2903,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ConfigureSynchronizationJobReplicatorCompareResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConfigureSynchronizationJobReplicatorCompareResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConfigureSynchronizationJobReplicatorCompareResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
-        /// After you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/199183.html">DescribeSynchronizationJobReplicatorCompare</a> operation to verify whether image matching is enabled for the data synchronization instance.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables image matching for a data synchronization instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ConfigureSynchronizationJobReplicatorCompareRequest
@@ -2692,11 +2931,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ConfigureSynchronizationJobReplicatorCompareWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you use Data Transmission Service (DTS) to synchronize data, other data sources may write data to the destination instance. In this case, data may become inconsistent between the source and destination instances. To ensure data consistency, you can enable image matching.
-        /// After you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/199183.html">DescribeSynchronizationJobReplicatorCompare</a> operation to verify whether image matching is enabled for the data synchronization instance.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables image matching for a data synchronization instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ConfigureSynchronizationJobReplicatorCompareRequest
@@ -2713,7 +2951,181 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询符合条件的任务数</para>
+        /// <para>Transfers resource groups of instance resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConvertInstanceResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertInstanceResourceGroupResponse
+        /// </returns>
+        public ConvertInstanceResourceGroupResponse ConvertInstanceResourceGroupWithOptions(ConvertInstanceResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewResourceGroupId))
+            {
+                query["NewResourceGroupId"] = request.NewResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroEtlJob))
+            {
+                query["ZeroEtlJob"] = request.ZeroEtlJob;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConvertInstanceResourceGroup",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConvertInstanceResourceGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConvertInstanceResourceGroupResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transfers resource groups of instance resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConvertInstanceResourceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertInstanceResourceGroupResponse
+        /// </returns>
+        public async Task<ConvertInstanceResourceGroupResponse> ConvertInstanceResourceGroupWithOptionsAsync(ConvertInstanceResourceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewResourceGroupId))
+            {
+                query["NewResourceGroupId"] = request.NewResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroEtlJob))
+            {
+                query["ZeroEtlJob"] = request.ZeroEtlJob;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConvertInstanceResourceGroup",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ConvertInstanceResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ConvertInstanceResourceGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transfers resource groups of instance resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConvertInstanceResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertInstanceResourceGroupResponse
+        /// </returns>
+        public ConvertInstanceResourceGroupResponse ConvertInstanceResourceGroup(ConvertInstanceResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ConvertInstanceResourceGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transfers resource groups of instance resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConvertInstanceResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertInstanceResourceGroupResponse
+        /// </returns>
+        public async Task<ConvertInstanceResourceGroupResponse> ConvertInstanceResourceGroupAsync(ConvertInstanceResourceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ConvertInstanceResourceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Counts tasks by condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2786,12 +3198,19 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CountJobByConditionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CountJobByConditionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CountJobByConditionResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询符合条件的任务数</para>
+        /// <para>Counts tasks by condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2864,12 +3283,19 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CountJobByConditionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CountJobByConditionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CountJobByConditionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询符合条件的任务数</para>
+        /// <para>Counts tasks by condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2887,7 +3313,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询符合条件的任务数</para>
+        /// <para>Counts tasks by condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2903,6 +3329,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await CountJobByConditionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group for a change tracking task. Downstream clients can use the consumer group to consume tracked data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateConsumerChannelRequest
         /// </param>
@@ -2961,9 +3392,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateConsumerChannelResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateConsumerChannelResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateConsumerChannelResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group for a change tracking task. Downstream clients can use the consumer group to consume tracked data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateConsumerChannelRequest
         /// </param>
@@ -3022,9 +3465,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateConsumerChannelResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateConsumerChannelResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateConsumerChannelResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group for a change tracking task. Downstream clients can use the consumer group to consume tracked data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateConsumerChannelRequest
         /// </param>
@@ -3038,6 +3493,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return CreateConsumerChannelWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group for a change tracking task. Downstream clients can use the consumer group to consume tracked data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateConsumerChannelRequest
         /// </param>
@@ -3051,6 +3511,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await CreateConsumerChannelWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group for a change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateConsumerGroupRequest
         /// </param>
@@ -3113,9 +3578,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateConsumerGroupResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateConsumerGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateConsumerGroupResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group for a change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateConsumerGroupRequest
         /// </param>
@@ -3178,9 +3655,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group for a change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateConsumerGroupRequest
         /// </param>
@@ -3194,6 +3683,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return CreateConsumerGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a consumer group for a change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateConsumerGroupRequest
         /// </param>
@@ -3286,7 +3780,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateDedicatedClusterMonitorRuleResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateDedicatedClusterMonitorRuleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateDedicatedClusterMonitorRuleResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -3368,7 +3869,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateDedicatedClusterMonitorRuleResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateDedicatedClusterMonitorRuleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateDedicatedClusterMonitorRuleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -3407,6 +3915,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await CreateDedicatedClusterMonitorRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases a Data Transmission Service (DTS) instance.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</para>
@@ -3537,9 +4050,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateDtsInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateDtsInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateDtsInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases a Data Transmission Service (DTS) instance.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</para>
@@ -3670,9 +4195,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateDtsInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateDtsInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateDtsInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases a Data Transmission Service (DTS) instance.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</para>
@@ -3694,6 +4231,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return CreateDtsInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases a Data Transmission Service (DTS) instance.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</para>
@@ -3715,13 +4257,18 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await CreateDtsInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or modifies an alert rule for a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>DTS provides the following metrics for DTS tasks:************</para>
         /// <list type="bullet">
-        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.</description></item>
+        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of seconds.</description></item>
         /// <item><description><b>Status</b>: DTS monitors the status of a DTS task. If the state of the task changes to <b>Error</b> or <b>Restore</b>, an alert is triggered.</description></item>
-        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.</description></item>
+        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3795,16 +4342,28 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateJobMonitorRuleResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateJobMonitorRuleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateJobMonitorRuleResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or modifies an alert rule for a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>DTS provides the following metrics for DTS tasks:************</para>
         /// <list type="bullet">
-        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.</description></item>
+        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of seconds.</description></item>
         /// <item><description><b>Status</b>: DTS monitors the status of a DTS task. If the state of the task changes to <b>Error</b> or <b>Restore</b>, an alert is triggered.</description></item>
-        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.</description></item>
+        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3878,16 +4437,28 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateJobMonitorRuleResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateJobMonitorRuleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateJobMonitorRuleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or modifies an alert rule for a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>DTS provides the following metrics for DTS tasks:************</para>
         /// <list type="bullet">
-        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.</description></item>
+        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of seconds.</description></item>
         /// <item><description><b>Status</b>: DTS monitors the status of a DTS task. If the state of the task changes to <b>Error</b> or <b>Restore</b>, an alert is triggered.</description></item>
-        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.</description></item>
+        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3904,13 +4475,18 @@ namespace AlibabaCloud.SDK.Dts20200101
             return CreateJobMonitorRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or modifies an alert rule for a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>DTS provides the following metrics for DTS tasks:************</para>
         /// <list type="bullet">
-        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. Unit: seconds.</description></item>
+        /// <item><description><b>Latency</b>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of seconds.</description></item>
         /// <item><description><b>Status</b>: DTS monitors the status of a DTS task. If the state of the task changes to <b>Error</b> or <b>Restore</b>, an alert is triggered.</description></item>
-        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. Unit: hours.</description></item>
+        /// <item><description><b>Full Timeout</b>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3927,14 +4503,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await CreateJobMonitorRuleWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> This API operation is outdated. We recommend that you use the new version. For more information, see <a href="https://help.aliyun.com/document_detail/208270.html">CreateDtsInstance</a>.
-        /// Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
-        /// After you purchase a data migration instance, you must call the <a href="https://help.aliyun.com/document_detail/324260.html">ConfigureMigrationJob</a> operation to configure a data migration task.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases a data migration instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateMigrationJobRequest
@@ -3994,17 +4566,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateMigrationJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateMigrationJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateMigrationJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> This API operation is outdated. We recommend that you use the new version. For more information, see <a href="https://help.aliyun.com/document_detail/208270.html">CreateDtsInstance</a>.
-        /// Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
-        /// After you purchase a data migration instance, you must call the <a href="https://help.aliyun.com/document_detail/324260.html">ConfigureMigrationJob</a> operation to configure a data migration task.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases a data migration instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateMigrationJobRequest
@@ -4064,17 +4639,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateMigrationJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> This API operation is outdated. We recommend that you use the new version. For more information, see <a href="https://help.aliyun.com/document_detail/208270.html">CreateDtsInstance</a>.
-        /// Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
-        /// After you purchase a data migration instance, you must call the <a href="https://help.aliyun.com/document_detail/324260.html">ConfigureMigrationJob</a> operation to configure a data migration task.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases a data migration instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateMigrationJobRequest
@@ -4089,14 +4667,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return CreateMigrationJobWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> This API operation is outdated. We recommend that you use the new version. For more information, see <a href="https://help.aliyun.com/document_detail/208270.html">CreateDtsInstance</a>.
-        /// Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
-        /// After you purchase a data migration instance, you must call the <a href="https://help.aliyun.com/document_detail/324260.html">ConfigureMigrationJob</a> operation to configure a data migration task.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases a data migration instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateMigrationJobRequest
@@ -4113,8 +4687,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建DTS反向增量同步任务</para>
+        /// <para>Creates a reverse task for a data synchronization or migration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用接口创建的反向任务会立即进行预检查，预检查通过后会进行增量数据采集，增量数据写入模块不会运行（需要调用<b>StartReverseWriter</b>接口运行）。</para>
+        /// <remarks>
+        /// <para>创建的反向任务固定为同步任务，且只有增量写入模块。</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateReverseDtsJobRequest
@@ -4162,13 +4744,28 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateReverseDtsJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateReverseDtsJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateReverseDtsJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建DTS反向增量同步任务</para>
+        /// <para>Creates a reverse task for a data synchronization or migration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用接口创建的反向任务会立即进行预检查，预检查通过后会进行增量数据采集，增量数据写入模块不会运行（需要调用<b>StartReverseWriter</b>接口运行）。</para>
+        /// <remarks>
+        /// <para>创建的反向任务固定为同步任务，且只有增量写入模块。</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateReverseDtsJobRequest
@@ -4216,13 +4813,28 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateReverseDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateReverseDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateReverseDtsJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建DTS反向增量同步任务</para>
+        /// <para>Creates a reverse task for a data synchronization or migration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用接口创建的反向任务会立即进行预检查，预检查通过后会进行增量数据采集，增量数据写入模块不会运行（需要调用<b>StartReverseWriter</b>接口运行）。</para>
+        /// <remarks>
+        /// <para>创建的反向任务固定为同步任务，且只有增量写入模块。</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateReverseDtsJobRequest
@@ -4239,8 +4851,16 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建DTS反向增量同步任务</para>
+        /// <para>Creates a reverse task for a data synchronization or migration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用接口创建的反向任务会立即进行预检查，预检查通过后会进行增量数据采集，增量数据写入模块不会运行（需要调用<b>StartReverseWriter</b>接口运行）。</para>
+        /// <remarks>
+        /// <para>创建的反向任务固定为同步任务，且只有增量写入模块。</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateReverseDtsJobRequest
@@ -4255,10 +4875,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await CreateReverseDtsJobWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases a change tracking instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateSubscriptionInstanceRequest
@@ -4330,13 +4950,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateSubscriptionInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateSubscriptionInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateSubscriptionInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases a change tracking instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateSubscriptionInstanceRequest
@@ -4408,13 +5035,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateSubscriptionInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateSubscriptionInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateSubscriptionInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases a change tracking instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateSubscriptionInstanceRequest
@@ -4429,10 +5063,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return CreateSubscriptionInstanceWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases a change tracking instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateSubscriptionInstanceRequest
@@ -4447,11 +5081,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await CreateSubscriptionInstanceWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
-        /// After you purchase a data synchronization instance, you must call the <a href="https://help.aliyun.com/document_detail/49447.html">ConfigureSynchronizationJob</a> operation to configure a data synchronization task. Then, the task is automatically started.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data synchronization instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateSynchronizationJobRequest
@@ -4547,14 +5180,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateSynchronizationJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateSynchronizationJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateSynchronizationJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
-        /// After you purchase a data synchronization instance, you must call the <a href="https://help.aliyun.com/document_detail/49447.html">ConfigureSynchronizationJob</a> operation to configure a data synchronization task. Then, the task is automatically started.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data synchronization instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateSynchronizationJobRequest
@@ -4650,14 +5289,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateSynchronizationJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
-        /// After you purchase a data synchronization instance, you must call the <a href="https://help.aliyun.com/document_detail/49447.html">ConfigureSynchronizationJob</a> operation to configure a data synchronization task. Then, the task is automatically started.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data synchronization instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateSynchronizationJobRequest
@@ -4672,11 +5317,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return CreateSynchronizationJobWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).
-        /// After you purchase a data synchronization instance, you must call the <a href="https://help.aliyun.com/document_detail/49447.html">ConfigureSynchronizationJob</a> operation to configure a data synchronization task. Then, the task is automatically started.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data synchronization instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateSynchronizationJobRequest
@@ -4691,6 +5335,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await CreateSynchronizationJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a consumer group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteConsumerChannelRequest
         /// </param>
@@ -4741,9 +5390,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteConsumerChannelResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteConsumerChannelResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteConsumerChannelResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a consumer group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteConsumerChannelRequest
         /// </param>
@@ -4794,9 +5455,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteConsumerChannelResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteConsumerChannelResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteConsumerChannelResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a consumer group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteConsumerChannelRequest
         /// </param>
@@ -4810,6 +5483,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DeleteConsumerChannelWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a consumer group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteConsumerChannelRequest
         /// </param>
@@ -4823,6 +5501,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DeleteConsumerChannelWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a consumer group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteConsumerGroupRequest
         /// </param>
@@ -4877,9 +5560,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteConsumerGroupResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteConsumerGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteConsumerGroupResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a consumer group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteConsumerGroupRequest
         /// </param>
@@ -4934,9 +5629,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a consumer group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteConsumerGroupRequest
         /// </param>
@@ -4950,6 +5657,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DeleteConsumerGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a consumer group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteConsumerGroupRequest
         /// </param>
@@ -4965,7 +5677,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>Deletes a data migration, data synchronization, or change tracking task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5026,12 +5738,19 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteDtsJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteDtsJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteDtsJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>Deletes a data migration, data synchronization, or change tracking task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5092,12 +5811,19 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteDtsJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>Deletes a data migration, data synchronization, or change tracking task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5115,7 +5841,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>Deletes a data migration, data synchronization, or change tracking task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5182,7 +5908,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteDtsJobsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteDtsJobsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteDtsJobsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -5236,7 +5969,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteDtsJobsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -5275,12 +6015,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DeleteDtsJobsWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After a data migration instance is released, it cannot be recovered.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a data migration instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteMigrationJobRequest
@@ -5332,15 +6070,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteMigrationJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteMigrationJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteMigrationJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After a data migration instance is released, it cannot be recovered.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a data migration instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteMigrationJobRequest
@@ -5392,15 +6135,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteMigrationJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After a data migration instance is released, it cannot be recovered.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a data migration instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteMigrationJobRequest
@@ -5415,12 +6163,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DeleteMigrationJobWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After a data migration instance is released, it cannot be recovered.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a data migration instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteMigrationJobRequest
@@ -5435,12 +6181,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DeleteMigrationJobWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After a change tracking instance is released, it cannot be recovered.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a change tracking instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteSubscriptionInstanceRequest
@@ -5492,15 +6236,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteSubscriptionInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteSubscriptionInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteSubscriptionInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After a change tracking instance is released, it cannot be recovered.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a change tracking instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteSubscriptionInstanceRequest
@@ -5552,15 +6301,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteSubscriptionInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteSubscriptionInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteSubscriptionInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After a change tracking instance is released, it cannot be recovered.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a change tracking instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteSubscriptionInstanceRequest
@@ -5575,12 +6329,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DeleteSubscriptionInstanceWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After a change tracking instance is released, it cannot be recovered.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a change tracking instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteSubscriptionInstanceRequest
@@ -5595,12 +6347,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DeleteSubscriptionInstanceWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After a data synchronization instance is released, it cannot be recovered.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a data synchronization instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteSynchronizationJobRequest
@@ -5652,15 +6402,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteSynchronizationJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteSynchronizationJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteSynchronizationJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After a data synchronization instance is released, it cannot be recovered.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a data synchronization instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteSynchronizationJobRequest
@@ -5712,15 +6467,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteSynchronizationJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After a data synchronization instance is released, it cannot be recovered.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a data synchronization instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteSynchronizationJobRequest
@@ -5735,12 +6495,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DeleteSynchronizationJobWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After a data synchronization instance is released, it cannot be recovered.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a data synchronization instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteSynchronizationJobRequest
@@ -5818,7 +6576,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeChannelAccountResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeChannelAccountResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeChannelAccountResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -5884,7 +6649,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeChannelAccountResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeChannelAccountResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeChannelAccountResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -5986,7 +6758,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeCheckJobsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeCheckJobsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeCheckJobsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -6052,7 +6831,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeCheckJobsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeCheckJobsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeCheckJobsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -6168,7 +6954,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeClusterOperateLogsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeClusterOperateLogsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeClusterOperateLogsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -6248,7 +7041,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeClusterOperateLogsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeClusterOperateLogsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeClusterOperateLogsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -6364,7 +7164,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeClusterUsedUtilizationResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeClusterUsedUtilizationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeClusterUsedUtilizationResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -6444,7 +7251,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeClusterUsedUtilizationResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeClusterUsedUtilizationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeClusterUsedUtilizationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -6483,6 +7297,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeClusterUsedUtilizationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connectivity of Data Transmission Service (DTS) servers to the source and destination databases.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConnectionStatusRequest
         /// </param>
@@ -6609,9 +7428,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeConnectionStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeConnectionStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeConnectionStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connectivity of Data Transmission Service (DTS) servers to the source and destination databases.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConnectionStatusRequest
         /// </param>
@@ -6738,9 +7569,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeConnectionStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeConnectionStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeConnectionStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connectivity of Data Transmission Service (DTS) servers to the source and destination databases.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConnectionStatusRequest
         /// </param>
@@ -6754,6 +7597,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeConnectionStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connectivity of Data Transmission Service (DTS) servers to the source and destination databases.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConnectionStatusRequest
         /// </param>
@@ -6767,6 +7615,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeConnectionStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a consumer group, including the consumer group ID, consumer group name, username, and message latency.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConsumerChannelRequest
         /// </param>
@@ -6825,9 +7678,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeConsumerChannelResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeConsumerChannelResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeConsumerChannelResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a consumer group, including the consumer group ID, consumer group name, username, and message latency.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConsumerChannelRequest
         /// </param>
@@ -6886,9 +7751,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeConsumerChannelResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeConsumerChannelResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeConsumerChannelResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a consumer group, including the consumer group ID, consumer group name, username, and message latency.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConsumerChannelRequest
         /// </param>
@@ -6902,6 +7779,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeConsumerChannelWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a consumer group, including the consumer group ID, consumer group name, username, and message latency.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConsumerChannelRequest
         /// </param>
@@ -6978,7 +7860,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeConsumerGroupResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeConsumerGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeConsumerGroupResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -7044,7 +7933,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeConsumerGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeConsumerGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -7083,13 +7979,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeConsumerGroupWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If the <b>source or destination instance</b> is an <b>on-premises database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
-        /// <remarks>
-        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on ECS</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the CIDR blocks of DTS servers.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DescribeDTSIPRequest
@@ -7137,16 +8030,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDTSIPResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDTSIPResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDTSIPResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If the <b>source or destination instance</b> is an <b>on-premises database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
-        /// <remarks>
-        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on ECS</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the CIDR blocks of DTS servers.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DescribeDTSIPRequest
@@ -7194,16 +8091,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDTSIPResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDTSIPResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDTSIPResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If the <b>source or destination instance</b> is an <b>on-premises database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
-        /// <remarks>
-        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on ECS</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the CIDR blocks of DTS servers.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DescribeDTSIPRequest
@@ -7218,13 +8119,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeDTSIPWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If the <b>source or destination instance</b> is an <b>on-premises database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
-        /// <remarks>
-        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on ECS</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically add the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the CIDR blocks of DTS servers.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DescribeDTSIPRequest
@@ -7294,7 +8192,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDataCheckReportUrlResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDataCheckReportUrlResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDataCheckReportUrlResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -7352,7 +8257,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDataCheckReportUrlResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDataCheckReportUrlResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDataCheckReportUrlResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -7458,7 +8370,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDataCheckTableDetailsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDataCheckTableDetailsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDataCheckTableDetailsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -7528,7 +8447,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDataCheckTableDetailsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDataCheckTableDetailsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDataCheckTableDetailsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -7567,6 +8493,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeDataCheckTableDetailsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about inconsistent data in the data verification task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDataCheckTableDiffDetailsRequest
         /// </param>
@@ -7625,9 +8556,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDataCheckTableDiffDetailsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDataCheckTableDiffDetailsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDataCheckTableDiffDetailsResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about inconsistent data in the data verification task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDataCheckTableDiffDetailsRequest
         /// </param>
@@ -7686,9 +8629,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDataCheckTableDiffDetailsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDataCheckTableDiffDetailsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDataCheckTableDiffDetailsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about inconsistent data in the data verification task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDataCheckTableDiffDetailsRequest
         /// </param>
@@ -7702,6 +8657,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeDataCheckTableDiffDetailsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about inconsistent data in the data verification task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDataCheckTableDiffDetailsRequest
         /// </param>
@@ -7766,7 +8726,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDedicatedClusterResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDedicatedClusterResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDedicatedClusterResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -7820,7 +8787,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDedicatedClusterResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -7861,7 +8835,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</para>
+        /// <para>Queries the information about an alert rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7910,12 +8884,19 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDedicatedClusterMonitorRuleResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDedicatedClusterMonitorRuleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDedicatedClusterMonitorRuleResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</para>
+        /// <para>Queries the information about an alert rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7964,12 +8945,19 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDedicatedClusterMonitorRuleResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDedicatedClusterMonitorRuleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDedicatedClusterMonitorRuleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</para>
+        /// <para>Queries the information about an alert rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7987,7 +8975,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</para>
+        /// <para>Queries the information about an alert rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8005,7 +8993,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ETL任务版本信息</para>
+        /// <para>Queries the details of extract, transform, and load (ETL) tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8062,12 +9050,19 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDtsEtlJobVersionInfoResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDtsEtlJobVersionInfoResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDtsEtlJobVersionInfoResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ETL任务版本信息</para>
+        /// <para>Queries the details of extract, transform, and load (ETL) tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8124,12 +9119,19 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDtsEtlJobVersionInfoResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDtsEtlJobVersionInfoResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDtsEtlJobVersionInfoResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ETL任务版本信息</para>
+        /// <para>Queries the details of extract, transform, and load (ETL) tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8147,7 +9149,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ETL任务版本信息</para>
+        /// <para>Queries the details of extract, transform, and load (ETL) tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8222,7 +9224,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDtsJobConfigResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDtsJobConfigResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDtsJobConfigResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -8284,7 +9293,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDtsJobConfigResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDtsJobConfigResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDtsJobConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -8325,10 +9341,8 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The latency of incremental data migration or synchronization.</para>
-        /// <remarks>
-        /// <para> If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
-        /// </remarks>
+        /// <para>The latency of incremental data migration or synchronization.
+        /// \\\\\&gt;  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8389,15 +9403,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDtsJobDetailResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDtsJobDetailResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDtsJobDetailResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The latency of incremental data migration or synchronization.</para>
-        /// <remarks>
-        /// <para> If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
-        /// </remarks>
+        /// <para>The latency of incremental data migration or synchronization.
+        /// \\\\\&gt;  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8458,15 +9477,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDtsJobDetailResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDtsJobDetailResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDtsJobDetailResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The latency of incremental data migration or synchronization.</para>
-        /// <remarks>
-        /// <para> If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
-        /// </remarks>
+        /// <para>The latency of incremental data migration or synchronization.
+        /// \\\\\&gt;  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8484,10 +9508,8 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The latency of incremental data migration or synchronization.</para>
-        /// <remarks>
-        /// <para> If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
-        /// </remarks>
+        /// <para>The latency of incremental data migration or synchronization.
+        /// \\\\\&gt;  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8640,7 +9662,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDtsJobsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDtsJobsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDtsJobsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -8780,7 +9809,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDtsJobsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -8910,7 +9946,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDtsServiceLogResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDtsServiceLogResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDtsServiceLogResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -8992,7 +10035,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDtsServiceLogResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDtsServiceLogResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDtsServiceLogResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -9031,10 +10081,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeDtsServiceLogWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/201858.html">SwitchSynchronizationEndpoint</a> operation to change the database connection settings.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the task that changes the database connection settings.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DescribeEndpointSwitchStatusRequest
@@ -9090,13 +10140,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeEndpointSwitchStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeEndpointSwitchStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeEndpointSwitchStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/201858.html">SwitchSynchronizationEndpoint</a> operation to change the database connection settings.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the task that changes the database connection settings.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DescribeEndpointSwitchStatusRequest
@@ -9152,13 +10209,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeEndpointSwitchStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeEndpointSwitchStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeEndpointSwitchStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/201858.html">SwitchSynchronizationEndpoint</a> operation to change the database connection settings.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the task that changes the database connection settings.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DescribeEndpointSwitchStatusRequest
@@ -9173,10 +10237,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeEndpointSwitchStatusWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/201858.html">SwitchSynchronizationEndpoint</a> operation to change the database connection settings.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the task that changes the database connection settings.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DescribeEndpointSwitchStatusRequest
@@ -9191,6 +10255,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeEndpointSwitchStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of extract, transform, and load (ETL) tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeEtlJobLogsRequest
         /// </param>
@@ -9233,9 +10302,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeEtlJobLogsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeEtlJobLogsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeEtlJobLogsResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of extract, transform, and load (ETL) tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeEtlJobLogsRequest
         /// </param>
@@ -9278,9 +10359,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeEtlJobLogsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeEtlJobLogsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeEtlJobLogsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of extract, transform, and load (ETL) tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeEtlJobLogsRequest
         /// </param>
@@ -9294,6 +10387,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeEtlJobLogsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of extract, transform, and load (ETL) tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeEtlJobLogsRequest
         /// </param>
@@ -9307,6 +10405,359 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeEtlJobLogsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries full data migration tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFullProcessListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFullProcessListResponse
+        /// </returns>
+        public DescribeFullProcessListResponse DescribeFullProcessListWithOptions(DescribeFullProcessListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroEtlJob))
+            {
+                query["ZeroEtlJob"] = request.ZeroEtlJob;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFullProcessList",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeFullProcessListResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeFullProcessListResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries full data migration tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFullProcessListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFullProcessListResponse
+        /// </returns>
+        public async Task<DescribeFullProcessListResponse> DescribeFullProcessListWithOptionsAsync(DescribeFullProcessListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroEtlJob))
+            {
+                query["ZeroEtlJob"] = request.ZeroEtlJob;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFullProcessList",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeFullProcessListResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeFullProcessListResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries full data migration tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFullProcessListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFullProcessListResponse
+        /// </returns>
+        public DescribeFullProcessListResponse DescribeFullProcessList(DescribeFullProcessListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFullProcessListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries full data migration tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFullProcessListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFullProcessListResponse
+        /// </returns>
+        public async Task<DescribeFullProcessListResponse> DescribeFullProcessListAsync(DescribeFullProcessListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFullProcessListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询GAD实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGadInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGadInstancesResponse
+        /// </returns>
+        public DescribeGadInstancesResponse DescribeGadInstancesWithOptions(DescribeGadInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterDbInstanceId))
+            {
+                query["MasterDbInstanceId"] = request.MasterDbInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveDbInstanceId))
+            {
+                query["SlaveDbInstanceId"] = request.SlaveDbInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGadInstances",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeGadInstancesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeGadInstancesResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询GAD实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGadInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGadInstancesResponse
+        /// </returns>
+        public async Task<DescribeGadInstancesResponse> DescribeGadInstancesWithOptionsAsync(DescribeGadInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterDbInstanceId))
+            {
+                query["MasterDbInstanceId"] = request.MasterDbInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveDbInstanceId))
+            {
+                query["SlaveDbInstanceId"] = request.SlaveDbInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGadInstances",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeGadInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeGadInstancesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询GAD实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGadInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGadInstancesResponse
+        /// </returns>
+        public DescribeGadInstancesResponse DescribeGadInstances(DescribeGadInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeGadInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询GAD实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGadInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGadInstancesResponse
+        /// </returns>
+        public async Task<DescribeGadInstancesResponse> DescribeGadInstancesAsync(DescribeGadInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeGadInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of initial data synchronization, including the information about the schemas and historical data of the object to be synchronized.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInitializationStatusRequest
         /// </param>
@@ -9365,9 +10816,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInitializationStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInitializationStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInitializationStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of initial data synchronization, including the information about the schemas and historical data of the object to be synchronized.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInitializationStatusRequest
         /// </param>
@@ -9426,9 +10889,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInitializationStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInitializationStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInitializationStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of initial data synchronization, including the information about the schemas and historical data of the object to be synchronized.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInitializationStatusRequest
         /// </param>
@@ -9442,6 +10917,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeInitializationStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of initial data synchronization, including the information about the schemas and historical data of the object to be synchronized.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInitializationStatusRequest
         /// </param>
@@ -9455,6 +10935,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeInitializationStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the monitoring rules of a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeJobMonitorRuleRequest
         /// </param>
@@ -9497,9 +10982,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeJobMonitorRuleResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeJobMonitorRuleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeJobMonitorRuleResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the monitoring rules of a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeJobMonitorRuleRequest
         /// </param>
@@ -9542,9 +11039,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeJobMonitorRuleResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeJobMonitorRuleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeJobMonitorRuleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the monitoring rules of a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeJobMonitorRuleRequest
         /// </param>
@@ -9558,6 +11067,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeJobMonitorRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the monitoring rules of a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeJobMonitorRuleRequest
         /// </param>
@@ -9656,7 +11170,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeMetricListResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeMetricListResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeMetricListResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -9744,7 +11265,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeMetricListResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeMetricListResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeMetricListResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -9783,6 +11311,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeMetricListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alert settings of a data migration instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMigrationJobAlertRequest
         /// </param>
@@ -9837,9 +11370,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeMigrationJobAlertResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeMigrationJobAlertResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeMigrationJobAlertResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alert settings of a data migration instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMigrationJobAlertRequest
         /// </param>
@@ -9894,9 +11439,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeMigrationJobAlertResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeMigrationJobAlertResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeMigrationJobAlertResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alert settings of a data migration instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMigrationJobAlertRequest
         /// </param>
@@ -9910,6 +11467,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeMigrationJobAlertWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alert settings of a data migration instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMigrationJobAlertRequest
         /// </param>
@@ -9927,11 +11489,6 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <summary>
         /// <para>Queries the details of a data migration task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMigrationJobDetailRequest
@@ -9999,18 +11556,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeMigrationJobDetailResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeMigrationJobDetailResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeMigrationJobDetailResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the details of a data migration task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMigrationJobDetailRequest
@@ -10078,18 +11637,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeMigrationJobDetailResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeMigrationJobDetailResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeMigrationJobDetailResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the details of a data migration task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMigrationJobDetailRequest
@@ -10108,11 +11669,6 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <summary>
         /// <para>Queries the details of a data migration task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMigrationJobDetailRequest
@@ -10186,7 +11742,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeMigrationJobStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeMigrationJobStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeMigrationJobStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -10248,7 +11811,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeMigrationJobStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeMigrationJobStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeMigrationJobStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -10354,7 +11924,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeMigrationJobsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeMigrationJobsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeMigrationJobsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -10424,7 +12001,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeMigrationJobsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeMigrationJobsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeMigrationJobsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -10463,6 +12047,177 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeMigrationJobsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询预检查创建GAD订单任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePreCheckCreateGadOrderResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePreCheckCreateGadOrderResultResponse
+        /// </returns>
+        public DescribePreCheckCreateGadOrderResultResponse DescribePreCheckCreateGadOrderResultWithOptions(DescribePreCheckCreateGadOrderResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePreCheckCreateGadOrderResult",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribePreCheckCreateGadOrderResultResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribePreCheckCreateGadOrderResultResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询预检查创建GAD订单任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePreCheckCreateGadOrderResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePreCheckCreateGadOrderResultResponse
+        /// </returns>
+        public async Task<DescribePreCheckCreateGadOrderResultResponse> DescribePreCheckCreateGadOrderResultWithOptionsAsync(DescribePreCheckCreateGadOrderResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePreCheckCreateGadOrderResult",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribePreCheckCreateGadOrderResultResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribePreCheckCreateGadOrderResultResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询预检查创建GAD订单任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePreCheckCreateGadOrderResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePreCheckCreateGadOrderResultResponse
+        /// </returns>
+        public DescribePreCheckCreateGadOrderResultResponse DescribePreCheckCreateGadOrderResult(DescribePreCheckCreateGadOrderResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePreCheckCreateGadOrderResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询预检查创建GAD订单任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePreCheckCreateGadOrderResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePreCheckCreateGadOrderResultResponse
+        /// </returns>
+        public async Task<DescribePreCheckCreateGadOrderResultResponse> DescribePreCheckCreateGadOrderResultAsync(DescribePreCheckCreateGadOrderResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePreCheckCreateGadOrderResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a Data Transmission Service (DTS) subtask that performs precheck, schema migration, initial schema synchronization, full data migration, initial full data synchronization, incremental data migration, or incremental data synchronization.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePreCheckStatusRequest
         /// </param>
@@ -10533,9 +12288,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribePreCheckStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribePreCheckStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribePreCheckStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a Data Transmission Service (DTS) subtask that performs precheck, schema migration, initial schema synchronization, full data migration, initial full data synchronization, incremental data migration, or incremental data synchronization.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePreCheckStatusRequest
         /// </param>
@@ -10606,9 +12373,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribePreCheckStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribePreCheckStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribePreCheckStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a Data Transmission Service (DTS) subtask that performs precheck, schema migration, initial schema synchronization, full data migration, initial full data synchronization, incremental data migration, or incremental data synchronization.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePreCheckStatusRequest
         /// </param>
@@ -10622,6 +12401,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribePreCheckStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a Data Transmission Service (DTS) subtask that performs precheck, schema migration, initial schema synchronization, full data migration, initial full data synchronization, incremental data migration, or incremental data synchronization.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePreCheckStatusRequest
         /// </param>
@@ -10635,6 +12419,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribePreCheckStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alert settings of a change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSubscriptionInstanceAlertRequest
         /// </param>
@@ -10689,9 +12478,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSubscriptionInstanceAlertResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSubscriptionInstanceAlertResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSubscriptionInstanceAlertResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alert settings of a change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSubscriptionInstanceAlertRequest
         /// </param>
@@ -10746,9 +12547,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSubscriptionInstanceAlertResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSubscriptionInstanceAlertResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSubscriptionInstanceAlertResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alert settings of a change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSubscriptionInstanceAlertRequest
         /// </param>
@@ -10762,6 +12575,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeSubscriptionInstanceAlertWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alert settings of a change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSubscriptionInstanceAlertRequest
         /// </param>
@@ -10830,7 +12648,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSubscriptionInstanceStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSubscriptionInstanceStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSubscriptionInstanceStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -10888,7 +12713,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSubscriptionInstanceStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSubscriptionInstanceStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSubscriptionInstanceStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -10998,7 +12830,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSubscriptionInstancesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSubscriptionInstancesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSubscriptionInstancesResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -11072,7 +12911,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSubscriptionInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSubscriptionInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSubscriptionInstancesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -11111,6 +12957,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeSubscriptionInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the subtasks in a distributed change tracking task for a PolarDB-X 1.0 instance.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</para>
@@ -11183,9 +13034,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSubscriptionMetaResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSubscriptionMetaResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSubscriptionMetaResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the subtasks in a distributed change tracking task for a PolarDB-X 1.0 instance.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</para>
@@ -11258,9 +13121,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSubscriptionMetaResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSubscriptionMetaResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSubscriptionMetaResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the subtasks in a distributed change tracking task for a PolarDB-X 1.0 instance.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</para>
@@ -11282,6 +13157,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeSubscriptionMetaWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the subtasks in a distributed change tracking task for a PolarDB-X 1.0 instance.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</para>
@@ -11358,7 +13238,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSyncStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSyncStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSyncStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -11416,7 +13303,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSyncStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSyncStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSyncStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -11455,6 +13349,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeSyncStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alert settings of a data synchronization instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSynchronizationJobAlertRequest
         /// </param>
@@ -11513,9 +13412,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSynchronizationJobAlertResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobAlertResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobAlertResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alert settings of a data synchronization instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSynchronizationJobAlertRequest
         /// </param>
@@ -11574,9 +13485,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSynchronizationJobAlertResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobAlertResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobAlertResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alert settings of a data synchronization instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSynchronizationJobAlertRequest
         /// </param>
@@ -11590,6 +13513,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeSynchronizationJobAlertWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the alert settings of a data synchronization instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSynchronizationJobAlertRequest
         /// </param>
@@ -11603,6 +13531,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeSynchronizationJobAlertWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether image matching is enabled for a data synchronization instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSynchronizationJobReplicatorCompareRequest
         /// </param>
@@ -11661,9 +13594,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSynchronizationJobReplicatorCompareResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobReplicatorCompareResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobReplicatorCompareResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether image matching is enabled for a data synchronization instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSynchronizationJobReplicatorCompareRequest
         /// </param>
@@ -11722,9 +13667,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSynchronizationJobReplicatorCompareResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobReplicatorCompareResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobReplicatorCompareResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether image matching is enabled for a data synchronization instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSynchronizationJobReplicatorCompareRequest
         /// </param>
@@ -11738,6 +13695,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeSynchronizationJobReplicatorCompareWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether image matching is enabled for a data synchronization instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSynchronizationJobReplicatorCompareRequest
         /// </param>
@@ -11814,7 +13776,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSynchronizationJobStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -11880,7 +13849,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSynchronizationJobStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -11919,6 +13895,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeSynchronizationJobStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of one or more data synchronization instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSynchronizationJobStatusListRequest
         /// </param>
@@ -11973,9 +13954,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSynchronizationJobStatusListResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobStatusListResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobStatusListResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of one or more data synchronization instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSynchronizationJobStatusListRequest
         /// </param>
@@ -12030,9 +14023,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSynchronizationJobStatusListResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobStatusListResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobStatusListResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of one or more data synchronization instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSynchronizationJobStatusListRequest
         /// </param>
@@ -12046,6 +14051,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeSynchronizationJobStatusListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of one or more data synchronization instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSynchronizationJobStatusListRequest
         /// </param>
@@ -12061,7 +14071,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
+        /// <para>Queries the list of data synchronization instances and the details of each instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12130,12 +14140,19 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSynchronizationJobsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
+        /// <para>Queries the list of data synchronization instances and the details of each instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12204,12 +14221,19 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSynchronizationJobsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSynchronizationJobsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
+        /// <para>Queries the list of data synchronization instances and the details of each instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12227,7 +14251,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
+        /// <para>Queries the list of data synchronization instances and the details of each instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12243,10 +14267,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeSynchronizationJobsWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49451.html">ModifySynchronizationObject</a> operation to obtain the task ID.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the task that changes the objects to be synchronized.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DescribeSynchronizationObjectModifyStatusRequest
@@ -12302,13 +14326,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSynchronizationObjectModifyStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSynchronizationObjectModifyStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSynchronizationObjectModifyStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49451.html">ModifySynchronizationObject</a> operation to obtain the task ID.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the task that changes the objects to be synchronized.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DescribeSynchronizationObjectModifyStatusRequest
@@ -12364,13 +14395,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSynchronizationObjectModifyStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSynchronizationObjectModifyStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSynchronizationObjectModifyStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49451.html">ModifySynchronizationObject</a> operation to obtain the task ID.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the task that changes the objects to be synchronized.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DescribeSynchronizationObjectModifyStatusRequest
@@ -12385,10 +14423,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeSynchronizationObjectModifyStatusWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49451.html">ModifySynchronizationObject</a> operation to obtain the task ID.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the task that changes the objects to be synchronized.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DescribeSynchronizationObjectModifyStatusRequest
@@ -12403,6 +14441,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeSynchronizationObjectModifyStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all the tags added to a data migration, data synchronization, or change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagKeysRequest
         /// </param>
@@ -12461,9 +14504,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTagKeysResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTagKeysResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTagKeysResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all the tags added to a data migration, data synchronization, or change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagKeysRequest
         /// </param>
@@ -12522,9 +14577,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTagKeysResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTagKeysResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTagKeysResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all the tags added to a data migration, data synchronization, or change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagKeysRequest
         /// </param>
@@ -12538,6 +14605,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeTagKeysWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all the tags added to a data migration, data synchronization, or change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagKeysRequest
         /// </param>
@@ -12551,6 +14623,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await DescribeTagKeysWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all the tag values of a tag bound to a data migration, data synchronization, or change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagValuesRequest
         /// </param>
@@ -12613,9 +14690,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTagValuesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTagValuesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTagValuesResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all the tag values of a tag bound to a data migration, data synchronization, or change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagValuesRequest
         /// </param>
@@ -12678,9 +14767,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTagValuesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTagValuesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTagValuesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all the tag values of a tag bound to a data migration, data synchronization, or change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagValuesRequest
         /// </param>
@@ -12694,6 +14795,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return DescribeTagValuesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all the tag values of a tag bound to a data migration, data synchronization, or change tracking instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagValuesRequest
         /// </param>
@@ -12705,6 +14811,172 @@ namespace AlibabaCloud.SDK.Dts20200101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTagValuesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除从角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachGadInstanceDbMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachGadInstanceDbMemberResponse
+        /// </returns>
+        public DetachGadInstanceDbMemberResponse DetachGadInstanceDbMemberWithOptions(DetachGadInstanceDbMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveDbInstanceId))
+            {
+                query["SlaveDbInstanceId"] = request.SlaveDbInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachGadInstanceDbMember",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DetachGadInstanceDbMemberResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DetachGadInstanceDbMemberResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除从角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachGadInstanceDbMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachGadInstanceDbMemberResponse
+        /// </returns>
+        public async Task<DetachGadInstanceDbMemberResponse> DetachGadInstanceDbMemberWithOptionsAsync(DetachGadInstanceDbMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveDbInstanceId))
+            {
+                query["SlaveDbInstanceId"] = request.SlaveDbInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachGadInstanceDbMember",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DetachGadInstanceDbMemberResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DetachGadInstanceDbMemberResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除从角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachGadInstanceDbMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachGadInstanceDbMemberResponse
+        /// </returns>
+        public DetachGadInstanceDbMemberResponse DetachGadInstanceDbMember(DetachGadInstanceDbMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetachGadInstanceDbMemberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除从角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachGadInstanceDbMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachGadInstanceDbMemberResponse
+        /// </returns>
+        public async Task<DetachGadInstanceDbMemberResponse> DetachGadInstanceDbMemberAsync(DetachGadInstanceDbMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetachGadInstanceDbMemberWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12778,7 +15050,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<InitDtsRdsInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<InitDtsRdsInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<InitDtsRdsInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -12852,7 +15131,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<InitDtsRdsInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<InitDtsRdsInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<InitDtsRdsInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -12982,7 +15268,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListDedicatedClusterResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListDedicatedClusterResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListDedicatedClusterResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -13060,7 +15353,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListDedicatedClusterResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -13099,6 +15399,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ListDedicatedClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are bound to specific data migration, data synchronization, or change tracking instances, or queries the instances to which specific tags are bound.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <hr>
@@ -13158,9 +15463,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are bound to specific data migration, data synchronization, or change tracking instances, or queries the instances to which specific tags are bound.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <hr>
@@ -13220,9 +15537,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are bound to specific data migration, data synchronization, or change tracking instances, or queries the instances to which specific tags are bound.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <hr>
@@ -13241,6 +15570,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are bound to specific data migration, data synchronization, or change tracking instances, or queries the instances to which specific tags are bound.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <hr>
@@ -13259,6 +15593,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a consumer group, including the consumer group name, username, and password.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyConsumerChannelRequest
         /// </param>
@@ -13321,9 +15660,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyConsumerChannelResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyConsumerChannelResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyConsumerChannelResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a consumer group, including the consumer group name, username, and password.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyConsumerChannelRequest
         /// </param>
@@ -13386,9 +15737,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyConsumerChannelResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyConsumerChannelResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyConsumerChannelResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a consumer group, including the consumer group name, username, and password.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyConsumerChannelRequest
         /// </param>
@@ -13402,6 +15765,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ModifyConsumerChannelWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a consumer group, including the consumer group name, username, and password.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyConsumerChannelRequest
         /// </param>
@@ -13415,15 +15783,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ModifyConsumerChannelWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
-        /// <item><description>When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the password of a consumer group</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifyConsumerGroupPasswordRequest
@@ -13495,18 +15858,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyConsumerGroupPasswordResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyConsumerGroupPasswordResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyConsumerGroupPasswordResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
-        /// <item><description>When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the password of a consumer group</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifyConsumerGroupPasswordRequest
@@ -13578,18 +15943,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyConsumerGroupPasswordResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyConsumerGroupPasswordResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyConsumerGroupPasswordResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
-        /// <item><description>When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the password of a consumer group</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifyConsumerGroupPasswordRequest
@@ -13604,15 +15971,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ModifyConsumerGroupPasswordWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>This operation is applicable to only the new version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the ConfigureSubscriptionInstance operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
-        /// <item><description>When you call this operation, the change tracking task must be in the NotStarted, Failed, Normal, or Abnormal state.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the password of a consumer group</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifyConsumerGroupPasswordRequest
@@ -13627,16 +15989,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ModifyConsumerGroupPasswordWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the <a href="https://help.aliyun.com/document_detail/49437.html">ConfigureSubscriptionInstance</a> operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
-        /// <item><description>If you use the new version, you need to set the consumption checkpoint on the change tracking client.</description></item>
-        /// <item><description>When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the consumption checkpoint of a change tracking instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifyConsumptionTimestampRequest
@@ -13692,19 +16048,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyConsumptionTimestampResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyConsumptionTimestampResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyConsumptionTimestampResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the <a href="https://help.aliyun.com/document_detail/49437.html">ConfigureSubscriptionInstance</a> operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
-        /// <item><description>If you use the new version, you need to set the consumption checkpoint on the change tracking client.</description></item>
-        /// <item><description>When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the consumption checkpoint of a change tracking instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifyConsumptionTimestampRequest
@@ -13760,19 +16117,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyConsumptionTimestampResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyConsumptionTimestampResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyConsumptionTimestampResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the <a href="https://help.aliyun.com/document_detail/49437.html">ConfigureSubscriptionInstance</a> operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
-        /// <item><description>If you use the new version, you need to set the consumption checkpoint on the change tracking client.</description></item>
-        /// <item><description>When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the consumption checkpoint of a change tracking instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifyConsumptionTimestampRequest
@@ -13787,16 +16145,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ModifyConsumptionTimestampWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>This operation is applicable to only the previous version of the change tracking feature. To use the new version, you must specify the SubscriptionInstanceNetworkType parameter when you call the <a href="https://help.aliyun.com/document_detail/49437.html">ConfigureSubscriptionInstance</a> operation. If you use the previous version, you do not need to specify the <b>SubscriptionInstanceNetworkType</b> parameter.</description></item>
-        /// <item><description>If you use the new version, you need to set the consumption checkpoint on the change tracking client.</description></item>
-        /// <item><description>When you call this operation, you must stop the change tracking client, and the change tracking task must be in the Normal state.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the consumption checkpoint of a change tracking instance.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifyConsumptionTimestampRequest
@@ -13879,7 +16231,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDedicatedClusterResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDedicatedClusterResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDedicatedClusterResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -13950,7 +16309,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDedicatedClusterResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14111,7 +16477,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14226,7 +16599,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14441,7 +16821,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改DTS任务配置</para>
+        /// <para>Modifies the parameters of a Data Transmission Service (DTS) task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14494,12 +16874,19 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobConfigResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobConfigResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobConfigResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改DTS任务配置</para>
+        /// <para>Modifies the parameters of a Data Transmission Service (DTS) task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14552,12 +16939,19 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobConfigResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobConfigResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改DTS任务配置</para>
+        /// <para>Modifies the parameters of a Data Transmission Service (DTS) task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14575,7 +16969,7 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改DTS任务配置</para>
+        /// <para>Modifies the parameters of a Data Transmission Service (DTS) task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14593,8 +16987,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迁移专属集群任务</para>
+        /// <para>Changes the dedicated cluster on which a Data Transmission Service (DTS) task runs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>After a DTS task is migrated from a dedicated cluster to a shared cluster, the task is billed on a pay-as-you-go basis.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDtsJobDedicatedClusterRequest
@@ -14646,13 +17047,27 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobDedicatedClusterResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobDedicatedClusterResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobDedicatedClusterResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迁移专属集群任务</para>
+        /// <para>Changes the dedicated cluster on which a Data Transmission Service (DTS) task runs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>After a DTS task is migrated from a dedicated cluster to a shared cluster, the task is billed on a pay-as-you-go basis.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDtsJobDedicatedClusterRequest
@@ -14704,13 +17119,27 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobDedicatedClusterResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迁移专属集群任务</para>
+        /// <para>Changes the dedicated cluster on which a Data Transmission Service (DTS) task runs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>After a DTS task is migrated from a dedicated cluster to a shared cluster, the task is billed on a pay-as-you-go basis.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDtsJobDedicatedClusterRequest
@@ -14727,8 +17156,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迁移专属集群任务</para>
+        /// <para>Changes the dedicated cluster on which a Data Transmission Service (DTS) task runs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>After a DTS task is migrated from a dedicated cluster to a shared cluster, the task is billed on a pay-as-you-go basis.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDtsJobDedicatedClusterRequest
@@ -14806,7 +17242,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobDuLimitResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobDuLimitResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobDuLimitResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14872,7 +17315,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobDuLimitResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobDuLimitResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobDuLimitResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14929,8 +17379,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>替换源端或目标端实例</para>
+        /// <para>Changes the source or destination database instance of a data synchronization or migration task in Data Transmission Service (DTS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After the database is changed, Data Transmission Service (DTS) rolls back the incremental write offset for 10 seconds. If the synchronized or migrated data does not have a primary key, make sure that no data is written to the source database while the source or destination database is being replaced. Otherwise, duplicate data may exist.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDtsJobEndpointRequest
@@ -15042,13 +17499,27 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobEndpointResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobEndpointResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobEndpointResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>替换源端或目标端实例</para>
+        /// <para>Changes the source or destination database instance of a data synchronization or migration task in Data Transmission Service (DTS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After the database is changed, Data Transmission Service (DTS) rolls back the incremental write offset for 10 seconds. If the synchronized or migrated data does not have a primary key, make sure that no data is written to the source database while the source or destination database is being replaced. Otherwise, duplicate data may exist.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDtsJobEndpointRequest
@@ -15160,13 +17631,27 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobEndpointResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobEndpointResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobEndpointResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>替换源端或目标端实例</para>
+        /// <para>Changes the source or destination database instance of a data synchronization or migration task in Data Transmission Service (DTS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After the database is changed, Data Transmission Service (DTS) rolls back the incremental write offset for 10 seconds. If the synchronized or migrated data does not have a primary key, make sure that no data is written to the source database while the source or destination database is being replaced. Otherwise, duplicate data may exist.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDtsJobEndpointRequest
@@ -15183,8 +17668,15 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>替换源端或目标端实例</para>
+        /// <para>Changes the source or destination database instance of a data synchronization or migration task in Data Transmission Service (DTS).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After the database is changed, Data Transmission Service (DTS) rolls back the incremental write offset for 10 seconds. If the synchronized or migrated data does not have a primary key, make sure that no data is written to the source database while the source or destination database is being replaced. Otherwise, duplicate data may exist.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDtsJobEndpointRequest
@@ -15199,6 +17691,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ModifyDtsJobEndpointWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDtsJobNameRequest
         /// </param>
@@ -15249,9 +17746,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobNameResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobNameResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobNameResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDtsJobNameRequest
         /// </param>
@@ -15302,9 +17811,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobNameResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobNameResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobNameResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDtsJobNameRequest
         /// </param>
@@ -15318,6 +17839,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ModifyDtsJobNameWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the name of a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDtsJobNameRequest
         /// </param>
@@ -15331,6 +17857,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ModifyDtsJobNameWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the password of the account used to log on to the source or destination database in a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDtsJobPasswordRequest
         /// </param>
@@ -15397,9 +17928,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobPasswordResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobPasswordResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobPasswordResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the password of the account used to log on to the source or destination database in a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDtsJobPasswordRequest
         /// </param>
@@ -15466,9 +18009,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDtsJobPasswordResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDtsJobPasswordResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDtsJobPasswordResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the password of the account used to log on to the source or destination database in a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDtsJobPasswordRequest
         /// </param>
@@ -15482,6 +18037,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ModifyDtsJobPasswordWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the password of the account used to log on to the source or destination database in a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDtsJobPasswordRequest
         /// </param>
@@ -15495,6 +18055,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ModifyDtsJobPasswordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables throttling for data synchronization and data migration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDynamicConfigRequest
         /// </param>
@@ -15549,9 +18114,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDynamicConfigResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDynamicConfigResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDynamicConfigResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables throttling for data synchronization and data migration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDynamicConfigRequest
         /// </param>
@@ -15606,9 +18183,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDynamicConfigResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDynamicConfigResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDynamicConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables throttling for data synchronization and data migration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDynamicConfigRequest
         /// </param>
@@ -15622,6 +18211,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ModifyDynamicConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables throttling for data synchronization and data migration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDynamicConfigRequest
         /// </param>
@@ -15635,6 +18229,184 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ModifyDynamicConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改GAD实例名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGadInstanceNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGadInstanceNameResponse
+        /// </returns>
+        public ModifyGadInstanceNameResponse ModifyGadInstanceNameWithOptions(ModifyGadInstanceNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyGadInstanceName",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyGadInstanceNameResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyGadInstanceNameResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改GAD实例名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGadInstanceNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGadInstanceNameResponse
+        /// </returns>
+        public async Task<ModifyGadInstanceNameResponse> ModifyGadInstanceNameWithOptionsAsync(ModifyGadInstanceNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyGadInstanceName",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyGadInstanceNameResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyGadInstanceNameResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改GAD实例名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGadInstanceNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGadInstanceNameResponse
+        /// </returns>
+        public ModifyGadInstanceNameResponse ModifyGadInstanceName(ModifyGadInstanceNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyGadInstanceNameWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改GAD实例名称</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyGadInstanceNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyGadInstanceNameResponse
+        /// </returns>
+        public async Task<ModifyGadInstanceNameResponse> ModifyGadInstanceNameAsync(ModifyGadInstanceNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyGadInstanceNameWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a change tracking task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can preview related API operation parameters when you modify the information about a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifySubscriptionRequest
         /// </param>
@@ -15693,9 +18465,28 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifySubscriptionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifySubscriptionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifySubscriptionResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a change tracking task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can preview related API operation parameters when you modify the information about a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifySubscriptionRequest
         /// </param>
@@ -15754,9 +18545,28 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifySubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifySubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifySubscriptionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a change tracking task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can preview related API operation parameters when you modify the information about a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifySubscriptionRequest
         /// </param>
@@ -15770,6 +18580,18 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ModifySubscriptionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about a change tracking task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can preview related API operation parameters when you modify the information about a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifySubscriptionRequest
         /// </param>
@@ -15783,16 +18605,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ModifySubscriptionWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.</para>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
-        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the objects for change tracking.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifySubscriptionObjectRequest
@@ -15848,19 +18664,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifySubscriptionObjectResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifySubscriptionObjectResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifySubscriptionObjectResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.</para>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
-        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the objects for change tracking.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifySubscriptionObjectRequest
@@ -15916,19 +18733,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifySubscriptionObjectResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifySubscriptionObjectResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifySubscriptionObjectResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.</para>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
-        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the objects for change tracking.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifySubscriptionObjectRequest
@@ -15943,16 +18761,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ModifySubscriptionObjectWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you call this operation, the change tracking task must be in the Normal, NotStarted, or Failed state.</para>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the Normal state, DTS automatically calls the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
-        /// <item><description>If you call this operation to modify the objects of a change tracking task that is in the NotStarted or Failed state, DTS does not automatically start the task. You must call the <a href="https://help.aliyun.com/document_detail/49438.html">StartSubscriptionInstance</a> to restart the task.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the objects for change tracking.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifySubscriptionObjectRequest
@@ -15967,12 +18779,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ModifySubscriptionObjectWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the objects to be synchronized.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifySynchronizationObjectRequest
@@ -16034,15 +18844,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifySynchronizationObjectResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifySynchronizationObjectResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifySynchronizationObjectResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the objects to be synchronized.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifySynchronizationObjectRequest
@@ -16104,15 +18919,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifySynchronizationObjectResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifySynchronizationObjectResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifySynchronizationObjectResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the objects to be synchronized.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifySynchronizationObjectRequest
@@ -16127,12 +18947,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ModifySynchronizationObjectWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> When you call this operation, the data synchronization task must be in the Not Started or Synchronizing state.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the objects to be synchronized.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifySynchronizationObjectRequest
@@ -16147,6 +18965,185 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ModifySynchronizationObjectWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检查创建GAD订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PreCheckCreateGadOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreCheckCreateGadOrderResponse
+        /// </returns>
+        public PreCheckCreateGadOrderResponse PreCheckCreateGadOrderWithOptions(PreCheckCreateGadOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveDbInstanceId))
+            {
+                query["SlaveDbInstanceId"] = request.SlaveDbInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveDbInstanceRegion))
+            {
+                query["SlaveDbInstanceRegion"] = request.SlaveDbInstanceRegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreCheckCreateGadOrder",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<PreCheckCreateGadOrderResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<PreCheckCreateGadOrderResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检查创建GAD订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PreCheckCreateGadOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreCheckCreateGadOrderResponse
+        /// </returns>
+        public async Task<PreCheckCreateGadOrderResponse> PreCheckCreateGadOrderWithOptionsAsync(PreCheckCreateGadOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveDbInstanceId))
+            {
+                query["SlaveDbInstanceId"] = request.SlaveDbInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveDbInstanceRegion))
+            {
+                query["SlaveDbInstanceRegion"] = request.SlaveDbInstanceRegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreCheckCreateGadOrder",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<PreCheckCreateGadOrderResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<PreCheckCreateGadOrderResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检查创建GAD订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PreCheckCreateGadOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreCheckCreateGadOrderResponse
+        /// </returns>
+        public PreCheckCreateGadOrderResponse PreCheckCreateGadOrder(PreCheckCreateGadOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PreCheckCreateGadOrderWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检查创建GAD订单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PreCheckCreateGadOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreCheckCreateGadOrderResponse
+        /// </returns>
+        public async Task<PreCheckCreateGadOrderResponse> PreCheckCreateGadOrderAsync(PreCheckCreateGadOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PreCheckCreateGadOrderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a Data Transmission Service (DTS) instance. This API operation is available only for subscription instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RenewInstanceRequest
         /// </param>
@@ -16201,9 +19198,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RenewInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RenewInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RenewInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a Data Transmission Service (DTS) instance. This API operation is available only for subscription instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RenewInstanceRequest
         /// </param>
@@ -16258,9 +19267,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RenewInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a Data Transmission Service (DTS) instance. This API operation is available only for subscription instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RenewInstanceRequest
         /// </param>
@@ -16274,6 +19295,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return RenewInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a Data Transmission Service (DTS) instance. This API operation is available only for subscription instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RenewInstanceRequest
         /// </param>
@@ -16287,6 +19313,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await RenewInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets a data synchronization or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -16344,9 +19375,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetDtsJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ResetDtsJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ResetDtsJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets a data synchronization or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -16404,9 +19447,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ResetDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ResetDtsJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets a data synchronization or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -16427,6 +19482,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ResetDtsJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets a data synchronization or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -16447,6 +19507,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await ResetDtsJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the configurations of a data synchronization task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -16508,9 +19573,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetSynchronizationJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ResetSynchronizationJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ResetSynchronizationJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the configurations of a data synchronization task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -16572,9 +19649,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ResetSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ResetSynchronizationJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the configurations of a data synchronization task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -16595,6 +19684,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return ResetSynchronizationJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears the configurations of a data synchronization task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -16666,7 +19760,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ReverseTwoWayDirectionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ReverseTwoWayDirectionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ReverseTwoWayDirectionResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -16720,7 +19821,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ReverseTwoWayDirectionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ReverseTwoWayDirectionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ReverseTwoWayDirectionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -16763,11 +19871,6 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <summary>
         /// <para>Ignores the precheck items that a data migration or synchronization task may fail to pass.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you call this operation to ignore all precheck items, you must call the <a href="https://www.alibabacloud.com/help/zh/doc-detail/49429.htm">StartMigrationJob</a> or <a href="https://www.alibabacloud.com/help/zh/doc-detail/49448.htm">StartSynchronizationJob</a> operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ShieldPrecheckRequest
@@ -16815,18 +19918,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ShieldPrecheckResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ShieldPrecheckResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ShieldPrecheckResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Ignores the precheck items that a data migration or synchronization task may fail to pass.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you call this operation to ignore all precheck items, you must call the <a href="https://www.alibabacloud.com/help/zh/doc-detail/49429.htm">StartMigrationJob</a> or <a href="https://www.alibabacloud.com/help/zh/doc-detail/49448.htm">StartSynchronizationJob</a> operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ShieldPrecheckRequest
@@ -16874,18 +19979,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ShieldPrecheckResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ShieldPrecheckResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ShieldPrecheckResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Ignores the precheck items that a data migration or synchronization task may fail to pass.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you call this operation to ignore all precheck items, you must call the <a href="https://www.alibabacloud.com/help/zh/doc-detail/49429.htm">StartMigrationJob</a> or <a href="https://www.alibabacloud.com/help/zh/doc-detail/49448.htm">StartSynchronizationJob</a> operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ShieldPrecheckRequest
@@ -16905,11 +20012,6 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <para>Ignores the precheck items that a data migration or synchronization task may fail to pass.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you call this operation to ignore all precheck items, you must call the <a href="https://www.alibabacloud.com/help/zh/doc-detail/49429.htm">StartMigrationJob</a> or <a href="https://www.alibabacloud.com/help/zh/doc-detail/49448.htm">StartSynchronizationJob</a> operation. DTS performs a precheck again. After the data migration or synchronization task passes the precheck, the task will be automatically started.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// ShieldPrecheckRequest
         /// </param>
@@ -16921,6 +20023,172 @@ namespace AlibabaCloud.SDK.Dts20200101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ShieldPrecheckWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The tables that do not need to be synchronized in a full data synchronization are skipped.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SkipFullJobTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SkipFullJobTableResponse
+        /// </returns>
+        public SkipFullJobTableResponse SkipFullJobTableWithOptions(SkipFullJobTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobProgressId))
+            {
+                query["JobProgressId"] = request.JobProgressId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroEtlJob))
+            {
+                query["ZeroEtlJob"] = request.ZeroEtlJob;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SkipFullJobTable",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SkipFullJobTableResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SkipFullJobTableResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The tables that do not need to be synchronized in a full data synchronization are skipped.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SkipFullJobTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SkipFullJobTableResponse
+        /// </returns>
+        public async Task<SkipFullJobTableResponse> SkipFullJobTableWithOptionsAsync(SkipFullJobTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobProgressId))
+            {
+                query["JobProgressId"] = request.JobProgressId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroEtlJob))
+            {
+                query["ZeroEtlJob"] = request.ZeroEtlJob;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SkipFullJobTable",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SkipFullJobTableResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SkipFullJobTableResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The tables that do not need to be synchronized in a full data synchronization are skipped.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SkipFullJobTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SkipFullJobTableResponse
+        /// </returns>
+        public SkipFullJobTableResponse SkipFullJobTable(SkipFullJobTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SkipFullJobTableWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The tables that do not need to be synchronized in a full data synchronization are skipped.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SkipFullJobTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SkipFullJobTableResponse
+        /// </returns>
+        public async Task<SkipFullJobTableResponse> SkipFullJobTableAsync(SkipFullJobTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SkipFullJobTableWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16986,7 +20254,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SkipPreCheckResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SkipPreCheckResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SkipPreCheckResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -17052,7 +20327,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SkipPreCheckResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SkipPreCheckResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SkipPreCheckResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -17091,6 +20373,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await SkipPreCheckWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a data migration, data synchronization, or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartDtsJobRequest
         /// </param>
@@ -17145,9 +20432,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartDtsJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartDtsJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartDtsJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a data migration, data synchronization, or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartDtsJobRequest
         /// </param>
@@ -17202,9 +20501,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartDtsJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a data migration, data synchronization, or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartDtsJobRequest
         /// </param>
@@ -17218,6 +20529,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return StartDtsJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a data migration, data synchronization, or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartDtsJobRequest
         /// </param>
@@ -17231,6 +20547,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await StartDtsJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts multiple data migration or data synchronization tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartDtsJobsRequest
         /// </param>
@@ -17277,9 +20598,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartDtsJobsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartDtsJobsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartDtsJobsResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts multiple data migration or data synchronization tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartDtsJobsRequest
         /// </param>
@@ -17326,9 +20659,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartDtsJobsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts multiple data migration or data synchronization tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartDtsJobsRequest
         /// </param>
@@ -17342,6 +20687,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return StartDtsJobsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts multiple data migration or data synchronization tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartDtsJobsRequest
         /// </param>
@@ -17355,12 +20705,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await StartDtsJobsWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a data migration task.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// StartMigrationJobRequest
@@ -17412,15 +20760,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartMigrationJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartMigrationJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartMigrationJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a data migration task.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// StartMigrationJobRequest
@@ -17472,15 +20825,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartMigrationJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a data migration task.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// StartMigrationJobRequest
@@ -17495,12 +20853,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return StartMigrationJobWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> When you call this operation, the data migration task must be in the Not Started, Paused, or Migration Failed state.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a data migration task.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// StartMigrationJobRequest
@@ -17567,7 +20923,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartReverseWriterResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartReverseWriterResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartReverseWriterResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -17622,7 +20985,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartReverseWriterResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartReverseWriterResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartReverseWriterResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -17671,10 +21041,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await StartReverseWriterWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you call this operation, the change tracking task must be in the NotStarted or Failed state.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a change tracking task.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// StartSubscriptionInstanceRequest
@@ -17726,13 +21096,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartSubscriptionInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartSubscriptionInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartSubscriptionInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you call this operation, the change tracking task must be in the NotStarted or Failed state.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a change tracking task.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// StartSubscriptionInstanceRequest
@@ -17784,13 +21161,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartSubscriptionInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartSubscriptionInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartSubscriptionInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you call this operation, the change tracking task must be in the NotStarted or Failed state.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a change tracking task.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// StartSubscriptionInstanceRequest
@@ -17805,10 +21189,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return StartSubscriptionInstanceWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>When you call this operation, the change tracking task must be in the NotStarted or Failed state.</para>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a change tracking task.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// StartSubscriptionInstanceRequest
@@ -17882,7 +21266,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartSynchronizationJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartSynchronizationJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartSynchronizationJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -17944,7 +21335,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartSynchronizationJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -18042,7 +21440,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopDedicatedClusterResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StopDedicatedClusterResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StopDedicatedClusterResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -18104,7 +21509,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StopDedicatedClusterResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StopDedicatedClusterResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -18143,6 +21555,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await StopDedicatedClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a data migration, data synchronization, or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopDtsJobRequest
         /// </param>
@@ -18197,9 +21614,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopDtsJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StopDtsJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StopDtsJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a data migration, data synchronization, or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopDtsJobRequest
         /// </param>
@@ -18254,9 +21683,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StopDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StopDtsJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a data migration, data synchronization, or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopDtsJobRequest
         /// </param>
@@ -18270,6 +21711,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return StopDtsJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a data migration, data synchronization, or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopDtsJobRequest
         /// </param>
@@ -18283,6 +21729,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await StopDtsJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops multiple data migration or data synchronization tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopDtsJobsRequest
         /// </param>
@@ -18329,9 +21780,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopDtsJobsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StopDtsJobsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StopDtsJobsResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops multiple data migration or data synchronization tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopDtsJobsRequest
         /// </param>
@@ -18378,9 +21841,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StopDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StopDtsJobsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops multiple data migration or data synchronization tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopDtsJobsRequest
         /// </param>
@@ -18394,6 +21869,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return StopDtsJobsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops multiple data migration or data synchronization tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopDtsJobsRequest
         /// </param>
@@ -18407,12 +21887,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await StopDtsJobsWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a data migration task that is in the Migrating state.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// StopMigrationJobRequest
@@ -18468,15 +21946,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopMigrationJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StopMigrationJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StopMigrationJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a data migration task that is in the Migrating state.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// StopMigrationJobRequest
@@ -18532,15 +22015,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StopMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StopMigrationJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a data migration task that is in the Migrating state.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// StopMigrationJobRequest
@@ -18555,12 +22043,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return StopMigrationJobWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para> After you call this operation to stop a data migration task, the status of the task changes to Finished and you cannot restart the task by calling the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation.</para>
-        /// </remarks>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a data migration task that is in the Migrating state.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// StopMigrationJobRequest
@@ -18575,6 +22061,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await StopMigrationJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of migrated or synchronized objects in a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SummaryJobDetailRequest
         /// </param>
@@ -18637,9 +22128,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SummaryJobDetailResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SummaryJobDetailResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SummaryJobDetailResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of migrated or synchronized objects in a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SummaryJobDetailRequest
         /// </param>
@@ -18702,9 +22205,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SummaryJobDetailResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SummaryJobDetailResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SummaryJobDetailResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of migrated or synchronized objects in a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SummaryJobDetailRequest
         /// </param>
@@ -18718,6 +22233,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return SummaryJobDetailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of migrated or synchronized objects in a Data Transmission Service (DTS) task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SummaryJobDetailRequest
         /// </param>
@@ -18731,6 +22251,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await SummaryJobDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pauses a data migration, data synchronization, or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <hr>
@@ -18790,9 +22315,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SuspendDtsJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SuspendDtsJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SuspendDtsJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pauses a data migration, data synchronization, or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <hr>
@@ -18852,9 +22389,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SuspendDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SuspendDtsJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SuspendDtsJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pauses a data migration, data synchronization, or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <hr>
@@ -18873,6 +22422,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return SuspendDtsJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pauses a data migration, data synchronization, or change tracking task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <hr>
@@ -18891,6 +22445,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await SuspendDtsJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends multiple Data Transmission Service (DTS) tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendDtsJobsRequest
         /// </param>
@@ -18937,9 +22496,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SuspendDtsJobsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SuspendDtsJobsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SuspendDtsJobsResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends multiple Data Transmission Service (DTS) tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendDtsJobsRequest
         /// </param>
@@ -18986,9 +22557,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SuspendDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SuspendDtsJobsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SuspendDtsJobsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends multiple Data Transmission Service (DTS) tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendDtsJobsRequest
         /// </param>
@@ -19002,6 +22585,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return SuspendDtsJobsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Suspends multiple Data Transmission Service (DTS) tasks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendDtsJobsRequest
         /// </param>
@@ -19015,15 +22603,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await SuspendDtsJobsWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the task.</description></item>
-        /// <item><description>If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pauses a data migration task.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// SuspendMigrationJobRequest
@@ -19079,18 +22662,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SuspendMigrationJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SuspendMigrationJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SuspendMigrationJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the task.</description></item>
-        /// <item><description>If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pauses a data migration task.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// SuspendMigrationJobRequest
@@ -19146,18 +22731,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SuspendMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SuspendMigrationJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SuspendMigrationJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the task.</description></item>
-        /// <item><description>If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pauses a data migration task.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// SuspendMigrationJobRequest
@@ -19172,15 +22759,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return SuspendMigrationJobWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>If a data migration task is performing incremental data migration, we recommend that you do not pause the task for more than 6 hours. Otherwise, you will not be able to call the <a href="https://help.aliyun.com/document_detail/49429.html">StartMigrationJob</a> operation to restart the task.</description></item>
-        /// <item><description>If you select incremental data migration as the migration type for a pay-as-you-go instance, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, incremental data migration consumes resources such as the bandwidth of the source database.</description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pauses a data migration task.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// SuspendMigrationJobRequest
@@ -19195,6 +22777,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await SuspendMigrationJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pauses a data synchronization task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -19260,9 +22847,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SuspendSynchronizationJobResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SuspendSynchronizationJobResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SuspendSynchronizationJobResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pauses a data synchronization task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -19328,9 +22927,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SuspendSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SuspendSynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SuspendSynchronizationJobResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pauses a data synchronization task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -19355,6 +22966,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return SuspendSynchronizationJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pauses a data synchronization task.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -19434,7 +23050,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SwitchPhysicalDtsJobToCloudResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SwitchPhysicalDtsJobToCloudResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SwitchPhysicalDtsJobToCloudResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -19492,7 +23115,14 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SwitchPhysicalDtsJobToCloudResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SwitchPhysicalDtsJobToCloudResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SwitchPhysicalDtsJobToCloudResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -19531,19 +23161,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await SwitchPhysicalDtsJobToCloudWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.</para>
-        /// <list type="bullet">
-        /// <item><description>If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.<remarks>
-        /// <list type="bullet">
-        /// <item><description>For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
-        /// For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the <b>SynchronizationDirection</b> parameter to <b>Forward</b>, set the **Endpoint.Type **parameter to <b>Destination</b>, and configure the connection settings. In the second call, set the <b>SynchronizationDirection</b> parameter to <b>Reverse</b>, set the **Endpoint.Type **parameter to <b>Source</b>, and configure the connection settings.</description></item>
-        /// </list>
-        /// </remarks>
-        /// </description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After you perform a primary/secondary switchover on the source or destination database, you can call the SwitchSynchronizationEndpoint operation to transfer the connection settings to Data Transmission Service (DTS). DTS will restart the data synchronization task from the breakpoint.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// SwitchSynchronizationEndpointRequest
@@ -19607,22 +23228,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SwitchSynchronizationEndpointResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SwitchSynchronizationEndpointResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SwitchSynchronizationEndpointResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.</para>
-        /// <list type="bullet">
-        /// <item><description>If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.<remarks>
-        /// <list type="bullet">
-        /// <item><description>For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
-        /// For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the <b>SynchronizationDirection</b> parameter to <b>Forward</b>, set the **Endpoint.Type **parameter to <b>Destination</b>, and configure the connection settings. In the second call, set the <b>SynchronizationDirection</b> parameter to <b>Reverse</b>, set the **Endpoint.Type **parameter to <b>Source</b>, and configure the connection settings.</description></item>
-        /// </list>
-        /// </remarks>
-        /// </description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After you perform a primary/secondary switchover on the source or destination database, you can call the SwitchSynchronizationEndpoint operation to transfer the connection settings to Data Transmission Service (DTS). DTS will restart the data synchronization task from the breakpoint.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// SwitchSynchronizationEndpointRequest
@@ -19686,22 +23305,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SwitchSynchronizationEndpointResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SwitchSynchronizationEndpointResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SwitchSynchronizationEndpointResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.</para>
-        /// <list type="bullet">
-        /// <item><description>If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.<remarks>
-        /// <list type="bullet">
-        /// <item><description>For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
-        /// For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the <b>SynchronizationDirection</b> parameter to <b>Forward</b>, set the **Endpoint.Type **parameter to <b>Destination</b>, and configure the connection settings. In the second call, set the <b>SynchronizationDirection</b> parameter to <b>Reverse</b>, set the **Endpoint.Type **parameter to <b>Source</b>, and configure the connection settings.</description></item>
-        /// </list>
-        /// </remarks>
-        /// </description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After you perform a primary/secondary switchover on the source or destination database, you can call the SwitchSynchronizationEndpoint operation to transfer the connection settings to Data Transmission Service (DTS). DTS will restart the data synchronization task from the breakpoint.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// SwitchSynchronizationEndpointRequest
@@ -19716,19 +23333,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             return SwitchSynchronizationEndpointWithOptions(request, runtime);
         }
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  If the source or destination database is a self-managed MySQL database connected over the Internet, Elastic Compute Service (ECS) or Express Connect, you must call this operation to update the connection settings.</para>
-        /// <list type="bullet">
-        /// <item><description>If the source or destination database is hosted on an ApsaraDB instance (such as ApsaraDB RDS instance and ApsaraDB for MongoDB instance), DTS automatically updates the connection settings. You do not need to call this operation.<remarks>
-        /// <list type="bullet">
-        /// <item><description>For two-way synchronization tasks, if you perform a primary/secondary switchover on the source or destination database, you must call this operation twice to update the connection settings.
-        /// For example, if you perform a primary/secondary switchover on the destination database of the forward direction, you must call this operation twice. In the first call, set the <b>SynchronizationDirection</b> parameter to <b>Forward</b>, set the **Endpoint.Type **parameter to <b>Destination</b>, and configure the connection settings. In the second call, set the <b>SynchronizationDirection</b> parameter to <b>Reverse</b>, set the **Endpoint.Type **parameter to <b>Source</b>, and configure the connection settings.</description></item>
-        /// </list>
-        /// </remarks>
-        /// </description></item>
-        /// </list>
-        /// </description>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After you perform a primary/secondary switchover on the source or destination database, you can call the SwitchSynchronizationEndpoint operation to transfer the connection settings to Data Transmission Service (DTS). DTS will restart the data synchronization task from the breakpoint.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// SwitchSynchronizationEndpointRequest
@@ -19743,15 +23351,20 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await SwitchSynchronizationEndpointWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to data migration, data synchronization, or change tracking instances.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.</para>
+        /// <para>If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can query instances by tag.</para>
         /// <list type="bullet">
-        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
-        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.</description></item>
+        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region within an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
+        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.</description></item>
         /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
-        /// <item><description>You can bind up to 20 tags to each instance.</description></item>
-        /// <item><description>You can bind tags to up to 50 instances in each call.</description></item>
+        /// <item><description>You can add up to 20 tags to an instance.</description></item>
+        /// <item><description>You can add tags to up to 50 instances in each request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19805,18 +23418,30 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to data migration, data synchronization, or change tracking instances.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.</para>
+        /// <para>If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can query instances by tag.</para>
         /// <list type="bullet">
-        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
-        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.</description></item>
+        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region within an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
+        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.</description></item>
         /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
-        /// <item><description>You can bind up to 20 tags to each instance.</description></item>
-        /// <item><description>You can bind tags to up to 50 instances in each call.</description></item>
+        /// <item><description>You can add up to 20 tags to an instance.</description></item>
+        /// <item><description>You can add tags to up to 50 instances in each request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19870,18 +23495,30 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to data migration, data synchronization, or change tracking instances.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.</para>
+        /// <para>If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can query instances by tag.</para>
         /// <list type="bullet">
-        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
-        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.</description></item>
+        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region within an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
+        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.</description></item>
         /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
-        /// <item><description>You can bind up to 20 tags to each instance.</description></item>
-        /// <item><description>You can bind tags to up to 50 instances in each call.</description></item>
+        /// <item><description>You can add up to 20 tags to an instance.</description></item>
+        /// <item><description>You can add tags to up to 50 instances in each request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19898,15 +23535,20 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to data migration, data synchronization, or change tracking instances.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you have a large number of instances, you can create multiple tags and bind these tags to the instances. Then, you can filter the instances by tag.</para>
+        /// <para>If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can query instances by tag.</para>
         /// <list type="bullet">
-        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
-        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and bound to the specified instance.</description></item>
+        /// <item><description>A tag consists of a key and a value. Each key must be unique in a region within an Alibaba Cloud account. Different keys can be mapped to the same value.</description></item>
+        /// <item><description>If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.</description></item>
         /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
-        /// <item><description>You can bind up to 20 tags to each instance.</description></item>
-        /// <item><description>You can bind tags to up to 50 instances in each call.</description></item>
+        /// <item><description>You can add up to 20 tags to an instance.</description></item>
+        /// <item><description>You can add tags to up to 50 instances in each request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19923,6 +23565,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades or downgrades a Data Transmission Service (DTS) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInstanceClassRequest
         /// </param>
@@ -19973,9 +23620,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TransferInstanceClassResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TransferInstanceClassResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TransferInstanceClassResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades or downgrades a Data Transmission Service (DTS) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInstanceClassRequest
         /// </param>
@@ -20026,9 +23685,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TransferInstanceClassResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TransferInstanceClassResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TransferInstanceClassResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades or downgrades a Data Transmission Service (DTS) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInstanceClassRequest
         /// </param>
@@ -20042,6 +23713,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TransferInstanceClassWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades or downgrades a Data Transmission Service (DTS) instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferInstanceClassRequest
         /// </param>
@@ -20055,13 +23731,17 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await TransferInstanceClassWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of a Data Transmission Service (DTS) instance.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of DTS.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">billing</a> of DTS.</para>
         /// <list type="bullet">
-        /// <item><description>The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.</description></item>
-        /// <item><description>Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.</description></item>
-        /// <item><description>After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.</description></item>
+        /// <item><description>To prevent resource waste, make sure that the billing method of your DTS instances has to be changed.</description></item>
+        /// <item><description>Data migration instances only support the pay-as-you-go billing method.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20095,6 +23775,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["DtsJobId"] = request.DtsJobId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
+            {
+                query["InstanceClass"] = request.InstanceClass;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDu))
             {
                 query["MaxDu"] = request.MaxDu;
@@ -20131,16 +23815,27 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TransferPayTypeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TransferPayTypeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TransferPayTypeResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of a Data Transmission Service (DTS) instance.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of DTS.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">billing</a> of DTS.</para>
         /// <list type="bullet">
-        /// <item><description>The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.</description></item>
-        /// <item><description>Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.</description></item>
-        /// <item><description>After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.</description></item>
+        /// <item><description>To prevent resource waste, make sure that the billing method of your DTS instances has to be changed.</description></item>
+        /// <item><description>Data migration instances only support the pay-as-you-go billing method.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20174,6 +23869,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["DtsJobId"] = request.DtsJobId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
+            {
+                query["InstanceClass"] = request.InstanceClass;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDu))
             {
                 query["MaxDu"] = request.MaxDu;
@@ -20210,16 +23909,27 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TransferPayTypeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TransferPayTypeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TransferPayTypeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of a Data Transmission Service (DTS) instance.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of DTS.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">billing</a> of DTS.</para>
         /// <list type="bullet">
-        /// <item><description>The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.</description></item>
-        /// <item><description>Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.</description></item>
-        /// <item><description>After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.</description></item>
+        /// <item><description>To prevent resource waste, make sure that the billing method of your DTS instances has to be changed.</description></item>
+        /// <item><description>Data migration instances only support the pay-as-you-go billing method.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20236,13 +23946,17 @@ namespace AlibabaCloud.SDK.Dts20200101
             return TransferPayTypeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of a Data Transmission Service (DTS) instance.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of DTS.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">billing</a> of DTS.</para>
         /// <list type="bullet">
-        /// <item><description>The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.</description></item>
-        /// <item><description>Data migration instances are all pay-as-you-go instances. You do not need to change the billing method of data migration instances.</description></item>
-        /// <item><description>After you change the billing method from pay-as-you-go to subscription, the DTS instance is not affected.</description></item>
+        /// <item><description>To prevent resource waste, make sure that the billing method of your DTS instances has to be changed.</description></item>
+        /// <item><description>Data migration instances only support the pay-as-you-go billing method.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20259,6 +23973,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await TransferPayTypeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds tags from one or more data migration, data synchronization, or change tracking instances.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -20320,9 +24039,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds tags from one or more data migration, data synchronization, or change tracking instances.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -20384,9 +24115,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds tags from one or more data migration, data synchronization, or change tracking instances.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -20407,6 +24150,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return UntagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds tags from one or more data migration, data synchronization, or change tracking instances.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -20427,6 +24175,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the synchronization topology of a data synchronization instance from one-way synchronization to two-way synchronization. This operation is supported only for pay-as-you-go synchronization instances.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
@@ -20485,9 +24238,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpgradeTwoWayResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpgradeTwoWayResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpgradeTwoWayResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the synchronization topology of a data synchronization instance from one-way synchronization to two-way synchronization. This operation is supported only for pay-as-you-go synchronization instances.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
@@ -20546,9 +24311,21 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UpgradeTwoWayResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpgradeTwoWayResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpgradeTwoWayResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the synchronization topology of a data synchronization instance from one-way synchronization to two-way synchronization. This operation is supported only for pay-as-you-go synchronization instances.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
@@ -20574,6 +24351,11 @@ namespace AlibabaCloud.SDK.Dts20200101
             return UpgradeTwoWayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the synchronization topology of a data synchronization instance from one-way synchronization to two-way synchronization. This operation is supported only for pay-as-you-go synchronization instances.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
@@ -20601,10 +24383,8 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party cloud database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
-        /// <remarks>
-        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on Elastic Compute Service (ECS)</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
-        /// </remarks>
+        /// <para>If the \\<em>\\<em>source or destination instance\\</em>\\</em> is a \\<em>\\<em>self-managed database\\</em>\\</em> or a \\<em>\\<em>third-party cloud database\\</em>\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\(<del>176627</del>).
+        /// \\&gt;  If the \\<em>\\<em>source or destination database\\</em>\\</em> is an \\<em>\\<em>ApsaraDB database instance\\</em>\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\<em>\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\</em>\\</em>, you do not need to add the CIDR blocks. When you click \\<em>\\<em>Set Whitelist and Next\\</em>\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20626,6 +24406,26 @@ namespace AlibabaCloud.SDK.Dts20200101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestAliyunUid))
+            {
+                query["DestAliyunUid"] = request.DestAliyunUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPrimaryVswId))
+            {
+                query["DestPrimaryVswId"] = request.DestPrimaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestRoleName))
+            {
+                query["DestRoleName"] = request.DestRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestSecondaryVswId))
+            {
+                query["DestSecondaryVswId"] = request.DestSecondaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestVpcId))
+            {
+                query["DestVpcId"] = request.DestVpcId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationRegion))
             {
                 query["DestinationRegion"] = request.DestinationRegion;
@@ -20641,6 +24441,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcAliyunUid))
+            {
+                query["SrcAliyunUid"] = request.SrcAliyunUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPrimaryVswId))
+            {
+                query["SrcPrimaryVswId"] = request.SrcPrimaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcRoleName))
+            {
+                query["SrcRoleName"] = request.SrcRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcSecondaryVswId))
+            {
+                query["SrcSecondaryVswId"] = request.SrcSecondaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcVpcId))
+            {
+                query["SrcVpcId"] = request.SrcVpcId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -20666,15 +24486,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<WhiteIpListResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<WhiteIpListResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<WhiteIpListResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party cloud database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
-        /// <remarks>
-        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on Elastic Compute Service (ECS)</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
-        /// </remarks>
+        /// <para>If the \\<em>\\<em>source or destination instance\\</em>\\</em> is a \\<em>\\<em>self-managed database\\</em>\\</em> or a \\<em>\\<em>third-party cloud database\\</em>\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\(<del>176627</del>).
+        /// \\&gt;  If the \\<em>\\<em>source or destination database\\</em>\\</em> is an \\<em>\\<em>ApsaraDB database instance\\</em>\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\<em>\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\</em>\\</em>, you do not need to add the CIDR blocks. When you click \\<em>\\<em>Set Whitelist and Next\\</em>\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20696,6 +24521,26 @@ namespace AlibabaCloud.SDK.Dts20200101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestAliyunUid))
+            {
+                query["DestAliyunUid"] = request.DestAliyunUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPrimaryVswId))
+            {
+                query["DestPrimaryVswId"] = request.DestPrimaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestRoleName))
+            {
+                query["DestRoleName"] = request.DestRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestSecondaryVswId))
+            {
+                query["DestSecondaryVswId"] = request.DestSecondaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestVpcId))
+            {
+                query["DestVpcId"] = request.DestVpcId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationRegion))
             {
                 query["DestinationRegion"] = request.DestinationRegion;
@@ -20711,6 +24556,26 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcAliyunUid))
+            {
+                query["SrcAliyunUid"] = request.SrcAliyunUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPrimaryVswId))
+            {
+                query["SrcPrimaryVswId"] = request.SrcPrimaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcRoleName))
+            {
+                query["SrcRoleName"] = request.SrcRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcSecondaryVswId))
+            {
+                query["SrcSecondaryVswId"] = request.SrcSecondaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcVpcId))
+            {
+                query["SrcVpcId"] = request.SrcVpcId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -20736,15 +24601,20 @@ namespace AlibabaCloud.SDK.Dts20200101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<WhiteIpListResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<WhiteIpListResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<WhiteIpListResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party cloud database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
-        /// <remarks>
-        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on Elastic Compute Service (ECS)</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
-        /// </remarks>
+        /// <para>If the \\<em>\\<em>source or destination instance\\</em>\\</em> is a \\<em>\\<em>self-managed database\\</em>\\</em> or a \\<em>\\<em>third-party cloud database\\</em>\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\(<del>176627</del>).
+        /// \\&gt;  If the \\<em>\\<em>source or destination database\\</em>\\</em> is an \\<em>\\<em>ApsaraDB database instance\\</em>\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\<em>\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\</em>\\</em>, you do not need to add the CIDR blocks. When you click \\<em>\\<em>Set Whitelist and Next\\</em>\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20767,10 +24637,8 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If the <b>source or destination instance</b> is a <b>self-managed database</b> or a <b>third-party cloud database</b>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the security settings of on-premises databases</a>.</para>
-        /// <remarks>
-        /// <para> If the <b>source or destination database</b> is an <b>ApsaraDB database instance</b> (such as RDS instance and ApsaraDB for MongoDB instance) or a <b>self-managed database hosted on Elastic Compute Service (ECS)</b>, you do not need to add the CIDR blocks. When you click <b>Set Whitelist and Next</b> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
-        /// </remarks>
+        /// <para>If the \\<em>\\<em>source or destination instance\\</em>\\</em> is a \\<em>\\<em>self-managed database\\</em>\\</em> or a \\<em>\\<em>third-party cloud database\\</em>\\</em>, you need to call this operation to query the CIDR blocks of DTS servers. Then, you need to add the CIDR blocks of DTS servers to the security settings of the source or destination instance, for example, the firewall of your database. For more information, see \[Add the CIDR blocks of DTS servers to the security settings of on-premises databases]\\(<del>176627</del>).
+        /// \\&gt;  If the \\<em>\\<em>source or destination database\\</em>\\</em> is an \\<em>\\<em>ApsaraDB database instance\\</em>\\</em> (such as RDS instance and ApsaraDB for MongoDB instance) or a \\<em>\\<em>self-managed database hosted on Elastic Compute Service (ECS)\\</em>\\</em>, you do not need to add the CIDR blocks. When you click \\<em>\\<em>Set Whitelist and Next\\</em>\\</em> in the DTS console, DTS automatically adds the CIDR blocks of DTS servers to the security settings of the source or destination instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

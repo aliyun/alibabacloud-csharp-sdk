@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ConfigureDtsJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error message returned if the call failed.</para>
+        /// <para>The ID of the data migration or synchronization instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsk2gm967v16f****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The ID of the data migration or synchronization task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>k2gm967v16f****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data migration or synchronization instance.</para>
+        /// <para>The error code returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned if the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>The request processing has failed due to some unknown error.</para>
         /// </summary>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the call failed.</para>
+        /// <para>The returned HTTP status codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data migration or synchronization task.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>224DB9F7-3100-4899-AB9C-C938BCCB****</para>
@@ -68,6 +70,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class RenewInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The billing method of the DTS instance. <b>PREPAY</b> is returned, which indicates the subscription billing method.</para>
+        /// <para>The billing method of the DTS instance. Only <b>PREPAY</b> may be returned, which indicates the subscription billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PREPAY</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error code returned if the request failed.</para>
         /// <remarks>
-        /// <para> This parameter will be removed in the future.</para>
+        /// <para>This parameter will be removed in the future.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <b>%s</b> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic part in the error message. This parameter is used to replace the <b>%s</b> variable in the value of <b>ErrMessage</b>.</para>
         /// <remarks>
-        /// <para> If the return value of the <b>ErrMessage</b> parameter is <b>The Value of Input Parameter %s is not valid</b> and the return value of the <b>DynamicMessage</b> parameter is <b>DtsJobId</b>, the specified <b>DtsJobId</b> parameter is invalid.</para>
+        /// <para>If the return value of <b>ErrMessage</b> is <b>The Value of Input Parameter %s is not valid</b> and the return value of <b>DynamicMessage</b> is <b>DtsJobId</b>, the specified value of <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The time when the DTS instance expires after renewal. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZZZ</em> format. The time is displayed in UTC.</para>
         /// <remarks>
-        /// <para> <b>ZZZ</b> indicates the offset of the time zone, which is displayed in the format of a plus sign (+) or a minus sign (-) followed by hours and minutes, such as <b>+00:00</b>.</para>
+        /// <para><b>ZZZ</b> indicates the offset of the time zone, which is displayed in the format of a plus sign (+) or a minus sign (-) followed by hours and minutes, such as <b>+00:00</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DTS instance.</para>
+        /// <para>The ID of the instance</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtsqi0r643lc31****</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1112E255-0C38-4970-8159-1D54AD92****</para>
@@ -121,8 +121,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

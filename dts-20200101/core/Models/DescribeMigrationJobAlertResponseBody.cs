@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeMigrationJobAlertResponseBody : TeaModel {
         /// <summary>
-        /// <para>The mobile phone numbers that receive latency-related alerts.</para>
+        /// <para>Phone number of the contact for delay alarm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1361234****,1371234****</para>
@@ -20,10 +20,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DelayAlertPhone { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether task latency is monitored. Valid values:</para>
+        /// <para>Whether to monitor the delay status, return values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b>: yes</description></item>
-        /// <item><description><b>disable</b>: no</description></item>
+        /// <item><description><b>enable</b>: Yes. - <b>disable</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,17 +33,17 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DelayAlertStatus { get; set; }
 
         /// <summary>
-        /// <para>The threshold for triggering latency alerts. Unit: seconds.</para>
+        /// <para>The threshold for triggering a delayed alarm, in seconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("DelayOverSeconds")]
         [Validation(Required=false)]
         public string DelayOverSeconds { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the call failed.</para>
+        /// <para>Error code returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -54,7 +53,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the call failed.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The request processing has failed due to some unknown error.</para>
@@ -64,7 +63,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone numbers that receive status-related alerts.</para>
+        /// <para>Phone number of the contact for abnormal alarm notifications</para>
         /// 
         /// <b>Example:</b>
         /// <para>1361234****,1371234****</para>
@@ -74,10 +73,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrorAlertPhone { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether task status is monitored. Valid values:</para>
+        /// <para>Whether to monitor for abnormal status, return values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b>: yes</description></item>
-        /// <item><description><b>disable</b>: no</description></item>
+        /// <item><description><b>enable</b>: Yes. - <b>disable</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,20 +86,20 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrorAlertStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data migration instance.</para>
+        /// <para>Data migration instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lb9113qq11n****</para>
+        /// <para>dtslb9113qq11n****</para>
         /// </summary>
         [NameInMap("MigrationJobId")]
         [Validation(Required=false)]
         public string MigrationJobId { get; set; }
 
         /// <summary>
-        /// <para>The name of the data migration task.</para>
+        /// <para>Name of the data migration task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>PolarDB MySQL_to_RDS MySQL</para>
+        /// <para>zwy-test5</para>
         /// </summary>
         [NameInMap("MigrationJobName")]
         [Validation(Required=false)]
@@ -111,14 +109,14 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>210ec21916055187057342533d****</para>
+        /// <para>CFB89C51-6F03-519C-A921-AAE28D50AEFB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

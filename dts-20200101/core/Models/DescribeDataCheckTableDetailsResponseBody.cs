@@ -63,6 +63,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The total number of data rows that were failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("FailedTableCount")]
+        [Validation(Required=false)]
+        public long? FailedTableCount { get; set; }
+
+        /// <summary>
         /// <para>The total number of data rows that were verified.</para>
         /// 
         /// <b>Example:</b>
@@ -113,7 +123,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The details of the data verification result.</para>
+        /// <para>The details of data verification results.</para>
         /// </summary>
         [NameInMap("TableDetails")]
         [Validation(Required=false)]
@@ -140,12 +150,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public long? DiffCount { get; set; }
 
             /// <summary>
-            /// <para>任务运行出错时，返回报错信息的错误编码。</para>
+            /// <para>The error code returned if the data verification task failed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>：无主键表数量超过限制。</description></item>
-            /// <item><description><b>2</b>：差异数据超过300行。</description></item>
-            /// <item><description><b>3</b>：待查询的表不存在。</description></item>
-            /// <item><description><b>4</b>：查询数据的SQL语法错误。</description></item>
+            /// <item><description><b>1</b>: The number of tables that do not contain primary keys exceeds the limit.</description></item>
+            /// <item><description><b>2</b>: The number of data rows that contain inconsistent data exceeds 300.</description></item>
+            /// <item><description><b>3</b>: One or more tables to be verified do not exist.</description></item>
+            /// <item><description><b>4</b>: The SQL statements used for verifying data contain a syntax error.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,7 +176,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public long? FinishCount { get; set; }
 
             /// <summary>
-            /// <para>The auto-increment primary key that is used to identify a data record in a verification result.</para>
+            /// <para>The auto-increment primary key that is used to identify the data in a verification result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>167401241974****</para>
@@ -196,11 +206,11 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string SourceTbName { get; set; }
 
             /// <summary>
-            /// <para>The status of the data verification result. Valid values:</para>
+            /// <para>The status of data verification results. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: The data verification task was complete.</description></item>
-            /// <item><description><b>2</b>: The data verification task was initialized.</description></item>
-            /// <item><description><b>3</b>: The data verification task was running.</description></item>
+            /// <item><description><b>2</b>: The data verification task was being initialized.</description></item>
+            /// <item><description><b>3</b>: The data verification task was in progress.</description></item>
             /// <item><description><b>5</b>: The data verification task failed.</description></item>
             /// </list>
             /// 

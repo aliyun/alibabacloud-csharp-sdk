@@ -36,10 +36,25 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource GroupId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>Whether it is a seamless integration (Zero-ETL) task, the value can be:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: No. - <b>true</b>: Yes.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ZeroEtlJob")]
         [Validation(Required=false)]
         public bool? ZeroEtlJob { get; set; }

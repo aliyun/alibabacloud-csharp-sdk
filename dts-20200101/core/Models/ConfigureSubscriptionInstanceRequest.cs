@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string DatabaseName { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the source database.</para>
+            /// <para>The endpoint of the source database.</para>
             /// <remarks>
-            /// <para> This parameter is required only when the source database is a self-managed database.</para>
+            /// <para>This parameter is available and required only if the source database is a self-managed database.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source database.</para>
+            /// <para>The ID of the source instance.</para>
             /// <remarks>
-            /// <para> This parameter is required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.</para>
+            /// <para>This parameter is available and required only if the source instance is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string InstanceID { get; set; }
 
             /// <summary>
-            /// <para>The type of the source database. Valid values:</para>
+            /// <para>The type of the source instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>RDS</b>: ApsaraDB RDS for MySQL instance</description></item>
-            /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster</description></item>
+            /// <item><description><b>PolarDB</b>: PolarDB for MySQL cluster.</description></item>
             /// <item><description><b>LocalInstance</b>: self-managed database with a public IP address</description></item>
             /// <item><description><b>ECS</b>: self-managed database hosted on an Elastic Compute Service (ECS) instance</description></item>
             /// <item><description><b>Express</b>: self-managed database connected over Express Connect</description></item>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <item><description><b>dg</b>: self-managed database connected over Database Gateway</description></item>
             /// </list>
             /// <remarks>
-            /// <para> The engine of a self-managed database can be MySQL or Oracle. You must specify the engine type when you call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation.</para>
+            /// <para>The engine of a self-managed database can be MySQL or Oracle. You must specify the engine type when you call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// <para>The system ID (SID) of the Oracle database.</para>
             /// <remarks>
-            /// <para> This parameter is required only when the source database is a self-managed Oracle database and is not deployed in the Real Application Clusters (RAC) architecture.</para>
+            /// <para>This parameter is available and required only if the source database is a self-managed Oracle database and the Oracle database is deployed in a non-RAC architecture.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// <para>The ID of the Alibaba Cloud account to which the source database belongs.</para>
             /// <remarks>
-            /// <para> This parameter is required only when you track data changes across different Alibaba Cloud accounts.</para>
+            /// <para>This parameter is available and required only if you track data changes across different Alibaba Cloud accounts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// <para>The service port number of the source database.</para>
             /// <remarks>
-            /// <para> This parameter is required only when the source database is a self-managed database.</para>
+            /// <para>This parameter is available and required only if the source database is a self-managed database.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -121,9 +121,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking instance. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.</para>
+            /// <para>The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking task. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.</para>
             /// <remarks>
-            /// <para> For more information about the permissions that are required for the RAM role and how to grant permissions to the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</para>
+            /// <para>For more information about the permissions that are required for the RAM role and how to grant permissions to the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// <para>The username of the account that is used to connect to the source database.</para>
             /// <remarks>
-            /// <para> The permissions that are required for the database account vary with the change tracking scenario. For more information, see <a href="https://help.aliyun.com/document_detail/145715.html">Overview of change tracking scenarios</a>.</para>
+            /// <para>The permissions that are required for the database account vary based on change tracking scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/145715.html">Overview of change tracking scenarios</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <para>Specifies whether to track DML statements. Default value: true. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: tracks DML statements.</description></item>
-            /// <item><description><b>false</b>: does not tack DML statements.</description></item>
+            /// <item><description><b>false</b>: does not track DML statements.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// <para>The ID of the VPC in which the change tracking instance is deployed.</para>
             /// <remarks>
-            /// <para> This parameter is required only when the <b>SubscriptionInstanceNetworkType</b> parameter is set to <b>vpc</b>.</para>
+            /// <para>This parameter is available and required only if the <b>SubscriptionInstanceNetworkType</b> parameter is set to <b>vpc</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             /// <summary>
             /// <para>The ID of the vSwitch in the specified VPC.</para>
             /// <remarks>
-            /// <para> This parameter is required only when the <b>SubscriptionInstanceNetworkType</b> parameter is set to <b>vpc</b>.</para>
+            /// <para>This parameter is available and required only if the <b>SubscriptionInstanceNetworkType</b> parameter is set to <b>vpc</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is discontinued.</para>
+        /// <para>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be discontinued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>
@@ -234,12 +234,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>资源组ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a> operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -250,25 +256,27 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SubscriptionInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a> operation to query the instance ID.</para>
-        /// 
-        /// <b>Example:</b>
         /// <para>The name of the change tracking instance.</para>
         /// <remarks>
-        /// <para> We recommend that you specify an informative name for easy identification. You do not need to use a unique name.</para>
+        /// <para>We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL Subscription</para>
         /// </summary>
         [NameInMap("SubscriptionInstanceName")]
         [Validation(Required=false)]
         public string SubscriptionInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The network type of the change tracking instance. Set the value to <b>vpc</b>. A value of vpc indicates the Virtual Private Cloud (VPC) network type.</para>
+        /// <para>The network type of the change tracking instance. Set the value to <b>vpc</b>, which specifies the Virtual Private Cloud (VPC) network type.</para>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the <b>SubscriptionInstance.VPCId</b> and <b>SubscriptionInstance.VSwitchID</b> parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.</description></item>
-        /// <item><description>The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.</description></item>
+        /// <item><description><para>To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the <b>SubscriptionInstance.VPCId</b> and <b>SubscriptionInstance.VSwitchID</b> parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.</para>
+        /// </description></item>
+        /// <item><description><para>The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

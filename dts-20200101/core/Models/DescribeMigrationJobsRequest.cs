@@ -24,6 +24,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <remarks>
         /// <para> Fuzzy match is supported.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL迁移</para>
         /// </summary>
         [NameInMap("MigrationJobName")]
         [Validation(Required=false)]
@@ -63,10 +66,19 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The tag of the data migration instance, used as a filter. When this is not empty, only the instance tasks with this tag will be returned.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeMigrationJobsRequestTag> Tag { get; set; }

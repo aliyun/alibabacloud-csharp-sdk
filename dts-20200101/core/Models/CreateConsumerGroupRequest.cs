@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The name of the consumer group. The name cannot exceed 128 characters in length. We recommend that you use an informative name for easy identification.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试订阅组</para>
         /// </summary>
         [NameInMap("ConsumerGroupName")]
         [Validation(Required=false)]
@@ -61,10 +64,22 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

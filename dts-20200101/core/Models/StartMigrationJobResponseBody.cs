@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class StartMigrationJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the call failed.</para>
+        /// <para>The error code returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FDC111B1-ACBF-457D-9656-247FDEE9****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

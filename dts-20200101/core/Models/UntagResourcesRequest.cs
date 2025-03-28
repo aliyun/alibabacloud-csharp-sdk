@@ -40,11 +40,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the data migration, synchronization, and subscription instances, which can be queried by calling the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> API. &gt; N indicates the Nth instance ID to be passed. For example, ResourceId.0 represents passing the first instance ID; ResourceId.1 represents passing the second instance ID. You can unbind tags for 1 to 50 instances simultaneously.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,6 +72,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>Tag key. &gt; - N indicates the position of the tag key being passed. For example, TagKey.0 represents the first tag key; TagKey.1 represents the second tag key. Up to 20 tag keys can be unbound simultaneously. - Empty strings are not allowed. - At least one of <b>All</b> or this parameter must be provided. - If both <b>All</b> and this parameter are provided, only this parameter will take effect.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testkey1</para>
         /// </summary>

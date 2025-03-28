@@ -305,6 +305,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
                 /// <summary>
                 /// <para>The name of the change tracking instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dtstest</para>
                 /// </summary>
                 [NameInMap("SubscriptionInstanceName")]
                 [Validation(Required=false)]

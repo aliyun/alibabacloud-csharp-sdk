@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class DescribeDtsJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of DTS tasks and the details of each task.</para>
+        /// <para>The Data Transmission Service (DTS) tasks and the details of each task.</para>
         /// </summary>
         [NameInMap("DtsJobList")]
         [Validation(Required=false)]
@@ -554,6 +554,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public string DtsJobName { get; set; }
 
+            /// <summary>
+            /// <para>The DTS Units (DUs) usage of a task in a DTS dedicated cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12.0%</para>
+            /// </summary>
             [NameInMap("DuRealUsage")]
             [Validation(Required=false)]
             public string DuRealUsage { get; set; }
@@ -765,6 +771,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public string JobType { get; set; }
 
+            /// <summary>
+            /// <para>Upper limit of DU.</para>
+            /// <remarks>
+            /// <para>Only supported by Serverless instances.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>16</para>
+            /// </summary>
             [NameInMap("MaxDu")]
             [Validation(Required=false)]
             public double? MaxDu { get; set; }
@@ -918,6 +933,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
             }
 
+            /// <summary>
+            /// <para>Lower limit of DU.</para>
+            /// <remarks>
+            /// <para>Only supported by Serverless instances.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("MinDu")]
             [Validation(Required=false)]
             public double? MinDu { get; set; }
@@ -1827,6 +1851,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
                 }
 
+                /// <summary>
+                /// <para>Upper limit of DU.</para>
+                /// <remarks>
+                /// <para>Only supported by Serverless instances.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>16</para>
+                /// </summary>
                 [NameInMap("MaxDu")]
                 [Validation(Required=false)]
                 public double? MaxDu { get; set; }
@@ -1920,6 +1953,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
                 }
 
+                /// <summary>
+                /// <para>Lower limit of DU.</para>
+                /// <remarks>
+                /// <para>Only supported by Serverless instances.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("MinDu")]
                 [Validation(Required=false)]
                 public double? MinDu { get; set; }

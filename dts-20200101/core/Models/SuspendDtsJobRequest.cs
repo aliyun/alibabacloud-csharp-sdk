@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data migration, data synchronization, or change tracking task.</para>
+        /// <para>The ID of the Data Transmission Service (DTS) task. The DTS task can be a data migration, data synchronization, or change tracking task.</para>
         /// <remarks>
         /// <para> You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to obtain the task ID.</para>
         /// </remarks>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -42,6 +42,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -49,14 +55,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The synchronization direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Forward</b>: Data is synchronized from the source database to the destination database.</description></item>
-        /// <item><description><b>Reverse</b>: Data is synchronized from the destination database to the source database.</description></item>
+        /// <item><description><b>Forward</b></description></item>
+        /// <item><description><b>Reverse</b></description></item>
         /// </list>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Default value: <b>Forward</b>.</description></item>
-        /// <item><description>You can set this parameter to <b>Reverse</b> to pause the reverse synchronization task only if the topology is two-way synchronization.</description></item>
+        /// <item><description><para>The default value is <b>Forward</b>.</para>
+        /// </description></item>
+        /// <item><description><para>You can set this parameter to <b>Reverse</b> only if the topology is two-way synchronization.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,6 +74,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string SynchronizationDirection { get; set; }
 
+        /// <summary>
+        /// <para>Whether it is a seamless integration (Zero-ETL) task, the value can be:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: No. - <b>true</b>: Yes.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ZeroEtlJob")]
         [Validation(Required=false)]
         public bool? ZeroEtlJob { get; set; }

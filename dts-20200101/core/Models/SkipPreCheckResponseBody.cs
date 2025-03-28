@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <b>%s</b> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic part in the error message. This parameter is used to replace %s in ErrMessage.</para>
         /// <remarks>
-        /// <para> If the specified <b>JobId</b> parameter is invalid, <b>The Value of Input Parameter %s is not valid</b> is returned for <b>ErrMessage</b> and <b>JobId</b> is returned for <b>DynamicMessage</b>.</para>
+        /// <para>If JobId is invalid, JobId is returned for DynamicMessage, and the following message is returned for ErrMessage: The Value of Input Parameter %s is not valid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the call failed.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The HTTP status codes returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -63,17 +63,17 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DTS task on which the precheck is performed.</para>
+        /// <para>The precheck task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>kyri3z9w29a****</para>
+        /// <para>b4my3zg929a****</para>
         /// </summary>
         [NameInMap("MigrationJobId")]
         [Validation(Required=false)]
         public string MigrationJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8C498360-7892-433C-847A-BA71A850****</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the precheck task.</para>
+        /// <para>The precheck task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b4my3zg929a****</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SkipItems { get; set; }
 
         /// <summary>
-        /// <para>The name of the precheck item.</para>
+        /// <para>The precheck item name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CHECK_SAME_OBJ_DETAIL</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string SkipNames { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

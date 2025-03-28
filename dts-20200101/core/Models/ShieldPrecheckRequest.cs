@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ShieldPrecheckRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data migration or data synchronization instance. You can call the <b>DescribeMigrationJobs</b> or DescribeSynchronizationJobs operation to query the instance ID.</para>
+        /// <para>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the <b>DtsInstanceId</b> and <b>DtsJobId</b> parameters.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,6 +54,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

@@ -27,6 +27,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -40,8 +46,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Default value: <b>Forward</b>.</description></item>
-        /// <item><description>You can set this parameter to <b>Reverse</b> to start the reverse synchronization task only when the topology is two-way synchronization.</description></item>
+        /// <item><description><para>The default value is <b>Forward</b>.</para>
+        /// </description></item>
+        /// <item><description><para>You can set this parameter to <b>Reverse</b> to start the reverse synchronization task only if the topology is two-way synchronization.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ConfigureSubscriptionInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The request processing has failed due to some unknown error.</para>

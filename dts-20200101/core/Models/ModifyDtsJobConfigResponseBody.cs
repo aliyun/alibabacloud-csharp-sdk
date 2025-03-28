@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ModifyDtsJobConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>068FA72F-4800-4A54-90BB-94806068****</para>
         /// </summary>

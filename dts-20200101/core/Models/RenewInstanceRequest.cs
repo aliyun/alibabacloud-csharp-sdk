@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The subscription duration of the DTS instance after renewal. Default value: 1.</para>
         /// <list type="bullet">
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Year</b>, the valid values are <b>1 to 5</b>.</description></item>
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, the valid values are <b>1 to 60</b>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Year</b>, the valid values are <b>1 to 5</b>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Month</b>, the valid values are <b>1 to 60</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string BuyCount { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the DTS instance. Set the value to <b>PREPAY</b>, which indicates the subscription billing method.</para>
+        /// <para>The billing method of the DTS instance. Set the value to <b>PREPAY</b>, which specifies the subscription billing method.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The billing cycle of the DTS instance after renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: annual subscription.</description></item>
-        /// <item><description><b>Month</b>: monthly subscription. This is the default value.</description></item>
+        /// <item><description><b>Year</b></description></item>
+        /// <item><description><b>Month</b> (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -69,6 +69,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

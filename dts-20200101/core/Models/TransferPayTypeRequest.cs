@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class TransferPayTypeRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to automatically renew the DTS instance when it expires. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: does not automatically renew the DTS instance when it expires. This is the default value.</description></item>
+        /// <item><description><b>true</b>: automatically renews the DTS instance when it expires.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
@@ -31,16 +41,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string BuyCount { get; set; }
 
         /// <summary>
-        /// <para>The billing method that you want to use. Valid values:</para>
+        /// <para>The new billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid</b>: subscription</description></item>
-        /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
-        /// </list>
-        /// <remarks>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.</description></item>
-        /// <item><description>If you do not need to change the billing method, specify the current billing method.</description></item>
+        /// <item><description><b>PrePaid</b>: subscription.</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,10 +66,45 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
+        /// <summary>
+        /// <para>The new instance class of the DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation to query the original instance class of the DTS instance.</para>
+        /// <list type="bullet">
+        /// <item><description>DTS supports the following instance classes for a data migration instance: <b>xxlarge</b>, <b>xlarge</b>, <b>large</b>, <b>medium</b>, and <b>small</b>.</description></item>
+        /// <item><description>DTS supports the following instance classes for a data synchronization instance: <b>large</b>, <b>medium</b>, <b>small</b>, and <b>micro</b>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization channels</a>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>small</para>
+        /// </summary>
+        [NameInMap("InstanceClass")]
+        [Validation(Required=false)]
+        public string InstanceClass { get; set; }
+
+        /// <summary>
+        /// <para>The maximum number of DUs in a serverless instance. Valid values: 2, 4, 8, and 16.</para>
+        /// <remarks>
+        /// <para> This feature is not supported. Do not specify this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16</para>
+        /// </summary>
         [NameInMap("MaxDu")]
         [Validation(Required=false)]
         public int? MaxDu { get; set; }
 
+        /// <summary>
+        /// <para>The minimum number of DTS Units (DUs) in a serverless instance. Valid values: 1, 2, 4, 8, and 16.</para>
+        /// <remarks>
+        /// <para> This feature is not supported. Do not specify this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("MinDu")]
         [Validation(Required=false)]
         public int? MinDu { get; set; }
@@ -97,6 +136,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

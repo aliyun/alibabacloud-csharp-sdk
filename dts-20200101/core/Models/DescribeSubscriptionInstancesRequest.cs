@@ -63,6 +63,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekz4us4iruleja</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -72,11 +78,17 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <remarks>
         /// <para> If you specify this parameter, DTS returns all the change tracking instances that match the specified name.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL订阅</para>
         /// </summary>
         [NameInMap("SubscriptionInstanceName")]
         [Validation(Required=false)]
         public string SubscriptionInstanceName { get; set; }
 
+        /// <summary>
+        /// <para>Tags of the data migration instance, used as a filter. When this is not empty, only instances with this tag will be returned.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeSubscriptionInstancesRequestTag> Tag { get; set; }

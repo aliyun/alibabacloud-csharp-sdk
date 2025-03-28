@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
             /// <summary>
             /// <para>The name of the consumer group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>consumergrouptest</para>
             /// </summary>
             [NameInMap("ConsumerGroupName")]
             [Validation(Required=false)]

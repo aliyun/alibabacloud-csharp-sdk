@@ -132,6 +132,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
             /// <summary>
             /// <para>The error message returned if incremental data synchronization failed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The task has failed for too long and cannot be repaired</para>
             /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]

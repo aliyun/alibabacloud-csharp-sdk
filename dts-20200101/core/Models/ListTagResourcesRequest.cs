@@ -33,11 +33,19 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID for data migration, synchronization, and subscription, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a>.  &gt; - N indicates the Nth instance ID being passed. For example, ResourceId.0 represents the first instance ID; ResourceId.1 represents the second instance ID. Up to 50 instance IDs can be queried simultaneously. - At least one of this parameter and <b>Tag.N.Key</b> must be provided.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dtsntk10k6r12v****</para>
         /// </summary>
@@ -56,6 +64,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The value corresponding to the tag key.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }

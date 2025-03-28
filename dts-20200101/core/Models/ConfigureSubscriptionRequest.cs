@@ -86,6 +86,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public long? DelayRuleTime { get; set; }
 
+        /// <summary>
+        /// <para>Environment label of the DTS instance, with values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>normal</b>: <b>general</b> - <b>online</b>: <b>production</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>normal</para>
+        /// </summary>
         [NameInMap("DtsBisLabel")]
         [Validation(Required=false)]
         public string DtsBisLabel { get; set; }
@@ -116,6 +125,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <para> We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>for_test</para>
         /// </summary>
         [NameInMap("DtsJobName")]
         [Validation(Required=false)]
@@ -151,10 +163,24 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string ErrorPhone { get; set; }
 
+        /// <summary>
+        /// <para>The DU upper limit of the Serverless instance, with values being: 2, 4, 8, 16. 
+        /// Currently, this feature is not supported, please do not pass in parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16</para>
+        /// </summary>
         [NameInMap("MaxDu")]
         [Validation(Required=false)]
         public double? MaxDu { get; set; }
 
+        /// <summary>
+        /// <para>The lower limit of DU for Serverless instances, with values being: 1, 2, 4, 8, 16. 
+        /// This feature is currently not supported, please do not pass in parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("MinDu")]
         [Validation(Required=false)]
         public double? MinDu { get; set; }
@@ -180,12 +206,18 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string Reserve { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the source database.</para>
+        /// <para>Name of the database to be subscribed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dtstestdata</para>
@@ -341,22 +373,67 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string SourceEndpointUserName { get; set; }
 
+        /// <summary>
+        /// <para>The path of the certificate authority (CA) certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</para>
+        /// <remarks>
+        /// <para> This feature is not supported. Do not specify this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
+        /// </summary>
         [NameInMap("SrcCaCertificateOssUrl")]
         [Validation(Required=false)]
         public string SrcCaCertificateOssUrl { get; set; }
 
+        /// <summary>
+        /// <para>The key of the CA certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</para>
+        /// <remarks>
+        /// <para> This feature is not supported. Do not specify this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
+        /// </summary>
         [NameInMap("SrcCaCertificatePassword")]
         [Validation(Required=false)]
         public string SrcCaCertificatePassword { get; set; }
 
+        /// <summary>
+        /// <para>The path to the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</para>
+        /// <remarks>
+        /// <para> This feature is not supported. Do not specify this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
+        /// </summary>
         [NameInMap("SrcClientCertOssUrl")]
         [Validation(Required=false)]
         public string SrcClientCertOssUrl { get; set; }
 
+        /// <summary>
+        /// <para>The path to the private key of the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</para>
+        /// <remarks>
+        /// <para> This feature is not supported. Do not specify this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
+        /// </summary>
         [NameInMap("SrcClientKeyOssUrl")]
         [Validation(Required=false)]
         public string SrcClientKeyOssUrl { get; set; }
 
+        /// <summary>
+        /// <para>The password of the private key of the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</para>
+        /// <remarks>
+        /// <para> This feature is not supported. Do not specify this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
+        /// </summary>
         [NameInMap("SrcClientPassword")]
         [Validation(Required=false)]
         public string SrcClientPassword { get; set; }

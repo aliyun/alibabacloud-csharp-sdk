@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <item><description>DTS supports the following instance classes for a data synchronization instance: <b>large</b>, <b>medium</b>, <b>small</b>, and <b>micro</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</para>
+        /// <para>For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization channels</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,11 +39,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to upgrade or downgrade the DTS instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>UPGRADE</b></description></item>
-        /// <item><description><b>DOWNGRADE</b></description></item>
-        /// </list>
+        /// <para>Set the value to <b>UPGRADE</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -63,6 +59,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

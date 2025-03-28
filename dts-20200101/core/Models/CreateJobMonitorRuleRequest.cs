@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class CreateJobMonitorRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The threshold for triggering latency alerts.</para>
+        /// <para>The threshold for triggering an alert.</para>
         /// <list type="bullet">
-        /// <item><description>If the <b>Type</b> parameter is set to <b>delay</b>, the threshold must be an integer. You can set the threshold based on your requirements. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds. Unit: seconds.</description></item>
-        /// <item><description>If the <b>Type</b> parameter is set to <b>full_timeout</b>, the threshold must be an integer. Unit: hours.</description></item>
+        /// <item><description>If <b>Type</b> is set to <b>delay</b>, the threshold must be an integer in units of seconds. You can specify the threshold based on your business requirements. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds.</description></item>
+        /// <item><description>If <b>Type</b> is set to <b>full_timeout</b>, the threshold must be an integer in units of hours.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required if the <b>Type</b> parameter is set to <b>delay</b> or <b>full_timeout</b> and the <b>State</b> parameter is set to <b>Y</b>.</para>
+        /// <para>This parameter is required if <b>Type</b> is set to <b>delay</b> or <b>full_timeout</b> and <b>State</b> is set to <b>Y</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The statistical period of the incremental data verification task. Unit: minutes.</para>
         /// <remarks>
-        /// <para> Valid values: 1, 3, 5, and 30.</para>
+        /// <para>Valid values: 1, 3, 5, and 30.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -65,8 +65,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</description></item>
-        /// <item><description>Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in the CloudMonitor console</a>.</description></item>
+        /// <item><description><para>This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</para>
+        /// </description></item>
+        /// <item><description><para>Users of the international site (alibabacloud.com) cannot receive notifications on alerts by using mobile numbers, but can configure alert rules for DTS tasks in the CloudMonitor console. For more information, see <a href="https://help.aliyun.com/document_detail/175876.html">Configure alert rules for DTS tasks in the CloudMonitor console</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,7 +79,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Phone { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -86,6 +88,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

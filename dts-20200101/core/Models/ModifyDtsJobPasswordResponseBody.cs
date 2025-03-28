@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <b>%s</b> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the value of <b>ErrMessage</b>.</para>
         /// <remarks>
-        /// <para> If the return value of the <b>ErrMessage</b> parameter is <b>The Value of Input Parameter %s is not valid</b> and the return value of the <b>DynamicMessage</b> parameter is <b>DtsJobId</b>, the specified <b>DtsJobId</b> parameter is invalid.</para>
+        /// <para> If the return value of <b>ErrMessage</b> is <b>The Value of Input Parameter %s is not valid</b> and the return value of <b>DynamicMessage</b> is <b>DtsJobId</b>, the specified value of <b>DtsJobId</b> in the request is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the call failed.</para>
+        /// <para>The error code returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the call failed.</para>
+        /// <para>The error message that is returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The Value of Input Parameter %s is not valid.</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8C498360-7892-433C-847A-BA71A850****</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

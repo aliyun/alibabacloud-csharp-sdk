@@ -93,18 +93,45 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public long? DelayRuleTime { get; set; }
 
+            /// <summary>
+            /// <para>Task ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bi6e22ay243****</para>
+            /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
 
+            /// <summary>
+            /// <para>The task type of the DTS instance, with values: - <b>normal</b>: Migration or synchronization task. - <b>full_check</b>: Associated full check task. - <b>etl_check</b>: Associated incremental check task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>normal</para>
+            /// </summary>
             [NameInMap("JobType")]
             [Validation(Required=false)]
             public string JobType { get; set; }
 
+            /// <summary>
+            /// <para>Alarm threshold.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("NoticeValue")]
             [Validation(Required=false)]
             public int? NoticeValue { get; set; }
 
+            /// <summary>
+            /// <para>The statistical period for incremental validation tasks, in minutes.</para>
+            /// <remarks>
+            /// <para>Currently supported values are 1 minute, 5 minutes, 10 minutes, and 30 minutes.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("Period")]
             [Validation(Required=false)]
             public int? Period { get; set; }
@@ -133,6 +160,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [Validation(Required=false)]
             public string State { get; set; }
 
+            /// <summary>
+            /// <para>The number of cycles for the incremental validation task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("Times")]
             [Validation(Required=false)]
             public int? Times { get; set; }

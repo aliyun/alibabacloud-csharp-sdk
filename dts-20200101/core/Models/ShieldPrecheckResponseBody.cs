@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class ShieldPrecheckResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the call failed.</para>
+        /// <para>The error code returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>

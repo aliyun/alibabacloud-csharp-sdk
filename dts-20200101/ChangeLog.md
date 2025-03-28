@@ -1,3 +1,32 @@
+2025-03-28 Version: 1.6.0
+- Support API ConvertInstanceResourceGroup.
+- Support API DescribeFullProcessList.
+- Support API DescribeGadInstances.
+- Support API DescribePreCheckCreateGadOrderResult.
+- Support API DetachGadInstanceDbMember.
+- Support API ModifyGadInstanceName.
+- Support API PreCheckCreateGadOrder.
+- Support API SkipFullJobTable.
+- Update API ConfigureDtsJob: add request parameters DestPrimaryVswId.
+- Update API ConfigureDtsJob: add request parameters DestSecondaryVswId.
+- Update API ConfigureDtsJob: add request parameters SrcPrimaryVswId.
+- Update API ConfigureDtsJob: add request parameters SrcSecondaryVswId.
+- Update API DescribeDataCheckTableDetails: add response parameters Body.FailedTableCount.
+- Update API TransferPayType: add request parameters InstanceClass.
+- Update API WhiteIpList: add request parameters DestAliyunUid.
+- Update API WhiteIpList: add request parameters DestPrimaryVswId.
+- Update API WhiteIpList: add request parameters DestRoleName.
+- Update API WhiteIpList: add request parameters DestSecondaryVswId.
+- Update API WhiteIpList: add request parameters DestVpcId.
+- Update API WhiteIpList: add request parameters SrcAliyunUid.
+- Update API WhiteIpList: add request parameters SrcPrimaryVswId.
+- Update API WhiteIpList: add request parameters SrcRoleName.
+- Update API WhiteIpList: add request parameters SrcSecondaryVswId.
+- Update API WhiteIpList: add request parameters SrcVpcId.
+- Update API WhiteIpList: add response parameters Body.DestIpList.
+- Update API WhiteIpList: add response parameters Body.SrcIpList.
+
+
 2024-09-26 Version: 1.5.4
 - Update API DescribeDtsJobs: update param RegionId.
 - Update API ModifyDtsJobPassword: add param DtsInstanceId.

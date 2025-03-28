@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string DedicatedClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The type of the source database instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RDS</para>
+        /// </summary>
         [NameInMap("DestProductType")]
         [Validation(Required=false)]
         public string DestProductType { get; set; }
@@ -70,10 +76,22 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the source or target database instance corresponding to the request parameter <b>InstanceType</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-bp1966yuut4w3****</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The type of the source or target database instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RDS</para>
+        /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
@@ -130,7 +148,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than <b>0</b> and does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -140,7 +158,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>20</b>, <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -173,7 +191,46 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>This parameter is discontinued.</para>
+        /// <para>This parameter is deprecated.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cn-hangzhou</description></item>
+        /// <item><description>cn-shanghai</description></item>
+        /// <item><description>cn-beijing</description></item>
+        /// <item><description>cn-guangzhou</description></item>
+        /// <item><description>cn-shenzhen</description></item>
+        /// <item><description>cn-chengdu</description></item>
+        /// <item><description>cn-heyuan</description></item>
+        /// <item><description>cn-hongkong</description></item>
+        /// <item><description>cn-qingdao</description></item>
+        /// <item><description>cn-zhangbei</description></item>
+        /// <item><description>cn-zhangjiakou</description></item>
+        /// <item><description>us-east-1</description></item>
+        /// <item><description>us-west-1</description></item>
+        /// <item><description>cn-hangzhou-finance</description></item>
+        /// <item><description>cn-shanghai-finance</description></item>
+        /// <item><description>cn-shanghai-finance-1</description></item>
+        /// <item><description>cn-shenzhen-finance</description></item>
+        /// <item><description>cn-shenzhen-finance-1</description></item>
+        /// <item><description>cn-beijing-finance-1</description></item>
+        /// <item><description>cn-huhehaote</description></item>
+        /// <item><description>cn-north-2-gov-1</description></item>
+        /// <item><description>eu-central-1</description></item>
+        /// <item><description>eu-west-1</description></item>
+        /// <item><description>me-central-1</description></item>
+        /// <item><description>me-east-1</description></item>
+        /// <item><description>ap-northeast-1</description></item>
+        /// <item><description>ap-northeast-2</description></item>
+        /// <item><description>ap-southeast-1</description></item>
+        /// <item><description>ap-southeast-2</description></item>
+        /// <item><description>ap-southeast-3</description></item>
+        /// <item><description>ap-southeast-5</description></item>
+        /// <item><description>ap-southeast-6</description></item>
+        /// <item><description>ap-southeast-7</description></item>
+        /// <item><description>cn-wulanchabu</description></item>
+        /// <item><description>cn-zhengzhou-jva</description></item>
+        /// <item><description>cn-wuhan-lr</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -192,6 +249,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The type of the destination database instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RDS</para>
+        /// </summary>
         [NameInMap("SrcProductType")]
         [Validation(Required=false)]
         public string SrcProductType { get; set; }
@@ -302,6 +365,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public bool? WithoutDbList { get; set; }
 
+        /// <summary>
+        /// <para>Whether it is a seamless integration (Zero-ETL) task, the value can be:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: No. - <b>true</b>: Yes.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("ZeroEtlJob")]
         [Validation(Required=false)]
         public bool? ZeroEtlJob { get; set; }

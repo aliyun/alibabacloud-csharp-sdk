@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the metrics of the cluster or a node. Valid values:</para>
+        /// <para>Indicates whether the metrics of the cluster or a node are queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CLUSTER</b>: query the metrics of the cluster.</description></item>
-        /// <item><description><b>NODE</b>: query the metrics of a node.</description></item>
+        /// <item><description><b>CLUSTER</b>: The metrics of the cluster are queried.</description></item>
+        /// <item><description><b>NODE</b>: The metrics of a node are queried.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Param { get; set; }
 
         /// <summary>
-        /// <para>The monitoring interval. Unit: seconds. Minimum value: 15.</para>
+        /// <para>The monitoring interval. Unit: seconds. The minimum value is 15.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -117,6 +117,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public long? Period { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

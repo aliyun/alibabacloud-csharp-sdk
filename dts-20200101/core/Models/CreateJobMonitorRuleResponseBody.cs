@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. The value of this parameter is used to replace the <b>%s</b> variable in the value of the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic part in the error message. The value of this parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the value of <b>ErrMessage</b>.</para>
         /// <remarks>
-        /// <para> For example, if the specified <b>DtsJobId</b> parameter is invalid, <b>The Value of Input Parameter %s is not valid</b> is returned for <b>ErrMessage</b> and <b>DtsJobId</b> is returned for <b>DynamicMessage</b>.</para>
+        /// <para>If the return value of <b>ErrMessage</b> is <b>The Value of Input Parameter %s is not valid</b> and the return value of <b>DynamicMessage</b> is <b>DtsJobId</b>, the specified value of <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the call failed.</para>
+        /// <para>The error code returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>403</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8C498360-7892-433C-847A-BA71A850****</para>
@@ -85,8 +85,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

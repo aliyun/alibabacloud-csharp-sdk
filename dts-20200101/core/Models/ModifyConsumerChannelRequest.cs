@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
         /// <summary>
         /// <para>The name of the consumer group. The name cannot exceed 128 characters in length. We recommend that you use an informative name for easy identification.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dtstest</para>
         /// </summary>
         [NameInMap("ConsumerGroupName")]
         [Validation(Required=false)]
@@ -92,6 +95,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

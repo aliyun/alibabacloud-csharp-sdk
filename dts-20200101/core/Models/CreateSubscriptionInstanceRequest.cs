@@ -94,10 +94,22 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>The region ID of the change tracking instance. You do not need to specify this parameter because this parameter will be removed in the future.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

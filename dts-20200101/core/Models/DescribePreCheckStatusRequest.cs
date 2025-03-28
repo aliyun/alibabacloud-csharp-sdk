@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The task code that specifies the type of the DTS subtask. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>01</b>: precheck</description></item>
-        /// <item><description><b>02</b>: schema migration or initial schema synchronization</description></item>
-        /// <item><description><b>03</b>: full data migration or initial full data synchronization</description></item>
-        /// <item><description><b>04</b>: incremental data migration or synchronization</description></item>
+        /// <item><description><b>01</b>: precheck.</description></item>
+        /// <item><description><b>02</b>: schema migration or initial schema synchronization.</description></item>
+        /// <item><description><b>03</b>: full data migration or initial full data synchronization.</description></item>
+        /// <item><description><b>04</b>: incremental data migration or synchronization.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than <b>0</b> and does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</para>
+        /// <para>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -77,6 +77,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekz4us4iruleja</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -94,8 +100,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The type of schema definition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>before</b>: schema migration or initial schema synchronization</description></item>
-        /// <item><description><b>after</b>: DDL operations performed during incremental data migration or synchronization</description></item>
+        /// <item><description><b>before</b>: schema migration or initial schema synchronization.</description></item>
+        /// <item><description><b>after</b>: DDL operations performed during incremental data migration or synchronization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,6 +111,15 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string StructType { get; set; }
 
+        /// <summary>
+        /// <para>Whether it is a seamless integration (Zero-ETL) task, the value can be:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: No. - <b>true</b>: Yes.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("ZeroEtlJob")]
         [Validation(Required=false)]
         public bool? ZeroEtlJob { get; set; }

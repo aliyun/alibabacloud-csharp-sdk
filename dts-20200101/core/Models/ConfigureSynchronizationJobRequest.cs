@@ -382,6 +382,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>资源组ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmzawhxxc****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -440,6 +446,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <remarks>
         /// <para> We recommend that you specify an informative name for easy identification. You do not need to use a unique task name.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL同步</para>
         /// </summary>
         [NameInMap("SynchronizationJobName")]
         [Validation(Required=false)]

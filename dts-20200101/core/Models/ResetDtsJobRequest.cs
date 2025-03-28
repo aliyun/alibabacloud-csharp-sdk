@@ -29,10 +29,22 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
+        /// <summary>
+        /// <para>The region where the DTS instance is located. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of Supported Regions</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekzn4iqlbsm7hy</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

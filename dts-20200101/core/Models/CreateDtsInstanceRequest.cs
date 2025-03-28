@@ -26,9 +26,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>Specifies whether to automatically start the task after the DTS instance is purchased. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: does not automatically start the task after the DTS instance is purchased. This is the default value.</description></item>
-        /// <item><description><b>true</b>: automatically starts the task after the DTS instance is purchased.</description></item>
+        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b></description></item>
         /// </list>
+        /// <remarks>
+        /// <para> This parameter can be set to <b>true</b> and take effect only if you specify a valid value for <b>JobId</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public bool? AutoStart { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the extract, transform, and load (ETL) instance. The unit is compute unit (CU). One CU is equal to 1 vCPU and 4 GB of memory. The value of this parameter must be an integer greater than or equal to 2.</para>
+        /// <para>The specification of the extract, transform, and load (ETL) instance. The unit is compute unit (CU). One CU is equal to 1 vCPU and 4 GB of memory. The value of this parameter must be an integer greater than or equal to 2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -48,9 +51,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public int? ComputeUnit { get; set; }
 
         /// <summary>
-        /// <para>The number of private custom ApsaraDB RDS instances in a PolarDB-X instance. Default value: <b>1</b>.</para>
+        /// <para>The number of custom ApsaraDB RDS instances in the PolarDB-X instance. Default value: <b>1</b>.</para>
         /// <remarks>
-        /// <para> You must specify this parameter only if the <b>SourceEndpointEngineName</b> parameter is set to <b>drds</b>.</para>
+        /// <para> This parameter is required only if <b>SourceEndpointEngineName</b> is set to <b>drds</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -112,6 +115,12 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string DestinationRegion { get; set; }
 
+        /// <summary>
+        /// <para>The region ID of the DTS instance. Set this parameter to the value of <b>RegionId</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("DtsRegion")]
         [Validation(Required=false)]
         public string DtsRegion { get; set; }
@@ -171,10 +180,28 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// <para>Upper limit of DU.</para>
+        /// <remarks>
+        /// <para>Only supported by Serverless instances.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16</para>
+        /// </summary>
         [NameInMap("MaxDu")]
         [Validation(Required=false)]
         public double? MaxDu { get; set; }
 
+        /// <summary>
+        /// <para>Lower limit of DU.</para>
+        /// <remarks>
+        /// <para>Only supported by Serverless instances.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("MinDu")]
         [Validation(Required=false)]
         public double? MinDu { get; set; }
@@ -212,7 +239,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The number of DTS instances that you want to purchase.</para>
         /// <remarks>
-        /// <para> Only a single instance can be purchased each time.</para>
+        /// <para> You can purchase only one DTS instance each time you call this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -332,18 +359,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The subscription duration.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values if the <b>Period</b> parameter is set to <b>Month</b>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values if the <b>Period</b> parameter is set to <b>Year</b>: 1, 2, 3, and 5.</para>
-        /// </description></item>
+        /// <item><description>Valid values if <b>Period</b> is set to <b>Month</b>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
+        /// <item><description>Valid values if <b>Period</b> is set to <b>Year</b>: 1, 2, 3, and 5.</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>You must specify this parameter only if the <b>PayType</b> parameter is set to <b>PrePaid</b>.</description></item>
-        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>You can set the <b>Period</b> parameter to specify the unit of the subscription duration.</description></item>
+        /// <item><description><para>This parameter is valid and required only if <b>PayType</b> is set to <b>PrePaid</b>.</para>
+        /// </description></item>
+        /// <item><description><para>You can configure <b>Period</b> to specify the unit of the subscription duration.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
