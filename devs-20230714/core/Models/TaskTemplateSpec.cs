@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [Validation(Required=false)]
         public Context Context { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>build&amp;deploy.</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }

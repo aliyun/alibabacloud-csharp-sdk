@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Devs20230714.Models
 {
     public class TaskWorker : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>serverless-runner</para>
+        /// </summary>
         [NameInMap("presetWorker")]
         [Validation(Required=false)]
         public string PresetWorker { get; set; }

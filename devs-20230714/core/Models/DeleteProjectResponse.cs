@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public DeleteProjectResponseBody Body { get; set; }
-
     }
 
 }

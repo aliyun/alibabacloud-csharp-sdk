@@ -18,7 +18,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         public GitLabConfig GitlabConfig { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>github</para>
         /// </summary>
         [NameInMap("platform")]
         [Validation(Required=false)]

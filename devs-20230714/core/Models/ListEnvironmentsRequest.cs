@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Devs20230714.Models
 {
     public class ListEnvironmentsRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dev</para>
+        /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
@@ -17,10 +21,18 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [Validation(Required=false)]
         public List<string> LabelSelector { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public long? PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }

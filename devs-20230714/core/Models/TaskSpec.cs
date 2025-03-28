@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [Validation(Required=false)]
         public Context Context { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>my-task-template</para>
+        /// </summary>
         [NameInMap("templateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }

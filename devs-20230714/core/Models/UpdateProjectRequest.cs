@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [Validation(Required=false)]
         public Project Body { get; set; }
 
-        [NameInMap("force")]
-        [Validation(Required=false)]
-        public bool? Force { get; set; }
-
     }
 
 }

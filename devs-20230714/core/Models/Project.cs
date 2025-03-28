@@ -9,18 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Devs20230714.Models
 {
     public class Project : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2021-11-19T09:34:38Z</para>
+        /// </summary>
         [NameInMap("createdTime")]
         [Validation(Required=false)]
         public string CreatedTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test-description</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("generation")]
-        [Validation(Required=false)]
-        public int? Generation { get; set; }
-
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Project</para>
+        /// </summary>
         [NameInMap("kind")]
         [Validation(Required=false)]
         public string Kind { get; set; }
@@ -30,31 +38,26 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         public Dictionary<string, string> Labels { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-project</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("resourceVersion")]
-        [Validation(Required=false)]
-        public int? ResourceVersion { get; set; }
-
-        [NameInMap("spec")]
-        [Validation(Required=false)]
-        public ProjectSpec Spec { get; set; }
-
         [NameInMap("status")]
         [Validation(Required=false)]
         public ProjectStatus Status { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1455541096***548</para>
+        /// </summary>
         [NameInMap("uid")]
         [Validation(Required=false)]
         public string Uid { get; set; }
-
-        [NameInMap("updatedTime")]
-        [Validation(Required=false)]
-        public string UpdatedTime { get; set; }
 
     }
 

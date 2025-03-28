@@ -9,13 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Devs20230714.Models
 {
     public class EventFilterConfig : TeaModel {
-        [NameInMap("pullRequest")]
+        [NameInMap("branch")]
         [Validation(Required=false)]
-        public PullRequestFilter PullRequest { get; set; }
-
-        [NameInMap("push")]
-        [Validation(Required=false)]
-        public PushFilter Push { get; set; }
+        public BranchFilter Branch { get; set; }
 
     }
 

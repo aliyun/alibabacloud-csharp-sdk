@@ -9,44 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Devs20230714.Models
 {
     public class EnvironmentSpec : TeaModel {
-        [NameInMap("alias")]
-        [Validation(Required=false)]
-        public string Alias { get; set; }
-
-        [NameInMap("infraStackConfig")]
-        [Validation(Required=false)]
-        public InfraStackSpec InfraStackConfig { get; set; }
-
-        [NameInMap("isAutoDeploy")]
-        [Validation(Required=false)]
-        public bool? IsAutoDeploy { get; set; }
-
-        [NameInMap("repositoryConfig")]
-        [Validation(Required=false)]
-        public RepositoryConfig RepositoryConfig { get; set; }
-
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>acs:ram::*******:role/aliyundevsdefaultrole</para>
+        /// </summary>
         [NameInMap("roleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
-        [NameInMap("serviceOverlay")]
+        [NameInMap("stagedConfigs")]
         [Validation(Required=false)]
-        public EnvironmentSpecServiceOverlay ServiceOverlay { get; set; }
-        public class EnvironmentSpecServiceOverlay : TeaModel {
-            [NameInMap("components")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> Components { get; set; }
+        public EnvironmentStagedConfigs StagedConfigs { get; set; }
 
-            [NameInMap("resources")]
-            [Validation(Required=false)]
-            public Dictionary<string, object> Resources { get; set; }
-
-        }
-
-        [NameInMap("templateConfig")]
-        [Validation(Required=false)]
-        public TemplateConfig TemplateConfig { get; set; }
-
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Testing</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }

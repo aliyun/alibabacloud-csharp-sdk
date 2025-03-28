@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
         [Validation(Required=false)]
         public TaskExecError LatestExecError { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Success</para>
+        /// </summary>
         [NameInMap("phase")]
         [Validation(Required=false)]
         public string Phase { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Devs20230714.Models
 {
     public class DeleteProjectRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }
