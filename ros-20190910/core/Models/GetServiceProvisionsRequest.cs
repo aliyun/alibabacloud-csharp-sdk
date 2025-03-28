@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <item><description>IMM: Intelligent Media Management (IMM)</description></item>
             /// <item><description>IOT: IoT Platform</description></item>
             /// <item><description>KMS: Key Management Service (KMS)</description></item>
-            /// <item><description>NAS: Apsara File Storage NAS (NAS)</description></item>
+            /// <item><description>NAS: File Storage NAS (NAS)</description></item>
             /// <item><description>NLP: Natural Language Processing (NLP)</description></item>
             /// <item><description>OSS: Object Storage Service (OSS)</description></item>
             /// <item><description>OTS: Tablestore</description></item>

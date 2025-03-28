@@ -16,6 +16,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public List<string> DeleteOptions { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of concurrent operations that can be performed on resources.</para>
+        /// <para>By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</description></item>
+        /// <item><description>If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Parallelism")]
         [Validation(Required=false)]
         public long? Parallelism { get; set; }

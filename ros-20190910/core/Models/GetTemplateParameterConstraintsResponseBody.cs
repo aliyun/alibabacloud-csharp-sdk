@@ -121,10 +121,22 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public List<object> AllowedValues { get; set; }
 
+                /// <summary>
+                /// <para>Behavior of the parameter</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>QueryError</para>
+                /// </summary>
                 [NameInMap("Behavior")]
                 [Validation(Required=false)]
                 public string Behavior { get; set; }
 
+                /// <summary>
+                /// <para>The reason for the parameter behavior</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>No resource property refer to the parameter</para>
+                /// </summary>
                 [NameInMap("BehaviorReason")]
                 [Validation(Required=false)]
                 public string BehaviorReason { get; set; }
@@ -210,18 +222,39 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
             }
 
+            /// <summary>
+            /// <para>Query the details of timeout.</para>
+            /// </summary>
             [NameInMap("QueryTimeoutDetails")]
             [Validation(Required=false)]
             public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails> QueryTimeoutDetails { get; set; }
             public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails : TeaModel {
+                /// <summary>
+                /// <para>Error message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>query property SlaveZoneIds.* in resource rds error, error message: query 8 seconds timeout</para>
+                /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
+                /// <summary>
+                /// <para>Resource name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rds</para>
+                /// </summary>
                 [NameInMap("ResourceName")]
                 [Validation(Required=false)]
                 public string ResourceName { get; set; }
 
+                /// <summary>
+                /// <para>Resource type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ALIYUN::RDS::DBInstance</para>
+                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }

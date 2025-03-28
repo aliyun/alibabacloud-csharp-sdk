@@ -204,6 +204,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ReplacementOption { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// <para>The resources that you want to import to the stack.</para>
         /// </summary>
@@ -360,6 +364,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("StackPolicyURL")]
         [Validation(Required=false)]
         public string StackPolicyURL { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateChangeSetRequestTags> Tags { get; set; }
+        public class CreateChangeSetRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]

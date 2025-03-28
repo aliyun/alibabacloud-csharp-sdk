@@ -9,14 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTemplatesRequest : TeaModel {
+        /// <summary>
+        /// <para>Filter.</para>
+        /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<ListTemplatesRequestFilters> Filters { get; set; }
         public class ListTemplatesRequestFilters : TeaModel {
+            /// <summary>
+            /// <para>The name of the filter. You can choose one or more names for the query. Value range:  </para>
+            /// <list type="bullet">
+            /// <item><description>Categories: Template categories  </description></item>
+            /// <item><description>DeployTypes: Deployment types  </description></item>
+            /// <item><description>ApplicationScenes: Application scenarios  </description></item>
+            /// <item><description>BasicServices: Basic services  </description></item>
+            /// <item><description>ResourceTypes: Resource types  </description></item>
+            /// <item><description>TemplateNames: Template names</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Categories</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The list of filter values.</para>
+            /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
             public List<string> Values { get; set; }
@@ -24,10 +44,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to query the tag information. Valid values:</para>
+        /// <para>Whether to query tag information. Values:  </para>
         /// <list type="bullet">
-        /// <item><description>Enabled</description></item>
-        /// <item><description>Disabled (default)</description></item>
+        /// <item><description>Enabled: Query.  </description></item>
+        /// <item><description>Disabled (default): Do not query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,9 +58,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string IncludeTags { get; set; }
 
         /// <summary>
-        /// <para>The page number.\
-        /// Pages start from page 1.\
-        /// Default value: 1.</para>
+        /// <para>The page number of the template list.<br>Start value: 1.<br>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,9 +68,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.\
-        /// Valid values: 1 to 50.\
-        /// Default value: 10.</para>
+        /// <para>The number of entries per page in a paginated query.<br>Value range: 1~50.<br>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -62,8 +78,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.\
-        /// For more information about resource groups, see the &quot;Resource Group&quot; section of <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
+        /// <para>The ID of the resource group.<br>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a Resource Group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph6aiy****</para>
@@ -73,12 +88,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The sharing type of the template.</para>
-        /// <para>Valid values:</para>
+        /// <para>The sharing type of the template.  </para>
+        /// <para>Values:  </para>
         /// <list type="bullet">
-        /// <item><description>Private (default): The template belongs to the template owner.</description></item>
-        /// <item><description>Shared: The template is shared with other users.</description></item>
-        /// <item><description>Official: The template is the shared template of the official version.</description></item>
+        /// <item><description>Private (default): The template is owned by the user.  </description></item>
+        /// <item><description>Shared: The template is shared by other users.  </description></item>
+        /// <item><description>Official: The template is officially shared.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,15 +104,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ShareType { get; set; }
 
         /// <summary>
-        /// <para>The tags. You can specify up to 20 tags.</para>
+        /// <para>Tags. A maximum of 20 tags are supported.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTemplatesRequestTag> Tag { get; set; }
         public class ListTemplatesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. This parameter takes effect only when ShareType is set to Private.</para>
-            /// <para>You can specify up to 20 tag keys.</para>
+            /// <para>The key of the tag. This parameter is effective only when ShareType is Private.  </para>
+            /// <para>A maximum of 20 tag keys are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>usage</para>
@@ -107,8 +122,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. This parameter takes effect only when ShareType is set to Private.</para>
-            /// <para>You can specify up to 20 tag values.</para>
+            /// <para>The value of the tag. This parameter is effective only when ShareType is Private.  </para>
+            /// <para>A maximum of 20 tag values are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deploy</para>
@@ -120,7 +135,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The template name. This parameter takes effect only when ShareType is set to Private. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or letter.</para>
+        /// <para>The name of the template. This parameter is effective only when ShareType is Private.<br>The length must not exceed 255 characters and must start with a digit or a letter. It can contain digits, letters, hyphens (-), and underscores (_).</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyTemplate</para>
