@@ -123,6 +123,14 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>common</para>
+        /// </summary>
+        [NameInMap("opType")]
+        [Validation(Required=false)]
+        public string OpType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
         [NameInMap("recommend")]

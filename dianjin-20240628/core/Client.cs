@@ -5075,6 +5075,10 @@ namespace AlibabaCloud.SDK.DianJin20240628
             {
                 body["metaData"] = request.MetaData;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpType))
+            {
+                body["opType"] = request.OpType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recommend))
             {
                 body["recommend"] = request.Recommend;
@@ -5163,6 +5167,10 @@ namespace AlibabaCloud.SDK.DianJin20240628
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaData))
             {
                 body["metaData"] = request.MetaData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpType))
+            {
+                body["opType"] = request.OpType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recommend))
             {
