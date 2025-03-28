@@ -9,76 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class GetSubPartnerListResponseBody : TeaModel {
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public GetSubPartnerListResponseBodyData Data { get; set; }
-        public class GetSubPartnerListResponseBodyData : TeaModel {
-            [NameInMap("Address")]
-            [Validation(Required=false)]
-            public string Address { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>ACTIVE_PERIOD</para>
-            /// </summary>
-            [NameInMap("AgreementStatus")]
-            [Validation(Required=false)]
-            public string AgreementStatus { get; set; }
-
-            [NameInMap("AgreementStatusDesc")]
-            [Validation(Required=false)]
-            public string AgreementStatusDesc { get; set; }
-
-            [NameInMap("City")]
-            [Validation(Required=false)]
-            public string City { get; set; }
-
-            [NameInMap("CompanyName")]
-            [Validation(Required=false)]
-            public string CompanyName { get; set; }
-
-            [NameInMap("Contact")]
-            [Validation(Required=false)]
-            public string Contact { get; set; }
-
-            [NameInMap("District")]
-            [Validation(Required=false)]
-            public string District { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2025-02-28 01:00:00</para>
-            /// </summary>
-            [NameInMap("JoinTime")]
-            [Validation(Required=false)]
-            public string JoinTime { get; set; }
-
-            [NameInMap("MasterAccount")]
-            [Validation(Required=false)]
-            public string MasterAccount { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1708588696796450</para>
-            /// </summary>
-            [NameInMap("MasterUid")]
-            [Validation(Required=false)]
-            public string MasterUid { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>P1233453</para>
-            /// </summary>
-            [NameInMap("Pid")]
-            [Validation(Required=false)]
-            public string Pid { get; set; }
-
-            [NameInMap("Province")]
-            [Validation(Required=false)]
-            public string Province { get; set; }
-
-        }
-
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -108,6 +38,60 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("SubPartnerList")]
+        [Validation(Required=false)]
+        public List<GetSubPartnerListResponseBodySubPartnerList> SubPartnerList { get; set; }
+        public class GetSubPartnerListResponseBodySubPartnerList : TeaModel {
+            [NameInMap("Address")]
+            [Validation(Required=false)]
+            public string Address { get; set; }
+
+            [NameInMap("AgreementStatus")]
+            [Validation(Required=false)]
+            public string AgreementStatus { get; set; }
+
+            [NameInMap("AgreementStatusDesc")]
+            [Validation(Required=false)]
+            public string AgreementStatusDesc { get; set; }
+
+            [NameInMap("City")]
+            [Validation(Required=false)]
+            public string City { get; set; }
+
+            [NameInMap("CompanyName")]
+            [Validation(Required=false)]
+            public string CompanyName { get; set; }
+
+            [NameInMap("Contact")]
+            [Validation(Required=false)]
+            public string Contact { get; set; }
+
+            [NameInMap("District")]
+            [Validation(Required=false)]
+            public string District { get; set; }
+
+            [NameInMap("JoinTime")]
+            [Validation(Required=false)]
+            public string JoinTime { get; set; }
+
+            [NameInMap("MasterAccount")]
+            [Validation(Required=false)]
+            public string MasterAccount { get; set; }
+
+            [NameInMap("MasterUid")]
+            [Validation(Required=false)]
+            public string MasterUid { get; set; }
+
+            [NameInMap("Pid")]
+            [Validation(Required=false)]
+            public string Pid { get; set; }
+
+            [NameInMap("Province")]
+            [Validation(Required=false)]
+            public string Province { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>
