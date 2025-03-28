@@ -235,6 +235,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public bool? IgnoreParentSkipRunningProperty { get; set; }
 
+        /// <summary>
+        /// <para>Custom image ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>m-bp1h4b5a8ogkbll2f3tr</para>
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }

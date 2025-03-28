@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<ListFilesResponseBodyDataFiles> Files { get; set; }
             public class ListFilesResponseBodyDataFiles : TeaModel {
                 /// <summary>
-                /// <para>The path of the folder where the file is located.</para>
+                /// <para>The path of the folder to which the file belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Business_process/my_first_business_process/MaxCompute/ods_layer</para>

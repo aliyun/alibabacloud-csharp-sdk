@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListShiftPersonnelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination data.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("Paging")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>A list of on-duty engineers in a shift schedule.</para>
+            /// <para>The on-duty engineers in the shift schedule.</para>
             /// </summary>
             [NameInMap("ShiftPersons")]
             [Validation(Required=false)]

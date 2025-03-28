@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>Entity array.</para>
+            /// <para>An array of entities.</para>
             /// </summary>
             [NameInMap("TableEntityList")]
             [Validation(Required=false)]
             public List<ListTablesResponseBodyDataTableEntityList> TableEntityList { get; set; }
             public class ListTablesResponseBodyDataTableEntityList : TeaModel {
                 /// <summary>
-                /// <para>Table entity information.</para>
+                /// <para>The information about the table.</para>
                 /// </summary>
                 [NameInMap("EntityContent")]
                 [Validation(Required=false)]

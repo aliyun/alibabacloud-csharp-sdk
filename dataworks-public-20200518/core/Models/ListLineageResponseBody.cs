@@ -49,8 +49,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public class ListLineageResponseBodyDataDataEntityListRelationList : TeaModel {
                     /// <summary>
                     /// <para>The data channel. Valid values:</para>
-                    /// <pre><c>FIRST_PARTY: DataWorks platformTHIRD_PARTY: user registration
-                    /// </c></pre>
+                    /// <list type="bullet">
+                    /// <item><description><b>FIRST_PARTY: DataWorks platform</b></description></item>
+                    /// <item><description><b>THIRD_PARTY: user registration</b></description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>THIRD_PARTY</para>
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string Channel { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the data source.</para>
+                    /// <para>The data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mysql</para>
@@ -147,8 +149,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <para>true</para>
-        /// <para>false</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

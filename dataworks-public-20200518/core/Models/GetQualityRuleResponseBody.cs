@@ -52,6 +52,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The description of the monitoring rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Verify that the primary key is unique</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
@@ -195,6 +198,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The name of the monitoring rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>View table fluctuations</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
@@ -210,6 +216,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public int? RuleType { get; set; }
 
+            /// <summary>
+            /// <para>The variable settings inserted before the custom rule. Format: x=a,y=b.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>x=a,y=b</para>
+            /// </summary>
             [NameInMap("TaskSetting")]
             [Validation(Required=false)]
             public string TaskSetting { get; set; }

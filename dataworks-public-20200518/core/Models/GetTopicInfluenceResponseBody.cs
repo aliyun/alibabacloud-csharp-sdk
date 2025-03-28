@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetTopicInfluenceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of baseline instances affected by the event.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetTopicInfluenceResponseBodyData Data { get; set; }
         public class GetTopicInfluenceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of affected baseline instances.</para>
+            /// <para>The affected baseline instances.</para>
             /// </summary>
             [NameInMap("Influences")]
             [Validation(Required=false)]

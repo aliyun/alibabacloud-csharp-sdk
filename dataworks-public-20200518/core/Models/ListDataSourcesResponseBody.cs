@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// }
                 /// </c></pre>
                 /// </description></item>
-                /// <item><description><para>MySQL</para>
+                /// <item><description><para>mysql</para>
                 /// <pre><c>{
                 ///   &quot;configType&quot;: &quot;1&quot;,
                 ///   &quot;database&quot;: &quot;mysql_d111b&quot;,
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// }
                 /// </c></pre>
                 /// </description></item>
-                /// <item><description><para>ApsaraDB RDS for SQL Server</para>
+                /// <item><description><para>sqlserver</para>
                 /// <pre><c>{
                 ///   &quot;configType&quot;: &quot;1&quot;,
                 ///   &quot;jdbcUrl&quot;: &quot;jdbc:sqlserver://rm-xxxxx.sqlserver.rds.aliyuncs.com:1433;DatabaseName=sqlserver_db1&quot;,
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// }
                 /// </c></pre>
                 /// </description></item>
-                /// <item><description><para>Object Storage Service (OSS)</para>
+                /// <item><description><para>oss</para>
                 /// <pre><c>{
-                ///   &quot;accessId&quot;: &quot;LTAINbR9Uxxxx&quot;,
-                ///   &quot;accessKey&quot;: &quot;***&quot;,
+                ///   &quot;accessId&quot;: &quot;***********&quot;,
+                ///   &quot;accessKey&quot;: &quot;***********&quot;,
                 ///   &quot;bucket&quot;: &quot;bigxxx1223&quot;,
                 ///   &quot;configType&quot;: &quot;1&quot;,
                 ///   &quot;endpoint&quot;: &quot;http://oss-cn-hangzhou.aliyuncs.com&quot;,
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// }
                 /// </c></pre>
                 /// </description></item>
-                /// <item><description><para>ApsaraDB RDS for PostgreSQL</para>
+                /// <item><description><para>postgresql</para>
                 /// <pre><c>{
                 ///   &quot;configType&quot;: &quot;1&quot;,
                 ///   &quot;database&quot;: &quot;cdp_xxx&quot;,
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// }
                 /// </c></pre>
                 /// </description></item>
-                /// <item><description><para>AnalyticDB for MySQL</para>
+                /// <item><description><para>ads</para>
                 /// <pre><c>{
                 ///   &quot;configType&quot;: &quot;1&quot;,
                 ///   &quot;password&quot;: &quot;***&quot;,

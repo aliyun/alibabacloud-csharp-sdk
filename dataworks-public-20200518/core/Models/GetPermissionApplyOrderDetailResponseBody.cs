@@ -116,6 +116,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     [Validation(Required=false)]
                     public List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList> ObjectMetaList { get; set; }
                     public class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList : TeaModel {
+                        [NameInMap("Actions")]
+                        [Validation(Required=false)]
+                        public List<string> Actions { get; set; }
+
                         /// <summary>
                         /// <para>The information about the column fields in the object on which you request permissions.</para>
                         /// </summary>
@@ -123,6 +127,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         [Validation(Required=false)]
                         public List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList> ColumnMetaList { get; set; }
                         public class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList : TeaModel {
+                            [NameInMap("ColumnActions")]
+                            [Validation(Required=false)]
+                            public List<string> ColumnActions { get; set; }
+
                             /// <summary>
                             /// <para>The description of the column on which you request permissions.</para>
                             /// 

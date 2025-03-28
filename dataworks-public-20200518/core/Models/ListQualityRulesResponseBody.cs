@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The details of the monitoring rule.</para>
+            /// <para>The details of the monitoring rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? CheckerId { get; set; }
 
                 /// <summary>
-                /// <para>The description of the system defense rule.</para>
+                /// <para>The description of the monitoring rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Verify table rules</para>

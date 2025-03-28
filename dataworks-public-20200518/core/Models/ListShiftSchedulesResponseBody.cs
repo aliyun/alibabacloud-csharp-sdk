@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListShiftSchedulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination data.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("Paging")]
         [Validation(Required=false)]

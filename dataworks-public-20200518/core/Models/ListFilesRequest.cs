@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ExactFileName { get; set; }
 
         /// <summary>
-        /// <para>The path of the files.</para>
+        /// <para>The path of the folder to which files belong.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Business_process/my_first_business_process/MaxCompute/ods_layer</para>
@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
+
+        [NameInMap("LastEditUser")]
+        [Validation(Required=false)]
+        public string LastEditUser { get; set; }
 
         /// <summary>
         /// <para>Whether the query result contains the path of the folder where the file is located.</para>

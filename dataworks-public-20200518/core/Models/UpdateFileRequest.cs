@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string AdvancedSettings { get; set; }
 
         /// <summary>
-        /// <para>Whether the scheduling configuration takes effect immediately after the release.</para>
+        /// <para>Specifies whether scheduling configurations immediately take effect after the node is deployed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>Scheduling configuration-&gt; previous cycle-&gt; whether to skip the upstream empty run attribute.</para>
+        /// <para>Specifies whether to skip the dry-run property of the ancestor nodes of the node. This parameter corresponds to the Skip the dry-run property of the ancestor node parameter that is displayed after you configure the Depend On parameter in the Dependencies section of the Properties tab in the DataWorks console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -214,6 +214,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public bool? IgnoreParentSkipRunningProperty { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the custom image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>m-uf6d7npxk1hhek8ng0cb</para>
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }

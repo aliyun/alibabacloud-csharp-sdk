@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListFileVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The file versions returned.</para>
+        /// <para>The file versions.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListFileVersionsResponseBodyData Data { get; set; }
         public class ListFileVersionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of the file version.</para>
+            /// <para>The details of file versions.</para>
             /// </summary>
             [NameInMap("FileVersions")]
             [Validation(Required=false)]

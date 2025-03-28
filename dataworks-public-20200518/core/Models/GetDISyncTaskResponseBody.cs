@@ -17,24 +17,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public GetDISyncTaskResponseBodyData Data { get; set; }
         public class GetDISyncTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Array of alarm rules associated with real-time tasks.</para>
+            /// <para>The alert rules that are associated with the real-time synchronization task. The value of this parameter is an array.</para>
             /// </summary>
             [NameInMap("AlarmList")]
             [Validation(Required=false)]
             public List<GetDISyncTaskResponseBodyDataAlarmList> AlarmList { get; set; }
             public class GetDISyncTaskResponseBodyDataAlarmList : TeaModel {
                 /// <summary>
-                /// <para>Alarm Notification configuration array.</para>
+                /// <para>The alert notification settings. The value of this parameter is an array.</para>
                 /// </summary>
                 [NameInMap("AlarmRuleList")]
                 [Validation(Required=false)]
                 public List<GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList> AlarmRuleList { get; set; }
                 public class GetDISyncTaskResponseBodyDataAlarmListAlarmRuleList : TeaModel {
                     /// <summary>
-                    /// <para>The calculation method of indicators,</para>
+                    /// <para>The calculation method of a metric. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>avg interval average</description></item>
-                    /// <item><description>max interval takes the maximum value</description></item>
+                    /// <item><description>avg</description></item>
+                    /// <item><description>max</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string Aggregator { get; set; }
 
                     /// <summary>
-                    /// <para>Comparison method of comparison symbols, indicators and alarm rules</para>
+                    /// <para>The comparison operator, which indicates the method used to compare a metric with the alert rule.</para>
                     /// <list type="bullet">
                     /// <item><description>\&quot;=\&quot;</description></item>
                     /// <item><description>\&quot;&lt;\&quot;</description></item>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string Comparator { get; set; }
 
                     /// <summary>
-                    /// <para>Duration: How long does this condition last before an alarm is triggered, in minutes.</para>
+                    /// <para>The duration that a condition is met before an alert is triggered. Unit: minutes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                     /// <summary>
                     /// <list type="bullet">
-                    /// <item><description>WARNING WARNING: alert</description></item>
-                    /// <item><description>CRITICAL CRITICAL: alarm</description></item>
+                    /// <item><description>WARNING</description></item>
+                    /// <item><description>CRITICAL</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string Level { get; set; }
 
                     /// <summary>
-                    /// <para>Comparison threshold between metrics and alarm rules.</para>
+                    /// <para>The threshold for the comparison between a metric and the alert rule.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// <para>Alarm rule description.</para>
+                /// <para>The description of the alert rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Description</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Whether alarm rules are enabled.</para>
+                /// <para>Indicates whether the alert rule is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>Alarm rule id.</para>
+                /// <para>The ID of the alert rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>45242</para>
@@ -125,14 +125,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Alarm Type:</para>
+                /// <para>The alert type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>taskStatus: task status</description></item>
-                /// <item><description>bizDelay: business latency</description></item>
-                /// <item><description>taskFailoverCount: monitoring Failover</description></item>
-                /// <item><description>ddlUnsupport: DDL is not supported</description></item>
-                /// <item><description>ddlReport: DDL notifications</description></item>
-                /// <item><description>totalDirtyRecordWriteInLines: dirty data</description></item>
+                /// <item><description>taskStatus</description></item>
+                /// <item><description>bizDelay</description></item>
+                /// <item><description>taskFailoverCount</description></item>
+                /// <item><description>ddlUnsupport</description></item>
+                /// <item><description>ddlReport</description></item>
+                /// <item><description>totalDirtyRecordWriteInLines</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -143,21 +143,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Metric { get; set; }
 
                 /// <summary>
-                /// <para>Alert notification rule array.</para>
+                /// <para>The settings for alert notification rules. The value of this parameter is an array.</para>
                 /// </summary>
                 [NameInMap("NotifyRule")]
                 [Validation(Required=false)]
                 public GetDISyncTaskResponseBodyDataAlarmListNotifyRule NotifyRule { get; set; }
                 public class GetDISyncTaskResponseBodyDataAlarmListNotifyRule : TeaModel {
                     /// <summary>
-                    /// <para>Critical-level alert notification list.</para>
+                    /// <para>The settings for Critical-level alert notifications.</para>
                     /// </summary>
                     [NameInMap("Critical")]
                     [Validation(Required=false)]
                     public List<string> Critical { get; set; }
 
                     /// <summary>
-                    /// <para>Alarm interval, in minutes.</para>
+                    /// <para>The alert interval. Unit: minutes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public long? Interval { get; set; }
 
                     /// <summary>
-                    /// <para>Warning-level alert notification list.</para>
+                    /// <para>The settings for Warning-level alert notifications.</para>
                     /// </summary>
                     [NameInMap("Warning")]
                     [Validation(Required=false)]
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// <para>Alarm rule name.</para>
+                /// <para>The name of the alert rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Delay alert rule name 1</para>

@@ -2989,6 +2989,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <para>Creates a data synchronization task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot configure scheduling properties for a task by calling this operation. If you want to configure scheduling properties for a task, you can call the UpdateFile operation.<a href="~~2780137~~"></a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateDISyncTaskRequest
         /// </param>
@@ -3059,6 +3064,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <summary>
         /// <para>Creates a data synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot configure scheduling properties for a task by calling this operation. If you want to configure scheduling properties for a task, you can call the UpdateFile operation.<a href="~~2780137~~"></a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDISyncTaskRequest
@@ -3131,6 +3141,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <para>Creates a data synchronization task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot configure scheduling properties for a task by calling this operation. If you want to configure scheduling properties for a task, you can call the UpdateFile operation.<a href="~~2780137~~"></a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateDISyncTaskRequest
         /// </param>
@@ -3148,6 +3163,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <summary>
         /// <para>Creates a data synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You cannot configure scheduling properties for a task by calling this operation. If you want to configure scheduling properties for a task, you can call the UpdateFile operation.<a href="~~2780137~~"></a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDISyncTaskRequest
@@ -6241,9 +6261,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 query["ApplyReason"] = request.ApplyReason;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyType))
+            {
+                query["ApplyType"] = request.ApplyType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyUserIds))
             {
                 query["ApplyUserIds"] = request.ApplyUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Deadline))
             {
@@ -6318,9 +6346,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 query["ApplyReason"] = request.ApplyReason;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyType))
+            {
+                query["ApplyType"] = request.ApplyType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyUserIds))
             {
                 query["ApplyUserIds"] = request.ApplyUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Deadline))
             {
@@ -33407,6 +33443,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             {
                 body["Keyword"] = request.Keyword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LastEditUser))
+            {
+                body["LastEditUser"] = request.LastEditUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedAbsoluteFolderPath))
             {
                 body["NeedAbsoluteFolderPath"] = request.NeedAbsoluteFolderPath;
@@ -33507,6 +33547,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 body["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LastEditUser))
+            {
+                body["LastEditUser"] = request.LastEditUser;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedAbsoluteFolderPath))
             {
@@ -36459,6 +36503,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyType))
+            {
+                query["ApplyType"] = request.ApplyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -36548,6 +36600,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyType))
+            {
+                query["ApplyType"] = request.ApplyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -39596,156 +39656,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a directory to the left-side navigation pane of DataAnalysis.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// MountDirectoryRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// MountDirectoryResponse
-        /// </returns>
-        public MountDirectoryResponse MountDirectoryWithOptions(MountDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
-            {
-                body["TargetId"] = request.TargetId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
-            {
-                body["TargetType"] = request.TargetType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetUserId))
-            {
-                body["TargetUserId"] = request.TargetUserId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "MountDirectory",
-                Version = "2020-05-18",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<MountDirectoryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<MountDirectoryResponse>(Execute(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Adds a directory to the left-side navigation pane of DataAnalysis.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// MountDirectoryRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// MountDirectoryResponse
-        /// </returns>
-        public async Task<MountDirectoryResponse> MountDirectoryWithOptionsAsync(MountDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
-            {
-                body["TargetId"] = request.TargetId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
-            {
-                body["TargetType"] = request.TargetType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetUserId))
-            {
-                body["TargetUserId"] = request.TargetUserId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "MountDirectory",
-                Version = "2020-05-18",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<MountDirectoryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<MountDirectoryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Adds a directory to the left-side navigation pane of DataAnalysis.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// MountDirectoryRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// MountDirectoryResponse
-        /// </returns>
-        public MountDirectoryResponse MountDirectory(MountDirectoryRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return MountDirectoryWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Adds a directory to the left-side navigation pane of DataAnalysis.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// MountDirectoryRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// MountDirectoryResponse
-        /// </returns>
-        public async Task<MountDirectoryResponse> MountDirectoryAsync(MountDirectoryRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await MountDirectoryWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>Undeploys a node.</para>
         /// </summary>
         /// 
@@ -42132,180 +42042,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResumeInstanceWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Revokes permissions on table fields from a user.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// RevokeColumnPermissionRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// RevokeColumnPermissionResponse
-        /// </returns>
-        public RevokeColumnPermissionResponse RevokeColumnPermissionWithOptions(RevokeColumnPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Columns))
-            {
-                query["Columns"] = request.Columns;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeProjectName))
-            {
-                query["MaxComputeProjectName"] = request.MaxComputeProjectName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeUserId))
-            {
-                query["RevokeUserId"] = request.RevokeUserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeUserName))
-            {
-                query["RevokeUserName"] = request.RevokeUserName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
-            {
-                query["TableName"] = request.TableName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
-            {
-                query["WorkspaceId"] = request.WorkspaceId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RevokeColumnPermission",
-                Version = "2020-05-18",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RevokeColumnPermissionResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RevokeColumnPermissionResponse>(Execute(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Revokes permissions on table fields from a user.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// RevokeColumnPermissionRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// RevokeColumnPermissionResponse
-        /// </returns>
-        public async Task<RevokeColumnPermissionResponse> RevokeColumnPermissionWithOptionsAsync(RevokeColumnPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Columns))
-            {
-                query["Columns"] = request.Columns;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxComputeProjectName))
-            {
-                query["MaxComputeProjectName"] = request.MaxComputeProjectName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeUserId))
-            {
-                query["RevokeUserId"] = request.RevokeUserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeUserName))
-            {
-                query["RevokeUserName"] = request.RevokeUserName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
-            {
-                query["TableName"] = request.TableName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
-            {
-                query["WorkspaceId"] = request.WorkspaceId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "RevokeColumnPermission",
-                Version = "2020-05-18",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RevokeColumnPermissionResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RevokeColumnPermissionResponse>(await ExecuteAsync(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Revokes permissions on table fields from a user.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// RevokeColumnPermissionRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// RevokeColumnPermissionResponse
-        /// </returns>
-        public RevokeColumnPermissionResponse RevokeColumnPermission(RevokeColumnPermissionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return RevokeColumnPermissionWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Revokes permissions on table fields from a user.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// RevokeColumnPermissionRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// RevokeColumnPermissionResponse
-        /// </returns>
-        public async Task<RevokeColumnPermissionResponse> RevokeColumnPermissionAsync(RevokeColumnPermissionRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await RevokeColumnPermissionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -46542,156 +46278,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TopTenErrorTimesInstanceWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Removes a directory from the left-side navigation pane of DataAnalysis.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// UmountDirectoryRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// UmountDirectoryResponse
-        /// </returns>
-        public UmountDirectoryResponse UmountDirectoryWithOptions(UmountDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
-            {
-                body["TargetId"] = request.TargetId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
-            {
-                body["TargetType"] = request.TargetType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetUserId))
-            {
-                body["TargetUserId"] = request.TargetUserId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UmountDirectory",
-                Version = "2020-05-18",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UmountDirectoryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UmountDirectoryResponse>(Execute(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Removes a directory from the left-side navigation pane of DataAnalysis.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// UmountDirectoryRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// UmountDirectoryResponse
-        /// </returns>
-        public async Task<UmountDirectoryResponse> UmountDirectoryWithOptionsAsync(UmountDirectoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
-            {
-                body["TargetId"] = request.TargetId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
-            {
-                body["TargetType"] = request.TargetType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetUserId))
-            {
-                body["TargetUserId"] = request.TargetUserId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "UmountDirectory",
-                Version = "2020-05-18",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UmountDirectoryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UmountDirectoryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Removes a directory from the left-side navigation pane of DataAnalysis.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// UmountDirectoryRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// UmountDirectoryResponse
-        /// </returns>
-        public UmountDirectoryResponse UmountDirectory(UmountDirectoryRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return UmountDirectoryWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Removes a directory from the left-side navigation pane of DataAnalysis.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// UmountDirectoryRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// UmountDirectoryResponse
-        /// </returns>
-        public async Task<UmountDirectoryResponse> UmountDirectoryAsync(UmountDirectoryRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await UmountDirectoryWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

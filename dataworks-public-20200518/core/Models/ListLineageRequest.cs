@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListLineageRequest : TeaModel {
         /// <summary>
-        /// <para>The lineage type. Valid values:\
-        /// up: ancestor lineage\
-        /// down: descendant lineage</para>
+        /// <para>The lineage type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>up: ancestor lineage</description></item>
+        /// <item><description>down: descendant lineage</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
