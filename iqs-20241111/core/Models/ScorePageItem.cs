@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string Snippet { get; set; }
 
+        [NameInMap("summary")]
+        [Validation(Required=false)]
+        public string Summary { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

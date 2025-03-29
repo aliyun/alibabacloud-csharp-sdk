@@ -403,6 +403,10 @@ namespace AlibabaCloud.SDK.IQS20241111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableRerank))
+            {
+                query["enableRerank"] = request.EnableRerank;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
             {
                 query["industry"] = request.Industry;
@@ -414,6 +418,18 @@ namespace AlibabaCloud.SDK.IQS20241111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnMainText))
+            {
+                query["returnMainText"] = request.ReturnMainText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnMarkdownText))
+            {
+                query["returnMarkdownText"] = request.ReturnMarkdownText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnSummary))
+            {
+                query["returnSummary"] = request.ReturnSummary;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
@@ -472,6 +488,10 @@ namespace AlibabaCloud.SDK.IQS20241111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableRerank))
+            {
+                query["enableRerank"] = request.EnableRerank;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Industry))
             {
                 query["industry"] = request.Industry;
@@ -483,6 +503,18 @@ namespace AlibabaCloud.SDK.IQS20241111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnMainText))
+            {
+                query["returnMainText"] = request.ReturnMainText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnMarkdownText))
+            {
+                query["returnMarkdownText"] = request.ReturnMarkdownText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnSummary))
+            {
+                query["returnSummary"] = request.ReturnSummary;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
