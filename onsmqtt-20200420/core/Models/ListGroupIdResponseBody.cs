@@ -60,6 +60,20 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<ListGroupIdResponseBodyDataTags> Tags { get; set; }
+            public class ListGroupIdResponseBodyDataTags : TeaModel {
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The time when the group was last updated.</para>
             /// 

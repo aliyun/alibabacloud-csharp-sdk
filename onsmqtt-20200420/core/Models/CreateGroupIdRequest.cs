@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string Tags { get; set; }
+
     }
 
 }

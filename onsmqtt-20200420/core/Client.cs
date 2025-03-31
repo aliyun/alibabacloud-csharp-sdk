@@ -1449,6 +1449,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1506,6 +1510,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2565,7 +2573,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisasterDowngrade</para>
+        /// <para>Downgrades the virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call the operation, you must submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2618,7 +2626,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisasterDowngrade</para>
+        /// <para>Downgrades the virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call the operation, you must submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2671,7 +2679,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisasterDowngrade</para>
+        /// <para>Downgrades the virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call the operation, you must submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2689,7 +2697,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisasterDowngrade</para>
+        /// <para>Downgrades the virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call the operation, you must submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2707,7 +2715,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisasterRecovery</para>
+        /// <para>Recovers the public virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call this operation, you must submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2760,7 +2768,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisasterRecovery</para>
+        /// <para>Recovers the public virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call this operation, you must submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2813,7 +2821,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisasterRecovery</para>
+        /// <para>Recovers the public virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call this operation, you must submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2831,7 +2839,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisasterRecovery</para>
+        /// <para>Recovers the public virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call this operation, you must submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4523,6 +4531,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4576,6 +4588,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
