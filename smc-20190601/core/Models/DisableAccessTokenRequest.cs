@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
 {
     public class DisableAccessTokenRequest : TeaModel {
         /// <summary>
-        /// The ID of the activation code.
+        /// <para>The ID of the activation code.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>at-bp12g5gwup0yzmce****</para>
         /// </summary>
         [NameInMap("AccessTokenId")]
         [Validation(Required=false)]

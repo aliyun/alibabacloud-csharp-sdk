@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
 {
     public class StartReplicationJobRequest : TeaModel {
         /// <summary>
-        /// The migration job ID.
+        /// <para>The migration job ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>j-bw526m1vi6x21q****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

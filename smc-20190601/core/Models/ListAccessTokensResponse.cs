@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
 {
     public class ListAccessTokensResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public ListAccessTokensResponseBody Body { get; set; }
 
     }

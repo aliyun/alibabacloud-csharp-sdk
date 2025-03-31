@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
 {
     public class DeleteAccessTokenResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DB4A7EA2-6FDA-5655-B067-854532FB****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

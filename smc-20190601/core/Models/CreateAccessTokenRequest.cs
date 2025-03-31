@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,23 +10,31 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
 {
     public class CreateAccessTokenRequest : TeaModel {
         /// <summary>
-        /// The maximum number of times that the activation code can be used to import the information of migration sources. Valid values: 1 to 1000.
+        /// <para>The maximum number of times that the activation code can be used to import the information of migration sources. Valid values: 1 to 1000.</para>
+        /// <para>Default value: 100.</para>
         /// 
-        /// Default value: 100.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public string Count { get; set; }
 
         /// <summary>
-        /// The description of the activation code.
+        /// <para>The description of the activation code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The description of the activation code.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the activation code. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain digits, colons (:), underscores (\_), and hyphens (-).
+        /// <para>The name of the activation code. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -44,9 +49,11 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The validity period of the activation code. The activation code can no longer be used to import the information of migration sources after the code expires. Unit: day. Valid values: 1 to 90.
+        /// <para>The validity period of the activation code. The activation code can no longer be used to import the information of migration sources after the code expires. Unit: day. Valid values: 1 to 90.</para>
+        /// <para>Default value: 30.</para>
         /// 
-        /// Default value: 30.
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("TimeToLiveInDays")]
         [Validation(Required=false)]

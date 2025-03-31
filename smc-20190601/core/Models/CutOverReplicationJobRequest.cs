@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
 {
     public class CutOverReplicationJobRequest : TeaModel {
         /// <summary>
-        /// The ID of the incremental migration job.
+        /// <para>The ID of the incremental migration job.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>j-bp1fnx5y3djc4cop****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
@@ -25,12 +29,15 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// Specifies whether to migrate full data for the last time. Valid Values:
+        /// <para>Specifies whether to migrate full data for the last time. Valid Values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: migrates full data for the last time.</description></item>
+        /// <item><description>false: does not migrate full data for the last time.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
-        /// *   true: migrates full data for the last time.
-        /// *   false: does not migrate full data for the last time.
-        /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("SyncData")]
         [Validation(Required=false)]

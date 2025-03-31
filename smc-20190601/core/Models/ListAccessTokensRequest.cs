@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
 {
     public class ListAccessTokensRequest : TeaModel {
         /// <summary>
-        /// The information about activation codes.
+        /// <para>The information about activation codes.</para>
         /// </summary>
         [NameInMap("AccessTokenId")]
         [Validation(Required=false)]
         public List<string> AccessTokenId { get; set; }
 
         /// <summary>
-        /// The name of the activation code.
+        /// <para>The name of the activation code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -32,11 +35,15 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The status of the activation code. Valid values:
+        /// <para>The status of the activation code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>activated</description></item>
+        /// <item><description>unactivated</description></item>
+        /// <item><description>expired</description></item>
+        /// </list>
         /// 
-        /// *   activated
-        /// *   unactivated
-        /// *   expired
+        /// <b>Example:</b>
+        /// <para>activated</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

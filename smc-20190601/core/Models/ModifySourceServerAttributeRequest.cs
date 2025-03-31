@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
 {
     public class ModifySourceServerAttributeRequest : TeaModel {
         /// <summary>
-        /// The description of the migration source. The description can be up to 256 characters in length and cannot start with `http://` or `https://`.
+        /// <para>The description of the migration source. The description can be up to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a source server.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the migration source. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+        /// <para>The name of the migration source. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testSourceServerName</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -32,7 +38,11 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The migration source ID.
+        /// <para>The migration source ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>s-bp17m1vi6x20c6g6****</para>
         /// </summary>
         [NameInMap("SourceId")]
         [Validation(Required=false)]

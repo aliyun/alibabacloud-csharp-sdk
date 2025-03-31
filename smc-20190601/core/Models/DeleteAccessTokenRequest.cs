@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
 {
     public class DeleteAccessTokenRequest : TeaModel {
         /// <summary>
-        /// The ID of the activation code.
+        /// <para>The ID of the activation code.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>at-bp1akz2zp67r0k6r****</para>
         /// </summary>
         [NameInMap("AccessTokenId")]
         [Validation(Required=false)]

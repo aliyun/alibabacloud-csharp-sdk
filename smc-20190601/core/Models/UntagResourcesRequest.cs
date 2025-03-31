@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all tags that are added to the specified SMC resource. This parameter is valid only if you do not set `TagKey.N`. Valid values:
+        /// <para>Specifies whether to remove all tags that are added to the specified SMC resource. This parameter is valid only if you do not set <c>TagKey.N</c>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: removes all tags that are added to the specified SMC resource. If no tags are added to the specified SMC resource, no operation is performed.</description></item>
+        /// <item><description>false: does not remove tags that are added to the specified SMC resource.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
-        /// *   true: removes all tags that are added to the specified SMC resource. If no tags are added to the specified SMC resource, no operation is performed.
-        /// *   false: does not remove tags that are added to the specified SMC resource.
-        /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -26,7 +29,11 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The IDs of N SMC resources. SMC resources include migration sources and jobs. Valid values of N: 1 to 50.
+        /// <para>The IDs of N SMC resources. SMC resources include migration sources and jobs. Valid values of N: 1 to 50.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>s-bw526m1vi6x20c6g****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -37,17 +44,25 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// The type of the SMC resource. Valid values:
+        /// <para>The type of the SMC resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>sourceserver: migration source.</description></item>
+        /// <item><description>replicationjob: migration job.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   sourceserver: migration source.
-        /// *   replicationjob: migration job.
+        /// <b>Example:</b>
+        /// <para>sourceserver</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The key of tag N that is added to the SMC resource. Tag keys are case-sensitive. Valid values of N: 1 to 20.
+        /// <para>The key of tag N that is added to the SMC resource. Tag keys are case-sensitive. Valid values of N: 1 to 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestKey</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
