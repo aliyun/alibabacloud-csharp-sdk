@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListFunctionsRequest : TeaModel {
+        [NameInMap("description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         /// <summary>
         /// <para>The version of Function Compute to which the functions belong. Valid values: v3 and v2. v3: only lists functions of Function Compute 3.0. v2: only lists functions of Function Compute 2.0. By default, this parameter is left empty and functions in both Function Compute 3.0 and Function Compute 2.0 are listed.</para>
         /// 
@@ -18,6 +22,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [NameInMap("fcVersion")]
         [Validation(Required=false)]
         public string FcVersion { get; set; }
+
+        [NameInMap("gpuType")]
+        [Validation(Required=false)]
+        public string GpuType { get; set; }
 
         /// <summary>
         /// <para>The number of functions to return. The minimum value is 1 and the maximum value is 100.</para>
@@ -48,6 +56,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [NameInMap("prefix")]
         [Validation(Required=false)]
         public string Prefix { get; set; }
+
+        [NameInMap("runtime")]
+        [Validation(Required=false)]
+        public string Runtime { get; set; }
 
         [NameInMap("tags")]
         [Validation(Required=false)]

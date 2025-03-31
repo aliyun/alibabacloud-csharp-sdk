@@ -4751,9 +4751,17 @@ namespace AlibabaCloud.SDK.FC20230330
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FcVersion))
             {
                 query["fcVersion"] = request.FcVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuType))
+            {
+                query["gpuType"] = request.GpuType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -4766,6 +4774,10 @@ namespace AlibabaCloud.SDK.FC20230330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
             {
                 query["prefix"] = request.Prefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime))
+            {
+                query["runtime"] = request.Runtime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
@@ -4826,9 +4838,17 @@ namespace AlibabaCloud.SDK.FC20230330
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FcVersion))
             {
                 query["fcVersion"] = request.FcVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuType))
+            {
+                query["gpuType"] = request.GpuType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -4841,6 +4861,10 @@ namespace AlibabaCloud.SDK.FC20230330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prefix))
             {
                 query["prefix"] = request.Prefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Runtime))
+            {
+                query["runtime"] = request.Runtime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
