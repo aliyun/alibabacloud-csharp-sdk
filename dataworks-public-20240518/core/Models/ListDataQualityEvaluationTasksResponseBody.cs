@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks> DataQualityEvaluationTasks { get; set; }
             public class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks : TeaModel {
+                [NameInMap("DataSourceId")]
+                [Validation(Required=false)]
+                public long? DataSourceId { get; set; }
+
                 /// <summary>
                 /// <para>The description of the data quality monitoring task. The description can be up to 65,535 characters in length.</para>
                 /// 

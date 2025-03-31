@@ -69,6 +69,212 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
 
+            [NameInMap("Results")]
+            [Validation(Required=false)]
+            public List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults> Results { get; set; }
+            public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults : TeaModel {
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public long? CreateTime { get; set; }
+
+                [NameInMap("Details")]
+                [Validation(Required=false)]
+                public List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails> Details { get; set; }
+                public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails : TeaModel {
+                    [NameInMap("CheckedValue")]
+                    [Validation(Required=false)]
+                    public string CheckedValue { get; set; }
+
+                    [NameInMap("ReferencedValue")]
+                    [Validation(Required=false)]
+                    public string ReferencedValue { get; set; }
+
+                    [NameInMap("Status")]
+                    [Validation(Required=false)]
+                    public string Status { get; set; }
+
+                }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public long? Id { get; set; }
+
+                [NameInMap("Rule")]
+                [Validation(Required=false)]
+                public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule Rule { get; set; }
+                public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule : TeaModel {
+                    [NameInMap("CheckingConfig")]
+                    [Validation(Required=false)]
+                    public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig CheckingConfig { get; set; }
+                    public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig : TeaModel {
+                        [NameInMap("ReferencedSamplesFilter")]
+                        [Validation(Required=false)]
+                        public string ReferencedSamplesFilter { get; set; }
+
+                        [NameInMap("Thresholds")]
+                        [Validation(Required=false)]
+                        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholds Thresholds { get; set; }
+                        public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholds : TeaModel {
+                            [NameInMap("Critical")]
+                            [Validation(Required=false)]
+                            public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical Critical { get; set; }
+                            public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical : TeaModel {
+                                [NameInMap("Expression")]
+                                [Validation(Required=false)]
+                                public string Expression { get; set; }
+
+                                [NameInMap("Operator")]
+                                [Validation(Required=false)]
+                                public string Operator { get; set; }
+
+                                [NameInMap("Value")]
+                                [Validation(Required=false)]
+                                public string Value { get; set; }
+
+                            }
+
+                            [NameInMap("Expected")]
+                            [Validation(Required=false)]
+                            public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected Expected { get; set; }
+                            public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected : TeaModel {
+                                [NameInMap("Expression")]
+                                [Validation(Required=false)]
+                                public string Expression { get; set; }
+
+                                [NameInMap("Operator")]
+                                [Validation(Required=false)]
+                                public string Operator { get; set; }
+
+                                [NameInMap("Value")]
+                                [Validation(Required=false)]
+                                public string Value { get; set; }
+
+                            }
+
+                            [NameInMap("Warned")]
+                            [Validation(Required=false)]
+                            public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned Warned { get; set; }
+                            public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned : TeaModel {
+                                [NameInMap("Expression")]
+                                [Validation(Required=false)]
+                                public string Expression { get; set; }
+
+                                [NameInMap("Operator")]
+                                [Validation(Required=false)]
+                                public string Operator { get; set; }
+
+                                [NameInMap("Value")]
+                                [Validation(Required=false)]
+                                public string Value { get; set; }
+
+                            }
+
+                        }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                    }
+
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    [NameInMap("Enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                    [NameInMap("ErrorHandlers")]
+                    [Validation(Required=false)]
+                    public List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers> ErrorHandlers { get; set; }
+                    public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers : TeaModel {
+                        [NameInMap("ErrorDataFilter")]
+                        [Validation(Required=false)]
+                        public string ErrorDataFilter { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                    }
+
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
+                    public long? Id { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("ProjectId")]
+                    [Validation(Required=false)]
+                    public long? ProjectId { get; set; }
+
+                    [NameInMap("SamplingConfig")]
+                    [Validation(Required=false)]
+                    public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig SamplingConfig { get; set; }
+                    public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig : TeaModel {
+                        [NameInMap("Metric")]
+                        [Validation(Required=false)]
+                        public string Metric { get; set; }
+
+                        [NameInMap("MetricParameters")]
+                        [Validation(Required=false)]
+                        public string MetricParameters { get; set; }
+
+                        [NameInMap("SamplingFilter")]
+                        [Validation(Required=false)]
+                        public string SamplingFilter { get; set; }
+
+                        [NameInMap("SettingConfig")]
+                        [Validation(Required=false)]
+                        public string SettingConfig { get; set; }
+
+                    }
+
+                    [NameInMap("Severity")]
+                    [Validation(Required=false)]
+                    public string Severity { get; set; }
+
+                    [NameInMap("Target")]
+                    [Validation(Required=false)]
+                    public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget Target { get; set; }
+                    public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget : TeaModel {
+                        [NameInMap("DatabaseType")]
+                        [Validation(Required=false)]
+                        public string DatabaseType { get; set; }
+
+                        [NameInMap("TableGuid")]
+                        [Validation(Required=false)]
+                        public string TableGuid { get; set; }
+
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                    }
+
+                    [NameInMap("TemplateCode")]
+                    [Validation(Required=false)]
+                    public string TemplateCode { get; set; }
+
+                }
+
+                [NameInMap("Sample")]
+                [Validation(Required=false)]
+                public string Sample { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("TaskInstanceId")]
+                [Validation(Required=false)]
+                public long? TaskInstanceId { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The status of the data quality monitoring instance.</para>
             /// <list type="bullet">

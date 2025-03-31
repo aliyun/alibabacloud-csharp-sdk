@@ -308,7 +308,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The task ID. If you configure this parameter, full update is performed on the task. If you do not configure this parameter, another task is created.</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
