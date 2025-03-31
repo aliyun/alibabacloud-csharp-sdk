@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                     [Validation(Required=false)]
                     public string Content { get; set; }
 
+                    [NameInMap("Identity")]
+                    [Validation(Required=false)]
+                    public string Identity { get; set; }
+
                     [NameInMap("Title")]
                     [Validation(Required=false)]
                     public string Title { get; set; }
@@ -196,6 +200,34 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 public bool? TranslateLlmSceneEnabled { get; set; }
 
             }
+
+            [NameInMap("IdentityRecognition")]
+            [Validation(Required=false)]
+            public CreateTaskRequestParametersIdentityRecognition IdentityRecognition { get; set; }
+            public class CreateTaskRequestParametersIdentityRecognition : TeaModel {
+                [NameInMap("IdentityContents")]
+                [Validation(Required=false)]
+                public List<CreateTaskRequestParametersIdentityRecognitionIdentityContents> IdentityContents { get; set; }
+                public class CreateTaskRequestParametersIdentityRecognitionIdentityContents : TeaModel {
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
+                [NameInMap("SceneIntroduction")]
+                [Validation(Required=false)]
+                public string SceneIntroduction { get; set; }
+
+            }
+
+            [NameInMap("IdentityRecognitionEnabled")]
+            [Validation(Required=false)]
+            public bool? IdentityRecognitionEnabled { get; set; }
 
             [NameInMap("MeetingAssistance")]
             [Validation(Required=false)]
