@@ -20459,6 +20459,132 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询站点中国大陆网络接入优化配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCrossBorderOptimizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCrossBorderOptimizationResponse
+        /// </returns>
+        public GetCrossBorderOptimizationResponse GetCrossBorderOptimizationWithOptions(GetCrossBorderOptimizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCrossBorderOptimization",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetCrossBorderOptimizationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetCrossBorderOptimizationResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点中国大陆网络接入优化配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCrossBorderOptimizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCrossBorderOptimizationResponse
+        /// </returns>
+        public async Task<GetCrossBorderOptimizationResponse> GetCrossBorderOptimizationWithOptionsAsync(GetCrossBorderOptimizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCrossBorderOptimization",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetCrossBorderOptimizationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetCrossBorderOptimizationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点中国大陆网络接入优化配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCrossBorderOptimizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCrossBorderOptimizationResponse
+        /// </returns>
+        public GetCrossBorderOptimizationResponse GetCrossBorderOptimization(GetCrossBorderOptimizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCrossBorderOptimizationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点中国大陆网络接入优化配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCrossBorderOptimizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCrossBorderOptimizationResponse
+        /// </returns>
+        public async Task<GetCrossBorderOptimizationResponse> GetCrossBorderOptimizationAsync(GetCrossBorderOptimizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCrossBorderOptimizationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Query Site Developer Mode Configuration</para>
         /// </summary>
         /// 
@@ -33455,7 +33581,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Site List</para>
+        /// <para>Queries the information about websites in your account, such as the name, status, and configuration of each website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33506,7 +33632,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Site List</para>
+        /// <para>Queries the information about websites in your account, such as the name, status, and configuration of each website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33557,7 +33683,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Site List</para>
+        /// <para>Queries the information about websites in your account, such as the name, status, and configuration of each website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33575,7 +33701,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Site List</para>
+        /// <para>Queries the information about websites in your account, such as the name, status, and configuration of each website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40245,6 +40371,148 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateCompressionRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改站点中国大陆网络接入优化配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCrossBorderOptimizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCrossBorderOptimizationResponse
+        /// </returns>
+        public UpdateCrossBorderOptimizationResponse UpdateCrossBorderOptimizationWithOptions(UpdateCrossBorderOptimizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                query["Enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCrossBorderOptimization",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateCrossBorderOptimizationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateCrossBorderOptimizationResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改站点中国大陆网络接入优化配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCrossBorderOptimizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCrossBorderOptimizationResponse
+        /// </returns>
+        public async Task<UpdateCrossBorderOptimizationResponse> UpdateCrossBorderOptimizationWithOptionsAsync(UpdateCrossBorderOptimizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                query["Enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCrossBorderOptimization",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpdateCrossBorderOptimizationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpdateCrossBorderOptimizationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改站点中国大陆网络接入优化配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCrossBorderOptimizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCrossBorderOptimizationResponse
+        /// </returns>
+        public UpdateCrossBorderOptimizationResponse UpdateCrossBorderOptimization(UpdateCrossBorderOptimizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCrossBorderOptimizationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改站点中国大陆网络接入优化配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCrossBorderOptimizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCrossBorderOptimizationResponse
+        /// </returns>
+        public async Task<UpdateCrossBorderOptimizationResponse> UpdateCrossBorderOptimizationAsync(UpdateCrossBorderOptimizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCrossBorderOptimizationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

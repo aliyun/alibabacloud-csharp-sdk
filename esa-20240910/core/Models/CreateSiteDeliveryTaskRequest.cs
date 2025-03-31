@@ -382,7 +382,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>The access key ID of your Amazon S3 account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>LTAIKh***</para>
+            /// <para>yourAccessKeyID</para>
             /// </summary>
             [NameInMap("AccessKey")]
             [Validation(Required=false)]
