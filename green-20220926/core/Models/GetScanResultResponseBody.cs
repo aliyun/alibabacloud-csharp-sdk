@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public List<GetScanResultResponseBodyDataItems> Items { get; set; }
             public class GetScanResultResponseBodyDataItems : TeaModel {
+                [NameInMap("AttackLevel")]
+                [Validation(Required=false)]
+                public string AttackLevel { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -141,6 +145,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [Validation(Required=false)]
                 public long? PageNum { get; set; }
 
+                [NameInMap("RequestFrom")]
+                [Validation(Required=false)]
+                public string RequestFrom { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -210,6 +218,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public float? Score { get; set; }
+
+                [NameInMap("SensitiveLevel")]
+                [Validation(Required=false)]
+                public string SensitiveLevel { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
