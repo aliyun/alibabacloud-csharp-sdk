@@ -53,9 +53,17 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public string AutoChapters { get; set; }
 
+                [NameInMap("ContentExtraction")]
+                [Validation(Required=false)]
+                public string ContentExtraction { get; set; }
+
                 [NameInMap("CustomPrompt")]
                 [Validation(Required=false)]
                 public string CustomPrompt { get; set; }
+
+                [NameInMap("IdentityRecognition")]
+                [Validation(Required=false)]
+                public string IdentityRecognition { get; set; }
 
                 [NameInMap("MeetingAssistance")]
                 [Validation(Required=false)]
