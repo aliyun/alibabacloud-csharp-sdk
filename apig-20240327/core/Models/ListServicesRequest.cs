@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListServicesRequest : TeaModel {
         /// <summary>
-        /// <para>Cloud-native API Gateway ID.</para>
+        /// <para>The ID of the Cloud-native API Gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cpv4sqdl*****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>Exact query by service name.</para>
+        /// <para>The service name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-service</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Page number, starting from 1. Default is 1 if not specified.</para>
+        /// <para>The page number to return. Pages start from page 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size, valid range [1, 100]. Default is 10 if not specified.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxxe5rc6cvla</para>
@@ -60,13 +60,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Query by service source type. Service sources:</para>
+        /// <para>The service source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MSE_NACOS: Services from MSE Nacos.</description></item>
-        /// <item><description>K8S: Services from K8S clusters in container services.</description></item>
-        /// <item><description>FC3: Services from function computing.</description></item>
-        /// <item><description>VIP: Services from a fixed address.</description></item>
-        /// <item><description>DNS: Services from a domain name.</description></item>
+        /// <item><description>MSE_NACOS: a service in an MSE Nacos instance</description></item>
+        /// <item><description>K8S: a service in a Kubernetes (K8s) cluster in Container Service for Kubernetes (ACK)</description></item>
+        /// <item><description>FC3: a service in Function Compute</description></item>
+        /// <item><description>VIP: a fixed address</description></item>
+        /// <item><description>DNS: a domain name</description></item>
+        /// </list>
+        /// <para>Enumerated values:</para>
+        /// <list type="bullet">
+        /// <item><description>K8S</description></item>
+        /// <item><description>FC3</description></item>
+        /// <item><description>DNS</description></item>
+        /// <item><description>VIP</description></item>
+        /// <item><description>MSE_NACOS</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

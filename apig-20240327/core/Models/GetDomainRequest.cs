@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetDomainRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether include domain related resource information.</para>
+        /// <para>Specifies whether to return online resource information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

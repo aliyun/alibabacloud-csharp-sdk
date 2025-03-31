@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetDashboardShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>zh: Chinese
-        /// en: English</para>
+        /// <para>The language. Valid values: zh (Chinese) and en (English).</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -31,17 +30,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ApiId { get; set; }
 
         /// <summary>
-        /// <para>Filter configuration</para>
+        /// <para>The filter configurations.</para>
         /// </summary>
         [NameInMap("filter")]
         [Validation(Required=false)]
         public string FilterShrink { get; set; }
 
         /// <summary>
-        /// <para>Dashboard name:</para>
+        /// <para>The dashboard name.</para>
         /// <list type="bullet">
-        /// <item><description>LOG: Access log</description></item>
-        /// <item><description>PLUGIN: Plugin log</description></item>
+        /// <item><description>LOG: access logs</description></item>
+        /// <item><description>PLUGIN: plug-in logs</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Plugin ID.</para>
+        /// <para>The plug-in ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pls-dn82a9djd8z****</para>
@@ -61,10 +60,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string PluginClassId { get; set; }
 
+        [NameInMap("pluginId")]
+        [Validation(Required=false)]
+        public string PluginId { get; set; }
+
         /// <summary>
-        /// <para>Dashboard source:</para>
+        /// <para>The dashboard source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SLS: Log dashboard</description></item>
+        /// <item><description>SLS: Simple Log Service</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,6 +76,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("source")]
         [Validation(Required=false)]
         public string Source { get; set; }
+
+        [NameInMap("upstreamCluster")]
+        [Validation(Required=false)]
+        public string UpstreamCluster { get; set; }
 
     }
 

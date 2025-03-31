@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateDomainResponseBodyData Data { get; set; }
         public class CreateDomainResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Domain ID.</para>
+            /// <para>The ID of the domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-cpu1aullhtgkidg7sa4g</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, used for tracing the API call chain.</para>
+        /// <para>The request ID, which is used to trace the API call link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0C2D1C68-0D93-5561-8EE6-FDB7BF067A30</para>

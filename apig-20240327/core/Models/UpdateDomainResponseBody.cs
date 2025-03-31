@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public UpdateDomainResponseBodyData Data { get; set; }
         public class UpdateDomainResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Deploy revision id.</para>
+            /// <para>The released version ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apr-xxx</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, used for tracing the API call chain.</para>
+        /// <para>The request ID. You can use this value to trace the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4BACB05C-3FE2-588F-9148-700C5C026B74</para>

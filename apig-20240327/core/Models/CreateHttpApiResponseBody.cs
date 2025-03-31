@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateHttpApiResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>API information.</para>
+        /// <para>The API information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateHttpApiResponseBodyData Data { get; set; }
         public class CreateHttpApiResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>HTTP API ID.</para>
+            /// <para>The HTTP API ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>api-xxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string HttpApiId { get; set; }
 
             /// <summary>
-            /// <para>Name of the API.</para>
+            /// <para>The API name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-api</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A1994B10-C6A8-58FA-8347-6A08B0D4EFDE</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateDomainRequest : TeaModel {
         /// <summary>
-        /// <para>CA Certificate Identifier.</para>
+        /// <para>The CA certificate ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ef1da5f-38ed-69b3-****-037781890265</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CaCertIdentifier { get; set; }
 
         /// <summary>
-        /// <para>Certificate Unique Identifier.</para>
+        /// <para>The certificate ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ef1da5f-38ed-69b3-****-037781890265</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CertIdentifier { get; set; }
 
         /// <summary>
-        /// <para>Client CA Certificate</para>
+        /// <para>The client CA certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClientCACert { get; set; }
 
         /// <summary>
-        /// <para>Set the HTTPS protocol type, whether to enable forced HTTPS redirection.</para>
+        /// <para>Specifies whether to enable forcible HTTPS redirection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -54,7 +54,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? ForceHttps { get; set; }
 
         /// <summary>
-        /// <para>HTTP/2 settings.</para>
+        /// <para>The HTTP/2 configuration.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>GlobalConfig</description></item>
+        /// <item><description>Close</description></item>
+        /// <item><description>Open</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Open</para>
@@ -64,14 +70,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Http2Option { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable mTLS mutual authentication</para>
+        /// <para>Specifies whether to enable mutual authentication.</para>
         /// </summary>
         [NameInMap("mTLSEnabled")]
         [Validation(Required=false)]
         public bool? MTLSEnabled { get; set; }
 
         /// <summary>
-        /// <para>Domain name.</para>
+        /// <para>The domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,10 +88,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The protocol type supported by the domain.</para>
+        /// <para>The protocol type supported by the domain name.</para>
         /// <list type="bullet">
-        /// <item><description>HTTP: Supports only HTTP protocol.</description></item>
-        /// <item><description>HTTPS: Supports only HTTPS protocol.</description></item>
+        /// <item><description>HTTP: Only HTTP is supported.</description></item>
+        /// <item><description>HTTPS: Only HTTPS is supported.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/151181.html">resource group ID</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzoiafjtr7zyq</para>
@@ -107,14 +113,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The TLS cipher suites config.</para>
+        /// <para>The cipher suite configuration.</para>
         /// </summary>
         [NameInMap("tlsCipherSuitesConfig")]
         [Validation(Required=false)]
         public TlsCipherSuitesConfig TlsCipherSuitesConfig { get; set; }
 
         /// <summary>
-        /// <para>Maximum TLS protocol version, supports up to TLS 1.3.</para>
+        /// <para>The maximum version of the TLS protocol. Up to TLS 1.3 is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLS1.3</para>
@@ -124,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string TlsMax { get; set; }
 
         /// <summary>
-        /// <para>Minimum TLS protocol version, supports down to TLS 1.0.</para>
+        /// <para>The minimum version of the TLS protocol. Down to TLS 1.0 is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLS1.0</para>
