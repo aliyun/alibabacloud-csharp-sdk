@@ -1067,6 +1067,140 @@ namespace AlibabaCloud.SDK.Devs20230714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>手动触发环境部署</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployEnvironmentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployEnvironmentResponse
+        /// </returns>
+        public DeployEnvironmentResponse DeployEnvironmentWithOptions(string projectName, string name, DeployEnvironmentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeployEnvironment",
+                Version = "2023-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/2023-07-14/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(projectName) + "/environments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/deploy",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeployEnvironmentResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeployEnvironmentResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动触发环境部署</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployEnvironmentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployEnvironmentResponse
+        /// </returns>
+        public async Task<DeployEnvironmentResponse> DeployEnvironmentWithOptionsAsync(string projectName, string name, DeployEnvironmentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeployEnvironment",
+                Version = "2023-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/2023-07-14/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(projectName) + "/environments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/deploy",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeployEnvironmentResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeployEnvironmentResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动触发环境部署</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployEnvironmentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployEnvironmentResponse
+        /// </returns>
+        public DeployEnvironmentResponse DeployEnvironment(string projectName, string name, DeployEnvironmentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeployEnvironmentWithOptions(projectName, name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动触发环境部署</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployEnvironmentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployEnvironmentResponse
+        /// </returns>
+        public async Task<DeployEnvironmentResponse> DeployEnvironmentAsync(string projectName, string name, DeployEnvironmentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeployEnvironmentWithOptionsAsync(projectName, name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取环境信息</para>
         /// </summary>
         /// 
@@ -1179,6 +1313,122 @@ namespace AlibabaCloud.SDK.Devs20230714
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetEnvironmentWithOptionsAsync(projectName, name, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询环境部署信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEnvironmentDeploymentResponse
+        /// </returns>
+        public GetEnvironmentDeploymentResponse GetEnvironmentDeploymentWithOptions(string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEnvironmentDeployment",
+                Version = "2023-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/2023-07-14/environmentdeployments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetEnvironmentDeploymentResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetEnvironmentDeploymentResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询环境部署信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEnvironmentDeploymentResponse
+        /// </returns>
+        public async Task<GetEnvironmentDeploymentResponse> GetEnvironmentDeploymentWithOptionsAsync(string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEnvironmentDeployment",
+                Version = "2023-07-14",
+                Protocol = "HTTPS",
+                Pathname = "/2023-07-14/environmentdeployments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetEnvironmentDeploymentResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetEnvironmentDeploymentResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询环境部署信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetEnvironmentDeploymentResponse
+        /// </returns>
+        public GetEnvironmentDeploymentResponse GetEnvironmentDeployment(string name)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetEnvironmentDeploymentWithOptions(name, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询环境部署信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetEnvironmentDeploymentResponse
+        /// </returns>
+        public async Task<GetEnvironmentDeploymentResponse> GetEnvironmentDeploymentAsync(string name)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetEnvironmentDeploymentWithOptionsAsync(name, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
