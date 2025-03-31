@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateApsDatasoureResponseBody : TeaModel {
         /// <summary>
+        /// <para>The HTTP status code or the error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>amv-7xxxxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The information about the cluster resource usage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>69</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -42,6 +50,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The returned message. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the request was successful, a success message is returned.****</description></item>
+        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>65D2***-45C1-5C18-**********</para>
         /// </summary>
@@ -58,6 +74,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the dry run succeeds. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

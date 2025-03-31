@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>StackOverflow Exception：</para>
+            /// <para>StackOverflow Exception:</para>
             /// </summary>
             [NameInMap("Error")]
             [Validation(Required=false)]

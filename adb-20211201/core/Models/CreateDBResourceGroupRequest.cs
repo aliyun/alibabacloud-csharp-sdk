@@ -168,6 +168,54 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public int? MinGpuQuantity { get; set; }
 
+        [NameInMap("RayConfig")]
+        [Validation(Required=false)]
+        public CreateDBResourceGroupRequestRayConfig RayConfig { get; set; }
+        public class CreateDBResourceGroupRequestRayConfig : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            [NameInMap("HeadSpec")]
+            [Validation(Required=false)]
+            public string HeadSpec { get; set; }
+
+            [NameInMap("WorkerGroups")]
+            [Validation(Required=false)]
+            public List<CreateDBResourceGroupRequestRayConfigWorkerGroups> WorkerGroups { get; set; }
+            public class CreateDBResourceGroupRequestRayConfigWorkerGroups : TeaModel {
+                [NameInMap("AllocateUnit")]
+                [Validation(Required=false)]
+                public string AllocateUnit { get; set; }
+
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
+                public string GroupName { get; set; }
+
+                [NameInMap("MaxWorkerQuantity")]
+                [Validation(Required=false)]
+                public int? MaxWorkerQuantity { get; set; }
+
+                [NameInMap("MinWorkerQuantity")]
+                [Validation(Required=false)]
+                public int? MinWorkerQuantity { get; set; }
+
+                [NameInMap("WorkerDiskCapacity")]
+                [Validation(Required=false)]
+                public string WorkerDiskCapacity { get; set; }
+
+                [NameInMap("WorkerSpecName")]
+                [Validation(Required=false)]
+                public string WorkerSpecName { get; set; }
+
+                [NameInMap("WorkerSpecType")]
+                [Validation(Required=false)]
+                public string WorkerSpecType { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The region ID of the cluster.</para>
         /// <remarks>

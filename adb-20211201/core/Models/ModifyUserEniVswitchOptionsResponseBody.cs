@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The returned message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, a <b>SUCCESS</b> message is returned.</description></item>
+        /// <item><description>If the request was successful, a success message is returned.****</description></item>
         /// <item><description>If the request failed, an error message is returned.</description></item>
         /// </list>
         /// 

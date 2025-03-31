@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyApsJobRequest : TeaModel {
         /// <summary>
+        /// <para>The job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ApsJobId { get; set; }
 
         /// <summary>
+        /// <para>The objects to be synchronized.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DbList { get; set; }
 
         /// <summary>
+        /// <para>The partitions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PartitionList { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateApsDatasoureShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The information about the Databricks data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -30,6 +33,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatabricksInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The description of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>description</para>
         /// </summary>
@@ -38,6 +43,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceDescription { get; set; }
 
         /// <summary>
+        /// <para>The name of the data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceName { get; set; }
 
         /// <summary>
+        /// <para>The type of the data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +65,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceType { get; set; }
 
         /// <summary>
+        /// <para>The information about the Hive data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -68,6 +77,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string HiveInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The information about the source Apache Kafka instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -78,6 +89,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string KafkaInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The mode.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ALI_CLOUD_INSTANCE</para>
         /// </summary>
@@ -86,6 +99,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Mode { get; set; }
 
         /// <summary>
+        /// <para>The information about the source PolarDB for MySQL cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -96,6 +111,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PolarDBMysqlInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The information about the source PolarDB-X instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -106,6 +123,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PolarDBXInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The information about the source ApsaraDB RDS for MySQL instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -116,6 +135,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RdsMysqlInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -126,6 +146,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The information about the source Simple Log Service (SLS) instance or cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>

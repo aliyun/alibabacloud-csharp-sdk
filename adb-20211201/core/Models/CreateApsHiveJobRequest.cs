@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateApsHiveJobRequest : TeaModel {
         /// <summary>
+        /// <para>The advanced configurations.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -19,11 +21,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string AdvancedConfig { get; set; }
 
+        /// <summary>
+        /// <para>The policy to handle tables with the same name in the destination cluster.</para>
+        /// </summary>
         [NameInMap("ConflictStrategy")]
         [Validation(Required=false)]
         public string ConflictStrategy { get; set; }
 
         /// <summary>
+        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The data source ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40</para>
         /// </summary>
@@ -42,6 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? DatasourceId { get; set; }
 
         /// <summary>
+        /// <para>The number of AnalyticDB compute units (ACUs) required for data migration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +61,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FullComputeUnit { get; set; }
 
         /// <summary>
+        /// <para>The path of the destination data lakehouse in an Object Storage Service (OSS) bucket.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OssLocation")]
@@ -59,6 +69,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string OssLocation { get; set; }
 
         /// <summary>
+        /// <para>The number of tasks that are allowed in parallel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>
@@ -67,6 +79,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? Parallelism { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,6 +93,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The name of the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,6 +104,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ResourceGroup { get; set; }
 
         /// <summary>
+        /// <para>The expression that allows objects to be synchronized.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -97,6 +116,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SyncAllowExpression { get; set; }
 
         /// <summary>
+        /// <para>The expression that denies objects to be synchronized.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>abc</para>
         /// </summary>
@@ -105,6 +126,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SyncDenyExpression { get; set; }
 
         /// <summary>
+        /// <para>The destination type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OSS</para>
         /// </summary>
@@ -113,6 +136,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TargetType { get; set; }
 
         /// <summary>
+        /// <para>The name of the workload.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

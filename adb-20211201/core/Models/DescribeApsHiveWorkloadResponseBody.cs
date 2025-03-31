@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsHiveWorkloadResponseBody : TeaModel {
         /// <summary>
+        /// <para>The queried job.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public DescribeApsHiveWorkloadResponseBodyApsWorkload ApsWorkload { get; set; }
         public class DescribeApsHiveWorkloadResponseBodyApsWorkload : TeaModel {
             /// <summary>
+            /// <para>The advanced configurations.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test.adv.config=value</para>
             /// </summary>
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AdvancedConfig { get; set; }
 
             /// <summary>
+            /// <para>The policy to handle tables with the same name in the destination cluster.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Intercept</para>
             /// </summary>
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ConflictStrategy { get; set; }
 
             /// <summary>
+            /// <para>The time when the workload was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <list type="bullet">
             /// <item><description></description></item>
@@ -46,6 +54,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>amv-*******</para>
             /// </summary>
@@ -54,6 +64,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
+            /// <para>The data source ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -62,6 +74,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? DatasourceId { get; set; }
 
             /// <summary>
+            /// <para>The name of the data source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sls-******</para>
             /// </summary>
@@ -70,6 +84,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DatasourceName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the E-MapReduce (EMR) cluster.</para>
+            /// 
             /// <b>Example:</b>
             /// <list type="bullet">
             /// <item><description></description></item>
@@ -80,6 +96,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string EmrClusterId { get; set; }
 
             /// <summary>
+            /// <para>The number of AnalyticDB compute units (ACUs) required for migration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>16</para>
             /// </summary>
@@ -88,7 +106,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string FullComputeUnit { get; set; }
 
             /// <summary>
-            /// <para>hive meta store url。</para>
+            /// <para>The URL of the Hive Metastore.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -100,6 +118,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MetaStoreUri { get; set; }
 
             /// <summary>
+            /// <para>The Object Storage Service (OSS) URL of the AnalyticDB for MySQL cluster data.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>oss://******</para>
             /// </summary>
@@ -108,6 +128,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string OssLocation { get; set; }
 
             /// <summary>
+            /// <para>The number of tasks that are allowed in parallel.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -116,6 +138,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? Parallelism { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -124,6 +148,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The resource group to which the SQL statement belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -132,6 +158,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ResourceGroup { get; set; }
 
             /// <summary>
+            /// <para>The status of the workload.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>
             /// </summary>
@@ -140,6 +168,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string State { get; set; }
 
             /// <summary>
+            /// <para>The expression that manually matches the source database table whitelist.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>abc</para>
             /// </summary>
@@ -148,6 +178,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SyncAllowExpression { get; set; }
 
             /// <summary>
+            /// <para>Manually match the blacklist expressions for source database tables.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>def</para>
             /// </summary>
@@ -156,6 +188,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SyncDenyExpression { get; set; }
 
             /// <summary>
+            /// <para>The destination type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>OSS</para>
             /// </summary>
@@ -164,6 +198,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TargetType { get; set; }
 
             /// <summary>
+            /// <para>The name of the vSwitch.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vsw-******</para>
             /// </summary>
@@ -172,6 +208,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Vswitch { get; set; }
 
             /// <summary>
+            /// <para>The job ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>aps-******</para>
             /// </summary>
@@ -180,6 +218,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string WorkloadId { get; set; }
 
             /// <summary>
+            /// <para>The name of the workload.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -188,6 +228,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string WorkloadName { get; set; }
 
             /// <summary>
+            /// <para>The name of the workload.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -198,6 +240,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>86F92D26-B774-5FA1-8E53-******</para>
         /// </summary>

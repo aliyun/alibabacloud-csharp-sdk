@@ -168,6 +168,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public int? MinGpuQuantity { get; set; }
 
+        [NameInMap("RayConfig")]
+        [Validation(Required=false)]
+        public string RayConfigShrink { get; set; }
+
         /// <summary>
         /// <para>The region ID of the cluster.</para>
         /// <remarks>

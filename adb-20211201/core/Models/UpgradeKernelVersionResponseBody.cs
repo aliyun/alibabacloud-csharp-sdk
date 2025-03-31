@@ -8,20 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
-    public class CancelSparkWarehouseBatchSQLResponseBody : TeaModel {
+    public class UpgradeKernelVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123</para>
-        /// </summary>
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public SparkBatchSQL Data { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>771C5FAA-530F-52F7-B84D-EBAD45***</para>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A444FFFFFF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

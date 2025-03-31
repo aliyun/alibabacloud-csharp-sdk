@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyDBResourceGroupRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5m</para>
+        /// </summary>
         [NameInMap("AutoStopInterval")]
         [Validation(Required=false)]
         public string AutoStopInterval { get; set; }
@@ -58,6 +62,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public bool? EnableSpot { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{\&quot;spark.adb.version\&quot;:\&quot;3.5\&quot;}</para>
+        /// </summary>
         [NameInMap("EngineParams")]
         [Validation(Required=false)]
         public Dictionary<string, object> EngineParams { get; set; }
@@ -150,6 +158,54 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public int? MinGpuQuantity { get; set; }
 
+        [NameInMap("RayConfig")]
+        [Validation(Required=false)]
+        public ModifyDBResourceGroupRequestRayConfig RayConfig { get; set; }
+        public class ModifyDBResourceGroupRequestRayConfig : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            [NameInMap("HeadSpec")]
+            [Validation(Required=false)]
+            public string HeadSpec { get; set; }
+
+            [NameInMap("WorkerGroups")]
+            [Validation(Required=false)]
+            public List<ModifyDBResourceGroupRequestRayConfigWorkerGroups> WorkerGroups { get; set; }
+            public class ModifyDBResourceGroupRequestRayConfigWorkerGroups : TeaModel {
+                [NameInMap("AllocateUnit")]
+                [Validation(Required=false)]
+                public string AllocateUnit { get; set; }
+
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
+                public string GroupName { get; set; }
+
+                [NameInMap("MaxWorkerQuantity")]
+                [Validation(Required=false)]
+                public int? MaxWorkerQuantity { get; set; }
+
+                [NameInMap("MinWorkerQuantity")]
+                [Validation(Required=false)]
+                public int? MinWorkerQuantity { get; set; }
+
+                [NameInMap("WorkerDiskCapacity")]
+                [Validation(Required=false)]
+                public string WorkerDiskCapacity { get; set; }
+
+                [NameInMap("WorkerSpecName")]
+                [Validation(Required=false)]
+                public string WorkerSpecName { get; set; }
+
+                [NameInMap("WorkerSpecType")]
+                [Validation(Required=false)]
+                public string WorkerSpecType { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The region ID of the cluster.</para>
         /// <remarks>
@@ -206,6 +262,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string SpecName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>starting</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ExecuteSparkWarehouseBatchSQLRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the client.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Dataworks。</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The maximum amount of execution result data that can be written to Object Storage Service (OSS). Unit: MB. Default value: 4096. The size of compressed objects is difficult to estimate. The data that is actually written to OSS is smaller than the specified value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4096</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ExecuteResultLimit { get; set; }
 
         /// <summary>
+        /// <para>The maximum execution duration. Unit: seconds. If a set of SQL statements fail to be executed for the specified period of time after submission, they are marked as a timeout error. The default value is 360000 seconds, which is equivalent to 100 hours.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600000</para>
         /// </summary>

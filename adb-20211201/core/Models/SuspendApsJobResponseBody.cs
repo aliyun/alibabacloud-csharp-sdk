@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class SuspendApsJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aps-bj1xxxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ApsJobId { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code or the error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error code returned when the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>-3EEC-</b></b></b>-9F06-******</para>
         /// </summary>
@@ -50,6 +60,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

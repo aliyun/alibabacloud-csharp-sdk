@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
     public class SparkBatchSQLStatement : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>s20240122jsdx****</para>
+        /// </summary>
+        [NameInMap("AppId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>SELECT 100</para>
         /// </summary>
         [NameInMap("Code")]

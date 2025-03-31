@@ -37,48 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The performance metrics to be queried. Separate multiple values with commas (,). Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>CPU</para>
-        /// <list type="bullet">
-        /// <item><description><b>AnalyticDB_CPU_Usage_Percentage</b>: the average CPU utilization.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Connections</para>
-        /// <list type="bullet">
-        /// <item><description><b>AnalyticDB_Instance_Connection_Count</b>: the number of database connections.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Writes</para>
-        /// <list type="bullet">
-        /// <item><description><b>AnalyticDB_TPS</b>: the write transactions per second (TPS).</description></item>
-        /// <item><description><b>AnalyticDB_InsertRT</b>: the write response time.</description></item>
-        /// <item><description><b>AnalyticDB_InsertBytes</b>: the write throughput.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Queries</para>
-        /// <list type="bullet">
-        /// <item><description><b>AnalyticDB_QPS</b>: the queries per second (QPS).</description></item>
-        /// <item><description><b>AnalyticDB_QueryRT</b>: the query response time.</description></item>
-        /// <item><description><b>AnalyticDB_QueryWaitTime</b>: the query wait time.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Disks</para>
-        /// <list type="bullet">
-        /// <item><description><b>AnalyticDB_Disk_IO_Avg_Usage_Percentage</b>: the average I/O utilization.</description></item>
-        /// <item><description><b>AnalyticDB_Disk_IO_Avg_Waiting_Time</b>: the average I/O wait time.</description></item>
-        /// <item><description><b>AnalyticDB_IO_Throughput</b>: the disk throughput.</description></item>
-        /// <item><description><b>AnalyticDB_IOPS</b>: the disk IOPS.</description></item>
-        /// <item><description><b>AnalyticDB_Disk_Usage</b>: the disk space that is used.</description></item>
-        /// <item><description><b>AnalyticDB_Disk_Usage_Percentage</b>: the disk usage.</description></item>
-        /// <item><description><b>AnalyticDB_Hot_Data_Usage</b>: the disk space that is used by hot data.</description></item>
-        /// <item><description><b>AnalyticDB_Cold_Data_Usage</b>: the disk space that is used by code data.</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> This parameter must be specified.</para>
-        /// </remarks>
+        /// <para>The key of the performance metric that you want to query. Separate multiple keys with commas (,). For more information about the performance metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">Metric overview</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AnalyticDB_CPU_Usage_Percentage</para>

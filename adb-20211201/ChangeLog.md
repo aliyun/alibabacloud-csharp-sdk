@@ -1,3 +1,16 @@
+2025-03-31 Version: 3.9.0
+- Support API UpgradeKernelVersion.
+- Update API CreateDBCluster: add request parameters ProductVersion.
+- Update API CreateDBCluster: add request parameters SecondaryVSwitchId.
+- Update API CreateDBCluster: add request parameters SecondaryZoneId.
+- Update API CreateDBResourceGroup: add request parameters RayConfig.
+- Update API DescribeDBClusterAttribute: add response parameters Body.Items.$.DiskEncryption.
+- Update API DescribeDBClusterAttribute: add response parameters Body.Items.$.SecondaryVSwitchId.
+- Update API DescribeDBClusterAttribute: add response parameters Body.Items.$.SecondaryZoneId.
+- Update API DescribeDBResourceGroup: add response parameters Body.GroupsInfo.$.RayConfig.
+- Update API ModifyDBResourceGroup: add request parameters RayConfig.
+
+
 2025-02-11 Version: 3.8.0
 - Support API CancelSparkWarehouseBatchSQL.
 - Support API DescribeSparkSQLDiagnosisAttribute.

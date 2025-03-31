@@ -169,6 +169,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string DBVersion { get; set; }
 
+                [NameInMap("DiskEncryption")]
+                [Validation(Required=false)]
+                public bool? DiskEncryption { get; set; }
+
                 /// <summary>
                 /// <para>The engine of the cluster. <b>AnalyticDB</b> is returned.</para>
                 /// 
@@ -387,6 +391,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                [NameInMap("SecondaryVSwitchId")]
+                [Validation(Required=false)]
+                public string SecondaryVSwitchId { get; set; }
+
+                [NameInMap("SecondaryZoneId")]
+                [Validation(Required=false)]
+                public string SecondaryZoneId { get; set; }
+
                 /// <summary>
                 /// <para>The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is approximately equal to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.</para>
                 /// 
@@ -452,11 +464,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
                 }
 
+                /// <summary>
+                /// <para>The job information.</para>
+                /// </summary>
                 [NameInMap("TaskInfo")]
                 [Validation(Required=false)]
                 public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo TaskInfo { get; set; }
                 public class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo : TeaModel {
                     /// <summary>
+                    /// <para>The name of the job.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ScaleUpDBCluster</para>
                     /// </summary>
@@ -465,6 +482,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string Name { get; set; }
 
                     /// <summary>
+                    /// <para>The progress of the job. Unit: %.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
                     /// </summary>
@@ -473,6 +492,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string Progress { get; set; }
 
                     /// <summary>
+                    /// <para>The status of the job. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>NOT_RUN</description></item>
+                    /// <item><description>RUNNING</description></item>
+                    /// <item><description>SUCCEED</description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>RUNNING</para>
                     /// </summary>
@@ -480,6 +506,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
+                    /// <summary>
+                    /// <para>The job steps.</para>
+                    /// </summary>
                     [NameInMap("StepList")]
                     [Validation(Required=false)]
                     public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepList StepList { get; set; }
@@ -489,6 +518,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public List<DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList> StepList { get; set; }
                         public class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList : TeaModel {
                             /// <summary>
+                            /// <para>The end time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>2024-03-10T10:28:34Z</para>
                             /// </summary>
@@ -497,6 +528,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                             public string EndTime { get; set; }
 
                             /// <summary>
+                            /// <para>The start time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>2024-03-10T09:28:34Z</para>
                             /// </summary>
@@ -505,6 +538,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                             public string StartTime { get; set; }
 
                             /// <summary>
+                            /// <para>The description of the job step.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>Prepare resources</para>
                             /// </summary>
@@ -513,6 +548,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                             public string StepDesc { get; set; }
 
                             /// <summary>
+                            /// <para>The name of the job step.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>PrepareResources</para>
                             /// </summary>
@@ -521,6 +558,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                             public string StepName { get; set; }
 
                             /// <summary>
+                            /// <para>The progress of the job step. Unit: %.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>50</para>
                             /// </summary>
@@ -529,6 +568,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                             public string StepProgress { get; set; }
 
                             /// <summary>
+                            /// <para>The status of the job step. Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description>NOT_RUN</description></item>
+                            /// <item><description>RUNNING</description></item>
+                            /// <item><description>SUCCEED</description></item>
+                            /// </list>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>RUNNING</para>
                             /// </summary>
@@ -557,6 +603,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public bool? UserENIStatus { get; set; }
 
                 /// <summary>
+                /// <para>The vSwitch connected to the ENI. Separate multiple vSwitches with commas (,).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vsw-rj9ixufmywqq98z******,vsw-rj95ij6wcz656v7******</para>
                 /// </summary>
@@ -565,6 +613,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string UserENIVSwitchOptions { get; set; }
 
                 /// <summary>
+                /// <para>The VPC information of the ENI.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vpc-rj9hnedlfm645uj******</para>
                 /// </summary>
@@ -573,6 +623,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string UserENIVpcId { get; set; }
 
                 /// <summary>
+                /// <para>The zone associated with the ENI. Separate multiple zones with commas (,).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-k,cn-hangzhou-h</para>
                 /// </summary>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ListSparkWarehouseBatchSQLResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListSparkWarehouseBatchSQLResponseBodyData Data { get; set; }
@@ -29,6 +32,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
+            /// <summary>
+            /// <para>The queried Spark SQL statements.</para>
+            /// </summary>
             [NameInMap("Queries")]
             [Validation(Required=false)]
             public List<SparkBatchSQL> Queries { get; set; }

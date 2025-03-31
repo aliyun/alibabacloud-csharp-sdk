@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkWarehouseBatchSQLRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the client, which can be up to 16 characters in length. Specify a descriptive name that makes it easy to identify.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DMS</para>
         /// </summary>

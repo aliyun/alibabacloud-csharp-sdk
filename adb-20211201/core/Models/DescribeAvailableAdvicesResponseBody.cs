@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<DescribeAvailableAdvicesResponseBodyItems> Items { get; set; }
         public class DescribeAvailableAdvicesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The date when the suggestion is generated.The date is in the yyyyMMdd format.</para>
+            /// <para>The date when the suggestion is generated. The date is in the yyyyMMdd format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20221124</para>

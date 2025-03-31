@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ExecuteSparkWarehouseBatchSQLResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

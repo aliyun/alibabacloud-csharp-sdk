@@ -1682,8 +1682,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一站式链路</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAPSJobRequest
@@ -1775,8 +1780,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一站式链路</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAPSJobRequest
@@ -1868,8 +1878,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一站式链路</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAPSJobRequest
@@ -1886,8 +1901,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一站式链路</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAPSJobRequest
@@ -2098,7 +2118,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作负载复制链路</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) replication job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2171,7 +2191,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作负载复制链路</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) replication job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2244,7 +2264,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作负载复制链路</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) replication job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2262,7 +2282,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作负载复制链路</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) replication job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2280,8 +2300,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建APS数据源。</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateApsDatasoureRequest
@@ -2407,8 +2432,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建APS数据源。</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateApsDatasoureRequest
@@ -2534,8 +2564,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建APS数据源。</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateApsDatasoureRequest
@@ -2552,8 +2587,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建APS数据源。</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateApsDatasoureRequest
@@ -2570,8 +2610,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Hive数据迁移链路。</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) job from a Hive data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateApsHiveJobRequest
@@ -2667,8 +2712,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Hive数据迁移链路。</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) job from a Hive data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateApsHiveJobRequest
@@ -2764,8 +2814,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Hive数据迁移链路。</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) job from a Hive data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateApsHiveJobRequest
@@ -2782,8 +2837,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Hive数据迁移链路。</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) job from a Hive data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateApsHiveJobRequest
@@ -2800,7 +2860,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个SLS到ADB数仓的APS链路</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2987,7 +3047,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个SLS到ADB数仓的APS链路</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3174,7 +3234,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个SLS到ADB数仓的APS链路</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3192,7 +3252,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个SLS到ADB数仓的APS链路</para>
+        /// <para>Creates an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3210,7 +3270,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Creates an AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3280,6 +3340,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["ProductForm"] = request.ProductForm;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductVersion))
+            {
+                query["ProductVersion"] = request.ProductVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3303,6 +3367,14 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreType))
             {
                 query["RestoreType"] = request.RestoreType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryVSwitchId))
+            {
+                query["SecondaryVSwitchId"] = request.SecondaryVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryZoneId))
+            {
+                query["SecondaryZoneId"] = request.SecondaryZoneId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDbClusterId))
             {
@@ -3360,7 +3432,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Creates an AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3430,6 +3502,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["ProductForm"] = request.ProductForm;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductVersion))
+            {
+                query["ProductVersion"] = request.ProductVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -3453,6 +3529,14 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreType))
             {
                 query["RestoreType"] = request.RestoreType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryVSwitchId))
+            {
+                query["SecondaryVSwitchId"] = request.SecondaryVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryZoneId))
+            {
+                query["SecondaryZoneId"] = request.SecondaryZoneId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDbClusterId))
             {
@@ -3510,7 +3594,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Creates an AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3533,7 +3617,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Creates an AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3582,6 +3666,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EngineParams))
             {
                 request.EngineParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EngineParams, "EngineParams", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RayConfig))
+            {
+                request.RayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayConfig, "RayConfig", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
             {
@@ -3647,6 +3735,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinGpuQuantity))
             {
                 query["MinGpuQuantity"] = request.MinGpuQuantity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayConfigShrink))
+            {
+                query["RayConfig"] = request.RayConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -3719,6 +3811,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 request.EngineParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EngineParams, "EngineParams", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RayConfig))
+            {
+                request.RayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayConfig, "RayConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
             {
                 request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
@@ -3783,6 +3879,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinGpuQuantity))
             {
                 query["MinGpuQuantity"] = request.MinGpuQuantity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayConfigShrink))
+            {
+                query["RayConfig"] = request.RayConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5228,8 +5328,17 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除aps任务</para>
+        /// <para>Deletes an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Deleting backup sets is an asynchronous operation and may require 10 to 20 minutes to complete.</para>
+        /// <list type="bullet">
+        /// <item><description>You can delete up to 100 backup sets at a time. If you want to delete more than 100 backup sets, call this operation twice.</description></item>
+        /// <item><description>To ensure data security, the system forcibly retains one valid backup set. If you want to delete the last backup set, the system prohibits your operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteApsJobRequest
@@ -5281,8 +5390,17 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除aps任务</para>
+        /// <para>Deletes an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Deleting backup sets is an asynchronous operation and may require 10 to 20 minutes to complete.</para>
+        /// <list type="bullet">
+        /// <item><description>You can delete up to 100 backup sets at a time. If you want to delete more than 100 backup sets, call this operation twice.</description></item>
+        /// <item><description>To ensure data security, the system forcibly retains one valid backup set. If you want to delete the last backup set, the system prohibits your operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteApsJobRequest
@@ -5334,8 +5452,17 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除aps任务</para>
+        /// <para>Deletes an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Deleting backup sets is an asynchronous operation and may require 10 to 20 minutes to complete.</para>
+        /// <list type="bullet">
+        /// <item><description>You can delete up to 100 backup sets at a time. If you want to delete more than 100 backup sets, call this operation twice.</description></item>
+        /// <item><description>To ensure data security, the system forcibly retains one valid backup set. If you want to delete the last backup set, the system prohibits your operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteApsJobRequest
@@ -5352,8 +5479,17 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除aps任务</para>
+        /// <para>Deletes an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Deleting backup sets is an asynchronous operation and may require 10 to 20 minutes to complete.</para>
+        /// <list type="bullet">
+        /// <item><description>You can delete up to 100 backup sets at a time. If you want to delete more than 100 backup sets, call this operation twice.</description></item>
+        /// <item><description>To ensure data security, the system forcibly retains one valid backup set. If you want to delete the last backup set, the system prohibits your operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteApsJobRequest
@@ -7000,8 +7136,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取APS联邦分析ADB实例列表</para>
+        /// <para>Queries a list of AnalyticDB for MySQL clusters for AnalyticDB Pipeline Service (APS) federated analytics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the performance data of a cluster over a time range based on performance metrics. The collection granularity is 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAPSADBInstancesRequest
@@ -7045,8 +7186,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取APS联邦分析ADB实例列表</para>
+        /// <para>Queries a list of AnalyticDB for MySQL clusters for AnalyticDB Pipeline Service (APS) federated analytics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the performance data of a cluster over a time range based on performance metrics. The collection granularity is 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAPSADBInstancesRequest
@@ -7090,8 +7236,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取APS联邦分析ADB实例列表</para>
+        /// <para>Queries a list of AnalyticDB for MySQL clusters for AnalyticDB Pipeline Service (APS) federated analytics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the performance data of a cluster over a time range based on performance metrics. The collection granularity is 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAPSADBInstancesRequest
@@ -7108,8 +7259,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取APS联邦分析ADB实例列表</para>
+        /// <para>Queries a list of AnalyticDB for MySQL clusters for AnalyticDB Pipeline Service (APS) federated analytics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the performance data of a cluster over a time range based on performance metrics. The collection granularity is 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAPSADBInstancesRequest
@@ -9822,7 +9978,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询APS Hive工作负载</para>
+        /// <para>Queries the information about an AnalyticDB Pipeline Service (APS) job from a Hive data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9879,7 +10035,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询APS Hive工作负载</para>
+        /// <para>Queries the information about an AnalyticDB Pipeline Service (APS) job from a Hive data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9936,7 +10092,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询APS Hive工作负载</para>
+        /// <para>Queries the information about an AnalyticDB Pipeline Service (APS) job from a Hive data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9954,7 +10110,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询APS Hive工作负载</para>
+        /// <para>Queries the information about an AnalyticDB Pipeline Service (APS) job from a Hive data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10114,7 +10270,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一站式链路列表</para>
+        /// <para>Queries a list of AnalyticDB Pipeline Service (APS) jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10183,7 +10339,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一站式链路列表</para>
+        /// <para>Queries a list of AnalyticDB Pipeline Service (APS) jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10252,7 +10408,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一站式链路列表</para>
+        /// <para>Queries a list of AnalyticDB Pipeline Service (APS) jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10270,7 +10426,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一站式链路列表</para>
+        /// <para>Queries a list of AnalyticDB Pipeline Service (APS) jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10470,7 +10626,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询aps任务进展。</para>
+        /// <para>Queries the progress of an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10527,7 +10683,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询aps任务进展。</para>
+        /// <para>Queries the progress of an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10584,7 +10740,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询aps任务进展。</para>
+        /// <para>Queries the progress of an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10602,7 +10758,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询aps任务进展。</para>
+        /// <para>Queries the progress of an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19814,6 +19970,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DescribeSparkCodeWebUiWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the diagnostic information about a Spark SQL query.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSparkSQLDiagnosisAttributeRequest
         /// </param>
@@ -19874,6 +20035,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the diagnostic information about a Spark SQL query.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSparkSQLDiagnosisAttributeRequest
         /// </param>
@@ -19934,6 +20100,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the diagnostic information about a Spark SQL query.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSparkSQLDiagnosisAttributeRequest
         /// </param>
@@ -19947,6 +20118,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             return DescribeSparkSQLDiagnosisAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the diagnostic information about a Spark SQL query.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSparkSQLDiagnosisAttributeRequest
         /// </param>
@@ -19960,6 +20136,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             return await DescribeSparkSQLDiagnosisAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the diagnostic information about Spark SQL queries.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSparkSQLDiagnosisListRequest
         /// </param>
@@ -20032,6 +20213,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the diagnostic information about Spark SQL queries.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSparkSQLDiagnosisListRequest
         /// </param>
@@ -20104,6 +20290,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the diagnostic information about Spark SQL queries.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSparkSQLDiagnosisListRequest
         /// </param>
@@ -20117,6 +20308,11 @@ namespace AlibabaCloud.SDK.Adb20211201
             return DescribeSparkSQLDiagnosisListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the diagnostic information about Spark SQL queries.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSparkSQLDiagnosisListRequest
         /// </param>
@@ -28914,8 +29110,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前ADB实例湖存储优化策略列表。</para>
+        /// <para>Queries a list of lake storage optimization policies for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListApsOptimizationStrategyRequest
@@ -28967,8 +29168,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前ADB实例湖存储优化策略列表。</para>
+        /// <para>Queries a list of lake storage optimization policies for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListApsOptimizationStrategyRequest
@@ -29020,8 +29226,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前ADB实例湖存储优化策略列表。</para>
+        /// <para>Queries a list of lake storage optimization policies for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListApsOptimizationStrategyRequest
@@ -29038,8 +29249,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前ADB实例湖存储优化策略列表。</para>
+        /// <para>Queries a list of lake storage optimization policies for an AnalyticDB for MySQL cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListApsOptimizationStrategyRequest
@@ -29238,7 +29454,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列取湖存储</para>
+        /// <para>Queries a list of lake storages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29283,7 +29499,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列取湖存储</para>
+        /// <para>Queries a list of lake storages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29328,7 +29544,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列取湖存储</para>
+        /// <para>Queries a list of lake storages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29346,7 +29562,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列取湖存储</para>
+        /// <para>Queries a list of lake storages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31494,8 +31710,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改aps任务</para>
+        /// <para>Modifies an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyApsJobRequest
@@ -31555,8 +31776,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改aps任务</para>
+        /// <para>Modifies an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyApsJobRequest
@@ -31616,8 +31842,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改aps任务</para>
+        /// <para>Modifies an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyApsJobRequest
@@ -31634,8 +31865,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改aps任务</para>
+        /// <para>Modifies an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyApsJobRequest
@@ -31652,7 +31888,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改sls投递adb数仓任务</para>
+        /// <para>Modifies an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31755,7 +31991,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改sls投递adb数仓任务</para>
+        /// <para>Modifies an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31858,7 +32094,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改sls投递adb数仓任务</para>
+        /// <para>Modifies an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31876,7 +32112,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改sls投递adb数仓任务</para>
+        /// <para>Modifies an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31896,6 +32132,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <summary>
         /// <para>Modifies the AnalyticDB Pipeline Service (APS) workload name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyApsWorkloadNameRequest
@@ -31958,6 +32199,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <para>Modifies the AnalyticDB Pipeline Service (APS) workload name.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyApsWorkloadNameRequest
         /// </param>
@@ -32019,6 +32265,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <para>Modifies the AnalyticDB Pipeline Service (APS) workload name.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyApsWorkloadNameRequest
         /// </param>
@@ -32036,6 +32287,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <summary>
         /// <para>Modifies the AnalyticDB Pipeline Service (APS) workload name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyApsWorkloadNameRequest
@@ -34101,6 +34357,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 request.EngineParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EngineParams, "EngineParams", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RayConfig))
+            {
+                request.RayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayConfig, "RayConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
             {
                 request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
@@ -34161,6 +34421,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinGpuQuantity))
             {
                 query["MinGpuQuantity"] = request.MinGpuQuantity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayConfigShrink))
+            {
+                query["RayConfig"] = request.RayConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -34237,6 +34501,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 request.EngineParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EngineParams, "EngineParams", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RayConfig))
+            {
+                request.RayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayConfig, "RayConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
             {
                 request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
@@ -34297,6 +34565,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinGpuQuantity))
             {
                 query["MinGpuQuantity"] = request.MinGpuQuantity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayConfigShrink))
+            {
+                query["RayConfig"] = request.RayConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -36172,7 +36444,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动aps任务</para>
+        /// <para>Starts an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36225,7 +36497,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动aps任务</para>
+        /// <para>Starts an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36278,7 +36550,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动aps任务</para>
+        /// <para>Starts an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36296,7 +36568,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动aps任务</para>
+        /// <para>Starts an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37284,7 +37556,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停aps任务</para>
+        /// <para>Suspends an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37337,7 +37609,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停aps任务</para>
+        /// <para>Suspends an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37390,7 +37662,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停aps任务</para>
+        /// <para>Suspends an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37408,7 +37680,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停aps任务</para>
+        /// <para>Suspends an AnalyticDB Pipeline Service (APS) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38134,6 +38406,188 @@ namespace AlibabaCloud.SDK.Adb20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSparkTemplateFileWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the minor version of an AnalyticDB for MySQL cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeKernelVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeKernelVersionResponse
+        /// </returns>
+        public UpgradeKernelVersionResponse UpgradeKernelVersionWithOptions(UpgradeKernelVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBVersion))
+            {
+                query["DBVersion"] = request.DBVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
+            {
+                query["SwitchMode"] = request.SwitchMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradeKernelVersion",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpgradeKernelVersionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpgradeKernelVersionResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the minor version of an AnalyticDB for MySQL cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeKernelVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeKernelVersionResponse
+        /// </returns>
+        public async Task<UpgradeKernelVersionResponse> UpgradeKernelVersionWithOptionsAsync(UpgradeKernelVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBVersion))
+            {
+                query["DBVersion"] = request.DBVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
+            {
+                query["SwitchMode"] = request.SwitchMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradeKernelVersion",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UpgradeKernelVersionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UpgradeKernelVersionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the minor version of an AnalyticDB for MySQL cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeKernelVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeKernelVersionResponse
+        /// </returns>
+        public UpgradeKernelVersionResponse UpgradeKernelVersion(UpgradeKernelVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpgradeKernelVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the minor version of an AnalyticDB for MySQL cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeKernelVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeKernelVersionResponse
+        /// </returns>
+        public async Task<UpgradeKernelVersionResponse> UpgradeKernelVersionAsync(UpgradeKernelVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpgradeKernelVersionWithOptionsAsync(request, runtime);
         }
 
     }
