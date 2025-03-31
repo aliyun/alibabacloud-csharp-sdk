@@ -10,35 +10,51 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListNamespaceRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-94klsruryslx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-namespace</para>
         /// </summary>
         [NameInMap("NamespaceName")]
         [Validation(Required=false)]
         public string NamespaceName { get; set; }
 
         /// <summary>
-        /// The ID of the namespace.
+        /// <para>The ID of the namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
         /// </summary>
         [NameInMap("NamespaceStatus")]
         [Validation(Required=false)]
         public string NamespaceStatus { get; set; }
 
         /// <summary>
-        /// The list of namespaces.
+        /// <para>The list of namespaces.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

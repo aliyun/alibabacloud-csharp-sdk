@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateRepoTriggerResponseBody : TeaModel {
         /// <summary>
-        /// The return value.
+        /// <para>The return value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>32535049-ED91-4589-98C0-7C88766EDF1F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

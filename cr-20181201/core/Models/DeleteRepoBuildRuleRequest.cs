@@ -10,21 +10,33 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DeleteRepoBuildRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the image building rule.
+        /// <para>The ID of the image building rule.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>crbr-36tffn0kouvi****</para>
         /// </summary>
         [NameInMap("BuildRuleId")]
         [Validation(Required=false)]
         public string BuildRuleId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-xkx6vujuhay0****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the image repository.
+        /// <para>The ID of the image repository.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>crr-xwvi3osiy4ff****</para>
         /// </summary>
         [NameInMap("RepoId")]
         [Validation(Required=false)]

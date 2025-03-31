@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DeleteRepoSyncRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-hpdfkc6utbaq****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the synchronization rule.
+        /// <para>The ID of the synchronization rule.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>crsr-gk5p2ns1kzns****</para>
         /// </summary>
         [NameInMap("SyncRuleId")]
         [Validation(Required=false)]

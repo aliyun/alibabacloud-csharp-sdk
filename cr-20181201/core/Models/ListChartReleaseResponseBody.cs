@@ -10,56 +10,77 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListChartReleaseResponseBody : TeaModel {
         /// <summary>
-        /// The list of chart versions.
+        /// <para>The list of chart versions.</para>
         /// </summary>
         [NameInMap("ChartReleases")]
         [Validation(Required=false)]
         public List<ListChartReleaseResponseBodyChartReleases> ChartReleases { get; set; }
         public class ListChartReleaseResponseBodyChartReleases : TeaModel {
             /// <summary>
-            /// The name of the chart version.
+            /// <para>The name of the chart version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>chart1</para>
             /// </summary>
             [NameInMap("Chart")]
             [Validation(Required=false)]
             public string Chart { get; set; }
 
             /// <summary>
-            /// The ID of the instance.
+            /// <para>The ID of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cri-xkx6vujuhay0****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The time when the chart was last modified.
+            /// <para>The time when the chart was last modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1571930323000</para>
             /// </summary>
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
             public long? ModifiedTime { get; set; }
 
             /// <summary>
-            /// The version number of the chart.
+            /// <para>The version number of the chart.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.1.0</para>
             /// </summary>
             [NameInMap("Release")]
             [Validation(Required=false)]
             public string Release { get; set; }
 
             /// <summary>
-            /// The ID of the chart repository.
+            /// <para>The ID of the chart repository.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>crcr-gpsu7b8chmxk****</para>
             /// </summary>
             [NameInMap("RepoId")]
             [Validation(Required=false)]
             public string RepoId { get; set; }
 
             /// <summary>
-            /// The size of the chart of the version. Unit: bytes.
+            /// <para>The size of the chart of the version. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2826</para>
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public string Size { get; set; }
 
             /// <summary>
-            /// The status of the chart.
+            /// <para>The status of the chart.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ENABLED</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -68,42 +89,60 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// The return value.
+        /// <para>The return value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F68823F6-F1B5-4A4E-8421-A83CAB8F2963</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// <para>The total number of returned entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

@@ -10,28 +10,44 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListArtifactBuildTaskLogRequest : TeaModel {
         /// <summary>
-        /// The ID of the artifact build task.
+        /// <para>The ID of the artifact build task.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i2a-1yu****</para>
         /// </summary>
         [NameInMap("BuildTaskId")]
         [Validation(Required=false)]
         public string BuildTaskId { get; set; }
 
         /// <summary>
-        /// The ID of the Container Registry instance.
+        /// <para>The ID of the Container Registry instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-shac42yvqzvq****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries per page. Maximum value: 100. If you specify a value greater than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetArtifactBuildTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the artifact building task.
+        /// <para>The ID of the artifact building task.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i2a-1yu****</para>
         /// </summary>
         [NameInMap("BuildTaskId")]
         [Validation(Required=false)]
         public string BuildTaskId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-shac42yvqzvq****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

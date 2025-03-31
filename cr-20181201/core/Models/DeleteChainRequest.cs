@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DeleteChainRequest : TeaModel {
         /// <summary>
-        /// The ID of the delivery pipeline.
+        /// <para>The ID of the delivery pipeline.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>chi-02ymhtwl3cq8****</para>
         /// </summary>
         [NameInMap("ChainId")]
         [Validation(Required=false)]
         public string ChainId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-4cdrlqmhn4gm****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

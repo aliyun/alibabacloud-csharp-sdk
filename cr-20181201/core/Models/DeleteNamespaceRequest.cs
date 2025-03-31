@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DeleteNamespaceRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-xkx6vujuhay0****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// <para>The name of the namespace.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ns3</para>
         /// </summary>
         [NameInMap("NamespaceName")]
         [Validation(Required=false)]

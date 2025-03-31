@@ -10,28 +10,41 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DeleteRepositoryRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-xkx6vujuhay0****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the image repository.
+        /// <para>The ID of the image repository.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>crr-l4933wbcmun2****</para>
         /// </summary>
         [NameInMap("RepoId")]
         [Validation(Required=false)]
         public string RepoId { get; set; }
 
         /// <summary>
-        /// The name of the repository.
+        /// <para>The name of the repository.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-repo</para>
         /// </summary>
         [NameInMap("RepoName")]
         [Validation(Required=false)]
         public string RepoName { get; set; }
 
         /// <summary>
-        /// The name of the namespace to which the repository belongs.
+        /// <para>The name of the namespace to which the repository belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-namespace</para>
         /// </summary>
         [NameInMap("RepoNamespaceName")]
         [Validation(Required=false)]

@@ -10,21 +10,33 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DeleteRepoTagRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-xkx6vujuhay****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the image repository.
+        /// <para>The ID of the image repository.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>crr-xwvi3osiy4ff****</para>
         /// </summary>
         [NameInMap("RepoId")]
         [Validation(Required=false)]
         public string RepoId { get; set; }
 
         /// <summary>
-        /// The tag of the image.
+        /// <para>The tag of the image.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.24</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

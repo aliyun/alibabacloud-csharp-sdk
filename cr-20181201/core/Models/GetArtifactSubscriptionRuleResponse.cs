@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20181201.Models
 {
-    public class GetRepoTagLayersResponse : TeaModel {
+    public class GetArtifactSubscriptionRuleResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public GetRepoTagLayersResponseBody Body { get; set; }
+        public GetArtifactSubscriptionRuleResponseBody Body { get; set; }
 
     }
 

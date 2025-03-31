@@ -10,89 +10,126 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetRepoSourceCodeRepoResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether image building is automatically triggered when source code is committed. Valid values:
+        /// <para>Indicates whether image building is automatically triggered when source code is committed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: Image building is automatically triggered when source code is committed.</description></item>
+        /// <item><description><c>false</c>: Image building is not triggered when source code is committed.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: Image building is automatically triggered when source code is committed.
-        /// *   `false`: Image building is not triggered when source code is committed.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoBuild")]
         [Validation(Required=false)]
         public string AutoBuild { get; set; }
 
         /// <summary>
-        /// The response code.
+        /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The address of the source code repository.
+        /// <para>The address of the source code repository.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://github.com">https://github.com</a></para>
         /// </summary>
         [NameInMap("CodeRepoDomain")]
         [Validation(Required=false)]
         public string CodeRepoDomain { get; set; }
 
         /// <summary>
-        /// The name of the source code repository.
+        /// <para>The name of the source code repository.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>repo</para>
         /// </summary>
         [NameInMap("CodeRepoName")]
         [Validation(Required=false)]
         public string CodeRepoName { get; set; }
 
         /// <summary>
-        /// The namespace to which the source code repository belongs.
+        /// <para>The namespace to which the source code repository belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>namespace</para>
         /// </summary>
         [NameInMap("CodeRepoNamespaceName")]
         [Validation(Required=false)]
         public string CodeRepoNamespaceName { get; set; }
 
         /// <summary>
-        /// The type of the code hosting platform. Valid values: `GITHUB`, `GITLAB`, `GITEE`, `CODE`, and `CODEUP`.
+        /// <para>The type of the code hosting platform. Valid values: <c>GITHUB</c>, <c>GITLAB</c>, <c>GITEE</c>, <c>CODE</c>, and <c>CODEUP</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GITHUB</para>
         /// </summary>
         [NameInMap("CodeRepoType")]
         [Validation(Required=false)]
         public string CodeRepoType { get; set; }
 
         /// <summary>
-        /// Indicates whether build cache is disabled. Valid values:
+        /// <para>Indicates whether build cache is disabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: Build cache is disabled.</description></item>
+        /// <item><description><c>false</c>: Build cache is enabled.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: Build cache is disabled.
-        /// *   `false`: Build cache is enabled.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DisableCacheBuild")]
         [Validation(Required=false)]
         public string DisableCacheBuild { get; set; }
 
         /// <summary>
-        /// Indicates whether the API call is successful. Valid values:
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: successful</description></item>
+        /// <item><description><c>false</c>: failed</description></item>
+        /// </list>
         /// 
-        /// *   `true`: successful
-        /// *   `false`: failed
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// Indicates whether image building is accelerated for servers outside the Chinese mainland. Valid values:
+        /// <para>Indicates whether image building is accelerated for servers outside the Chinese mainland. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: Image building is accelerated for servers outside the Chinese mainland.</description></item>
+        /// <item><description><c>false</c>: Image building is not accelerated for servers outside the Chinese mainland.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: Image building is accelerated for servers outside the Chinese mainland.
-        /// *   `false`: Image building is not accelerated for servers outside the Chinese mainland.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("OverseaBuild")]
         [Validation(Required=false)]
         public string OverseaBuild { get; set; }
 
         /// <summary>
-        /// The ID of the repository.
+        /// <para>The ID of the repository.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>crr-gzsrlevmvoaq****</para>
         /// </summary>
         [NameInMap("RepoId")]
         [Validation(Required=false)]
         public string RepoId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

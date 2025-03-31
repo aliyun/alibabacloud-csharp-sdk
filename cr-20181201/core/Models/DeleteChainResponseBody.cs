@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DeleteChainResponseBody : TeaModel {
         /// <summary>
-        /// The return value.
+        /// <para>The return value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DB1809A8-E1C8-5707-BAF8-D4FC1C11****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

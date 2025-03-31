@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetInstanceUsageRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-xkx6vujuhay0****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

@@ -10,21 +10,33 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetChartRepositoryRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the Container Registry instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-kmsiwlxxdcva****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The name of the repository.
+        /// <para>The name of the repository.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("RepoName")]
         [Validation(Required=false)]
         public string RepoName { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// <para>The name of the namespace.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("RepoNamespaceName")]
         [Validation(Required=false)]

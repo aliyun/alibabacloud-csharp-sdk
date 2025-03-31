@@ -10,31 +10,46 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateNamespaceRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to automatically create an image repository in the namespace.
+        /// <para>Specifies whether to automatically create an image repository in the namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("AutoCreateRepo")]
         [Validation(Required=false)]
         public bool? AutoCreateRepo { get; set; }
 
         /// <summary>
-        /// The default type of the repository that is automatically created. Valid values:
+        /// <para>The default type of the repository that is automatically created. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>PUBLIC</c>: a public repository</description></item>
+        /// <item><description><c>PRIVATE</c>: a private repository</description></item>
+        /// </list>
         /// 
-        /// *   `PUBLIC`: a public repository
-        /// *   `PRIVATE`: a private repository
+        /// <b>Example:</b>
+        /// <para>PUBLIC</para>
         /// </summary>
         [NameInMap("DefaultRepoType")]
         [Validation(Required=false)]
         public string DefaultRepoType { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-xkx6vujuhay0****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The name of the namespace. The name must be 2 to 120 characters in length, and can contain lowercase letters, digits, and the following delimiters: underscores (\_), hyphens (-), and periods (.). The name cannot start or end with a delimiter.
+        /// <para>The name of the namespace. The name must be 2 to 120 characters in length, and can contain lowercase letters, digits, and the following delimiters: underscores (_), hyphens (-), and periods (.). The name cannot start or end with a delimiter.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>namespace1</para>
         /// </summary>
         [NameInMap("NamespaceName")]
         [Validation(Required=false)]

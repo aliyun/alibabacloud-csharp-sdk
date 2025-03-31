@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateInstanceVpcEndpointLinkedVpcResponseBody : TeaModel {
         /// <summary>
-        /// The return value.
+        /// <para>The return value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request is successful.
-        /// *   `false`: The request fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D4978DCC-ECBD-40B0-A714-EE6959B22C77</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

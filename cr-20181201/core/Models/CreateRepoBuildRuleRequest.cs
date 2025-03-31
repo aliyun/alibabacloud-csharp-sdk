@@ -10,74 +10,101 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateRepoBuildRuleRequest : TeaModel {
         /// <summary>
-        /// Building arguments.
+        /// <para>Building arguments.</para>
         /// </summary>
         [NameInMap("BuildArgs")]
         [Validation(Required=false)]
         public List<string> BuildArgs { get; set; }
 
         /// <summary>
-        /// The path of the Dockerfile.
+        /// <para>The path of the Dockerfile.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/</para>
         /// </summary>
         [NameInMap("DockerfileLocation")]
         [Validation(Required=false)]
         public string DockerfileLocation { get; set; }
 
         /// <summary>
-        /// The name of the Dockerfile.
+        /// <para>The name of the Dockerfile.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Dockerfile</para>
         /// </summary>
         [NameInMap("DockerfileName")]
         [Validation(Required=false)]
         public string DockerfileName { get; set; }
 
         /// <summary>
-        /// The tag of the image.
+        /// <para>The tag of the image.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v0.9.5</para>
         /// </summary>
         [NameInMap("ImageTag")]
         [Validation(Required=false)]
         public string ImageTag { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-xkx6vujuhay0****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Architecture for image building. Valid values:
-        /// 
-        /// *   `linux/amd64`
-        /// *   `linux/arm64`
-        /// *   `linux/386`
-        /// *   `linux/arm/v7`
-        /// *   `inux/arm/v6`
-        /// 
-        /// Default value: `linux/amd64`
+        /// <para>Architecture for image building. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>linux/amd64</c></description></item>
+        /// <item><description><c>linux/arm64</c></description></item>
+        /// <item><description><c>linux/386</c></description></item>
+        /// <item><description><c>linux/arm/v7</c></description></item>
+        /// <item><description><c>inux/arm/v6</c></description></item>
+        /// </list>
+        /// <para>Default value: <c>linux/amd64</c></para>
         /// </summary>
         [NameInMap("Platforms")]
         [Validation(Required=false)]
         public List<string> Platforms { get; set; }
 
         /// <summary>
-        /// The name of the push that triggers the building rule.
+        /// <para>The name of the push that triggers the building rule.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>master</para>
         /// </summary>
         [NameInMap("PushName")]
         [Validation(Required=false)]
         public string PushName { get; set; }
 
         /// <summary>
-        /// The type of the push that triggers the building rule. Valid values:
+        /// <para>The type of the push that triggers the building rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>GIT_TAG</c>: tag push</description></item>
+        /// <item><description><c>GIT_BRANCH</c>: branch push</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   `GIT_TAG`: tag push
-        /// *   `GIT_BRANCH`: branch push
+        /// <b>Example:</b>
+        /// <para>GIT_BRANCH</para>
         /// </summary>
         [NameInMap("PushType")]
         [Validation(Required=false)]
         public string PushType { get; set; }
 
         /// <summary>
-        /// The ID of the image repository.
+        /// <para>The ID of the image repository.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>crr-8dz3aedjqlmk****</para>
         /// </summary>
         [NameInMap("RepoId")]
         [Validation(Required=false)]

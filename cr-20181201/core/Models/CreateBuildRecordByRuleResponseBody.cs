@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateBuildRecordByRuleResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the image building record.
+        /// <para>The ID of the image building record.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0A311FC5-B8C6-4332-80E4-539EB73****</para>
         /// </summary>
         [NameInMap("BuildRecordId")]
         [Validation(Required=false)]
         public string BuildRecordId { get; set; }
 
         /// <summary>
-        /// The return value.
+        /// <para>The return value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B01B8857-A16E-40E9-A37E-764F15776FAA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,21 +10,33 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group to which you want to move the resource.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekz5nlvlaksnvi</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// Id of the request
+        /// <para>The ID of the resource.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-8qong6ve5p3mhlgt</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The region ID of the resource group.
+        /// <para>The ID of the region.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shenzhen-finance-1</para>
         /// </summary>
         [NameInMap("ResourceRegionId")]
         [Validation(Required=false)]

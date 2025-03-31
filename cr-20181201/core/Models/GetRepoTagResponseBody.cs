@@ -10,70 +10,102 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetRepoTagResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the image.
+        /// <para>The ID of the image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The size of the image. Unit: Bytes.
+        /// <para>The size of the image. Unit: Bytes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>67bfbcc12b67936ec7f867927817cbb071832b873dbcaed312a1930ba5f1****</para>
         /// </summary>
         [NameInMap("Digest")]
         [Validation(Required=false)]
         public string Digest { get; set; }
 
         /// <summary>
-        /// crr-tquyps22md8p****
+        /// <para>crr-tquyps22md8p****</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1572839125000</para>
         /// </summary>
         [NameInMap("ImageCreate")]
         [Validation(Required=false)]
         public long? ImageCreate { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>45023655bf39c382e26a8607d057c27871dee163c1ecf48cc1ebf2a1****</para>
+        /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// The number of milliseconds that have elapsed since the image was last updated.
+        /// <para>The number of milliseconds that have elapsed since the image was last updated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>27107966</para>
         /// </summary>
         [NameInMap("ImageSize")]
         [Validation(Required=false)]
         public long? ImageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1572875608000</para>
         /// </summary>
         [NameInMap("ImageUpdate")]
         [Validation(Required=false)]
         public long? ImageUpdate { get; set; }
 
         /// <summary>
-        /// The status of the image. Valid values:
+        /// <para>The status of the image. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>NORMAL</c>: The image is normal.</description></item>
+        /// <item><description><c>DELETING</c>: The image is being deleted.</description></item>
+        /// </list>
         /// 
-        /// *   `NORMAL`: The image is normal.
-        /// *   `DELETING`: The image is being deleted.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// 1.0
+        /// <para>1.0</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>031572FA-7D8F-4C05-B790-1071E0E05DE6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The version of the repository.
+        /// <para>The version of the repository.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.0</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

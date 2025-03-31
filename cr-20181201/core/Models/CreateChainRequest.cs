@@ -10,49 +10,69 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateChainRequest : TeaModel {
         /// <summary>
-        /// The configuration of the delivery chain in the JSON format.
+        /// <para>The configuration of the delivery chain in the JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>chainconfig</para>
         /// </summary>
         [NameInMap("ChainConfig")]
         [Validation(Required=false)]
         public string ChainConfig { get; set; }
 
         /// <summary>
-        /// The description of the delivery chain.
+        /// <para>The description of the delivery chain.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-4cdrlqmhn4gm****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The name of the delivery chain.
+        /// <para>The name of the delivery chain.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The name of the repository.
+        /// <para>The name of the repository.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>repo1</para>
         /// </summary>
         [NameInMap("RepoName")]
         [Validation(Required=false)]
         public string RepoName { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// <para>The name of the namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ns1</para>
         /// </summary>
         [NameInMap("RepoNamespaceName")]
         [Validation(Required=false)]
         public string RepoNamespaceName { get; set; }
 
         /// <summary>
-        /// Repositories in which the delivery chain does not take effect.
+        /// <para>Repositories in which the delivery chain does not take effect.</para>
         /// </summary>
         [NameInMap("ScopeExclude")]
         [Validation(Required=false)]

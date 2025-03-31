@@ -10,41 +10,63 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateArtifactBuildRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// The type of the artifact.
+        /// <para>The type of the artifact.</para>
+        /// <list type="bullet">
+        /// <item><description><c>ACCELERATED_IMAGE</c>: accelerated images.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   `ACCELERATED_IMAGE`: accelerated images.
+        /// <b>Example:</b>
+        /// <para>ACCELERATED_IMAGE</para>
         /// </summary>
         [NameInMap("ArtifactType")]
         [Validation(Required=false)]
         public string ArtifactType { get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// <para>The instance ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-cxreylqvcyje****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Additional parameters.
+        /// <para>Additional parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string ParametersShrink { get; set; }
 
         /// <summary>
-        /// The ID of the effective range of the rule.
+        /// <para>The ID of the effective range of the rule.</para>
+        /// <list type="bullet">
+        /// <item><description>Set the value to the ID of the image repository.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Set the value to the ID of the image repository.
+        /// <b>Example:</b>
+        /// <para>crr-pmajihou6cg0****</para>
         /// </summary>
         [NameInMap("ScopeId")]
         [Validation(Required=false)]
         public string ScopeId { get; set; }
 
         /// <summary>
-        /// The effective range of the rule. Valid values:
+        /// <para>The effective range of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>REPOSITORY</c></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   `REPOSITORY`
+        /// <b>Example:</b>
+        /// <para>REPOSITORY</para>
         /// </summary>
         [NameInMap("ScopeType")]
         [Validation(Required=false)]

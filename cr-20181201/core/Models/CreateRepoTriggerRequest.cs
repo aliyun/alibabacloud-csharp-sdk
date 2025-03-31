@@ -10,53 +10,80 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateRepoTriggerRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance.
+        /// <para>The ID of the instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-xkx6vujuhay0****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The ID of the image repository.
+        /// <para>The ID of the image repository.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>crr-xwvi3osiy4ff****</para>
         /// </summary>
         [NameInMap("RepoId")]
         [Validation(Required=false)]
         public string RepoId { get; set; }
 
         /// <summary>
-        /// The name of the trigger.
+        /// <para>The name of the trigger.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>trigger1</para>
         /// </summary>
         [NameInMap("TriggerName")]
         [Validation(Required=false)]
         public string TriggerName { get; set; }
 
         /// <summary>
-        /// The image tag based on which the trigger is set.
+        /// <para>The image tag based on which the trigger is set.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If <c>TriggerType</c> is set to <c>ALL</c>, <c>TriggerTag</c> can be set to a string or an array, for example, <c>*</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>TriggerType</c> is set to <c>TAG_LIST</c>, <c>TriggerTag</c> must be set to an array, for example, <c>[1]</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>TriggerType</c> is set to <c>TAG_REG_EXP</c>, <c>TriggerTag</c> must be set to a string, for example, <c>*</c>.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// > 
-        /// 
-        /// *   If `TriggerType` is set to `ALL`, `TriggerTag` can be set to a string or an array, for example, `*`.
-        /// 
-        /// *   If `TriggerType` is set to `TAG_LIST`, `TriggerTag` must be set to an array, for example, `[1]`.
-        /// *   If `TriggerType` is set to `TAG_REG_EXP`, `TriggerTag` must be set to a string, for example, `*`.
+        /// <b>Example:</b>
+        /// <para>[1]</para>
         /// </summary>
         [NameInMap("TriggerTag")]
         [Validation(Required=false)]
         public string TriggerTag { get; set; }
 
         /// <summary>
-        /// The type of the trigger. Valid values:
+        /// <para>The type of the trigger. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>ALL</c>: a trigger that supports both tags and regular expressions.</description></item>
+        /// <item><description><c>TAG_LIST</c>: a tag-based trigger.</description></item>
+        /// <item><description><c>TAG_REG_EXP</c>: a regular expression-based trigger.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   `ALL`: a trigger that supports both tags and regular expressions.
-        /// *   `TAG_LIST`: a tag-based trigger.
-        /// *   `TAG_REG_EXP`: a regular expression-based trigger.
+        /// <b>Example:</b>
+        /// <para>ALL</para>
         /// </summary>
         [NameInMap("TriggerType")]
         [Validation(Required=false)]
         public string TriggerType { get; set; }
 
         /// <summary>
-        /// The URL of the trigger.
+        /// <para>The URL of the trigger.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.mysite.com">http://www.mysite.com</a></para>
         /// </summary>
         [NameInMap("TriggerUrl")]
         [Validation(Required=false)]

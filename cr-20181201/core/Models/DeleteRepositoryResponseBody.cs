@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DeleteRepositoryResponseBody : TeaModel {
         /// <summary>
-        /// Return values
+        /// <para>Return values</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful. Valid values:
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// </list>
         /// 
-        /// *   `true`: The request is successful.
-        /// *   `false`: The request fails.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IsSuccess")]
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>47DD9D56-09A0-4C52-B520-C3805DBAB96B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
