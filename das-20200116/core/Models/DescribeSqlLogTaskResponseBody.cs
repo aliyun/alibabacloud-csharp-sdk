@@ -330,6 +330,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public long? Scnt { get; set; }
 
+                [NameInMap("SqlCommand")]
+                [Validation(Required=false)]
+                public long? SqlCommand { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the SQL statement.</para>
                 /// 

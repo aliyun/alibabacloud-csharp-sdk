@@ -740,6 +740,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [Validation(Required=false)]
                     public long? RowsSent { get; set; }
 
+                    [NameInMap("RuleId")]
+                    [Validation(Required=false)]
+                    public string RuleId { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>SELECT \&quot;Hello, World!\&quot; FROM DUAL</para>
