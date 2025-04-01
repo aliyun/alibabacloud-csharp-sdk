@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Advisor20180120.Models
 {
-    public class DescribeAdvicesPageResponseBody : TeaModel {
+    public class DescribeAdvicesFlatPageResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public DescribeAdvicesPageResponseBodyData Data { get; set; }
-        public class DescribeAdvicesPageResponseBodyData : TeaModel {
+        public DescribeAdvicesFlatPageResponseBodyData Data { get; set; }
+        public class DescribeAdvicesFlatPageResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
 
             [NameInMap("Result")]
             [Validation(Required=false)]
-            public List<DescribeAdvicesPageResponseBodyDataResult> Result { get; set; }
-            public class DescribeAdvicesPageResponseBodyDataResult : TeaModel {
+            public List<DescribeAdvicesFlatPageResponseBodyDataResult> Result { get; set; }
+            public class DescribeAdvicesFlatPageResponseBodyDataResult : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>1234567891234567</para>
+                /// <para>192895059480****</para>
                 /// </summary>
                 [NameInMap("AliyunId")]
                 [Validation(Required=false)]
@@ -55,20 +55,7 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>[
-                ///     {
-                ///         &quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;,
-                ///         &quot;value&quot;:xxx
-                ///     },
-                ///     {
-                ///         &quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;,
-                ///         &quot;value&quot;:xxx
-                ///     },
-                ///     {
-                ///         &quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;,
-                ///         &quot;value&quot;:xxx
-                ///     },
-                /// ]</para>
+                /// <para>[{&quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;, &quot;value&quot;:&quot;xxx&quot;}, {&quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;, &quot;value&quot;:&quot;xxx&quot;}, {&quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;, &quot;value&quot;:&quot;xxx&quot;}, ]</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
@@ -95,10 +82,8 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>ID</para>
-                /// 
                 /// <b>Example:</b>
-                /// <para>123</para>
+                /// <para>40200899</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -122,12 +107,7 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>{
-                ///     &quot;resourceId&quot;: xxxx,
-                ///     &quot;resourceName&quot;: xxxxxx,
-                ///     &quot;regionId&quot;: xxxx,
-                ///     ...
-                /// }</para>
+                /// <para>{&quot;resourceId&quot;: &quot;i-2zecnwitr2s7aca6****&quot;,&quot;resourceName&quot;: &quot;ecs-20230701&quot;,&quot;regionId&quot;: &quot;cn-hangzhou&quot;,...}</para>
                 /// </summary>
                 [NameInMap("Resource")]
                 [Validation(Required=false)]

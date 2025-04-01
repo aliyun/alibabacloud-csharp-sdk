@@ -8,26 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Advisor20180120.Models
 {
-    public class RefreshAdvisorCheckResponseBody : TeaModel {
+    public class GetTaskStatusByIdResponseBody : TeaModel {
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public RefreshAdvisorCheckResponseBodyData Data { get; set; }
-        public class RefreshAdvisorCheckResponseBodyData : TeaModel {
-            [NameInMap("Message")]
-            [Validation(Required=false)]
-            public string Message { get; set; }
-
+        public GetTaskStatusByIdResponseBodyData Data { get; set; }
+        public class GetTaskStatusByIdResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
-            [NameInMap("Success")]
-            [Validation(Required=false)]
-            public bool? Success { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>12345678</para>
+            /// <para>95906135</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
@@ -35,11 +23,11 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>manual-1be17af1121b4974822e69daee4f2481</para>
+            /// <para>1</para>
             /// </summary>
-            [NameInMap("TraceId")]
+            [NameInMap("TaskStatus")]
             [Validation(Required=false)]
-            public string TraceId { get; set; }
+            public int? TaskStatus { get; set; }
 
         }
 

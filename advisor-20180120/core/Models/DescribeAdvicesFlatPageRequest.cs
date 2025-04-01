@@ -8,14 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Advisor20180120.Models
 {
-    public class GetHistoryAdvicesRequest : TeaModel {
+    public class DescribeAdvicesFlatPageRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2023-07-01</para>
+        /// <para>12345678</para>
         /// </summary>
-        [NameInMap("EndDate")]
+        [NameInMap("AdviceId")]
         [Validation(Required=false)]
-        public string EndDate { get; set; }
+        public long? AdviceId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>EcsHighCpuUtilization</para>
+        /// </summary>
+        [NameInMap("CheckId")]
+        [Validation(Required=false)]
+        public string CheckId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -29,9 +37,9 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
-        [NameInMap("PageNum")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -51,27 +59,11 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>i-2zecnwitr2s7aca6****</para>
         /// </summary>
-        [NameInMap("Reverse")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public bool? Reverse { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("Severity")]
-        [Validation(Required=false)]
-        public string Severity { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>2023-07-01</para>
-        /// </summary>
-        [NameInMap("StartDate")]
-        [Validation(Required=false)]
-        public string StartDate { get; set; }
+        public string ResourceId { get; set; }
 
     }
 

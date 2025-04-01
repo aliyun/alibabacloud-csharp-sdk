@@ -8,14 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Advisor20180120.Models
 {
-    public class GetHistoryAdvicesRequest : TeaModel {
+    public class DescribeCostCheckAdvicesShrinkRequest : TeaModel {
+        [NameInMap("AssumeAliyunIdList")]
+        [Validation(Required=false)]
+        public string AssumeAliyunIdListShrink { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2023-07-01</para>
+        /// <para>EcsCostLowUtilizationCheck</para>
         /// </summary>
-        [NameInMap("EndDate")]
+        [NameInMap("CheckId")]
         [Validation(Required=false)]
-        public string EndDate { get; set; }
+        public string CheckId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -27,11 +31,11 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>6</para>
         /// </summary>
-        [NameInMap("PageNum")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -41,21 +45,21 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ecs</para>
-        /// </summary>
-        [NameInMap("Product")]
+        [NameInMap("RegionIds")]
         [Validation(Required=false)]
-        public string Product { get; set; }
+        public string RegionIdsShrink { get; set; }
+
+        [NameInMap("ResourceIds")]
+        [Validation(Required=false)]
+        public string ResourceIdsShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>test</para>
         /// </summary>
-        [NameInMap("Reverse")]
+        [NameInMap("ResourceName")]
         [Validation(Required=false)]
-        public bool? Reverse { get; set; }
+        public string ResourceName { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -65,13 +69,17 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
         [Validation(Required=false)]
         public string Severity { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>2023-07-01</para>
-        /// </summary>
-        [NameInMap("StartDate")]
+        [NameInMap("TagKeys")]
         [Validation(Required=false)]
-        public string StartDate { get; set; }
+        public string TagKeysShrink { get; set; }
+
+        [NameInMap("TagList")]
+        [Validation(Required=false)]
+        public string TagListShrink { get; set; }
+
+        [NameInMap("TagValues")]
+        [Validation(Required=false)]
+        public string TagValuesShrink { get; set; }
 
     }
 

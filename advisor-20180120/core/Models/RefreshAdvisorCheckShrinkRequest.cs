@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Advisor20180120.Models
 {
-    public class RefreshAdvisorCheckRequest : TeaModel {
+    public class RefreshAdvisorCheckShrinkRequest : TeaModel {
         [NameInMap("AssumeAliyunId")]
         [Validation(Required=false)]
         public long? AssumeAliyunId { get; set; }
@@ -43,37 +43,7 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
 
         [NameInMap("ResourceDimensionList")]
         [Validation(Required=false)]
-        public List<RefreshAdvisorCheckRequestResourceDimensionList> ResourceDimensionList { get; set; }
-        public class RefreshAdvisorCheckRequestResourceDimensionList : TeaModel {
-            [NameInMap("Cost")]
-            [Validation(Required=false)]
-            public bool? Cost { get; set; }
-
-            [NameInMap("Performance")]
-            [Validation(Required=false)]
-            public bool? Performance { get; set; }
-
-            [NameInMap("Product")]
-            [Validation(Required=false)]
-            public string Product { get; set; }
-
-            [NameInMap("ProductName")]
-            [Validation(Required=false)]
-            public string ProductName { get; set; }
-
-            [NameInMap("Reliablility")]
-            [Validation(Required=false)]
-            public bool? Reliablility { get; set; }
-
-            [NameInMap("Security")]
-            [Validation(Required=false)]
-            public bool? Security { get; set; }
-
-            [NameInMap("Service")]
-            [Validation(Required=false)]
-            public bool? Service { get; set; }
-
-        }
+        public string ResourceDimensionListShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

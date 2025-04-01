@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Advisor20180120.Models
 {
-    public class GetHistoryAdvicesRequest : TeaModel {
+    public class DescribeAdvisorResourcesRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2023-07-01</para>
+        /// <para>abcd</para>
         /// </summary>
-        [NameInMap("EndDate")]
+        [NameInMap("Keyword")]
         [Validation(Required=false)]
-        public string EndDate { get; set; }
+        public string Keyword { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
-        [NameInMap("PageNum")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? PageNum { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -51,27 +51,11 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>i-bp67acfmxazb4p****</para>
         /// </summary>
-        [NameInMap("Reverse")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
-        public bool? Reverse { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("Severity")]
-        [Validation(Required=false)]
-        public string Severity { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>2023-07-01</para>
-        /// </summary>
-        [NameInMap("StartDate")]
-        [Validation(Required=false)]
-        public string StartDate { get; set; }
+        public string ResourceId { get; set; }
 
     }
 
