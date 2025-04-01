@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no. In this case, you can renew your instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manually renew an instance</a>.</description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal. In this case, you can renew your instance in the console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manually renew an instance</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,10 +23,29 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><em>true</em>: enables auto-renewal.</description></item>
+        /// <item><description><em>false</em> (default): disables auto-renewal.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public string AutoRenew { get; set; }
 
+        /// <summary>
+        /// <para>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>6</b>, and <b>12</b>.</para>
+        /// <remarks>
+        /// <para> This parameter is required if the <b>AutoRenew</b> parameter is set to <b>true</b>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("AutoRenewPeriod")]
         [Validation(Required=false)]
         public long? AutoRenewPeriod { get; set; }

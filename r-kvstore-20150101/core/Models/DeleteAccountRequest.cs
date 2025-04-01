@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the account. You can call the <a href="https://help.aliyun.com/document_detail/95802.html">DescribeAccounts</a> operation to query the username of the account.</para>
+        /// <para>The username of the account. You can call the <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> operation to query the username of the account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,6 +51,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is used only for internal maintenance. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SDK</para>
+        /// </summary>
         [NameInMap("SourceBiz")]
         [Validation(Required=false)]
         public string SourceBiz { get; set; }

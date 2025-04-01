@@ -175,7 +175,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AddShardingNodeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AddShardingNodeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AddShardingNodeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -270,7 +277,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AddShardingNodeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AddShardingNodeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AddShardingNodeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -321,19 +335,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a private endpoint for an ApsaraDB for Redis cluster instance.</para>
+        /// <para>Applies for a private endpoint for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In direct connection mode, you can use private endpoints to bypass proxy nodes and connect to ApsaraDB for Redis instances from clients in the same manner as you connect to native Redis clusters. The direct connection mode can reduce communication overheads and accelerate the response speed. For more information, see <a href="https://help.aliyun.com/document_detail/146901.html">Enable the direct connection mode</a>.
-        /// To call this operation, the instance must meet the following requirements:</para>
+        /// <para>Clients can bypass proxy nodes and use private endpoints to connect to cluster instances. This is similar to the connection to native Redis clusters. The direct connection mode can reduce communication overheads and the response time of Tair (Redis OSS-compatible).
+        /// To call this operation, make sure that the instance meets the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis cluster instance.</description></item>
-        /// <item><description>The instance is a Community Edition instance that runs Redis 4.0 or 5.0, or an Enhanced Edition instance (Tair) that runs Redis 5.0.</description></item>
-        /// <item><description>The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the <a href="https://help.aliyun.com/document_detail/61005.html">SwitchNetwork</a> operation to change the network type to VPC.</description></item>
-        /// <item><description>SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the <a href="https://help.aliyun.com/document_detail/96194.html">ModifyInstanceSSL</a> operation to disable it.</description></item>
-        /// <item><description>The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see <a href="https://help.aliyun.com/document_detail/183151.html">Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected</a>.</description></item>
+        /// <item><description>The instance is a cluster instance.</description></item>
+        /// <item><description>The instance is deployed in classic mode.</description></item>
+        /// <item><description>The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, you can call the <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a> operation to change the network type to VPC.</description></item>
+        /// <item><description>SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation to disable SSL encryption.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -399,24 +412,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AllocateDirectConnectionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AllocateDirectConnectionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AllocateDirectConnectionResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a private endpoint for an ApsaraDB for Redis cluster instance.</para>
+        /// <para>Applies for a private endpoint for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In direct connection mode, you can use private endpoints to bypass proxy nodes and connect to ApsaraDB for Redis instances from clients in the same manner as you connect to native Redis clusters. The direct connection mode can reduce communication overheads and accelerate the response speed. For more information, see <a href="https://help.aliyun.com/document_detail/146901.html">Enable the direct connection mode</a>.
-        /// To call this operation, the instance must meet the following requirements:</para>
+        /// <para>Clients can bypass proxy nodes and use private endpoints to connect to cluster instances. This is similar to the connection to native Redis clusters. The direct connection mode can reduce communication overheads and the response time of Tair (Redis OSS-compatible).
+        /// To call this operation, make sure that the instance meets the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis cluster instance.</description></item>
-        /// <item><description>The instance is a Community Edition instance that runs Redis 4.0 or 5.0, or an Enhanced Edition instance (Tair) that runs Redis 5.0.</description></item>
-        /// <item><description>The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the <a href="https://help.aliyun.com/document_detail/61005.html">SwitchNetwork</a> operation to change the network type to VPC.</description></item>
-        /// <item><description>SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the <a href="https://help.aliyun.com/document_detail/96194.html">ModifyInstanceSSL</a> operation to disable it.</description></item>
-        /// <item><description>The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see <a href="https://help.aliyun.com/document_detail/183151.html">Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected</a>.</description></item>
+        /// <item><description>The instance is a cluster instance.</description></item>
+        /// <item><description>The instance is deployed in classic mode.</description></item>
+        /// <item><description>The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, you can call the <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a> operation to change the network type to VPC.</description></item>
+        /// <item><description>SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation to disable SSL encryption.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -482,24 +501,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AllocateDirectConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AllocateDirectConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AllocateDirectConnectionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a private endpoint for an ApsaraDB for Redis cluster instance.</para>
+        /// <para>Applies for a private endpoint for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In direct connection mode, you can use private endpoints to bypass proxy nodes and connect to ApsaraDB for Redis instances from clients in the same manner as you connect to native Redis clusters. The direct connection mode can reduce communication overheads and accelerate the response speed. For more information, see <a href="https://help.aliyun.com/document_detail/146901.html">Enable the direct connection mode</a>.
-        /// To call this operation, the instance must meet the following requirements:</para>
+        /// <para>Clients can bypass proxy nodes and use private endpoints to connect to cluster instances. This is similar to the connection to native Redis clusters. The direct connection mode can reduce communication overheads and the response time of Tair (Redis OSS-compatible).
+        /// To call this operation, make sure that the instance meets the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis cluster instance.</description></item>
-        /// <item><description>The instance is a Community Edition instance that runs Redis 4.0 or 5.0, or an Enhanced Edition instance (Tair) that runs Redis 5.0.</description></item>
-        /// <item><description>The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the <a href="https://help.aliyun.com/document_detail/61005.html">SwitchNetwork</a> operation to change the network type to VPC.</description></item>
-        /// <item><description>SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the <a href="https://help.aliyun.com/document_detail/96194.html">ModifyInstanceSSL</a> operation to disable it.</description></item>
-        /// <item><description>The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see <a href="https://help.aliyun.com/document_detail/183151.html">Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected</a>.</description></item>
+        /// <item><description>The instance is a cluster instance.</description></item>
+        /// <item><description>The instance is deployed in classic mode.</description></item>
+        /// <item><description>The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, you can call the <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a> operation to change the network type to VPC.</description></item>
+        /// <item><description>SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation to disable SSL encryption.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -518,19 +543,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a private endpoint for an ApsaraDB for Redis cluster instance.</para>
+        /// <para>Applies for a private endpoint for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In direct connection mode, you can use private endpoints to bypass proxy nodes and connect to ApsaraDB for Redis instances from clients in the same manner as you connect to native Redis clusters. The direct connection mode can reduce communication overheads and accelerate the response speed. For more information, see <a href="https://help.aliyun.com/document_detail/146901.html">Enable the direct connection mode</a>.
-        /// To call this operation, the instance must meet the following requirements:</para>
+        /// <para>Clients can bypass proxy nodes and use private endpoints to connect to cluster instances. This is similar to the connection to native Redis clusters. The direct connection mode can reduce communication overheads and the response time of Tair (Redis OSS-compatible).
+        /// To call this operation, make sure that the instance meets the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis cluster instance.</description></item>
-        /// <item><description>The instance is a Community Edition instance that runs Redis 4.0 or 5.0, or an Enhanced Edition instance (Tair) that runs Redis 5.0.</description></item>
-        /// <item><description>The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, call the <a href="https://help.aliyun.com/document_detail/61005.html">SwitchNetwork</a> operation to change the network type to VPC.</description></item>
-        /// <item><description>SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the <a href="https://help.aliyun.com/document_detail/96194.html">ModifyInstanceSSL</a> operation to disable it.</description></item>
-        /// <item><description>The vSwitch to which the instance is connected has sufficient IP addresses to be allocated. For more information, see <a href="https://help.aliyun.com/document_detail/183151.html">Obtain the number of available IP addresses in the vSwitch to which an ApsaraDB for Redis instance is connected</a>.</description></item>
+        /// <item><description>The instance is a cluster instance.</description></item>
+        /// <item><description>The instance is deployed in classic mode.</description></item>
+        /// <item><description>The instance is deployed in a virtual private cloud (VPC). If the instance is deployed in the classic network, you can call the <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a> operation to change the network type to VPC.</description></item>
+        /// <item><description>SSL encryption is disabled for the instance. If SSL encryption is enabled, you can call the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation to disable SSL encryption.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -619,7 +643,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AllocateInstancePublicConnectionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AllocateInstancePublicConnectionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AllocateInstancePublicConnectionResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -694,7 +725,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AllocateInstancePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AllocateInstancePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AllocateInstancePublicConnectionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -812,7 +850,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CancelActiveOperationTasksResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CancelActiveOperationTasksResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CancelActiveOperationTasksResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -884,7 +929,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CancelActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CancelActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CancelActiveOperationTasksResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -945,14 +997,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether an ApsaraDB for Redis instance is authorized to use Key Management Service (KMS).</para>
+        /// <para>Queries whether a Tair (Redis OSS-compatible) instance has the permissions to use Key Management Service (KMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</para>
         /// <list type="bullet">
-        /// <item><description>If the ApsaraDB for Redis instance is authorized to use KMS, you can call the <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a> operation to enable TDE.</description></item>
+        /// <item><description>If the Tair (Redis OSS-compatible) instance is authorized to use KMS, you can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable TDE.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1014,19 +1066,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether an ApsaraDB for Redis instance is authorized to use Key Management Service (KMS).</para>
+        /// <para>Queries whether a Tair (Redis OSS-compatible) instance has the permissions to use Key Management Service (KMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</para>
         /// <list type="bullet">
-        /// <item><description>If the ApsaraDB for Redis instance is authorized to use KMS, you can call the <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a> operation to enable TDE.</description></item>
+        /// <item><description>If the Tair (Redis OSS-compatible) instance is authorized to use KMS, you can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable TDE.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1088,19 +1147,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether an ApsaraDB for Redis instance is authorized to use Key Management Service (KMS).</para>
+        /// <para>Queries whether a Tair (Redis OSS-compatible) instance has the permissions to use Key Management Service (KMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</para>
         /// <list type="bullet">
-        /// <item><description>If the ApsaraDB for Redis instance is authorized to use KMS, you can call the <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a> operation to enable TDE.</description></item>
+        /// <item><description>If the Tair (Redis OSS-compatible) instance is authorized to use KMS, you can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable TDE.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1119,14 +1185,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether an ApsaraDB for Redis instance is authorized to use Key Management Service (KMS).</para>
+        /// <para>Queries whether a Tair (Redis OSS-compatible) instance has the permissions to use Key Management Service (KMS).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</para>
         /// <list type="bullet">
-        /// <item><description>If the ApsaraDB for Redis instance is authorized to use KMS, you can call the <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a> operation to enable TDE.</description></item>
+        /// <item><description>If the Tair (Redis OSS-compatible) instance is authorized to use KMS, you can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable TDE.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1145,18 +1211,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that has specific permissions for an ApsaraDB for Redis instance.</para>
+        /// <para>Creates an account that has specific permissions for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// </remarks>
+        /// <para>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</para>
         /// <list type="bullet">
-        /// <item><description>This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0 or later.</description></item>
-        /// <item><description>The ApsaraDB for Redis instance for which you want to call this operation must be in the running state.</description></item>
-        /// <item><description>You can create up to 18 accounts for an ApsaraDB for Redis instance.
-        /// You can also create an account in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/92665.html">Manage database accounts</a>.</description></item>
+        /// <item><description>The instance must be in the running state.</description></item>
+        /// <item><description>You can create up to 18 accounts for an instance.<remarks>
+        /// <para> For more information about how to create an account in the console, see <a href="https://help.aliyun.com/document_detail/92665.html">Manage database accounts</a>.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -1238,23 +1304,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateAccountResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateAccountResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateAccountResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that has specific permissions for an ApsaraDB for Redis instance.</para>
+        /// <para>Creates an account that has specific permissions for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// </remarks>
+        /// <para>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</para>
         /// <list type="bullet">
-        /// <item><description>This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0 or later.</description></item>
-        /// <item><description>The ApsaraDB for Redis instance for which you want to call this operation must be in the running state.</description></item>
-        /// <item><description>You can create up to 18 accounts for an ApsaraDB for Redis instance.
-        /// You can also create an account in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/92665.html">Manage database accounts</a>.</description></item>
+        /// <item><description>The instance must be in the running state.</description></item>
+        /// <item><description>You can create up to 18 accounts for an instance.<remarks>
+        /// <para> For more information about how to create an account in the console, see <a href="https://help.aliyun.com/document_detail/92665.html">Manage database accounts</a>.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -1336,23 +1409,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateAccountResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateAccountResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateAccountResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that has specific permissions for an ApsaraDB for Redis instance.</para>
+        /// <para>Creates an account that has specific permissions for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// </remarks>
+        /// <para>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</para>
         /// <list type="bullet">
-        /// <item><description>This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0 or later.</description></item>
-        /// <item><description>The ApsaraDB for Redis instance for which you want to call this operation must be in the running state.</description></item>
-        /// <item><description>You can create up to 18 accounts for an ApsaraDB for Redis instance.
-        /// You can also create an account in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/92665.html">Manage database accounts</a>.</description></item>
+        /// <item><description>The instance must be in the running state.</description></item>
+        /// <item><description>You can create up to 18 accounts for an instance.<remarks>
+        /// <para> For more information about how to create an account in the console, see <a href="https://help.aliyun.com/document_detail/92665.html">Manage database accounts</a>.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -1371,18 +1451,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that has specific permissions for an ApsaraDB for Redis instance.</para>
+        /// <para>Creates an account that has specific permissions for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// </remarks>
+        /// <para>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</para>
         /// <list type="bullet">
-        /// <item><description>This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0 or later.</description></item>
-        /// <item><description>The ApsaraDB for Redis instance for which you want to call this operation must be in the running state.</description></item>
-        /// <item><description>You can create up to 18 accounts for an ApsaraDB for Redis instance.
-        /// You can also create an account in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/92665.html">Manage database accounts</a>.</description></item>
+        /// <item><description>The instance must be in the running state.</description></item>
+        /// <item><description>You can create up to 18 accounts for an instance.<remarks>
+        /// <para> For more information about how to create an account in the console, see <a href="https://help.aliyun.com/document_detail/92665.html">Manage database accounts</a>.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -1401,12 +1481,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backs up an ApsaraDB for Redis instance.</para>
+        /// <para>Backs up a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also back up an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</para>
+        /// <para>You can also back up an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1463,17 +1543,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateBackupResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateBackupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateBackupResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backs up an ApsaraDB for Redis instance.</para>
+        /// <para>Backs up a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also back up an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</para>
+        /// <para>You can also back up an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1530,17 +1617,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateBackupResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateBackupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateBackupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backs up an ApsaraDB for Redis instance.</para>
+        /// <para>Backs up a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also back up an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</para>
+        /// <para>You can also back up an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1558,12 +1652,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backs up an ApsaraDB for Redis instance.</para>
+        /// <para>Backs up a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also back up an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</para>
+        /// <para>You can also back up an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43886.html">Backup and recovery</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1581,7 +1675,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually creates a cache analytics task.</para>
+        /// <para>Creates a cache analysis task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1643,12 +1737,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateCacheAnalysisTaskResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateCacheAnalysisTaskResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateCacheAnalysisTaskResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually creates a cache analytics task.</para>
+        /// <para>Creates a cache analysis task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1710,12 +1811,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateCacheAnalysisTaskResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateCacheAnalysisTaskResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateCacheAnalysisTaskResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually creates a cache analytics task.</para>
+        /// <para>Creates a cache analysis task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1738,7 +1846,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually creates a cache analytics task.</para>
+        /// <para>Creates a cache analysis task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1761,16 +1869,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an existing ApsaraDB for Redis instance to the first child instance of a distributed ApsaraDB for Redis instance.</para>
+        /// <para>Converts an existing Tair DRAM-based classic instance to the first child instance of a distributed instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:</para>
+        /// <para>You can call this operation to convert an existing instance to the first child instance of a distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>A <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a> of Enhanced Edition is used.</description></item>
+        /// <item><description>The instance that you want to convert must be a Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses the classic deployment mode.</description></item>
         /// <item><description>If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a private endpoint</a>.<remarks>
-        /// <para>You can also call the <a href="https://help.aliyun.com/document_detail/60873.html">CreateInstance</a> operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</para>
+        /// <para> You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1838,21 +1946,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateGlobalDistributeCacheResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateGlobalDistributeCacheResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateGlobalDistributeCacheResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an existing ApsaraDB for Redis instance to the first child instance of a distributed ApsaraDB for Redis instance.</para>
+        /// <para>Converts an existing Tair DRAM-based classic instance to the first child instance of a distributed instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:</para>
+        /// <para>You can call this operation to convert an existing instance to the first child instance of a distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>A <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a> of Enhanced Edition is used.</description></item>
+        /// <item><description>The instance that you want to convert must be a Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses the classic deployment mode.</description></item>
         /// <item><description>If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a private endpoint</a>.<remarks>
-        /// <para>You can also call the <a href="https://help.aliyun.com/document_detail/60873.html">CreateInstance</a> operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</para>
+        /// <para> You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1920,21 +2035,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateGlobalDistributeCacheResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateGlobalDistributeCacheResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateGlobalDistributeCacheResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an existing ApsaraDB for Redis instance to the first child instance of a distributed ApsaraDB for Redis instance.</para>
+        /// <para>Converts an existing Tair DRAM-based classic instance to the first child instance of a distributed instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:</para>
+        /// <para>You can call this operation to convert an existing instance to the first child instance of a distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>A <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a> of Enhanced Edition is used.</description></item>
+        /// <item><description>The instance that you want to convert must be a Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses the classic deployment mode.</description></item>
         /// <item><description>If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a private endpoint</a>.<remarks>
-        /// <para>You can also call the <a href="https://help.aliyun.com/document_detail/60873.html">CreateInstance</a> operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</para>
+        /// <para> You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1955,16 +2077,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts an existing ApsaraDB for Redis instance to the first child instance of a distributed ApsaraDB for Redis instance.</para>
+        /// <para>Converts an existing Tair DRAM-based classic instance to the first child instance of a distributed instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:</para>
+        /// <para>You can call this operation to convert an existing instance to the first child instance of a distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>A <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a> of Enhanced Edition is used.</description></item>
+        /// <item><description>The instance that you want to convert must be a Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses the classic deployment mode.</description></item>
         /// <item><description>If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/150047.html">Release a private endpoint</a>.<remarks>
-        /// <para>You can also call the <a href="https://help.aliyun.com/document_detail/60873.html">CreateInstance</a> operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</para>
+        /// <para> You can also call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -2054,7 +2176,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateGlobalSecurityIPGroupResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -2128,7 +2257,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateGlobalSecurityIPGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -2169,15 +2305,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraDB for Redis instance.</para>
+        /// <para>Creates a Tair (Redis OSS-compatible) instance. If you want to create a Tair (Enterprise Edition) cloud-native instance, you can call the CreateTairInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.
-        /// You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the <a href="https://help.aliyun.com/document_detail/208271.html">CreateTairInstance</a> operation.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).
+        /// You can call this operation to create a Tair (Redis OSS-compatible) instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</para>
         /// <remarks>
-        /// <para>For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an ApsaraDB for Redis instance</a>.</para>
+        /// <para>For more information about how to create an instance that meets your requirements in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2403,20 +2539,27 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraDB for Redis instance.</para>
+        /// <para>Creates a Tair (Redis OSS-compatible) instance. If you want to create a Tair (Enterprise Edition) cloud-native instance, you can call the CreateTairInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.
-        /// You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the <a href="https://help.aliyun.com/document_detail/208271.html">CreateTairInstance</a> operation.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).
+        /// You can call this operation to create a Tair (Redis OSS-compatible) instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</para>
         /// <remarks>
-        /// <para>For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an ApsaraDB for Redis instance</a>.</para>
+        /// <para>For more information about how to create an instance that meets your requirements in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2642,20 +2785,27 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraDB for Redis instance.</para>
+        /// <para>Creates a Tair (Redis OSS-compatible) instance. If you want to create a Tair (Enterprise Edition) cloud-native instance, you can call the CreateTairInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.
-        /// You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the <a href="https://help.aliyun.com/document_detail/208271.html">CreateTairInstance</a> operation.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).
+        /// You can call this operation to create a Tair (Redis OSS-compatible) instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</para>
         /// <remarks>
-        /// <para>For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an ApsaraDB for Redis instance</a>.</para>
+        /// <para>For more information about how to create an instance that meets your requirements in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2674,15 +2824,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraDB for Redis instance.</para>
+        /// <para>Creates a Tair (Redis OSS-compatible) instance. If you want to create a Tair (Enterprise Edition) cloud-native instance, you can call the CreateTairInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.
-        /// You can call this operation to create an ApsaraDB for Redis instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the <a href="https://help.aliyun.com/document_detail/208271.html">CreateTairInstance</a> operation.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).
+        /// You can call this operation to create a Tair (Redis OSS-compatible) instance or a classic Tair DRAM-based instance. To create a cloud-native Tair instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</para>
         /// <remarks>
-        /// <para>For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an ApsaraDB for Redis instance</a>.</para>
+        /// <para>For more information about how to create an instance that meets your requirements in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2699,15 +2849,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return await CreateInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates multiple Tair (Redis OSS-compatible) instances at a time.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
         /// <remarks>
-        /// <para> You can call this operation to create an ApsaraDB for Redis classic instance or a Tair DRAM-based classic instance. We recommend that you use an API operation for creating a single instance:</para>
+        /// <para> You can call this operation to create classic Redis Open-Source Edition instances or classic Tair DRAM-based instances. We recommend that you use an API operation for creating a single instance:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates an ApsaraDB for Redis instance or a Tair DRAM-based classic instance.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair cloud-native instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates a Redis Open-Source instance or a classic Tair DRAM-based instance.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair (Enterprise Edition) instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2797,18 +2952,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateInstancesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateInstancesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateInstancesResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates multiple Tair (Redis OSS-compatible) instances at a time.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
         /// <remarks>
-        /// <para> You can call this operation to create an ApsaraDB for Redis classic instance or a Tair DRAM-based classic instance. We recommend that you use an API operation for creating a single instance:</para>
+        /// <para> You can call this operation to create classic Redis Open-Source Edition instances or classic Tair DRAM-based instances. We recommend that you use an API operation for creating a single instance:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates an ApsaraDB for Redis instance or a Tair DRAM-based classic instance.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair cloud-native instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates a Redis Open-Source instance or a classic Tair DRAM-based instance.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair (Enterprise Edition) instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2898,18 +3065,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateInstancesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates multiple Tair (Redis OSS-compatible) instances at a time.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
         /// <remarks>
-        /// <para> You can call this operation to create an ApsaraDB for Redis classic instance or a Tair DRAM-based classic instance. We recommend that you use an API operation for creating a single instance:</para>
+        /// <para> You can call this operation to create classic Redis Open-Source Edition instances or classic Tair DRAM-based instances. We recommend that you use an API operation for creating a single instance:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates an ApsaraDB for Redis instance or a Tair DRAM-based classic instance.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair cloud-native instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates a Redis Open-Source instance or a classic Tair DRAM-based instance.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair (Enterprise Edition) instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2926,15 +3105,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             return CreateInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates multiple Tair (Redis OSS-compatible) instances at a time.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
         /// <remarks>
-        /// <para> You can call this operation to create an ApsaraDB for Redis classic instance or a Tair DRAM-based classic instance. We recommend that you use an API operation for creating a single instance:</para>
+        /// <para> You can call this operation to create classic Redis Open-Source Edition instances or classic Tair DRAM-based instances. We recommend that you use an API operation for creating a single instance:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates an ApsaraDB for Redis instance or a Tair DRAM-based classic instance.</description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair cloud-native instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a>: creates a Redis Open-Source instance or a classic Tair DRAM-based instance.</description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a>: creates a Tair (Enterprise Edition) instance. The instance can be a DRAM-based, persistent memory-optimized, or ESSD/SSD-based instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3034,7 +3218,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateParameterGroupResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateParameterGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateParameterGroupResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -3120,7 +3311,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateParameterGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -3302,7 +3500,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateTCInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateTCInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateTCInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -3448,7 +3653,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateTCInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateTCInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateTCInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -3489,16 +3701,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair instance.</para>
+        /// <para>Creates a Tair (Enterprise Edition) cloud-native instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">Select an ApsaraDB for Redis instance</a>.
-        /// Before you call this operation, make sure that you are familiar with the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.</para>
+        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">Instructions for selecting an appropriate Tair (Redis OSS-compatible) instance</a>.
+        /// Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
+        /// <remarks>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For information about how to create a Tair instance in the Tair console, see <a href="https://help.aliyun.com/document_detail/443863.html">Create a Tair instance</a>.</description></item>
-        /// <item><description>If you want to create other types of instances, such as Community Edition instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair DRAM-based</a> instances, you can call the <a href="https://help.aliyun.com/document_detail/60873.html">CreateInstance</a> operation.</description></item>
+        /// <item><description>For information about how to create an instance in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</description></item>
+        /// <item><description>To create other types of instances, such as Redis Open-Source Edition instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair DRAM-based</a> instances, you can call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3716,21 +3930,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateTairInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateTairInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateTairInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair instance.</para>
+        /// <para>Creates a Tair (Enterprise Edition) cloud-native instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">Select an ApsaraDB for Redis instance</a>.
-        /// Before you call this operation, make sure that you are familiar with the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.</para>
+        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">Instructions for selecting an appropriate Tair (Redis OSS-compatible) instance</a>.
+        /// Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
+        /// <remarks>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For information about how to create a Tair instance in the Tair console, see <a href="https://help.aliyun.com/document_detail/443863.html">Create a Tair instance</a>.</description></item>
-        /// <item><description>If you want to create other types of instances, such as Community Edition instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair DRAM-based</a> instances, you can call the <a href="https://help.aliyun.com/document_detail/60873.html">CreateInstance</a> operation.</description></item>
+        /// <item><description>For information about how to create an instance in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</description></item>
+        /// <item><description>To create other types of instances, such as Redis Open-Source Edition instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair DRAM-based</a> instances, you can call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3948,21 +4171,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CreateTairInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<CreateTairInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<CreateTairInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair instance.</para>
+        /// <para>Creates a Tair (Enterprise Edition) cloud-native instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">Select an ApsaraDB for Redis instance</a>.
-        /// Before you call this operation, make sure that you are familiar with the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.</para>
+        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">Instructions for selecting an appropriate Tair (Redis OSS-compatible) instance</a>.
+        /// Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
+        /// <remarks>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For information about how to create a Tair instance in the Tair console, see <a href="https://help.aliyun.com/document_detail/443863.html">Create a Tair instance</a>.</description></item>
-        /// <item><description>If you want to create other types of instances, such as Community Edition instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair DRAM-based</a> instances, you can call the <a href="https://help.aliyun.com/document_detail/60873.html">CreateInstance</a> operation.</description></item>
+        /// <item><description>For information about how to create an instance in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</description></item>
+        /// <item><description>To create other types of instances, such as Redis Open-Source Edition instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair DRAM-based</a> instances, you can call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3981,16 +4213,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair instance.</para>
+        /// <para>Creates a Tair (Enterprise Edition) cloud-native instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">Select an ApsaraDB for Redis instance</a>.
-        /// Before you call this operation, make sure that you are familiar with the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.</para>
+        /// <para>For information about instance selection, see <a href="https://help.aliyun.com/document_detail/223808.html">Instructions for selecting an appropriate Tair (Redis OSS-compatible) instance</a>.
+        /// Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</para>
+        /// <remarks>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For information about how to create a Tair instance in the Tair console, see <a href="https://help.aliyun.com/document_detail/443863.html">Create a Tair instance</a>.</description></item>
-        /// <item><description>If you want to create other types of instances, such as Community Edition instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair DRAM-based</a> instances, you can call the <a href="https://help.aliyun.com/document_detail/60873.html">CreateInstance</a> operation.</description></item>
+        /// <item><description>For information about how to create an instance in the console, see <a href="https://help.aliyun.com/document_detail/26351.html">Step 1: Create an instance</a>.</description></item>
+        /// <item><description>To create other types of instances, such as Redis Open-Source Edition instances or <a href="https://help.aliyun.com/document_detail/126164.html">Tair DRAM-based</a> instances, you can call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4009,14 +4243,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an account from an ApsaraDB for Redis instance.</para>
+        /// <para>Deletes an account from a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.</para>
+        /// <para>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</para>
         /// <list type="bullet">
-        /// <item><description>The ApsaraDB for Redis instance must be in the Running state.</description></item>
+        /// <item><description>The instance must be in the Running state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4082,19 +4316,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteAccountResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteAccountResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteAccountResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an account from an ApsaraDB for Redis instance.</para>
+        /// <para>Deletes an account from a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.</para>
+        /// <para>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</para>
         /// <list type="bullet">
-        /// <item><description>The ApsaraDB for Redis instance must be in the Running state.</description></item>
+        /// <item><description>The instance must be in the Running state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4160,19 +4401,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteAccountResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteAccountResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteAccountResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an account from an ApsaraDB for Redis instance.</para>
+        /// <para>Deletes an account from a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.</para>
+        /// <para>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</para>
         /// <list type="bullet">
-        /// <item><description>The ApsaraDB for Redis instance must be in the Running state.</description></item>
+        /// <item><description>The instance must be in the Running state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4191,14 +4439,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an account from an ApsaraDB for Redis instance.</para>
+        /// <para>Deletes an account from a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.</para>
+        /// <para>  This operation is supported only for instances that are compatible with Redis 4.0 or later.</para>
         /// <list type="bullet">
-        /// <item><description>The ApsaraDB for Redis instance must be in the Running state.</description></item>
+        /// <item><description>The instance must be in the Running state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4291,7 +4539,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteGlobalSecurityIPGroupResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -4370,7 +4625,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteGlobalSecurityIPGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -4495,7 +4757,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -4574,7 +4843,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -4698,7 +4974,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteParameterGroupResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteParameterGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteParameterGroupResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -4760,7 +5043,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteParameterGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -4801,12 +5091,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes one or more data shards from an ApsaraDB for Redis cluster instance.</para>
+        /// <para>Removes one or more data shards from a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/198082.html">Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks</a>.\
+        /// <para>You can also remove data shards from an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/198082.html">Adjust the number of shards for an instance with cloud disks</a>.\
         /// Before you call this operation, make sure that the instance meets the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see <a href="https://help.aliyun.com/document_detail/183956.html">Persistent memory-optimized instances</a>.</description></item>
@@ -4828,6 +5118,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                query["EffectiveTime"] = request.EffectiveTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceTrans))
             {
                 query["ForceTrans"] = request.ForceTrans;
@@ -4880,17 +5174,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteShardingNodeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteShardingNodeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteShardingNodeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes one or more data shards from an ApsaraDB for Redis cluster instance.</para>
+        /// <para>Removes one or more data shards from a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/198082.html">Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks</a>.\
+        /// <para>You can also remove data shards from an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/198082.html">Adjust the number of shards for an instance with cloud disks</a>.\
         /// Before you call this operation, make sure that the instance meets the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see <a href="https://help.aliyun.com/document_detail/183956.html">Persistent memory-optimized instances</a>.</description></item>
@@ -4912,6 +5213,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                query["EffectiveTime"] = request.EffectiveTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceTrans))
             {
                 query["ForceTrans"] = request.ForceTrans;
@@ -4964,17 +5269,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DeleteShardingNodeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DeleteShardingNodeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DeleteShardingNodeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes one or more data shards from an ApsaraDB for Redis cluster instance.</para>
+        /// <para>Removes one or more data shards from a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/198082.html">Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks</a>.\
+        /// <para>You can also remove data shards from an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/198082.html">Adjust the number of shards for an instance with cloud disks</a>.\
         /// Before you call this operation, make sure that the instance meets the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see <a href="https://help.aliyun.com/document_detail/183956.html">Persistent memory-optimized instances</a>.</description></item>
@@ -4997,12 +5309,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes one or more data shards from an ApsaraDB for Redis cluster instance.</para>
+        /// <para>Removes one or more data shards from a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/198082.html">Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks</a>.\
+        /// <para>You can also remove data shards from an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/198082.html">Adjust the number of shards for an instance with cloud disks</a>.\
         /// Before you call this operation, make sure that the instance meets the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see <a href="https://help.aliyun.com/document_detail/183956.html">Persistent memory-optimized instances</a>.</description></item>
@@ -5025,13 +5337,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all accounts or a specified account of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries a specified account of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.</para>
+        /// <para> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5093,18 +5405,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeAccountsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeAccountsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeAccountsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all accounts or a specified account of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries a specified account of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.</para>
+        /// <para> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5166,18 +5485,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeAccountsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeAccountsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeAccountsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all accounts or a specified account of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries a specified account of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.</para>
+        /// <para> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5196,13 +5522,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all accounts or a specified account of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries a specified account of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.</para>
+        /// <para> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5221,12 +5547,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about O&amp;M tasks of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the details of the O\&amp;M tasks of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you have called this API operation and queried the information about a specific O&amp;M task, you can also call the <a href="~~ModifyActiveOperationTask~~">ModifyActiveOperationTask</a> operation to modify the scheduled switchover time of the O&amp;M task.</para>
+        /// <para>After you have called this API operation and queried the information about a specific O&amp;M task, you can also call the <a href="https://help.aliyun.com/document_detail/473864.html">ModifyActiveOperationTask</a> operation to modify the scheduled switchover time of the O&amp;M task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5299,17 +5625,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeActiveOperationTaskResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeActiveOperationTaskResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeActiveOperationTaskResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about O&amp;M tasks of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the details of the O\&amp;M tasks of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you have called this API operation and queried the information about a specific O&amp;M task, you can also call the <a href="~~ModifyActiveOperationTask~~">ModifyActiveOperationTask</a> operation to modify the scheduled switchover time of the O&amp;M task.</para>
+        /// <para>After you have called this API operation and queried the information about a specific O&amp;M task, you can also call the <a href="https://help.aliyun.com/document_detail/473864.html">ModifyActiveOperationTask</a> operation to modify the scheduled switchover time of the O&amp;M task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5382,17 +5715,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeActiveOperationTaskResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeActiveOperationTaskResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeActiveOperationTaskResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about O&amp;M tasks of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the details of the O\&amp;M tasks of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you have called this API operation and queried the information about a specific O&amp;M task, you can also call the <a href="~~ModifyActiveOperationTask~~">ModifyActiveOperationTask</a> operation to modify the scheduled switchover time of the O&amp;M task.</para>
+        /// <para>After you have called this API operation and queried the information about a specific O&amp;M task, you can also call the <a href="https://help.aliyun.com/document_detail/473864.html">ModifyActiveOperationTask</a> operation to modify the scheduled switchover time of the O&amp;M task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5410,12 +5750,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about O&amp;M tasks of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the details of the O\&amp;M tasks of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you have called this API operation and queried the information about a specific O&amp;M task, you can also call the <a href="~~ModifyActiveOperationTask~~">ModifyActiveOperationTask</a> operation to modify the scheduled switchover time of the O&amp;M task.</para>
+        /// <para>After you have called this API operation and queried the information about a specific O&amp;M task, you can also call the <a href="https://help.aliyun.com/document_detail/473864.html">ModifyActiveOperationTask</a> operation to modify the scheduled switchover time of the O&amp;M task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5433,7 +5773,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about the O\\\&amp;M tasks of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the O\\\\\\&amp;M event details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5530,12 +5870,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about the O\\\&amp;M tasks of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the O\\\\\\&amp;M event details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5632,12 +5979,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about the O\\\&amp;M tasks of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the O\\\\\\&amp;M event details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5655,7 +6009,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about the O\\\&amp;M tasks of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the O\\\\\\&amp;M event details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5673,20 +6027,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the audit log configurations of an ApsaraDB for Redis instance. The configurations include whether the audit log feature is enabled and the retention period of audit logs.</para>
+        /// <para>Queries the audit log configurations of a Tair (Redis OSS-compatible) instance. The configurations include whether the audit log feature is enabled and the retention period of audit logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a> operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see <a href="https://help.aliyun.com/document_detail/102015.html">Enable the new audit log feature</a>.
-        /// Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a>.</description></item>
-        /// <item><description>The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> operation to check whether the instance uses the latest minor version.</description></item>
-        /// <item><description>The audit log feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a>.</description></item>
-        /// </list>
+        /// <para>Before you call this operation, you must enable the audit log feature for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> or <a href="https://help.aliyun.com/document_detail/102015.html">Enable the audit log feature</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5747,25 +6093,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeAuditLogConfigResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeAuditLogConfigResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeAuditLogConfigResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the audit log configurations of an ApsaraDB for Redis instance. The configurations include whether the audit log feature is enabled and the retention period of audit logs.</para>
+        /// <para>Queries the audit log configurations of a Tair (Redis OSS-compatible) instance. The configurations include whether the audit log feature is enabled and the retention period of audit logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a> operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see <a href="https://help.aliyun.com/document_detail/102015.html">Enable the new audit log feature</a>.
-        /// Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a>.</description></item>
-        /// <item><description>The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> operation to check whether the instance uses the latest minor version.</description></item>
-        /// <item><description>The audit log feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a>.</description></item>
-        /// </list>
+        /// <para>Before you call this operation, you must enable the audit log feature for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> or <a href="https://help.aliyun.com/document_detail/102015.html">Enable the audit log feature</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5826,25 +6171,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeAuditLogConfigResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeAuditLogConfigResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeAuditLogConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the audit log configurations of an ApsaraDB for Redis instance. The configurations include whether the audit log feature is enabled and the retention period of audit logs.</para>
+        /// <para>Queries the audit log configurations of a Tair (Redis OSS-compatible) instance. The configurations include whether the audit log feature is enabled and the retention period of audit logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a> operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see <a href="https://help.aliyun.com/document_detail/102015.html">Enable the new audit log feature</a>.
-        /// Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a>.</description></item>
-        /// <item><description>The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> operation to check whether the instance uses the latest minor version.</description></item>
-        /// <item><description>The audit log feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a>.</description></item>
-        /// </list>
+        /// <para>Before you call this operation, you must enable the audit log feature for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> or <a href="https://help.aliyun.com/document_detail/102015.html">Enable the audit log feature</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5862,20 +6206,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the audit log configurations of an ApsaraDB for Redis instance. The configurations include whether the audit log feature is enabled and the retention period of audit logs.</para>
+        /// <para>Queries the audit log configurations of a Tair (Redis OSS-compatible) instance. The configurations include whether the audit log feature is enabled and the retention period of audit logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a> operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see <a href="https://help.aliyun.com/document_detail/102015.html">Enable the new audit log feature</a>.
-        /// Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a>.</description></item>
-        /// <item><description>The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> operation to check whether the instance uses the latest minor version.</description></item>
-        /// <item><description>The audit log feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a>.</description></item>
-        /// </list>
+        /// <para>Before you call this operation, you must enable the audit log feature for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> or <a href="https://help.aliyun.com/document_detail/102015.html">Enable the audit log feature</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5893,18 +6229,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the audit logs of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the audit logs of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/101937.html">Query audit logs of an instance</a>.
-        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
-        /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.</description></item>
-        /// <item><description>The engine version of the instance is Redis 4.0 or later.</description></item>
-        /// <item><description>The audit log feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a>.</description></item>
-        /// </list>
+        /// <para>Before you call this operation, you must enable the audit log feature for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5997,23 +6327,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeAuditRecordsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeAuditRecordsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeAuditRecordsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the audit logs of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the audit logs of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/101937.html">Query audit logs of an instance</a>.
-        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
-        /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.</description></item>
-        /// <item><description>The engine version of the instance is Redis 4.0 or later.</description></item>
-        /// <item><description>The audit log feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a>.</description></item>
-        /// </list>
+        /// <para>Before you call this operation, you must enable the audit log feature for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6106,23 +6437,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeAuditRecordsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeAuditRecordsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeAuditRecordsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the audit logs of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the audit logs of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/101937.html">Query audit logs of an instance</a>.
-        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
-        /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.</description></item>
-        /// <item><description>The engine version of the instance is Redis 4.0 or later.</description></item>
-        /// <item><description>The audit log feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a>.</description></item>
-        /// </list>
+        /// <para>Before you call this operation, you must enable the audit log feature for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6140,18 +6472,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the audit logs of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the audit logs of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/101937.html">Query audit logs of an instance</a>.
-        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
-        /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.</description></item>
-        /// <item><description>The engine version of the instance is Redis 4.0 or later.</description></item>
-        /// <item><description>The audit log feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a>.</description></item>
-        /// </list>
+        /// <para>Before you call this operation, you must enable the audit log feature for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6169,7 +6495,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of ApsaraDB for Redis instances that can be created in a specified zone.</para>
+        /// <para>Queries the types of Tair (Redis OSS-compatible) instances that can be created in a specified zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6266,12 +6592,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeAvailableResourceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeAvailableResourceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeAvailableResourceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of ApsaraDB for Redis instances that can be created in a specified zone.</para>
+        /// <para>Queries the types of Tair (Redis OSS-compatible) instances that can be created in a specified zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6368,12 +6701,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeAvailableResourceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeAvailableResourceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeAvailableResourceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of ApsaraDB for Redis instances that can be created in a specified zone.</para>
+        /// <para>Queries the types of Tair (Redis OSS-compatible) instances that can be created in a specified zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6391,7 +6731,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of ApsaraDB for Redis instances that can be created in a specified zone.</para>
+        /// <para>Queries the types of Tair (Redis OSS-compatible) instances that can be created in a specified zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6409,7 +6749,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup policy of an ApsaraDB for Redis instance, including the backup cycle and backup time.</para>
+        /// <para>Queries the backup policy of a Tair (Redis OSS-compatible) instance, including the backup cycle and backup time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6466,12 +6806,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeBackupPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeBackupPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeBackupPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup policy of an ApsaraDB for Redis instance, including the backup cycle and backup time.</para>
+        /// <para>Queries the backup policy of a Tair (Redis OSS-compatible) instance, including the backup cycle and backup time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6528,12 +6875,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeBackupPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup policy of an ApsaraDB for Redis instance, including the backup cycle and backup time.</para>
+        /// <para>Queries the backup policy of a Tair (Redis OSS-compatible) instance, including the backup cycle and backup time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6551,7 +6905,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup policy of an ApsaraDB for Redis instance, including the backup cycle and backup time.</para>
+        /// <para>Queries the backup policy of a Tair (Redis OSS-compatible) instance, including the backup cycle and backup time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6569,7 +6923,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the states of backup tasks for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the execution status of backup tasks for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6634,12 +6988,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeBackupTasksResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeBackupTasksResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeBackupTasksResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the states of backup tasks for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the execution status of backup tasks for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6704,12 +7065,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeBackupTasksResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeBackupTasksResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeBackupTasksResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the states of backup tasks for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the execution status of backup tasks for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6727,7 +7095,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the states of backup tasks for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the execution status of backup tasks for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6830,7 +7198,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeBackupsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeBackupsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeBackupsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -6920,7 +7295,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeBackupsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeBackupsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeBackupsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -6961,18 +7343,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cache analytics report that is generated on a specified date for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the cache analysis report of an instance on a specified date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
+        /// <para>Tair (Redis OSS-compatible) has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
         /// Before you call this operation, make sure that the instance meets the following requirements:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The engine version of the instance is Redis 4.0 or later.</description></item>
-        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?</a></description></item>
+        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of a Tair (Redis OSS-compatible) instance is the latest?</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -7050,23 +7432,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeCacheAnalysisReportResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeCacheAnalysisReportResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeCacheAnalysisReportResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cache analytics report that is generated on a specified date for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the cache analysis report of an instance on a specified date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
+        /// <para>Tair (Redis OSS-compatible) has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
         /// Before you call this operation, make sure that the instance meets the following requirements:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The engine version of the instance is Redis 4.0 or later.</description></item>
-        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?</a></description></item>
+        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of a Tair (Redis OSS-compatible) instance is the latest?</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -7144,23 +7533,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeCacheAnalysisReportResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeCacheAnalysisReportResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeCacheAnalysisReportResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cache analytics report that is generated on a specified date for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the cache analysis report of an instance on a specified date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
+        /// <para>Tair (Redis OSS-compatible) has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
         /// Before you call this operation, make sure that the instance meets the following requirements:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The engine version of the instance is Redis 4.0 or later.</description></item>
-        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?</a></description></item>
+        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of a Tair (Redis OSS-compatible) instance is the latest?</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -7179,18 +7575,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cache analytics report that is generated on a specified date for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the cache analysis report of an instance on a specified date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
+        /// <para>Tair (Redis OSS-compatible) has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
         /// Before you call this operation, make sure that the instance meets the following requirements:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The engine version of the instance is Redis 4.0 or later.</description></item>
-        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?</a></description></item>
+        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of a Tair (Redis OSS-compatible) instance is the latest?</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -7209,18 +7605,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cache analytics reports of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries a list of cache analysis reports for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
+        /// <para>Tair (Redis OSS-compatible) has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
         /// Before you call this operation, make sure that the instance meets the following requirements:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The engine version of the instance is Redis 4.0 or later.</description></item>
-        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?</a></description></item>
+        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of a Tair (Redis OSS-compatible) instance is the latest?</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -7294,23 +7690,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeCacheAnalysisReportListResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeCacheAnalysisReportListResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeCacheAnalysisReportListResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cache analytics reports of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries a list of cache analysis reports for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
+        /// <para>Tair (Redis OSS-compatible) has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
         /// Before you call this operation, make sure that the instance meets the following requirements:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The engine version of the instance is Redis 4.0 or later.</description></item>
-        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?</a></description></item>
+        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of a Tair (Redis OSS-compatible) instance is the latest?</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -7384,23 +7787,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeCacheAnalysisReportListResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeCacheAnalysisReportListResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeCacheAnalysisReportListResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cache analytics reports of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries a list of cache analysis reports for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
+        /// <para>Tair (Redis OSS-compatible) has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
         /// Before you call this operation, make sure that the instance meets the following requirements:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The engine version of the instance is Redis 4.0 or later.</description></item>
-        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?</a></description></item>
+        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of a Tair (Redis OSS-compatible) instance is the latest?</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -7419,18 +7829,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the cache analytics reports of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries a list of cache analysis reports for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ApsaraDB for Redis has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
+        /// <para>Tair (Redis OSS-compatible) has optimized the cache analytics feature to improve user experience. This API operation is phased out. You can use the new API operation for cache analytics. For more information, see <a href="https://help.aliyun.com/document_detail/186019.html">API operations for cache analytics are upgraded</a>.
         /// Before you call this operation, make sure that the instance meets the following requirements:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The engine version of the instance is Redis 4.0 or later.</description></item>
-        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of an ApsaraDB for Redis instance is the latest?</a></description></item>
+        /// <item><description>The instance uses the latest minor version. For more information about how to check whether to update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129203.html">How do I check whether the minor version of a Tair (Redis OSS-compatible) instance is the latest?</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -7449,8 +7859,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup sets of an ApsaraDB for Redis or Tair cluster instance.</para>
+        /// <para>Queries the backup sets of a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to cloud-native instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterBackupListRequest
@@ -7482,13 +7897,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeClusterBackupListResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeClusterBackupListResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeClusterBackupListResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup sets of an ApsaraDB for Redis or Tair cluster instance.</para>
+        /// <para>Queries the backup sets of a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to cloud-native instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterBackupListRequest
@@ -7520,13 +7947,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeClusterBackupListResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeClusterBackupListResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeClusterBackupListResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup sets of an ApsaraDB for Redis or Tair cluster instance.</para>
+        /// <para>Queries the backup sets of a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to cloud-native instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterBackupListRequest
@@ -7543,8 +7982,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup sets of an ApsaraDB for Redis or Tair cluster instance.</para>
+        /// <para>Queries the backup sets of a Tair (Redis OSS-compatible) cluster instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to cloud-native instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterBackupListRequest
@@ -7561,13 +8005,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration information of nodes in an ApsaraDB for Redis cluster instance, such as the specifications and the maximum number of connections.</para>
+        /// <para>Queries the configuration information of nodes in a Tair (Redis OSS-compatible) cluster instance, such as the specifications and the maximum number of connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This API operation is applicable only to ApsaraDB for Redis instances that use <a href="https://help.aliyun.com/document_detail/188068.html">cloud disks</a> and the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</para>
+        /// <para>This API operation is applicable only to Tair (Redis OSS-compatible) instances that use <a href="https://help.aliyun.com/document_detail/188068.html">cloud disks</a> and the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7633,18 +8077,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeClusterMemberInfoResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeClusterMemberInfoResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeClusterMemberInfoResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration information of nodes in an ApsaraDB for Redis cluster instance, such as the specifications and the maximum number of connections.</para>
+        /// <para>Queries the configuration information of nodes in a Tair (Redis OSS-compatible) cluster instance, such as the specifications and the maximum number of connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This API operation is applicable only to ApsaraDB for Redis instances that use <a href="https://help.aliyun.com/document_detail/188068.html">cloud disks</a> and the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</para>
+        /// <para>This API operation is applicable only to Tair (Redis OSS-compatible) instances that use <a href="https://help.aliyun.com/document_detail/188068.html">cloud disks</a> and the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7710,18 +8161,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeClusterMemberInfoResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeClusterMemberInfoResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeClusterMemberInfoResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration information of nodes in an ApsaraDB for Redis cluster instance, such as the specifications and the maximum number of connections.</para>
+        /// <para>Queries the configuration information of nodes in a Tair (Redis OSS-compatible) cluster instance, such as the specifications and the maximum number of connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This API operation is applicable only to ApsaraDB for Redis instances that use <a href="https://help.aliyun.com/document_detail/188068.html">cloud disks</a> and the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</para>
+        /// <para>This API operation is applicable only to Tair (Redis OSS-compatible) instances that use <a href="https://help.aliyun.com/document_detail/188068.html">cloud disks</a> and the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7740,13 +8198,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration information of nodes in an ApsaraDB for Redis cluster instance, such as the specifications and the maximum number of connections.</para>
+        /// <para>Queries the configuration information of nodes in a Tair (Redis OSS-compatible) cluster instance, such as the specifications and the maximum number of connections.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This API operation is applicable only to ApsaraDB for Redis instances that use <a href="https://help.aliyun.com/document_detail/188068.html">cloud disks</a> and the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</para>
+        /// <para>This API operation is applicable only to Tair (Redis OSS-compatible) instances that use <a href="https://help.aliyun.com/document_detail/188068.html">cloud disks</a> and the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7822,7 +8280,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDBInstanceNetInfoResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDBInstanceNetInfoResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDBInstanceNetInfoResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -7884,7 +8349,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDBInstanceNetInfoResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDBInstanceNetInfoResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDBInstanceNetInfoResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -7985,7 +8457,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDBNodeDirectVipInfoResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDBNodeDirectVipInfoResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDBNodeDirectVipInfoResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -8050,7 +8529,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDBNodeDirectVipInfoResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDBNodeDirectVipInfoResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDBNodeDirectVipInfoResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -8105,13 +8591,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an ApsaraDB for Redis instance deployed in a dedicated cluster.</para>
+        /// <para>Queries the information of Tair (Redis OSS-compatible) instances deployed in a dedicated cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the <a href="https://help.aliyun.com/document_detail/60996.html">DescribeInstanceAttribute</a> operation.</para>
+        /// <para>If you want to query the information about Tair (Redis OSS-compatible) instances that are not deployed in a dedicated cluster, call the <a href="https://help.aliyun.com/document_detail/473779.html">DescribeInstanceAttribute</a> operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8209,18 +8695,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDedicatedClusterInstanceListResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDedicatedClusterInstanceListResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDedicatedClusterInstanceListResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an ApsaraDB for Redis instance deployed in a dedicated cluster.</para>
+        /// <para>Queries the information of Tair (Redis OSS-compatible) instances deployed in a dedicated cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the <a href="https://help.aliyun.com/document_detail/60996.html">DescribeInstanceAttribute</a> operation.</para>
+        /// <para>If you want to query the information about Tair (Redis OSS-compatible) instances that are not deployed in a dedicated cluster, call the <a href="https://help.aliyun.com/document_detail/473779.html">DescribeInstanceAttribute</a> operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8318,18 +8811,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeDedicatedClusterInstanceListResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDedicatedClusterInstanceListResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDedicatedClusterInstanceListResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an ApsaraDB for Redis instance deployed in a dedicated cluster.</para>
+        /// <para>Queries the information of Tair (Redis OSS-compatible) instances deployed in a dedicated cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the <a href="https://help.aliyun.com/document_detail/60996.html">DescribeInstanceAttribute</a> operation.</para>
+        /// <para>If you want to query the information about Tair (Redis OSS-compatible) instances that are not deployed in a dedicated cluster, call the <a href="https://help.aliyun.com/document_detail/473779.html">DescribeInstanceAttribute</a> operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8348,13 +8848,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an ApsaraDB for Redis instance deployed in a dedicated cluster.</para>
+        /// <para>Queries the information of Tair (Redis OSS-compatible) instances deployed in a dedicated cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the <a href="https://help.aliyun.com/document_detail/60996.html">DescribeInstanceAttribute</a> operation.</para>
+        /// <para>If you want to query the information about Tair (Redis OSS-compatible) instances that are not deployed in a dedicated cluster, call the <a href="https://help.aliyun.com/document_detail/473779.html">DescribeInstanceAttribute</a> operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8373,12 +8873,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Transparent Data Encryption (TDE) custom key for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the details of a custom key for a Tair (Redis OSS-compatible) instance to use transparent data encryption (TDE).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a>.</para>
+        /// <para>Before you call this operation, TDE must be enabled for the Tair (Redis OSS-compatible) instance by using a custom key. For more information, see <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a>.</para>
         /// <remarks>
         /// <para>For more information about TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</para>
         /// </remarks>
@@ -8442,17 +8942,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeEncryptionKeyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeEncryptionKeyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeEncryptionKeyResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Transparent Data Encryption (TDE) custom key for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the details of a custom key for a Tair (Redis OSS-compatible) instance to use transparent data encryption (TDE).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a>.</para>
+        /// <para>Before you call this operation, TDE must be enabled for the Tair (Redis OSS-compatible) instance by using a custom key. For more information, see <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a>.</para>
         /// <remarks>
         /// <para>For more information about TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</para>
         /// </remarks>
@@ -8516,17 +9023,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeEncryptionKeyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeEncryptionKeyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeEncryptionKeyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Transparent Data Encryption (TDE) custom key for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the details of a custom key for a Tair (Redis OSS-compatible) instance to use transparent data encryption (TDE).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a>.</para>
+        /// <para>Before you call this operation, TDE must be enabled for the Tair (Redis OSS-compatible) instance by using a custom key. For more information, see <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a>.</para>
         /// <remarks>
         /// <para>For more information about TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</para>
         /// </remarks>
@@ -8547,12 +9061,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Transparent Data Encryption (TDE) custom key for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the details of a custom key for a Tair (Redis OSS-compatible) instance to use transparent data encryption (TDE).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a>.</para>
+        /// <para>Before you call this operation, TDE must be enabled for the Tair (Redis OSS-compatible) instance by using a custom key. For more information, see <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a>.</para>
         /// <remarks>
         /// <para>For more information about TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</para>
         /// </remarks>
@@ -8573,12 +9087,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom keys used by an ApsaraDB for Redis instance.</para>
+        /// <para>Queries a list of custom keys used by Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can specify a custom key when you call the <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a> operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</para>
+        /// <para>  You can specify a custom key when you call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</para>
         /// <list type="bullet">
         /// <item><description>For more information about TDE and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</description></item>
         /// </list>
@@ -8638,17 +9152,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeEncryptionKeyListResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeEncryptionKeyListResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeEncryptionKeyListResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom keys used by an ApsaraDB for Redis instance.</para>
+        /// <para>Queries a list of custom keys used by Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can specify a custom key when you call the <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a> operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</para>
+        /// <para>  You can specify a custom key when you call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</para>
         /// <list type="bullet">
         /// <item><description>For more information about TDE and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</description></item>
         /// </list>
@@ -8708,17 +9229,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeEncryptionKeyListResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeEncryptionKeyListResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeEncryptionKeyListResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom keys used by an ApsaraDB for Redis instance.</para>
+        /// <para>Queries a list of custom keys used by Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can specify a custom key when you call the <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a> operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</para>
+        /// <para>  You can specify a custom key when you call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</para>
         /// <list type="bullet">
         /// <item><description>For more information about TDE and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</description></item>
         /// </list>
@@ -8739,12 +9267,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom keys used by an ApsaraDB for Redis instance.</para>
+        /// <para>Queries a list of custom keys used by Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can specify a custom key when you call the <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a> operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</para>
+        /// <para>  You can specify a custom key when you call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> operation to enable Transparent Data Encryption (TDE). You can call the DescribeEncryptionKeyList operation to query the custom keys that are in use. To create a custom key, you can call the <a href="https://help.aliyun.com/document_detail/28947.html">CreateKey</a> operation of Key Management Service (KMS).</para>
         /// <list type="bullet">
         /// <item><description>For more information about TDE and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</description></item>
         /// </list>
@@ -8765,7 +9293,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the major version and minor version of an ApsaraDB for Redis instance and the release notes for minor versions.</para>
+        /// <para>Queries the major version and minor version of a Tair (Redis OSS-compatible) instance and the release notes for minor versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8828,12 +9356,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeEngineVersionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeEngineVersionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeEngineVersionResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the major version and minor version of an ApsaraDB for Redis instance and the release notes for minor versions.</para>
+        /// <para>Queries the major version and minor version of a Tair (Redis OSS-compatible) instance and the release notes for minor versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8896,12 +9431,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeEngineVersionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeEngineVersionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeEngineVersionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the major version and minor version of an ApsaraDB for Redis instance and the release notes for minor versions.</para>
+        /// <para>Queries the major version and minor version of a Tair (Redis OSS-compatible) instance and the release notes for minor versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8925,7 +9467,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the major version and minor version of an ApsaraDB for Redis instance and the release notes for minor versions.</para>
+        /// <para>Queries the major version and minor version of a Tair (Redis OSS-compatible) instance and the release notes for minor versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8949,7 +9491,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a distributed ApsaraDB for Redis instance.</para>
+        /// <para>Queries the details of a distributed Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9024,12 +9566,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeGlobalDistributeCacheResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeGlobalDistributeCacheResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeGlobalDistributeCacheResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a distributed ApsaraDB for Redis instance.</para>
+        /// <para>Queries the details of a distributed Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9104,12 +9653,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeGlobalDistributeCacheResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeGlobalDistributeCacheResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeGlobalDistributeCacheResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a distributed ApsaraDB for Redis instance.</para>
+        /// <para>Queries the details of a distributed Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9133,7 +9689,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a distributed ApsaraDB for Redis instance.</para>
+        /// <para>Queries the details of a distributed Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9190,7 +9746,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeGlobalSecurityIPGroupResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -9228,7 +9791,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeGlobalSecurityIPGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -9302,7 +9872,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeGlobalSecurityIPGroupRelationResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeGlobalSecurityIPGroupRelationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeGlobalSecurityIPGroupRelationResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -9340,7 +9917,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeGlobalSecurityIPGroupRelationResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeGlobalSecurityIPGroupRelationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeGlobalSecurityIPGroupRelationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -9467,7 +10051,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeHistoryMonitorValuesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeHistoryMonitorValuesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeHistoryMonitorValuesResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -9558,7 +10149,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeHistoryMonitorValuesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeHistoryMonitorValuesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeHistoryMonitorValuesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -9702,7 +10300,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeHistoryTasksResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeHistoryTasksResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeHistoryTasksResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -9800,7 +10405,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeHistoryTasksResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeHistoryTasksResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeHistoryTasksResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -9841,7 +10453,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the attribute of Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9898,12 +10510,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstanceAttributeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstanceAttributeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstanceAttributeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the attribute of Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9960,12 +10579,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstanceAttributeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the attribute of Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9983,7 +10609,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the attribute of Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10001,7 +10627,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether auto-renewal is enabled for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries whether auto-renewal is enabled for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10070,12 +10696,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstanceAutoRenewalAttributeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstanceAutoRenewalAttributeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstanceAutoRenewalAttributeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether auto-renewal is enabled for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries whether auto-renewal is enabled for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10144,12 +10777,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstanceAutoRenewalAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstanceAutoRenewalAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstanceAutoRenewalAttributeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether auto-renewal is enabled for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries whether auto-renewal is enabled for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10167,7 +10807,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether auto-renewal is enabled for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries whether auto-renewal is enabled for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10185,7 +10825,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameter settings of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the default parameter configurations of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10250,12 +10890,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstanceConfigResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstanceConfigResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstanceConfigResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameter settings of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the default parameter configurations of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10320,12 +10967,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstanceConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameter settings of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the default parameter configurations of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10351,7 +11005,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameter settings of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the default parameter configurations of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10382,11 +11036,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
-        /// You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:</para>
+        /// <para>SSL encryption is supported for Tair (Redis OSS-compatible) 2.8 standard master-replica instances, Tair (Redis OSS-compatible) 2.8 master-replica cluster instances, and Tair (Redis OSS-compatible) 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
+        /// You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for a Tair (Redis OSS-compatible) instance:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/96194.html">ModifyInstanceSSL</a> operation.</description></item>
-        /// <item><description>Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.<remarks>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation.</description></item>
+        /// <item><description>Enable or disable SSL encryption or update the SSL certificate in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.<remarks>
         /// <para>After SSL encryption is enabled, the instance may respond slower.</para>
         /// </remarks>
         /// </description></item>
@@ -10447,7 +11101,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstanceSSLResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstanceSSLResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstanceSSLResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -10457,11 +11118,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
-        /// You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:</para>
+        /// <para>SSL encryption is supported for Tair (Redis OSS-compatible) 2.8 standard master-replica instances, Tair (Redis OSS-compatible) 2.8 master-replica cluster instances, and Tair (Redis OSS-compatible) 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
+        /// You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for a Tair (Redis OSS-compatible) instance:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/96194.html">ModifyInstanceSSL</a> operation.</description></item>
-        /// <item><description>Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.<remarks>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation.</description></item>
+        /// <item><description>Enable or disable SSL encryption or update the SSL certificate in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.<remarks>
         /// <para>After SSL encryption is enabled, the instance may respond slower.</para>
         /// </remarks>
         /// </description></item>
@@ -10522,7 +11183,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstanceSSLResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -10532,11 +11200,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
-        /// You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:</para>
+        /// <para>SSL encryption is supported for Tair (Redis OSS-compatible) 2.8 standard master-replica instances, Tair (Redis OSS-compatible) 2.8 master-replica cluster instances, and Tair (Redis OSS-compatible) 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
+        /// You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for a Tair (Redis OSS-compatible) instance:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/96194.html">ModifyInstanceSSL</a> operation.</description></item>
-        /// <item><description>Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.<remarks>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation.</description></item>
+        /// <item><description>Enable or disable SSL encryption or update the SSL certificate in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.<remarks>
         /// <para>After SSL encryption is enabled, the instance may respond slower.</para>
         /// </remarks>
         /// </description></item>
@@ -10563,11 +11231,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
-        /// You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:</para>
+        /// <para>SSL encryption is supported for Tair (Redis OSS-compatible) 2.8 standard master-replica instances, Tair (Redis OSS-compatible) 2.8 master-replica cluster instances, and Tair (Redis OSS-compatible) 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
+        /// You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for a Tair (Redis OSS-compatible) instance:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/96194.html">ModifyInstanceSSL</a> operation.</description></item>
-        /// <item><description>Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.<remarks>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/473838.html">ModifyInstanceSSL</a> operation.</description></item>
+        /// <item><description>Enable or disable SSL encryption or update the SSL certificate in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.<remarks>
         /// <para>After SSL encryption is enabled, the instance may respond slower.</para>
         /// </remarks>
         /// </description></item>
@@ -10589,14 +11257,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether transparent data encryption (TDE) is enabled for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries whether transparent data encryption (TDE) is enabled for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>For more information about TDE and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a> to enable or disable TDE.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable or disable TDE.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10654,19 +11322,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstanceTDEStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstanceTDEStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstanceTDEStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether transparent data encryption (TDE) is enabled for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries whether transparent data encryption (TDE) is enabled for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>For more information about TDE and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a> to enable or disable TDE.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable or disable TDE.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10724,19 +11399,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstanceTDEStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstanceTDEStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstanceTDEStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether transparent data encryption (TDE) is enabled for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries whether transparent data encryption (TDE) is enabled for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>For more information about TDE and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a> to enable or disable TDE.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable or disable TDE.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10755,14 +11437,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether transparent data encryption (TDE) is enabled for an ApsaraDB for Redis instance.</para>
+        /// <para>Queries whether transparent data encryption (TDE) is enabled for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>For more information about TDE and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/302337.html">ModifyInstanceTDE</a> to enable or disable TDE.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/473859.html">ModifyInstanceTDE</a> to enable or disable TDE.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10781,7 +11463,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more ApsaraDB for Redis instances.</para>
+        /// <para>Queries the information about one or more Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10918,12 +11600,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstancesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstancesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstancesResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more ApsaraDB for Redis instances.</para>
+        /// <para>Queries the information about one or more Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11060,12 +11749,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstancesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more ApsaraDB for Redis instances.</para>
+        /// <para>Queries the information about one or more Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11083,7 +11779,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more ApsaraDB for Redis instances.</para>
+        /// <para>Queries the information about one or more Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11101,7 +11797,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the overview information of one or more ApsaraDB for Redis instances.</para>
+        /// <para>Queries the overview information of one or more Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11226,12 +11922,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstancesOverviewResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstancesOverviewResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstancesOverviewResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the overview information of one or more ApsaraDB for Redis instances.</para>
+        /// <para>Queries the overview information of one or more Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11356,12 +12059,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeInstancesOverviewResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeInstancesOverviewResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeInstancesOverviewResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the overview information of one or more ApsaraDB for Redis instances.</para>
+        /// <para>Queries the overview information of one or more Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11387,7 +12097,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the overview information of one or more ApsaraDB for Redis instances.</para>
+        /// <para>Queries the overview information of one or more Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11413,12 +12123,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the internal bandwidth of an ApsaraDB for Redis instance. If you have purchased extra internal bandwidth, the expiration time of the purchased bandwidth is also returned.</para>
+        /// <para>Queries the internal bandwidth of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation to increase the internal bandwidth of an instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to increase the internal bandwidth of an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11479,17 +12189,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeIntranetAttributeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeIntranetAttributeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeIntranetAttributeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the internal bandwidth of an ApsaraDB for Redis instance. If you have purchased extra internal bandwidth, the expiration time of the purchased bandwidth is also returned.</para>
+        /// <para>Queries the internal bandwidth of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation to increase the internal bandwidth of an instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to increase the internal bandwidth of an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11550,17 +12267,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeIntranetAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeIntranetAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeIntranetAttributeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the internal bandwidth of an ApsaraDB for Redis instance. If you have purchased extra internal bandwidth, the expiration time of the purchased bandwidth is also returned.</para>
+        /// <para>Queries the internal bandwidth of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation to increase the internal bandwidth of an instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to increase the internal bandwidth of an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11578,12 +12302,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the internal bandwidth of an ApsaraDB for Redis instance. If you have purchased extra internal bandwidth, the expiration time of the purchased bandwidth is also returned.</para>
+        /// <para>Queries the internal bandwidth of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation to increase the internal bandwidth of an instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to increase the internal bandwidth of an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11601,7 +12325,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logical topology of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the logical topology of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11663,12 +12387,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeLogicInstanceTopologyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeLogicInstanceTopologyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeLogicInstanceTopologyResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logical topology of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the logical topology of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11730,12 +12461,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeLogicInstanceTopologyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeLogicInstanceTopologyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeLogicInstanceTopologyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logical topology of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the logical topology of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11758,7 +12496,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logical topology of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the logical topology of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11842,7 +12580,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeMonitorItemsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeMonitorItemsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeMonitorItemsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -11908,7 +12653,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeMonitorItemsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeMonitorItemsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeMonitorItemsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -12026,7 +12778,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParameterGroupResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParameterGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParameterGroupResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -12092,7 +12851,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParameterGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -12198,7 +12964,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParameterGroupSupportParamResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParameterGroupSupportParamResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParameterGroupSupportParamResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -12268,7 +13041,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParameterGroupSupportParamResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParameterGroupSupportParamResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParameterGroupSupportParamResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -12309,7 +13089,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询参数模板支持设置的参数列表</para>
+        /// <para>Queries the information about the parameters that can be configured in a parameter template, such as the default values, value ranges, and descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12342,12 +13122,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParameterGroupTemplateListResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParameterGroupTemplateListResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParameterGroupTemplateListResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询参数模板支持设置的参数列表</para>
+        /// <para>Queries the information about the parameters that can be configured in a parameter template, such as the default values, value ranges, and descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12380,12 +13167,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParameterGroupTemplateListResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParameterGroupTemplateListResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParameterGroupTemplateListResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询参数模板支持设置的参数列表</para>
+        /// <para>Queries the information about the parameters that can be configured in a parameter template, such as the default values, value ranges, and descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12403,7 +13197,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询参数模板支持设置的参数列表</para>
+        /// <para>Queries the information about the parameters that can be configured in a parameter template, such as the default values, value ranges, and descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12482,7 +13276,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParameterGroupsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParameterGroupsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParameterGroupsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -12548,7 +13349,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParameterGroupsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParameterGroupsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParameterGroupsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -12589,7 +13397,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameter modification history of a Tair or ApsaraDB for Redis instance.</para>
+        /// <para>Queries the parameter modification history of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12662,12 +13470,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParameterModificationHistoryResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParameterModificationHistoryResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParameterModificationHistoryResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameter modification history of a Tair or ApsaraDB for Redis instance.</para>
+        /// <para>Queries the parameter modification history of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12740,12 +13555,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParameterModificationHistoryResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParameterModificationHistoryResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParameterModificationHistoryResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameter modification history of a Tair or ApsaraDB for Redis instance.</para>
+        /// <para>Queries the parameter modification history of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12763,7 +13585,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameter modification history of a Tair or ApsaraDB for Redis instance.</para>
+        /// <para>Queries the parameter modification history of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12781,12 +13603,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters and their default values that are supported by ApsaraDB for Redis instances of different architectures and major versions.</para>
+        /// <para>Queries the parameters and their default values that are supported by Tair (Redis OSS-compatible) instances of different architectures and major versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/61113.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</para>
+        /// <para>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12859,17 +13681,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParameterTemplatesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParameterTemplatesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParameterTemplatesResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters and their default values that are supported by ApsaraDB for Redis instances of different architectures and major versions.</para>
+        /// <para>Queries the parameters and their default values that are supported by Tair (Redis OSS-compatible) instances of different architectures and major versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/61113.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</para>
+        /// <para>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12942,17 +13771,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParameterTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParameterTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParameterTemplatesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters and their default values that are supported by ApsaraDB for Redis instances of different architectures and major versions.</para>
+        /// <para>Queries the parameters and their default values that are supported by Tair (Redis OSS-compatible) instances of different architectures and major versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/61113.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</para>
+        /// <para>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12970,12 +13806,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameters and their default values that are supported by ApsaraDB for Redis instances of different architectures and major versions.</para>
+        /// <para>Queries the parameters and their default values that are supported by Tair (Redis OSS-compatible) instances of different architectures and major versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/61113.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</para>
+        /// <para>After you call this operation to query the parameters and default values of an instance, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to reconfigure the parameters of the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12993,14 +13829,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration parameters and running parameters of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the configuration parameters and running parameters of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only for instances that use local disks.</para>
+        /// <para>This operation is applicable only to classic instances.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473846.html">DescribeInstanceConfig</a> operation to query the parameter settings of instances that use cloud disks.</para>
+        /// <para> If the instance is deployed in cloud-native mode, you can use the <a href="https://help.aliyun.com/document_detail/473846.html">DescribeInstanceConfig</a> operation to query the configuration and operational parameters of the instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13066,19 +13902,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParametersResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParametersResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParametersResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration parameters and running parameters of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the configuration parameters and running parameters of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only for instances that use local disks.</para>
+        /// <para>This operation is applicable only to classic instances.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473846.html">DescribeInstanceConfig</a> operation to query the parameter settings of instances that use cloud disks.</para>
+        /// <para> If the instance is deployed in cloud-native mode, you can use the <a href="https://help.aliyun.com/document_detail/473846.html">DescribeInstanceConfig</a> operation to query the configuration and operational parameters of the instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13144,19 +13987,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeParametersResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeParametersResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeParametersResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration parameters and running parameters of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the configuration parameters and running parameters of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only for instances that use local disks.</para>
+        /// <para>This operation is applicable only to classic instances.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473846.html">DescribeInstanceConfig</a> operation to query the parameter settings of instances that use cloud disks.</para>
+        /// <para> If the instance is deployed in cloud-native mode, you can use the <a href="https://help.aliyun.com/document_detail/473846.html">DescribeInstanceConfig</a> operation to query the configuration and operational parameters of the instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13175,14 +14025,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration parameters and running parameters of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the configuration parameters and running parameters of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only for instances that use local disks.</para>
+        /// <para>This operation is applicable only to classic instances.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473846.html">DescribeInstanceConfig</a> operation to query the parameter settings of instances that use cloud disks.</para>
+        /// <para> If the instance is deployed in cloud-native mode, you can use the <a href="https://help.aliyun.com/document_detail/473846.html">DescribeInstanceConfig</a> operation to query the configuration and operational parameters of the instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13234,6 +14084,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["CouponNo"] = request.CouponNo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceUpgrade))
             {
                 query["ForceUpgrade"] = request.ForceUpgrade;
@@ -13318,7 +14172,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribePriceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribePriceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribePriceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -13356,6 +14217,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["CouponNo"] = request.CouponNo;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceUpgrade))
             {
                 query["ForceUpgrade"] = request.ForceUpgrade;
@@ -13440,7 +14305,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribePriceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribePriceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribePriceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -13538,7 +14410,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeRegionsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -13600,7 +14479,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeRegionsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -13641,7 +14527,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the role, type, minor version, and zone of each node in an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the role, type, minor version, and zone of each node in a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13710,12 +14596,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeRoleZoneInfoResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeRoleZoneInfoResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeRoleZoneInfoResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the role, type, minor version, and zone of each node in an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the role, type, minor version, and zone of each node in a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13784,12 +14677,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeRoleZoneInfoResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeRoleZoneInfoResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeRoleZoneInfoResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the role, type, minor version, and zone of each node in an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the role, type, minor version, and zone of each node in a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13807,7 +14707,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the role, type, minor version, and zone of each node in an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the role, type, minor version, and zone of each node in a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13825,12 +14725,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active logs of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the operational logs of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/101713.html">View active logs</a>.
+        /// <para>For more information about how to view the operational logs of an instance in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/101713.html">View active logs</a>.
         /// This operation can be called up to 100 times per minute.</para>
         /// </description>
         /// 
@@ -13932,17 +14832,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeRunningLogRecordsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeRunningLogRecordsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeRunningLogRecordsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active logs of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the operational logs of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/101713.html">View active logs</a>.
+        /// <para>For more information about how to view the operational logs of an instance in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/101713.html">View active logs</a>.
         /// This operation can be called up to 100 times per minute.</para>
         /// </description>
         /// 
@@ -14044,17 +14951,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeRunningLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeRunningLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeRunningLogRecordsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active logs of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the operational logs of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/101713.html">View active logs</a>.
+        /// <para>For more information about how to view the operational logs of an instance in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/101713.html">View active logs</a>.
         /// This operation can be called up to 100 times per minute.</para>
         /// </description>
         /// 
@@ -14073,12 +14987,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active logs of an ApsaraDB for Redis instance.</para>
+        /// <para>Queries the operational logs of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/101713.html">View active logs</a>.
+        /// <para>For more information about how to view the operational logs of an instance in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/101713.html">View active logs</a>.
         /// This operation can be called up to 100 times per minute.</para>
         /// </description>
         /// 
@@ -14154,7 +15068,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSecurityGroupConfigurationResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSecurityGroupConfigurationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSecurityGroupConfigurationResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14216,7 +15137,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSecurityGroupConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSecurityGroupConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSecurityGroupConfigurationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14314,7 +15242,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSecurityIpsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSecurityIpsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSecurityIpsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14376,7 +15311,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSecurityIpsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14417,12 +15359,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the slow logs of an ApsaraDB for Redis instance that are generated within a specified period of time.</para>
+        /// <para>Queries the slow query logs of a Tair (Redis OSS-compatible) instance that are generated within a specified period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also query slow logs in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow logs of an instance</a>. This operation can be called up to 100 times per minute.</para>
+        /// <para>You can also query slow logs in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow logs of an instance</a>. This operation can be called up to 100 times per minute.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14519,17 +15461,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the slow logs of an ApsaraDB for Redis instance that are generated within a specified period of time.</para>
+        /// <para>Queries the slow query logs of a Tair (Redis OSS-compatible) instance that are generated within a specified period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also query slow logs in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow logs of an instance</a>. This operation can be called up to 100 times per minute.</para>
+        /// <para>You can also query slow logs in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow logs of an instance</a>. This operation can be called up to 100 times per minute.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14626,17 +15575,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeSlowLogRecordsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the slow logs of an ApsaraDB for Redis instance that are generated within a specified period of time.</para>
+        /// <para>Queries the slow query logs of a Tair (Redis OSS-compatible) instance that are generated within a specified period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also query slow logs in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow logs of an instance</a>. This operation can be called up to 100 times per minute.</para>
+        /// <para>You can also query slow logs in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow logs of an instance</a>. This operation can be called up to 100 times per minute.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14654,12 +15610,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the slow logs of an ApsaraDB for Redis instance that are generated within a specified period of time.</para>
+        /// <para>Queries the slow query logs of a Tair (Redis OSS-compatible) instance that are generated within a specified period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also query slow logs in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow logs of an instance</a>. This operation can be called up to 100 times per minute.</para>
+        /// <para>You can also query slow logs in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow logs of an instance</a>. This operation can be called up to 100 times per minute.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14710,7 +15666,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTairKVCacheCustomInstanceAttributeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheCustomInstanceAttributeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheCustomInstanceAttributeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14748,7 +15711,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTairKVCacheCustomInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheCustomInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheCustomInstanceAttributeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14822,7 +15792,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTairKVCacheCustomInstanceHistoryMonitorValuesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheCustomInstanceHistoryMonitorValuesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheCustomInstanceHistoryMonitorValuesResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14860,7 +15837,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTairKVCacheCustomInstanceHistoryMonitorValuesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheCustomInstanceHistoryMonitorValuesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheCustomInstanceHistoryMonitorValuesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14934,7 +15918,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTairKVCacheCustomInstancesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheCustomInstancesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheCustomInstancesResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -14972,7 +15963,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTairKVCacheCustomInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheCustomInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheCustomInstancesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -15013,12 +16011,264 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all tasks that are performed on an ApsaraDB for Redis instance within a specified period of time.</para>
+        /// <para>查看TairInfer实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairKVCacheInferInstanceAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairKVCacheInferInstanceAttributeResponse
+        /// </returns>
+        public DescribeTairKVCacheInferInstanceAttributeResponse DescribeTairKVCacheInferInstanceAttributeWithOptions(DescribeTairKVCacheInferInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTairKVCacheInferInstanceAttribute",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheInferInstanceAttributeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheInferInstanceAttributeResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看TairInfer实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairKVCacheInferInstanceAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairKVCacheInferInstanceAttributeResponse
+        /// </returns>
+        public async Task<DescribeTairKVCacheInferInstanceAttributeResponse> DescribeTairKVCacheInferInstanceAttributeWithOptionsAsync(DescribeTairKVCacheInferInstanceAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTairKVCacheInferInstanceAttribute",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheInferInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheInferInstanceAttributeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看TairInfer实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairKVCacheInferInstanceAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairKVCacheInferInstanceAttributeResponse
+        /// </returns>
+        public DescribeTairKVCacheInferInstanceAttributeResponse DescribeTairKVCacheInferInstanceAttribute(DescribeTairKVCacheInferInstanceAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTairKVCacheInferInstanceAttributeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看TairInfer实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairKVCacheInferInstanceAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairKVCacheInferInstanceAttributeResponse
+        /// </returns>
+        public async Task<DescribeTairKVCacheInferInstanceAttributeResponse> DescribeTairKVCacheInferInstanceAttributeAsync(DescribeTairKVCacheInferInstanceAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTairKVCacheInferInstanceAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看TairInfer实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairKVCacheInferInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairKVCacheInferInstancesResponse
+        /// </returns>
+        public DescribeTairKVCacheInferInstancesResponse DescribeTairKVCacheInferInstancesWithOptions(DescribeTairKVCacheInferInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTairKVCacheInferInstances",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheInferInstancesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheInferInstancesResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看TairInfer实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairKVCacheInferInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairKVCacheInferInstancesResponse
+        /// </returns>
+        public async Task<DescribeTairKVCacheInferInstancesResponse> DescribeTairKVCacheInferInstancesWithOptionsAsync(DescribeTairKVCacheInferInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTairKVCacheInferInstances",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheInferInstancesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTairKVCacheInferInstancesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看TairInfer实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairKVCacheInferInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairKVCacheInferInstancesResponse
+        /// </returns>
+        public DescribeTairKVCacheInferInstancesResponse DescribeTairKVCacheInferInstances(DescribeTairKVCacheInferInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTairKVCacheInferInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看TairInfer实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairKVCacheInferInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairKVCacheInferInstancesResponse
+        /// </returns>
+        public async Task<DescribeTairKVCacheInferInstancesResponse> DescribeTairKVCacheInferInstancesAsync(DescribeTairKVCacheInferInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTairKVCacheInferInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all tasks that are performed on a Tair (Redis OSS-compatible) instance within a specified period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the <b>Instance Information</b> page to view the progress of the current task.</para>
+        /// <para>You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the Tair (Redis OSS-compatible) console and click the Tasks icon in the upper-right corner of the <b>Instance Information</b> page to view the progress of the current task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15095,17 +16345,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTasksResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTasksResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTasksResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all tasks that are performed on an ApsaraDB for Redis instance within a specified period of time.</para>
+        /// <para>Queries all tasks that are performed on a Tair (Redis OSS-compatible) instance within a specified period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the <b>Instance Information</b> page to view the progress of the current task.</para>
+        /// <para>You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the Tair (Redis OSS-compatible) console and click the Tasks icon in the upper-right corner of the <b>Instance Information</b> page to view the progress of the current task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15182,17 +16439,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeTasksResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeTasksResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeTasksResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all tasks that are performed on an ApsaraDB for Redis instance within a specified period of time.</para>
+        /// <para>Queries all tasks that are performed on a Tair (Redis OSS-compatible) instance within a specified period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the <b>Instance Information</b> page to view the progress of the current task.</para>
+        /// <para>You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the Tair (Redis OSS-compatible) console and click the Tasks icon in the upper-right corner of the <b>Instance Information</b> page to view the progress of the current task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15210,12 +16474,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all tasks that are performed on an ApsaraDB for Redis instance within a specified period of time.</para>
+        /// <para>Queries all tasks that are performed on a Tair (Redis OSS-compatible) instance within a specified period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the <b>Instance Information</b> page to view the progress of the current task.</para>
+        /// <para>You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the Tair (Redis OSS-compatible) console and click the Tasks icon in the upper-right corner of the <b>Instance Information</b> page to view the progress of the current task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15233,7 +16497,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones available for ApsaraDB for Redis.</para>
+        /// <para>Queries the zones available for Tair (Redis OSS-compatible).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15294,12 +16558,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeZonesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeZonesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeZonesResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones available for ApsaraDB for Redis.</para>
+        /// <para>Queries the zones available for Tair (Redis OSS-compatible).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15360,12 +16631,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DescribeZonesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeZonesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeZonesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones available for ApsaraDB for Redis.</para>
+        /// <para>Queries the zones available for Tair (Redis OSS-compatible).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15383,7 +16661,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones available for ApsaraDB for Redis.</para>
+        /// <para>Queries the zones available for Tair (Redis OSS-compatible).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15401,14 +16679,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adjusts the bandwidth of an ApsaraDB for Redis instance.</para>
+        /// <para>Adjusts the bandwidth of a Tair (Redis OSS-compatible) instance. Only the pay-as-you-go billing method is supported for bandwidth adjustment. You need to specify the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>.</para>
         /// <remarks>
-        /// <para> Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/190794.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth of each data node in an instance.</para>
+        /// <para> Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth of each data node in an instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15502,19 +16780,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EnableAdditionalBandwidthResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EnableAdditionalBandwidthResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EnableAdditionalBandwidthResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adjusts the bandwidth of an ApsaraDB for Redis instance.</para>
+        /// <para>Adjusts the bandwidth of a Tair (Redis OSS-compatible) instance. Only the pay-as-you-go billing method is supported for bandwidth adjustment. You need to specify the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>.</para>
         /// <remarks>
-        /// <para> Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/190794.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth of each data node in an instance.</para>
+        /// <para> Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth of each data node in an instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15608,19 +16893,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EnableAdditionalBandwidthResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<EnableAdditionalBandwidthResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<EnableAdditionalBandwidthResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adjusts the bandwidth of an ApsaraDB for Redis instance.</para>
+        /// <para>Adjusts the bandwidth of a Tair (Redis OSS-compatible) instance. Only the pay-as-you-go billing method is supported for bandwidth adjustment. You need to specify the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>.</para>
         /// <remarks>
-        /// <para> Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/190794.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth of each data node in an instance.</para>
+        /// <para> Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth of each data node in an instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15639,14 +16931,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adjusts the bandwidth of an ApsaraDB for Redis instance.</para>
+        /// <para>Adjusts the bandwidth of a Tair (Redis OSS-compatible) instance. Only the pay-as-you-go billing method is supported for bandwidth adjustment. You need to specify the InstanceId, NodeId (optional), Bandwidth, and ChargeType parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If you enable the bandwidth auto scaling feature and call this operation at the same time, bandwidth auto scaling takes precedence. During bandwidth scale-back, the instance is scaled back to the default bandwidth of the instance type. For more information about the limits, costs, and FAQ about this feature, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>.</para>
         /// <remarks>
-        /// <para> Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/190794.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth of each data node in an instance.</para>
+        /// <para> Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to query the current bandwidth of each data node in an instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15665,12 +16957,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the expired keys from an ApsaraDB for Redis instance.</para>
+        /// <para>Clears all expired keys in a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to clear the expired keys in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/43881.html">Clear data</a>.</para>
+        /// <para>For more information about how to clear the expired keys in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/43881.html">Clear data</a>.</para>
         /// <remarks>
         /// <para> Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.</para>
         /// </remarks>
@@ -15734,17 +17026,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<FlushExpireKeysResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<FlushExpireKeysResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<FlushExpireKeysResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the expired keys from an ApsaraDB for Redis instance.</para>
+        /// <para>Clears all expired keys in a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to clear the expired keys in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/43881.html">Clear data</a>.</para>
+        /// <para>For more information about how to clear the expired keys in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/43881.html">Clear data</a>.</para>
         /// <remarks>
         /// <para> Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.</para>
         /// </remarks>
@@ -15808,17 +17107,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<FlushExpireKeysResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<FlushExpireKeysResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<FlushExpireKeysResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the expired keys from an ApsaraDB for Redis instance.</para>
+        /// <para>Clears all expired keys in a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to clear the expired keys in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/43881.html">Clear data</a>.</para>
+        /// <para>For more information about how to clear the expired keys in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/43881.html">Clear data</a>.</para>
         /// <remarks>
         /// <para> Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.</para>
         /// </remarks>
@@ -15839,12 +17145,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the expired keys from an ApsaraDB for Redis instance.</para>
+        /// <para>Clears all expired keys in a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to clear the expired keys in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/43881.html">Clear data</a>.</para>
+        /// <para>For more information about how to clear the expired keys in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/43881.html">Clear data</a>.</para>
         /// <remarks>
         /// <para> Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.</para>
         /// </remarks>
@@ -15865,7 +17171,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the data of an ApsaraDB for Redis instance. The cleared data cannot be restored.</para>
+        /// <para>Clears the data of a Tair (Redis OSS-compatible) instance. The cleared data cannot be restored.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15922,12 +17228,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<FlushInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<FlushInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<FlushInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the data of an ApsaraDB for Redis instance. The cleared data cannot be restored.</para>
+        /// <para>Clears the data of a Tair (Redis OSS-compatible) instance. The cleared data cannot be restored.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15984,12 +17297,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<FlushInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<FlushInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<FlushInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the data of an ApsaraDB for Redis instance. The cleared data cannot be restored.</para>
+        /// <para>Clears the data of a Tair (Redis OSS-compatible) instance. The cleared data cannot be restored.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16007,7 +17327,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the data of an ApsaraDB for Redis instance. The cleared data cannot be restored.</para>
+        /// <para>Clears the data of a Tair (Redis OSS-compatible) instance. The cleared data cannot be restored.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16025,12 +17345,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cleans the data of specified databases in an instance.</para>
+        /// <para>Cleans the data of specified databases in a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each ApsaraDB for Redis or Tair instance can contain up to 256 databases. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the <c>SELECT</c> statement to switch between databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">What is the size of each database on an ApsaraDB for Redis instance, and how can I choose databases?</a></para>
+        /// <para>Each Tair (Redis OSS-compatible) instance can contain up to 256 databases named from DB0 to DB255. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the <c>SELECT</c> statement to switch between databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">What is the size of each database on a Tair (Redis OSS-compatible) instance, and how can I choose databases?</a></para>
         /// <remarks>
         /// <para> This operation is available only for cloud-native instances that use cloud disks.</para>
         /// </remarks>
@@ -16090,17 +17410,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<FlushInstanceForDBResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<FlushInstanceForDBResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<FlushInstanceForDBResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cleans the data of specified databases in an instance.</para>
+        /// <para>Cleans the data of specified databases in a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each ApsaraDB for Redis or Tair instance can contain up to 256 databases. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the <c>SELECT</c> statement to switch between databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">What is the size of each database on an ApsaraDB for Redis instance, and how can I choose databases?</a></para>
+        /// <para>Each Tair (Redis OSS-compatible) instance can contain up to 256 databases named from DB0 to DB255. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the <c>SELECT</c> statement to switch between databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">What is the size of each database on a Tair (Redis OSS-compatible) instance, and how can I choose databases?</a></para>
         /// <remarks>
         /// <para> This operation is available only for cloud-native instances that use cloud disks.</para>
         /// </remarks>
@@ -16160,17 +17487,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<FlushInstanceForDBResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<FlushInstanceForDBResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<FlushInstanceForDBResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cleans the data of specified databases in an instance.</para>
+        /// <para>Cleans the data of specified databases in a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each ApsaraDB for Redis or Tair instance can contain up to 256 databases. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the <c>SELECT</c> statement to switch between databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">What is the size of each database on an ApsaraDB for Redis instance, and how can I choose databases?</a></para>
+        /// <para>Each Tair (Redis OSS-compatible) instance can contain up to 256 databases named from DB0 to DB255. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the <c>SELECT</c> statement to switch between databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">What is the size of each database on a Tair (Redis OSS-compatible) instance, and how can I choose databases?</a></para>
         /// <remarks>
         /// <para> This operation is available only for cloud-native instances that use cloud disks.</para>
         /// </remarks>
@@ -16191,12 +17525,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cleans the data of specified databases in an instance.</para>
+        /// <para>Cleans the data of specified databases in a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each ApsaraDB for Redis or Tair instance can contain up to 256 databases. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the <c>SELECT</c> statement to switch between databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">What is the size of each database on an ApsaraDB for Redis instance, and how can I choose databases?</a></para>
+        /// <para>Each Tair (Redis OSS-compatible) instance can contain up to 256 databases named from DB0 to DB255. Each database does not have a separate memory usage limit. The memory capacity that a database can use is subject to the total memory limit of the instance. You can execute the <c>SELECT</c> statement to switch between databases. For more information, see <a href="https://help.aliyun.com/document_detail/38688.html">What is the size of each database on a Tair (Redis OSS-compatible) instance, and how can I choose databases?</a></para>
         /// <remarks>
         /// <para> This operation is available only for cloud-native instances that use cloud disks.</para>
         /// </remarks>
@@ -16217,7 +17551,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the permissions of an account for an ApsaraDB for Redis instance.</para>
+        /// <para>Modifies the permissions of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16225,8 +17559,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.</description></item>
-        /// <item><description>The ApsaraDB for Redis instance must be in the running state.</description></item>
+        /// <item><description>Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</description></item>
+        /// <item><description>The Tair (Redis OSS-compatible) instance must be in the running state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16296,12 +17630,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GrantAccountPrivilegeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GrantAccountPrivilegeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GrantAccountPrivilegeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the permissions of an account for an ApsaraDB for Redis instance.</para>
+        /// <para>Modifies the permissions of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16309,8 +17650,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.</description></item>
-        /// <item><description>The ApsaraDB for Redis instance must be in the running state.</description></item>
+        /// <item><description>Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</description></item>
+        /// <item><description>The Tair (Redis OSS-compatible) instance must be in the running state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16380,12 +17721,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GrantAccountPrivilegeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GrantAccountPrivilegeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GrantAccountPrivilegeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the permissions of an account for an ApsaraDB for Redis instance.</para>
+        /// <para>Modifies the permissions of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16393,8 +17741,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.</description></item>
-        /// <item><description>The ApsaraDB for Redis instance must be in the running state.</description></item>
+        /// <item><description>Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</description></item>
+        /// <item><description>The Tair (Redis OSS-compatible) instance must be in the running state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16413,7 +17761,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the permissions of an account for an ApsaraDB for Redis instance.</para>
+        /// <para>Modifies the permissions of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16421,8 +17769,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.</description></item>
-        /// <item><description>The ApsaraDB for Redis instance must be in the running state.</description></item>
+        /// <item><description>Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</description></item>
+        /// <item><description>The Tair (Redis OSS-compatible) instance must be in the running state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16503,7 +17851,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<InitializeKvstorePermissionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<InitializeKvstorePermissionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<InitializeKvstorePermissionResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -16570,7 +17925,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<InitializeKvstorePermissionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<InitializeKvstorePermissionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<InitializeKvstorePermissionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -16621,12 +17983,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the relationships between ApsaraDB for Redis instances and tags.</para>
+        /// <para>Queries the relationships between Tair (Redis OSS-compatible) instances and tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/119160.html">Filter ApsaraDB for Redis instances by tag</a> and <a href="https://help.aliyun.com/document_detail/134038.html">View tags bound to an instance</a>.</para>
+        /// <para>You can also query the relationships between instances and tags in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/119160.html">Filter Tair (Redis OSS-compatible) instances by tag</a> and <a href="https://help.aliyun.com/document_detail/134038.html">View tags bound to an instance</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16695,17 +18057,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the relationships between ApsaraDB for Redis instances and tags.</para>
+        /// <para>Queries the relationships between Tair (Redis OSS-compatible) instances and tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/119160.html">Filter ApsaraDB for Redis instances by tag</a> and <a href="https://help.aliyun.com/document_detail/134038.html">View tags bound to an instance</a>.</para>
+        /// <para>You can also query the relationships between instances and tags in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/119160.html">Filter Tair (Redis OSS-compatible) instances by tag</a> and <a href="https://help.aliyun.com/document_detail/134038.html">View tags bound to an instance</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16774,17 +18143,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListTagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the relationships between ApsaraDB for Redis instances and tags.</para>
+        /// <para>Queries the relationships between Tair (Redis OSS-compatible) instances and tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/119160.html">Filter ApsaraDB for Redis instances by tag</a> and <a href="https://help.aliyun.com/document_detail/134038.html">View tags bound to an instance</a>.</para>
+        /// <para>You can also query the relationships between instances and tags in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/119160.html">Filter Tair (Redis OSS-compatible) instances by tag</a> and <a href="https://help.aliyun.com/document_detail/134038.html">View tags bound to an instance</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16802,12 +18178,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the relationships between ApsaraDB for Redis instances and tags.</para>
+        /// <para>Queries the relationships between Tair (Redis OSS-compatible) instances and tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/119160.html">Filter ApsaraDB for Redis instances by tag</a> and <a href="https://help.aliyun.com/document_detail/134038.html">View tags bound to an instance</a>.</para>
+        /// <para>You can also query the relationships between instances and tags in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/119160.html">Filter Tair (Redis OSS-compatible) instances by tag</a> and <a href="https://help.aliyun.com/document_detail/134038.html">View tags bound to an instance</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16886,7 +18262,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<LockDBInstanceWriteResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<LockDBInstanceWriteResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<LockDBInstanceWriteResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -16952,7 +18335,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<LockDBInstanceWriteResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<LockDBInstanceWriteResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<LockDBInstanceWriteResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -17054,7 +18444,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MasterNodeShutDownFailOverResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<MasterNodeShutDownFailOverResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<MasterNodeShutDownFailOverResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -17120,7 +18517,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MasterNodeShutDownFailOverResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<MasterNodeShutDownFailOverResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<MasterNodeShutDownFailOverResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -17161,7 +18565,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an ApsaraDB for Redis instance to another zone in the same region.</para>
+        /// <para>Migrates a Tair (Redis OSS-compatible) instance to another zone in the same region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17170,7 +18574,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the classic network endpoint is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.</description></item>
+        /// <item><description>If the network type of an Tair (Redis OSS-compatible) instance is switched from classic network to Virtual Private Cloud (VPC), and the classic network endpoint is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.</description></item>
         /// <item><description>After the instance is migrated, the endpoint of the instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.</description></item>
         /// </list>
         /// </description>
@@ -17205,6 +18609,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadOnlyCount))
+            {
+                query["ReadOnlyCount"] = request.ReadOnlyCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicaCount))
+            {
+                query["ReplicaCount"] = request.ReplicaCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -17220,6 +18632,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveReadOnlyCount))
+            {
+                query["SlaveReadOnlyCount"] = request.SlaveReadOnlyCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveReplicaCount))
+            {
+                query["SlaveReplicaCount"] = request.SlaveReplicaCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -17245,12 +18665,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MigrateToOtherZoneResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<MigrateToOtherZoneResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<MigrateToOtherZoneResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an ApsaraDB for Redis instance to another zone in the same region.</para>
+        /// <para>Migrates a Tair (Redis OSS-compatible) instance to another zone in the same region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17259,7 +18686,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the classic network endpoint is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.</description></item>
+        /// <item><description>If the network type of an Tair (Redis OSS-compatible) instance is switched from classic network to Virtual Private Cloud (VPC), and the classic network endpoint is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.</description></item>
         /// <item><description>After the instance is migrated, the endpoint of the instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.</description></item>
         /// </list>
         /// </description>
@@ -17294,6 +18721,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadOnlyCount))
+            {
+                query["ReadOnlyCount"] = request.ReadOnlyCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicaCount))
+            {
+                query["ReplicaCount"] = request.ReplicaCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -17309,6 +18744,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveReadOnlyCount))
+            {
+                query["SlaveReadOnlyCount"] = request.SlaveReadOnlyCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlaveReplicaCount))
+            {
+                query["SlaveReplicaCount"] = request.SlaveReplicaCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -17334,12 +18777,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MigrateToOtherZoneResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<MigrateToOtherZoneResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<MigrateToOtherZoneResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an ApsaraDB for Redis instance to another zone in the same region.</para>
+        /// <para>Migrates a Tair (Redis OSS-compatible) instance to another zone in the same region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17348,7 +18798,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the classic network endpoint is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.</description></item>
+        /// <item><description>If the network type of an Tair (Redis OSS-compatible) instance is switched from classic network to Virtual Private Cloud (VPC), and the classic network endpoint is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.</description></item>
         /// <item><description>After the instance is migrated, the endpoint of the instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.</description></item>
         /// </list>
         /// </description>
@@ -17368,7 +18818,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an ApsaraDB for Redis instance to another zone in the same region.</para>
+        /// <para>Migrates a Tair (Redis OSS-compatible) instance to another zone in the same region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17377,7 +18827,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If the network type of an ApsaraDB for Redis instance is switched from classic network to Virtual Private Cloud (VPC), and the classic network endpoint is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.</description></item>
+        /// <item><description>If the network type of an Tair (Redis OSS-compatible) instance is switched from classic network to Virtual Private Cloud (VPC), and the classic network endpoint is retained, you can migrate the instance across zones only after the classic network endpoint is released upon expiration.</description></item>
         /// <item><description>After the instance is migrated, the endpoint of the instance remains unchanged. However, the virtual IP address (VIP) is changed. We recommend that you use the endpoint instead of the VIP to connect to the instance.</description></item>
         /// </list>
         /// </description>
@@ -17397,14 +18847,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of an account for an ApsaraDB for Redis instance.</para>
+        /// <para>Modifies the description of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
         /// <para>This operation is supported only for instances that run Redis 4.0 or later.</para>
-        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -17473,19 +18921,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyAccountDescriptionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyAccountDescriptionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyAccountDescriptionResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of an account for an ApsaraDB for Redis instance.</para>
+        /// <para>Modifies the description of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
         /// <para>This operation is supported only for instances that run Redis 4.0 or later.</para>
-        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -17554,19 +19007,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyAccountDescriptionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyAccountDescriptionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyAccountDescriptionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of an account for an ApsaraDB for Redis instance.</para>
+        /// <para>Modifies the description of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
         /// <para>This operation is supported only for instances that run Redis 4.0 or later.</para>
-        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -17584,14 +19042,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of an account for an ApsaraDB for Redis instance.</para>
+        /// <para>Modifies the description of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
         /// <para>This operation is supported only for instances that run Redis 4.0 or later.</para>
-        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -17609,7 +19065,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the password of a specific account for an ApsaraDB for Redis instance.</para>
+        /// <para>Changes the password of a specific account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17682,12 +19138,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyAccountPasswordResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyAccountPasswordResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyAccountPasswordResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the password of a specific account for an ApsaraDB for Redis instance.</para>
+        /// <para>Changes the password of a specific account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17760,12 +19223,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyAccountPasswordResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the password of a specific account for an ApsaraDB for Redis instance.</para>
+        /// <para>Changes the password of a specific account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17783,7 +19253,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the password of a specific account for an ApsaraDB for Redis instance.</para>
+        /// <para>Changes the password of a specific account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17801,12 +19271,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the scheduled switchover time of an O\&amp;M task.</para>
+        /// <para>Changes the scheduled switchover time of an O&amp;M task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can receive notifications for ApsaraDB for Redis events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the ApsaraDB for Redis console. You can also change the scheduled switchover time of a task in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</para>
+        /// <para>You can receive notifications for Tair (Redis OSS-compatible) events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the console. You can also change the scheduled switchover time of a task by using the console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17867,17 +19337,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyActiveOperationTaskResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyActiveOperationTaskResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyActiveOperationTaskResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the scheduled switchover time of an O\&amp;M task.</para>
+        /// <para>Changes the scheduled switchover time of an O&amp;M task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can receive notifications for ApsaraDB for Redis events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the ApsaraDB for Redis console. You can also change the scheduled switchover time of a task in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</para>
+        /// <para>You can receive notifications for Tair (Redis OSS-compatible) events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the console. You can also change the scheduled switchover time of a task by using the console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17938,17 +19415,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyActiveOperationTaskResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyActiveOperationTaskResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyActiveOperationTaskResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the scheduled switchover time of an O\&amp;M task.</para>
+        /// <para>Changes the scheduled switchover time of an O&amp;M task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can receive notifications for ApsaraDB for Redis events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the ApsaraDB for Redis console. You can also change the scheduled switchover time of a task in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</para>
+        /// <para>You can receive notifications for Tair (Redis OSS-compatible) events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the console. You can also change the scheduled switchover time of a task by using the console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17966,12 +19450,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the scheduled switchover time of an O\&amp;M task.</para>
+        /// <para>Changes the scheduled switchover time of an O&amp;M task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can receive notifications for ApsaraDB for Redis events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the ApsaraDB for Redis console. You can also change the scheduled switchover time of a task in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</para>
+        /// <para>You can receive notifications for Tair (Redis OSS-compatible) events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the console. You can also change the scheduled switchover time of a task by using the console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18054,7 +19538,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -18124,7 +19615,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -18165,16 +19663,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the audit log settings of an ApsaraDB for Redis instance.</para>
+        /// <para>Enables the audit log feature or modifies the audit log settings for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the audit log feature.
-        /// Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:</para>
+        /// Before you call this operation, make sure that the Tair (Redis OSS-compatible) instance meets the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a>.</description></item>
-        /// <item><description>The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> operation to check whether the instance uses the latest major version and minor version.</description></item>
+        /// <item><description>The instance is a Tair (Redis OSS-compatible) Community Edition instance or Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a>.</description></item>
+        /// <item><description>The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> operation to check whether the instance uses the latest major version and minor version.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18240,21 +19738,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyAuditLogConfigResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyAuditLogConfigResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyAuditLogConfigResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the audit log settings of an ApsaraDB for Redis instance.</para>
+        /// <para>Enables the audit log feature or modifies the audit log settings for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the audit log feature.
-        /// Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:</para>
+        /// Before you call this operation, make sure that the Tair (Redis OSS-compatible) instance meets the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a>.</description></item>
-        /// <item><description>The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> operation to check whether the instance uses the latest major version and minor version.</description></item>
+        /// <item><description>The instance is a Tair (Redis OSS-compatible) Community Edition instance or Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a>.</description></item>
+        /// <item><description>The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> operation to check whether the instance uses the latest major version and minor version.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18320,21 +19825,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyAuditLogConfigResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyAuditLogConfigResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyAuditLogConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the audit log settings of an ApsaraDB for Redis instance.</para>
+        /// <para>Enables the audit log feature or modifies the audit log settings for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the audit log feature.
-        /// Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:</para>
+        /// Before you call this operation, make sure that the Tair (Redis OSS-compatible) instance meets the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a>.</description></item>
-        /// <item><description>The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> operation to check whether the instance uses the latest major version and minor version.</description></item>
+        /// <item><description>The instance is a Tair (Redis OSS-compatible) Community Edition instance or Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a>.</description></item>
+        /// <item><description>The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> operation to check whether the instance uses the latest major version and minor version.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18353,16 +19865,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the audit log settings of an ApsaraDB for Redis instance.</para>
+        /// <para>Enables the audit log feature or modifies the audit log settings for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of the audit log feature.
-        /// Before you call this operation, make sure that the ApsaraDB for Redis instance meets the following requirements:</para>
+        /// Before you call this operation, make sure that the Tair (Redis OSS-compatible) instance meets the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance is an ApsaraDB for Redis Community Edition instance or ApsaraDB for Redis Enhanced Edition (Tair) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a>.</description></item>
-        /// <item><description>The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> operation to check whether the instance uses the latest major version and minor version.</description></item>
+        /// <item><description>The instance is a Tair (Redis OSS-compatible) Community Edition instance or Tair <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a>.</description></item>
+        /// <item><description>The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> operation to check whether the instance uses the latest major version and minor version.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18454,7 +19966,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyBackupPolicyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyBackupPolicyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyBackupPolicyResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -18532,7 +20051,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyBackupPolicyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -18634,7 +20160,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDBInstanceAutoUpgradeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDBInstanceAutoUpgradeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDBInstanceAutoUpgradeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -18700,7 +20233,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDBInstanceAutoUpgradeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDBInstanceAutoUpgradeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDBInstanceAutoUpgradeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -18741,12 +20281,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the endpoint or port number of an ApsaraDB for Redis instance.</para>
+        /// <para>Changes the endpoint or port number of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/85683.html">Change the endpoint or port number of an instance</a>.</para>
+        /// <para>You can also modify the endpoint or port number of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/85683.html">Change the endpoint or port number of an instance</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18819,17 +20359,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the endpoint or port number of an ApsaraDB for Redis instance.</para>
+        /// <para>Changes the endpoint or port number of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/85683.html">Change the endpoint or port number of an instance</a>.</para>
+        /// <para>You can also modify the endpoint or port number of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/85683.html">Change the endpoint or port number of an instance</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18902,17 +20449,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyDBInstanceConnectionStringResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the endpoint or port number of an ApsaraDB for Redis instance.</para>
+        /// <para>Changes the endpoint or port number of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/85683.html">Change the endpoint or port number of an instance</a>.</para>
+        /// <para>You can also modify the endpoint or port number of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/85683.html">Change the endpoint or port number of an instance</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18930,12 +20484,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the endpoint or port number of an ApsaraDB for Redis instance.</para>
+        /// <para>Changes the endpoint or port number of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/85683.html">Change the endpoint or port number of an instance</a>.</para>
+        /// <para>You can also modify the endpoint or port number of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/85683.html">Change the endpoint or port number of an instance</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19026,7 +20580,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyGlobalSecurityIPGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyGlobalSecurityIPGroupResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -19104,7 +20665,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyGlobalSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyGlobalSecurityIPGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -19214,7 +20782,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyGlobalSecurityIPGroupNameResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyGlobalSecurityIPGroupNameResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyGlobalSecurityIPGroupNameResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -19288,7 +20863,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyGlobalSecurityIPGroupNameResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyGlobalSecurityIPGroupNameResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyGlobalSecurityIPGroupNameResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -19398,7 +20980,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyGlobalSecurityIPGroupRelationResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyGlobalSecurityIPGroupRelationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyGlobalSecurityIPGroupRelationResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -19472,7 +21061,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyGlobalSecurityIPGroupRelationResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyGlobalSecurityIPGroupRelationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyGlobalSecurityIPGroupRelationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -19513,12 +21109,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the information of an ApsaraDB for Redis instance, such as the name and password.</para>
+        /// <para>Modifies the specific information of a Tair (Redis OSS-compatible) instance, such as the password and the name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the information of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/43874.html">Change or reset the password</a>.</para>
+        /// <para>You can also modify the information of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43874.html">Change or reset the password</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19587,17 +21183,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceAttributeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceAttributeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceAttributeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the information of an ApsaraDB for Redis instance, such as the name and password.</para>
+        /// <para>Modifies the specific information of a Tair (Redis OSS-compatible) instance, such as the password and the name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the information of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/43874.html">Change or reset the password</a>.</para>
+        /// <para>You can also modify the information of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43874.html">Change or reset the password</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19666,17 +21269,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceAttributeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the information of an ApsaraDB for Redis instance, such as the name and password.</para>
+        /// <para>Modifies the specific information of a Tair (Redis OSS-compatible) instance, such as the password and the name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the information of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/43874.html">Change or reset the password</a>.</para>
+        /// <para>You can also modify the information of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43874.html">Change or reset the password</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19694,12 +21304,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the information of an ApsaraDB for Redis instance, such as the name and password.</para>
+        /// <para>Modifies the specific information of a Tair (Redis OSS-compatible) instance, such as the password and the name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the information of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/43874.html">Change or reset the password</a>.</para>
+        /// <para>You can also modify the information of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43874.html">Change or reset the password</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19761,6 +21371,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
+            {
+                query["Product"] = request.Product;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -19789,7 +21403,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceAutoRenewalAttributeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceAutoRenewalAttributeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceAutoRenewalAttributeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -19838,6 +21459,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
+            {
+                query["Product"] = request.Product;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -19866,7 +21491,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceAutoRenewalAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceAutoRenewalAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceAutoRenewalAttributeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -19921,8 +21553,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the bandwidth of an instance.</para>
+        /// <para>Sets the intended bandwidth value of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you understand the billing methods and pricing of instance bandwidth. Tair (Redis OSS-compatible) charges fees per hour based on the amount and usage duration of the extra bandwidth that you purchase. The fees vary based on the region that you select. For more information, see <a href="https://help.aliyun.com/document_detail/54532.html">Billable items</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>The bandwidth of an instance or a shard can be increased by up to six times the default bandwidth of the instance, but the increase in bandwidth cannot exceed 192 Mbit/s. For example, if the default bandwidth of a Tair DRAM-based master-replica instance equipped with 2 GB of memory is 96 Mbit/s, you can increase the bandwidth of the instance by up to 192 Mbit/s. As a result, the maximum bandwidth of the instance is 288 Mbit/s. If the default bandwidth of a Redis Open-Source Edition master-replica instance equipped with 256 MB of memory is 10 Mbit/s, you can increase the bandwidth of the instance by up to 60 Mbit/s. As a result, the maximum bandwidth of the instance is 70 Mbit/s.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceBandwidthRequest
@@ -19982,13 +21622,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceBandwidthResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceBandwidthResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceBandwidthResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the bandwidth of an instance.</para>
+        /// <para>Sets the intended bandwidth value of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you understand the billing methods and pricing of instance bandwidth. Tair (Redis OSS-compatible) charges fees per hour based on the amount and usage duration of the extra bandwidth that you purchase. The fees vary based on the region that you select. For more information, see <a href="https://help.aliyun.com/document_detail/54532.html">Billable items</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>The bandwidth of an instance or a shard can be increased by up to six times the default bandwidth of the instance, but the increase in bandwidth cannot exceed 192 Mbit/s. For example, if the default bandwidth of a Tair DRAM-based master-replica instance equipped with 2 GB of memory is 96 Mbit/s, you can increase the bandwidth of the instance by up to 192 Mbit/s. As a result, the maximum bandwidth of the instance is 288 Mbit/s. If the default bandwidth of a Redis Open-Source Edition master-replica instance equipped with 256 MB of memory is 10 Mbit/s, you can increase the bandwidth of the instance by up to 60 Mbit/s. As a result, the maximum bandwidth of the instance is 70 Mbit/s.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceBandwidthRequest
@@ -20048,13 +21703,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceBandwidthResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceBandwidthResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceBandwidthResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the bandwidth of an instance.</para>
+        /// <para>Sets the intended bandwidth value of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you understand the billing methods and pricing of instance bandwidth. Tair (Redis OSS-compatible) charges fees per hour based on the amount and usage duration of the extra bandwidth that you purchase. The fees vary based on the region that you select. For more information, see <a href="https://help.aliyun.com/document_detail/54532.html">Billable items</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>The bandwidth of an instance or a shard can be increased by up to six times the default bandwidth of the instance, but the increase in bandwidth cannot exceed 192 Mbit/s. For example, if the default bandwidth of a Tair DRAM-based master-replica instance equipped with 2 GB of memory is 96 Mbit/s, you can increase the bandwidth of the instance by up to 192 Mbit/s. As a result, the maximum bandwidth of the instance is 288 Mbit/s. If the default bandwidth of a Redis Open-Source Edition master-replica instance equipped with 256 MB of memory is 10 Mbit/s, you can increase the bandwidth of the instance by up to 60 Mbit/s. As a result, the maximum bandwidth of the instance is 70 Mbit/s.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceBandwidthRequest
@@ -20071,8 +21741,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the bandwidth of an instance.</para>
+        /// <para>Sets the intended bandwidth value of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, make sure that you understand the billing methods and pricing of instance bandwidth. Tair (Redis OSS-compatible) charges fees per hour based on the amount and usage duration of the extra bandwidth that you purchase. The fees vary based on the region that you select. For more information, see <a href="https://help.aliyun.com/document_detail/54532.html">Billable items</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>The bandwidth of an instance or a shard can be increased by up to six times the default bandwidth of the instance, but the increase in bandwidth cannot exceed 192 Mbit/s. For example, if the default bandwidth of a Tair DRAM-based master-replica instance equipped with 2 GB of memory is 96 Mbit/s, you can increase the bandwidth of the instance by up to 192 Mbit/s. As a result, the maximum bandwidth of the instance is 288 Mbit/s. If the default bandwidth of a Redis Open-Source Edition master-replica instance equipped with 256 MB of memory is 10 Mbit/s, you can increase the bandwidth of the instance by up to 60 Mbit/s. As a result, the maximum bandwidth of the instance is 70 Mbit/s.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceBandwidthRequest
@@ -20174,7 +21852,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceConfigResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceConfigResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceConfigResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -20264,7 +21949,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceConfigResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -20305,12 +21997,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the maintenance window of an ApsaraDB for Redis instance. Alibaba Cloud maintains ApsaraDB for Redis instances during the specified maintenance window.</para>
+        /// <para>Modifies the maintenance window of an Tair (Redis OSS-compatible) instance. Alibaba Cloud maintains Tair (Redis OSS-compatible) instances during the specified maintenance window.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</para>
+        /// <para>You can also modify the maintenance window of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20375,17 +22067,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceMaintainTimeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceMaintainTimeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceMaintainTimeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the maintenance window of an ApsaraDB for Redis instance. Alibaba Cloud maintains ApsaraDB for Redis instances during the specified maintenance window.</para>
+        /// <para>Modifies the maintenance window of an Tair (Redis OSS-compatible) instance. Alibaba Cloud maintains Tair (Redis OSS-compatible) instances during the specified maintenance window.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</para>
+        /// <para>You can also modify the maintenance window of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20450,17 +22149,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceMaintainTimeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceMaintainTimeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceMaintainTimeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the maintenance window of an ApsaraDB for Redis instance. Alibaba Cloud maintains ApsaraDB for Redis instances during the specified maintenance window.</para>
+        /// <para>Modifies the maintenance window of an Tair (Redis OSS-compatible) instance. Alibaba Cloud maintains Tair (Redis OSS-compatible) instances during the specified maintenance window.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</para>
+        /// <para>You can also modify the maintenance window of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20478,12 +22184,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the maintenance window of an ApsaraDB for Redis instance. Alibaba Cloud maintains ApsaraDB for Redis instances during the specified maintenance window.</para>
+        /// <para>Modifies the maintenance window of an Tair (Redis OSS-compatible) instance. Alibaba Cloud maintains Tair (Redis OSS-compatible) instances during the specified maintenance window.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the maintenance window of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</para>
+        /// <para>You can also modify the maintenance window of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20501,12 +22207,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the major version of an ApsaraDB for Redis instance.</para>
+        /// <para>Upgrades the major version of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to perform the corresponding operation in the console, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</para>
+        /// <para>For more information about the precautions and impacts of the upgrade, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20571,17 +22277,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceMajorVersionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceMajorVersionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceMajorVersionResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the major version of an ApsaraDB for Redis instance.</para>
+        /// <para>Upgrades the major version of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to perform the corresponding operation in the console, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</para>
+        /// <para>For more information about the precautions and impacts of the upgrade, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20646,17 +22359,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceMajorVersionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceMajorVersionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceMajorVersionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the major version of an ApsaraDB for Redis instance.</para>
+        /// <para>Upgrades the major version of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to perform the corresponding operation in the console, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</para>
+        /// <para>For more information about the precautions and impacts of the upgrade, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20674,12 +22394,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the major version of an ApsaraDB for Redis instance.</para>
+        /// <para>Upgrades the major version of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to perform the corresponding operation in the console, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</para>
+        /// <para>For more information about the precautions and impacts of the upgrade, see <a href="https://help.aliyun.com/document_detail/101764.html">Upgrade the major version</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20697,16 +22417,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the minor version of an ApsaraDB for Redis instance.</para>
+        /// <para>Updates the minor version of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Upgrade the minor version</a>.</para>
+        /// <para>The procedure to update the minor version of an instance varies based on types of Tair (Redis OSS-compatible) instances. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Upgrade the minor version</a>.</para>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> operation to query the minor version of the current instance.</description></item>
+        /// <item><description>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> operation to query the minor version of the current instance.</description></item>
         /// <item><description>When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.</description></item>
         /// </list>
         /// </description>
@@ -20773,21 +22493,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceMinorVersionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceMinorVersionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceMinorVersionResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the minor version of an ApsaraDB for Redis instance.</para>
+        /// <para>Updates the minor version of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Upgrade the minor version</a>.</para>
+        /// <para>The procedure to update the minor version of an instance varies based on types of Tair (Redis OSS-compatible) instances. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Upgrade the minor version</a>.</para>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> operation to query the minor version of the current instance.</description></item>
+        /// <item><description>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> operation to query the minor version of the current instance.</description></item>
         /// <item><description>When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.</description></item>
         /// </list>
         /// </description>
@@ -20854,21 +22581,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceMinorVersionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceMinorVersionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceMinorVersionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the minor version of an ApsaraDB for Redis instance.</para>
+        /// <para>Updates the minor version of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Upgrade the minor version</a>.</para>
+        /// <para>The procedure to update the minor version of an instance varies based on types of Tair (Redis OSS-compatible) instances. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Upgrade the minor version</a>.</para>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> operation to query the minor version of the current instance.</description></item>
+        /// <item><description>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> operation to query the minor version of the current instance.</description></item>
         /// <item><description>When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.</description></item>
         /// </list>
         /// </description>
@@ -20888,16 +22622,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the minor version of an ApsaraDB for Redis instance.</para>
+        /// <para>Updates the minor version of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The procedure to update the minor version of an instance varies based on types of ApsaraDB for Redis instances. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Upgrade the minor version</a>.</para>
+        /// <para>The procedure to update the minor version of an instance varies based on types of Tair (Redis OSS-compatible) instances. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Upgrade the minor version</a>.</para>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> operation to query the minor version of the current instance.</description></item>
+        /// <item><description>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> operation to query the minor version of the current instance.</description></item>
         /// <item><description>When you switch your workloads over from the original instance to a new instance or from the master node to the replica node in the original instance, you may experience disconnections that last a few seconds. The original instance stays in the read-only state within 60 seconds until all data is synchronized. We recommend that you upgrade the original instance during off-peak hours and make sure that your application is configured to automatically reconnect to the original instance.</description></item>
         /// </list>
         /// </description>
@@ -20917,14 +22651,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extends the retention period of the classic network endpoint of an ApsaraDB for Redis instance. You can call this operation after you change the network type of the ApsaraDB for Redis instance from classic network to Virtual Private Cloud (VPC) with the classic network endpoint retained.</para>
+        /// <para>Extends the retention period of the classic network endpoint of a Tair (Redis OSS-compatible) instance. You can call this operation after you change the network type of the Tair (Redis OSS-compatible) instance from classic network to Virtual Private Cloud (VPC) with the classic network endpoint retained.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also perform this operation in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/60062.html">Change the expiration time for the endpoint of the classic network</a>.</para>
+        /// <para>You can also perform this operation in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/60062.html">Change the expiration time for the endpoint of the classic network</a>.</para>
         /// <remarks>
-        /// <para>For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see <a href="https://help.aliyun.com/document_detail/61005.html">SwitchNetwork</a>.</para>
+        /// <para>For more information about how to switch the network type of a Tair (Redis OSS-compatible) instance from classic network to VPC, see <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20990,19 +22724,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceNetExpireTimeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceNetExpireTimeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceNetExpireTimeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extends the retention period of the classic network endpoint of an ApsaraDB for Redis instance. You can call this operation after you change the network type of the ApsaraDB for Redis instance from classic network to Virtual Private Cloud (VPC) with the classic network endpoint retained.</para>
+        /// <para>Extends the retention period of the classic network endpoint of a Tair (Redis OSS-compatible) instance. You can call this operation after you change the network type of the Tair (Redis OSS-compatible) instance from classic network to Virtual Private Cloud (VPC) with the classic network endpoint retained.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also perform this operation in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/60062.html">Change the expiration time for the endpoint of the classic network</a>.</para>
+        /// <para>You can also perform this operation in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/60062.html">Change the expiration time for the endpoint of the classic network</a>.</para>
         /// <remarks>
-        /// <para>For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see <a href="https://help.aliyun.com/document_detail/61005.html">SwitchNetwork</a>.</para>
+        /// <para>For more information about how to switch the network type of a Tair (Redis OSS-compatible) instance from classic network to VPC, see <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -21068,19 +22809,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceNetExpireTimeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceNetExpireTimeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceNetExpireTimeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extends the retention period of the classic network endpoint of an ApsaraDB for Redis instance. You can call this operation after you change the network type of the ApsaraDB for Redis instance from classic network to Virtual Private Cloud (VPC) with the classic network endpoint retained.</para>
+        /// <para>Extends the retention period of the classic network endpoint of a Tair (Redis OSS-compatible) instance. You can call this operation after you change the network type of the Tair (Redis OSS-compatible) instance from classic network to Virtual Private Cloud (VPC) with the classic network endpoint retained.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also perform this operation in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/60062.html">Change the expiration time for the endpoint of the classic network</a>.</para>
+        /// <para>You can also perform this operation in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/60062.html">Change the expiration time for the endpoint of the classic network</a>.</para>
         /// <remarks>
-        /// <para>For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see <a href="https://help.aliyun.com/document_detail/61005.html">SwitchNetwork</a>.</para>
+        /// <para>For more information about how to switch the network type of a Tair (Redis OSS-compatible) instance from classic network to VPC, see <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -21099,14 +22847,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extends the retention period of the classic network endpoint of an ApsaraDB for Redis instance. You can call this operation after you change the network type of the ApsaraDB for Redis instance from classic network to Virtual Private Cloud (VPC) with the classic network endpoint retained.</para>
+        /// <para>Extends the retention period of the classic network endpoint of a Tair (Redis OSS-compatible) instance. You can call this operation after you change the network type of the Tair (Redis OSS-compatible) instance from classic network to Virtual Private Cloud (VPC) with the classic network endpoint retained.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also perform this operation in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/60062.html">Change the expiration time for the endpoint of the classic network</a>.</para>
+        /// <para>You can also perform this operation in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/60062.html">Change the expiration time for the endpoint of the classic network</a>.</para>
         /// <remarks>
-        /// <para>For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see <a href="https://help.aliyun.com/document_detail/61005.html">SwitchNetwork</a>.</para>
+        /// <para>For more information about how to switch the network type of a Tair (Redis OSS-compatible) instance from classic network to VPC, see <a href="https://help.aliyun.com/document_detail/473797.html">SwitchNetwork</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -21194,7 +22942,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceParameterResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceParameterResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceParameterResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -21268,7 +23023,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceParameterResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceParameterResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceParameterResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -21309,14 +23071,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SSL settings of an ApsaraDB for Redis instance.</para>
+        /// <para>Enables Transport Layer Security (TLS) for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.</para>
+        /// <para>You can also configure SSL encryption in the console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.</para>
         /// <remarks>
-        /// <para> To specify the earliest supported SSL version, you can call the <a href="~~ModifyInstanceConfig~~">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
+        /// <para> To specify the earliest supported SSL version, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -21378,19 +23140,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceSSLResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceSSLResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceSSLResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SSL settings of an ApsaraDB for Redis instance.</para>
+        /// <para>Enables Transport Layer Security (TLS) for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.</para>
+        /// <para>You can also configure SSL encryption in the console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.</para>
         /// <remarks>
-        /// <para> To specify the earliest supported SSL version, you can call the <a href="~~ModifyInstanceConfig~~">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
+        /// <para> To specify the earliest supported SSL version, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -21452,19 +23221,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceSSLResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SSL settings of an ApsaraDB for Redis instance.</para>
+        /// <para>Enables Transport Layer Security (TLS) for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.</para>
+        /// <para>You can also configure SSL encryption in the console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.</para>
         /// <remarks>
-        /// <para> To specify the earliest supported SSL version, you can call the <a href="~~ModifyInstanceConfig~~">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
+        /// <para> To specify the earliest supported SSL version, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -21483,14 +23259,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SSL settings of an ApsaraDB for Redis instance.</para>
+        /// <para>Enables Transport Layer Security (TLS) for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.</para>
+        /// <para>You can also configure SSL encryption in the console. For more information, see <a href="https://help.aliyun.com/document_detail/84898.html">Configure SSL encryption</a>.</para>
         /// <remarks>
-        /// <para> To specify the earliest supported SSL version, you can call the <a href="~~ModifyInstanceConfig~~">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
+        /// <para> To specify the earliest supported SSL version, you can call the <a href="https://help.aliyun.com/document_detail/473844.html">ModifyInstanceConfig</a> operation to modify the required parameter.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -21509,7 +23285,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the specifications of an ApsaraDB for Redis instance.</para>
+        /// <para>Changes the configurations of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21653,12 +23429,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceSpecResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceSpecResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceSpecResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the specifications of an ApsaraDB for Redis instance.</para>
+        /// <para>Changes the configurations of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21802,12 +23585,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceSpecResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceSpecResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceSpecResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the specifications of an ApsaraDB for Redis instance.</para>
+        /// <para>Changes the configurations of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21832,7 +23622,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the specifications of an ApsaraDB for Redis instance.</para>
+        /// <para>Changes the configurations of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21857,7 +23647,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables transparent data encryption (TDE) for an ApsaraDB for Redis instance. You can use existing custom keys.</para>
+        /// <para>Enables transparent data encryption (TDE) for a Tair (Redis OSS-compatible) instance. You can use existing custom keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21937,12 +23727,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceTDEResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceTDEResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceTDEResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables transparent data encryption (TDE) for an ApsaraDB for Redis instance. You can use existing custom keys.</para>
+        /// <para>Enables transparent data encryption (TDE) for a Tair (Redis OSS-compatible) instance. You can use existing custom keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22022,12 +23819,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceTDEResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceTDEResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceTDEResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables transparent data encryption (TDE) for an ApsaraDB for Redis instance. You can use existing custom keys.</para>
+        /// <para>Enables transparent data encryption (TDE) for a Tair (Redis OSS-compatible) instance. You can use existing custom keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22052,7 +23856,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables transparent data encryption (TDE) for an ApsaraDB for Redis instance. You can use existing custom keys.</para>
+        /// <para>Enables transparent data encryption (TDE) for a Tair (Redis OSS-compatible) instance. You can use existing custom keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22146,7 +23950,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceVpcAuthModeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceVpcAuthModeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceVpcAuthModeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -22220,7 +24031,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyInstanceVpcAuthModeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyInstanceVpcAuthModeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyInstanceVpcAuthModeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -22277,7 +24095,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Temporarily adjusts the internal bandwidth of an ApsaraDB for Redis instance that is deployed in a dedicated cluster.</para>
+        /// <para>Temporarily adjusts the internal bandwidth of a Tair (Redis OSS-compatible) instance that is deployed in a dedicated cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22285,7 +24103,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation.</description></item>
+        /// <item><description>This operation is applicable only to an instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard instance, call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22351,12 +24169,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyIntranetAttributeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyIntranetAttributeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyIntranetAttributeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Temporarily adjusts the internal bandwidth of an ApsaraDB for Redis instance that is deployed in a dedicated cluster.</para>
+        /// <para>Temporarily adjusts the internal bandwidth of a Tair (Redis OSS-compatible) instance that is deployed in a dedicated cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22364,7 +24189,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation.</description></item>
+        /// <item><description>This operation is applicable only to an instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard instance, call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22430,12 +24255,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyIntranetAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyIntranetAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyIntranetAttributeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Temporarily adjusts the internal bandwidth of an ApsaraDB for Redis instance that is deployed in a dedicated cluster.</para>
+        /// <para>Temporarily adjusts the internal bandwidth of a Tair (Redis OSS-compatible) instance that is deployed in a dedicated cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22443,7 +24275,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation.</description></item>
+        /// <item><description>This operation is applicable only to an instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard instance, call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22462,7 +24294,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Temporarily adjusts the internal bandwidth of an ApsaraDB for Redis instance that is deployed in a dedicated cluster.</para>
+        /// <para>Temporarily adjusts the internal bandwidth of a Tair (Redis OSS-compatible) instance that is deployed in a dedicated cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22470,7 +24302,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation.</description></item>
+        /// <item><description>This operation is applicable only to an instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard instance, call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22566,7 +24398,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyParameterGroupResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyParameterGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyParameterGroupResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -22648,7 +24487,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyParameterGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyParameterGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -22689,14 +24535,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which an ApsaraDB for Redis instance belongs.</para>
+        /// <para>Changes the resource group to which a Tair (Redis OSS-compatible) instance belongs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
+        /// <para>You can also perform this operation in the <a href="https://resourcemanager.console.aliyun.com/resource-center">Resource Management</a> console. For more information, see <a href="https://help.aliyun.com/document_detail/94487.html">Transfer resources across resource groups</a>.</para>
         /// <remarks>
-        /// <para>For more information about resource group API operations, see <a href="https://help.aliyun.com/document_detail/160024.html">Resource Management API overview</a>.</para>
+        /// <para> Resource Group allows you to sort resources owned by your Alibaba Cloud account into groups. This simplifies the resource and permission management within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
         /// </remarks>
         /// </description>
         /// 
@@ -22762,19 +24608,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyResourceGroupResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyResourceGroupResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyResourceGroupResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which an ApsaraDB for Redis instance belongs.</para>
+        /// <para>Changes the resource group to which a Tair (Redis OSS-compatible) instance belongs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
+        /// <para>You can also perform this operation in the <a href="https://resourcemanager.console.aliyun.com/resource-center">Resource Management</a> console. For more information, see <a href="https://help.aliyun.com/document_detail/94487.html">Transfer resources across resource groups</a>.</para>
         /// <remarks>
-        /// <para>For more information about resource group API operations, see <a href="https://help.aliyun.com/document_detail/160024.html">Resource Management API overview</a>.</para>
+        /// <para> Resource Group allows you to sort resources owned by your Alibaba Cloud account into groups. This simplifies the resource and permission management within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
         /// </remarks>
         /// </description>
         /// 
@@ -22840,19 +24693,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyResourceGroupResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which an ApsaraDB for Redis instance belongs.</para>
+        /// <para>Changes the resource group to which a Tair (Redis OSS-compatible) instance belongs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
+        /// <para>You can also perform this operation in the <a href="https://resourcemanager.console.aliyun.com/resource-center">Resource Management</a> console. For more information, see <a href="https://help.aliyun.com/document_detail/94487.html">Transfer resources across resource groups</a>.</para>
         /// <remarks>
-        /// <para>For more information about resource group API operations, see <a href="https://help.aliyun.com/document_detail/160024.html">Resource Management API overview</a>.</para>
+        /// <para> Resource Group allows you to sort resources owned by your Alibaba Cloud account into groups. This simplifies the resource and permission management within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
         /// </remarks>
         /// </description>
         /// 
@@ -22871,14 +24731,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which an ApsaraDB for Redis instance belongs.</para>
+        /// <para>Changes the resource group to which a Tair (Redis OSS-compatible) instance belongs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
+        /// <para>You can also perform this operation in the <a href="https://resourcemanager.console.aliyun.com/resource-center">Resource Management</a> console. For more information, see <a href="https://help.aliyun.com/document_detail/94487.html">Transfer resources across resource groups</a>.</para>
         /// <remarks>
-        /// <para>For more information about resource group API operations, see <a href="https://help.aliyun.com/document_detail/160024.html">Resource Management API overview</a>.</para>
+        /// <para> Resource Group allows you to sort resources owned by your Alibaba Cloud account into groups. This simplifies the resource and permission management within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
         /// </remarks>
         /// </description>
         /// 
@@ -22965,7 +24825,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifySecurityGroupConfigurationResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifySecurityGroupConfigurationResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifySecurityGroupConfigurationResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -23038,7 +24905,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifySecurityGroupConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifySecurityGroupConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifySecurityGroupConfigurationResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -23093,12 +24967,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelists of an ApsaraDB for Redis instance.</para>
+        /// <para>Modifies the IP address whitelists of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the whitelists of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure a whitelist for an instance</a>.</para>
+        /// <para>You can also modify the whitelists of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure a whitelist for an instance</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23171,17 +25045,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifySecurityIpsResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifySecurityIpsResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifySecurityIpsResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelists of an ApsaraDB for Redis instance.</para>
+        /// <para>Modifies the IP address whitelists of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the whitelists of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure a whitelist for an instance</a>.</para>
+        /// <para>You can also modify the whitelists of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure a whitelist for an instance</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23254,17 +25135,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifySecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifySecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifySecurityIpsResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelists of an ApsaraDB for Redis instance.</para>
+        /// <para>Modifies the IP address whitelists of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the whitelists of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure a whitelist for an instance</a>.</para>
+        /// <para>You can also modify the whitelists of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure a whitelist for an instance</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23282,12 +25170,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelists of an ApsaraDB for Redis instance.</para>
+        /// <para>Modifies the IP address whitelists of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also modify the whitelists of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure a whitelist for an instance</a>.</para>
+        /// <para>You can also modify the whitelists of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/56464.html">Configure a whitelist for an instance</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23370,7 +25258,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyTairKVCacheCustomInstanceAttributeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyTairKVCacheCustomInstanceAttributeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyTairKVCacheCustomInstanceAttributeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -23440,7 +25335,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyTairKVCacheCustomInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyTairKVCacheCustomInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyTairKVCacheCustomInstanceAttributeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -23481,7 +25383,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务中心修改任务信息</para>
+        /// <para>Modifies the task information, such as the task execution time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23546,12 +25448,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyTaskInfoResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyTaskInfoResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyTaskInfoResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务中心修改任务信息</para>
+        /// <para>Modifies the task information, such as the task execution time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23616,12 +25525,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ModifyTaskInfoResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ModifyTaskInfoResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ModifyTaskInfoResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务中心修改任务信息</para>
+        /// <para>Modifies the task information, such as the task execution time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23639,7 +25555,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务中心修改任务信息</para>
+        /// <para>Modifies the task information, such as the task execution time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23719,7 +25635,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ReleaseDirectConnectionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ReleaseDirectConnectionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ReleaseDirectConnectionResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -23786,7 +25709,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ReleaseDirectConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ReleaseDirectConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ReleaseDirectConnectionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -23837,12 +25767,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the public endpoint of an ApsaraDB for Redis instance.</para>
+        /// <para>Releases the public endpoint of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to perform the API operation in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/125424.html">Release public endpoints</a>.</para>
+        /// <para>You can also release the public endpoint for an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/125424.html">Release public endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23903,17 +25833,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the public endpoint of an ApsaraDB for Redis instance.</para>
+        /// <para>Releases the public endpoint of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to perform the API operation in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/125424.html">Release public endpoints</a>.</para>
+        /// <para>You can also release the public endpoint for an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/125424.html">Release public endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23974,17 +25911,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the public endpoint of an ApsaraDB for Redis instance.</para>
+        /// <para>Releases the public endpoint of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to perform the API operation in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/125424.html">Release public endpoints</a>.</para>
+        /// <para>You can also release the public endpoint for an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/125424.html">Release public endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24002,12 +25946,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the public endpoint of an ApsaraDB for Redis instance.</para>
+        /// <para>Releases the public endpoint of a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to perform the API operation in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/125424.html">Release public endpoints</a>.</para>
+        /// <para>You can also release the public endpoint for an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/125424.html">Release public endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24087,7 +26031,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RemoveSubInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RemoveSubInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RemoveSubInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -24154,7 +26105,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RemoveSubInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RemoveSubInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RemoveSubInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -24205,16 +26163,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews the purchased bandwidth for an ApsaraDB for Redis instance.</para>
+        /// <para>This operation is not recommended now. The billing method for bandwidth of a Tair (Redis OSS-compatible) instance is changed to pay-as-you-go.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.
-        /// You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an ApsaraDB for Redis instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.</para>
-        /// <remarks>
-        /// <para>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/128715.html">DescribeIntranetAttribute</a> operation, which returns the expiration time of the purchased bandwidth in the <b>BandwidthExpireTime</b> parameter.</para>
-        /// </remarks>
+        /// <para>You can adjust the bandwidth of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to purchase bandwidth for an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24287,21 +26241,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RenewAdditionalBandwidthResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RenewAdditionalBandwidthResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RenewAdditionalBandwidthResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews the purchased bandwidth for an ApsaraDB for Redis instance.</para>
+        /// <para>This operation is not recommended now. The billing method for bandwidth of a Tair (Redis OSS-compatible) instance is changed to pay-as-you-go.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.
-        /// You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an ApsaraDB for Redis instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.</para>
-        /// <remarks>
-        /// <para>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/128715.html">DescribeIntranetAttribute</a> operation, which returns the expiration time of the purchased bandwidth in the <b>BandwidthExpireTime</b> parameter.</para>
-        /// </remarks>
+        /// <para>You can adjust the bandwidth of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to purchase bandwidth for an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24374,21 +26331,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RenewAdditionalBandwidthResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RenewAdditionalBandwidthResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RenewAdditionalBandwidthResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews the purchased bandwidth for an ApsaraDB for Redis instance.</para>
+        /// <para>This operation is not recommended now. The billing method for bandwidth of a Tair (Redis OSS-compatible) instance is changed to pay-as-you-go.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.
-        /// You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an ApsaraDB for Redis instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.</para>
-        /// <remarks>
-        /// <para>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/128715.html">DescribeIntranetAttribute</a> operation, which returns the expiration time of the purchased bandwidth in the <b>BandwidthExpireTime</b> parameter.</para>
-        /// </remarks>
+        /// <para>You can adjust the bandwidth of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to purchase bandwidth for an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24406,16 +26366,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews the purchased bandwidth for an ApsaraDB for Redis instance.</para>
+        /// <para>This operation is not recommended now. The billing method for bandwidth of a Tair (Redis OSS-compatible) instance is changed to pay-as-you-go.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Redis.
-        /// You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an ApsaraDB for Redis instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.</para>
-        /// <remarks>
-        /// <para>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/128715.html">DescribeIntranetAttribute</a> operation, which returns the expiration time of the purchased bandwidth in the <b>BandwidthExpireTime</b> parameter.</para>
-        /// </remarks>
+        /// <para>You can adjust the bandwidth of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/102588.html">Adjust the bandwidth of an instance</a>. You can also call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to purchase bandwidth for an instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24531,7 +26487,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RenewInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RenewInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RenewInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -24634,7 +26597,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RenewInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -24685,13 +26655,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of an account for an ApsaraDB for Redis instance.</para>
+        /// <para>Resets the password of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.</para>
+        /// <para> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -24761,18 +26731,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetAccountPasswordResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ResetAccountPasswordResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ResetAccountPasswordResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of an account for an ApsaraDB for Redis instance.</para>
+        /// <para>Resets the password of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.</para>
+        /// <para> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -24842,18 +26819,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ResetAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ResetAccountPasswordResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of an account for an ApsaraDB for Redis instance.</para>
+        /// <para>Resets the password of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.</para>
+        /// <para> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -24872,13 +26856,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of an account for an ApsaraDB for Redis instance.</para>
+        /// <para>Resets the password of an account for a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.</para>
+        /// <para> Only Tair (Redis OSS-compatible) instances of Redis 4.0 or later are supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -24962,7 +26946,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetTairKVCacheCustomInstancePasswordResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ResetTairKVCacheCustomInstancePasswordResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ResetTairKVCacheCustomInstancePasswordResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -25032,7 +27023,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetTairKVCacheCustomInstancePasswordResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ResetTairKVCacheCustomInstancePasswordResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ResetTairKVCacheCustomInstancePasswordResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -25142,7 +27140,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResizeTairKVCacheCustomInstanceDiskResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ResizeTairKVCacheCustomInstanceDiskResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ResizeTairKVCacheCustomInstanceDiskResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -25216,7 +27221,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResizeTairKVCacheCustomInstanceDiskResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ResizeTairKVCacheCustomInstanceDiskResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ResizeTairKVCacheCustomInstanceDiskResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -25322,7 +27334,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RestartInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RestartInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RestartInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -25392,7 +27411,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RestartInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RestartInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RestartInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -25490,7 +27516,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RestartTairKVCacheCustomInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RestartTairKVCacheCustomInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RestartTairKVCacheCustomInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -25552,7 +27585,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RestartTairKVCacheCustomInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RestartTairKVCacheCustomInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RestartTairKVCacheCustomInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -25598,9 +27638,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If your instance is a <a href="https://help.aliyun.com/document_detail/443828.html">persistent memory-optimized instance</a> or <a href="https://help.aliyun.com/document_detail/443827.html">DRAM-based instance</a> that is compatible with Redis 5.0 and the <a href="https://help.aliyun.com/document_detail/443784.html">data flashback</a> feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.</para>
+        /// <para>  If your instance is a <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a> or a <a href="https://help.aliyun.com/document_detail/183956.html">persistent memory-optimized instance</a> and has the <a href="https://help.aliyun.com/document_detail/148479.html">data flashback</a> feature enabled, you can call this operation to restore the entire instance or specific keys to a specific point in time accurate to the second. This way, you can achieve more fine-grained data restoration.</para>
         /// <list type="bullet">
-        /// <item><description>For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the <a href="https://help.aliyun.com/document_detail/60873.html">CreateInstance</a> operation to create an instance. Then, you can restore data to the new instance.</description></item>
+        /// <item><description>For other types of instances, we recommend that you call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore the backup data to a new instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25678,7 +27718,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RestoreInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RestoreInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RestoreInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -25688,9 +27735,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If your instance is a <a href="https://help.aliyun.com/document_detail/443828.html">persistent memory-optimized instance</a> or <a href="https://help.aliyun.com/document_detail/443827.html">DRAM-based instance</a> that is compatible with Redis 5.0 and the <a href="https://help.aliyun.com/document_detail/443784.html">data flashback</a> feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.</para>
+        /// <para>  If your instance is a <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a> or a <a href="https://help.aliyun.com/document_detail/183956.html">persistent memory-optimized instance</a> and has the <a href="https://help.aliyun.com/document_detail/148479.html">data flashback</a> feature enabled, you can call this operation to restore the entire instance or specific keys to a specific point in time accurate to the second. This way, you can achieve more fine-grained data restoration.</para>
         /// <list type="bullet">
-        /// <item><description>For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the <a href="https://help.aliyun.com/document_detail/60873.html">CreateInstance</a> operation to create an instance. Then, you can restore data to the new instance.</description></item>
+        /// <item><description>For other types of instances, we recommend that you call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore the backup data to a new instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25768,7 +27815,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RestoreInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<RestoreInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<RestoreInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -25778,9 +27832,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If your instance is a <a href="https://help.aliyun.com/document_detail/443828.html">persistent memory-optimized instance</a> or <a href="https://help.aliyun.com/document_detail/443827.html">DRAM-based instance</a> that is compatible with Redis 5.0 and the <a href="https://help.aliyun.com/document_detail/443784.html">data flashback</a> feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.</para>
+        /// <para>  If your instance is a <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a> or a <a href="https://help.aliyun.com/document_detail/183956.html">persistent memory-optimized instance</a> and has the <a href="https://help.aliyun.com/document_detail/148479.html">data flashback</a> feature enabled, you can call this operation to restore the entire instance or specific keys to a specific point in time accurate to the second. This way, you can achieve more fine-grained data restoration.</para>
         /// <list type="bullet">
-        /// <item><description>For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the <a href="https://help.aliyun.com/document_detail/60873.html">CreateInstance</a> operation to create an instance. Then, you can restore data to the new instance.</description></item>
+        /// <item><description>For other types of instances, we recommend that you call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore the backup data to a new instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25804,9 +27858,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If your instance is a <a href="https://help.aliyun.com/document_detail/443828.html">persistent memory-optimized instance</a> or <a href="https://help.aliyun.com/document_detail/443827.html">DRAM-based instance</a> that is compatible with Redis 5.0 and the <a href="https://help.aliyun.com/document_detail/443784.html">data flashback</a> feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.</para>
+        /// <para>  If your instance is a <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based instance</a> or a <a href="https://help.aliyun.com/document_detail/183956.html">persistent memory-optimized instance</a> and has the <a href="https://help.aliyun.com/document_detail/148479.html">data flashback</a> feature enabled, you can call this operation to restore the entire instance or specific keys to a specific point in time accurate to the second. This way, you can achieve more fine-grained data restoration.</para>
         /// <list type="bullet">
-        /// <item><description>For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the <a href="https://help.aliyun.com/document_detail/60873.html">CreateInstance</a> operation to create an instance. Then, you can restore data to the new instance.</description></item>
+        /// <item><description>For other types of instances, we recommend that you call the <a href="https://help.aliyun.com/document_detail/473757.html">CreateInstance</a> or <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation to restore the backup data to a new instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25882,7 +27936,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartTairKVCacheCustomInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartTairKVCacheCustomInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartTairKVCacheCustomInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -25944,7 +28005,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartTairKVCacheCustomInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StartTairKVCacheCustomInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StartTairKVCacheCustomInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -26042,7 +28110,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopTairKVCacheCustomInstanceResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StopTairKVCacheCustomInstanceResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StopTairKVCacheCustomInstanceResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -26104,7 +28179,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopTairKVCacheCustomInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<StopTairKVCacheCustomInstanceResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<StopTairKVCacheCustomInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -26152,7 +28234,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <description>
         /// <remarks>
         /// <para>For more information about nearby access to applications that are deployed across zones, see <a href="https://help.aliyun.com/document_detail/164222.html">Switch node roles</a>.
-        /// The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses local disks.
+        /// The instance must be a Redis Open-Source Edition instance or Tair (Enterprise Edition) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses local disks.
         /// A call to this operation has the following impacts on your instance:</para>
         /// </remarks>
         /// <list type="bullet">
@@ -26227,7 +28309,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SwitchInstanceHAResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SwitchInstanceHAResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SwitchInstanceHAResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -26239,7 +28328,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <description>
         /// <remarks>
         /// <para>For more information about nearby access to applications that are deployed across zones, see <a href="https://help.aliyun.com/document_detail/164222.html">Switch node roles</a>.
-        /// The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses local disks.
+        /// The instance must be a Redis Open-Source Edition instance or Tair (Enterprise Edition) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses local disks.
         /// A call to this operation has the following impacts on your instance:</para>
         /// </remarks>
         /// <list type="bullet">
@@ -26314,7 +28403,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SwitchInstanceHAResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SwitchInstanceHAResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SwitchInstanceHAResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -26326,7 +28422,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <description>
         /// <remarks>
         /// <para>For more information about nearby access to applications that are deployed across zones, see <a href="https://help.aliyun.com/document_detail/164222.html">Switch node roles</a>.
-        /// The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses local disks.
+        /// The instance must be a Redis Open-Source Edition instance or Tair (Enterprise Edition) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses local disks.
         /// A call to this operation has the following impacts on your instance:</para>
         /// </remarks>
         /// <list type="bullet">
@@ -26357,7 +28453,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <description>
         /// <remarks>
         /// <para>For more information about nearby access to applications that are deployed across zones, see <a href="https://help.aliyun.com/document_detail/164222.html">Switch node roles</a>.
-        /// The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses local disks.
+        /// The instance must be a Redis Open-Source Edition instance or Tair (Enterprise Edition) <a href="https://help.aliyun.com/document_detail/126164.html">DRAM-based</a> instance that uses local disks.
         /// A call to this operation has the following impacts on your instance:</para>
         /// </remarks>
         /// <list type="bullet">
@@ -26381,16 +28477,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the proxy mode for an ApsaraDB for Redis cluster instance in a dedicated cluster.</para>
+        /// <para>Enables or disables the proxy mode for a Tair (Redis OSS-compatible) cluster instance in a dedicated cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about the proxy mode, see <a href="https://help.aliyun.com/document_detail/142959.html">Features of proxy nodes</a>. Before you call this operation, make sure that the following requirements are met:</para>
+        /// <para>For more information about the proxy mode, see <a href="https://help.aliyun.com/document_detail/142959.html">Features of proxy servers</a>. Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB MyBase?</a></description></item>
-        /// <item><description>The instance uses the cluster architecture. For more information about the cluster architecture, see <a href="https://help.aliyun.com/document_detail/52228.html">Cluster master-replica instances</a>.<remarks>
-        /// <para>Before you call the SwitchInstanceProxy operation, you must call the <a href="https://help.aliyun.com/document_detail/229522.html">DescribeDedicatedClusterInstanceList</a> operation and view the value of the <b>ProxyCount</b> response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.</para>
+        /// <item><description>The instance is created by using a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB for MyBase?</a></description></item>
+        /// <item><description>The instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.<remarks>
+        /// <para> Before you call the SwitchInstanceProxy operation, you must call the <a href="https://help.aliyun.com/document_detail/473867.html">DescribeDedicatedClusterInstanceList</a> operation and view the value of the <b>ProxyCount</b> response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -26450,21 +28546,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SwitchInstanceProxyResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SwitchInstanceProxyResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SwitchInstanceProxyResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the proxy mode for an ApsaraDB for Redis cluster instance in a dedicated cluster.</para>
+        /// <para>Enables or disables the proxy mode for a Tair (Redis OSS-compatible) cluster instance in a dedicated cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about the proxy mode, see <a href="https://help.aliyun.com/document_detail/142959.html">Features of proxy nodes</a>. Before you call this operation, make sure that the following requirements are met:</para>
+        /// <para>For more information about the proxy mode, see <a href="https://help.aliyun.com/document_detail/142959.html">Features of proxy servers</a>. Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB MyBase?</a></description></item>
-        /// <item><description>The instance uses the cluster architecture. For more information about the cluster architecture, see <a href="https://help.aliyun.com/document_detail/52228.html">Cluster master-replica instances</a>.<remarks>
-        /// <para>Before you call the SwitchInstanceProxy operation, you must call the <a href="https://help.aliyun.com/document_detail/229522.html">DescribeDedicatedClusterInstanceList</a> operation and view the value of the <b>ProxyCount</b> response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.</para>
+        /// <item><description>The instance is created by using a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB for MyBase?</a></description></item>
+        /// <item><description>The instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.<remarks>
+        /// <para> Before you call the SwitchInstanceProxy operation, you must call the <a href="https://help.aliyun.com/document_detail/473867.html">DescribeDedicatedClusterInstanceList</a> operation and view the value of the <b>ProxyCount</b> response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -26524,21 +28627,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SwitchInstanceProxyResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SwitchInstanceProxyResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SwitchInstanceProxyResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the proxy mode for an ApsaraDB for Redis cluster instance in a dedicated cluster.</para>
+        /// <para>Enables or disables the proxy mode for a Tair (Redis OSS-compatible) cluster instance in a dedicated cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about the proxy mode, see <a href="https://help.aliyun.com/document_detail/142959.html">Features of proxy nodes</a>. Before you call this operation, make sure that the following requirements are met:</para>
+        /// <para>For more information about the proxy mode, see <a href="https://help.aliyun.com/document_detail/142959.html">Features of proxy servers</a>. Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB MyBase?</a></description></item>
-        /// <item><description>The instance uses the cluster architecture. For more information about the cluster architecture, see <a href="https://help.aliyun.com/document_detail/52228.html">Cluster master-replica instances</a>.<remarks>
-        /// <para>Before you call the SwitchInstanceProxy operation, you must call the <a href="https://help.aliyun.com/document_detail/229522.html">DescribeDedicatedClusterInstanceList</a> operation and view the value of the <b>ProxyCount</b> response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.</para>
+        /// <item><description>The instance is created by using a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB for MyBase?</a></description></item>
+        /// <item><description>The instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.<remarks>
+        /// <para> Before you call the SwitchInstanceProxy operation, you must call the <a href="https://help.aliyun.com/document_detail/473867.html">DescribeDedicatedClusterInstanceList</a> operation and view the value of the <b>ProxyCount</b> response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -26559,16 +28669,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the proxy mode for an ApsaraDB for Redis cluster instance in a dedicated cluster.</para>
+        /// <para>Enables or disables the proxy mode for a Tair (Redis OSS-compatible) cluster instance in a dedicated cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about the proxy mode, see <a href="https://help.aliyun.com/document_detail/142959.html">Features of proxy nodes</a>. Before you call this operation, make sure that the following requirements are met:</para>
+        /// <para>For more information about the proxy mode, see <a href="https://help.aliyun.com/document_detail/142959.html">Features of proxy servers</a>. Before you call this operation, make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB MyBase?</a></description></item>
-        /// <item><description>The instance uses the cluster architecture. For more information about the cluster architecture, see <a href="https://help.aliyun.com/document_detail/52228.html">Cluster master-replica instances</a>.<remarks>
-        /// <para>Before you call the SwitchInstanceProxy operation, you must call the <a href="https://help.aliyun.com/document_detail/229522.html">DescribeDedicatedClusterInstanceList</a> operation and view the value of the <b>ProxyCount</b> response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.</para>
+        /// <item><description>The instance is created by using a dedicated cluster. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">What is ApsaraDB for MyBase?</a></description></item>
+        /// <item><description>The instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.<remarks>
+        /// <para> Before you call the SwitchInstanceProxy operation, you must call the <a href="https://help.aliyun.com/document_detail/473867.html">DescribeDedicatedClusterInstanceList</a> operation and view the value of the <b>ProxyCount</b> response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -26634,7 +28744,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SwitchInstanceZoneFailOverResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SwitchInstanceZoneFailOverResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SwitchInstanceZoneFailOverResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -26684,7 +28801,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SwitchInstanceZoneFailOverResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SwitchInstanceZoneFailOverResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SwitchInstanceZoneFailOverResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -26725,7 +28849,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the virtual private cloud (VPC) or vSwitch of an ApsaraDB for Redis instance. If the instance is deployed in the classic network, the network type of the instance is changed from the classic network to VPC.</para>
+        /// <para>Changes the VPC or vSwitch of a Tair (Redis OSS-compatible) instance. If the instance is deployed in the classic network, the network type of the instance is changed from the classic network to VPC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26802,12 +28926,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SwitchNetworkResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SwitchNetworkResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SwitchNetworkResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the virtual private cloud (VPC) or vSwitch of an ApsaraDB for Redis instance. If the instance is deployed in the classic network, the network type of the instance is changed from the classic network to VPC.</para>
+        /// <para>Changes the VPC or vSwitch of a Tair (Redis OSS-compatible) instance. If the instance is deployed in the classic network, the network type of the instance is changed from the classic network to VPC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26884,12 +29015,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SwitchNetworkResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SwitchNetworkResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SwitchNetworkResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the virtual private cloud (VPC) or vSwitch of an ApsaraDB for Redis instance. If the instance is deployed in the classic network, the network type of the instance is changed from the classic network to VPC.</para>
+        /// <para>Changes the VPC or vSwitch of a Tair (Redis OSS-compatible) instance. If the instance is deployed in the classic network, the network type of the instance is changed from the classic network to VPC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26907,7 +29045,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the virtual private cloud (VPC) or vSwitch of an ApsaraDB for Redis instance. If the instance is deployed in the classic network, the network type of the instance is changed from the classic network to VPC.</para>
+        /// <para>Changes the VPC or vSwitch of a Tair (Redis OSS-compatible) instance. If the instance is deployed in the classic network, the network type of the instance is changed from the classic network to VPC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26925,7 +29063,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables configuration changes for an ApsaraDB for Redis instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to the configuration change.</para>
+        /// <para>Disables configuration changes for a Tair (Redis OSS-compatible) instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to configuration changes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26994,12 +29132,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SyncDtsStatusResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SyncDtsStatusResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SyncDtsStatusResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables configuration changes for an ApsaraDB for Redis instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to the configuration change.</para>
+        /// <para>Disables configuration changes for a Tair (Redis OSS-compatible) instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to configuration changes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27068,12 +29213,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SyncDtsStatusResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<SyncDtsStatusResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<SyncDtsStatusResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables configuration changes for an ApsaraDB for Redis instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to the configuration change.</para>
+        /// <para>Disables configuration changes for a Tair (Redis OSS-compatible) instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to configuration changes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27091,7 +29243,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables configuration changes for an ApsaraDB for Redis instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to the configuration change.</para>
+        /// <para>Disables configuration changes for a Tair (Redis OSS-compatible) instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to configuration changes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27109,7 +29261,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds specified tags to one or more ApsaraDB for Redis instances.</para>
+        /// <para>Adds tags to Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27121,7 +29273,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
         /// <item><description>You can add up to 20 tags to each instance.</description></item>
         /// <item><description>You can add tags to up to 50 instances in each request.
-        /// You can also add tags to instances in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/118779.html">Create a tag</a>.</description></item>
+        /// You can also add tags to instances in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/118779.html">Create a tag</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27187,12 +29339,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds specified tags to one or more ApsaraDB for Redis instances.</para>
+        /// <para>Adds tags to Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27204,7 +29363,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
         /// <item><description>You can add up to 20 tags to each instance.</description></item>
         /// <item><description>You can add tags to up to 50 instances in each request.
-        /// You can also add tags to instances in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/118779.html">Create a tag</a>.</description></item>
+        /// You can also add tags to instances in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/118779.html">Create a tag</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27270,12 +29429,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds specified tags to one or more ApsaraDB for Redis instances.</para>
+        /// <para>Adds tags to Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27287,7 +29453,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
         /// <item><description>You can add up to 20 tags to each instance.</description></item>
         /// <item><description>You can add tags to up to 50 instances in each request.
-        /// You can also add tags to instances in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/118779.html">Create a tag</a>.</description></item>
+        /// You can also add tags to instances in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/118779.html">Create a tag</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27306,7 +29472,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds specified tags to one or more ApsaraDB for Redis instances.</para>
+        /// <para>Adds tags to Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27318,7 +29484,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <item><description>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</description></item>
         /// <item><description>You can add up to 20 tags to each instance.</description></item>
         /// <item><description>You can add tags to up to 50 instances in each request.
-        /// You can also add tags to instances in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/118779.html">Create a tag</a>.</description></item>
+        /// You can also add tags to instances in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/118779.html">Create a tag</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27337,7 +29503,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.</para>
+        /// <para>Changes the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27423,12 +29589,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TransformInstanceChargeTypeResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TransformInstanceChargeTypeResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TransformInstanceChargeTypeResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.</para>
+        /// <para>Changes the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27514,12 +29687,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TransformInstanceChargeTypeResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TransformInstanceChargeTypeResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TransformInstanceChargeTypeResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.</para>
+        /// <para>Changes the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27546,7 +29726,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.</para>
+        /// <para>Changes the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go or from pay-as-you-go to subscription.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27573,14 +29753,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of an ApsaraDB for Redis instance from pay-as-you-go to subscription.</para>
+        /// <para>Changes a pay-as-you-go Tair (Redis OSS-compatible) instance to a subscription instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to change the billing method in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/54542.html">Switch to subscription</a>.</para>
+        /// <para>For more information about how to change the billing method in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/54542.html">Switch to subscription</a>.</para>
         /// <remarks>
-        /// <para> You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.</para>
+        /// <para> You cannot change the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27654,19 +29834,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TransformToPrePaidResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TransformToPrePaidResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TransformToPrePaidResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of an ApsaraDB for Redis instance from pay-as-you-go to subscription.</para>
+        /// <para>Changes a pay-as-you-go Tair (Redis OSS-compatible) instance to a subscription instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to change the billing method in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/54542.html">Switch to subscription</a>.</para>
+        /// <para>For more information about how to change the billing method in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/54542.html">Switch to subscription</a>.</para>
         /// <remarks>
-        /// <para> You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.</para>
+        /// <para> You cannot change the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27740,19 +29927,26 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TransformToPrePaidResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<TransformToPrePaidResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<TransformToPrePaidResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of an ApsaraDB for Redis instance from pay-as-you-go to subscription.</para>
+        /// <para>Changes a pay-as-you-go Tair (Redis OSS-compatible) instance to a subscription instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to change the billing method in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/54542.html">Switch to subscription</a>.</para>
+        /// <para>For more information about how to change the billing method in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/54542.html">Switch to subscription</a>.</para>
         /// <remarks>
-        /// <para> You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.</para>
+        /// <para> You cannot change the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27771,14 +29965,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of an ApsaraDB for Redis instance from pay-as-you-go to subscription.</para>
+        /// <para>Changes a pay-as-you-go Tair (Redis OSS-compatible) instance to a subscription instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about how to change the billing method in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/54542.html">Switch to subscription</a>.</para>
+        /// <para>For more information about how to change the billing method in the Tair (Redis OSS-compatible) console, see <a href="https://help.aliyun.com/document_detail/54542.html">Switch to subscription</a>.</para>
         /// <remarks>
-        /// <para> You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.</para>
+        /// <para> You cannot change the billing method of a Tair (Redis OSS-compatible) instance from subscription to pay-as-you-go.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -27854,7 +30048,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UnlockDBInstanceWriteResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UnlockDBInstanceWriteResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UnlockDBInstanceWriteResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -27916,7 +30117,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UnlockDBInstanceWriteResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UnlockDBInstanceWriteResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UnlockDBInstanceWriteResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
@@ -27957,7 +30165,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from one or more ApsaraDB for Redis instances.</para>
+        /// <para>Removes tags from Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27965,7 +30173,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>  You can remove up to 20 tags at a time.</para>
         /// <list type="bullet">
         /// <item><description>If a tag is removed from an instance and is not added to other instances, the tag is deleted.
-        /// You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/119157.html">Remove a tag</a>.</description></item>
+        /// You can also remove tags from instances in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/119157.html">Remove a tag</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28035,12 +30243,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(Execute(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from one or more ApsaraDB for Redis instances.</para>
+        /// <para>Removes tags from Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28048,7 +30263,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>  You can remove up to 20 tags at a time.</para>
         /// <list type="bullet">
         /// <item><description>If a tag is removed from an instance and is not added to other instances, the tag is deleted.
-        /// You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/119157.html">Remove a tag</a>.</description></item>
+        /// You can also remove tags from instances in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/119157.html">Remove a tag</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28118,12 +30333,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<UntagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from one or more ApsaraDB for Redis instances.</para>
+        /// <para>Removes tags from Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28131,7 +30353,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>  You can remove up to 20 tags at a time.</para>
         /// <list type="bullet">
         /// <item><description>If a tag is removed from an instance and is not added to other instances, the tag is deleted.
-        /// You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/119157.html">Remove a tag</a>.</description></item>
+        /// You can also remove tags from instances in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/119157.html">Remove a tag</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28150,7 +30372,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from one or more ApsaraDB for Redis instances.</para>
+        /// <para>Removes tags from Tair (Redis OSS-compatible) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -28158,7 +30380,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <para>  You can remove up to 20 tags at a time.</para>
         /// <list type="bullet">
         /// <item><description>If a tag is removed from an instance and is not added to other instances, the tag is deleted.
-        /// You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/119157.html">Remove a tag</a>.</description></item>
+        /// You can also remove tags from instances in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/119157.html">Remove a tag</a>.</description></item>
         /// </list>
         /// </description>
         /// 

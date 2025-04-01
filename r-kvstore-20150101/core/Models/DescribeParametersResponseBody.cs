@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeParametersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration parameters.</para>
+        /// <para>The configuration parameters that have not taken effect.</para>
         /// </summary>
         [NameInMap("ConfigParameters")]
         [Validation(Required=false)]

@@ -31,13 +31,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para><a href="https://help.aliyun.com/document_detail/165005.html">The release protection state of the instance.</a> Valid values:</para>
+        /// <para><a href="https://help.aliyun.com/document_detail/165005.html">Specifies whether to enable release protection for the instance.</a> Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enabled</description></item>
-        /// <item><description><b>false</b>: disabled</description></item>
+        /// <item><description><b>true</b>: enables release protection.</description></item>
+        /// <item><description><b>false</b>: disables release protection.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is available only for pay-as-you-go instances.</para>
+        /// <para> This parameter is available only for pay-as-you-go instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

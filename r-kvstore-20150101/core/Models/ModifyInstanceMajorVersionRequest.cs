@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceMajorVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The time when the major version is upgraded. Valid values:</para>
+        /// <para>The time when you want to upgrade the major version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: immediately upgrades the major version. This is the default value.</description></item>
-        /// <item><description><b>MaintainTime</b>: upgrades the major version in the maintenance window.</description></item>
+        /// <item><description><b>Immediately</b> (default): immediately upgrades the major version.</description></item>
+        /// <item><description><b>MaintainTime</b>: upgrades the major version within the maintenance window.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/61000.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an ApsaraDB for Redis instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The edition of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Community</b>: Community Edition</description></item>
-        /// <item><description><b>Enterprise</b>: Enhanced Edition (Tair)</description></item>
+        /// <item><description><b>Community</b>: Redis Open-Source Edition</description></item>
+        /// <item><description><b>Enterprise</b>: Tair (Enterprise Edition)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EditionType { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance.</para>
+        /// <para>The engine version of the instance. Valid values: <b>2.8</b>, <b>4.0</b>, <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1.0</description></item>
+        /// <item><description>2.8</description></item>
+        /// <item><description>4.0</description></item>
+        /// <item><description>5.0</description></item>
+        /// <item><description>6.0</description></item>
+        /// <item><description>7.0</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>4.0</para>
@@ -163,7 +172,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string PrivateIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instances you want to query reside. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region in which the instances you want to query reside. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -175,7 +184,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The ID of the resource group to which the instances you want to query belong.</para>
         /// <remarks>
-        /// <para>You can query resource group IDs by using the ApsaraDB for Redis console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>You can query resource group IDs by using the Tair (Redis OSS-compatible) console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

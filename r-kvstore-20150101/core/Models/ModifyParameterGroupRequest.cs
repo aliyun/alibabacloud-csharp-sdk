@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The service category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>standard</b>: Community Edition</description></item>
-        /// <item><description><b>enterprise</b>: Enhanced Edition (Tair)</description></item>
+        /// <item><description><b>standard</b>: Redis Open-Source Edition</description></item>
+        /// <item><description><b>enterprise</b>: Tair (Enterprise Edition)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -82,6 +82,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string Parameters { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-zhangjiakou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

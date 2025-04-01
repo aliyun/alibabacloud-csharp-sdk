@@ -62,11 +62,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The ID of the node in the instance. You can set this parameter to query the operational logs of a specified node.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter is available only for read/write splitting and cluster instances of ApsaraDB for Redis.</description></item>
-        /// <item><description>If you set this parameter, you must also set the <b>CharacterType</b> parameter.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is available only for read/write splitting and cluster instances.</para>
+        /// </description></item>
+        /// <item><description><para>If you set this parameter, you must also set the <b>CharacterType</b> parameter.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****-db-0</para>

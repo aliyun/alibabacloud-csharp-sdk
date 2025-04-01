@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeActiveOperationTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of O\&amp;M tasks.</para>
+        /// <para>The list of O\&amp;M tasks.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <list type="bullet">
             /// <item><description><b>2</b>: The task is waiting for users to specify a switchover time.</description></item>
             /// <item><description><b>3</b>: The task is waiting to be performed.</description></item>
-            /// <item><description><b>4</b>: The task is being performed. If the task is in this state, the <a href="~~ModifyActiveOperationTask~~">ModifyActiveOperationTask</a> operation cannot be called to modify the scheduled switchover time.</description></item>
+            /// <item><description><b>4</b>: The task is being performed. If the task is in this state, the <b>ModifyActiveOperationTask</b> operation cannot be called to modify the scheduled switchover time.</description></item>
             /// <item><description><b>5</b>: The task is performed.</description></item>
             /// <item><description><b>6</b>: The task fails.</description></item>
             /// <item><description><b>7</b>: The task is canceled.</description></item>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details of the instances and tags.</para>
+        /// <para>Details about the instances and tags.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource type. The return value is <b>ALIYUN::KVSTORE::INSTANCE</b>. This value indicates an ApsaraDB for Redis instance.</para>
+                /// <para>The resource type. The return value is <b>ALIYUN::KVSTORE::INSTANCE</b>. This value indicates a Tair (Redis OSS-compatible) instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALIYUN::KVSTORE::INSTANCE</para>

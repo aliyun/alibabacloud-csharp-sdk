@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data node. You can call the <a href="https://help.aliyun.com/document_detail/193462.html">DescribeClusterMemberInfo</a> operation to query the node ID. Separate multiple IDs with commas (,).</para>
+        /// <para>The ID of the data node. You can call the <a href="https://help.aliyun.com/document_detail/473783.html">DescribeClusterMemberInfo</a> operation to query the node ID. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para>This parameter is available and required only when the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</para>
+        /// <para> This parameter is required if the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

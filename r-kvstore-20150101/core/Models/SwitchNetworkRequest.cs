@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <list type="bullet">
         /// <item><description><para>This parameter is available and required only when the <b>RetainClassic</b> parameter is set to <b>True</b>.</para>
         /// </description></item>
-        /// <item><description><para>After you complete the switchover operation, you can also call the <a href="https://help.aliyun.com/document_detail/61010.html">ModifyInstanceNetExpireTime</a> operation to modify the retention period of the classic network endpoint.</para>
+        /// <item><description><para>After you complete the switchover operation, you can also call the <a href="https://help.aliyun.com/document_detail/473793.html">ModifyInstanceNetExpireTime</a> operation to modify the retention period of the classic network endpoint.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ClassicExpiredDays { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</para>
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,9 +86,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string TargetNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the VPC ID.</para>
+        /// <para>The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the vSwitch ID.</para>
         /// <remarks>
-        /// <para>The vSwitch and the ApsaraDB for Redis instance must be deployed in the same zone.</para>
+        /// <para> The vSwitch and the instance must be deployed in the same zone.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The VPC and the ApsaraDB for Redis instance must be deployed in the same region.</para>
+        /// <item><description><para>The VPC and the instance must be deployed in the same region.</para>
         /// </description></item>
         /// <item><description><para>After you set this parameter, you must also set the <b>VSwitchId</b> parameter.</para>
         /// </description></item>

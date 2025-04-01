@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeClusterBackupListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The backup sets of the instance. An instance backup contains the backup sets of all nodes in the instance.</para>
+        /// <para>The backup sets of the instance. A backup contains the backup sets of all shards in the instance.</para>
         /// </summary>
         [NameInMap("ClusterBackups")]
         [Validation(Required=false)]
         public List<DescribeClusterBackupListResponseBodyClusterBackups> ClusterBackups { get; set; }
         public class DescribeClusterBackupListResponseBodyClusterBackups : TeaModel {
             /// <summary>
-            /// <para>The backup sets of all nodes in the instance.</para>
+            /// <para>The backup sets of all shards in the instance.</para>
             /// </summary>
             [NameInMap("Backups")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>The internal download URL of the backup file.</para>
                 /// <remarks>
-                /// <para> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.</para>
+                /// <para> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the Tair (Redis OSS-compatible) instance. The ECS instance must reside in the same virtual private cloud (VPC) as the Tair (Redis OSS-compatible) instance.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string BackupIntranetDownloadURL { get; set; }
 
                 /// <summary>
-                /// <para>The backup name.</para>
+                /// <para>The name of the backup.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hins100322105_data_20240110012135.rdb</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the instance.</para>
+                /// <para>The instance name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hins100322105_data_20240108012127.rdb</para>
@@ -163,6 +163,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string IsAvail { get; set; }
 
+                /// <summary>
+                /// <para>This parameter does not take effect. Ignore this parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
+                /// </summary>
                 [NameInMap("RecoverConfigMode")]
                 [Validation(Required=false)]
                 public string RecoverConfigMode { get; set; }
@@ -235,7 +241,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ClusterBackupStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the backup set is valid. A value of 0 indicates that node-level backups failed or have not been completed.</para>
+            /// <para>Indicates whether the backup set is valid. A value of 0 indicates that shard-level backups failed or have not been completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -255,7 +261,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// <para>The memory size of a single node during a full backup. Unit: MB.</para>
+            /// <para>The memory size of a single shard during a full backup. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -303,11 +309,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? LogStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Valid values: 1 to 100.
-        /// Default value: 30.</para>
-        /// <remarks>
-        /// <para>If you specify this parameter, PageSize and PageNumber are unavailable.</para>
-        /// </remarks>
+        /// <para>The maximum number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -317,7 +319,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -337,7 +339,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C009DA42-3B19-5B81-963D-1509DE2408DD</para>

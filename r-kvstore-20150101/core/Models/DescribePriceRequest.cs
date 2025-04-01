@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the instance. Unit: MB. This parameter is used only to query ApsaraDB for Redis Community Edition instances that are deployed in classic mode. We recommend that you use the <b>InstanceClass</b> parameter to specify an exact instance type.</para>
+        /// <para>The storage capacity of the instance. Unit: MB. This parameter is used only to query Redis Open-Source Edition instances that are deployed in classic mode. We recommend that you use the <b>InstanceClass</b> parameter to specify an exact instance type.</para>
         /// <remarks>
         /// <para> If you specify the <b>InstanceClass</b> parameter, you do not need to specify the Capacity parameter.</para>
         /// </remarks>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Capacity { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>PostPaid</b> (default): pay-as-you-go</description></item>
         /// <item><description><b>PrePaid</b>: subscription</description></item>
@@ -55,6 +55,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
+
+        /// <summary>
+        /// <para>The engine version of the instance. Valid values: <b>2.8</b>, <b>4.0</b>, and <b>5.0</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5.0</para>
+        /// </summary>
+        [NameInMap("EngineVersion")]
+        [Validation(Required=false)]
+        public string EngineVersion { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to forcefully change the configurations of the instance. Valid values:</para>
@@ -145,10 +155,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The order type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BUY</b>: The order is used to purchase instances.</description></item>
-        /// <item><description><b>UPGRADE</b>: The order is used to change the configurations of instances.</description></item>
-        /// <item><description><b>RENEW</b>: The order is used to renew instances.</description></item>
-        /// <item><description><b>CONVERT</b>: The order is used to change the billing methods of instances.</description></item>
+        /// <item><description><b>BUY</b>: specifies the orders that are used to purchase instances.</description></item>
+        /// <item><description><b>UPGRADE</b>: specifies the orders that are used to change the configurations of instances.</description></item>
+        /// <item><description><b>RENEW</b>: specifies the orders that are used to renew instances.</description></item>
+        /// <item><description><b>CONVERT</b>: specifies the orders that are used to change the billing methods of instances.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -188,7 +198,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Quantity { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -209,12 +219,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// <para>The number of shards. This parameter is applicable only to cloud-native cluster instances. You can use this parameter to customize the number of shards.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("ShardCount")]
         [Validation(Required=false)]
         public int? ShardCount { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/94527.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// <para>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the most recent zone list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-e</para>

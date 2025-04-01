@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeActiveOperationTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The filter condition that is used to return tasks based on the settings of task cancellation. Default value: -1. Valid values:</para>
+        /// <para>The filter condition that is used to return events based on the settings of event cancellation. Default value: -1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: returns all tasks.</description></item>
-        /// <item><description><b>0</b>: returns only tasks that cannot be canceled.</description></item>
-        /// <item><description><b>1</b>: returns only tasks that can be canceled.</description></item>
+        /// <item><description><b>-1</b>: returns all events.</description></item>
+        /// <item><description><b>0</b>: returns only O\&amp;M events that cannot be canceled.</description></item>
+        /// <item><description><b>1</b>: returns only O\&amp;M events that can be canceled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,11 +25,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? AllowCancel { get; set; }
 
         /// <summary>
-        /// <para>The filter condition that is used to return tasks based on the settings of the switching time. Default value: -1. Valid values:</para>
+        /// <para>The filter condition that is used to return events based on the settings of the switching time. Default value: -1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: returns all tasks.</description></item>
-        /// <item><description><b>0</b>: returns only tasks for which the switching time cannot be changed.</description></item>
-        /// <item><description><b>1</b>: returns only tasks for which the switching time can be changed.</description></item>
+        /// <item><description><b>-1</b>: returns all events.</description></item>
+        /// <item><description><b>0</b>: returns only O\&amp;M events for which the switching time cannot be changed.</description></item>
+        /// <item><description><b>-1</b>: returns only O\&amp;M events for which the switching time can be changed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the O&amp;M task. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the O&amp;M task. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <remarks>
         /// <para>A value of <b>all</b> indicates all region IDs.</para>
         /// </remarks>
@@ -138,14 +138,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The status of operation and maintenance events. It is used to filter and return tasks. The values are as follows:. Valid values:</para>
+        /// <para>The status of an O\&amp;M event. This parameter is used to filter returned tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: All events.</description></item>
-        /// <item><description><b>3</b>: Events awaiting processing.</description></item>
-        /// <item><description><b>4</b>: Events being processed.</description></item>
-        /// <item><description><b>5</b>: Events that have successfully ended.</description></item>
-        /// <item><description><b>6</b>: Events that have ended in failure.</description></item>
-        /// <item><description><b>7</b>: Events that have been canceled.</description></item>
+        /// <item><description><b>-1</b>: filters all events.</description></item>
+        /// <item><description><b>3</b>: filters pending events.</description></item>
+        /// <item><description><b>4</b>: filters in-progress events.</description></item>
+        /// <item><description><b>5</b>: filters successful events.</description></item>
+        /// <item><description><b>6</b>: filters failed events.</description></item>
+        /// <item><description><b>7</b>: filters canceled events.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -156,7 +156,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The type of the O\&amp;M task. If left blank, all types will be queried.</para>
+        /// <para>The type of the O\&amp;M event. If this parameter is not specified, all types of O\&amp;M events are queried.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>rds_apsradb_upgrade: minor version update</description></item>
+        /// <item><description>rds_apsaradb_ha: primary/secondary switchover</description></item>
+        /// <item><description>rds_apsaradb_ssl_update: SSL certificate update</description></item>
+        /// <item><description>rds_apsaradb_major_upgrade: major version upgrade</description></item>
+        /// <item><description>rds_apsradb_transfer: instance migration</description></item>
+        /// <item><description>rds_apsaradb_modify_config: network upgrade</description></item>
+        /// <item><description>rds_apsaradb_modify_config: instance parameter adjustment</description></item>
+        /// <item><description>rds_apsaradb_maxscale: proxy minor version update</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>

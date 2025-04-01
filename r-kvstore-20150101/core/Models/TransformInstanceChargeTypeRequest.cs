@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>Specifies whether to enable automatic payment. Default value: true. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Automatic payment is enabled.</description></item>
-        /// <item><description><b>false</b>: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the ApsaraDB for Redis console, choose <b>Expenses</b> &gt; <b>Renewal Management</b>. In the left-side navigation pane of the Billing Management console, click <b>Orders</b>. On the <b>Orders</b> page, find the order and complete the payment.</description></item>
+        /// <item><description><b>false</b>: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the Tair (Redis OSS-compatible) console, choose <b>Expenses</b> &gt; <b>Renewal Management</b>. In the left-side navigation pane of the Billing Management console, click <b>Orders</b>. On the <b>Orders</b> page, find the order and complete the payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,6 +28,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <list type="bullet">
         /// <item><description><b>true</b>: enables auto-renewal.</description></item>
         /// <item><description><b>false</b> (default): disables auto-renewal.</description></item>
+        /// </list>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false</description></item>
+        /// <item><description>true</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

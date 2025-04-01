@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The major version that is run on the instance. Valid values: <b>2.8</b>, <b>4.0</b>, and <b>5.0</b>.</para>
+        /// <para>The major version of the instance. Valid values: <b>4.0</b>, <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to query the IDs of instances.</para>
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the IDs of instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****</para>

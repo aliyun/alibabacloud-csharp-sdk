@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The method that is used to modify the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Cover</b>: overwrites the original whitelist.</description></item>
+        /// <item><description><b>Cover</b> (default): overwrites the original whitelist.</description></item>
         /// <item><description><b>Append</b>: appends data to the whitelist.</description></item>
         /// <item><description><b>Delete</b>: deletes the whitelist.</description></item>
         /// </list>

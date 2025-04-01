@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeAuditRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the account. If you do not specify this parameter, this call applies to all accounts of the instance.</para>
+        /// <para>The username of the account. If you do not specify this parameter, all accounts of the instance are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The name of the database in the instance. If you do not specify this parameter, all databases are queried. Valid values: 0 to 255. 0 specifies the database 0.</para>
+        /// <para>The name of the database in the instance. If you do not specify this parameter, all databases are queried. Valid values: 0 to 255. 0 specifies database 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -65,13 +65,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node in the instance. You can set this parameter to query the data of a specified node.</para>
+        /// <para>The ID of the node in the instance. You can set this parameter to query the monitoring data of a specified node.</para>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is available only for read/write splitting or cluster instances of ApsaraDB for Redis.</para>
+        /// <item><description><para>This parameter is available only for read/write splitting and cluster instances.</para>
         /// </description></item>
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/94665.html">DescribeLogicInstanceTopology</a> operation to query node IDs.</para>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query node IDs.</para>
         /// </description></item>
         /// </list>
         /// 

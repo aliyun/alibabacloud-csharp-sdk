@@ -46,6 +46,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string AuditLogRetention { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether a secondary zone is automatically allocated.</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b></description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("AutoSecondaryZone")]
+                [Validation(Required=false)]
+                public bool? AutoSecondaryZone { get; set; }
+
+                /// <summary>
                 /// <para>The availability metric of the current month.</para>
                 /// 
                 /// <b>Example:</b>
@@ -62,7 +76,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <list type="bullet">
                 /// <item><description><para>This parameter is returned only when the data flashback feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/148479.html">Restore data to a point in time by using the data flashback feature</a>.</para>
                 /// </description></item>
-                /// <item><description><para>When you call the <a href="https://help.aliyun.com/document_detail/61083.html">RestoreInstance</a> operation to implement data flashback, you can obtain the earliest point in time for data flashback from the return value of this parameter and set the <b>RestoreTime</b> parameter to this point in time.</para>
+                /// <item><description><para>When you call the <a href="https://help.aliyun.com/document_detail/473824.html">RestoreInstance</a> operation to implement data flashback, you can obtain the earliest point in time for data flashback from the return value of this parameter and set the <b>RestoreTime</b> parameter to this point in time.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -178,7 +192,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// <para>The database engine version of the instance. Valid values: <b>2.8</b>, <b>4.0</b>, and <b>5.0</b>.</para>
+                /// <para>The database engine version of the instance. Valid values: <b>2.8</b>, <b>4.0</b>, <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4.0</para>
@@ -190,7 +204,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>The ID of the distributed instance to which the instance belongs.</para>
                 /// <remarks>
-                /// <para> This parameter is returned only when the ApsaraDB for Redis instance is a child instance of a distributed instance.</para>
+                /// <para> This parameter is returned only when the Tair (Redis OSS-compatible) instance is a child instance of a distributed instance.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -334,7 +348,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>Indicates whether the transparent data encryption (TDE) feature is supported for the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: This feature is supported. This feature is available only for <a href="https://help.aliyun.com/document_detail/443827.html">DRAM-based</a> instances that use local disks.</description></item>
+                /// <item><description><b>true</b>: This feature is supported only for DRAM-based classic instances.</description></item>
                 /// <item><description><b>false</b>: This feature is not supported.</description></item>
                 /// </list>
                 /// 
@@ -453,7 +467,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>If the instance is a cluster instance that uses cloud disks, this parameter indicates the actual instance type of individual shards in the instance. The InstanceClass parameter indicates the virtual instance type.</para>
                 /// <remarks>
-                /// <para> To query fees for instances of the instance type, you can specify the instance type that is returned by this parameter in the <a href="https://help.aliyun.com/document_detail/95612.html">DescribePrice</a> operation.</para>
+                /// <para> To query fees for instances of the instance type, you can specify the instance type that is returned by this parameter in the <a href="https://help.aliyun.com/document_detail/473807.html">DescribePrice</a> operation.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -473,6 +487,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// <para>The number of replica nodes in the primary zone.</para>
+                /// <remarks>
+                /// <para> The <b>ReplicaCount</b> and <b>SlaveReplicaCount</b> parameters are applicable only to cloud-native instances. If the instance is a cluster instance, the preceding parameters indicate the number of replica nodes <b>per node</b> in the primary and secondary zones of the instance.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("ReplicaCount")]
                 [Validation(Required=false)]
                 public int? ReplicaCount { get; set; }
@@ -535,7 +558,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string SecurityIPList { get; set; }
 
                 /// <summary>
-                /// <para>The number of shards. This parameter is available only for ApsaraDB for Redis instances that are purchased on the China site (aliyun.com).</para>
+                /// <para>The number of shards. This parameter is available only for instances that are purchased on the China site (aliyun.com).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -554,6 +577,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public long? SlaveReadOnlyCount { get; set; }
 
+                /// <summary>
+                /// <para>The number of replica nodes in the secondary zone.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("SlaveReplicaCount")]
                 [Validation(Required=false)]
                 public int? SlaveReplicaCount { get; set; }

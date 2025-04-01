@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class SwitchInstanceHARequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</para>
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data shard. You can call the <a href="https://help.aliyun.com/document_detail/190794.html">DescribeRoleZoneInfo</a> operation to obtain the value of the CustinsId parameter. Separate multiple data shard IDs with commas (,). <c>all</c> indicates that all data shards are specified.</para>
+        /// <para>The ID of the data shard. You can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to obtain the value of the CustinsId parameter. Separate multiple data shard IDs with commas (,). <c>all</c> indicates that all data shards are specified.</para>
         /// <remarks>
         /// <para>This parameter is available and required only for read/write splitting and cluster instances.</para>
         /// </remarks>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <item><description><b>1</b>: performs the switchover during the maintenance window.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/61000.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an ApsaraDB for Redis instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of a Tair (Redis OSS-compatible) instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -73,11 +73,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The switching mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AvailablePriority</b>: prioritizes the availability and performs a switchover immediately without considering the latency of data synchronization between the master and replica nodes. This may cause data loss.</description></item>
-        /// <item><description><b>ReliabilityPriority</b>: prioritizes the reliability and performs a switchover after no latency of data synchronization between the master and replica nodes exists. This ensures data integrity. This mode may cause a switchover failure in scenarios that involve a large volume of data writes and persistent latency of data synchronization.</description></item>
+        /// <item><description><b>AvailablePriority</b>: immediately performs a switchover by prioritizing availability. No latency of data synchronization between the master and replica nodes is considered. This may cause data loss.</description></item>
+        /// <item><description><b>ReliabilityPriority</b>: performs a switchover by prioritizing reliability. Make sure that no latency of data synchronization between the master and replica nodes exists. This ensures data integrity. This mode may cause switchover failures in scenarios where a large volume of data is written and data synchronization latency consistently exists.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You must evaluate the requirements for data and services based on your business scenarios and then select a switching mode.</para>
+        /// <para> You must evaluate the requirements for data and services based on your business scenarios and then select a switching mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

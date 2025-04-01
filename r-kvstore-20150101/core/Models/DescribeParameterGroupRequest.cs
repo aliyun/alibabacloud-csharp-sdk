@@ -28,6 +28,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string ParameterGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

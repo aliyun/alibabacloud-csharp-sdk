@@ -44,8 +44,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>Safe: safe shutdown. This mode involves using redis_safe to shut down the Redis process.</description></item>
-        /// <item><description>UnSafe: non-secure shutdown. This mode involves using the shutdown command to shut down the Redis process.</description></item>
+        /// <item><description><b>Hard</b>: stimulates a hardware failure that cannot be recovered. In this case, a high-availability switchover is triggered.</description></item>
+        /// <item><description><b>Soft</b> (default): stimulates a hardware failure that can be recovered. In this case, the system first attempts to recover the faulty node. If the attempt fails, a high-availability switchover is triggered.</description></item>
+        /// </list>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Safe</description></item>
+        /// <item><description>UnSafe</description></item>
+        /// <item><description>Hard</description></item>
+        /// <item><description>Soft</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +63,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string FailMode { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the instance ID.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

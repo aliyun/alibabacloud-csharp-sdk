@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeLogicInstanceTopologyRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance whose topology information you want to query.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

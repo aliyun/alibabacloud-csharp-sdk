@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeRoleZoneInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about each node in an ApsaraDB for Redis instance.</para>
+        /// <para>Details about each node in the instance.</para>
         /// </summary>
         [NameInMap("Node")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <para>The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.</para>
                 /// <remarks>
                 /// <list type="bullet">
-                /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation to specify the increased bandwidth.</description></item>
+                /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to specify the increased bandwidth.</description></item>
                 /// <item><description>You can also use this parameter to calculate the increased bandwidth. For example, if the default bandwidth of the node is 96 MB/s and the returned value of this parameter is 100, the increased bandwidth is 4 MB/s.</description></item>
                 /// </list>
                 /// </remarks>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <item><description><b>1</b>: The minor version is the latest version.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> To update the minor version, call the <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> operation.</para>
+                /// <para> To update the minor version, call the <a href="https://help.aliyun.com/document_detail/473777.html">ModifyInstanceMinorVersion</a> operation.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public bool? IsOpenBandWidthService { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is used only for internal maintenance of ApsaraDB for Redis instances.</para>
+                /// <para>This parameter is used only for internal maintenance of instances.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10065****</para>

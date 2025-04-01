@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeZonesResponseBodyZonesKVStoreZone> KVStoreZone { get; set; }
             public class DescribeZonesResponseBodyZonesKVStoreZone : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether ApsaraDB for Redis instances can be created in the current zone. Valid values:</para>
+                /// <para>Indicates whether Tair (Redis OSS-compatible) instances can be created in the current zone. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: ApsaraDB for Redis instances cannot be created in the current zone.</description></item>
-                /// <item><description><b>false</b>: ApsaraDB for Redis instances can be created in the current zone.</description></item>
+                /// <item><description><b>true</b>: Tair (Redis OSS-compatible) instances cannot be created in the current zone.</description></item>
+                /// <item><description><b>false</b>: Tair (Redis OSS-compatible) instances can be created in the current zone.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public bool? Disabled { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is <b>true</b> in ApsaraDB for Redis.</para>
+                /// <para>Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is <b>true</b> in Tair (Redis OSS-compatible).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>

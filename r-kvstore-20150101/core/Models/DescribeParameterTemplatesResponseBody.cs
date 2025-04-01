@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The major version that is run on the instance.</para>
+        /// <para>The major version of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.0</para>

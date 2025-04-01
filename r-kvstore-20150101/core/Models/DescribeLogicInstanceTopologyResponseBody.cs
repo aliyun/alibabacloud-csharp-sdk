@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The information about proxy nodes.</para>
+        /// <para>The detailed proxy information, including information about proxy nodes.</para>
         /// </summary>
         [NameInMap("RedisProxyList")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo> NodeInfo { get; set; }
             public class DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo : TeaModel {
                 /// <summary>
-                /// <para>The maximum bandwidth of the node. Unit: Mbit/s.</para>
+                /// <para>The bandwidth throttling of the node. Unit: MB/s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>96</para>
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>The node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>db</b>: a data node.</description></item>
-                /// <item><description><b>normal</b>: a management node, which can be a proxy node or a Configserver node. For specific instances, the return value of this parameter is proxy or cs, instead of normal.</description></item>
+                /// <item><description><b>proxy</b>: proxy node</description></item>
+                /// <item><description><b>db</b>: data node</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>Details of data shards, including node information such as NodeInfo.</para>
+        /// <para>Details of data shards, which includes node information such as NodeInfo.</para>
         /// </summary>
         [NameInMap("RedisShardList")]
         [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo> NodeInfo { get; set; }
             public class DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo : TeaModel {
                 /// <summary>
-                /// <para>The maximum bandwidth of the node. Unit: Mbit/s.</para>
+                /// <para>The bandwidth throttling of the node. Unit: MB/s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>96</para>
@@ -154,10 +154,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the child instance. Valid values:</para>
+                /// <para>子实例类型，返回值：</para>
                 /// <list type="bullet">
-                /// <item><description><b>master</b>: master node</description></item>
-                /// <item><description><b>readonly</b>: read-only instance</description></item>
+                /// <item><description><b>master</b>：主节点类型。</description></item>
+                /// <item><description><b>readonly</b>：只读实例类型。</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Details of the hotkeys.</para>
         /// <remarks>
-        /// <para>This parameter is not returned because ApsaraDB for Redis does not support hotkey analytics.</para>
+        /// <para>This parameter is not returned because Tair (Redis OSS-compatible) does not support hotkey analytics.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("HotKeys")]

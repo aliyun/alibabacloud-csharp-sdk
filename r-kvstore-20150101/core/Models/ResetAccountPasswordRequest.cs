@@ -62,6 +62,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is used only for internal maintenance. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SDK</para>
+        /// </summary>
         [NameInMap("SourceBiz")]
         [Validation(Required=false)]
         public string SourceBiz { get; set; }

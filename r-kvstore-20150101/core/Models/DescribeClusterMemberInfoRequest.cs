@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeClusterMemberInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ApsaraDB for Redis instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query instance IDs.</para>
+        /// <para>The ID of the Tair (Redis OSS-compatible) instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

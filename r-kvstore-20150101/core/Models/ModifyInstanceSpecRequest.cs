@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceSpecRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. Default value: true. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
-        /// <item><description><b>false</b>: disables auto-renewal. If you set this parameter to <b>false</b>, the instance must be manually renewed before it expires. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Renew an instance</a>.</description></item>
+        /// <item><description><b>true</b> (default): enables automatic payment.</description></item>
+        /// <item><description><b>false</b>: disables automatic payment. If you set this parameter to <b>false</b>, the instance must be manually renewed before it expires. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Renew an instance</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The ID of the promotional event or business information.</para>
+        /// <para>The ID of the promotional event or the business information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>000000001</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>The time when to change the configurations. Default value: Immediately. Valid values:</para>
+        /// <para>The time when you want the configurations to be changed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: The configurations are immediately changed.</description></item>
-        /// <item><description><b>MaintainTime</b>: The configurations are changed within the maintenance window. You can call the <a href="https://help.aliyun.com/document_detail/61000.html">ModifyInstanceMaintainTime</a> operation to change the maintenance window.</description></item>
+        /// <item><description><b>Immediately</b> (default): immediately changes the configurations.</description></item>
+        /// <item><description><b>MaintainTime</b>: changes the configurations within the maintenance window. You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to change the maintenance window.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? ForceTrans { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully change the configurations of the instance. Default value: true. Valid values:</para>
+        /// <para>Specifies whether to forcibly change the configurations. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>false</b>: The system does not forcefully change the configurations.</description></item>
-        /// <item><description><b>true</b>: The system forcefully changes the configurations.</description></item>
+        /// <item><description><b>true</b> (default): The system forcefully changes the configurations.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? ForceUpgrade { get; set; }
 
         /// <summary>
-        /// <para>The new instance type. You can call the <a href="https://help.aliyun.com/document_detail/120580.html">DescribeAvailableResource</a> operation to query the instance types available for configuration change within the zone to which the instance belongs.</para>
+        /// <para>The new instance type. You can call the <a href="https://help.aliyun.com/document_detail/473765.html">DescribeAvailableResource</a> operation to query the instance types available for configuration change within the zone to which the instance belongs.</para>
         /// <remarks>
         /// <para> For more information about the instance types, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview</a>.</para>
         /// </remarks>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,7 +120,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The major version to which you want to upgrade the instance. When you change the configurations of an instance, you can upgrade the major version of the instance by setting this parameter. Valid values: <b>2.8</b>, <b>4.0</b>, and <b>5.0</b>. We recommend that you upgrade the major version to 5.0.</para>
+        /// <para>The major version of the classic instance that you want to upgrade. Valid values: <b>2.8</b>, <b>4.0</b>, and <b>5.0</b>.</para>
+        /// <remarks>
+        /// <para> The <b>InstanceClass</b> parameter is required when you upgrade the instance version. This parameter indicates that you can upgrade the instance version only when you update the instance specifications. If you only need to upgrade the instance version, call the <a href="https://help.aliyun.com/document_detail/473776.html">ModifyInstanceMajorVersion</a> operation.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>5.0</para>
@@ -130,7 +133,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string MajorVersion { get; set; }
 
         /// <summary>
-        /// <para>The node type. Valid values:</para>
+        /// <para>The type of the node. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>MASTER_SLAVE</b>: high availability (master-replica)</description></item>
         /// <item><description><b>STAND_ALONE</b>: standalone</description></item>
@@ -138,7 +141,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <item><description><b>single</b>: standalone</description></item>
         /// </list>
         /// <remarks>
-        /// <para> For cloud-native instances, set this parameter to <b>MASTER_SLAVE</b> or <b>STAND_ALONE</b>. For classic instances, set this parameter to <b>double</b> or <b>single</b>.</para>
+        /// <para> To create a cloud-native instance, set this parameter to <b>MASTER_SLAVE</b> or <b>STAND_ALONE</b>. To create a classic instance, set this parameter to <b>double</b> or <b>single</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -149,10 +152,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>The change type. This parameter is required when you change the configurations of a subscription instance. Default value: UPGRADE. Valid values:</para>
+        /// <para>The change type. This parameter is required when you change the configurations of a subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>UPGRADE</b>: upgrades the configurations of a subscription instance.</description></item>
-        /// <item><description><b>DOWNGRADE</b>: downgrades the configurations of a subscription instance.</description></item>
+        /// <item><description><b>UPGRADE</b> (default): upgrades the configurations of the subscription instance.</description></item>
+        /// <item><description><b>DOWNGRADE</b>: downgrades the configurations of the subscription instance.</description></item>
         /// </list>
         /// <remarks>
         /// </remarks>
@@ -181,8 +184,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The number of read replicas in the primary zone. Valid values: 0 to 5. This parameter applies only to the following scenarios:</para>
         /// <list type="bullet">
-        /// <item><description>If the instance is a standard instance that uses cloud disks, you can set this parameter to a value greater than 0 to enable the read/write splitting architecture.</description></item>
-        /// <item><description>If the instance is a read/write splitting instance that uses cloud disks, you can use this parameter to customize the number of read replicas. You can also set this parameter to 0 to disable the read/write splitting architecture and switch the instance to the standard architecture.</description></item>
+        /// <item><description>If the instance is a cloud-native standard instance, you can set this parameter to a value greater than 0 to enable the read/write splitting architecture.</description></item>
+        /// <item><description>If the instance is a cloud-native read/write splitting instance, you can use this parameter to customize the number of read replicas. You can also set this parameter to 0 to disable the read/write splitting architecture and switch the instance to the standard architecture.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -193,7 +196,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? ReadOnlyCount { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -202,6 +205,22 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The number of replica nodes in the primary zone. This parameter is applicable only to cloud-native multi-replica cluster instances. Valid values: 1 to 4.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>The sum of the values of this parameter and the SlaveReplicaCount parameter cannot be greater than 4.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify either ReplicaCount or ReadOnlyCount.</para>
+        /// </description></item>
+        /// <item><description><para>A master-replica instance cannot contain multiple replica nodes.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ReplicaCount")]
         [Validation(Required=false)]
         public int? ReplicaCount { get; set; }
@@ -219,7 +238,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The number of shards. This parameter is available only for cluster instances that use cloud disks.</para>
+        /// <para>The number of shards. This parameter is applicable only to cloud-native cluster instances.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If you want to change a cloud-native cluster instance to a standard instance, you must explicitly set the ShardCount parameter to 1 and specify the specifications of the master-replica instance.</para>
+        /// </description></item>
+        /// <item><description><para>To change a cloud-native standard instance to a cluster instance, you must explicitly set the ShardCount parameter to a value greater than 1 and specify the specifications of the cluster instance.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -229,7 +256,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? ShardCount { get; set; }
 
         /// <summary>
-        /// <para>The number of read replicas in the secondary zone. This parameter is used to create a read/write splitting instance that is deployed in multiple zones. Valid values: 1 to 9. The sum of the SlaveReadOnlyCount and ReadOnlyCount values cannot be greater than 9.</para>
+        /// <para>The number of read replicas in the secondary zone when you create a read/write splitting instance that is deployed across multiple zones. Valid values: 1 to 9. The sum of the values of this parameter and the ReadOnlyCount parameter cannot be greater than 9.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -238,6 +265,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? SlaveReadOnlyCount { get; set; }
 
+        /// <summary>
+        /// <para>The number of replica nodes in the secondary zone when you create a cloud-native multi-replica cluster instance that is deployed across multiple zones. The sum of the values of this parameter and the ReplicaCount parameter cannot be greater than 4.</para>
+        /// <remarks>
+        /// <para> When you create a cloud-native multi-replica cluster instance that is deployed across multiple zones, you must specify both SlaveReplicaCount and SecondaryZoneId.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("SlaveReplicaCount")]
         [Validation(Required=false)]
         public int? SlaveReplicaCount { get; set; }
@@ -252,10 +288,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string SourceBiz { get; set; }
 
+        /// <summary>
+        /// <para>The storage capacity of the ESSD/SSD-based instance. The valid values vary based on the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/2527111.html">ESSD/SSD-based instances</a>.</para>
+        /// <remarks>
+        /// <para> This parameter is required only when you set the <b>InstanceType</b> parameter to <b>tair_essd</b> to create an ESSD-based instance. If you create a Tair <b>SSD</b>-based instance, the Storage parameter is automatically specified based on predefined specifications. You do not need to specify this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
         [NameInMap("Storage")]
         [Validation(Required=false)]
         public int? Storage { get; set; }
 
+        /// <summary>
+        /// <para>The storage type. Valid values: <b>essd_pl1</b>, <b>essd_pl2</b>, and <b>essd_pl3</b>.</para>
+        /// <remarks>
+        /// <para> This parameter is required only when you set the <b>InstanceType</b> parameter to <b>tair_essd</b> to create an ESSD-based instance.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>essd_pl1</para>
+        /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]
         public string StorageType { get; set; }

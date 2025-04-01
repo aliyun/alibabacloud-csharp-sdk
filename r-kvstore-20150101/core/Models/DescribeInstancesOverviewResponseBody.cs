@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInstancesOverviewResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of instances.</para>
+        /// <para>The queried instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The database engine version of the instance. Valid values: <b>2.8</b>, <b>4.0</b>, and <b>5.0</b>.</para>
+            /// <para>The engine version of the instance. Valid values: <b>2.8</b>, <b>4.0</b>, <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4.0</para>
@@ -166,10 +166,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The category of the instance. Valid values:</para>
+            /// <para>The edition of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Tair</b></description></item>
-            /// <item><description><b>Redis</b></description></item>
+            /// <item><description><b>Tair</b>: Tair (Enterprise Edition)</description></item>
+            /// <item><description><b>Redis</b>: Redis Open-Source Edition</description></item>
             /// <item><description><b>Memcache</b></description></item>
             /// </list>
             /// 

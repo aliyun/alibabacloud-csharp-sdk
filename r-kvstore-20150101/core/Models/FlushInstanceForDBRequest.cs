@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? DbIndex { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

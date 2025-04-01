@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
-        /// <item><description><b>false</b>: disables auto-renewal.</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is <b>false</b>.</para>
+        /// <para> The default value is <b>false</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,6 +60,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// <para>The service. Set the value to kvstore.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>kvstore</para>
+        /// </summary>
+        [NameInMap("Product")]
+        [Validation(Required=false)]
+        public string Product { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

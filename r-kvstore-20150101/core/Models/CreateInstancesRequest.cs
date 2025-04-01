@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b> (default).</description></item>
-        /// <item><description><b>false</b>. If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose <b>Expenses</b> &gt; <b>Renewal Management</b>. In the left-side navigation pane, click <b>Orders</b>. On the <b>Orders</b> page, find the order and complete the payment.</description></item>
+        /// <item><description><b>false</b>. If automatic payment is disabled, you must perform the following steps to complete the payment in the Tair (Redis OSS-compatible) console: In the top navigation bar, choose <b>Expenses</b> &gt; <b>Renewal Management</b>. In the left-side navigation pane, click <b>Orders</b>. On the <b>Orders</b> page, find the order and complete the payment.</description></item>
         /// </list>
         /// <remarks>
         /// <para> This parameter is valid only if the value of the <b>ChargeType</b> field in the <b>Instances</b> parameter is set to <b>PrePaid</b>.</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The JSON-formatted configurations of the instance. For more information, see the &quot;Description of the Instances parameter&quot; section of this topic.</para>
+        /// <para>The JSON-formatted configurations of the instance. For more information, see the &quot;Additional description of the Instances parameter&quot; section.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The service category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Community Edition</description></item>
-            /// <item><description><b>1</b>: Enhanced Edition (Tair)</description></item>
+            /// <item><description><b>0</b>: Redis Open-Source Edition</description></item>
+            /// <item><description><b>1</b>: Tair (Enterprise Edition)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The engine type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>redis</b>: Redis or Tair DRAM-based instance</description></item>
-            /// <item><description><b>tair_pena</b>: Tair persistent memory-optimized instance</description></item>
-            /// <item><description><b>tair_pdb</b>: Tair ESSD-based instance</description></item>
+            /// <item><description><b>redis</b>: Redis Open-Source Edition or Tair (In-Memory)</description></item>
+            /// <item><description><b>tair_pena</b>: Tair (On NVM)</description></item>
+            /// <item><description><b>tair_pdb</b>: Tair (On Disk)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

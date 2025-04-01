@@ -159,6 +159,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
             /// <summary>
             /// <para>The reason why the current task was initiated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>UpgradeMinorVersion</para>
             /// </summary>
             [NameInMap("ReasonCode")]
             [Validation(Required=false)]
@@ -211,7 +214,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
+            public string Status { get; set; }
 
             /// <summary>
             /// <para>The task details. The details vary based on the task type.</para>

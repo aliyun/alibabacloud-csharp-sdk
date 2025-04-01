@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string NetworkType { get; set; }
 
+                [NameInMap("PrivateIp")]
+                [Validation(Required=false)]
+                public string PrivateIp { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -156,6 +160,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                     }
 
                 }
+
+                [NameInMap("UseEni")]
+                [Validation(Required=false)]
+                public bool? UseEni { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

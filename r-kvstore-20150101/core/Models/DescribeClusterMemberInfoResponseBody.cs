@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeClusterMemberInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of nodes in the cluster instance.</para>
+        /// <para>Details about data nodes in the cluster instance.</para>
         /// </summary>
         [NameInMap("ClusterChildren")]
         [Validation(Required=false)]
@@ -83,10 +83,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? Connections { get; set; }
 
             /// <summary>
-            /// <para>The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.</para>
-            /// <remarks>
-            /// <para>This parameter is returned only if the instance is created in a dedicated cluster.</para>
-            /// </remarks>
+            /// <para>The current bandwidth of the data node, which is the sum of the default bandwidth and any extra bandwidth that is purchased. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

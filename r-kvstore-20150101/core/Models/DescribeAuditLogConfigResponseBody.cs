@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <item><description><b>false</b>: disabled</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a> operation to enable or disable the audit log feature for an ApsaraDB for Redis instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> operation to enable or disable the audit log feature for a Tair (Redis OSS-compatible) instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

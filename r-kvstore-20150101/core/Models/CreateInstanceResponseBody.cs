@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The username that is used to connect to the instance. By default, ApsaraDB for Redis provides a username that is named after the instance ID.</para>
+        /// <para>The username that is used to connect to the instance. By default, Tair (Redis OSS-compatible) provides a username that is named after the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeDedicatedClusterInstanceListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the instances.</para>
+        /// <para>Details about the instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The nodes.</para>
+            /// <para>Details about the nodes.</para>
             /// </summary>
             [NameInMap("InstanceNodeList")]
             [Validation(Required=false)]
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <list type="bullet">
             /// <item><description><para>If the return value is <b>0</b>, the proxy mode is disabled for the instance. If the return value is an integer greater than <b>0</b>, such as <b>1</b>, the proxy mode is enabled for the instance.</para>
             /// </description></item>
-            /// <item><description><para>This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see <a href="https://help.aliyun.com/document_detail/52228.html">Cluster master-replica instances</a>.</para>
+            /// <item><description><para>This parameter is returned only when the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -326,7 +326,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The number of shards.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see <a href="https://help.aliyun.com/document_detail/52228.html">Cluster master-replica instances</a>.</para>
+            /// <para> This parameter is returned only when the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

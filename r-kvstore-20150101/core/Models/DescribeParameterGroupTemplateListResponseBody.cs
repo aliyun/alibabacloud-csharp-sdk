@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class DescribeParameterGroupTemplateListResponseBody : TeaModel {
         /// <summary>
         /// <para>The compatible engine version. Valid values:</para>
-        /// <para>ApsaraDB for Redis Community Edition: 5.0, 6.0, and 7.0. Tair DRAM-based instances: 5.0 and 6.0. Tair persistent memory-optimized instances: 6.0. Tair ESSD-based instances: 4.0.</para>
+        /// <para>Redis Open Source Edition: 5.0, 6.0, and 7.0. Tair DRAM-based instances: 5.0 and 6.0. Tair persistent memory-optimized instances: 6.0. Tair ESSD-based instances: 4.0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -59,6 +59,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
             /// <summary>
             /// <para>The description of the parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Open AOF persistence mode</para>
             /// </summary>
             [NameInMap("ParameterDescription")]
             [Validation(Required=false)]

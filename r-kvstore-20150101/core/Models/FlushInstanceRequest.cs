@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class FlushInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The ID of the request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

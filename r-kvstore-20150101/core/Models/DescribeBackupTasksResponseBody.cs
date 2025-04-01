@@ -158,6 +158,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Process { get; set; }
 
             /// <summary>
+            /// <para>The backup progress.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>27</para>
+            /// </summary>
+            [NameInMap("Progress")]
+            [Validation(Required=false)]
+            public string Progress { get; set; }
+
+            /// <summary>
             /// <para>The start time of the backup task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
@@ -184,7 +194,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****</para>
@@ -194,15 +204,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the backup task. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>NoStart</b>: The backup task is not started.</description></item>
-        /// <item><description><b>Preparing</b>: The backup task is being prepared.</description></item>
-        /// <item><description><b>Waiting</b>: The backup task is pending.</description></item>
-        /// <item><description><b>Uploading:</b> The system is uploading the backup file.</description></item>
-        /// <item><description><b>Checking:</b> The system is checking the uploaded backup file.</description></item>
-        /// <item><description><b>Finished</b>: The backup task is complete.</description></item>
-        /// </list>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BB73740C-23E2-4392-9DA4-2660C74C****</para>

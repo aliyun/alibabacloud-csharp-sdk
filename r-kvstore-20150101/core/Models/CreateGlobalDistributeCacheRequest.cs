@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateGlobalDistributeCacheRequest : TeaModel {
         /// <summary>
-        /// <para>The time when you want to restart the instance. Default value: Immediately. Valid values:</para>
+        /// <para>The time when you want to perform the conversion. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: immediately restarts the instance.</description></item>
-        /// <item><description><b>MaintainTime</b>: restarts the instance during the maintenance window.</description></item>
+        /// <item><description><b>Immediately</b>: immediately performs the conversion.</description></item>
+        /// <item><description><b>MaintainTime</b> (default): performs the conversion during the maintenance window.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Immediately</para>

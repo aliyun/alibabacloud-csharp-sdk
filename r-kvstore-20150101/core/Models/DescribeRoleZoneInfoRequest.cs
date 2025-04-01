@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeRoleZoneInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query instance IDs.</para>
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than <b>0</b> and less than or equal to the maximum value supported by the integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be an integer that is greater than <b>0</b> and less than or equal to the maximum value supported by the integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>10</b>, <b>20</b>, and <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>10</b>, <b>20</b>, and <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -49,15 +49,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of node to query. Default value: 1. Valid values:</para>
+        /// <para>The type of the node to query. Default value: 1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: proxy node</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This parameter is supported only for cluster and read/write splitting instances.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><b>1</b>: data node</description></item>
+        /// <item><description><para><b>0</b>: proxy node</para>
+        /// <para>**</para>
+        /// <para><b>Note</b> This parameter is supported only for cluster instances and read/write splitting instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: data node</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

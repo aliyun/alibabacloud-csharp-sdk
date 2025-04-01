@@ -26,10 +26,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Appendonly { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: enables auto-renewal.</description></item>
-        /// <item><description><b>false</b>: disables auto-renewal.</description></item>
+        /// <item><description><b>false</b> (default): disables auto-renewal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration that is supported by auto-renewal. Unit: months. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>6</b>, and <b>12</b>.</para>
+        /// <para>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>6</b>, and <b>12</b>.</para>
         /// <remarks>
-        /// <para>This parameter is required only if the <b>AutoRenew</b> parameter is set to <b>true</b>.</para>
+        /// <para> This parameter is required if the <b>AutoRenew</b> parameter is set to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use a coupon. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to use a coupon. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: uses a coupon.</description></item>
-        /// <item><description><b>false</b>: does not use a coupon.</description></item>
+        /// <item><description><b>false</b> (default): does not use a coupon.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>If your instance is a cloud-native cluster instance, we recommend that you use <a href="https://help.aliyun.com/document_detail/2679158.html">DescribeClusterBackupList</a> to query the backup set ID of the cluster instance, such as cb-xx. Then, set the ClusterBackupId request parameter to the backup set ID to clone the cluster instance. This eliminates the need to specify the backup set ID of each shard.</para>
-        /// <para>You can set the BackupId parameter to the backup set ID of the source instance. The system uses the data stored in the backup set to create an instance. You can call the <a href="https://help.aliyun.com/document_detail/61081.html">DescribeBackups</a> operation to query backup set IDs. If the source instance is a cluster instance, set the BackupId parameter to the backup set IDs of all shards of the source instance, separated by commas (,). Example: &quot;10\<em>\</em>,11\<em>\</em>,15\<em>\</em>&quot;.</para>
+        /// <para>If your instance is a cloud-native cluster instance, we recommend that you use <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> to query the backup set ID of the cluster instance, such as cb-xx. Then, set the ClusterBackupId request parameter to the backup set ID to clone the cluster instance. This eliminates the need to specify the backup set ID of each shard.</para>
+        /// <para>You can set the BackupId parameter to the backup set ID of the source instance. The system uses the data stored in the backup set to create an instance. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query backup set IDs. If the source instance is a cluster instance, set the BackupId parameter to the backup set IDs of all shards of the source instance, separated by commas (,). Example: &quot;10\<em>\</em>,11\<em>\</em>,15\<em>\</em>&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>111111111</para>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Capacity { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. Default value: PrePaid. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>PrePaid</b>: subscription</description></item>
-        /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>PostPaid</b> (default): pay-as-you-go</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is supported for specific new cluster instances. You can query the backup set ID by using the <a href="https://help.aliyun.com/document_detail/2679158.html">DescribeClusterBackupList</a> operation.</para>
+        /// <para>This parameter is supported for specific new cluster instances. You can query the backup set ID by using the <a href="https://help.aliyun.com/document_detail/2679168.html">DescribeClusterBackupList</a> operation.</para>
         /// <list type="bullet">
         /// <item><description>If this parameter is supported, you can specify the backup set ID. In this case, you do not need to specify the <b>BackupId</b> parameter.</description></item>
         /// <item><description>If this parameter is not supported, set the BackupId parameter to the IDs of backup sets for all shards of the source instance, separated by commas (,). Example: &quot;2158\<em>\</em>\<em>\<em>20,2158\</em>\</em>\*\*22&quot;.</description></item>
@@ -159,9 +159,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DedicatedHostGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>true</b>: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error code is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// <item><description><b>false</b>: performs a dry run and sends the request. If the request passes the dry run, the instance is created.</description></item>
         /// </list>
         /// 
@@ -197,17 +197,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the new instance as the first child instance of the distributed instance. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to use the new instance as the first child instance of a distributed instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: uses the new instance as the first child instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: does not use the new instance as the first child instance.</para>
-        /// </description></item>
-        /// <item><description><para>If you want to create an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that runs Redis 5.0, you must set this parameter to <b>true</b>.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter is available only on the China site (aliyun.com).</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: uses the new instance as the first child instance.</description></item>
+        /// <item><description><b>false</b> (default): does not use the new instance as the first child instance.</description></item>
         /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you want to create a Tair DRAM-based instance that runs Redis 5.0, you must set this parameter to <b>true</b>.</description></item>
+        /// <item><description>This parameter is available only on the China site (aliyun.com).</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -259,9 +259,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The category of the instance. Default value: Redis. Valid values:</para>
+        /// <para>The database engine of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Redis</b></description></item>
+        /// <item><description><b>Redis</b> (default)</description></item>
         /// <item><description><b>Memcache</b></description></item>
         /// </list>
         /// 
@@ -273,9 +273,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The network type of the instance. Default value: VPC. Valid values:</para>
+        /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b></description></item>
+        /// <item><description><b>VPC</b> (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -381,12 +381,22 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? ReadOnlyCount { get; set; }
 
+        /// <summary>
+        /// <para>When creating an instance using a specified backup set, whether to restore account, kernel parameter (whitelist), and whitelist (config) information from the original backup set. For example, if you need to restore account information, the value should be <c>{&quot;account&quot;:true}</c>.
+        /// By default, it is empty, indicating that no account, kernel parameter, or whitelist information will be restored from the original backup set. </para>
+        /// <remarks>
+        /// <para>This parameter applies only to cloud-native instances and requires that the original backup set has saved the account, kernel parameter, and whitelist information. You can use the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> API to check if the RecoverConfigMode parameter in the specified backup set contains the above information.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;whitelist&quot;:true,&quot;config&quot;:true,&quot;account&quot;:true}</para>
+        /// </summary>
         [NameInMap("RecoverConfigMode")]
         [Validation(Required=false)]
         public string RecoverConfigMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where you want to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where you want to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -396,6 +406,21 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The number of slave replicas in the primary availability zone. This parameter is applicable only for creating cloud-native cluster edition multi-replica instances, allowing you to customize the number of slave replicas. The value range is 1 to 4.</para>
+        /// <remarks>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The sum of this parameter and SlaveReplicaCount cannot exceed 4. </description></item>
+        /// <item><description>Only one of this parameter and ReadOnlyCount can be passed; there are no instances that simultaneously include both replicas and read-only nodes. </description></item>
+        /// <item><description>Primary-secondary instances do not support multiple replicas.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("ReplicaCount")]
         [Validation(Required=false)]
         public int? ReplicaCount { get; set; }
@@ -429,7 +454,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// <para>The secondary zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/472448.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// <para>The secondary zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the most recent zone list.</para>
         /// <remarks>
         /// <para>If you specify this parameter, the master node and replica node of the instance can be deployed in different zones and disaster recovery is implemented across zones. The instance can withstand failures in data centers.</para>
         /// </remarks>
@@ -449,7 +474,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The number of data shards. This parameter is available only if you create a cluster instance that uses cloud disks.</para>
+        /// <para>The number of shards. This parameter is applicable only to cloud-native cluster instances. You can use this parameter to customize the number of shards.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -471,6 +496,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public int? SlaveReadOnlyCount { get; set; }
 
+        /// <summary>
+        /// <para>Used for specifying the number of slave replicas in the secondary availability zone when creating a multi-AZ cloud-native cluster edition with multiple replicas. The sum of this parameter and ReplicaCount cannot exceed 4. <notice>When creating a multi-AZ cloud-native cluster edition with multiple replicas, both SlaveReplicaCount and SecondaryZoneId parameters must be specified.</notice></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("SlaveReplicaCount")]
         [Validation(Required=false)]
         public int? SlaveReplicaCount { get; set; }
@@ -498,13 +529,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The keys of the tags that are added to the instance.</para>
             /// <remarks>
-            /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para><b>N</b> specifies the serial number of the tag. Up to 20 tags can be added to a single instance. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag.</para>
-            /// </description></item>
-            /// <item><description><para>If the key of the tag does not exist, the tag is automatically created.</para>
-            /// </description></item>
+            /// <item><description><b>N</b> specifies the serial number of the tag. Up to 20 tags can be added to a single instance. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag.</description></item>
+            /// <item><description>If the key of the tag does not exist, the tag is automatically created.</description></item>
             /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>testkey</para>
@@ -559,7 +588,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The primary zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent zone list.</para>
+        /// <para>The primary zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent zone list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-e</para>

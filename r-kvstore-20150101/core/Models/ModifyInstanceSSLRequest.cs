@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceSSLRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Modifies SSL encryption configurations. Valid values:</para>
+        /// <para>Specifies whether to enable TLS (SSL) encryption. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Disable</b>: The SSL encryption is disabled.</description></item>
-        /// <item><description><b>Enable</b>: The SSL encryption is enabled.</description></item>
-        /// <item><description><b>Update</b>: The SSL certificate is updated.</description></item>
+        /// <item><description><b>Disable</b>: disables SSL encryption.</description></item>
+        /// <item><description><b>Enable</b>: enables SSL encryption.</description></item>
+        /// <item><description><b>Update</b>: updates the SSL certificate.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

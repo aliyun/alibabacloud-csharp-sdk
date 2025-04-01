@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BandwidthExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The billing methods of unexpired bandwith plans. Valid values:</para>
+        /// <para>The billing method of the bandwidth plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Pay-as-you-go</description></item>
-        /// <item><description><b>1</b>: Subscription</description></item>
+        /// <item><description><b>0</b>: pay-as-you-go</description></item>
+        /// <item><description><b>1</b>: subscription</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? HasPrePaidBandWidthOrderRunning { get; set; }
 
         /// <summary>
-        /// <para>The current internal bandwidth of the instance. Unit: Mbit/s.</para>
+        /// <para>The internal bandwidth of the instance. This parameter indicates the combined bandwidth of all shards in the instance. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>102</para>

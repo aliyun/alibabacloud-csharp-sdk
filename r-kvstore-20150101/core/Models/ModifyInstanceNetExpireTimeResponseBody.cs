@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Details of the extension period for which the classic network endpoint of the instance is retained.</para>
+        /// <para>Details about the extension period for which the classic network endpoint of the instance is retained.</para>
         /// </summary>
         [NameInMap("NetInfoItems")]
         [Validation(Required=false)]

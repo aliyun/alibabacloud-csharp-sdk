@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The ID of the child node in the cluster instance.</para>
         /// <remarks>
-        /// <para>If this parameter is not specified, the analysis results of all child nodes in the instance are returned.</para>
+        /// <para> If you do not specify this parameter, the analysis results of all child nodes in the instance are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

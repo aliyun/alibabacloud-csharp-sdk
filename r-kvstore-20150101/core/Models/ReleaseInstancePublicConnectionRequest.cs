@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CurrentConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance for which you want to release a public endpoint.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

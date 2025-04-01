@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeAvailableResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the zones.</para>
+        /// <para>Details about the zones.</para>
         /// </summary>
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone> AvailableZone { get; set; }
             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone : TeaModel {
+                /// <summary>
+                /// <para>An internal parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("IsMainSale")]
+                [Validation(Required=false)]
+                public bool? IsMainSale { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the region.</para>
                 /// 
@@ -31,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The available database engines.</para>
+                /// <para>The supported engines.</para>
                 /// </summary>
                 [NameInMap("SupportedEngines")]
                 [Validation(Required=false)]
@@ -52,7 +62,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                         public string Engine { get; set; }
 
                         /// <summary>
-                        /// <para>The available instance editions.</para>
+                        /// <para>The instance edition types.</para>
                         /// </summary>
                         [NameInMap("SupportedEditionTypes")]
                         [Validation(Required=false)]
@@ -77,7 +87,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                                 public string EditionType { get; set; }
 
                                 /// <summary>
-                                /// <para>The available instance series.</para>
+                                /// <para>The instance series types.</para>
                                 /// </summary>
                                 [NameInMap("SupportedSeriesTypes")]
                                 [Validation(Required=false)]
@@ -90,8 +100,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                                         /// <summary>
                                         /// <para>The instance series. Valid values:</para>
                                         /// <list type="bullet">
-                                        /// <item><description><b>enhanced_performance_type</b>: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</description></item>
-                                        /// <item><description><b>hybrid_storage</b>: ApsaraDB for Redis Community Edition hybrid-storage instance</description></item>
+                                        /// <item><description><b>enhanced_performance_type</b>: Tair (Enterprise Edition) DRAM-based instance</description></item>
+                                        /// <item><description><b>hybrid_storage</b>: Redis Open-Source Edition hybrid-storage instance</description></item>
                                         /// </list>
                                         /// 
                                         /// <b>Example:</b>
@@ -113,7 +123,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                                             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesTypeSupportedEngineVersionsSupportedEngineVersion> SupportedEngineVersion { get; set; }
                                             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypesSupportedSeriesTypeSupportedEngineVersionsSupportedEngineVersion : TeaModel {
                                                 /// <summary>
-                                                /// <para>The available instance architectures.</para>
+                                                /// <para>The available architectures.</para>
                                                 /// </summary>
                                                 [NameInMap("SupportedArchitectureTypes")]
                                                 [Validation(Required=false)]
@@ -139,7 +149,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                                                         public string Architecture { get; set; }
 
                                                         /// <summary>
-                                                        /// <para>The numbers of shards that are allowed.</para>
+                                                        /// <para>The numbers of available shards.</para>
                                                         /// </summary>
                                                         [NameInMap("SupportedShardNumbers")]
                                                         [Validation(Required=false)]
@@ -160,7 +170,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                                                                 public string ShardNumber { get; set; }
 
                                                                 /// <summary>
-                                                                /// <para>The available node types.</para>
+                                                                /// <para>The supported node types.</para>
                                                                 /// </summary>
                                                                 [NameInMap("SupportedNodeTypes")]
                                                                 [Validation(Required=false)]

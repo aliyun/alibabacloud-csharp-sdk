@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeCacheAnalysisReportListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the offline key analytics tasks.</para>
+        /// <para>The list of the offline key analysis reports.</para>
         /// </summary>
         [NameInMap("DailyTasks")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string Date { get; set; }
 
                 /// <summary>
-                /// <para>Details of the offline key analytics tasks.</para>
+                /// <para>Details about the offline key analysis reports.</para>
                 /// </summary>
                 [NameInMap("Tasks")]
                 [Validation(Required=false)]

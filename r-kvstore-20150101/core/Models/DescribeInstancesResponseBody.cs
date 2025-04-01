@@ -80,6 +80,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string CloudType { get; set; }
 
+                /// <summary>
+                /// <para>The type of the computing resource. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Ecs</b>: cloud-native computing service</description></item>
+                /// <item><description><b>Machine</b>: physical machine</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Ecs</para>
+                /// </summary>
                 [NameInMap("ComputingType")]
                 [Validation(Required=false)]
                 public string ComputingType { get; set; }
@@ -151,8 +161,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>The edition of the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Community</b>: ApsaraDB for Redis Community Edition</description></item>
-                /// <item><description><b>Enterprise</b>: ApsaraDB for Redis Enhanced Edition (Tair)</description></item>
+                /// <item><description><b>Community</b>: Redis Open-Source Edition</description></item>
+                /// <item><description><b>Enterprise</b>: Tair (Enterprise Edition)</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -173,7 +183,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The engine version of the instance. Valid values: <b>2.8</b>, <b>4.0</b>, and <b>5.0</b>.</para>
+                /// <para>The database engine version of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4.0</para>
@@ -370,6 +380,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public long? QPS { get; set; }
 
+                /// <summary>
+                /// <para>The number of read replicas in the primary zone.</para>
+                /// <remarks>
+                /// <para> The <b>ReadOnlyCount</b> and <b>SlaveReadOnlyCount</b> parameters are applicable only to cloud-native instances for which read/write splitting is enabled. If the instance is a cluster instance, the preceding parameters indicate the number of read replicas <b>per node</b> in the primary and secondary zones of the instance.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("ReadOnlyCount")]
                 [Validation(Required=false)]
                 public string ReadOnlyCount { get; set; }
@@ -394,6 +413,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string ReplacateId { get; set; }
 
+                /// <summary>
+                /// <para>The number of replica nodes in the primary zone.</para>
+                /// <remarks>
+                /// <para> The <b>ReplicaCount</b> and <b>SlaveReplicaCount</b> parameters are applicable only to cloud-native instances. If the instance is a cluster instance, the preceding parameters indicate the number of replica nodes <b>per node</b> in the primary and secondary zones of the instance.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("ReplicaCount")]
                 [Validation(Required=false)]
                 public int? ReplicaCount { get; set; }
@@ -447,10 +475,22 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public int? ShardCount { get; set; }
 
+                /// <summary>
+                /// <para>The number of read replicas in the secondary zone.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("SlaveReadOnlyCount")]
                 [Validation(Required=false)]
                 public int? SlaveReadOnlyCount { get; set; }
 
+                /// <summary>
+                /// <para>The number of replica nodes in the secondary zone.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("SlaveReplicaCount")]
                 [Validation(Required=false)]
                 public int? SlaveReplicaCount { get; set; }

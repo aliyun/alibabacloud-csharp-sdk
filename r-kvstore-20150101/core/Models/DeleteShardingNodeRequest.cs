@@ -10,6 +10,23 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteShardingNodeRequest : TeaModel {
         /// <summary>
+        /// <para>The time when you want to delete the proxy nodes for instance in the proxy mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0 or Immediately</b> (default): immediately delete the proxy nodes.</description></item>
+        /// <item><description><b>1 or MaintainTime</b>: delete the proxy nodes during the maintenance window.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Immediately</para>
+        /// </summary>
+        [NameInMap("EffectiveTime")]
+        [Validation(Required=false)]
+        public string EffectiveTime { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to enable forced transmission during a configuration change. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>false</b> (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.</description></item>

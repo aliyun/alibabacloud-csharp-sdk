@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The ID of the DTS instance. You can view the ID in the <a href="https://dts.console.aliyun.com/">DTS console</a>.</para>
         /// <remarks>
-        /// <para>An ApsaraDB for Redis instance may be involved in multiple data migration or synchronization tasks. If you want to cancel the restriction on the instance, you can specify this parameter to prevent repeated operation calls.</para>
+        /// <para> A Tair (Redis OSS-compatible) instance may be involved in multiple data migration or synchronization tasks. If you want to cancel the restriction on the instance, you can specify this parameter to prevent repeated operation calls.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

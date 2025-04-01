@@ -241,6 +241,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
+        [NameInMap("UseEni")]
+        [Validation(Required=false)]
+        public bool? UseEni { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>vsw-bp1e7clcw529l773d****</para>

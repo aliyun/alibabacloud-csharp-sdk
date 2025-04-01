@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeParameterModificationHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the parameter modification records.</para>
+        /// <para>The modification records of the parameters.</para>
         /// </summary>
         [NameInMap("HistoricalParameters")]
         [Validation(Required=false)]

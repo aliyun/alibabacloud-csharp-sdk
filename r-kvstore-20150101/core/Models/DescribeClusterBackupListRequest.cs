@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ClusterBackupId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</para>
+        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +40,25 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to show backup set information for shards in the instance.</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: does not show backup set information for shards in the instance.</description></item>
+        /// <item><description><b>false</b> (default): shows backup set information for shards in the instance.</description></item>
+        /// </list>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>True</description></item>
+        /// <item><description>False</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
+        [NameInMap("NoShardBackup")]
+        [Validation(Required=false)]
+        public string NoShardBackup { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -50,7 +69,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +79,19 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>30</description></item>
+        /// <item><description>50</description></item>
+        /// <item><description>100</description></item>
+        /// <item><description>200</description></item>
+        /// <item><description>300</description></item>
+        /// <item><description>5</description></item>
+        /// <item><description>10</description></item>
+        /// <item><description>15</description></item>
+        /// <item><description>20</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -70,7 +101,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +124,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

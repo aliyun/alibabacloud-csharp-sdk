@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The display language of the response. Default value: zh-CN. Valid values:</para>
+        /// <para>The display language of the zone names to return. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh-C</b>N: Chinese</description></item>
+        /// <item><description><b>zh-CN</b> (default): Chinese</description></item>
         /// <item><description><b>en-US</b>: English</description></item>
         /// </list>
         /// 

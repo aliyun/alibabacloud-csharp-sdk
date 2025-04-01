@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The port number that is used to connect to the instance. Valid values: <b>1024</b> to <b>65535</b>.</para>
+        /// <para>The port number of the instance. Valid values: <b>1024</b> to <b>65535</b>.</para>
         /// <remarks>
-        /// <para>You must specify one of the <b>NewConnectionString</b> and <b>Port</b> parameters.</para>
+        /// <para> You must specify one of the <b>NewConnectionString</b> and <b>Port</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

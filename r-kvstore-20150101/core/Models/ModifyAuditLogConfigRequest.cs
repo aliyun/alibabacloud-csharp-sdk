@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? DbAudit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</para>
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,11 +56,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The retention period of audit logs. Valid values: <b>1</b> to <b>365</b>. Unit: days.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter is required only if the <b>DbAudit</b> parameter is set to <b>true</b>.</description></item>
-        /// <item><description>The value of this parameter takes effect for all ApsaraDB for Redis instances in the current region.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is required only when the <b>DbAudit</b> parameter is set to <b>true</b>.</para>
+        /// </description></item>
+        /// <item><description><para>The value of this parameter takes effect for all instances in the current region.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
