@@ -71,6 +71,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public int? Size { get; set; }
 
+        [NameInMap("SourceId")]
+        [Validation(Required=false)]
+        public string SourceId { get; set; }
+
+        [NameInMap("SourceType")]
+        [Validation(Required=false)]
+        public string SourceType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>15******45</para>
