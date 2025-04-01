@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         [NameInMap("CNNodeCount")]
         [Validation(Required=false)]
-        public string CNNodeCount { get; set; }
+        public int? CNNodeCount { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         [NameInMap("DNNodeCount")]
         [Validation(Required=false)]
-        public string DNNodeCount { get; set; }
+        public int? DNNodeCount { get; set; }
 
         [NameInMap("DnClass")]
         [Validation(Required=false)]

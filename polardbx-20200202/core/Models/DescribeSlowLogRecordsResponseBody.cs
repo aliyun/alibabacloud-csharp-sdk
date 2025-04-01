@@ -181,6 +181,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string SqlType { get; set; }
 
+            [NameInMap("TemplateId")]
+            [Validation(Required=false)]
+            public string TemplateId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>0</para>

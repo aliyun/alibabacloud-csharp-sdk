@@ -1459,6 +1459,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await CreateDBWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateDBInstanceRequest
         /// </param>
@@ -1617,6 +1622,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateDBInstanceRequest
         /// </param>
@@ -1775,6 +1785,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDBInstanceRequest
         /// </param>
@@ -1788,6 +1803,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return CreateDBInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDBInstanceRequest
         /// </param>
@@ -3599,6 +3619,148 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeBinaryLogListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询CDC信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCdcInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCdcInfoResponse
+        /// </returns>
+        public DescribeCdcInfoResponse DescribeCdcInfoWithOptions(DescribeCdcInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCdcInfo",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeCdcInfoResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeCdcInfoResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询CDC信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCdcInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCdcInfoResponse
+        /// </returns>
+        public async Task<DescribeCdcInfoResponse> DescribeCdcInfoWithOptionsAsync(DescribeCdcInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCdcInfo",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeCdcInfoResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeCdcInfoResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询CDC信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCdcInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCdcInfoResponse
+        /// </returns>
+        public DescribeCdcInfoResponse DescribeCdcInfo(DescribeCdcInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCdcInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询CDC信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCdcInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCdcInfoResponse
+        /// </returns>
+        public async Task<DescribeCdcInfoResponse> DescribeCdcInfoAsync(DescribeCdcInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCdcInfoWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// DescribeCharacterSetRequest
         /// </param>
@@ -4939,6 +5101,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeDBInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>性能监控数据接口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBNodePerformanceRequest
         /// </param>
@@ -5011,6 +5178,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>性能监控数据接口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBNodePerformanceRequest
         /// </param>
@@ -5083,6 +5255,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>性能监控数据接口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBNodePerformanceRequest
         /// </param>
@@ -5096,6 +5273,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeDBNodePerformanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>性能监控数据接口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBNodePerformanceRequest
         /// </param>
@@ -11005,6 +11187,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await UpdateDBInstanceTDEWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>扩缩容实例节点数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdatePolarDBXInstanceNodeRequest
         /// </param>
@@ -11081,6 +11268,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>扩缩容实例节点数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdatePolarDBXInstanceNodeRequest
         /// </param>
@@ -11157,6 +11349,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>扩缩容实例节点数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdatePolarDBXInstanceNodeRequest
         /// </param>
@@ -11170,6 +11367,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return UpdatePolarDBXInstanceNodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>扩缩容实例节点数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdatePolarDBXInstanceNodeRequest
         /// </param>

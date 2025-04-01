@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// </summary>
         [NameInMap("CNNodeCount")]
         [Validation(Required=false)]
-        public string CNNodeCount { get; set; }
+        public int? CNNodeCount { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// </summary>
         [NameInMap("DNNodeCount")]
         [Validation(Required=false)]
-        public string DNNodeCount { get; set; }
+        public int? DNNodeCount { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// </summary>
         [NameInMap("DbInstanceNodeCount")]
         [Validation(Required=false)]
-        public string DbInstanceNodeCount { get; set; }
+        public int? DbInstanceNodeCount { get; set; }
 
         [NameInMap("DeleteDNIds")]
         [Validation(Required=false)]
