@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
 {
     public class CreateProjectModifyRecordsShrinkRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public string DatabasesShrink { get; set; }
@@ -25,6 +22,10 @@ namespace AlibabaCloud.SDK.OceanBasePro20190901.Models
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
+
+        [NameInMap("TransferMapping")]
+        [Validation(Required=false)]
+        public string TransferMappingShrink { get; set; }
 
     }
 
