@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeBgpNetworksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The BGP network.</para>
+        /// <para>BGP networks.</para>
         /// </summary>
         [NameInMap("BgpNetworks")]
         [Validation(Required=false)]
