@@ -1,3 +1,6 @@
+2025-04-01 Version: 6.0.3
+- Generated csharp 2021-05-21 for ComputeNestSupplier.
+
 2025-03-19 Version: 6.0.2
 - Update API GetSupplierInformation: update response param.
 - Update API ListAcrImageRepositories: update response param.

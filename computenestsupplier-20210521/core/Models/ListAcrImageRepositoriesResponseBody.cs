@@ -56,6 +56,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
 
+            /// <summary>
+            /// <para>The namespace of the repository</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>computenest</para>
+            /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }

@@ -8055,23 +8055,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         public ListServiceUsagesResponse ListServiceUsagesWithOptions(ListServiceUsagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
-            {
-                query["Filter"] = request.Filter;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
-            {
-                query["MaxResults"] = request.MaxResults;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
-            {
-                query["NextToken"] = request.NextToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupplierRole))
-            {
-                query["SupplierRole"] = request.SupplierRole;
-            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -8082,7 +8066,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
                 Version = "2021-05-21",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "POST",
+                Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -8116,23 +8100,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
         public async Task<ListServiceUsagesResponse> ListServiceUsagesWithOptionsAsync(ListServiceUsagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
-            {
-                query["Filter"] = request.Filter;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
-            {
-                query["MaxResults"] = request.MaxResults;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
-            {
-                query["NextToken"] = request.NextToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupplierRole))
-            {
-                query["SupplierRole"] = request.SupplierRole;
-            }
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -8143,7 +8111,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521
                 Version = "2021-05-21",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "POST",
+                Method = "GET",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
