@@ -459,6 +459,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryTags))
+            {
+                body["categoryTags"] = request.CategoryTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrompt))
             {
                 body["customPrompt"] = request.CustomPrompt;
@@ -498,6 +502,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Transcription))
             {
                 body["transcription"] = request.Transcription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Variables))
+            {
+                body["variables"] = request.Variables;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -548,6 +556,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryTags))
+            {
+                body["categoryTags"] = request.CategoryTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrompt))
             {
                 body["customPrompt"] = request.CustomPrompt;
@@ -587,6 +599,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Transcription))
             {
                 body["transcription"] = request.Transcription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Variables))
+            {
+                body["variables"] = request.Variables;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1487,6 +1503,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             {
                 body["TemplateIds"] = request.TemplateIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Variables))
+            {
+                body["variables"] = request.Variables;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1559,6 +1579,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateIds))
             {
                 body["TemplateIds"] = request.TemplateIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Variables))
+            {
+                body["variables"] = request.Variables;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

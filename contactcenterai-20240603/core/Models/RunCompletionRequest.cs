@@ -149,6 +149,20 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public List<long?> TemplateIds { get; set; }
 
+        [NameInMap("variables")]
+        [Validation(Required=false)]
+        public List<RunCompletionRequestVariables> Variables { get; set; }
+        public class RunCompletionRequestVariables : TeaModel {
+            [NameInMap("variableCode")]
+            [Validation(Required=false)]
+            public string VariableCode { get; set; }
+
+            [NameInMap("variableValue")]
+            [Validation(Required=false)]
+            public string VariableValue { get; set; }
+
+        }
+
     }
 
 }

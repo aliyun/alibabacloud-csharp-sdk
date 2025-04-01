@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 {
     public class CreateTaskRequest : TeaModel {
+        [NameInMap("categoryTags")]
+        [Validation(Required=false)]
+        public List<CreateTaskRequestCategoryTags> CategoryTags { get; set; }
+        public class CreateTaskRequestCategoryTags : TeaModel {
+            [NameInMap("tagDesc")]
+            [Validation(Required=false)]
+            public string TagDesc { get; set; }
+
+            [NameInMap("tagName")]
+            [Validation(Required=false)]
+            public string TagName { get; set; }
+
+        }
+
         [NameInMap("customPrompt")]
         [Validation(Required=false)]
         public string CustomPrompt { get; set; }
@@ -271,6 +285,20 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             [NameInMap("voiceFileUrl")]
             [Validation(Required=false)]
             public string VoiceFileUrl { get; set; }
+
+        }
+
+        [NameInMap("variables")]
+        [Validation(Required=false)]
+        public List<CreateTaskRequestVariables> Variables { get; set; }
+        public class CreateTaskRequestVariables : TeaModel {
+            [NameInMap("variableCode")]
+            [Validation(Required=false)]
+            public string VariableCode { get; set; }
+
+            [NameInMap("variableValue")]
+            [Validation(Required=false)]
+            public string VariableValue { get; set; }
 
         }
 
