@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>Sorting field. By default, it sorts by creation time, supporting the following options:</para>
         /// <list type="bullet">
         /// <item><description>gmtCreate: website creation time</description></item>
-        /// <item><description>visitTime：website visit time</description></item>
+        /// <item><description>visitTime: website visit time</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

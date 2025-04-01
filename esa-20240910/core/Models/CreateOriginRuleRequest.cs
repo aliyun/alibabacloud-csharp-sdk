@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string OriginMtls { get; set; }
 
+        [NameInMap("OriginReadTimeout")]
+        [Validation(Required=false)]
+        public string OriginReadTimeout { get; set; }
+
         /// <summary>
         /// <para>Protocol used for the origin request. Possible values:</para>
         /// <list type="bullet">
