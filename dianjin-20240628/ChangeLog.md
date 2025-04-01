@@ -1,3 +1,6 @@
+2025-04-01 Version: 1.11.1
+- Generated csharp 2024-06-28 for DianJin.
+
 2025-04-01 Version: 1.11.0
 - Support API UpdateDocumentChunk.
 
