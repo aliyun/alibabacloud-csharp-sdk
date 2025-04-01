@@ -133,6 +133,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? InternetAccess { get; set; }
 
+        [NameInMap("invocationRestriction")]
+        [Validation(Required=false)]
+        public OpenStructFunctionRestriction InvocationRestriction { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2023-05-01T08:15:27Z</para>
