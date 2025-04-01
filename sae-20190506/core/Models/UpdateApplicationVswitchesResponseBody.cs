@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateApplicationVswitchesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: The request was successful.</description></item>
+        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The request failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +25,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The error code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the request was successful, this parameter is not returned.****</description></item>
+        /// <item><description>If the request failed, <b>ErrorCode</b> is returned. For more information, see <b>Error code</b> section of this topic.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The message returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the request was successful, <b>success</b> is returned.</description></item>
+        /// <item><description>If the request failed, an error code is returned.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -30,6 +51,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
         /// </summary>
@@ -38,6 +61,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the list of applications was obtained. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The applications were obtained.</description></item>
+        /// <item><description><b>false</b>: The applications failed to be queried.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -46,6 +75,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>
         /// </summary>

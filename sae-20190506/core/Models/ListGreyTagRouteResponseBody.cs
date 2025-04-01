@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>s-6366-e3****-99**</para>
+                    /// </summary>
                     [NameInMap("serviceName")]
                     [Validation(Required=false)]
                     public string ServiceName { get; set; }

@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
+                [NameInMap("AppType")]
+                [Validation(Required=false)]
+                public string AppType { get; set; }
+
                 [NameInMap("BaseAppId")]
                 [Validation(Required=false)]
                 public string BaseAppId { get; set; }
@@ -111,6 +115,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     [Validation(Required=false)]
                     public string AppName { get; set; }
 
+                    [NameInMap("AppType")]
+                    [Validation(Required=false)]
+                    public string AppType { get; set; }
+
                     [NameInMap("BaseAppId")]
                     [Validation(Required=false)]
                     public string BaseAppId { get; set; }
@@ -134,6 +142,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     [NameInMap("NamespaceId")]
                     [Validation(Required=false)]
                     public string NamespaceId { get; set; }
+
+                    [NameInMap("NamespaceName")]
+                    [Validation(Required=false)]
+                    public string NamespaceName { get; set; }
+
+                    [NameInMap("NewSaeVersion")]
+                    [Validation(Required=false)]
+                    public string NewSaeVersion { get; set; }
 
                     [NameInMap("ProgrammingLanguage")]
                     [Validation(Required=false)]
@@ -190,6 +206,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public int? Cpu { get; set; }
 
+                [NameInMap("EnableIdle")]
+                [Validation(Required=false)]
+                public string EnableIdle { get; set; }
+
                 [NameInMap("ImageUrl")]
                 [Validation(Required=false)]
                 public string ImageUrl { get; set; }
@@ -243,6 +263,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("NamespaceId")]
                 [Validation(Required=false)]
                 public string NamespaceId { get; set; }
+
+                [NameInMap("NamespaceName")]
+                [Validation(Required=false)]
+                public string NamespaceName { get; set; }
+
+                [NameInMap("NewSaeVersion")]
+                [Validation(Required=false)]
+                public string NewSaeVersion { get; set; }
 
                 [NameInMap("PackageUrl")]
                 [Validation(Required=false)]

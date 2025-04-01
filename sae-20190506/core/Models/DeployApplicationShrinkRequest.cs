@@ -159,6 +159,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string CustomHostAlias { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>internet</para>
+        /// </summary>
         [NameInMap("CustomImageNetworkType")]
         [Validation(Required=false)]
         public string CustomImageNetworkType { get; set; }
@@ -177,6 +181,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Deploy { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>.NET 3.1</para>
+        /// </summary>
         [NameInMap("Dotnet")]
         [Validation(Required=false)]
         public string Dotnet { get; set; }
@@ -205,6 +213,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string EnableAhas { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnableCpuBurst")]
         [Validation(Required=false)]
         public bool? EnableCpuBurst { get; set; }
@@ -223,10 +235,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public bool? EnableGreyTagRoute { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnableNewArms")]
         [Validation(Required=false)]
         public bool? EnableNewArms { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnableSidecarResourceIsolated")]
         [Validation(Required=false)]
         public bool? EnableSidecarResourceIsolated { get; set; }
@@ -392,6 +412,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string MicroRegistrationConfig { get; set; }
 
+        [NameInMap("MicroserviceEngineConfig")]
+        [Validation(Required=false)]
+        public string MicroserviceEngineConfig { get; set; }
+
         /// <summary>
         /// <para>The percentage of the minimum number of available instances. Take note of the following rules:</para>
         /// <list type="bullet">
@@ -473,6 +497,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string NasId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the RAM role used to authenticate the user identity.</para>
+        /// <remarks>
+        /// <para> You need to create an OpenID Connect (OIDC) identity provider (IdP) and an identity provider (IdP) for role-based single sign-on (SSO) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/2331022.html">Creates an OpenID Connect (OIDC) identity provider (IdP)</a> and <a href="https://help.aliyun.com/document_detail/2331016.html">Creates an identity provider (IdP) for role-based single sign-on (SSO)</a>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sae-test</para>
+        /// </summary>
         [NameInMap("OidcRoleName")]
         [Validation(Required=false)]
         public string OidcRoleName { get; set; }
@@ -664,6 +697,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public int? Replicas { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[{“secretId&quot;:10,”key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</para>
+        /// </summary>
         [NameInMap("SecretMountDesc")]
         [Validation(Required=false)]
         public string SecretMountDesc { get; set; }
@@ -684,6 +721,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ServiceTags { get; set; }
 
+        /// <summary>
+        /// <para>The configuration of the container.</para>
+        /// </summary>
         [NameInMap("SidecarContainersConfig")]
         [Validation(Required=false)]
         public string SidecarContainersConfigShrink { get; set; }
@@ -713,6 +753,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("SlsConfigs")]
         [Validation(Required=false)]
         public string SlsConfigs { get; set; }
+
+        [NameInMap("SwimlanePvtzDiscoverySvc")]
+        [Validation(Required=false)]
+        public string SwimlanePvtzDiscoverySvc { get; set; }
 
         /// <summary>
         /// <para>The timeout period for a graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.</para>

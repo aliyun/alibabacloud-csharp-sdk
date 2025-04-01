@@ -9,6 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateNamespaceRequest : TeaModel {
+        /// <summary>
+        /// <para>Indicates whether to enable SAE built-in registry:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// <para>If you set this parameter to true, a shared registry is created for the namespace. The registry cannot be disabled after it is created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnableMicroRegistration")]
         [Validation(Required=false)]
         public bool? EnableMicroRegistration { get; set; }
@@ -34,7 +45,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceDescription { get; set; }
 
         /// <summary>
-        /// <para>The long ID of the namespace. If you configure this parameter, the long ID take effects and the value of the NameSpaceShortId parameter is ignored. To ensure compatibility, we recommend that you specify a short namespace ID. A long namespace ID follows the <c>&lt;RegionId&gt;:&lt;NamespaceId&gt;</c> format. The <c>NamespaceId</c> variable can contain only lowercase letters and digits. Example: <c>cn-beijing:test</c>. The value of the NamespaceId variable cannot exceed 32 characters in length. For more information about <b>RegionId</b>, you can call the <a href="https://help.aliyun.com/document_detail/126213.html">DescribeRegions</a> operation to obtain the IDs of regions supported by SAE.</para>
+        /// <para>The long ID of the namespace. If you configure this parameter, the long ID take effects and the value of the NameSpaceShortId parameter is ignored. To ensure compatibility, we recommend that you specify a short namespace ID. A long namespace ID follows the <c>&lt;RegionId&gt;:&lt;NamespaceId&gt;</c> format. The <c>NamespaceId</c> variable can contain only lowercase letters and digits. Example: <c>cn-beijing:test</c>. The value of the Namespaceid variable cannot exceed 32 characters in length. For more information about <b>RegionId</b>, you can call the <a href="https://help.aliyun.com/document_detail/2834842.html">DescribeRegions</a> operation to obtain the IDs of regions supported by SAE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>

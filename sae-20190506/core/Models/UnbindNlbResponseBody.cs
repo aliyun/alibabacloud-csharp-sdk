@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
-    public class AbortChangeOrderResponseBody : TeaModel {
+    public class UnbindNlbResponseBody : TeaModel {
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
@@ -26,17 +26,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public AbortChangeOrderResponseBodyData Data { get; set; }
-        public class AbortChangeOrderResponseBodyData : TeaModel {
+        public UnbindNlbResponseBodyData Data { get; set; }
+        public class UnbindNlbResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the change order.</para>
+            /// <para>The ID of the change order. The ID can be used to query the status of the change task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>be2e1c76-682b-4897-98d3-1d8d6478****</para>
+            /// <para>ba386059-69b1-4e65-b1e5-0682d9fa****</para>
             /// </summary>
             [NameInMap("ChangeOrderId")]
             [Validation(Required=false)]
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Value values:</para>
+        /// <para>The status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ErrorCode</b> is not returned if a request is successful.</description></item>
-        /// <item><description><b>ErrorCode</b> is returned if a request failed. For more information, see <b>Error code</b> section of this topic.</description></item>
+        /// <item><description>If the request was successful, <b>ErrorCode</b> is not returned.</description></item>
+        /// <item><description>If the request failed, <b>ErrorCode</b> is returned. For more information, see <b>Error codes</b> section of this topic.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -56,7 +56,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the operation.</para>
+        /// <para>The message returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the request was successful, <b>success</b> is returned.</description></item>
+        /// <item><description>If the request failed, an error code is returned.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -66,7 +70,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -76,10 +80,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the change order was terminated. Valid values:</para>
+        /// <para>Indicates whether the internal-facing or Internet-facing NLB instance was disassociated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The change order was terminated.</description></item>
-        /// <item><description><b>false</b>: The change order failed to be terminated.</description></item>
+        /// <item><description><b>true</b>: The NLB instance was disassociated.</description></item>
+        /// <item><description><b>false</b>: The NLB instance failed to be disassociated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,10 +94,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace.</para>
+        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0a98a02315955564772843261e****</para>
+        /// <para>0a981dd515966966104121683d****</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

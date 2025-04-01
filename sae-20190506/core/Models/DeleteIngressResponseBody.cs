@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request failed.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><b>2xx</b>: The call was successful.</description></item>
+        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The call failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteIngressResponseBodyData Data { get; set; }
         public class DeleteIngressResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the routing rule that you want to delete.</para>
+            /// <para>The ID of the deleted routing rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>87</para>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-        /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
+        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>Indicates whether the routing rule was deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: indicates that the routing rule was deleted.</description></item>
-        /// <item><description><b>false</b>: indicates that the routing rule could not be deleted.</description></item>
+        /// <item><description><b>true</b>: The routing rule was deleted.</description></item>
+        /// <item><description><b>false</b>: The routing rule failed to be deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It is used to query the details of a request.</para>
+        /// <para>The trace ID that is used to query the details of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

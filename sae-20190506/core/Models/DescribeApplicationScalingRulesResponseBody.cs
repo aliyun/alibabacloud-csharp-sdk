@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeApplicationScalingRulesResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -46,10 +50,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
-
-                [NameInMap("EnableIdle")]
-                [Validation(Required=false)]
-                public bool? EnableIdle { get; set; }
 
                 /// <summary>
                 /// <para>The time when the auto scaling policy was last disabled.</para>
@@ -119,18 +119,34 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                         [Validation(Required=false)]
                         public string MetricType { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>lb-xxx</para>
+                        /// </summary>
                         [NameInMap("SlbId")]
                         [Validation(Required=false)]
                         public string SlbId { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>test</para>
+                        /// </summary>
                         [NameInMap("SlbLogstore")]
                         [Validation(Required=false)]
                         public string SlbLogstore { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>test</para>
+                        /// </summary>
                         [NameInMap("SlbProject")]
                         [Validation(Required=false)]
                         public string SlbProject { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>80</para>
+                        /// </summary>
                         [NameInMap("Vport")]
                         [Validation(Required=false)]
                         public string Vport { get; set; }
@@ -407,10 +423,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>-1</para>
+                /// </summary>
                 [NameInMap("MinReadyInstanceRatio")]
                 [Validation(Required=false)]
                 public int? MinReadyInstanceRatio { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("MinReadyInstances")]
                 [Validation(Required=false)]
                 public int? MinReadyInstances { get; set; }
@@ -615,6 +639,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -629,6 +657,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

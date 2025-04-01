@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeJobRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>The ID of the job template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

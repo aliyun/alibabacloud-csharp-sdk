@@ -20,12 +20,22 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The region where the namespace resides.</para>
+        /// <para>The information about a namespace.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateNamespaceResponseBodyData Data { get; set; }
         public class CreateNamespaceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether the SAE built-in registry is enabled:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("EnableMicroRegistration")]
             [Validation(Required=false)]
             public bool? EnableMicroRegistration { get; set; }

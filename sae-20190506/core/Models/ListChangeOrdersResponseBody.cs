@@ -24,26 +24,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>The information about change orders.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListChangeOrdersResponseBodyData Data { get; set; }
         public class ListChangeOrdersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The status of the change order. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>0</b>: The change order is being prepared.</description></item>
-            /// <item><description><b>1</b>: The change order is being executed.</description></item>
-            /// <item><description><b>2</b>: The change order was executed.</description></item>
-            /// <item><description><b>3</b>: The change order could not be executed.</description></item>
-            /// <item><description><b>6</b>: The change order was terminated.</description></item>
-            /// <item><description><b>8</b>: The execution process is pending. You must manually determine the release batch.</description></item>
-            /// <item><description><b>9</b>: The execution process is pending. SAE will automatically determine the release batch.</description></item>
-            /// <item><description><b>10</b>: The change order could not be executed due to a system exception.</description></item>
-            /// <item><description><b>11</b>: The change order is pending approval.</description></item>
-            /// <item><description><b>12</b>: The change order is approved and is pending execution.</description></item>
-            /// </list>
+            /// <para>The change orders.</para>
             /// </summary>
             [NameInMap("ChangeOrderList")]
             [Validation(Required=false)]
@@ -101,7 +89,29 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string CoType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the change order.</para>
+                /// <para>The code of the change order. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>CoBindSlb</b>: associates the Server Load Balancer (SLB) instance with the application.</description></item>
+                /// <item><description><b>CoUnbindSlb</b>: disassociates an SLB instance from the application.</description></item>
+                /// <item><description><b>CoCreateApp</b>: creates the application.</description></item>
+                /// <item><description><b>CoDeleteApp</b>: deletes the application.</description></item>
+                /// <item><description><b>CoDeploy</b>: deploys the application.</description></item>
+                /// <item><description><b>CoRestartApplication</b>: restarts the application.</description></item>
+                /// <item><description><b>CoRollback</b>: rolls back the application.</description></item>
+                /// <item><description><b>CoScaleIn</b>: scales in the application.</description></item>
+                /// <item><description><b>CoScaleOut</b>: scales out the application.</description></item>
+                /// <item><description><b>CoStartApplication</b>: starts the application.</description></item>
+                /// <item><description><b>CoStopApplication</b>: stops the application.</description></item>
+                /// <item><description><b>CoRescaleApplicationVertically</b>: modifies the instance type.</description></item>
+                /// <item><description><b>CoDeployHistroy</b>: rolls back the application to an earlier version.</description></item>
+                /// <item><description><b>CoBindNas</b>: associates a network-attached storage (NAS) file system with the application.</description></item>
+                /// <item><description><b>CoUnbindNas</b>: disassociates a NAS file system from the application.</description></item>
+                /// <item><description><b>CoBatchStartApplication</b>: starts multiple applications concurrently.</description></item>
+                /// <item><description><b>CoBatchStopApplication</b>: stops multiple applications concurrently.</description></item>
+                /// <item><description><b>CoRestartInstances</b>: restarts the instance.</description></item>
+                /// <item><description><b>CoDeleteInstances</b>: deletes the instance.</description></item>
+                /// <item><description><b>CoScaleInAppWithInstances</b>: reduces the specified number of application instances.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CoCreateApp</para>

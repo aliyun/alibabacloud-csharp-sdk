@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string CertIds { get; set; }
 
+        [NameInMap("CorsConfig")]
+        [Validation(Required=false)]
+        public string CorsConfig { get; set; }
+
         /// <summary>
         /// <para>The default forwarding rule. You can specify a port and an application in the default forwarding rule to forward traffic based on the IP address. The following list describes the involved parameters:</para>
         /// <list type="bullet">
@@ -85,8 +89,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnableXForwardedForSlbPort { get; set; }
 
         /// <summary>
+        /// <para>The timeout period of idle connections. Unit: seconds.</para>
+        /// <remarks>
+        /// <para> A value of 0 indicates that the default value is used.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
-        /// <para>3</para>
+        /// <para>15</para>
         /// </summary>
         [NameInMap("IdleTimeout")]
         [Validation(Required=false)]
@@ -138,6 +147,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string LoadBalanceType { get; set; }
 
         /// <summary>
+        /// <para>The request timed out. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -162,8 +173,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Rules { get; set; }
 
         /// <summary>
+        /// <para>The ID of a security policy.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>tls_cipher_policy_1_0</para>
+        /// <para>tls_cipher_policy_1_2_strict_with_1_3</para>
         /// </summary>
         [NameInMap("SecurityPolicyId")]
         [Validation(Required=false)]

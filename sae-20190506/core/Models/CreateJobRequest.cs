@@ -181,6 +181,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string EdasContainerVersion { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("EnableImageAccl")]
         [Validation(Required=false)]
         public bool? EnableImageAccl { get; set; }

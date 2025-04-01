@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class AbortAndRollbackChangeOrderResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the change order was terminated or the application was rolled back. Valid values:</para>
+        /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The change order was terminated or the application was rolled back.</description></item>
-        /// <item><description><b>false</b>: The change order could not be terminated or the application could not be rolled back.</description></item>
+        /// <item><description><b>2xx</b>: The call was successful.</description></item>
+        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The call failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,18 +26,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The ID of the change order.</para>
+        /// <para>The details of the change order.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AbortAndRollbackChangeOrderResponseBodyData Data { get; set; }
         public class AbortAndRollbackChangeOrderResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The error code.</para>
-            /// <list type="bullet">
-            /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-            /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
-            /// </list>
+            /// <para>The ID of the change order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ba386059-69b1-4e65-b1e5-0682d9fa****</para>
@@ -47,12 +45,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
+        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +59,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It is used to query the details of a request.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -73,7 +69,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -83,6 +79,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the change order was terminated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The change order was terminated.</description></item>
+        /// <item><description><b>false</b>: The change order failed to be terminated.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The details of the change order.</para>
+        /// <para>The trace ID that is used to query the details of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

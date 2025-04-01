@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeIngressResponseBody : TeaModel {
         /// <summary>
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>2xx</b>: The request was successful.</description></item>
+        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The request failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,14 +26,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The port specified for the SLB listener.</para>
+        /// <para>The result returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeIngressResponseBodyData Data { get; set; }
         public class DescribeIngressResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the application specified in the default rule.</para>
+            /// <para>The ID of the certificate that is associated with a Classic Load Balancer (<b>CLB</b>) instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13623****809_16cad216b32_845_-419427029</para>
@@ -35,6 +43,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string CertId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the certificate that is associated with an Application Load Balancer <b>ALB</b> instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>87<em><b>35-cn-hangzhou,812</b></em>3-cn-hangzhou</para>
             /// </summary>
@@ -42,19 +52,53 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string CertIds { get; set; }
 
+            [NameInMap("CorsConfig")]
+            [Validation(Required=false)]
+            public DescribeIngressResponseBodyDataCorsConfig CorsConfig { get; set; }
+            public class DescribeIngressResponseBodyDataCorsConfig : TeaModel {
+                [NameInMap("AllowCredentials")]
+                [Validation(Required=false)]
+                public string AllowCredentials { get; set; }
+
+                [NameInMap("AllowHeaders")]
+                [Validation(Required=false)]
+                public string AllowHeaders { get; set; }
+
+                [NameInMap("AllowMethods")]
+                [Validation(Required=false)]
+                public string AllowMethods { get; set; }
+
+                [NameInMap("AllowOrigin")]
+                [Validation(Required=false)]
+                public string AllowOrigin { get; set; }
+
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public string Enable { get; set; }
+
+                [NameInMap("ExposeHeaders")]
+                [Validation(Required=false)]
+                public string ExposeHeaders { get; set; }
+
+                [NameInMap("MaxAge")]
+                [Validation(Required=false)]
+                public string MaxAge { get; set; }
+
+            }
+
             [NameInMap("CreatedBySae")]
             [Validation(Required=false)]
             public bool? CreatedBySae { get; set; }
 
             /// <summary>
-            /// <para>The forwarding rules.</para>
+            /// <para>The default rule.</para>
             /// </summary>
             [NameInMap("DefaultRule")]
             [Validation(Required=false)]
             public DescribeIngressResponseBodyDataDefaultRule DefaultRule { get; set; }
             public class DescribeIngressResponseBodyDataDefaultRule : TeaModel {
                 /// <summary>
-                /// <para>The domain name of the application.</para>
+                /// <para>The ID of the application that is specified in the default rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>395b60e4-0550-458d-9c54-a265d036****</para>
@@ -64,7 +108,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The container port of the application specified in the forwarding rule.</para>
+                /// <para>The name of the application that is specified in the default rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app1</para>
@@ -74,6 +118,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string AppName { get; set; }
 
                 /// <summary>
+                /// <para>The backend protocol. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>http</b>: HTTP is suitable for applications that need to identify the transmitted data.</description></item>
+                /// <item><description><b>https</b>: HTTP is suitable for applications that require encrypted data transmission.</description></item>
+                /// <item><description><b>grpc</b>: GRPC is suitable for load balancing scenarios in which you want to deploy services in multi-language frameworks, such as the .NET framework.</description></item>
+                /// </list>
+                /// <para>This parameter is returned only if the<b>LoadBalanceType</b> parameter is set to <b>ALB</b> and the <b>ListenerProtocol</b> parameter <b>is set to HTTPS</b>.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HTTP</para>
                 /// </summary>
@@ -82,7 +134,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string BackendProtocol { get; set; }
 
                 /// <summary>
-                /// <para>The name of the application specified in the forwarding rule.</para>
+                /// <para>The container port of the application that is specified in the default rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8080</para>
@@ -94,7 +146,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The name of the routing rule.</para>
+            /// <para>The name of a routing rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ingress-sae-test</para>
@@ -124,13 +176,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? EnableXForwardedForSlbPort { get; set; }
 
             /// <summary>
-            /// <para>The HTTP status code. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-            /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-            /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-            /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
-            /// </list>
+            /// <para>The ID of a routing rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>87</para>
@@ -148,7 +194,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? IdleTimeout { get; set; }
 
             /// <summary>
-            /// <para>The default rule.</para>
+            /// <para>The listener ports for an SLB instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>443</para>
@@ -158,6 +204,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? ListenerPort { get; set; }
 
             /// <summary>
+            /// <para>The protocol used to forward requests. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>HTTP</b>: HTTP is suitable for applications that need to identify the transmitted data.</description></item>
+            /// <item><description><b>HTTPS</b>: HTTPS is suitable for applications that require encrypted data transmission.</description></item>
+            /// </list>
+            /// <para>This parameter is optional in the <b>CreateIngress</b> and <b>UpadateIngress</b> operations. If you do not configure this parameter when you call the CreateIngress or UpdateIngress operation to create or update a gateway routing rule, this parameter is not returned for the corresponding response.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>HTTP</para>
             /// </summary>
@@ -166,10 +219,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ListenerProtocol { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the configurations of the routing rule were queried successfully. Valid values:</para>
+            /// <para>The type of SLB instances. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: indicates that the query was successful.</description></item>
-            /// <item><description><b>false</b>: indicates that the query failed.</description></item>
+            /// <item><description><b>clb</b>: Classic Load Balancer (formerly known as SLB).</description></item>
+            /// <item><description><b>alb</b>: Application Load Balancer.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -180,7 +233,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string LoadBalanceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application specified in the default rule.</para>
+            /// <para>The name of a routing rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-uf6jt0nu4z6ior943****-80-f5****</para>
@@ -190,7 +243,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the certificate.</para>
+            /// <para>The ID of a namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing:sae-test</para>
@@ -208,18 +261,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? RequestTimeout { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application specified in the forwarding rule.</para>
+            /// <para>The forwarding rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<DescribeIngressResponseBodyDataRules> Rules { get; set; }
             public class DescribeIngressResponseBodyDataRules : TeaModel {
                 /// <summary>
-                /// <para>The protocol used to forward requests. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>HTTP</b>: used when the application needs to identify the transmitted data.</description></item>
-                /// <item><description><b>HTTPS</b>: used when the application requires encrypted data transmission.</description></item>
-                /// </list>
+                /// <para>The ID of the application specified in the forwarding rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>395b60e4-0550-458d-9c54-a265d036****</para>
@@ -229,7 +278,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The path of the URL.</para>
+                /// <para>The name of the application specified in the forwarding rules.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app1</para>
@@ -239,6 +288,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string AppName { get; set; }
 
                 /// <summary>
+                /// <para>The backend protocol. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>http</b>: HTTP is suitable for applications that need to identify the transmitted data.</description></item>
+                /// <item><description><b>https</b>: HTTPS is suitable for applications that require encrypted data transmission.</description></item>
+                /// <item><description><b>grpc</b>: GRPC is suitable for load balancing scenarios in which you want to deploy services in multi-language frameworks, such as the .NET framework.</description></item>
+                /// </list>
+                /// <para>This parameter is returned only if the <b>LoadBalanceType</b> parameter is set to <b>ALB</b> and the <b>ListenerProtocol</b> parameter is set to <b>HTTPS</b>.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HTTP</para>
                 /// </summary>
@@ -247,7 +304,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string BackendProtocol { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the routing rule.</para>
+                /// <para>Tthe container port of the application specified in the forwarding rules.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8080</para>
@@ -257,11 +314,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? ContainerPort { get; set; }
 
                 /// <summary>
-                /// <para>The type of the SLB instance based on the processing capabilities. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>clb</b>: the Classic Load Balancer (CLB) instance.</description></item>
-                /// <item><description><b>alb</b>: the Application Load Balancer (ALB) instance.</description></item>
-                /// </list>
+                /// <para>The domain name of the application specified in the forwarding rules.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>edas.site</para>
@@ -271,11 +324,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// <para>The error code.</para>
-                /// <list type="bullet">
-                /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-                /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
-                /// </list>
+                /// <para>The path of a URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/path1</para>
@@ -284,6 +333,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string Path { get; set; }
 
+                /// <summary>
+                /// <para>The path that is used to rewrite the original path.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/${1}</para>
+                /// </summary>
                 [NameInMap("RewritePath")]
                 [Validation(Required=false)]
                 public string RewritePath { get; set; }
@@ -313,11 +368,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string SecurityPolicyId { get; set; }
 
             /// <summary>
-            /// <para>The type of the SLB instance based on the IP address. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>internet</b>: the Internet-facing SLB instance.</description></item>
-            /// <item><description><b>intranet</b>: the internal-facing SLB instance.</description></item>
-            /// </list>
+            /// <para>The ID of a Server Load Balancer (SLB) instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-uf62****6d13tq2u5</para>
@@ -327,7 +378,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string SlbId { get; set; }
 
             /// <summary>
-            /// <para>The container port of the application specified in the default rule.</para>
+            /// <para>The type of an SLB instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>internet</b>: an Internet-facing SLB instance</description></item>
+            /// <item><description><b>intranet</b>: an Intranet-facing SLB instance</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>internet</para>
@@ -338,12 +393,23 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         }
 
+        /// <summary>
+        /// <para>The error codes. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ErrorCode</b> is not returned if a request is successful.</description></item>
+        /// <item><description><b>ErrorCode</b> is returned if a request failed. For more information, see <b>Error code</b> section of this topic.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace.</para>
+        /// <para>The message returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>success</b> is returned when a request is successful.</description></item>
+        /// <item><description>An error code is returned when the request failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -353,7 +419,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SLB instance.</para>
+        /// <para>The ID of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -363,6 +429,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the configurations of Ingresses were queried successfully. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The information was queried.</description></item>
+        /// <item><description><b>false</b>: The information failed to be queried.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -371,7 +443,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The name of the routing rule.</para>
+        /// <para>The ID of a trace. The ID is used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a981dd515966966104121683d****</para>

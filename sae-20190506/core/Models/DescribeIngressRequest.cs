@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeIngressRequest : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The ID of the routing rule to be queried.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

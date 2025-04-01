@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request failed.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><b>2xx</b>: The call was successful.</description></item>
+        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The call failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public DescribeNamespacesResponseBodyData Data { get; set; }
         public class DescribeNamespacesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The list of namespaces.</para>
+            /// <para>The namespaces.</para>
             /// </summary>
             [NameInMap("Namespaces")]
             [Validation(Required=false)]
             public List<DescribeNamespacesResponseBodyDataNamespaces> Namespaces { get; set; }
             public class DescribeNamespacesResponseBodyDataNamespaces : TeaModel {
                 /// <summary>
-                /// <para>The ACM-specific AccessKey ID. It can be used to manage data in an Application Configuration Management (ACM) namespace. For more information, see <a href="~~~~">Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey</a>.</para>
+                /// <para>The ACM-specific AccessKey ID. It can be used to manage data in an Application Configuration Management (ACM) namespace. For more information, see <a href="https://help.aliyun.com/document_detail/68941.html">Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>b34dbe3315c64f9f99b58ea447ec****</para>
@@ -60,6 +60,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string AccessKey { get; set; }
 
                 /// <summary>
+                /// <para>The endpoint of the host.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>addr-bj-internal.edas.aliyun.com</para>
                 /// </summary>
@@ -68,6 +70,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string AddressServerHost { get; set; }
 
                 /// <summary>
+                /// <para>The short ID of the namespace.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -86,7 +90,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string NamespaceDescription { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the namespace. The information of the default namespace cannot be queried or modified. The default namespace cannot be deleted.</para>
+                /// <para>The ID of the namespace. You cannot query, modify, or delete the default namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing:test</para>
@@ -106,7 +110,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string NamespaceName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
@@ -116,7 +120,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The ACM-specific AccessKey secret. It can be used to manage data in an ACM namespace. For more information, see <a href="~~~~">Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey</a>.</para>
+                /// <para>The ACM-specific AccessKey secret. It can be used to manage data in an ACM namespace. For more information, see <a href="https://help.aliyun.com/document_detail/68941.html">Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>G/w6sseK7+nb3S6HBmANDBMD****</para>
@@ -126,7 +130,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string SecretKey { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the tenant.</para>
+                /// <para>The tenant ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>838cad95-973f-48fe-830b-2a8546d7****</para>
@@ -138,7 +142,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The number of entries returned on each page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -160,10 +164,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. </para>
+        /// <para>The error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-        /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
+        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -171,10 +175,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The returned message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b> is returned when the request succeeds.</description></item>
-        /// <item><description>An error message is returned when the request fails.</description></item>
+        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
+        /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -185,7 +189,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -195,10 +199,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the details of namespaces were queried successfully. Valid values:</para>
+        /// <para>Indicates whether the list of namespaces was queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: indicates that the query was successful.</description></item>
-        /// <item><description><b>false</b>: indicates that the query failed.</description></item>
+        /// <item><description><b>true</b>: The list was queried.</description></item>
+        /// <item><description><b>false</b>: The list failed to be queried.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -209,7 +213,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It can be used to query the details of a request.</para>
+        /// <para>The trace ID that is used to query the details of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a981dd515966966104121683d****</para>

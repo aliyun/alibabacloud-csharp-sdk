@@ -9,6 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateNamespaceRequest : TeaModel {
+        /// <summary>
+        /// <para>Indicates whether to enable SAE built-in registry:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// <para>Default value: true. If you do not use the built-in registry, you can set this parameter to false to accelerate the creation of a namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnableMicroRegistration")]
         [Validation(Required=false)]
         public bool? EnableMicroRegistration { get; set; }

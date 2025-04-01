@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of logging configurations.</para>
+        /// <para>The logging configurations.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The name of the Log Service configuration.</para>
+            /// <para>The details of the logging configuration.</para>
             /// </summary>
             [NameInMap("LogConfigs")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Logstore in Log Service.</para>
+                /// <para>The path of the log file (log source).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/root/logs/hsf/hsf.log</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UnbindSlbRequest : TeaModel {
         /// <summary>
-        /// <para>true</para>
+        /// <para>The ID of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>true</para>
+        /// <para>Specifies whether to disassociate the Internet-facing SLB instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: dissociates the Internet-facing SLB instance.</description></item>
+        /// <item><description><b>false</b>: does not dissociate the Internet-facing SLB instance.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,7 +35,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Internet { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Specifies whether to disassociate the internal-facing SLB instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: dissociates the internal-facing SLB instance.</description></item>
+        /// <item><description><b>false</b>: does not dissociate the internal-facing SLB instance.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

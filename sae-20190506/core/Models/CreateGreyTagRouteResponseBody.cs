@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateGreyTagRouteResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the information of the change order was queried. Valid values:</para>
+        /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The information was queried.</description></item>
-        /// <item><description><b>false</b>: The information failed to be queried.</description></item>
+        /// <item><description><b>2xx</b>: The request was successful.</description></item>
+        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The request failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,18 +26,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The ID of the canary release rule. The ID is globally unique.</para>
+        /// <para>The information about the canary release rule.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateGreyTagRouteResponseBodyData Data { get; set; }
         public class CreateGreyTagRouteResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The returned error code. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-            /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</description></item>
-            /// </list>
+            /// <para>The ID of the canary release rule. The ID is globally unique.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -47,12 +45,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><b>ErrorCode</b> is not returned if a request is successful.</description></item>
+        /// <item><description><b>ErrorCode</b> is returned if a request failed. For more information, see <b>Error code</b> section of this topic.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -60,7 +56,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The message returned for the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -70,7 +66,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The returned information.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9D29CBD0-45D3-410B-9826-52F86F90****</para>
@@ -80,6 +76,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the information of the change order was queried. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The information was queried.</description></item>
+        /// <item><description><b>false</b>: The information failed to be queried.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The information about the canary release rule.</para>
+        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

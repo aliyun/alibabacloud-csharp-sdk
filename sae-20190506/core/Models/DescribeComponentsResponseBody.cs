@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeComponentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the component version was obtained. Valid values:</para>
+        /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: indicates that the component version was obtained.</description></item>
-        /// <item><description><b>false</b>: indicates that the component version could not be obtained.</description></item>
+        /// <item><description><b>2xx</b>: The request was successful.</description></item>
+        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The request failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,18 +26,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The component type.</para>
+        /// <para>The details of the supported components.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeComponentsResponseBodyData> Data { get; set; }
         public class DescribeComponentsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the component is expired. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b>: The component is expired.</description></item>
-            /// <item><description><b>false</b>: The component is not expired.</description></item>
-            /// </list>
+            /// <para>The description of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Open JDK 8</para>
@@ -45,7 +43,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ComponentDescription { get; set; }
 
             /// <summary>
-            /// <para>The description of the component.</para>
+            /// <para>The component ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Open JDK 8</para>
@@ -55,10 +53,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ComponentKey { get; set; }
 
             /// <summary>
-            /// <para>The error code.</para>
+            /// <para>Indicates whether the component is expired. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-            /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
+            /// <item><description><b>true</b>: The component is expired.</description></item>
+            /// <item><description><b>false</b>: The component is not expired.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? Expired { get; set; }
 
             /// <summary>
-            /// <para>The ID of the component.</para>
+            /// <para>The type of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>JDK</para>
@@ -81,12 +79,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description>If the request was successful, <b>ErrorCode</b> is not returned.</description></item>
+        /// <item><description>If the request failed, <b>ErrorCode</b> is returned. For more information, see <b>Error codes</b> section of this topic.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -94,7 +90,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It is used to query the details of a request.</para>
+        /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -104,7 +100,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -114,6 +110,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the component version was obtained. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The applications were obtained.</description></item>
+        /// <item><description><b>false</b>: The applications failed to be queried.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -122,7 +124,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The details of the component.</para>
+        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

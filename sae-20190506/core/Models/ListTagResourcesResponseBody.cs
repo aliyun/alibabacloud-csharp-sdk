@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><b>2xx</b>: The call was successful.</description></item>
+        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The call failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource. Set the value to <c>application</c>.</para>
+                /// <para>The type of the resource. Valid value: <c>application</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALIYUN::SAE::APPLICATION</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The key of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>k1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The value of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v1</para>
@@ -94,10 +94,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. </para>
+        /// <para>The error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-        /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
+        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -105,7 +105,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The returned message. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
+        /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -115,7 +119,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7414187F-4F59-4585-9BCF-5F0804E4****</para>
@@ -125,10 +129,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether mapping relationships between applications and tags were queried successfully. Valid values:</para>
+        /// <para>Indicates whether the mapping relationships between applications and tags were queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The query was successful.</description></item>
-        /// <item><description><b>false</b>: The query failed.</description></item>
+        /// <item><description><b>true</b>: The mapping relationships were queried.</description></item>
+        /// <item><description><b>false</b>: The mapping relationships failed to be queried.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,7 +143,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It can be used to query the details of a request.</para>
+        /// <para>The trace ID that is used to query the details of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc5f84e15916043198032146d****</para>

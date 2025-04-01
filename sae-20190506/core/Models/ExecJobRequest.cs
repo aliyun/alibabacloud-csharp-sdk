@@ -52,6 +52,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string EventId { get; set; }
 
         /// <summary>
+        /// <para>The arguments in the JAR package. The arguments are used to start the job. The default startup command is <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>custom-args</para>
         /// </summary>
@@ -60,6 +62,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string JarStartArgs { get; set; }
 
         /// <summary>
+        /// <para>The option settings in the JAR package. The settings are used to start the job. The default startup command is <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArg</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>-Xms4G -Xmx4G</para>
         /// </summary>
@@ -67,15 +71,29 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string JarStartOptions { get; set; }
 
+        /// <summary>
+        /// <para>The number of concurrent instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("Replicas")]
         [Validation(Required=false)]
         public string Replicas { get; set; }
 
+        /// <summary>
+        /// <para>The time at which the job is triggered. Format: <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-09-14T14:25:02Z</para>
+        /// </summary>
         [NameInMap("Time")]
         [Validation(Required=false)]
         public string Time { get; set; }
 
         /// <summary>
+        /// <para>The startup command of the WAR package. For information about how to configure the startup command, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure a startup command</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</para>
         /// </summary>

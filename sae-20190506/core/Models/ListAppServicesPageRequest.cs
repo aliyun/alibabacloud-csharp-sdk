@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListAppServicesPageRequest : TeaModel {
         /// <summary>
-        /// <para>1</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The returned information.</para>
+        /// <para>The number of entries returned on each page. Valid values: 0 to 9999.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9999</para>
@@ -41,7 +41,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>9999</para>
+        /// <para>The service type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>dubbo</b></description></item>
+        /// <item><description><b>springCloud</b></description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

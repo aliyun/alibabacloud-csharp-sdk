@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeSecretRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the namespace in which the Secret instance resides. By default, the namespace ID is the same as the region ID.</para>
+        /// <para>The ID of the namespace where the Secret resides. If the namespace is the default namespace, you need to only enter the region ID, such as <c>cn-beijing</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeleteGreyTagRouteRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

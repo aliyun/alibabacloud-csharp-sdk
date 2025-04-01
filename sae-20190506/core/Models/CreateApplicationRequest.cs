@@ -270,6 +270,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string MicroRegistrationConfig { get; set; }
 
+        [NameInMap("MicroserviceEngineConfig")]
+        [Validation(Required=false)]
+        public string MicroserviceEngineConfig { get; set; }
+
         /// <summary>
         /// <para>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</para>
         /// 
@@ -317,6 +321,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("NasId")]
         [Validation(Required=false)]
         public string NasId { get; set; }
+
+        [NameInMap("NewSaeVersion")]
+        [Validation(Required=false)]
+        public string NewSaeVersion { get; set; }
 
         [NameInMap("OidcRoleName")]
         [Validation(Required=false)]

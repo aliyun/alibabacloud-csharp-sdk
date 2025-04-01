@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the application.</para>
+        /// <para>The information of the job template.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string AcrInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The description of the application.</para>
+            /// <para>The description of the job template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sample application</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string AppDescription { get; set; }
 
             /// <summary>
-            /// <para>The application ID.</para>
+            /// <para>The ID of the job template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69****</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The application name.</para>
+            /// <para>The name of the job template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo-app</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The path on which the NAS file system is mounted.</para>
+                /// <para>The path on which the ConfigMap is mounted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/tmp</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string CustomHostAlias { get; set; }
 
             /// <summary>
-            /// <para>The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.</para>
+            /// <para>The version of the container, such as Ali-Tomcat, in which a job that is developed based on High-speed Service Framework (HSF) is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.5.3</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c>.</para>
+            /// <para>The arguments in the JAR package. The arguments are used to start the job. The default startup command is <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>start</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string JarStartArgs { get; set; }
 
             /// <summary>
-            /// <para>The option settings in the JAR package. The settings are used to start the application container. The default startup command is <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c>.</para>
+            /// <para>The option settings in the JAR package. The settings are used to start the job. The default startup command is <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-Dtest=true</para>
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The mount target of the NAS file system in the VPC in which the application is deployed. If you do not need to modify this configuration during the deployment, configure <b>MountHost</b> only in the first request. If you need to remove this configuration, leave <b>MountHost</b> empty in the request.</para>
+            /// <para>The mount target of the Apsara File Storage NAS (NAS) file system in the virtual private cloud (VPC) where the job template is deployed. If you do not need to modify the NAS configurations when you deploy the job template, configure the <b>MountHost</b> parameter only in the first request. You do not need to include this parameter in subsequent requests. If you no longer need to use NAS, leave the <b>MountHost</b> parameter empty in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public List<DescribeJobResponseBodyDataOssMountDescs> OssMountDescs { get; set; }
             public class DescribeJobResponseBodyDataOssMountDescs : TeaModel {
                 /// <summary>
-                /// <para>The bucket name.</para>
+                /// <para>The name of the bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss-bucket</para>
@@ -462,10 +462,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the application can use the container path to read data from or write data to resources in the directory of the OSS bucket. Valid values:</para>
+                /// <para>Indicates whether the job template can use the container directory to read data from or write data to resources in the directory of the OSS bucket. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: The application has the read-only permission.</description></item>
-                /// <item><description><b>false</b>: The application has read and write permissions.</description></item>
+                /// <item><description><b>true</b>: The job template has the read-only permissions.</description></item>
+                /// <item><description><b>false</b>: The job template has the read and write permissions.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -480,9 +480,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             /// <summary>
             /// <para>The type of the deployment package. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>If you deploy the application by using a Java Archive (JAR) package, this parameter is set to <b>FatJar</b>, <b>War</b>, or <b>Image</b>.</para>
+            /// <item><description><para>If you deploy a Java job template, you can set this parameter to <b>FatJar</b>, <b>War</b>, or <b>Image</b>.</para>
             /// </description></item>
-            /// <item><description><para>If you deploy the application by using a PHP package, this parameter is set to one of the following values:</para>
+            /// <item><description><para>If you deploy a PHP job template, the following types are available:</para>
             /// <list type="bullet">
             /// <item><description><b>PhpZip</b></description></item>
             /// <item><description><b>IMAGE_PHP_5_4</b></description></item>
@@ -501,7 +501,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             /// <item><description><b>IMAGE_PHP_7_3_ALPINE</b></description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>If you deploy the application by using a Pythhon package, this parameter is set to <b>PythonZip</b> or <b>Image</b>.</para>
+            /// <item><description><para>If you deploy a Python job template, you can set this parameter to <b>PythonZip</b> or <b>Image</b>.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -540,7 +540,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string PhpConfig { get; set; }
 
             /// <summary>
-            /// <para>The path on which the PHP configuration file for application startup is mounted. Make sure that the PHP server uses this configuration file during the startup.</para>
+            /// <para>The path on which the PHP configuration file for job startup is mounted. Make sure that the PHP server uses this configuration file during the startup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/usr/local/etc/php/php.ini</para>
@@ -570,12 +570,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string PreStop { get; set; }
 
             /// <summary>
-            /// <para>The programming language that is used to create the application. Valid values:</para>
+            /// <para>The programming language in which the job template is created. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>java</b>: Java</description></item>
             /// <item><description><b>php</b>: PHP</description></item>
             /// <item><description><b>python</b>: Python</description></item>
-            /// <item><description><b>other</b>: other programming languages, such as C++, Go, .NET, and Node.js.</description></item>
+            /// <item><description><b>other</b>: other programming languages, such as C++, Go, .NET, and Node.js</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -640,7 +640,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The number of application instances.</para>
+            /// <para>The number of job instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -752,7 +752,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? TerminationGracePeriodSeconds { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for the job. Unit: seconds.</para>
+            /// <para>The timeout period of the job. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -820,7 +820,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public List<string> VpcWebHookUrls { get; set; }
 
             /// <summary>
-            /// <para>The option settings in the WAR package. The settings are used to start the application container. The default startup command is <c>java $JAVA_OPTS $CATALINA_OPTS -Options org.apache.catalina.startup.Bootstrap &quot;$@&quot; start</c>.</para>
+            /// <para>The option settings in the WAR package. The settings are used to start the job. The default startup command is <c>java $JAVA_OPTS $CATALINA_OPTS -Options org.apache.catalina.startup.Bootstrap &quot;$@&quot; start</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom-option</para>
@@ -881,10 +881,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the configurations of an application were obtained. Valid values:</para>
+        /// <para>Indicates whether the configurations of the job template were obtained. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The configurations were obtained.</description></item>
+        /// <item><description><b>false</b>: The configurations failed to be obtained.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

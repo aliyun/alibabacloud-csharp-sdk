@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListIngressesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of routing rules.</para>
+        /// <para>The ID of an application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bbf3a590-6d13-46fe-8ca9-c947a20b****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The ID of a namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

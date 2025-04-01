@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class PublishWebApplicationRevisionRequest : TeaModel {
         /// <summary>
+        /// <para>The namespace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The configurations of the version.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

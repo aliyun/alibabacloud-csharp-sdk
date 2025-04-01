@@ -24,27 +24,49 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Configurations of internal-facing SLB instances.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeApplicationSlbsResponseBodyData Data { get; set; }
         public class DescribeApplicationSlbsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the SSL certificate issued by Alibaba Cloud.</para>
+            /// <para>The configurations of the Internet-facing SLB instance.</para>
             /// </summary>
             [NameInMap("Internet")]
             [Validation(Required=false)]
             public List<DescribeApplicationSlbsResponseBodyDataInternet> Internet { get; set; }
             public class DescribeApplicationSlbsResponseBodyDataInternet : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>wwe</para>
+                /// </summary>
                 [NameInMap("Cookie")]
                 [Validation(Required=false)]
                 public string Cookie { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>56</para>
+                /// </summary>
                 [NameInMap("CookieTimeout")]
                 [Validation(Required=false)]
                 public int? CookieTimeout { get; set; }
 
+                /// <summary>
+                /// <para>The timestamp when the canary release rule was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1741247308294</para>
+                /// </summary>
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public long? CreateTime { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1513561019707729_16f37aae5f3_-375882821_-169099****</para>
+                /// </summary>
                 [NameInMap("HttpsCaCertId")]
                 [Validation(Required=false)]
                 public string HttpsCaCertId { get; set; }
@@ -79,10 +101,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string Protocol { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("StickySession")]
                 [Validation(Required=false)]
                 public bool? StickySession { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>insert</para>
+                /// </summary>
                 [NameInMap("StickySessionType")]
                 [Validation(Required=false)]
                 public string StickySessionType { get; set; }
@@ -109,10 +139,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PayBySpec</para>
+            /// </summary>
             [NameInMap("InternetSlbChargeType")]
             [Validation(Required=false)]
             public string InternetSlbChargeType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("InternetSlbExpired")]
             [Validation(Required=false)]
             public bool? InternetSlbExpired { get; set; }
@@ -128,20 +166,42 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string InternetSlbId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the SSL certificate issued by Alibaba Cloud.</para>
+            /// <para>The configurations of the internal-facing SLB instance.</para>
             /// </summary>
             [NameInMap("Intranet")]
             [Validation(Required=false)]
             public List<DescribeApplicationSlbsResponseBodyDataIntranet> Intranet { get; set; }
             public class DescribeApplicationSlbsResponseBodyDataIntranet : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>wwe</para>
+                /// </summary>
                 [NameInMap("Cookie")]
                 [Validation(Required=false)]
                 public string Cookie { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>56</para>
+                /// </summary>
                 [NameInMap("CookieTimeout")]
                 [Validation(Required=false)]
                 public int? CookieTimeout { get; set; }
 
+                /// <summary>
+                /// <para>The timestamp when the canary release rule was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1741247308294</para>
+                /// </summary>
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public long? CreateTime { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1513561019707729_16f37aae5f3_-375882821_-169099****</para>
+                /// </summary>
                 [NameInMap("HttpsCaCertId")]
                 [Validation(Required=false)]
                 public string HttpsCaCertId { get; set; }
@@ -176,10 +236,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string Protocol { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("StickySession")]
                 [Validation(Required=false)]
                 public bool? StickySession { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>insert</para>
+                /// </summary>
                 [NameInMap("StickySessionType")]
                 [Validation(Required=false)]
                 public string StickySessionType { get; set; }
@@ -210,10 +278,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PayBySpec</para>
+            /// </summary>
             [NameInMap("IntranetSlbChargeType")]
             [Validation(Required=false)]
             public string IntranetSlbChargeType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("IntranetSlbExpired")]
             [Validation(Required=false)]
             public bool? IntranetSlbExpired { get; set; }

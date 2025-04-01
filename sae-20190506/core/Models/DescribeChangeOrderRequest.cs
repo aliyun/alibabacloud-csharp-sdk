@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeChangeOrderRequest : TeaModel {
         /// <summary>
-        /// <para>76fa5c0-9ebb-4bb4-b383-1f885447\<em>\</em>\<em>\</em></para>
+        /// <para>The ID of the change order. You can call the <a href="https://help.aliyun.com/document_detail/126615.html">ListChangeOrders</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

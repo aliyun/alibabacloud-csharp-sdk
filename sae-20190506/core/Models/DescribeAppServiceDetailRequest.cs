@@ -20,10 +20,22 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the MSE Nacos instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mse-cn-sco3r0u****</para>
+        /// </summary>
         [NameInMap("NacosInstanceId")]
         [Validation(Required=false)]
         public string NacosInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the namespace for the MSE Nacos instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>public</para>
+        /// </summary>
         [NameInMap("NacosNamespaceId")]
         [Validation(Required=false)]
         public string NacosNamespaceId { get; set; }

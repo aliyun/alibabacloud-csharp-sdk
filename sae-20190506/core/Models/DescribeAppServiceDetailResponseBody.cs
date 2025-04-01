@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data that is returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -213,14 +213,26 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
+            /// <summary>
+            /// <para>The port used by the service.</para>
+            /// </summary>
             [NameInMap("ServicePorts")]
             [Validation(Required=false)]
             public List<long?> ServicePorts { get; set; }
 
+            /// <summary>
+            /// <para>The protocol used by the service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>HTTP</para>
+            /// </summary>
             [NameInMap("ServiceProtocol")]
             [Validation(Required=false)]
             public string ServiceProtocol { get; set; }
 
+            /// <summary>
+            /// <para>The tag of the service.</para>
+            /// </summary>
             [NameInMap("ServiceTags")]
             [Validation(Required=false)]
             public List<string> ServiceTags { get; set; }

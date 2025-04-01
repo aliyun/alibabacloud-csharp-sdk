@@ -81,18 +81,34 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     [Validation(Required=false)]
                     public string MetricType { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>lb-xxx</para>
+                    /// </summary>
                     [NameInMap("SlbId")]
                     [Validation(Required=false)]
                     public string SlbId { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>test</para>
+                    /// </summary>
                     [NameInMap("SlbLogstore")]
                     [Validation(Required=false)]
                     public string SlbLogstore { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>test</para>
+                    /// </summary>
                     [NameInMap("SlbProject")]
                     [Validation(Required=false)]
                     public string SlbProject { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>80</para>
+                    /// </summary>
                     [NameInMap("Vport")]
                     [Validation(Required=false)]
                     public string Vport { get; set; }
@@ -173,10 +189,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     [Validation(Required=false)]
                     public string AtTime { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>10</para>
+                    /// </summary>
                     [NameInMap("MaxReplicas")]
                     [Validation(Required=false)]
                     public int? MaxReplicas { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>5</para>
+                    /// </summary>
                     [NameInMap("MinReplicas")]
                     [Validation(Required=false)]
                     public int? MinReplicas { get; set; }

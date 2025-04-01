@@ -81,6 +81,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
             /// <summary>
             /// <para>The SAE application type.</para>
+            /// <list type="bullet">
+            /// <item><description>micro_service</description></item>
+            /// <item><description>web</description></item>
+            /// <item><description>job</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>micro_service</para>
@@ -103,6 +108,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public bool? AssociateEip { get; set; }
 
+            [NameInMap("BaseAppId")]
+            [Validation(Required=false)]
+            public string BaseAppId { get; set; }
+
             /// <summary>
             /// <para>The interval between batches in a phased release. Unit: seconds.</para>
             /// 
@@ -112,6 +121,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("BatchWaitTime")]
             [Validation(Required=false)]
             public int? BatchWaitTime { get; set; }
+
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
 
             /// <summary>
             /// <para>The command that is used to start the image. The command must be an existing executable object in the container. Example:</para>
@@ -283,10 +296,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public bool? EnableNewArms { get; set; }
 
-            [NameInMap("Enabledle")]
-            [Validation(Required=false)]
-            public bool? Enabledle { get; set; }
-
             /// <summary>
             /// <para>The environment variables. Variable description:</para>
             /// <list type="bullet">
@@ -451,6 +460,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string MicroRegistrationConfig { get; set; }
 
+            [NameInMap("MicroserviceEngineConfig")]
+            [Validation(Required=false)]
+            public string MicroserviceEngineConfig { get; set; }
+
             /// <summary>
             /// <para>The percentage of the minimum number of available instances. Valid values:</para>
             /// <list type="bullet">
@@ -569,6 +582,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("NasId")]
             [Validation(Required=false)]
             public string NasId { get; set; }
+
+            [NameInMap("NewSaeVersion")]
+            [Validation(Required=false)]
+            public string NewSaeVersion { get; set; }
 
             [NameInMap("OidcRoleName")]
             [Validation(Required=false)]
@@ -864,6 +881,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The canary tag configured for the application.</para>
+            /// </summary>
             [NameInMap("ServiceTags")]
             [Validation(Required=false)]
             public Dictionary<string, string> ServiceTags { get; set; }
@@ -964,6 +984,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("SlsConfigs")]
             [Validation(Required=false)]
             public string SlsConfigs { get; set; }
+
+            [NameInMap("SwimlanePvtzDiscovery")]
+            [Validation(Required=false)]
+            public string SwimlanePvtzDiscovery { get; set; }
 
             /// <summary>
             /// <para>The details of the tags.</para>

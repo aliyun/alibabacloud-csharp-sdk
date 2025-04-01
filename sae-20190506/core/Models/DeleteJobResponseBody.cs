@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The result returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{msg: &quot;&quot;, code: 200, success: true}</para>

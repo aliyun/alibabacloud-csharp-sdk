@@ -24,21 +24,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The deployment method of the application. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>image</b>: indicates that the application was deployed by using an image.</description></item>
-        /// <item><description><b>upload</b>: indicates that the application was deployed by uploading a WAR or JAR package.</description></item>
-        /// <item><description><b>url</b>: indicates that the application was deployed by specifying the URL of a WAR or JAR package.</description></item>
-        /// </list>
+        /// <para>The information about the versions.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAppVersionsResponseBodyData> Data { get; set; }
         public class ListAppVersionsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The URL of the code package. If you use the SAE console to upload the code package, take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>The address of the image. This parameter is returned when the <b>Type</b> parameter is set to <b>image</b>.</description></item>
-            /// <item><description>The download link of the WAR or JAR package. This parameter is returned when the <b>Type</b> parameter is set to <b>upload</b>.</description></item>
+            /// <item><description>You cannot download the URL. You must call the GetPackageVersionAccessableUrl operation to obtain the URL. The obtained URL is valid for 10 minutes.</description></item>
+            /// <item><description>SAE can retain the package up to 90 days. After 90 days, the URL cannot be returned or downloaded.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("BuildPackageUrl")]
@@ -70,7 +66,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was created.</para>
+            /// <para>The deployment method of the application. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>image</b>: indicates that the application is deployed by using an image.</description></item>
+            /// <item><description><b>url</b>: indicates that the application is deployed by using a code package.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>image</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The ID of the version.</para>
+            /// <para>The URL of the image.</para>
             /// </summary>
             [NameInMap("WarUrl")]
             [Validation(Required=false)]

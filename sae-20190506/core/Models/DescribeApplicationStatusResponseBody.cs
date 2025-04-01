@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><b>2xx</b>: The call was successful.</description></item>
+        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The call failed.</description></item>
+        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The current state of the application. Valid values:</para>
+            /// <para>The current status of the application. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>RUNNING</b></description></item>
             /// <item><description><b>STOPPED</b></description></item>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public long? FileSizeLimit { get; set; }
 
             /// <summary>
-            /// <para>The ID of the latest change order that is executed. If no change orders have been executed or if change orders have expired, an empty parameter is returned.</para>
+            /// <para>The ID of the latest change order that is executed. If no change orders are executed or if change orders expire, this parameter is left empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1ccc2339-fc19-49aa-bda0-1e7b8497****</para>
@@ -140,11 +140,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? LastChangeOrderRunning { get; set; }
 
             /// <summary>
-            /// <para>The state of the latest change order. Valid values:</para>
+            /// <para>The status of the latest change order. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>READY</b>: The change order is ready.</description></item>
             /// <item><description><b>RUNNING</b>: The change order is being executed.</description></item>
-            /// <item><description><b>SUCCESS</b>: The change order was executed successfully.</description></item>
+            /// <item><description><b>SUCCESS</b>: The change order was executed.</description></item>
             /// <item><description><b>FAIL</b>: The change order failed to be executed.</description></item>
             /// <item><description><b>ABORT</b>: The change order is stopped.</description></item>
             /// <item><description><b>WAIT_BATCH_CONFIRM</b>: The change order is pending execution. You must manually confirm the release batch.</description></item>
@@ -172,10 +172,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? RunningInstances { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether an error occurred while the change order was being executed. Valid values:</para>
+            /// <para>The substatus of the change order. This parameter indicates whether an exception occurred while the change order was being executed. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>NORMAL</b></description></item>
-            /// <item><description><b>RUNNING_BUT_HAS_ERROR</b> If an error occurs during a batch release, you must manually perform a rollback. In this case, the change order is still running because the task is not completed, but the state of the change order is RUNNING_BUT_HAS_ERROR.</description></item>
+            /// <item><description><b>RUNNING_BUT_HAS_ERROR</b>: For example, if an error occurs during a phased release, you must manually roll back the application. In this case, the change order cannot be completed because the change order is still being executed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -188,10 +188,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request is successful, this parameter is not returned.****</description></item>
-        /// <item><description>This parameter is returned only if the request failed.**** For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
+        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -201,8 +201,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The returned message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b> is returned when the request succeeds.</description></item>
-        /// <item><description>An error code is returned when the request fails.</description></item>
+        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
+        /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -223,10 +223,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether information of the application is successfully obtained. Valid values:</para>
+        /// <para>Indicates whether the status of the application was queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The status was queried.</description></item>
+        /// <item><description><b>false</b>: The status failed to be queried.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It is used to query the details of a request.</para>
+        /// <para>The trace ID that is used to query the details of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>
