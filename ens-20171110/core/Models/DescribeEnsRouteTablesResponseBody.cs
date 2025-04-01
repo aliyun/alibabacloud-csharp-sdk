@@ -46,6 +46,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<DescribeEnsRouteTablesResponseBodyRouteTables> RouteTables { get; set; }
         public class DescribeEnsRouteTablesResponseBodyRouteTables : TeaModel {
+            /// <summary>
+            /// <para>The type of the route table. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>VSwitch</b> (default): vSwitch route table</description></item>
+            /// <item><description><b>Gateway</b>: gateway route table</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VSwitch</para>
+            /// </summary>
             [NameInMap("AssociateType")]
             [Validation(Required=false)]
             public string AssociateType { get; set; }
@@ -60,6 +70,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            /// <summary>
+            /// <para>The description of the network.</para>
+            /// <para>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -74,6 +91,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string EnsRegionId { get; set; }
 
+            /// <summary>
+            /// <para>Is the gateway routing table the default.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("IsDefaultGatewayRouteTable")]
             [Validation(Required=false)]
             public bool? IsDefaultGatewayRouteTable { get; set; }
@@ -99,6 +122,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string RouteTableId { get; set; }
 
             /// <summary>
+            /// <para>The name of the route table that you want to query.</para>
+            /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-tf-vtb7</para>
             /// </summary>
@@ -120,7 +146,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the route table. Valid values:</para>
+            /// <para>The type of the route table. Examples:</para>
             /// <list type="bullet">
             /// <item><description>Custom: custom route table.</description></item>
             /// <item><description>System: system route table.</description></item>

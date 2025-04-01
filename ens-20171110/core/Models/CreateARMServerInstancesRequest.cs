@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
 
+        [NameInMap("Cidr")]
+        [Validation(Required=false)]
+        public string Cidr { get; set; }
+
         /// <summary>
         /// <para>The ID of the Edge Node Service (ENS) node.</para>
         /// <para>This parameter is required.</para>

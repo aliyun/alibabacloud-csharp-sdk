@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNetworksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of networks.</para>
+        /// <para>The VPCs.</para>
         /// </summary>
         [NameInMap("Networks")]
         [Validation(Required=false)]
@@ -60,6 +60,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the gateway route table associated with the IPv6 gateway.</para>
+                /// <remarks>
+                /// <para> This parameter is available only when the IPv6 gateway is associated with a gateway route table.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rt-5*****tbs</para>
+                /// </summary>
                 [NameInMap("GatewayRouteTableId")]
                 [Validation(Required=false)]
                 public string GatewayRouteTableId { get; set; }
@@ -94,12 +103,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string NetworkName { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the route table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rt-5*****pks</para>
+                /// </summary>
                 [NameInMap("RouteTableId")]
                 [Validation(Required=false)]
                 public string RouteTableId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the route table. Valid values of <b>N</b> are <b>1</b> to <b>20</b>, which specifies that you can disassociate a gateway endpoint from at most 20 route tables at a time.</para>
+                /// <para>The IDs of the route tables.</para>
                 /// </summary>
                 [NameInMap("RouteTableIds")]
                 [Validation(Required=false)]

@@ -142,6 +142,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols> ListenerPortsAndProtocols { get; set; }
         public class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols : TeaModel {
+            /// <summary>
+            /// <para>The backend port that is used by the ELB instance. Valid values: <b>1</b> to <b>65535</b>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6000</para>
+            /// </summary>
             [NameInMap("BackendServerPort")]
             [Validation(Required=false)]
             public int? BackendServerPort { get; set; }

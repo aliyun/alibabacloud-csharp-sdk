@@ -2768,6 +2768,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["AutoUseCoupon"] = request.AutoUseCoupon;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cidr))
+            {
+                query["Cidr"] = request.Cidr;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
@@ -2876,6 +2880,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
             {
                 query["AutoUseCoupon"] = request.AutoUseCoupon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cidr))
+            {
+                query["Cidr"] = request.Cidr;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {

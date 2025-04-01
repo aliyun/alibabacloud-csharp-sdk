@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
             /// <summary>
             /// <para>The ID of the region.</para>
             /// 

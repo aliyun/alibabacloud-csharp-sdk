@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerListenersRequest : TeaModel {
+        /// <summary>
+        /// <para>The description of the image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The listener port.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
+        /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]
         public int? ListenerPort { get; set; }

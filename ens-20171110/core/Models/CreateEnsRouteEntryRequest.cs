@@ -47,9 +47,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NextHopId { get; set; }
 
         /// <summary>
-        /// <para>The type of next hop of the custom route entry. Valid values:</para>
+        /// <para>The next hop type of the custom route. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Instance (default): an ENS instance.</description></item>
+        /// <item><description>Instance: an ENS instance.</description></item>
+        /// <item><description>HaVip: a high-availability virtual IP address (HAVIP).</description></item>
+        /// <item><description>NetworkPeer: VPC peering connection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,6 +82,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string RouteTableId { get; set; }
 
+        /// <summary>
+        /// <para>The new source CIDR block of the inbound or outbound traffic.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>172.XXX.XXX.0/24</para>
+        /// </summary>
         [NameInMap("SourceCidrBlock")]
         [Validation(Required=false)]
         public string SourceCidrBlock { get; set; }

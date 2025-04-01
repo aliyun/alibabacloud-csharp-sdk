@@ -46,6 +46,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<DescribeEnsRouteEntryListResponseBodyRouteEntrys> RouteEntrys { get; set; }
         public class DescribeEnsRouteEntryListResponseBodyRouteEntrys : TeaModel {
+            /// <summary>
+            /// <para>The time when the entry was created. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-02-16T03:50:05Z</para>
+            /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
@@ -139,6 +145,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string RouteTableId { get; set; }
 
+            /// <summary>
+            /// <para>The new source CIDR block of the inbound or outbound traffic.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.XXX.XXX.0/24</para>
+            /// </summary>
             [NameInMap("SourceCidrBlock")]
             [Validation(Required=false)]
             public string SourceCidrBlock { get; set; }

@@ -72,6 +72,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string SnatIp { get; set; }
 
+        /// <summary>
+        /// <para>The information about the EIP specified in the SNAT entry.</para>
+        /// </summary>
         [NameInMap("SnatIps")]
         [Validation(Required=false)]
         public List<string> SnatIps { get; set; }

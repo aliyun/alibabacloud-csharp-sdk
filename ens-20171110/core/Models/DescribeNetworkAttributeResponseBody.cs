@@ -84,6 +84,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the gateway route table associated with the IPv6 gateway.</para>
+        /// <remarks>
+        /// <para> This parameter is available only when the IPv6 gateway is associated with a gateway route table.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rt-539***tbs</para>
+        /// </summary>
         [NameInMap("GatewayRouteTableId")]
         [Validation(Required=false)]
         public string GatewayRouteTableId { get; set; }
@@ -193,6 +202,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the route table that you want to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rt-539***fpu</para>
+        /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
         public string RouteTableId { get; set; }

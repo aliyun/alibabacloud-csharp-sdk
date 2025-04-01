@@ -19,6 +19,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The type of the resource.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>instance</description></item>
+        /// <item><description>eip</description></item>
+        /// <item><description>disk</description></item>
+        /// <item><description>network</description></item>
+        /// <item><description>natgateway</description></item>
+        /// <item><description>vswitch</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eip</para>
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }

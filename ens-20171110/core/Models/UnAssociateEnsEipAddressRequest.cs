@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string AllocationId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to forcefully release the instance if it is in the Running status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true. If you set the Force parameter to true, temporary data in the memory and storage of the instance is erased and cannot be restored after you call the operation, which is similar to the effect of a power-off action.</description></item>
+        /// <item><description>false (default)</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }

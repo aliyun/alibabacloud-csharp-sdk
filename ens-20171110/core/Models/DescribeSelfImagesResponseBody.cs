@@ -261,10 +261,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
+        /// <summary>
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public string PageNumber { get; set; }
 
+        /// <summary>
+        /// <para>The number of entries per page. Maximum value: 50. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
@@ -279,6 +291,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public string TotalCount { get; set; }

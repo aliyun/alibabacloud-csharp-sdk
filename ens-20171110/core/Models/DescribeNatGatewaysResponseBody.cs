@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNatGatewaysResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the NAT gateways.</para>
+        /// <para>The details of the NAT gateways.</para>
         /// </summary>
         [NameInMap("NatGateways")]
         [Validation(Required=false)]
@@ -36,18 +36,45 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string EnsRegionId { get; set; }
 
+            /// <summary>
+            /// <para>The list of elastic IP addresses (EIPs) that are associated with the Internet NAT gateway.</para>
+            /// </summary>
             [NameInMap("IpLists")]
             [Validation(Required=false)]
             public List<DescribeNatGatewaysResponseBodyNatGatewaysIpLists> IpLists { get; set; }
             public class DescribeNatGatewaysResponseBodyNatGatewaysIpLists : TeaModel {
+                /// <summary>
+                /// <para>The ID of the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>eip-50g****</para>
+                /// </summary>
                 [NameInMap("AllocationId")]
                 [Validation(Required=false)]
                 public string AllocationId { get; set; }
 
+                /// <summary>
+                /// <para>The IP address of the EIP associated with the NAT gateway.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>8.XX.XX.162</para>
+                /// </summary>
                 [NameInMap("IpAddress")]
                 [Validation(Required=false)]
                 public string IpAddress { get; set; }
 
+                /// <summary>
+                /// <para>The association between the EIP and the Internet NAT gateway. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>UsedByForwardTable</b>: The EIP is specified in a DNAT entry.</description></item>
+                /// <item><description><b>UsedBySnatTable</b>: The EIP is specified in an SNAT entry.</description></item>
+                /// <item><description><b>UsedByForwardSnatTable</b>: The EIP is specified in both an SNAT entry and a DNAT entry.</description></item>
+                /// <item><description><b>Idle</b>: The EIP is not specified in a DNAT or SNAT entry.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Idle</para>
+                /// </summary>
                 [NameInMap("UsingStatus")]
                 [Validation(Required=false)]
                 public string UsingStatus { get; set; }
@@ -94,6 +121,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string Spec { get; set; }
 
+            /// <summary>
+            /// <para>The status of the SNAT entry.</para>
+            /// <list type="bullet">
+            /// <item><description>Pending: The SNAT entry is being created or modified.</description></item>
+            /// <item><description>Available: The SNAT entry is available.</description></item>
+            /// <item><description>Deleting: The SNAT entry is being deleted.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Available</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }

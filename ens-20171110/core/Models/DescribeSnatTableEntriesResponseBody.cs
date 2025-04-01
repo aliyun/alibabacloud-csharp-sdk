@@ -46,6 +46,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<DescribeSnatTableEntriesResponseBodySnatTableEntries> SnatTableEntries { get; set; }
         public class DescribeSnatTableEntriesResponseBodySnatTableEntries : TeaModel {
+            /// <summary>
+            /// <para>Specifies whether to enable EIP affinity. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: no</description></item>
+            /// <item><description><b>1</b>: yes</description></item>
+            /// </list>
+            /// <para>**</para>
+            /// <para><b>Description</b> After you enable EIP affinity, if multiple EIPs are associated with an SNAT entry, each client uses one EIP to access the Internet. If EIP affinity is disabled, each client uses a random EIP to access the Internet.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("EipAffinity")]
             [Validation(Required=false)]
             public bool? EipAffinity { get; set; }

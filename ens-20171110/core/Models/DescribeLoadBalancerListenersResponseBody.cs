@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeLoadBalancerListenersResponseBodyListenersListener> Listener { get; set; }
             public class DescribeLoadBalancerListenersResponseBodyListenersListener : TeaModel {
+                /// <summary>
+                /// <para>The backend port that is used by the ELB instance. Valid values: <b>1</b> to <b>65535</b>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3306</para>
+                /// </summary>
                 [NameInMap("BackendServerPort")]
                 [Validation(Required=false)]
                 public int? BackendServerPort { get; set; }
