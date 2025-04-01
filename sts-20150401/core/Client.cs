@@ -76,22 +76,37 @@ namespace AlibabaCloud.SDK.Sts20150401
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-          * ### Prerequisites
-          * You cannot use an Alibaba Cloud account to call this operation. The requester of this operation can only be a RAM user or RAM role. Make sure that the AliyunSTSAssumeRoleAccess policy is attached to the requester. After this policy is attached to the requester, the requester has the management permissions on STS.
-          * If you do not attach the AliyunSTSAssumeRoleAccess policy to the requester, the following error message is returned:
-          * `You are not authorized to do this action. You should be authorized by RAM.`
-          * You can refer to the following information to troubleshoot the error:
-          * *   Cause of the error: The policy that is required to assume a RAM role is not attached to the requester. To resolve this issue, attach the AliyunSTSAssumeRoleAccess policy or a custom policy to the requester. For more information, see [Can I specify the RAM role that a RAM user can assume?](~~39744~~) and [Grant permissions to a RAM user](~~116146~~).
-          * *   Cause of the error: The requester is not authorized to assume the RAM role. To resolve this issue, add the requester to the Principal element in the trust policy of the RAM role For more information, see [Edit the trust policy of a RAM role](~~116819~~).
-          * ### Best practices
-          * An STS token is valid for a period of time after it is issued, and the number of STS tokens that can be issued within an interval is also limited. Therefore, we recommend that you configure a proper validity period for an STS token and repeatedly use the token within this period. This prevents frequent issuing of STS tokens from adversely affecting your services if a large number of requests are sent. For more information about the limit, see [Is the number of STS API requests limited?](~~39744~~) You can configure the `DurationSeconds` parameter to specify a validity period for an STS token.
-          * When you upload or download Object Storage Service (OSS) objects on mobile devices, a large number of STS API requests are sent. In this case, repeated use of an STS token may not meet your business requirements. To avoid the limit on STS API requests from affecting access to OSS, you can **add a signature to the URL of an OSS object**. For more information, see [Add signatures to URLs](~~31952~~) and [Obtain signature information from the server and upload data to OSS](~~31926~~).
-          *
-          * @param request AssumeRoleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AssumeRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a Security Token Service (STS) token to assume a Resource Access Management (RAM) role.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <para>You cannot use an Alibaba Cloud account to call this operation. The requester of this operation can only be a RAM user or RAM role. Make sure that the AliyunSTSAssumeRoleAccess policy is attached to the requester. After this policy is attached to the requester, the requester has the management permissions on STS.
+        /// If you do not attach the AliyunSTSAssumeRoleAccess policy to the requester, the following error message is returned:
+        /// <c>You are not authorized to do this action. You should be authorized by RAM.</c>
+        /// You can refer to the following information to troubleshoot the error:</para>
+        /// <list type="bullet">
+        /// <item><description>Cause of the error: The policy that is required to assume a RAM role is not attached to the requester. To resolve this issue, attach the AliyunSTSAssumeRoleAccess policy or a custom policy to the requester. For more information, see <a href="https://help.aliyun.com/document_detail/39744.html">Can I specify the RAM role that a RAM user can assume?</a> and <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Cause of the error: The requester is not authorized to assume the RAM role. To resolve this issue, add the requester to the Principal element in the trust policy of the RAM role For more information, see <a href="https://help.aliyun.com/document_detail/116819.html">Edit the trust policy of a RAM role</a>.</description></item>
+        /// </list>
+        /// <h3>Best practices</h3>
+        /// <para>An STS token is valid for a period of time after it is issued, and the number of STS tokens that can be issued within an interval is also limited. Therefore, we recommend that you configure a proper validity period for an STS token and repeatedly use the token within this period. This prevents frequent issuing of STS tokens from adversely affecting your services if a large number of requests are sent. For more information about the limit, see <a href="https://help.aliyun.com/document_detail/39744.html">Is the number of STS API requests limited?</a> You can configure the <c>DurationSeconds</c> parameter to specify a validity period for an STS token.
+        /// When you upload or download Object Storage Service (OSS) objects on mobile devices, a large number of STS API requests are sent. In this case, repeated use of an STS token may not meet your business requirements. To avoid the limit on STS API requests from affecting access to OSS, you can <b>add a signature to the URL of an OSS object</b>. For more information, see <a href="https://help.aliyun.com/document_detail/31952.html">Add signatures to URLs</a> and <a href="https://help.aliyun.com/document_detail/31926.html">Obtain signature information from the server and upload data to OSS</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssumeRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssumeRoleResponse
+        /// </returns>
         public AssumeRoleResponse AssumeRoleWithOptions(AssumeRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -132,25 +147,47 @@ namespace AlibabaCloud.SDK.Sts20150401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssumeRoleResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AssumeRoleResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AssumeRoleResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * ### Prerequisites
-          * You cannot use an Alibaba Cloud account to call this operation. The requester of this operation can only be a RAM user or RAM role. Make sure that the AliyunSTSAssumeRoleAccess policy is attached to the requester. After this policy is attached to the requester, the requester has the management permissions on STS.
-          * If you do not attach the AliyunSTSAssumeRoleAccess policy to the requester, the following error message is returned:
-          * `You are not authorized to do this action. You should be authorized by RAM.`
-          * You can refer to the following information to troubleshoot the error:
-          * *   Cause of the error: The policy that is required to assume a RAM role is not attached to the requester. To resolve this issue, attach the AliyunSTSAssumeRoleAccess policy or a custom policy to the requester. For more information, see [Can I specify the RAM role that a RAM user can assume?](~~39744~~) and [Grant permissions to a RAM user](~~116146~~).
-          * *   Cause of the error: The requester is not authorized to assume the RAM role. To resolve this issue, add the requester to the Principal element in the trust policy of the RAM role For more information, see [Edit the trust policy of a RAM role](~~116819~~).
-          * ### Best practices
-          * An STS token is valid for a period of time after it is issued, and the number of STS tokens that can be issued within an interval is also limited. Therefore, we recommend that you configure a proper validity period for an STS token and repeatedly use the token within this period. This prevents frequent issuing of STS tokens from adversely affecting your services if a large number of requests are sent. For more information about the limit, see [Is the number of STS API requests limited?](~~39744~~) You can configure the `DurationSeconds` parameter to specify a validity period for an STS token.
-          * When you upload or download Object Storage Service (OSS) objects on mobile devices, a large number of STS API requests are sent. In this case, repeated use of an STS token may not meet your business requirements. To avoid the limit on STS API requests from affecting access to OSS, you can **add a signature to the URL of an OSS object**. For more information, see [Add signatures to URLs](~~31952~~) and [Obtain signature information from the server and upload data to OSS](~~31926~~).
-          *
-          * @param request AssumeRoleRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AssumeRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a Security Token Service (STS) token to assume a Resource Access Management (RAM) role.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <para>You cannot use an Alibaba Cloud account to call this operation. The requester of this operation can only be a RAM user or RAM role. Make sure that the AliyunSTSAssumeRoleAccess policy is attached to the requester. After this policy is attached to the requester, the requester has the management permissions on STS.
+        /// If you do not attach the AliyunSTSAssumeRoleAccess policy to the requester, the following error message is returned:
+        /// <c>You are not authorized to do this action. You should be authorized by RAM.</c>
+        /// You can refer to the following information to troubleshoot the error:</para>
+        /// <list type="bullet">
+        /// <item><description>Cause of the error: The policy that is required to assume a RAM role is not attached to the requester. To resolve this issue, attach the AliyunSTSAssumeRoleAccess policy or a custom policy to the requester. For more information, see <a href="https://help.aliyun.com/document_detail/39744.html">Can I specify the RAM role that a RAM user can assume?</a> and <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Cause of the error: The requester is not authorized to assume the RAM role. To resolve this issue, add the requester to the Principal element in the trust policy of the RAM role For more information, see <a href="https://help.aliyun.com/document_detail/116819.html">Edit the trust policy of a RAM role</a>.</description></item>
+        /// </list>
+        /// <h3>Best practices</h3>
+        /// <para>An STS token is valid for a period of time after it is issued, and the number of STS tokens that can be issued within an interval is also limited. Therefore, we recommend that you configure a proper validity period for an STS token and repeatedly use the token within this period. This prevents frequent issuing of STS tokens from adversely affecting your services if a large number of requests are sent. For more information about the limit, see <a href="https://help.aliyun.com/document_detail/39744.html">Is the number of STS API requests limited?</a> You can configure the <c>DurationSeconds</c> parameter to specify a validity period for an STS token.
+        /// When you upload or download Object Storage Service (OSS) objects on mobile devices, a large number of STS API requests are sent. In this case, repeated use of an STS token may not meet your business requirements. To avoid the limit on STS API requests from affecting access to OSS, you can <b>add a signature to the URL of an OSS object</b>. For more information, see <a href="https://help.aliyun.com/document_detail/31952.html">Add signatures to URLs</a> and <a href="https://help.aliyun.com/document_detail/31926.html">Obtain signature information from the server and upload data to OSS</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssumeRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssumeRoleResponse
+        /// </returns>
         public async Task<AssumeRoleResponse> AssumeRoleWithOptionsAsync(AssumeRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -191,61 +228,109 @@ namespace AlibabaCloud.SDK.Sts20150401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssumeRoleResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AssumeRoleResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AssumeRoleResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * ### Prerequisites
-          * You cannot use an Alibaba Cloud account to call this operation. The requester of this operation can only be a RAM user or RAM role. Make sure that the AliyunSTSAssumeRoleAccess policy is attached to the requester. After this policy is attached to the requester, the requester has the management permissions on STS.
-          * If you do not attach the AliyunSTSAssumeRoleAccess policy to the requester, the following error message is returned:
-          * `You are not authorized to do this action. You should be authorized by RAM.`
-          * You can refer to the following information to troubleshoot the error:
-          * *   Cause of the error: The policy that is required to assume a RAM role is not attached to the requester. To resolve this issue, attach the AliyunSTSAssumeRoleAccess policy or a custom policy to the requester. For more information, see [Can I specify the RAM role that a RAM user can assume?](~~39744~~) and [Grant permissions to a RAM user](~~116146~~).
-          * *   Cause of the error: The requester is not authorized to assume the RAM role. To resolve this issue, add the requester to the Principal element in the trust policy of the RAM role For more information, see [Edit the trust policy of a RAM role](~~116819~~).
-          * ### Best practices
-          * An STS token is valid for a period of time after it is issued, and the number of STS tokens that can be issued within an interval is also limited. Therefore, we recommend that you configure a proper validity period for an STS token and repeatedly use the token within this period. This prevents frequent issuing of STS tokens from adversely affecting your services if a large number of requests are sent. For more information about the limit, see [Is the number of STS API requests limited?](~~39744~~) You can configure the `DurationSeconds` parameter to specify a validity period for an STS token.
-          * When you upload or download Object Storage Service (OSS) objects on mobile devices, a large number of STS API requests are sent. In this case, repeated use of an STS token may not meet your business requirements. To avoid the limit on STS API requests from affecting access to OSS, you can **add a signature to the URL of an OSS object**. For more information, see [Add signatures to URLs](~~31952~~) and [Obtain signature information from the server and upload data to OSS](~~31926~~).
-          *
-          * @param request AssumeRoleRequest
-          * @return AssumeRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a Security Token Service (STS) token to assume a Resource Access Management (RAM) role.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <para>You cannot use an Alibaba Cloud account to call this operation. The requester of this operation can only be a RAM user or RAM role. Make sure that the AliyunSTSAssumeRoleAccess policy is attached to the requester. After this policy is attached to the requester, the requester has the management permissions on STS.
+        /// If you do not attach the AliyunSTSAssumeRoleAccess policy to the requester, the following error message is returned:
+        /// <c>You are not authorized to do this action. You should be authorized by RAM.</c>
+        /// You can refer to the following information to troubleshoot the error:</para>
+        /// <list type="bullet">
+        /// <item><description>Cause of the error: The policy that is required to assume a RAM role is not attached to the requester. To resolve this issue, attach the AliyunSTSAssumeRoleAccess policy or a custom policy to the requester. For more information, see <a href="https://help.aliyun.com/document_detail/39744.html">Can I specify the RAM role that a RAM user can assume?</a> and <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Cause of the error: The requester is not authorized to assume the RAM role. To resolve this issue, add the requester to the Principal element in the trust policy of the RAM role For more information, see <a href="https://help.aliyun.com/document_detail/116819.html">Edit the trust policy of a RAM role</a>.</description></item>
+        /// </list>
+        /// <h3>Best practices</h3>
+        /// <para>An STS token is valid for a period of time after it is issued, and the number of STS tokens that can be issued within an interval is also limited. Therefore, we recommend that you configure a proper validity period for an STS token and repeatedly use the token within this period. This prevents frequent issuing of STS tokens from adversely affecting your services if a large number of requests are sent. For more information about the limit, see <a href="https://help.aliyun.com/document_detail/39744.html">Is the number of STS API requests limited?</a> You can configure the <c>DurationSeconds</c> parameter to specify a validity period for an STS token.
+        /// When you upload or download Object Storage Service (OSS) objects on mobile devices, a large number of STS API requests are sent. In this case, repeated use of an STS token may not meet your business requirements. To avoid the limit on STS API requests from affecting access to OSS, you can <b>add a signature to the URL of an OSS object</b>. For more information, see <a href="https://help.aliyun.com/document_detail/31952.html">Add signatures to URLs</a> and <a href="https://help.aliyun.com/document_detail/31926.html">Obtain signature information from the server and upload data to OSS</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssumeRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssumeRoleResponse
+        /// </returns>
         public AssumeRoleResponse AssumeRole(AssumeRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssumeRoleWithOptions(request, runtime);
         }
 
-        /**
-          * ### Prerequisites
-          * You cannot use an Alibaba Cloud account to call this operation. The requester of this operation can only be a RAM user or RAM role. Make sure that the AliyunSTSAssumeRoleAccess policy is attached to the requester. After this policy is attached to the requester, the requester has the management permissions on STS.
-          * If you do not attach the AliyunSTSAssumeRoleAccess policy to the requester, the following error message is returned:
-          * `You are not authorized to do this action. You should be authorized by RAM.`
-          * You can refer to the following information to troubleshoot the error:
-          * *   Cause of the error: The policy that is required to assume a RAM role is not attached to the requester. To resolve this issue, attach the AliyunSTSAssumeRoleAccess policy or a custom policy to the requester. For more information, see [Can I specify the RAM role that a RAM user can assume?](~~39744~~) and [Grant permissions to a RAM user](~~116146~~).
-          * *   Cause of the error: The requester is not authorized to assume the RAM role. To resolve this issue, add the requester to the Principal element in the trust policy of the RAM role For more information, see [Edit the trust policy of a RAM role](~~116819~~).
-          * ### Best practices
-          * An STS token is valid for a period of time after it is issued, and the number of STS tokens that can be issued within an interval is also limited. Therefore, we recommend that you configure a proper validity period for an STS token and repeatedly use the token within this period. This prevents frequent issuing of STS tokens from adversely affecting your services if a large number of requests are sent. For more information about the limit, see [Is the number of STS API requests limited?](~~39744~~) You can configure the `DurationSeconds` parameter to specify a validity period for an STS token.
-          * When you upload or download Object Storage Service (OSS) objects on mobile devices, a large number of STS API requests are sent. In this case, repeated use of an STS token may not meet your business requirements. To avoid the limit on STS API requests from affecting access to OSS, you can **add a signature to the URL of an OSS object**. For more information, see [Add signatures to URLs](~~31952~~) and [Obtain signature information from the server and upload data to OSS](~~31926~~).
-          *
-          * @param request AssumeRoleRequest
-          * @return AssumeRoleResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a Security Token Service (STS) token to assume a Resource Access Management (RAM) role.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <para>You cannot use an Alibaba Cloud account to call this operation. The requester of this operation can only be a RAM user or RAM role. Make sure that the AliyunSTSAssumeRoleAccess policy is attached to the requester. After this policy is attached to the requester, the requester has the management permissions on STS.
+        /// If you do not attach the AliyunSTSAssumeRoleAccess policy to the requester, the following error message is returned:
+        /// <c>You are not authorized to do this action. You should be authorized by RAM.</c>
+        /// You can refer to the following information to troubleshoot the error:</para>
+        /// <list type="bullet">
+        /// <item><description>Cause of the error: The policy that is required to assume a RAM role is not attached to the requester. To resolve this issue, attach the AliyunSTSAssumeRoleAccess policy or a custom policy to the requester. For more information, see <a href="https://help.aliyun.com/document_detail/39744.html">Can I specify the RAM role that a RAM user can assume?</a> and <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Cause of the error: The requester is not authorized to assume the RAM role. To resolve this issue, add the requester to the Principal element in the trust policy of the RAM role For more information, see <a href="https://help.aliyun.com/document_detail/116819.html">Edit the trust policy of a RAM role</a>.</description></item>
+        /// </list>
+        /// <h3>Best practices</h3>
+        /// <para>An STS token is valid for a period of time after it is issued, and the number of STS tokens that can be issued within an interval is also limited. Therefore, we recommend that you configure a proper validity period for an STS token and repeatedly use the token within this period. This prevents frequent issuing of STS tokens from adversely affecting your services if a large number of requests are sent. For more information about the limit, see <a href="https://help.aliyun.com/document_detail/39744.html">Is the number of STS API requests limited?</a> You can configure the <c>DurationSeconds</c> parameter to specify a validity period for an STS token.
+        /// When you upload or download Object Storage Service (OSS) objects on mobile devices, a large number of STS API requests are sent. In this case, repeated use of an STS token may not meet your business requirements. To avoid the limit on STS API requests from affecting access to OSS, you can <b>add a signature to the URL of an OSS object</b>. For more information, see <a href="https://help.aliyun.com/document_detail/31952.html">Add signatures to URLs</a> and <a href="https://help.aliyun.com/document_detail/31926.html">Obtain signature information from the server and upload data to OSS</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssumeRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssumeRoleResponse
+        /// </returns>
         public async Task<AssumeRoleResponse> AssumeRoleAsync(AssumeRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssumeRoleWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ### Prerequisites
-          * *   An OIDC token is obtained from an external identity provider (IdP).
-          * *   An OIDC IdP is created in the RAM console. For more information, see [Create an OIDC IdP](~~327123~~) or [CreateOIDCProvider](~~327135~~).
-          * *   A RAM role whose trusted entity is an OIDC IdP is created in the RAM console. For more information, see [Create a RAM role for a trusted IdP](~~116805~~) or [CreateRole](~~28710~~).
-          *
-          * @param request AssumeRoleWithOIDCRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AssumeRoleWithOIDCResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a Security Token Service (STS) token to assume a Resource Access Management (RAM) role during role-based single sign-on (SSO) by using OpenID Connect (OIDC).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <list type="bullet">
+        /// <item><description>An OIDC token is obtained from an external identity provider (IdP).</description></item>
+        /// <item><description>An OIDC IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/327123.html">Create an OIDC IdP</a> or <a href="https://help.aliyun.com/document_detail/327135.html">CreateOIDCProvider</a>.</description></item>
+        /// <item><description>A RAM role whose trusted entity is an OIDC IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116805.html">Create a RAM role for a trusted IdP</a> or <a href="https://help.aliyun.com/document_detail/28710.html">CreateRole</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssumeRoleWithOIDCRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssumeRoleWithOIDCResponse
+        /// </returns>
         public AssumeRoleWithOIDCResponse AssumeRoleWithOIDCWithOptions(AssumeRoleWithOIDCRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -290,19 +375,41 @@ namespace AlibabaCloud.SDK.Sts20150401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssumeRoleWithOIDCResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AssumeRoleWithOIDCResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AssumeRoleWithOIDCResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * ### Prerequisites
-          * *   An OIDC token is obtained from an external identity provider (IdP).
-          * *   An OIDC IdP is created in the RAM console. For more information, see [Create an OIDC IdP](~~327123~~) or [CreateOIDCProvider](~~327135~~).
-          * *   A RAM role whose trusted entity is an OIDC IdP is created in the RAM console. For more information, see [Create a RAM role for a trusted IdP](~~116805~~) or [CreateRole](~~28710~~).
-          *
-          * @param request AssumeRoleWithOIDCRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AssumeRoleWithOIDCResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a Security Token Service (STS) token to assume a Resource Access Management (RAM) role during role-based single sign-on (SSO) by using OpenID Connect (OIDC).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <list type="bullet">
+        /// <item><description>An OIDC token is obtained from an external identity provider (IdP).</description></item>
+        /// <item><description>An OIDC IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/327123.html">Create an OIDC IdP</a> or <a href="https://help.aliyun.com/document_detail/327135.html">CreateOIDCProvider</a>.</description></item>
+        /// <item><description>A RAM role whose trusted entity is an OIDC IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116805.html">Create a RAM role for a trusted IdP</a> or <a href="https://help.aliyun.com/document_detail/28710.html">CreateRole</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssumeRoleWithOIDCRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssumeRoleWithOIDCResponse
+        /// </returns>
         public async Task<AssumeRoleWithOIDCResponse> AssumeRoleWithOIDCWithOptionsAsync(AssumeRoleWithOIDCRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -347,49 +454,97 @@ namespace AlibabaCloud.SDK.Sts20150401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssumeRoleWithOIDCResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AssumeRoleWithOIDCResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AssumeRoleWithOIDCResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * ### Prerequisites
-          * *   An OIDC token is obtained from an external identity provider (IdP).
-          * *   An OIDC IdP is created in the RAM console. For more information, see [Create an OIDC IdP](~~327123~~) or [CreateOIDCProvider](~~327135~~).
-          * *   A RAM role whose trusted entity is an OIDC IdP is created in the RAM console. For more information, see [Create a RAM role for a trusted IdP](~~116805~~) or [CreateRole](~~28710~~).
-          *
-          * @param request AssumeRoleWithOIDCRequest
-          * @return AssumeRoleWithOIDCResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a Security Token Service (STS) token to assume a Resource Access Management (RAM) role during role-based single sign-on (SSO) by using OpenID Connect (OIDC).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <list type="bullet">
+        /// <item><description>An OIDC token is obtained from an external identity provider (IdP).</description></item>
+        /// <item><description>An OIDC IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/327123.html">Create an OIDC IdP</a> or <a href="https://help.aliyun.com/document_detail/327135.html">CreateOIDCProvider</a>.</description></item>
+        /// <item><description>A RAM role whose trusted entity is an OIDC IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116805.html">Create a RAM role for a trusted IdP</a> or <a href="https://help.aliyun.com/document_detail/28710.html">CreateRole</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssumeRoleWithOIDCRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssumeRoleWithOIDCResponse
+        /// </returns>
         public AssumeRoleWithOIDCResponse AssumeRoleWithOIDC(AssumeRoleWithOIDCRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssumeRoleWithOIDCWithOptions(request, runtime);
         }
 
-        /**
-          * ### Prerequisites
-          * *   An OIDC token is obtained from an external identity provider (IdP).
-          * *   An OIDC IdP is created in the RAM console. For more information, see [Create an OIDC IdP](~~327123~~) or [CreateOIDCProvider](~~327135~~).
-          * *   A RAM role whose trusted entity is an OIDC IdP is created in the RAM console. For more information, see [Create a RAM role for a trusted IdP](~~116805~~) or [CreateRole](~~28710~~).
-          *
-          * @param request AssumeRoleWithOIDCRequest
-          * @return AssumeRoleWithOIDCResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a Security Token Service (STS) token to assume a Resource Access Management (RAM) role during role-based single sign-on (SSO) by using OpenID Connect (OIDC).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <list type="bullet">
+        /// <item><description>An OIDC token is obtained from an external identity provider (IdP).</description></item>
+        /// <item><description>An OIDC IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/327123.html">Create an OIDC IdP</a> or <a href="https://help.aliyun.com/document_detail/327135.html">CreateOIDCProvider</a>.</description></item>
+        /// <item><description>A RAM role whose trusted entity is an OIDC IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116805.html">Create a RAM role for a trusted IdP</a> or <a href="https://help.aliyun.com/document_detail/28710.html">CreateRole</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssumeRoleWithOIDCRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssumeRoleWithOIDCResponse
+        /// </returns>
         public async Task<AssumeRoleWithOIDCResponse> AssumeRoleWithOIDCAsync(AssumeRoleWithOIDCRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssumeRoleWithOIDCWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * ###
-          * *   A SAML response is obtained from an external identity provider (IdP).
-          * *   A SAML IdP is created in the RAM console. For more information, see [Create a SAML IdP](~~116083~~) or [CreateSAMLProvider](~~186846~~).
-          * *   A RAM role whose trusted entity is a SAML IdP is created in the RAM console. For more information, see [Create a RAM role for a trusted IdP](~~116805~~) or [CreateRole](~~28710~~).
-          *
-          * @param request AssumeRoleWithSAMLRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AssumeRoleWithSAMLResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a Security Token Service (STS) token to assume a Resource Access Management (RAM) role during role-based single sign-on (SSO) by using Security Assertion Markup Language (SAML).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <list type="bullet">
+        /// <item><description>A SAML response is obtained from an external identity provider (IdP).</description></item>
+        /// <item><description>A SAML IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116083.html">Create a SAML IdP</a> or <a href="https://help.aliyun.com/document_detail/186846.html">CreateSAMLProvider</a>.</description></item>
+        /// <item><description>A RAM role whose trusted entity is a SAML IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116805.html">Create a RAM role for a trusted IdP</a> or <a href="https://help.aliyun.com/document_detail/28710.html">CreateRole</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssumeRoleWithSAMLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssumeRoleWithSAMLResponse
+        /// </returns>
         public AssumeRoleWithSAMLResponse AssumeRoleWithSAMLWithOptions(AssumeRoleWithSAMLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -430,19 +585,41 @@ namespace AlibabaCloud.SDK.Sts20150401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssumeRoleWithSAMLResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AssumeRoleWithSAMLResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AssumeRoleWithSAMLResponse>(Execute(params_, req, runtime));
+            }
         }
 
-        /**
-          * ###
-          * *   A SAML response is obtained from an external identity provider (IdP).
-          * *   A SAML IdP is created in the RAM console. For more information, see [Create a SAML IdP](~~116083~~) or [CreateSAMLProvider](~~186846~~).
-          * *   A RAM role whose trusted entity is a SAML IdP is created in the RAM console. For more information, see [Create a RAM role for a trusted IdP](~~116805~~) or [CreateRole](~~28710~~).
-          *
-          * @param request AssumeRoleWithSAMLRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AssumeRoleWithSAMLResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a Security Token Service (STS) token to assume a Resource Access Management (RAM) role during role-based single sign-on (SSO) by using Security Assertion Markup Language (SAML).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <list type="bullet">
+        /// <item><description>A SAML response is obtained from an external identity provider (IdP).</description></item>
+        /// <item><description>A SAML IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116083.html">Create a SAML IdP</a> or <a href="https://help.aliyun.com/document_detail/186846.html">CreateSAMLProvider</a>.</description></item>
+        /// <item><description>A RAM role whose trusted entity is a SAML IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116805.html">Create a RAM role for a trusted IdP</a> or <a href="https://help.aliyun.com/document_detail/28710.html">CreateRole</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssumeRoleWithSAMLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssumeRoleWithSAMLResponse
+        /// </returns>
         public async Task<AssumeRoleWithSAMLResponse> AssumeRoleWithSAMLWithOptionsAsync(AssumeRoleWithSAMLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -483,39 +660,87 @@ namespace AlibabaCloud.SDK.Sts20150401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssumeRoleWithSAMLResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<AssumeRoleWithSAMLResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<AssumeRoleWithSAMLResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
-        /**
-          * ###
-          * *   A SAML response is obtained from an external identity provider (IdP).
-          * *   A SAML IdP is created in the RAM console. For more information, see [Create a SAML IdP](~~116083~~) or [CreateSAMLProvider](~~186846~~).
-          * *   A RAM role whose trusted entity is a SAML IdP is created in the RAM console. For more information, see [Create a RAM role for a trusted IdP](~~116805~~) or [CreateRole](~~28710~~).
-          *
-          * @param request AssumeRoleWithSAMLRequest
-          * @return AssumeRoleWithSAMLResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a Security Token Service (STS) token to assume a Resource Access Management (RAM) role during role-based single sign-on (SSO) by using Security Assertion Markup Language (SAML).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <list type="bullet">
+        /// <item><description>A SAML response is obtained from an external identity provider (IdP).</description></item>
+        /// <item><description>A SAML IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116083.html">Create a SAML IdP</a> or <a href="https://help.aliyun.com/document_detail/186846.html">CreateSAMLProvider</a>.</description></item>
+        /// <item><description>A RAM role whose trusted entity is a SAML IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116805.html">Create a RAM role for a trusted IdP</a> or <a href="https://help.aliyun.com/document_detail/28710.html">CreateRole</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssumeRoleWithSAMLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssumeRoleWithSAMLResponse
+        /// </returns>
         public AssumeRoleWithSAMLResponse AssumeRoleWithSAML(AssumeRoleWithSAMLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AssumeRoleWithSAMLWithOptions(request, runtime);
         }
 
-        /**
-          * ###
-          * *   A SAML response is obtained from an external identity provider (IdP).
-          * *   A SAML IdP is created in the RAM console. For more information, see [Create a SAML IdP](~~116083~~) or [CreateSAMLProvider](~~186846~~).
-          * *   A RAM role whose trusted entity is a SAML IdP is created in the RAM console. For more information, see [Create a RAM role for a trusted IdP](~~116805~~) or [CreateRole](~~28710~~).
-          *
-          * @param request AssumeRoleWithSAMLRequest
-          * @return AssumeRoleWithSAMLResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a Security Token Service (STS) token to assume a Resource Access Management (RAM) role during role-based single sign-on (SSO) by using Security Assertion Markup Language (SAML).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3></h3>
+        /// <list type="bullet">
+        /// <item><description>A SAML response is obtained from an external identity provider (IdP).</description></item>
+        /// <item><description>A SAML IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116083.html">Create a SAML IdP</a> or <a href="https://help.aliyun.com/document_detail/186846.html">CreateSAMLProvider</a>.</description></item>
+        /// <item><description>A RAM role whose trusted entity is a SAML IdP is created in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116805.html">Create a RAM role for a trusted IdP</a> or <a href="https://help.aliyun.com/document_detail/28710.html">CreateRole</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssumeRoleWithSAMLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssumeRoleWithSAMLResponse
+        /// </returns>
         public async Task<AssumeRoleWithSAMLResponse> AssumeRoleWithSAMLAsync(AssumeRoleWithSAMLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssumeRoleWithSAMLWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the Alibaba Cloud account to which the current requester belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCallerIdentityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCallerIdentityResponse
+        /// </returns>
         public GetCallerIdentityResponse GetCallerIdentityWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -531,9 +756,31 @@ namespace AlibabaCloud.SDK.Sts20150401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetCallerIdentityResponse>(CallApi(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetCallerIdentityResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetCallerIdentityResponse>(Execute(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the Alibaba Cloud account to which the current requester belongs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCallerIdentityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCallerIdentityResponse
+        /// </returns>
         public async Task<GetCallerIdentityResponse> GetCallerIdentityWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -549,15 +796,38 @@ namespace AlibabaCloud.SDK.Sts20150401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetCallerIdentityResponse>(await CallApiAsync(params_, req, runtime));
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetCallerIdentityResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetCallerIdentityResponse>(await ExecuteAsync(params_, req, runtime));
+            }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the Alibaba Cloud account to which the current requester belongs.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetCallerIdentityResponse
+        /// </returns>
         public GetCallerIdentityResponse GetCallerIdentity()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetCallerIdentityWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ID of the Alibaba Cloud account to which the current requester belongs.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetCallerIdentityResponse
+        /// </returns>
         public async Task<GetCallerIdentityResponse> GetCallerIdentityAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
