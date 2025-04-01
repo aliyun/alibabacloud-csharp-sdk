@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Devs20230714.Models
     public class SourceConfig : TeaModel {
         [NameInMap("oss")]
         [Validation(Required=false)]
-        public OpenStructOssSourceConfig Oss { get; set; }
+        public OssSourceConfig Oss { get; set; }
 
         [NameInMap("repository")]
         [Validation(Required=false)]
