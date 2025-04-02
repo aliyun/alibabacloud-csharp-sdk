@@ -51,6 +51,14 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
                     }
 
+                    [NameInMap("dialogOpenAnalysis")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, object> DialogOpenAnalysis { get; set; }
+
+                    [NameInMap("dialogProcessAnalysis")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, object> DialogProcessAnalysis { get; set; }
+
                     [NameInMap("dialogSop")]
                     [Validation(Required=false)]
                     public string DialogSop { get; set; }
