@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateWafRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>WAF rule ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850237.html">ListWafRules</a> interface.</para>
+        /// <para>WAF rule ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> interface.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20000001</para>

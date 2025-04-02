@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public WafRuleConfig Config { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF rule, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850237.html">ListWafRules</a> interface.</para>
+        /// <para>The ID of the WAF rule, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> interface.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000001</para>

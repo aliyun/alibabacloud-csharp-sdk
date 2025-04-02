@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF ruleset, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850233.html">ListWafRulesets</a> operation.</para>
+        /// <para>The ID of the WAF ruleset, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>
@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The configurations shared by multiple rules.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000001</para>
         /// </summary>
         [NameInMap("Shared")]
         [Validation(Required=false)]
