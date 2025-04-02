@@ -461,6 +461,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
+            [NameInMap("VersionLifecycle")]
+            [Validation(Required=false)]
+            public string VersionLifecycle { get; set; }
+
             /// <summary>
             /// <para>The ID of the virtual private cloud (VPC).</para>
             /// 

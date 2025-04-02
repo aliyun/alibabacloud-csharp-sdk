@@ -255,6 +255,40 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string EndDate { get; set; }
 
+                [NameInMap("GatewayEntry")]
+                [Validation(Required=false)]
+                public List<ListGatewayResponseBodyDataResultGatewayEntry> GatewayEntry { get; set; }
+                public class ListGatewayResponseBodyDataResultGatewayEntry : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>gw-*****5c2cd6144f4bfa1c32289f45ea8.cn-hangzhou.alicloudapi.com</para>
+                    /// </summary>
+                    [NameInMap("EntryDomain")]
+                    [Validation(Required=false)]
+                    public string EntryDomain { get; set; }
+
+                    [NameInMap("HttpPorts")]
+                    [Validation(Required=false)]
+                    public List<int?> HttpPorts { get; set; }
+
+                    [NameInMap("HttpsPorts")]
+                    [Validation(Required=false)]
+                    public List<int?> HttpsPorts { get; set; }
+
+                    [NameInMap("IpList")]
+                    [Validation(Required=false)]
+                    public List<string> IpList { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PUB_NET</para>
+                    /// </summary>
+                    [NameInMap("NetType")]
+                    [Validation(Required=false)]
+                    public string NetType { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The gateway type.</para>
                 /// 
@@ -741,6 +775,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [NameInMap("Upgrade")]
                 [Validation(Required=false)]
                 public bool? Upgrade { get; set; }
+
+                [NameInMap("VersionLifecycle")]
+                [Validation(Required=false)]
+                public string VersionLifecycle { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the virtual private cloud (VPC) to which the gateway belongs.</para>

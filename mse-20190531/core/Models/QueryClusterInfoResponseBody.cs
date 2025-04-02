@@ -517,6 +517,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string VersionCode { get; set; }
 
+            [NameInMap("VersionLifecycle")]
+            [Validation(Required=false)]
+            public string VersionLifecycle { get; set; }
+
             /// <summary>
             /// <para>The ID of the VPC where the instance resides.</para>
             /// 
