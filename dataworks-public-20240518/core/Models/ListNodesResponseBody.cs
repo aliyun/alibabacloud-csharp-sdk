@@ -441,6 +441,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public ListNodesResponseBodyPagingInfoNodesRuntimeResource RuntimeResource { get; set; }
                 public class ListNodesResponseBodyPagingInfoNodesRuntimeResource : TeaModel {
+                    [NameInMap("ResourceGroup")]
+                    [Validation(Required=false)]
+                    public string ResourceGroup { get; set; }
+
                     /// <summary>
                     /// <para>The resource group ID.</para>
                     /// 

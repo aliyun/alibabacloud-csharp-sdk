@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataAssetTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the tag.</para>
-        /// <para>Valid values:</para>
+        /// <para>The type of the tag. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Normal</description></item>
         /// <item><description>System</description></item>

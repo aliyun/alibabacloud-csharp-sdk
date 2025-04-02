@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string InstanceMode { get; set; }
 
         /// <summary>
-        /// <para>The name of the task.</para>
+        /// <para>The name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -449,7 +449,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Cron { get; set; }
 
             /// <summary>
-            /// <para>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</para>
+            /// <para>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <c>yyyy-mm-dd hh:mm:ss</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9999-01-01 00:00:00</para>
@@ -474,7 +474,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Recurrence { get; set; }
 
             /// <summary>
-            /// <para>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</para>
+            /// <para>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <c>yyyy-mm-dd hh:mm:ss</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1970-01-01 00:00:00</para>
@@ -486,8 +486,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The trigger type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Scheduler: periodic scheduling</description></item>
-            /// <item><description>Manual: manual scheduling</description></item>
+            /// <item><description>Scheduler: scheduling cycle-based trigger</description></item>
+            /// <item><description>Manual: manual trigger</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

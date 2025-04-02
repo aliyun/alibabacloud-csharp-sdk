@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <item><description>Status (Desc/Asc): the status of the resource group</description></item>
         /// <item><description>Spec (Desc/Asc): the specifications of the resource group</description></item>
         /// <item><description>CreateUser (Desc/Asc): the creator of the resource group</description></item>
-        /// <item><description>CreateTime (Desc/Asc): the time when the route is created</description></item>
+        /// <item><description>CreateTime (Desc/Asc): the time when the resource group is created</description></item>
         /// </list>
         /// <para>Default value: CreateTime Asc</para>
         /// 

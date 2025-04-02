@@ -54,8 +54,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances> WorkflowInstances { get; set; }
             public class ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances : TeaModel {
                 /// <summary>
-                /// <para>业务日期。</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
                 /// </summary>
@@ -188,15 +186,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>工作流实例的类型。</para>
-                /// <list type="bullet">
-                /// <item><description>Normal：周期调度</description></item>
-                /// <item><description>Manual：手动任务</description></item>
-                /// <item><description>SmokeTest：测试</description></item>
-                /// <item><description>SupplementData：补数据</description></item>
-                /// <item><description>ManualWorkflow：手动工作流</description></item>
-                /// </list>
-                /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
                 /// </summary>

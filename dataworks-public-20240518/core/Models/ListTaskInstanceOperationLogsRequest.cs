@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListTaskInstanceOperationLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The operation date, accurate to the day. The default value is the current day. You can query only the operation logs generated within the previous 31 days.</para>
+        /// <para>The operation date, accurate to the day. The default value is the current day. You can query only the operation logs generated within the previous 31 days. This value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>

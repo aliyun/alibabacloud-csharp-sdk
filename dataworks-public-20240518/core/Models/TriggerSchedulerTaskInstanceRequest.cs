@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The time defined by the HTTP Trigger node.</para>
+        /// <para>The time defined by the HTTP Trigger node. This value is a UNIX timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The scheduling dependency type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Normal: same-cycle scheduling dependency</description></item>
-                /// <item><description>CrossCycle: cross-cycle scheduling dependency</description></item>
+                /// <item><description>Normal</description></item>
+                /// <item><description>CrossCycle</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

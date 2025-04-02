@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public double? RequestedCu { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the resource group for Data Integration used for batch synchronization.</para>
+                /// <para>The name of the resource group for Data Integration used for batch synchronization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>S_res_group_111_222</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public double? RequestedCu { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the resource group for Data Integration used for real-time synchronization.</para>
+                /// <para>The name of the resource group for Data Integration used for real-time synchronization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>S_res_group_111_222</para>
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public double? RequestedCu { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the resource group for scheduling used for batch synchronization.</para>
+                /// <para>The name of the resource group for scheduling used for batch synchronization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>S_res_group_235454102432001_1721021993437</para>

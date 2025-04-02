@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TriggerRecurrence { get; set; }
 
         /// <summary>
-        /// <para>The trigger type.</para>
+        /// <para>The trigger type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Scheduler: scheduling cycle-based trigger</description></item>
         /// <item><description>Manual: manual trigger</description></item>

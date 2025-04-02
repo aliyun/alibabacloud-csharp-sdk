@@ -286,6 +286,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string JobStatus { get; set; }
 
+            /// <summary>
+            /// <para>DatabaseRealtimeMigration (Full Database Real-Time): Perform stream synchronization of multiple tables from multiple source databases. Supports full data only, incremental only, or full + incremental.</para>
+            /// <para>DatabaseOfflineMigration (Full Database Offline): Perform batch synchronization of multiple tables from multiple source databases. Supports full data only, incremental only, or full + incremental.</para>
+            /// <para>SingleTableRealtimeMigration (Single Table Real-Time): Perform stream synchronization of a single table from the source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DatabaseRealtimeMigration</para>
+            /// </summary>
             [NameInMap("JobType")]
             [Validation(Required=false)]
             public string JobType { get; set; }

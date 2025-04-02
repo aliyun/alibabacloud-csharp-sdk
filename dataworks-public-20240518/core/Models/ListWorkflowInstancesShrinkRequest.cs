@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListWorkflowInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>业务日期。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,13 +96,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>工作流实例的类型。</para>
+        /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Normal：周期调度</description></item>
-        /// <item><description>Manual：手动任务</description></item>
-        /// <item><description>SmokeTest：测试</description></item>
-        /// <item><description>SupplementData：补数据</description></item>
-        /// <item><description>ManualWorkflow：手动工作流</description></item>
+        /// <item><description>Normal</description></item>
+        /// <item><description>Manual</description></item>
+        /// <item><description>SmokeTest</description></item>
+        /// <item><description>SupplementData</description></item>
+        /// <item><description>ManualWorkflow</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

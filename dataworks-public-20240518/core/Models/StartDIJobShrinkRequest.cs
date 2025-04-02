@@ -23,7 +23,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// <para>Deprecated</para>
+        /// <para>Specifies whether to forcefully rerun all synchronization steps. If you do not configure this parameter, the system does not perform the forcible rerun operation.</para>
+        /// <list type="bullet">
+        /// <item><description>If the system does not perform the forcible rerun operation, only the steps that are not run start to run.</description></item>
+        /// <item><description>If the system performs the forcible rerun operation, all steps start to rerun.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -44,6 +48,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The settings for starting real-time synchronization.</para>
+        /// <pre><c>{
+        ///   &quot;StartTime&quot;:1663765058
+        /// }
+        /// </c></pre>
         /// </summary>
         [NameInMap("RealtimeStartSettings")]
         [Validation(Required=false)]
