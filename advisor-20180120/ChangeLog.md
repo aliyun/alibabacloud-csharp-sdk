@@ -1,3 +1,7 @@
+2025-04-02 Version: 1.1.1
+- Update API DescribeAdvisorChecksFoPages: add response parameters Body.Data.$.Result.$.RiskLevel.
+
+
 2025-04-01 Version: 1.1.0
 - Support API DescribeAdvicesFlatPage.
 - Support API DescribeAdvisorChecksFoPages.

@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
                 [Validation(Required=false)]
                 public string Product { get; set; }
 
+                [NameInMap("RiskLevel")]
+                [Validation(Required=false)]
+                public long? RiskLevel { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>Advisor</para>
