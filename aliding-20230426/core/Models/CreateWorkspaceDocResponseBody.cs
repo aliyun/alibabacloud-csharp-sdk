@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class CreateWorkspaceDocResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>YRBcvy</para>
+        /// </summary>
+        [NameInMap("dentryUuid")]
+        [Validation(Required=false)]
+        public string DentryUuid { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>QoJGq7xxx</para>
         /// </summary>
         [NameInMap("docKey")]
@@ -42,6 +50,22 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [NameInMap("url")]
         [Validation(Required=false)]
         public string Url { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
+        /// </summary>
+        [NameInMap("vendorRequestId")]
+        [Validation(Required=false)]
+        public string VendorRequestId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dingtalk</para>
+        /// </summary>
+        [NameInMap("vendorType")]
+        [Validation(Required=false)]
+        public string VendorType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
