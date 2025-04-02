@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetPodEventsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The events returned.</para>
+        /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
         public List<string> Events { get; set; }
 
         /// <summary>
+        /// <para>The job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dlc-20210126170216-*****</para>
         /// </summary>
@@ -22,6 +27,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string PodId { get; set; }
 
         /// <summary>
+        /// <para>The node UID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>94a7cc7c-0033-48b5-85bd-71c63592c268</para>
         /// </summary>
@@ -40,6 +48,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string PodUid { get; set; }
 
         /// <summary>
+        /// <para>The request ID, which can be used for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>

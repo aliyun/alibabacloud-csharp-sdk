@@ -1,3 +1,7 @@
+2025-04-02 Version: 1.5.24
+- Update API CreateJob: add request parameters body.DataSources.$.MountAccess.
+
+
 2025-01-21 Version: 1.5.23
 - Generated csharp 2020-12-03 for pai-dlc.
 

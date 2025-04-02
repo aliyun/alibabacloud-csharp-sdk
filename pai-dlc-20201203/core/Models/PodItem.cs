@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Ip { get; set; }
 
+        [NameInMap("NodeName")]
+        [Validation(Required=false)]
+        public string NodeName { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>dlc-20210126170216-mtl37ge7gkvdz-worker-0</para>
@@ -68,6 +72,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("SubStatus")]
+        [Validation(Required=false)]
+        public string SubStatus { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

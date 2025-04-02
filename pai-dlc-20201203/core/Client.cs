@@ -21,12 +21,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"ap-northeast-1", "pai-dlc.aliyuncs.com"},
                 {"ap-northeast-2-pop", "pai-dlc.aliyuncs.com"},
                 {"ap-south-1", "pai-dlc.aliyuncs.com"},
                 {"ap-southeast-2", "pai-dlc.aliyuncs.com"},
-                {"ap-southeast-3", "pai-dlc.aliyuncs.com"},
-                {"ap-southeast-5", "pai-dlc.aliyuncs.com"},
                 {"cn-beijing-finance-1", "pai-dlc.aliyuncs.com"},
                 {"cn-beijing-finance-pop", "pai-dlc.aliyuncs.com"},
                 {"cn-beijing-gov-1", "pai-dlc.aliyuncs.com"},
@@ -57,7 +54,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
                 {"cn-shenzhen-st4-d01", "pai-dlc.aliyuncs.com"},
                 {"cn-shenzhen-su18-b01", "pai-dlc.aliyuncs.com"},
                 {"cn-wuhan", "pai-dlc.aliyuncs.com"},
-                {"cn-wulanchabu", "pai-dlc.aliyuncs.com"},
                 {"cn-yushanfang", "pai-dlc.aliyuncs.com"},
                 {"cn-zhangbei", "pai-dlc.aliyuncs.com"},
                 {"cn-zhangbei-na61-b01", "pai-dlc.aliyuncs.com"},
@@ -68,8 +64,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
                 {"eu-west-1-oxs", "pai-dlc.aliyuncs.com"},
                 {"me-east-1", "pai-dlc.aliyuncs.com"},
                 {"rus-west-1-pop", "pai-dlc.aliyuncs.com"},
-                {"us-east-1", "pai-dlc.aliyuncs.com"},
-                {"us-west-1", "pai-dlc.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("pai-dlc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -91,8 +85,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个DLC作业</para>
+        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateJobRequest
@@ -224,8 +223,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个DLC作业</para>
+        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateJobRequest
@@ -357,8 +361,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个DLC作业</para>
+        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateJobRequest
@@ -376,8 +385,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个DLC作业</para>
+        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateJobRequest
@@ -395,7 +409,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个Tensorboard</para>
+        /// <para>Creates a TensorBoard by using a job or specifying a data source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -524,7 +538,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个Tensorboard</para>
+        /// <para>Creates a TensorBoard by using a job or specifying a data source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -653,7 +667,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个Tensorboard</para>
+        /// <para>Creates a TensorBoard by using a job or specifying a data source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -672,7 +686,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个Tensorboard</para>
+        /// <para>Creates a TensorBoard by using a job or specifying a data source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -691,7 +705,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个DLC作业</para>
+        /// <para>Deletes a completed or stopped job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -734,7 +748,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个DLC作业</para>
+        /// <para>Deletes a completed or stopped job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -777,7 +791,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个DLC作业</para>
+        /// <para>Deletes a completed or stopped job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -792,7 +806,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个DLC作业</para>
+        /// <para>Deletes a completed or stopped job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -807,7 +821,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个数据源配置</para>
+        /// <para>Deletes a stopped TensorBoard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -860,7 +874,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个数据源配置</para>
+        /// <para>Deletes a stopped TensorBoard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -913,7 +927,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个数据源配置</para>
+        /// <para>Deletes a stopped TensorBoard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -932,7 +946,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个数据源配置</para>
+        /// <para>Deletes a stopped TensorBoard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -951,7 +965,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个DLC作业详情</para>
+        /// <para>Obtains the configuration and runtime information of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1004,7 +1018,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个DLC作业详情</para>
+        /// <para>Obtains the configuration and runtime information of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1057,7 +1071,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个DLC作业详情</para>
+        /// <para>Obtains the configuration and runtime information of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1076,7 +1090,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个DLC作业详情</para>
+        /// <para>Obtains the configuration and runtime information of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1095,7 +1109,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业的事件</para>
+        /// <para>Obtains the system events of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1156,7 +1170,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业的事件</para>
+        /// <para>Obtains the system events of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1217,7 +1231,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业的事件</para>
+        /// <para>Obtains the system events of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1236,7 +1250,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业的事件</para>
+        /// <para>Obtains the system events of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1255,7 +1269,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个作业的资源监控指标</para>
+        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1324,7 +1338,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个作业的资源监控指标</para>
+        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1393,7 +1407,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个作业的资源监控指标</para>
+        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1412,7 +1426,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个作业的资源监控指标</para>
+        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1431,7 +1445,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取DLC作业某次算力健康检测结果</para>
+        /// <para>Obtains specified job sanity check result in a Deep Learning Containers (DLC) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1492,7 +1506,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取DLC作业某次算力健康检测结果</para>
+        /// <para>Obtains specified job sanity check result in a Deep Learning Containers (DLC) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1553,7 +1567,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取DLC作业某次算力健康检测结果</para>
+        /// <para>Obtains specified job sanity check result in a Deep Learning Containers (DLC) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1572,7 +1586,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取DLC作业某次算力健康检测结果</para>
+        /// <para>Obtains specified job sanity check result in a Deep Learning Containers (DLC) job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1591,7 +1605,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业中一个运行实例的系统事件</para>
+        /// <para>Obtains the system events of a specific node in a job to locate and troubleshoot issues.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1656,7 +1670,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业中一个运行实例的系统事件</para>
+        /// <para>Obtains the system events of a specific node in a job to locate and troubleshoot issues.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1721,7 +1735,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业中一个运行实例的系统事件</para>
+        /// <para>Obtains the system events of a specific node in a job to locate and troubleshoot issues.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1740,7 +1754,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业中一个运行实例的系统事件</para>
+        /// <para>Obtains the system events of a specific node in a job to locate and troubleshoot issues.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1759,7 +1773,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业中一个运行实例的日志</para>
+        /// <para>Obtains or downloads the logs of a node for a task. The logs are from the stdout and stderr of the system and user scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1828,7 +1842,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业中一个运行实例的日志</para>
+        /// <para>Obtains or downloads the logs of a node for a task. The logs are from the stdout and stderr of the system and user scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1897,7 +1911,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业中一个运行实例的日志</para>
+        /// <para>Obtains or downloads the logs of a node for a task. The logs are from the stdout and stderr of the system and user scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1916,7 +1930,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取作业中一个运行实例的日志</para>
+        /// <para>Obtains or downloads the logs of a node for a task. The logs are from the stdout and stderr of the system and user scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1935,7 +1949,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个Tensorboard</para>
+        /// <para>Queries the information of a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1996,7 +2010,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个Tensorboard</para>
+        /// <para>Queries the information of a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2057,7 +2071,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个Tensorboard</para>
+        /// <para>Queries the information of a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2076,7 +2090,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一个Tensorboard</para>
+        /// <para>Queries the information of a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2095,7 +2109,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the shared url for tensorboard</para>
+        /// <para>Obtains the shareable link of a TensorBoard task. The link contains digital tokens. You can use a shareable link to access a TensorBoard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2148,7 +2162,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the shared url for tensorboard</para>
+        /// <para>Obtains the shareable link of a TensorBoard task. The link contains digital tokens. You can use a shareable link to access a TensorBoard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2201,7 +2215,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the shared url for tensorboard</para>
+        /// <para>Obtains the shareable link of a TensorBoard task. The link contains digital tokens. You can use a shareable link to access a TensorBoard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2220,7 +2234,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the shared url for tensorboard</para>
+        /// <para>Obtains the shareable link of a TensorBoard task. The link contains digital tokens. You can use a shareable link to access a TensorBoard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2239,7 +2253,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户Token</para>
+        /// <para>Queries a user token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2300,7 +2314,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户Token</para>
+        /// <para>Queries a user token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2361,7 +2375,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户Token</para>
+        /// <para>Queries a user token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2380,7 +2394,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户Token</para>
+        /// <para>Queries a user token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2399,7 +2413,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the url for accessing pod&#39;s terminal in k8s</para>
+        /// <para>Provides methods and steps to obtain a HTTP link for accessing a container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2456,7 +2470,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the url for accessing pod&#39;s terminal in k8s</para>
+        /// <para>Provides methods and steps to obtain a HTTP link for accessing a container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2513,7 +2527,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the url for accessing pod&#39;s terminal in k8s</para>
+        /// <para>Provides methods and steps to obtain a HTTP link for accessing a container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2532,7 +2546,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the url for accessing pod&#39;s terminal in k8s</para>
+        /// <para>Provides methods and steps to obtain a HTTP link for accessing a container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2551,7 +2565,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListEcsSpecs</para>
+        /// <para>Queries the list of supported instance types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2628,7 +2642,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListEcsSpecs</para>
+        /// <para>Queries the list of supported instance types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2705,7 +2719,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListEcsSpecs</para>
+        /// <para>Queries the list of supported instance types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2724,7 +2738,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListEcsSpecs</para>
+        /// <para>Queries the list of supported instance types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2743,7 +2757,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取某个DLC作业的多次算力健康检测结果</para>
+        /// <para>Obtains the results of all sanity checks for a DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2796,7 +2810,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取某个DLC作业的多次算力健康检测结果</para>
+        /// <para>Obtains the results of all sanity checks for a DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2849,7 +2863,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取某个DLC作业的多次算力健康检测结果</para>
+        /// <para>Obtains the results of all sanity checks for a DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2868,7 +2882,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取某个DLC作业的多次算力健康检测结果</para>
+        /// <para>Obtains the results of all sanity checks for a DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2887,7 +2901,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据过滤条件获取DLC作业列表</para>
+        /// <para>Queries a list of jobs and supports pagination, sorting, and filtering by conditions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3038,7 +3052,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据过滤条件获取DLC作业列表</para>
+        /// <para>Queries a list of jobs and supports pagination, sorting, and filtering by conditions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3189,7 +3203,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据过滤条件获取DLC作业列表</para>
+        /// <para>Queries a list of jobs and supports pagination, sorting, and filtering by conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3208,7 +3222,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据过滤条件获取DLC作业列表</para>
+        /// <para>Queries a list of jobs and supports pagination, sorting, and filtering by conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3227,7 +3241,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Tensorboard</para>
+        /// <para>Queries a list of TensorBoard instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3356,7 +3370,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Tensorboard</para>
+        /// <para>Queries a list of TensorBoard instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3485,7 +3499,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Tensorboard</para>
+        /// <para>Queries a list of TensorBoard instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3504,7 +3518,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Tensorboard</para>
+        /// <para>Queries a list of TensorBoard instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3523,7 +3537,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始运行tensorboard</para>
+        /// <para>Starts a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3576,7 +3590,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始运行tensorboard</para>
+        /// <para>Starts a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3629,7 +3643,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始运行tensorboard</para>
+        /// <para>Starts a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3648,7 +3662,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始运行tensorboard</para>
+        /// <para>Starts a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3667,7 +3681,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个DLC作业</para>
+        /// <para>Stops a running job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3710,7 +3724,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个DLC作业</para>
+        /// <para>Stops a running job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3753,7 +3767,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个DLC作业</para>
+        /// <para>Stops a running job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3768,7 +3782,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止一个DLC作业</para>
+        /// <para>Stops a running job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3783,7 +3797,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止运行tensorboard</para>
+        /// <para>Stops a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3836,7 +3850,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止运行tensorboard</para>
+        /// <para>Stops a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3889,7 +3903,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止运行tensorboard</para>
+        /// <para>Stops a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3908,7 +3922,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止运行tensorboard</para>
+        /// <para>Stops a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3927,7 +3941,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个Job</para>
+        /// <para>Updates the configuration information of a job. For example, you can modify the priority of a job in a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3984,7 +3998,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个Job</para>
+        /// <para>Updates the configuration information of a job. For example, you can modify the priority of a job in a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4041,7 +4055,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个Job</para>
+        /// <para>Updates the configuration information of a job. For example, you can modify the priority of a job in a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4060,7 +4074,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个Job</para>
+        /// <para>Updates the configuration information of a job. For example, you can modify the priority of a job in a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4079,7 +4093,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新tensorboard</para>
+        /// <para>Updates a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4144,7 +4158,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新tensorboard</para>
+        /// <para>Updates a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4209,7 +4223,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新tensorboard</para>
+        /// <para>Updates a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4228,7 +4242,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新tensorboard</para>
+        /// <para>Updates a TensorBoard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The time when the share link expires. Default value: 604800 seconds. Minimum value: 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? ExpireTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the job that is waiting to be shared.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dlc*******</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TargetId { get; set; }
 
         /// <summary>
+        /// <para>The type of the job that you want to share. Valid values: job and tensorboard.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>job</para>
         /// </summary>

@@ -17,12 +17,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public Lifecycle Lifecycle { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("PodAnnotations")]
         [Validation(Required=false)]
+        [Obsolete]
         public Dictionary<string, string> PodAnnotations { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("PodLabels")]
         [Validation(Required=false)]
+        [Obsolete]
         public Dictionary<string, string> PodLabels { get; set; }
 
         [NameInMap("SharedVolumeMountPaths")]

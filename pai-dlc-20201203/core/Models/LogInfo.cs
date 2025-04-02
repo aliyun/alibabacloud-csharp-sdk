@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        [NameInMap("IsTruncated")]
+        [Validation(Required=false)]
+        public bool? IsTruncated { get; set; }
+
         [NameInMap("PodId")]
         [Validation(Required=false)]
         public string PodId { get; set; }
