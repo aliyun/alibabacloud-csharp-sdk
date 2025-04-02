@@ -104,6 +104,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public SubmitIProductionJobRequestOutput Output { get; set; }
         public class SubmitIProductionJobRequestOutput : TeaModel {
+            [NameInMap("Biz")]
+            [Validation(Required=false)]
+            public string Biz { get; set; }
+
             /// <summary>
             /// <para>The output file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</para>
             /// <ol>
@@ -118,6 +122,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Media")]
             [Validation(Required=false)]
             public string Media { get; set; }
+
+            [NameInMap("OutputUrl")]
+            [Validation(Required=false)]
+            public string OutputUrl { get; set; }
 
             /// <summary>
             /// <para>The media type. Valid values:</para>

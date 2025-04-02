@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string IV { get; set; }
 
+            [NameInMap("RotatePeriod")]
+            [Validation(Required=false)]
+            public int? RotatePeriod { get; set; }
+
             [NameInMap("SystemIds")]
             [Validation(Required=false)]
             public List<string> SystemIds { get; set; }
