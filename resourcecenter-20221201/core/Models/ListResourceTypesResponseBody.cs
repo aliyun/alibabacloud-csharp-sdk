@@ -20,28 +20,35 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the resource types.</para>
+        /// <para>The resource types.</para>
         /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public List<ListResourceTypesResponseBodyResourceTypes> ResourceTypes { get; set; }
         public class ListResourceTypesResponseBodyResourceTypes : TeaModel {
             /// <summary>
-            /// <b>if can be null:</b>
-            /// <c>true</c>
+            /// <para>The code mapping of the resource type.</para>
             /// </summary>
-            [NameInMap("Authorized")]
-            [Validation(Required=false)]
-            public bool? Authorized { get; set; }
-
             [NameInMap("CodeMapping")]
             [Validation(Required=false)]
             public ListResourceTypesResponseBodyResourceTypesCodeMapping CodeMapping { get; set; }
             public class ListResourceTypesResponseBodyResourceTypesCodeMapping : TeaModel {
+                /// <summary>
+                /// <para>The resource group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cs.cluster</para>
+                /// </summary>
                 [NameInMap("ResourceGroup")]
                 [Validation(Required=false)]
                 public string ResourceGroup { get; set; }
 
+                /// <summary>
+                /// <para>The tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cs.cluster</para>
+                /// </summary>
                 [NameInMap("Tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
@@ -64,6 +71,10 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             [NameInMap("ProductName")]
             [Validation(Required=false)]
             public string ProductName { get; set; }
+
+            [NameInMap("RelatedResourceTypes")]
+            [Validation(Required=false)]
+            public List<string> RelatedResourceTypes { get; set; }
 
             /// <summary>
             /// <para>The resource type.</para>

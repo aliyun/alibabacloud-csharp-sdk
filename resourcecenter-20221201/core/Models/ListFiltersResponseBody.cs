@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
     public class ListFiltersResponseBody : TeaModel {
         /// <summary>
         /// <para>The name of the default filter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>My Filters</para>
         /// </summary>
         [NameInMap("DefaultFilterName")]
         [Validation(Required=false)]
@@ -45,6 +48,9 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 
             /// <summary>
             /// <para>The name of the filter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>My devices</para>
             /// </summary>
             [NameInMap("FilterName")]
             [Validation(Required=false)]
