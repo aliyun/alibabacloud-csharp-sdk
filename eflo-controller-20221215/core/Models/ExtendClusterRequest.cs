@@ -168,6 +168,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
                 }
 
+                [NameInMap("Hostname")]
+                [Validation(Required=false)]
+                public string Hostname { get; set; }
+
                 /// <summary>
                 /// <para>Node ID</para>
                 /// 
@@ -189,6 +193,26 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public List<ExtendClusterRequestNodeGroups> NodeGroups { get; set; }
         public class ExtendClusterRequestNodeGroups : TeaModel {
+            [NameInMap("Amount")]
+            [Validation(Required=false)]
+            public long? Amount { get; set; }
+
+            [NameInMap("AutoRenew")]
+            [Validation(Required=false)]
+            public bool? AutoRenew { get; set; }
+
+            [NameInMap("ChargeType")]
+            [Validation(Required=false)]
+            public string ChargeType { get; set; }
+
+            [NameInMap("Hostnames")]
+            [Validation(Required=false)]
+            public List<string> Hostnames { get; set; }
+
+            [NameInMap("LoginPassword")]
+            [Validation(Required=false)]
+            public string LoginPassword { get; set; }
+
             /// <summary>
             /// <para>Node Group ID</para>
             /// 
@@ -198,6 +222,20 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [NameInMap("NodeGroupId")]
             [Validation(Required=false)]
             public string NodeGroupId { get; set; }
+
+            [NameInMap("NodeTag")]
+            [Validation(Required=false)]
+            public List<ExtendClusterRequestNodeGroupsNodeTag> NodeTag { get; set; }
+            public class ExtendClusterRequestNodeGroupsNodeTag : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             /// <summary>
             /// <para>List of Nodes</para>
@@ -258,6 +296,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             }
 
+            [NameInMap("Period")]
+            [Validation(Required=false)]
+            public long? Period { get; set; }
+
             /// <summary>
             /// <para>Custom Data</para>
             /// 
@@ -268,6 +310,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [NameInMap("UserData")]
             [Validation(Required=false)]
             public string UserData { get; set; }
+
+            [NameInMap("VSwitchId")]
+            [Validation(Required=false)]
+            public string VSwitchId { get; set; }
+
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
 
             /// <summary>
             /// <para>Zone ID</para>
