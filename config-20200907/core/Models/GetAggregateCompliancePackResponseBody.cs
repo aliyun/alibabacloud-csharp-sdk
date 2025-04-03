@@ -380,6 +380,35 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The tags.</para>
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetAggregateCompliancePackResponseBodyCompliancePackTags> Tags { get; set; }
+            public class GetAggregateCompliancePackResponseBodyCompliancePackTags : TeaModel {
+                /// <summary>
+                /// <para>The tag keys of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key-1</para>
+                /// </summary>
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                /// <summary>
+                /// <para>The tag values of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value-1</para>
+                /// </summary>
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</para>
             /// 
             /// <b>Example:</b>

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
-    public class ListAggregateConfigRulesRequest : TeaModel {
+    public class ListAggregateConfigRulesShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the account group.</para>
         /// <para>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
@@ -137,32 +137,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<ListAggregateConfigRulesRequestTag> Tag { get; set; }
-        public class ListAggregateConfigRulesRequestTag : TeaModel {
-            /// <summary>
-            /// <para>The tag key.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can specify at most 20 tag keys.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>key-1</para>
-            /// </summary>
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            /// <summary>
-            /// <para>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>value-1</para>
-            /// </summary>
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagShrink { get; set; }
 
     }
 

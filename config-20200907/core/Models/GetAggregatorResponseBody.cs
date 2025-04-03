@@ -174,6 +174,35 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string FolderId { get; set; }
 
+            /// <summary>
+            /// <para>tags</para>
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetAggregatorResponseBodyAggregatorTags> Tags { get; set; }
+            public class GetAggregatorResponseBodyAggregatorTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key-1</para>
+                /// </summary>
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value-1</para>
+                /// </summary>
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
+
         }
 
         /// <summary>

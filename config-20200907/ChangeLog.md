@@ -1,3 +1,13 @@
+2025-04-03 Version: 2.4.13
+- Update API CreateAggregateConfigRule: add request parameters ResourceNameScope.
+- Update API CreateConfigRule: add request parameters ResourceNameScope.
+- Update API GetAggregateConfigRule: add response parameters Body.ConfigRule.ResourceNameScope.
+- Update API GetConfigRule: add response parameters Body.ConfigRule.ResourceNameScope.
+- Update API UpdateAggregateConfigRule: add request parameters ResourceNameScope.
+- Update API UpdateAggregator: add request parameters FolderId.
+- Update API UpdateConfigRule: add request parameters ResourceNameScope.
+
+
 2025-01-20 Version: 2.4.10
 - Update API EvaluatePreConfigRules: add param ResourceTypeFormat.
 - Update API EvaluatePreConfigRules: update param EnableManagedRules.

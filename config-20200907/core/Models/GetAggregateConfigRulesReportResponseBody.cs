@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateConfigRulesReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the compliance evaluation report.</para>
+        /// <para>The compliance evaluation report.</para>
         /// </summary>
         [NameInMap("ConfigRulesReport")]
         [Validation(Required=false)]
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// <para>The status of the compliance evaluation report. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NONE: The compliance evaluation report was not generated.</description></item>
-            /// <item><description>CREATING: The compliance evaluation report was being generated.</description></item>
+            /// <item><description>NONE: The compliance evaluation report is not generated.</description></item>
+            /// <item><description>CREATING: The compliance evaluation report is being generated.</description></item>
             /// <item><description>COMPLETE: The compliance evaluation report was generated.</description></item>
             /// </list>
             /// 
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ReportStatus { get; set; }
 
             /// <summary>
-            /// <para>The URL that is used to download the compliance evaluation report.</para>
+            /// <para>The URL used to download the compliance evaluation report.</para>
             /// </summary>
             [NameInMap("ReportUrl")]
             [Validation(Required=false)]

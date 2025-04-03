@@ -34,6 +34,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ResourceEvaluateItemsShrink { get; set; }
 
+        /// <summary>
+        /// <para>下一个查询开始Token</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ros</para>
+        /// </summary>
         [NameInMap("ResourceTypeFormat")]
         [Validation(Required=false)]
         public string ResourceTypeFormat { get; set; }

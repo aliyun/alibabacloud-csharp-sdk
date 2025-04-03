@@ -282,6 +282,38 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? RiskLevel { get; set; }
 
         /// <summary>
+        /// <para>The tags of the resource.</para>
+        /// <para>You can add up to 20 tags to a resource.</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateAggregateCompliancePackRequestTag> Tag { get; set; }
+        public class CreateAggregateCompliancePackRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag that is added to the resource.</para>
+            /// <para>You can add up to 20 tag keys to a resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key-1</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The value of the tag that is added to the resource.</para>
+            /// <para>You can add up to 20 tag values to a resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value-1</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The tag key of the resource that you want to evaluate by using the compliance package.</para>
         /// 
         /// <b>Example:</b>

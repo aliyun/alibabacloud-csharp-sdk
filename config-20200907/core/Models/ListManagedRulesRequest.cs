@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListManagedRulesRequest : TeaModel {
+        [NameInMap("FilterType")]
+        [Validation(Required=false)]
+        public string FilterType { get; set; }
+
         /// <summary>
         /// <para>The keyword of the managed rule.</para>
         /// 

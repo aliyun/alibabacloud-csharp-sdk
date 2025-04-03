@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return for a single request. Valid values: 1 to 100.</para>
+        /// <para>The maximum number of entries to return in a request. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

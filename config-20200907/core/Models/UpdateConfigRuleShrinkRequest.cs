@@ -211,6 +211,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceIdsScope { get; set; }
 
         /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("ResourceNameScope")]
+        [Validation(Required=false)]
+        public string ResourceNameScope { get; set; }
+
+        /// <summary>
         /// <para>The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).</para>
         /// 
         /// <b>Example:</b>
@@ -243,6 +251,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string TagShrink { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The logical relationship among the tag keys if you specify multiple tag keys for the <c>TagKeyScope</c> parameter. For example, if you set the <c>TagKeyScope</c> parameter to <c>ECS,OSS</c> and the TagKeyLogicScope parameter to <c>AND</c>, the rule applies to resources with both the <c>ECS</c> and <c>OSS</c> tag keys. Valid values:</para>
         /// <list type="bullet">
@@ -255,8 +265,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// </summary>
         [NameInMap("TagKeyLogicScope")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TagKeyLogicScope { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</para>
         /// <remarks>
@@ -268,8 +281,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// </summary>
         [NameInMap("TagKeyScope")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TagKeyScope { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</para>
         /// <remarks>
@@ -281,6 +297,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// </summary>
         [NameInMap("TagValueScope")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TagValueScope { get; set; }
 
         /// <summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateConfigRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The rules.</para>
+        /// <para>The information about the rules.</para>
         /// </summary>
         [NameInMap("ConfigRule")]
         [Validation(Required=false)]
@@ -624,6 +624,19 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceIdsScope { get; set; }
 
             /// <summary>
+            /// <para>The names of the resource groups to which the rule applies.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-xxx</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("ResourceNameScope")]
+            [Validation(Required=false)]
+            public string ResourceNameScope { get; set; }
+
+            /// <summary>
             /// <para>The type of the resource evaluated by the rule.</para>
             /// 
             /// <b>Example:</b>
@@ -738,11 +751,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
-            /// <para>The logical relationship among the tag keys if you specify multiple tag keys by using the <c>TagKeyScope</c> parameter. For example, if the <c>TagKeyScope</c> parameter is set to <c>ECS,OSS</c> and the TagKeyLogicScope parameter is set to <c>AND</c>, the rule applies to resources with both the <c>ECS</c> and <c>OSS</c> tag keys. Valid values:</para>
+            /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
+            /// <para>The logical relationship among the tag keys if you specify multiple tag keys for the <c>TagKeyScope</c> parameter. For example, if you set the <c>TagKeyScope</c> parameter to <c>ECS,OSS</c> and the TagKeyLogicScope parameter to <c>AND</c>, the rule applies to resources with both the <c>ECS</c> and <c>OSS</c> tag keys. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AND: the logical relationship of AND</description></item>
-            /// <item><description>OR: the logical relationship of OR</description></item>
+            /// <item><description>AND</description></item>
+            /// <item><description>OR</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -750,9 +766,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// </summary>
             [NameInMap("TagKeyLogicScope")]
             [Validation(Required=false)]
+            [Obsolete]
             public string TagKeyLogicScope { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
+            /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
             /// <para>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</para>
             /// 
             /// <b>Example:</b>
@@ -760,9 +780,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// </summary>
             [NameInMap("TagKeyScope")]
             [Validation(Required=false)]
+            [Obsolete]
             public string TagKeyScope { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
+            /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
             /// <para>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</para>
             /// 
             /// <b>Example:</b>
@@ -770,6 +794,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// </summary>
             [NameInMap("TagValueScope")]
             [Validation(Required=false)]
+            [Obsolete]
             public string TagValueScope { get; set; }
 
             /// <summary>

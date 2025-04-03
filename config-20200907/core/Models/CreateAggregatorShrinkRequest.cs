@@ -80,14 +80,22 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the folder to which the account group is attached. You must specify this parameter if <c>AggregatorType</c> is set to <c>FOLDER</c>.</para>
+        /// <para>The ID of the folder to which the account group is attached. You must specify this parameter if <c>AggregatorType</c> is set to <c>FOLDER</c>. Multiple resource folder IDs should be separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>fd-brHdgv****</para>
+        /// <para>fd-brHdgv****,fd-brHdgk****</para>
         /// </summary>
         [NameInMap("FolderId")]
         [Validation(Required=false)]
         public string FolderId { get; set; }
+
+        /// <summary>
+        /// <para>The tags of the resource.</para>
+        /// <para>You can add up to 20 tags to a resource.</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string TagShrink { get; set; }
 
     }
 

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateCompliancePacksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the compliance packages.</para>
+        /// <para>The compliance packages returned.</para>
         /// </summary>
         [NameInMap("CompliancePacksResult")]
         [Validation(Required=false)]
         public ListAggregateCompliancePacksResponseBodyCompliancePacksResult CompliancePacksResult { get; set; }
         public class ListAggregateCompliancePacksResponseBodyCompliancePacksResult : TeaModel {
             /// <summary>
-            /// <para>The details of the compliance package.</para>
+            /// <para>The compliance packages.</para>
             /// </summary>
             [NameInMap("CompliancePacks")]
             [Validation(Required=false)]
@@ -121,6 +121,35 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                /// <summary>
+                /// <para>The tags.</para>
+                /// </summary>
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public List<ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags> Tags { get; set; }
+                public class ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags : TeaModel {
+                    /// <summary>
+                    /// <para>The tag key.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>key-1</para>
+                    /// </summary>
+                    [NameInMap("TagKey")]
+                    [Validation(Required=false)]
+                    public string TagKey { get; set; }
+
+                    /// <summary>
+                    /// <para>The tag value.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>value-1</para>
+                    /// </summary>
+                    [NameInMap("TagValue")]
+                    [Validation(Required=false)]
+                    public string TagValue { get; set; }
+
+                }
 
             }
 

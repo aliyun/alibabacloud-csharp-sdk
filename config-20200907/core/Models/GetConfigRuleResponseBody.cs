@@ -545,6 +545,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceIdsScope { get; set; }
 
             /// <summary>
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("ResourceNameScope")]
+            [Validation(Required=false)]
+            public string ResourceNameScope { get; set; }
+
+            /// <summary>
             /// <para>The type of the resource to be evaluated by the rule.</para>
             /// 
             /// <b>Example:</b>
@@ -678,6 +686,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule.</para>
             /// <remarks>
@@ -689,8 +699,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// </summary>
             [NameInMap("TagKeyLogicScope")]
             [Validation(Required=false)]
+            [Obsolete]
             public string TagKeyLogicScope { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</para>
             /// <remarks>
@@ -702,8 +715,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// </summary>
             [NameInMap("TagKeyScope")]
             [Validation(Required=false)]
+            [Obsolete]
             public string TagKeyScope { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</para>
             /// <remarks>
@@ -715,6 +731,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// </summary>
             [NameInMap("TagValueScope")]
             [Validation(Required=false)]
+            [Obsolete]
             public string TagValueScope { get; set; }
 
             /// <summary>

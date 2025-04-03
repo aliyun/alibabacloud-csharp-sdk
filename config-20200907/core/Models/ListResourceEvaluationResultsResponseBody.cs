@@ -183,6 +183,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <list type="bullet">
                 /// <item><description>ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</description></item>
                 /// <item><description>ScheduledNotification: The managed rule is periodically triggered.</description></item>
+                /// <item><description>Manual: The rule is manually triggered.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

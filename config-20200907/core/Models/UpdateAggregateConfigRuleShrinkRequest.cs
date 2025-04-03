@@ -213,13 +213,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string InputParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The intervals at which the rule is triggered. Valid values:</para>
+        /// <para>The interval at which the rule is triggered. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>One_Hour: 1 hour</description></item>
-        /// <item><description>Three_Hours: 3 hours</description></item>
-        /// <item><description>Six_Hours: 6 hours</description></item>
-        /// <item><description>Twelve_Hours: 12 hours</description></item>
-        /// <item><description>TwentyFour_Hours: 24 hours</description></item>
+        /// <item><description>One_Hour</description></item>
+        /// <item><description>Three_Hours</description></item>
+        /// <item><description>Six_Hours</description></item>
+        /// <item><description>Twelve_Hours</description></item>
+        /// <item><description>TwentyFour_Hours</description></item>
         /// </list>
         /// <remarks>
         /// <para> This parameter is required if the <c>ConfigRuleTriggerTypes</c> parameter is set to <c>ScheduledNotification</c>.</para>
@@ -269,6 +269,19 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceIdsScope { get; set; }
 
         /// <summary>
+        /// <para>The names of the resource groups to which the rule applies.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-xxx</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("ResourceNameScope")]
+        [Validation(Required=false)]
+        public string ResourceNameScope { get; set; }
+
+        /// <summary>
         /// <para>The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).</para>
         /// 
         /// <b>Example:</b>
@@ -279,11 +292,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceTypesScopeShrink { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the resources that are not compliant with the rule. Valid values:</para>
+        /// <para>The risk level of the resources that do not comply with the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: high risk level</description></item>
-        /// <item><description>2: medium risk level</description></item>
-        /// <item><description>3: low risk level</description></item>
+        /// <item><description>1: high</description></item>
+        /// <item><description>2: medium</description></item>
+        /// <item><description>3: low</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -294,6 +307,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? RiskLevel { get; set; }
 
         /// <summary>
+        /// <para>The tags of the resource.</para>
+        /// <para>You can add up to 20 tags to a resource.</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string TagShrink { get; set; }
+
+        /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
         /// <para>The logical relationship among the tag keys if you specify multiple tag keys for the <c>TagKeyScope</c> parameter. For example, if you set the <c>TagKeyScope</c> parameter to <c>ECS,OSS</c> and the TagKeyLogicScope parameter to <c>AND</c>, the rule applies to resources with both the <c>ECS</c> and <c>OSS</c> tag keys. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>AND</description></item>
@@ -305,9 +329,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// </summary>
         [NameInMap("TagKeyLogicScope")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TagKeyLogicScope { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
         /// <para>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</para>
         /// <remarks>
         /// <para> This parameter applies only to a managed rule. You must configure the <c>TagKeyScope</c> and <c>TagValueScope</c> parameters at the same time.</para>
@@ -318,9 +346,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// </summary>
         [NameInMap("TagKeyScope")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TagKeyScope { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
         /// <para>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</para>
         /// <remarks>
         /// <para> This parameter applies only to a managed rule. You must configure the <c>TagKeyScope</c> and <c>TagValueScope</c> parameters at the same time.</para>
@@ -331,6 +363,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// </summary>
         [NameInMap("TagValueScope")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TagValueScope { get; set; }
 
         /// <summary>
