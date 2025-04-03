@@ -1,3 +1,6 @@
+2025-04-03 Version: 1.21.4
+- Generated csharp 2023-08-01 for AiMiaoBi.
+
 2025-04-03 Version: 1.21.3
 - Update API DeleteCustomText: add request parameters RegionId.
 - Update API GetHotTopicBroadcast: add request parameters LocationQuery.
