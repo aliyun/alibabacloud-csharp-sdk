@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunTitleGenerationRequest : TeaModel {
+        [NameInMap("DeduplicatedTitles")]
+        [Validation(Required=false)]
+        public List<string> DeduplicatedTitles { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
+
+        [NameInMap("TitleCount")]
+        [Validation(Required=false)]
+        public string TitleCount { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

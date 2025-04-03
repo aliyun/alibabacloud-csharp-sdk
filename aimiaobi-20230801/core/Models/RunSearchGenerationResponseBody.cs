@@ -1629,6 +1629,110 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
                             }
 
+                            [NameInMap("TextSearchResult")]
+                            [Validation(Required=false)]
+                            public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult TextSearchResult { get; set; }
+                            public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult : TeaModel {
+                                [NameInMap("Current")]
+                                [Validation(Required=false)]
+                                public int? Current { get; set; }
+
+                                [NameInMap("SearchResult")]
+                                [Validation(Required=false)]
+                                public List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult> SearchResult { get; set; }
+                                public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult : TeaModel {
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>xx</para>
+                                    /// </summary>
+                                    [NameInMap("Content")]
+                                    [Validation(Required=false)]
+                                    public string Content { get; set; }
+
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>xx</para>
+                                    /// </summary>
+                                    [NameInMap("DocId")]
+                                    [Validation(Required=false)]
+                                    public string DocId { get; set; }
+
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>xx</para>
+                                    /// </summary>
+                                    [NameInMap("DocUuid")]
+                                    [Validation(Required=false)]
+                                    public string DocUuid { get; set; }
+
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>2024-11-25 14:25:59</para>
+                                    /// </summary>
+                                    [NameInMap("PubTime")]
+                                    [Validation(Required=false)]
+                                    public string PubTime { get; set; }
+
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>QuarkCommonNews</para>
+                                    /// </summary>
+                                    [NameInMap("SearchSource")]
+                                    [Validation(Required=false)]
+                                    public string SearchSource { get; set; }
+
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>xxx</para>
+                                    /// </summary>
+                                    [NameInMap("SearchSourceName")]
+                                    [Validation(Required=false)]
+                                    public string SearchSourceName { get; set; }
+
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>SystemSearch</para>
+                                    /// </summary>
+                                    [NameInMap("SearchSourceType")]
+                                    [Validation(Required=false)]
+                                    public string SearchSourceType { get; set; }
+
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>xx</para>
+                                    /// </summary>
+                                    [NameInMap("Summary")]
+                                    [Validation(Required=false)]
+                                    public string Summary { get; set; }
+
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>xx</para>
+                                    /// </summary>
+                                    [NameInMap("Title")]
+                                    [Validation(Required=false)]
+                                    public string Title { get; set; }
+
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>xx</para>
+                                    /// </summary>
+                                    [NameInMap("Url")]
+                                    [Validation(Required=false)]
+                                    public string Url { get; set; }
+
+                                }
+
+                                [NameInMap("Size")]
+                                [Validation(Required=false)]
+                                public int? Size { get; set; }
+
+                                [NameInMap("Total")]
+                                [Validation(Required=false)]
+                                public int? Total { get; set; }
+
+                            }
+
                             [NameInMap("TimelineResult")]
                             [Validation(Required=false)]
                             public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResult TimelineResult { get; set; }

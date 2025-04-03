@@ -41,6 +41,18 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string HotTopicVersion { get; set; }
 
+        [NameInMap("LocationQuery")]
+        [Validation(Required=false)]
+        public string LocationQuery { get; set; }
+
+        [NameInMap("Locations")]
+        [Validation(Required=false)]
+        public List<string> Locations { get; set; }
+
+        [NameInMap("Query")]
+        [Validation(Required=false)]
+        public string Query { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>5</para>
@@ -91,8 +103,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public List<string> Categories { get; set; }
 
+            /// <term><b>Obsolete</b></term>
             [NameInMap("CustomHotValueWeights")]
             [Validation(Required=false)]
+            [Obsolete]
             public List<GetHotTopicBroadcastRequestStepForNewsBroadcastContentConfigCustomHotValueWeights> CustomHotValueWeights { get; set; }
             public class GetHotTopicBroadcastRequestStepForNewsBroadcastContentConfigCustomHotValueWeights : TeaModel {
                 /// <summary>

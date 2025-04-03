@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public int? InputToken { get; set; }
 
+                [NameInMap("Locations")]
+                [Validation(Required=false)]
+                public List<string> Locations { get; set; }
+
                 [NameInMap("News")]
                 [Validation(Required=false)]
                 public List<GetHotTopicBroadcastResponseBodyDataDataNews> News { get; set; }
