@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateCustomImageRequest : TeaModel {
         /// <summary>
-        /// <para>Idempotent parameter. Default is empty, with a maximum length of 100 characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. By default, this parameter is left empty. The token cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20393E53-8FF1-524C-B494-B478A5369733</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Image description.</para>
+        /// <para>The description of the custom image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>create for cc5g group auth rules test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Image name.</para>
+        /// <para>The name of the custom image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The ID of the cloud phone instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

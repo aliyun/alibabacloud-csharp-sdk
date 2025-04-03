@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Specification information.</para>
+        /// <para>The specifications.</para>
         /// </summary>
         [NameInMap("SpecInfoModel")]
         [Validation(Required=false)]
@@ -46,6 +46,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public int? Core { get; set; }
 
+            /// <summary>
+            /// <para>The maximum number of cloud phone instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>40</para>
+            /// </summary>
             [NameInMap("MaxPhoneCount")]
             [Validation(Required=false)]
             public string MaxPhoneCount { get; set; }
@@ -60,14 +66,28 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public int? Memory { get; set; }
 
+            /// <summary>
+            /// <para>The minimum number of cloud phone instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
             [NameInMap("MinPhoneCount")]
             [Validation(Required=false)]
             public string MinPhoneCount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("PhoneCount")]
             [Validation(Required=false)]
             public string PhoneCount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1920*1080</para>
+            /// </summary>
             [NameInMap("Resolution")]
             [Validation(Required=false)]
             public string Resolution { get; set; }

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> AndroidInstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>Whether all data is to be backed up.</para>
+        /// <para>Specifies whether to back up the whole instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? BackupAll { get; set; }
 
         /// <summary>
-        /// <para>Backup file name.</para>
+        /// <para>The name of the backup file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>defaultBackupFile</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>List of apps to be backed up.</para>
+        /// <para>The names of the application packages that you want to back up.</para>
         /// </summary>
         [NameInMap("SourceAppList")]
         [Validation(Required=false)]

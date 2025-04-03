@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RecoveryFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries.</para>
+        /// <para>The number of restored instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>97</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the batch task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-5prhfo7wv1gjx****</para>

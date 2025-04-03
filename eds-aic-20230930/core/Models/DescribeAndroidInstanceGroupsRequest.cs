@@ -92,10 +92,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The sales mode.</para>
+        /// <para>The purchase mode of cloud phone instances.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard</description></item>
+        /// <item><description>Instance (default): the instance group mode.</description></item>
+        /// <item><description>Node: the matrix mode [whitelisted].</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

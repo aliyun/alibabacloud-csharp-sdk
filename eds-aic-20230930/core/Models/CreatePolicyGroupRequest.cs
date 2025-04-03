@@ -225,6 +225,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string PolicyGroupName { get; set; }
 
+        [NameInMap("PolicyType")]
+        [Validation(Required=false)]
+        public string PolicyType { get; set; }
+
         /// <summary>
         /// <para>The height of the resolution. Unit: pixels.</para>
         /// 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
-    public class CreateCloudPhoneNodeRequest : TeaModel {
+    public class CreateCloudPhoneNodeShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
@@ -53,21 +53,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         [NameInMap("DisplayConfig")]
         [Validation(Required=false)]
-        public CreateCloudPhoneNodeRequestDisplayConfig DisplayConfig { get; set; }
-        public class CreateCloudPhoneNodeRequestDisplayConfig : TeaModel {
-            [NameInMap("Dpi")]
-            [Validation(Required=false)]
-            public int? Dpi { get; set; }
-
-            [NameInMap("Fps")]
-            [Validation(Required=false)]
-            public int? Fps { get; set; }
-
-            [NameInMap("LockResolution")]
-            [Validation(Required=false)]
-            public string LockResolution { get; set; }
-
-        }
+        public string DisplayConfigShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -161,8 +147,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<CreateCloudPhoneNodeRequestTag> Tag { get; set; }
-        public class CreateCloudPhoneNodeRequestTag : TeaModel {
+        public List<CreateCloudPhoneNodeShrinkRequestTag> Tag { get; set; }
+        public class CreateCloudPhoneNodeShrinkRequestTag : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>keyname</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DeleteCloudPhoneNodesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC****</para>
         /// </summary>

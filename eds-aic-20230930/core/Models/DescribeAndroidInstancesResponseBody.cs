@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeAndroidInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instances.</para>
+        /// <para>The cloud phone instances.</para>
         /// </summary>
         [NameInMap("InstanceModel")]
         [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public List<DescribeAndroidInstancesResponseBodyInstanceModelDisks> Disks { get; set; }
             public class DescribeAndroidInstancesResponseBodyInstanceModelDisks : TeaModel {
                 /// <summary>
-                /// <para>The size of the disk. Unit: GB.</para>
+                /// <para>The disk size. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
@@ -152,6 +152,32 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 [NameInMap("DiskType")]
                 [Validation(Required=false)]
                 public string DiskType { get; set; }
+
+            }
+
+            [NameInMap("DisplayConfig")]
+            [Validation(Required=false)]
+            public DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig DisplayConfig { get; set; }
+            public class DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig : TeaModel {
+                [NameInMap("Dpi")]
+                [Validation(Required=false)]
+                public int? Dpi { get; set; }
+
+                [NameInMap("Fps")]
+                [Validation(Required=false)]
+                public int? Fps { get; set; }
+
+                [NameInMap("LockResolution")]
+                [Validation(Required=false)]
+                public string LockResolution { get; set; }
+
+                [NameInMap("ResolutionHeight")]
+                [Validation(Required=false)]
+                public int? ResolutionHeight { get; set; }
+
+                [NameInMap("ResolutionWidth")]
+                [Validation(Required=false)]
+                public int? ResolutionWidth { get; set; }
 
             }
 
@@ -249,12 +275,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string NetworkInterfaceIp { get; set; }
 
+            /// <summary>
+            /// <remarks>
+            /// <para> This parameter is not publicly available.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
             [NameInMap("NetworkInterfaceIpv6Address")]
             [Validation(Required=false)]
             public string NetworkInterfaceIpv6Address { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace.</para>
+            /// <para>The office network ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen+dir-211620****</para>
@@ -293,6 +327,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string PublicIpAddress { get; set; }
 
+            /// <summary>
+            /// <remarks>
+            /// <para> This parameter is not publicly available.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
             [NameInMap("PublicIpv6Address")]
             [Validation(Required=false)]
             public string PublicIpv6Address { get; set; }
@@ -328,10 +370,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string RenderingType { get; set; }
 
             /// <summary>
-            /// <para>The status of the session connection.</para>
+            /// <para>The session status.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>connect</description></item>
-            /// <item><description>disConnect</description></item>
+            /// <item><description>disConnect: The session is disconnected.</description></item>
+            /// <item><description>connect: The session is connected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

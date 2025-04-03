@@ -606,7 +606,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves connection tickets in bulk.</para>
+        /// <para>Retrieves connection tickets in batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -667,7 +667,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves connection tickets in bulk.</para>
+        /// <para>Retrieves connection tickets in batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -728,7 +728,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves connection tickets in bulk.</para>
+        /// <para>Retrieves connection tickets in batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -746,7 +746,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves connection tickets in bulk.</para>
+        /// <para>Retrieves connection tickets in batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1257,8 +1257,27 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Preparations</h3>
-        /// <para>Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the values of request parameters <c>FileName</c>, <c>FilePath</c>, and <c>OssAppUrl</c>.</para>
+        /// <para>When creating an app, you can provide app information to the system in one of the following ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Way 1: Apps from the Application Center<list type="bullet">
+        /// <item><description>You can use one of the following methods:<list type="bullet">
+        /// <item><description>Method 1: Pass in the <c>FileName</c> and <c>FilePath</c> parameters at the same time.</description></item>
+        /// <item><description>Method 2: Pass in the <c>OssAppUrl</c> parameter</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Rule: If your app is from the Alibaba Cloud Workspace Application Center, you must use either Method 1 or Method 2. If both are used, Method 1 takes priority.</description></item>
+        /// <item><description>Condition: Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the app file to the Application Center to obtain the values of the <c>FileName</c>, <c>FilePath</c>, and <c>OssAppUrl</c> parameters.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Way 2: Custom apps<list type="bullet">
+        /// <item><description>Pass in the <c>CustomAppInfo</c> parameter.</description></item>
+        /// <item><description>Rule: If you pass in the <c>CustomAppInfo</c> parameter, all six fields within it are required.<remarks>
+        /// <para> If Way 1 and Way 2 are adopted simultaneously, the information from Way 2 takes priority.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1350,8 +1369,27 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Preparations</h3>
-        /// <para>Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the values of request parameters <c>FileName</c>, <c>FilePath</c>, and <c>OssAppUrl</c>.</para>
+        /// <para>When creating an app, you can provide app information to the system in one of the following ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Way 1: Apps from the Application Center<list type="bullet">
+        /// <item><description>You can use one of the following methods:<list type="bullet">
+        /// <item><description>Method 1: Pass in the <c>FileName</c> and <c>FilePath</c> parameters at the same time.</description></item>
+        /// <item><description>Method 2: Pass in the <c>OssAppUrl</c> parameter</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Rule: If your app is from the Alibaba Cloud Workspace Application Center, you must use either Method 1 or Method 2. If both are used, Method 1 takes priority.</description></item>
+        /// <item><description>Condition: Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the app file to the Application Center to obtain the values of the <c>FileName</c>, <c>FilePath</c>, and <c>OssAppUrl</c> parameters.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Way 2: Custom apps<list type="bullet">
+        /// <item><description>Pass in the <c>CustomAppInfo</c> parameter.</description></item>
+        /// <item><description>Rule: If you pass in the <c>CustomAppInfo</c> parameter, all six fields within it are required.<remarks>
+        /// <para> If Way 1 and Way 2 are adopted simultaneously, the information from Way 2 takes priority.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1443,8 +1481,27 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Preparations</h3>
-        /// <para>Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the values of request parameters <c>FileName</c>, <c>FilePath</c>, and <c>OssAppUrl</c>.</para>
+        /// <para>When creating an app, you can provide app information to the system in one of the following ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Way 1: Apps from the Application Center<list type="bullet">
+        /// <item><description>You can use one of the following methods:<list type="bullet">
+        /// <item><description>Method 1: Pass in the <c>FileName</c> and <c>FilePath</c> parameters at the same time.</description></item>
+        /// <item><description>Method 2: Pass in the <c>OssAppUrl</c> parameter</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Rule: If your app is from the Alibaba Cloud Workspace Application Center, you must use either Method 1 or Method 2. If both are used, Method 1 takes priority.</description></item>
+        /// <item><description>Condition: Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the app file to the Application Center to obtain the values of the <c>FileName</c>, <c>FilePath</c>, and <c>OssAppUrl</c> parameters.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Way 2: Custom apps<list type="bullet">
+        /// <item><description>Pass in the <c>CustomAppInfo</c> parameter.</description></item>
+        /// <item><description>Rule: If you pass in the <c>CustomAppInfo</c> parameter, all six fields within it are required.<remarks>
+        /// <para> If Way 1 and Way 2 are adopted simultaneously, the information from Way 2 takes priority.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -1467,8 +1524,27 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Preparations</h3>
-        /// <para>Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the values of request parameters <c>FileName</c>, <c>FilePath</c>, and <c>OssAppUrl</c>.</para>
+        /// <para>When creating an app, you can provide app information to the system in one of the following ways:</para>
+        /// <list type="bullet">
+        /// <item><description>Way 1: Apps from the Application Center<list type="bullet">
+        /// <item><description>You can use one of the following methods:<list type="bullet">
+        /// <item><description>Method 1: Pass in the <c>FileName</c> and <c>FilePath</c> parameters at the same time.</description></item>
+        /// <item><description>Method 2: Pass in the <c>OssAppUrl</c> parameter</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Rule: If your app is from the Alibaba Cloud Workspace Application Center, you must use either Method 1 or Method 2. If both are used, Method 1 takes priority.</description></item>
+        /// <item><description>Condition: Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the app file to the Application Center to obtain the values of the <c>FileName</c>, <c>FilePath</c>, and <c>OssAppUrl</c> parameters.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Way 2: Custom apps<list type="bullet">
+        /// <item><description>Pass in the <c>CustomAppInfo</c> parameter.</description></item>
+        /// <item><description>Rule: If you pass in the <c>CustomAppInfo</c> parameter, all six fields within it are required.<remarks>
+        /// <para> If Way 1 and Way 2 are adopted simultaneously, the information from Way 2 takes priority.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -1489,7 +1565,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <para>创建云机节点</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateCloudPhoneNodeRequest
         /// </param>
         /// <param name="runtime">
@@ -1499,9 +1575,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <returns>
         /// CreateCloudPhoneNodeResponse
         /// </returns>
-        public CreateCloudPhoneNodeResponse CreateCloudPhoneNodeWithOptions(CreateCloudPhoneNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateCloudPhoneNodeResponse CreateCloudPhoneNodeWithOptions(CreateCloudPhoneNodeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateCloudPhoneNodeShrinkRequest request = new CreateCloudPhoneNodeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DisplayConfig))
+            {
+                request.DisplayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DisplayConfig, "DisplayConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
@@ -1575,9 +1657,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["VSwitchId"] = request.VSwitchId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayConfigShrink))
+            {
+                body["DisplayConfig"] = request.DisplayConfigShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1606,7 +1694,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <para>创建云机节点</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateCloudPhoneNodeRequest
         /// </param>
         /// <param name="runtime">
@@ -1616,9 +1704,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <returns>
         /// CreateCloudPhoneNodeResponse
         /// </returns>
-        public async Task<CreateCloudPhoneNodeResponse> CreateCloudPhoneNodeWithOptionsAsync(CreateCloudPhoneNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateCloudPhoneNodeResponse> CreateCloudPhoneNodeWithOptionsAsync(CreateCloudPhoneNodeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateCloudPhoneNodeShrinkRequest request = new CreateCloudPhoneNodeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DisplayConfig))
+            {
+                request.DisplayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DisplayConfig, "DisplayConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
@@ -1692,9 +1786,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["VSwitchId"] = request.VSwitchId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayConfigShrink))
+            {
+                body["DisplayConfig"] = request.DisplayConfigShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1756,7 +1856,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Custom Image</para>
+        /// <para>Creates a custom image from a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1817,7 +1917,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Custom Image</para>
+        /// <para>Creates a custom image from a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1878,7 +1978,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Custom Image</para>
+        /// <para>Creates a custom image from a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1896,7 +1996,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Custom Image</para>
+        /// <para>Creates a custom image from a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2123,6 +2223,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 body["PolicyGroupName"] = request.PolicyGroupName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionHeight))
             {
                 body["ResolutionHeight"] = request.ResolutionHeight;
@@ -2209,6 +2313,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupName))
             {
                 body["PolicyGroupName"] = request.PolicyGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionHeight))
             {
@@ -2744,8 +2852,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放服务器</para>
+        /// <para>Deletes a cloud phone matrix.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you proceed, make sure that the cloud phone matrix that you want to delete expired.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCloudPhoneNodesRequest
@@ -2793,8 +2906,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放服务器</para>
+        /// <para>Deletes a cloud phone matrix.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you proceed, make sure that the cloud phone matrix that you want to delete expired.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCloudPhoneNodesRequest
@@ -2842,8 +2960,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放服务器</para>
+        /// <para>Deletes a cloud phone matrix.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you proceed, make sure that the cloud phone matrix that you want to delete expired.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCloudPhoneNodesRequest
@@ -2860,8 +2983,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放服务器</para>
+        /// <para>Deletes a cloud phone matrix.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you proceed, make sure that the cloud phone matrix that you want to delete expired.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCloudPhoneNodesRequest
@@ -6490,8 +6618,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取协同码</para>
+        /// <para>Generates a collaboration code for the cloud phone being accessed by using the current convenience account, and shares this code with other convenience accounts to allow them to access the same cloud phone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client. They can then call the <a href="https://help.aliyun.com/zh/wuying-workspace/developer-reference/api-metaspace-2022-03-07-applycoordinationwithcode?spm=a2c4g.11174283.help-menu-68242.d_5_3_2_1.70e5e380fUFgOH%5C&scm=20140722.H_2863194._.OR_help-T_cn~zh-V_1">ApplyCoordinationWithCode</a> operation to initiate a coordination request, which will provide them with a connection token.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateCoordinationCodeRequest
@@ -6543,8 +6676,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取协同码</para>
+        /// <para>Generates a collaboration code for the cloud phone being accessed by using the current convenience account, and shares this code with other convenience accounts to allow them to access the same cloud phone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client. They can then call the <a href="https://help.aliyun.com/zh/wuying-workspace/developer-reference/api-metaspace-2022-03-07-applycoordinationwithcode?spm=a2c4g.11174283.help-menu-68242.d_5_3_2_1.70e5e380fUFgOH%5C&scm=20140722.H_2863194._.OR_help-T_cn~zh-V_1">ApplyCoordinationWithCode</a> operation to initiate a coordination request, which will provide them with a connection token.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateCoordinationCodeRequest
@@ -6596,8 +6734,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取协同码</para>
+        /// <para>Generates a collaboration code for the cloud phone being accessed by using the current convenience account, and shares this code with other convenience accounts to allow them to access the same cloud phone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client. They can then call the <a href="https://help.aliyun.com/zh/wuying-workspace/developer-reference/api-metaspace-2022-03-07-applycoordinationwithcode?spm=a2c4g.11174283.help-menu-68242.d_5_3_2_1.70e5e380fUFgOH%5C&scm=20140722.H_2863194._.OR_help-T_cn~zh-V_1">ApplyCoordinationWithCode</a> operation to initiate a coordination request, which will provide them with a connection token.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateCoordinationCodeRequest
@@ -6614,8 +6757,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取协同码</para>
+        /// <para>Generates a collaboration code for the cloud phone being accessed by using the current convenience account, and shares this code with other convenience accounts to allow them to access the same cloud phone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client. They can then call the <a href="https://help.aliyun.com/zh/wuying-workspace/developer-reference/api-metaspace-2022-03-07-applycoordinationwithcode?spm=a2c4g.11174283.help-menu-68242.d_5_3_2_1.70e5e380fUFgOH%5C&scm=20140722.H_2863194._.OR_help-T_cn~zh-V_1">ApplyCoordinationWithCode</a> operation to initiate a coordination request, which will provide them with a connection token.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateCoordinationCodeRequest
@@ -6799,7 +6947,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation runs asynchronously. To check the installation result, you can query the installation history for the app.</para>
+        /// <para>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6861,7 +7009,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation runs asynchronously. To check the installation result, you can query the installation history for the app.</para>
+        /// <para>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6923,7 +7071,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation runs asynchronously. To check the installation result, you can query the installation history for the app.</para>
+        /// <para>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6946,7 +7094,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation runs asynchronously. To check the installation result, you can query the installation history for the app.</para>
+        /// <para>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6996,6 +7144,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupName))
             {
                 body["PolicyGroupName"] = request.PolicyGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7057,6 +7209,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyGroupName))
             {
                 body["PolicyGroupName"] = request.PolicyGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7572,7 +7728,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云机节点信息</para>
+        /// <para>Modifies a cloud phone matrix. Currently, you can only modify the name of a cloud phone matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7617,7 +7773,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云机节点信息</para>
+        /// <para>Modifies a cloud phone matrix. Currently, you can only modify the name of a cloud phone matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7662,7 +7818,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云机节点信息</para>
+        /// <para>Modifies a cloud phone matrix. Currently, you can only modify the name of a cloud phone matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7680,7 +7836,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云机节点信息</para>
+        /// <para>Modifies a cloud phone matrix. Currently, you can only modify the name of a cloud phone matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8235,6 +8391,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <para>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// OperateAppRequest
         /// </param>
@@ -8291,6 +8452,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <summary>
         /// <para>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// OperateAppRequest
@@ -8349,6 +8515,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <para>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// OperateAppRequest
         /// </param>
@@ -8366,6 +8537,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// <summary>
         /// <para>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// OperateAppRequest
@@ -8896,7 +9072,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费服务器</para>
+        /// <para>Renews a cloud mobile matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8957,7 +9133,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费服务器</para>
+        /// <para>Renews a cloud mobile matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9018,7 +9194,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费服务器</para>
+        /// <para>Renews a cloud mobile matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9036,7 +9212,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费服务器</para>
+        /// <para>Renews a cloud mobile matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10038,8 +10214,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls an app from multiple cloud phone instances. This operation runs asynchronously. You can check the result of the task by using the task ID.</para>
+        /// <para>Uninstalls an app from multiple cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation runs asynchronously. To check the operation result, you can visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UninstallAppRequest
@@ -10095,8 +10276,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls an app from multiple cloud phone instances. This operation runs asynchronously. You can check the result of the task by using the task ID.</para>
+        /// <para>Uninstalls an app from multiple cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation runs asynchronously. To check the operation result, you can visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UninstallAppRequest
@@ -10152,8 +10338,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls an app from multiple cloud phone instances. This operation runs asynchronously. You can check the result of the task by using the task ID.</para>
+        /// <para>Uninstalls an app from multiple cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation runs asynchronously. To check the operation result, you can visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UninstallAppRequest
@@ -10170,8 +10361,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls an app from multiple cloud phone instances. This operation runs asynchronously. You can check the result of the task by using the task ID.</para>
+        /// <para>Uninstalls an app from multiple cloud phone instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation runs asynchronously. To check the operation result, you can visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UninstallAppRequest

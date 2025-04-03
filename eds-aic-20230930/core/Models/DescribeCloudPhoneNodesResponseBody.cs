@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string GmtModified { get; set; }
 
+            [NameInMap("InstanceType")]
+            [Validation(Required=false)]
+            public string InstanceType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>32</para>

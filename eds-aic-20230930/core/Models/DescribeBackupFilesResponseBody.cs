@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string AndroidInstanceName { get; set; }
 
             /// <summary>
-            /// <para>Is all data to be backed up.</para>
+            /// <para>Indicates whether the whole instance is backed up.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>List of apps to be backed up.</para>
+            /// <para>The names of the application packages that are backed up.</para>
             /// </summary>
             [NameInMap("SourceAppInfoList")]
             [Validation(Required=false)]

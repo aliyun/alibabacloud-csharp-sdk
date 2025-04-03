@@ -50,11 +50,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <para>The execution state of the command.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SUCCESS: The command is successfully executed.</description></item>
-            /// <item><description>FAILED: The command failed to be executed.</description></item>
-            /// <item><description>RUNNING: The command is being executed.</description></item>
-            /// <item><description>PENDING: The command is pending execution.</description></item>
-            /// <item><description>TIMEOUT: The command execution timed out.</description></item>
+            /// <item><description>Failed: The execution of the command failed.</description></item>
+            /// <item><description>Timeout: The execution of the command timed out.</description></item>
+            /// <item><description>Running: The command is being executed.</description></item>
+            /// <item><description>Success: The execution of the command is successful.</description></item>
+            /// <item><description>Pending: The command is waiting to be executed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

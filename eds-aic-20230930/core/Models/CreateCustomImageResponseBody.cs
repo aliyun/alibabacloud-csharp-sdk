@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateCustomImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Image ID.</para>
+        /// <para>The ID of the custom image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>imgc-075cllfeuazh0****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20393E53-8FF1-524C-B494-B478A5369733</para>

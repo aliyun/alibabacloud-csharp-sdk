@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AndroidInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance. Instances support fuzzy search by name.</para>
+        /// <para>The name of the instance. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acp-34pqe4r0kd9kn****</para>
@@ -30,7 +30,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AndroidInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Is all data to be backed up.</para>
+        /// <para>Specifies whether the whole instance is backed up.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +55,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BackupFileId { get; set; }
 
         /// <summary>
-        /// <para>The name of the backup file. Backup files support fuzzy search by name.</para>
+        /// <para>The name of the backup file. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>defaulBackupFile</para>
@@ -60,7 +65,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BackupFileName { get; set; }
 
         /// <summary>
-        /// <para>The description of the backup file. Backup files support fuzzy search by description.</para>
+        /// <para>The description of the backup file. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default description.</para>
@@ -100,7 +105,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -130,7 +135,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The list of backup file status.</para>
+        /// <para>The status of the backup files.</para>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeImageListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The objects that are returned.</para>
+        /// <para>The images.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

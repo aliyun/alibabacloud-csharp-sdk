@@ -28,6 +28,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string SourceFilePath { get; set; }
 
+        /// <summary>
+        /// <para>The name of the file uploaded from the Object Storage Service (OSS) to the cloud phone instance.</para>
+        /// <remarks>
+        /// <para> If UploadType is set to OSS, you must specify TargetFileName. If TargetFileName is empty, the file uploaded from the OSS bucket to the cloud phone instance retains its original name. If TargetFileName is provided with a value, the uploaded file in the SourceFilePath directory uses the specified name (TargetFileName). If UploadType is set to DOWNLOAD_URL, TargetFileName does not take effect.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test.txt</para>
+        /// </summary>
         [NameInMap("TargetFileName")]
         [Validation(Required=false)]
         public string TargetFileName { get; set; }

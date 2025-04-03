@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ImageType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Value range: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

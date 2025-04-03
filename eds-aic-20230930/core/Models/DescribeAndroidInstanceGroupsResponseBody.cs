@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeAndroidInstanceGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the instance group.</para>
+        /// <para>The instance group.</para>
         /// </summary>
         [NameInMap("InstanceGroupModel")]
         [Validation(Required=false)]
@@ -37,7 +37,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ArchitectureType { get; set; }
 
             /// <summary>
-            /// <para>Number of instances.</para>
+            /// <para>The number of available instances.</para>
+            /// <remarks>
+            /// <para> Available instances are those not in the Deleting or Deleted state.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -95,12 +98,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("EnableIpv6")]
             [Validation(Required=false)]
             public bool? EnableIpv6 { get; set; }
 
             /// <summary>
-            /// <para>The error code.</para>
+            /// <para>The cause of the creation failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -209,6 +216,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string InstanceGroupStatus { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>50</para>
+            /// </summary>
             [NameInMap("Ipv6Bandwidth")]
             [Validation(Required=false)]
             public int? Ipv6Bandwidth { get; set; }
@@ -264,7 +275,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The rendering type.</para>
+            /// <para>The rendering mode of the instance group.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>GPURemote: GPU remote rendering.</description></item>
+            /// <item><description>CPU: CPU rendering.</description></item>
+            /// <item><description>GPUocal: GPU local rendering.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>CPU</para>

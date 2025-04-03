@@ -9,10 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeSpecRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("BizRegionId")]
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The matrix specification.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cpm.gn6.gx1</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cpm.gn6.gx1</para>
+        /// </summary>
         [NameInMap("MatrixSpec")]
         [Validation(Required=false)]
         public string MatrixSpec { get; set; }
@@ -37,6 +51,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The purchase mode of cloud mobile phones.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Instance (default): the instance group mode.</description></item>
+        /// <item><description>Node: the matrix mode [whitelisted].</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Instance</para>
+        /// </summary>
         [NameInMap("SaleMode")]
         [Validation(Required=false)]
         public string SaleMode { get; set; }

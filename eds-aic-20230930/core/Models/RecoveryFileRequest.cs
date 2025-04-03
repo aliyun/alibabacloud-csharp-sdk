@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> AndroidInstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>Whether all data is to be backed up.</para>
+        /// <para>Specifies whether to back up the whole instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

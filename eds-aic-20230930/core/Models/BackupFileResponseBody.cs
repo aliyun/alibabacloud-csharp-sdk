@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class BackupFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The number of instances that are backed up.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The objects that are returned.</para>
+        /// <para>The object that is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<BackupFileResponseBodyData> Data { get; set; }
         public class BackupFileResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Instance id.</para>
+            /// <para>The ID of the cloud phone instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-34pqe4r0kd9kn****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string AndroidInstanceId { get; set; }
 
             /// <summary>
-            /// <para>Backup file id.</para>
+            /// <para>The ID of the backup file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bf-b0qbg3pbpjkn7****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BackupFileId { get; set; }
 
             /// <summary>
-            /// <para>Backup file name.</para>
+            /// <para>The name of the backup file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a-58ftsoo90p0qa****.ab</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The batch task ID.</para>
+        /// <para>The ID of the batch task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-22ex666a5mco5****</para>

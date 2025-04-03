@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RenewCloudPhoneNodesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22365781890****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC****</para>
         /// </summary>

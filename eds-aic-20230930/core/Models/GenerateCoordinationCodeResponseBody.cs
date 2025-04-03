@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class GenerateCoordinationCodeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The collaboration code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CSHGDK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string CoordinatorCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1A923337-44D9-5CAD-9A53-95084BD4****</para>
         /// </summary>

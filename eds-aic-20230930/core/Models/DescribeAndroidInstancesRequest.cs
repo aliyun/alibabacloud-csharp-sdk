@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AndroidInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the DescribeRegions operation to query the regions where Cloud Phone is supported.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> operation to query the regions where Cloud Phone is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -37,10 +37,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing method.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid: subscription.</description></item>
         /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// <item><description>PrePaid: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

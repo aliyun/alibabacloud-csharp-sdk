@@ -29,6 +29,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The information about the custom app.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If you want to pass in a custom app, configure the <c>CustomAppInfo</c> parameter. Take note that the six fields within it are mandatory.</para>
+        /// </description></item>
+        /// <item><description><para>A custom app has a higher priority than an app from the Alibaba Cloud Workspace Application Center. If you configure the <c>CustomAppInfo</c> parameter, the <c>FileName</c> and <c>FilePath</c> pair or the <c>OssAppUrl</c> will not take effect.</para>
+        /// </description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("CustomAppInfo")]
         [Validation(Required=false)]
         public string CustomAppInfoShrink { get; set; }
@@ -44,13 +55,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name used by the application file in OSS. This parameter, combined with <c>FilePath</c>, uniquely identifies the OSS path of the application file.</para>
+        /// <para>The name used by the app file in Object Storage Service (OSS). This parameter, combined with <c>FilePath</c>, uniquely identifies the OSS path of the app file.</para>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Log on to the <a href="https://eds.console.aliyun.com/osshelp">Cloud Phone console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the value of this parameter.</para>
+        /// <item><description><para>If you want to pass in an app from the Alibaba Cloud Workspace Application Center, configure the <c>FileName</c> and <c>FilePath</c> parameters. Alternatively, configure the <c>OssAppUrl</c> parameter. The FileName and FilePath parameters takes precedence over the OssAppUrl parameter.</para>
         /// </description></item>
-        /// <item><description><para>If you do not specify <c>OssAppUrl</c>, you must specify <c>FileName</c> and <c>FilePath</c>.</para>
+        /// <item><description><para>Log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise</a> console, upload the app file to the Application Center according to the on-screen instructions, and then retrieve the parameter value.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -62,13 +73,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The OSS bucket path to the application file. This parameter, combined with <c>FileName</c>, uniquely identifies the OSS path of the application file.</para>
+        /// <para>The OSS bucket path to the app file. This parameter, combined with <c>FileName</c>, uniquely identifies the OSS path of the app file.</para>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Log on to the <a href="https://eds.console.aliyun.com/osshelp">Cloud Phone console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the value of this parameter.</para>
+        /// <item><description><para>If you want to pass in an app from the Alibaba Cloud Workspace Application Center, configure the <c>FileName</c> and <c>FilePath</c> parameters. Alternatively, configure the <c>OssAppUrl</c> parameter. The FileName and FilePath parameters takes precedence over the OssAppUrl parameter.</para>
         /// </description></item>
-        /// <item><description><para>If you do not specify <c>OssAppUrl</c>, you must specify <c>FileName</c> and <c>FilePath</c>.</para>
+        /// <item><description><para>Log on to the <a href="https://eds.console.aliyun.com/osshelp">EDS Enterprise</a> console, upload the app file to the Application Center according to the on-screen instructions, and then retrieve the parameter value.</para>
         /// </description></item>
         /// </list>
         /// </summary>
@@ -97,13 +108,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstallParam { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the OSS bucket to which you want to upload the application file.</para>
+        /// <para>The OSS bucket endpoint of the app file.</para>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Log on to the <a href="https://eds.console.aliyun.com/osshelp">Cloud Phone console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the value of this parameter.</para>
+        /// <item><description><para>If you want to pass in an app from the Alibaba Cloud Workspace Application Center, configure the <c>FileName</c> and <c>FilePath</c> parameters. Alternatively, configure the <c>OssAppUrl</c> parameter. The FileName and FilePath parameters takes precedence over the OssAppUrl parameter.</para>
         /// </description></item>
-        /// <item><description><para>If you do not specify <c>FileName</c> or <c>FilePath</c>, you must specify this parameter.</para>
+        /// <item><description><para>Log on to the <a href="https://eds.console.aliyun.com/osshelp">EDS Enterprise</a> console, upload the app file to the Application Center according to the on-screen instructions, and then retrieve the parameter value.</para>
         /// </description></item>
         /// </list>
         /// 
