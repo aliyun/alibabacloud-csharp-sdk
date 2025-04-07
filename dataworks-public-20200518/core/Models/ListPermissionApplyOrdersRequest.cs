@@ -45,15 +45,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <item><description>3: approved but authorization failed</description></item>
         /// <item><description>4: rejected</description></item>
         /// </list>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0</description></item>
-        /// <item><description>1</description></item>
-        /// <item><description>2</description></item>
-        /// <item><description>3</description></item>
-        /// <item><description>4</description></item>
-        /// <item><description>5</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

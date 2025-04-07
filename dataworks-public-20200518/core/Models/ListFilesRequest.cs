@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListFilesRequest : TeaModel {
+        [NameInMap("CommitStatus")]
+        [Validation(Required=false)]
+        public int? CommitStatus { get; set; }
+
         /// <summary>
         /// <para>The exact matching file name. The file name of the query result is exactly the same as this parameter.</para>
         /// 
@@ -60,6 +64,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the Alibaba Cloud account that is used to last modify the file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>38748246285727</para>
+        /// </summary>
         [NameInMap("LastEditUser")]
         [Validation(Required=false)]
         public string LastEditUser { get; set; }

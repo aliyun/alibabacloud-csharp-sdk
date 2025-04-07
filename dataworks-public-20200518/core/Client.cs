@@ -33423,6 +33423,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommitStatus))
+            {
+                body["CommitStatus"] = request.CommitStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExactFileName))
             {
                 body["ExactFileName"] = request.ExactFileName;
@@ -33528,6 +33532,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommitStatus))
+            {
+                body["CommitStatus"] = request.CommitStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExactFileName))
             {
                 body["ExactFileName"] = request.ExactFileName;
