@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> AndroidInstanceIds { get; set; }
 
+        [NameInMap("SaleMode")]
+        [Validation(Required=false)]
+        public string SaleMode { get; set; }
+
     }
 
 }

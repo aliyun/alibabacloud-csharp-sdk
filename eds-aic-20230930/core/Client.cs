@@ -8588,6 +8588,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["ForceStop"] = request.ForceStop;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                query["SaleMode"] = request.SaleMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -8645,6 +8649,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceStop))
             {
                 query["ForceStop"] = request.ForceStop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                query["SaleMode"] = request.SaleMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9256,6 +9264,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AndroidInstanceIds"] = request.AndroidInstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                query["SaleMode"] = request.SaleMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9309,6 +9321,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIds))
             {
                 query["AndroidInstanceIds"] = request.AndroidInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                query["SaleMode"] = request.SaleMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9924,6 +9940,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AndroidInstanceIds"] = request.AndroidInstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                query["SaleMode"] = request.SaleMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9977,6 +9997,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIds))
             {
                 query["AndroidInstanceIds"] = request.AndroidInstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                query["SaleMode"] = request.SaleMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10082,6 +10106,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["ForceStop"] = request.ForceStop;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                query["SaleMode"] = request.SaleMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -10139,6 +10167,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceStop))
             {
                 query["ForceStop"] = request.ForceStop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                query["SaleMode"] = request.SaleMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
