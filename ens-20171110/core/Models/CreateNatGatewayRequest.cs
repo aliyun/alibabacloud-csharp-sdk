@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        [NameInMap("InstanceBillingCycle")]
+        [Validation(Required=false)]
+        public string InstanceBillingCycle { get; set; }
+
         /// <summary>
         /// <para>The instance type of the NAT gateway. Set the value to <b>enat.default</b>.</para>
         /// 
@@ -87,7 +91,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// <para>The ID of the vSwitch.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-5savh5ngxh8sbj14bu7n****</para>

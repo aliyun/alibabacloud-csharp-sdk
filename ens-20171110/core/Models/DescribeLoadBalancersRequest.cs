@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the Edge Node Service (ENS) nodes.</para>
+        /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }
@@ -88,7 +91,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Valid values: <b>10</b> to <b>100</b>.</para>
+        /// <para>The number of entries to return on each page. Default value: 10. Valid values: <b>10</b> to <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
