@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateWafRulesetRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the WAF ruleset, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850233.html">ListWafRulesets</a> interface.</para>
+        /// <para>ID of the WAF ruleset, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
