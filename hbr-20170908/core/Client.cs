@@ -5501,11 +5501,6 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <para>Deletes a backup snapshot.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you delete the most recent backup snapshot for a data source, you must set the Force parameter to <c>true</c>. Otherwise, an error occurs.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteSnapshotRequest
         /// </param>
@@ -5578,11 +5573,6 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <summary>
         /// <para>Deletes a backup snapshot.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you delete the most recent backup snapshot for a data source, you must set the Force parameter to <c>true</c>. Otherwise, an error occurs.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSnapshotRequest
@@ -5657,11 +5647,6 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <para>Deletes a backup snapshot.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you delete the most recent backup snapshot for a data source, you must set the Force parameter to <c>true</c>. Otherwise, an error occurs.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteSnapshotRequest
         /// </param>
@@ -5679,11 +5664,6 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <summary>
         /// <para>Deletes a backup snapshot.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>If you delete the most recent backup snapshot for a data source, you must set the Force parameter to <c>true</c>. Otherwise, an error occurs.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSnapshotRequest
@@ -6197,6 +6177,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["CrossAccountUserId"] = request.CrossAccountUserId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -6293,6 +6277,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossAccountUserId))
             {
                 query["CrossAccountUserId"] = request.CrossAccountUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {

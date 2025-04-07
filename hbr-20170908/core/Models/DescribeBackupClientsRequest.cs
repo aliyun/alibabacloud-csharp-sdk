@@ -78,6 +78,20 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public long? CrossAccountUserId { get; set; }
 
+        [NameInMap("Filters")]
+        [Validation(Required=false)]
+        public List<DescribeBackupClientsRequestFilters> Filters { get; set; }
+        public class DescribeBackupClientsRequestFilters : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Values")]
+            [Validation(Required=false)]
+            public List<string> Values { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The IDs of ECS instances.</para>
         /// 

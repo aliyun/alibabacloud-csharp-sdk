@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public long? Retention { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required only if the value of the <b>RuleType</b> parameter is <b>TRANSITION</b>. This parameter specifies the special retention rules.</para>
+            /// <para>This parameter is required only if the <b>RuleType</b> parameter is set to <b>TRANSITION</b>. This parameter specifies the special retention rules.</para>
             /// </summary>
             [NameInMap("RetentionRules")]
             [Validation(Required=false)]
@@ -227,11 +227,22 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string RuleType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required only if the <b>RuleType</b> parameter is set to <b>BACKUP</b>. This parameter specifies the backup schedule settings. Format: <c>I|{startTime}|{interval}</c>. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <c>I|1631685600|P1D</c> specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</para>
+            /// <para>This parameter is required only if the <b>RuleType</b> parameter is set to <b>BACKUP</b>. This parameter specifies the backup schedule settings. Formats:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>I|{startTime}|{interval}</c>: The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. For example, <c>I|1631685600|P1D</c> indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</para>
             /// <list type="bullet">
             /// <item><description>startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</description></item>
-            /// <item><description>interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of 1 hour. P1D specifies an interval of one day.</description></item>
+            /// <item><description>interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, <c>PT1H</c> specifies an interval of 1 hour. <c>P1D</c> specifies an interval of one day.</description></item>
             /// </list>
+            /// </description></item>
+            /// <item><description><para><c>C|{startTime}|{crontab}</c>: The system runs backup jobs at a point in time that is specified in the {startTime} parameter based on the {crontab} expression. For example, C|1631685600|0 0 2 ?\* 3,5,7 indicates that the system runs backup jobs at 02:00:00 every Tuesday, Thursday, and Saturday from14:00:00 on September 15, 2021.``</para>
+            /// <list type="bullet">
+            /// <item><description>startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</description></item>
+            /// <item><description>crontab: the crontab expression. For example, 0 0 2 ?\* 3,5,7 indicates 02:00:00 every Tuesday, Thursday, and Saturday.``</description></item>
+            /// </list>
+            /// </description></item>
+            /// </list>
+            /// <para>The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>I|1648647166|P1D</para>

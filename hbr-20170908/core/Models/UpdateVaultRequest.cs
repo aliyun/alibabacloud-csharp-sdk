@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string VaultName { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable the vault worm feature. Once the worm feature is enabled, the vault and all its backup data cannot be deleted before they automatically expire. After enabling the worm feature, it is not supported to disable it. The worm feature is only effective for standard and archive backup vault.</para>
+        /// <para>Specifies whether to enable the immutable backup feature for storage vaults. After the immutable backup feature is enabled, backup vaults and all backup data cannot be deleted until the retention period expires. The immutable backup feature cannot be disabled after it is enabled. Only standard backup vaults and archive vaults support the immutable backup feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

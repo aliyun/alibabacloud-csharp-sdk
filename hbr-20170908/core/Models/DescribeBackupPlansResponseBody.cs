@@ -602,6 +602,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 /// <item><description><b>NAS</b>: NAS file systems</description></item>
                 /// <item><description><b>OTS</b>: Tablestore instances</description></item>
                 /// <item><description><b>UDM_ECS</b>: ECS instances</description></item>
+                /// <item><description><b>SYNC</b>: data synchronization</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

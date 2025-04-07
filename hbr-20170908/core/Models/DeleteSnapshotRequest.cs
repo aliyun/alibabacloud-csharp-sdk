@@ -19,18 +19,17 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>Specifies whether to forcibly delete the most recent backup snapshot. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The system forcibly deletes the most recent backup snapshot.</description></item>
-        /// <item><description>false (default): The system does not forcibly delete the most recent backup snapshot.</description></item>
-        /// </list>
+        /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>Deprected.</para>
         /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? Force { get; set; }
 
         /// <summary>

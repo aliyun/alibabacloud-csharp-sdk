@@ -97,6 +97,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string VaultId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the backup vault. The name must be 1 to 64 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vaultname</para>
+        /// </summary>
         [NameInMap("VaultName")]
         [Validation(Required=false)]
         public string VaultName { get; set; }

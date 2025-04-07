@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <para>The download URL of the file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://a-hbr-temp-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/job-0007yg2i0m6705wdhgb6_0.csv?Expires=1649406469&OSSAccessKeyId=LTAIjGotF8wX****&Signature=26%2BgjegCrRmMDCpS5jzyG4ivKU8%3D">https://a-hbr-temp-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/job-0007yg2i0m6705wdhgb6_0.csv?Expires=1649406469&amp;OSSAccessKeyId=LTAIjGotF8wX****&amp;Signature=26%2BgjegCrRmMDCpS5jzyG4ivKU8%3D</a></para>
+        /// <para><a href="https://a-hbr-temp-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/job-0007yg2i0m6705wdhgb6_0.csv?Expires=1649406469&OSSAccessKeyId=LTAI************&Signature=26%2BgjegCrRmMDCpS5jzyG4ivKU8%3D">https://a-hbr-temp-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/job-0007yg2i0m6705wdhgb6_0.csv?Expires=1649406469&amp;OSSAccessKeyId=LTAI************&amp;Signature=26%2BgjegCrRmMDCpS5jzyG4ivKU8%3D</a></para>
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

@@ -420,10 +420,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>策略是否对该数据源生效。</para>
+            /// <para>Whether the policy is disbaled for this data source.</para>
             /// <list type="bullet">
-            /// <item><description>true：暂停</description></item>
-            /// <item><description>false：未暂停</description></item>
+            /// <item><description>true: disabled</description></item>
+            /// <item><description>false: Not disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

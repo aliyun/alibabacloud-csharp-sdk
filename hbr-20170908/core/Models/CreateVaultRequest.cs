@@ -66,12 +66,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string VaultRegionId { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the backup vault. Valid value: </para>
+        /// <para>The storage type of the backup vault.</para>
         /// <list type="bullet">
         /// <item><description><b>STANDARD</b>: standard storage.</description></item>
-        /// <item><description><b>ARCHIVE</b>: deprected.</description></item>
-        /// <item><description><b>COLD_ARCHIVE</b>: deprected.</description></item>
-        /// <item><description><b>IA</b>: deprected.</description></item>
+        /// <item><description><b>ARCHIVE</b>: This parameter is deprecated.</description></item>
+        /// <item><description><b>COLD_ARCHIVE</b>: This parameter is deprecated.</description></item>
+        /// <item><description><b>IA</b>: This parameter is deprecated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string VaultType { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable the vault worm feature. Once the worm feature is enabled, the vault and all its backup data cannot be deleted before they automatically expire. After enabling the worm feature, it is not supported to disable it. The worm feature is only effective for standard and archive backup vault.</para>
+        /// <para>Specifies whether to enable the immutable backup feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

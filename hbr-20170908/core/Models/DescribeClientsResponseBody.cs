@@ -90,6 +90,12 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public long? CreatedTime { get; set; }
 
+                /// <summary>
+                /// <para>The latest heartbeat time of the Cloud Backup client. This value is a UNIX timestamp. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1554347313</para>
+                /// </summary>
                 [NameInMap("HeartBeatTime")]
                 [Validation(Required=false)]
                 public long? HeartBeatTime { get; set; }

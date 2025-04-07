@@ -72,9 +72,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <list type="bullet">
         /// <item><description><b>ECS_FILE</b>: Elastic Compute Service (ECS) files</description></item>
         /// <item><description><b>OSS</b>: Object Storage Service (OSS) buckets</description></item>
-        /// <item><description><b>NAS</b>: Apsara File Storage NAS file systems</description></item>
+        /// <item><description><b>NAS</b>: File Storage NAS (NAS) file systems</description></item>
         /// <item><description><b>OTS</b>: Tablestore instances</description></item>
         /// <item><description><b>UDM_ECS</b>: ECS instances</description></item>
+        /// <item><description><b>SYNC</b>: data synchronization</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

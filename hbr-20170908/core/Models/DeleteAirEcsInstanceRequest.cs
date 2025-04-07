@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class DeleteAirEcsInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ECS instance.</para>
+        /// <para>The ID of the Elastic Compute Service (ECS) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-uf6ir9y******hvisj</para>
