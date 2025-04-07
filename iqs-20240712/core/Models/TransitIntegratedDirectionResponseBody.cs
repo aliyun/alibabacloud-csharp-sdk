@@ -645,6 +645,16 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
                         [Validation(Required=false)]
                         public string OriginPoint { get; set; }
 
+                        [NameInMap("polyline")]
+                        [Validation(Required=false)]
+                        public TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxiPolyline Polyline { get; set; }
+                        public class TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxiPolyline : TeaModel {
+                            [NameInMap("polyline")]
+                            [Validation(Required=false)]
+                            public string Polyline { get; set; }
+
+                        }
+
                         /// <summary>
                         /// <b>Example:</b>
                         /// <para>13.5</para>
@@ -822,14 +832,6 @@ namespace AlibabaCloud.SDK.IQS20240712.Models
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
-        [NameInMap("success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

@@ -1,3 +1,6 @@
+2025-04-07 Version: 4.1.2
+- Generated csharp 2024-07-12 for IQS.
+
 2025-03-03 Version: 5.0.0
 - Update API DrivingDirection: update response param.
 
