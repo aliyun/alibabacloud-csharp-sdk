@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string AppId { get; set; }
 
+            [NameInMap("AvgTimeCostMs")]
+            [Validation(Required=false)]
+            public float? AvgTimeCostMs { get; set; }
+
             /// <summary>
             /// <para>The number of abnormal change orders.</para>
             /// 
@@ -62,6 +66,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public float? ErrorPercent { get; set; }
 
+            [NameInMap("MaxTimeCostMs")]
+            [Validation(Required=false)]
+            public float? MaxTimeCostMs { get; set; }
+
             /// <summary>
             /// <para>The application name.</para>
             /// 
@@ -72,6 +80,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("OptimizeSuggestions")]
+            [Validation(Required=false)]
+            public string OptimizeSuggestions { get; set; }
+
             /// <summary>
             /// <para>The namespace ID.</para>
             /// 
@@ -81,6 +93,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("TaskTimeCostMsAvg")]
+            [Validation(Required=false)]
+            public string TaskTimeCostMsAvg { get; set; }
 
             /// <summary>
             /// <para>The total number of change orders.</para>

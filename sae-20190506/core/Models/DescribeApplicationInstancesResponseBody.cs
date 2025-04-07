@@ -211,6 +211,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
                 }
 
+                [NameInMap("Timestamp")]
+                [Validation(Required=false)]
+                public long? Timestamp { get; set; }
+
                 [NameInMap("UnhealthyMessage")]
                 [Validation(Required=false)]
                 public string UnhealthyMessage { get; set; }

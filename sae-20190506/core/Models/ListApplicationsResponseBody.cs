@@ -206,6 +206,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public int? Cpu { get; set; }
 
+                [NameInMap("DiskSize")]
+                [Validation(Required=false)]
+                public int? DiskSize { get; set; }
+
                 [NameInMap("EnableIdle")]
                 [Validation(Required=false)]
                 public string EnableIdle { get; set; }

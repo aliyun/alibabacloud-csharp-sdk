@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Cpu { get; set; }
 
+        [NameInMap("DiskSize")]
+        [Validation(Required=false)]
+        public string DiskSize { get; set; }
+
         /// <summary>
         /// <para>The destination memory size. Unit: MB.</para>
         /// <para>This parameter is required.</para>

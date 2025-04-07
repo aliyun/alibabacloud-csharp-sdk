@@ -242,6 +242,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string CustomImageNetworkType { get; set; }
 
+            [NameInMap("DiskSize")]
+            [Validation(Required=false)]
+            public int? DiskSize { get; set; }
+
             [NameInMap("Dotnet")]
             [Validation(Required=false)]
             public string Dotnet { get; set; }

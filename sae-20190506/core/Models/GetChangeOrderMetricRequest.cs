@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class GetChangeOrderMetricRequest : TeaModel {
+        [NameInMap("AppId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
         /// <summary>
         /// <para>The SAE application type. Valid values:</para>
         /// <list type="bullet">
@@ -23,6 +27,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("AppSource")]
         [Validation(Required=false)]
         public string AppSource { get; set; }
+
+        [NameInMap("CoType")]
+        [Validation(Required=false)]
+        public string CoType { get; set; }
 
         /// <summary>
         /// <para>The CPU allocation policy. Valid values:</para>

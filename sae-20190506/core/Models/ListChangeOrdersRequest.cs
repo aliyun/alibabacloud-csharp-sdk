@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Key { get; set; }
 
+        [NameInMap("OrderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
+
         /// <summary>
         /// <para>test</para>
         /// 
@@ -91,6 +95,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("Reverse")]
+        [Validation(Required=false)]
+        public bool? Reverse { get; set; }
 
     }
 

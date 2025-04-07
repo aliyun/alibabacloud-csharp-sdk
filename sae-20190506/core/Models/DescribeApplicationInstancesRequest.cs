@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("PipelineId")]
+        [Validation(Required=false)]
+        public string PipelineId { get; set; }
+
         /// <summary>
         /// <para>true</para>
         /// 
