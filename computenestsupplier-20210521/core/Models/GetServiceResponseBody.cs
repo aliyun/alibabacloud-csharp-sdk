@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string BuildInfo { get; set; }
 
+        [NameInMap("BuildParameters")]
+        [Validation(Required=false)]
+        public string BuildParameters { get; set; }
+
         /// <summary>
         /// <para>The category of the service.</para>
         /// 
