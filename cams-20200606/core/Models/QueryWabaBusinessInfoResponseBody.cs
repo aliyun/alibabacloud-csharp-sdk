@@ -70,6 +70,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string VerificationStatus { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The industry.</para>
             /// 
@@ -78,6 +80,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// </summary>
             [NameInMap("Vertical")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Vertical { get; set; }
 
         }

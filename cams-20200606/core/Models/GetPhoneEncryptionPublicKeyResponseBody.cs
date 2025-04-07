@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The response code.</para>
         /// <list type="bullet">
         /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>For more information about other response codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</description></item>
+        /// <item><description>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

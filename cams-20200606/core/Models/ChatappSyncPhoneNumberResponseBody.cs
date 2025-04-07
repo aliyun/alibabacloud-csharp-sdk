@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CodeVerificationStatus { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>N</para>
+            /// </summary>
+            [NameInMap("IsOfficial")]
+            [Validation(Required=false)]
+            public string IsOfficial { get; set; }
+
+            /// <summary>
             /// <para>The number of phone numbers to which messages can be sent in a day.</para>
             /// 
             /// <b>Example:</b>

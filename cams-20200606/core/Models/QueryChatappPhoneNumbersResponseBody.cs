@@ -61,6 +61,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CodeVerificationStatus { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>N</para>
+            /// </summary>
+            [NameInMap("IsOfficial")]
+            [Validation(Required=false)]
+            public string IsOfficial { get; set; }
+
+            /// <summary>
             /// <para>The number of phone numbers to which messages can be sent in a day.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
@@ -211,6 +219,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("Success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
 
     }
 
