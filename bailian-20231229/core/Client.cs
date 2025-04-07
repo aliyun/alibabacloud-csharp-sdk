@@ -485,6 +485,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 body["SizeInBytes"] = request.SizeInBytes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseInternalEndpoint))
+            {
+                body["UseInternalEndpoint"] = request.UseInternalEndpoint;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -559,6 +563,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SizeInBytes))
             {
                 body["SizeInBytes"] = request.SizeInBytes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseInternalEndpoint))
+            {
+                body["UseInternalEndpoint"] = request.UseInternalEndpoint;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string SizeInBytes { get; set; }
 
+        [NameInMap("UseInternalEndpoint")]
+        [Validation(Required=false)]
+        public bool? UseInternalEndpoint { get; set; }
+
     }
 
 }
