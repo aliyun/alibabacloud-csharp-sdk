@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessType))
+            {
+                body["AccessType"] = request.AccessType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 body["AppId"] = request.AppId;
@@ -194,6 +198,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessType))
+            {
+                body["AccessType"] = request.AccessType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 body["AppId"] = request.AppId;
