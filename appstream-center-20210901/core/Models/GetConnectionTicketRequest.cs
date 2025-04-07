@@ -10,6 +10,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetConnectionTicketRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>INTERNET</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("AccessType")]
+        [Validation(Required=false)]
+        public string AccessType { get; set; }
+
+        /// <summary>
         /// <para>The application ID.</para>
         /// <remarks>
         /// <para> This parameter is required for the first call to this operation and optional for subsequent calls to the operation.</para>
