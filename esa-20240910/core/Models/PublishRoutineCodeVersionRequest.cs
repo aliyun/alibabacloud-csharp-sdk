@@ -10,23 +10,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class PublishRoutineCodeVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The regions for canary release.</para>
-        /// </summary>
-        [NameInMap("CanaryAreaList")]
-        [Validation(Required=false)]
-        public List<string> CanaryAreaList { get; set; }
-
-        /// <summary>
-        /// <para>The version number for canary release.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1710120201067203242</para>
-        /// </summary>
-        [NameInMap("CanaryCodeVersion")]
-        [Validation(Required=false)]
-        public string CanaryCodeVersion { get; set; }
-
-        /// <summary>
         /// <para>The code version to be released.</para>
         /// 
         /// <b>Example:</b>

@@ -7990,10 +7990,6 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 body["Name"] = request.Name;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecName))
-            {
-                body["SpecName"] = request.SpecName;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -8046,10 +8042,6 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecName))
-            {
-                body["SpecName"] = request.SpecName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -34047,30 +34039,46 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications that you can select for a routine based on the plan type. The response contains all specifications that you can select for a routine. The IsAvailable parameter indicates whether a specification is available.</para>
+        /// <para>查询函数关联域名列表</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to query the specifications that you can select for a routine.</para>
-        /// </description>
-        /// 
         /// <param name="request">
-        /// ListRoutineOptionalSpecsRequest
+        /// ListRoutineRelatedRecordsRequest
         /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
         /// 
         /// <returns>
-        /// ListRoutineOptionalSpecsResponse
+        /// ListRoutineRelatedRecordsResponse
         /// </returns>
-        public ListRoutineOptionalSpecsResponse ListRoutineOptionalSpecsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListRoutineRelatedRecordsResponse ListRoutineRelatedRecordsWithOptions(ListRoutineRelatedRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKeyWord))
+            {
+                body["SearchKeyWord"] = request.SearchKeyWord;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "ListRoutineOptionalSpecs",
+                Action = "ListRoutineRelatedRecords",
                 Version = "2024-09-10",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -34082,40 +34090,56 @@ namespace AlibabaCloud.SDK.ESA20240910
             };
             if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
             {
-                return TeaModel.ToObject<ListRoutineOptionalSpecsResponse>(CallApi(params_, req, runtime));
+                return TeaModel.ToObject<ListRoutineRelatedRecordsResponse>(CallApi(params_, req, runtime));
             }
             else
             {
-                return TeaModel.ToObject<ListRoutineOptionalSpecsResponse>(Execute(params_, req, runtime));
+                return TeaModel.ToObject<ListRoutineRelatedRecordsResponse>(Execute(params_, req, runtime));
             }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications that you can select for a routine based on the plan type. The response contains all specifications that you can select for a routine. The IsAvailable parameter indicates whether a specification is available.</para>
+        /// <para>查询函数关联域名列表</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to query the specifications that you can select for a routine.</para>
-        /// </description>
-        /// 
         /// <param name="request">
-        /// ListRoutineOptionalSpecsRequest
+        /// ListRoutineRelatedRecordsRequest
         /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
         /// 
         /// <returns>
-        /// ListRoutineOptionalSpecsResponse
+        /// ListRoutineRelatedRecordsResponse
         /// </returns>
-        public async Task<ListRoutineOptionalSpecsResponse> ListRoutineOptionalSpecsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListRoutineRelatedRecordsResponse> ListRoutineRelatedRecordsWithOptionsAsync(ListRoutineRelatedRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKeyWord))
+            {
+                body["SearchKeyWord"] = request.SearchKeyWord;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
-                Action = "ListRoutineOptionalSpecs",
+                Action = "ListRoutineRelatedRecords",
                 Version = "2024-09-10",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -34127,50 +34151,48 @@ namespace AlibabaCloud.SDK.ESA20240910
             };
             if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
             {
-                return TeaModel.ToObject<ListRoutineOptionalSpecsResponse>(await CallApiAsync(params_, req, runtime));
+                return TeaModel.ToObject<ListRoutineRelatedRecordsResponse>(await CallApiAsync(params_, req, runtime));
             }
             else
             {
-                return TeaModel.ToObject<ListRoutineOptionalSpecsResponse>(await ExecuteAsync(params_, req, runtime));
+                return TeaModel.ToObject<ListRoutineRelatedRecordsResponse>(await ExecuteAsync(params_, req, runtime));
             }
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications that you can select for a routine based on the plan type. The response contains all specifications that you can select for a routine. The IsAvailable parameter indicates whether a specification is available.</para>
+        /// <para>查询函数关联域名列表</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to query the specifications that you can select for a routine.</para>
-        /// </description>
+        /// <param name="request">
+        /// ListRoutineRelatedRecordsRequest
+        /// </param>
         /// 
         /// <returns>
-        /// ListRoutineOptionalSpecsResponse
+        /// ListRoutineRelatedRecordsResponse
         /// </returns>
-        public ListRoutineOptionalSpecsResponse ListRoutineOptionalSpecs()
+        public ListRoutineRelatedRecordsResponse ListRoutineRelatedRecords(ListRoutineRelatedRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListRoutineOptionalSpecsWithOptions(runtime);
+            return ListRoutineRelatedRecordsWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications that you can select for a routine based on the plan type. The response contains all specifications that you can select for a routine. The IsAvailable parameter indicates whether a specification is available.</para>
+        /// <para>查询函数关联域名列表</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to query the specifications that you can select for a routine.</para>
-        /// </description>
+        /// <param name="request">
+        /// ListRoutineRelatedRecordsRequest
+        /// </param>
         /// 
         /// <returns>
-        /// ListRoutineOptionalSpecsResponse
+        /// ListRoutineRelatedRecordsResponse
         /// </returns>
-        public async Task<ListRoutineOptionalSpecsResponse> ListRoutineOptionalSpecsAsync()
+        public async Task<ListRoutineRelatedRecordsResponse> ListRoutineRelatedRecordsAsync(ListRoutineRelatedRecordsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListRoutineOptionalSpecsWithOptionsAsync(runtime);
+            return await ListRoutineRelatedRecordsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -35579,6 +35601,156 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUserRatePlanInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户的Routine列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserRoutinesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserRoutinesResponse
+        /// </returns>
+        public ListUserRoutinesResponse ListUserRoutinesWithOptions(ListUserRoutinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKeyWord))
+            {
+                query["SearchKeyWord"] = request.SearchKeyWord;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserRoutines",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListUserRoutinesResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListUserRoutinesResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户的Routine列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserRoutinesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserRoutinesResponse
+        /// </returns>
+        public async Task<ListUserRoutinesResponse> ListUserRoutinesWithOptionsAsync(ListUserRoutinesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKeyWord))
+            {
+                query["SearchKeyWord"] = request.SearchKeyWord;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserRoutines",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<ListUserRoutinesResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<ListUserRoutinesResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户的Routine列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserRoutinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserRoutinesResponse
+        /// </returns>
+        public ListUserRoutinesResponse ListUserRoutines(ListUserRoutinesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListUserRoutinesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户的Routine列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserRoutinesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserRoutinesResponse
+        /// </returns>
+        public async Task<ListUserRoutinesResponse> ListUserRoutinesAsync(ListUserRoutinesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListUserRoutinesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -37436,7 +37608,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <para>Releases a code version of a routine to the staging, canary, or production environment. You can specify the regions where the canary environment is deployed to release your code.</para>
         /// </summary>
         /// 
-        /// <param name="tmpReq">
+        /// <param name="request">
         /// PublishRoutineCodeVersionRequest
         /// </param>
         /// <param name="runtime">
@@ -37446,24 +37618,10 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <returns>
         /// PublishRoutineCodeVersionResponse
         /// </returns>
-        public PublishRoutineCodeVersionResponse PublishRoutineCodeVersionWithOptions(PublishRoutineCodeVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public PublishRoutineCodeVersionResponse PublishRoutineCodeVersionWithOptions(PublishRoutineCodeVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            PublishRoutineCodeVersionShrinkRequest request = new PublishRoutineCodeVersionShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CanaryAreaList))
-            {
-                request.CanaryAreaListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CanaryAreaList, "CanaryAreaList", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanaryAreaListShrink))
-            {
-                body["CanaryAreaList"] = request.CanaryAreaListShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanaryCodeVersion))
-            {
-                body["CanaryCodeVersion"] = request.CanaryCodeVersion;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeVersion))
             {
                 body["CodeVersion"] = request.CodeVersion;
@@ -37507,7 +37665,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <para>Releases a code version of a routine to the staging, canary, or production environment. You can specify the regions where the canary environment is deployed to release your code.</para>
         /// </summary>
         /// 
-        /// <param name="tmpReq">
+        /// <param name="request">
         /// PublishRoutineCodeVersionRequest
         /// </param>
         /// <param name="runtime">
@@ -37517,24 +37675,10 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <returns>
         /// PublishRoutineCodeVersionResponse
         /// </returns>
-        public async Task<PublishRoutineCodeVersionResponse> PublishRoutineCodeVersionWithOptionsAsync(PublishRoutineCodeVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<PublishRoutineCodeVersionResponse> PublishRoutineCodeVersionWithOptionsAsync(PublishRoutineCodeVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            PublishRoutineCodeVersionShrinkRequest request = new PublishRoutineCodeVersionShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CanaryAreaList))
-            {
-                request.CanaryAreaListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CanaryAreaList, "CanaryAreaList", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanaryAreaListShrink))
-            {
-                body["CanaryAreaList"] = request.CanaryAreaListShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CanaryCodeVersion))
-            {
-                body["CanaryCodeVersion"] = request.CanaryCodeVersion;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeVersion))
             {
                 body["CodeVersion"] = request.CodeVersion;
@@ -39264,6 +39408,14 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Percentage))
+            {
+                query["Percentage"] = request.Percentage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedPercent))
+            {
+                query["UsedPercent"] = request.UsedPercent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
                 query["VersionId"] = request.VersionId;
@@ -39323,6 +39475,14 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Percentage))
+            {
+                query["Percentage"] = request.Percentage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedPercent))
+            {
+                query["UsedPercent"] = request.UsedPercent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
             {
                 query["VersionId"] = request.VersionId;

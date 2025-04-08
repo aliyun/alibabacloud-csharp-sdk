@@ -30,16 +30,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// <para>The specification of the routine.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>5ms</para>
-        /// </summary>
-        [NameInMap("SpecName")]
-        [Validation(Required=false)]
-        public string SpecName { get; set; }
-
     }
 
 }

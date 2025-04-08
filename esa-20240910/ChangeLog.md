@@ -1,3 +1,10 @@
+2025-04-08 Version: 2.22.0
+- Support API ListRoutineRelatedRecords.
+- Support API ListUserRoutines.
+- Update API RollbackEdgeContainerAppVersion: add request parameters Percentage.
+- Update API RollbackEdgeContainerAppVersion: add request parameters UsedPercent.
+
+
 2025-04-07 Version: 2.21.0
 - Support API CreateRoutineRoute.
 - Support API DeleteRoutineRoute.

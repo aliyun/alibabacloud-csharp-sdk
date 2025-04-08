@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("Percentage")]
+        [Validation(Required=false)]
+        public int? Percentage { get; set; }
+
         /// <summary>
         /// <para>The remarks.</para>
         /// 
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("Remarks")]
         [Validation(Required=false)]
         public string Remarks { get; set; }
+
+        [NameInMap("UsedPercent")]
+        [Validation(Required=false)]
+        public bool? UsedPercent { get; set; }
 
         /// <summary>
         /// <para>The ID of version that you want to roll back.</para>
