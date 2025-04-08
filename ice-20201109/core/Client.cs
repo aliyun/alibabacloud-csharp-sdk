@@ -39978,9 +39978,17 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["AIAgentId"] = request.AIAgentId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioOssPath))
+            {
+                query["AudioOssPath"] = request.AudioOssPath;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
             {
                 query["CallbackUrl"] = request.CallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAudioRecording))
+            {
+                query["EnableAudioRecording"] = request.EnableAudioRecording;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNotify))
             {
@@ -40049,9 +40057,17 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["AIAgentId"] = request.AIAgentId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioOssPath))
+            {
+                query["AudioOssPath"] = request.AudioOssPath;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
             {
                 query["CallbackUrl"] = request.CallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAudioRecording))
+            {
+                query["EnableAudioRecording"] = request.EnableAudioRecording;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNotify))
             {

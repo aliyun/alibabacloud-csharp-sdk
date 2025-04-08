@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string AIAgentId { get; set; }
 
+        [NameInMap("AudioOssPath")]
+        [Validation(Required=false)]
+        public string AudioOssPath { get; set; }
+
         /// <summary>
         /// <para>The URL for receiving callback notifications. By default, this parameter is left empty.</para>
         /// 
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("CallbackUrl")]
         [Validation(Required=false)]
         public string CallbackUrl { get; set; }
+
+        [NameInMap("EnableAudioRecording")]
+        [Validation(Required=false)]
+        public bool? EnableAudioRecording { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to enable event notifications.</para>

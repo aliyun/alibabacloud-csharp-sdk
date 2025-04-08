@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DescribeNotifyConfigResponseBody : TeaModel {
+        [NameInMap("AudioOssPath")]
+        [Validation(Required=false)]
+        public string AudioOssPath { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para><a href="http://customer.com/callback">http://customer.com/callback</a></para>
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("CallbackUrl")]
         [Validation(Required=false)]
         public string CallbackUrl { get; set; }
+
+        [NameInMap("EnableAudioRecording")]
+        [Validation(Required=false)]
+        public bool? EnableAudioRecording { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

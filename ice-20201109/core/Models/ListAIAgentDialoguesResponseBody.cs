@@ -13,6 +13,32 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public List<ListAIAgentDialoguesResponseBodyDialogues> Dialogues { get; set; }
         public class ListAIAgentDialoguesResponseBodyDialogues : TeaModel {
+            [NameInMap("AttachedFileList")]
+            [Validation(Required=false)]
+            public List<ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList> AttachedFileList { get; set; }
+            public class ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList : TeaModel {
+                [NameInMap("Format")]
+                [Validation(Required=false)]
+                public string Format { get; set; }
+
+                [NameInMap("Id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public int? Type { get; set; }
+
+                [NameInMap("Url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>19de81b3b3d94abda22****</para>
