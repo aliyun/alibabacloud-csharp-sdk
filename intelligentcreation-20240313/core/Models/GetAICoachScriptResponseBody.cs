@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class GetAICoachScriptResponseBody : TeaModel {
+        [NameInMap("appendQuestionFlag")]
+        [Validation(Required=false)]
+        public bool? AppendQuestionFlag { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>point</para>
@@ -16,6 +20,20 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [NameInMap("assessmentScope")]
         [Validation(Required=false)]
         public string AssessmentScope { get; set; }
+
+        [NameInMap("checkCheatConfig")]
+        [Validation(Required=false)]
+        public GetAICoachScriptResponseBodyCheckCheatConfig CheckCheatConfig { get; set; }
+        public class GetAICoachScriptResponseBodyCheckCheatConfig : TeaModel {
+            [NameInMap("checkImage")]
+            [Validation(Required=false)]
+            public bool? CheckImage { get; set; }
+
+            [NameInMap("checkVoice")]
+            [Validation(Required=false)]
+            public bool? CheckVoice { get; set; }
+
+        }
 
         [NameInMap("completeStrategy")]
         [Validation(Required=false)]

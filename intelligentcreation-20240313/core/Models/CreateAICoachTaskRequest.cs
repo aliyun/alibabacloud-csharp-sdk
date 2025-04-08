@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string ScriptRecordId { get; set; }
 
+        [NameInMap("studentAudioUrl")]
+        [Validation(Required=false)]
+        public string StudentAudioUrl { get; set; }
+
         [NameInMap("studentId")]
         [Validation(Required=false)]
         public string StudentId { get; set; }

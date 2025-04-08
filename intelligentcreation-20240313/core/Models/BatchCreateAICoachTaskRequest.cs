@@ -29,6 +29,20 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public List<string> StudentIds { get; set; }
 
+        [NameInMap("studentList")]
+        [Validation(Required=false)]
+        public List<BatchCreateAICoachTaskRequestStudentList> StudentList { get; set; }
+        public class BatchCreateAICoachTaskRequestStudentList : TeaModel {
+            [NameInMap("studentAudioUrl")]
+            [Validation(Required=false)]
+            public string StudentAudioUrl { get; set; }
+
+            [NameInMap("studentId")]
+            [Validation(Required=false)]
+            public string StudentId { get; set; }
+
+        }
+
     }
 
 }

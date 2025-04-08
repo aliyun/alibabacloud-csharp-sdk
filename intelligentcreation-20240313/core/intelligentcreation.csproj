@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.IntelligentCreation20240313</AssemblyName>
-    <Version>2.12.1</Version>
+    <Version>2.12.2</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud IntelligentCreation (20240313) SDK Library for .NET</Description>
