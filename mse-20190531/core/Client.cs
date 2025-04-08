@@ -717,6 +717,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["InternetSlbSpec"] = request.InternetSlbSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedEntryNetworkType))
+            {
+                query["ManagedEntryNetworkType"] = request.ManagedEntryNetworkType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MserVersion))
             {
                 query["MserVersion"] = request.MserVersion;
@@ -859,6 +863,10 @@ namespace AlibabaCloud.SDK.Mse20190531
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetSlbSpec))
             {
                 query["InternetSlbSpec"] = request.InternetSlbSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedEntryNetworkType))
+            {
+                query["ManagedEntryNetworkType"] = request.ManagedEntryNetworkType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MserVersion))
             {

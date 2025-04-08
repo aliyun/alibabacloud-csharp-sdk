@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public bool? EnableGzip { get; set; }
 
+            [NameInMap("EnableGzipHardwareAccelerate")]
+            [Validation(Required=false)]
+            public bool? EnableGzipHardwareAccelerate { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>true</para>

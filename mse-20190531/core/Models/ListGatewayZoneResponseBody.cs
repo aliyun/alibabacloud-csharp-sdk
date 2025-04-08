@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
+            [NameInMap("SupportQat")]
+            [Validation(Required=false)]
+            public bool? SupportQat { get; set; }
+
             /// <summary>
             /// <para>The zone ID.</para>
             /// 

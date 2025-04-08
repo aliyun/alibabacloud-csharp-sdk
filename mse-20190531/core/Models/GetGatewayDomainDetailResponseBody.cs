@@ -171,6 +171,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            [NameInMap("IsManaged")]
+            [Validation(Required=false)]
+            public bool? IsManaged { get; set; }
+
             /// <summary>
             /// <para>The issuer.</para>
             /// 

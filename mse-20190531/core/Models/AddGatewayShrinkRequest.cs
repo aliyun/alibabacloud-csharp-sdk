@@ -93,6 +93,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? EnterpriseSecurityGroup { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:</para>
         /// <list type="bullet">
@@ -109,7 +111,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("InternetSlbSpec")]
         [Validation(Required=false)]
+        [Obsolete]
         public string InternetSlbSpec { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>pubnet</para>
+        /// </summary>
+        [NameInMap("ManagedEntryNetworkType")]
+        [Validation(Required=false)]
+        public string ManagedEntryNetworkType { get; set; }
 
         /// <summary>
         /// <para>The MSE instance type. Valid values:</para>
@@ -203,6 +214,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:</para>
         /// <list type="bullet">
@@ -219,6 +232,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </summary>
         [NameInMap("SlbSpec")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SlbSpec { get; set; }
 
         /// <summary>
