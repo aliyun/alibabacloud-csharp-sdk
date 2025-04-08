@@ -1,3 +1,6 @@
+2025-04-08 Version: 8.0.3
+- Generated csharp 2017-11-10 for Ens.
+
 2025-04-07 Version: 8.0.2
 - Update API CreateNatGateway: add request parameters InstanceBillingCycle.
 

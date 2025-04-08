@@ -85,8 +85,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OSType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>6.8</para>
         /// </summary>
