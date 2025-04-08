@@ -41,13 +41,17 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
                 [Validation(Required=false)]
                 public long? CategoryId { get; set; }
 
+                [NameInMap("isLeaf")]
+                [Validation(Required=false)]
+                public bool? IsLeaf { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
                 [NameInMap("level")]
                 [Validation(Required=false)]
-                public bool? Level { get; set; }
+                public int? Level { get; set; }
 
                 [NameInMap("name")]
                 [Validation(Required=false)]
