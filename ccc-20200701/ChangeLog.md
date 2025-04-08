@@ -1,3 +1,9 @@
+2025-04-08 Version: 2.36.0
+- Support API ListVisitorChatMessages.
+- Update API ListRealtimeAgentStates: add response parameters Body.Data.List.$.BreakCode.
+- Update API MakeCall: add response parameters Body.Data.CallContext.CallVariables.
+
+
 2025-02-07 Version: 2.35.0
 - Support API CreateChatMediaUrl.
 - Support API ProcessCustomIMCallback.

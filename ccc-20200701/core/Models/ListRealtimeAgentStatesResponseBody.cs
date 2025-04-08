@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string AgentName { get; set; }
 
+                [NameInMap("BreakCode")]
+                [Validation(Required=false)]
+                public string BreakCode { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>Outbound</para>

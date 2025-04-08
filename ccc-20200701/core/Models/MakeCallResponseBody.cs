@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string CallType { get; set; }
 
+                [NameInMap("CallVariables")]
+                [Validation(Required=false)]
+                public string CallVariables { get; set; }
+
                 [NameInMap("ChannelContexts")]
                 [Validation(Required=false)]
                 public List<MakeCallResponseBodyDataCallContextChannelContexts> ChannelContexts { get; set; }
