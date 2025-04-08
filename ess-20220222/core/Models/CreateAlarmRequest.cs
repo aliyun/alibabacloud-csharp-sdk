@@ -409,11 +409,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The method that you want to use to aggregate the metric data. Valid values:</para>
+        /// <para>The statistical method of the metric data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Average: the average value.</description></item>
-        /// <item><description>Minimum: the minimum value.</description></item>
-        /// <item><description>Maximum: the maximum value.</description></item>
+        /// <item><description>Average: calculates the average value of the metric data.</description></item>
+        /// <item><description>Minimum: calculates the minimum value of the metric data.</description></item>
+        /// <item><description>Maximum: calculates the maximum value of the metric data.</description></item>
         /// </list>
         /// <para>Default value: Average.</para>
         /// 

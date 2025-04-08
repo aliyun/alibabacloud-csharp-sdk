@@ -1010,6 +1010,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public List<string> PrivatePoolIds { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>PrivatePoolFirst</para>
+                /// </summary>
                 [NameInMap("Strategy")]
                 [Validation(Required=false)]
                 public string Strategy { get; set; }

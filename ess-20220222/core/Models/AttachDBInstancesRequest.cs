@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> DBInstances { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to add the private IP addresses of all ECS instances in the scaling group to the IP address whitelist of an ApsaraDB RDS instance when you attach the ApsaraDB RDS instance to the scaling group. Valid values:</para>
+        /// <para>Specifies whether to add the private IP addresses of all ECS instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance that you want to attach to the scaling group. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>

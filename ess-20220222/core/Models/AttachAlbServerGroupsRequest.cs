@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the new ALB server group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: adds the existing ECS instances or elastic container instances in the scaling group to the new ALB server group. In this case, the system returns the value of <c>ScalingActivityId</c>.</description></item>
+        /// <item><description>true: adds the existing ECS instances or elastic container instances in the scaling group to the new ALB server group and returns the value of <c>ScalingActivityId</c>. You can query the value of ScalingActivityId to check whether the existing ECS instances are added to the ALB server group.</description></item>
         /// <item><description>false: does not add the existing ECS instances or elastic container instances in the scaling group to the new ALB server group.</description></item>
         /// </list>
         /// <para>Default value: false.</para>

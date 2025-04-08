@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeElasticStrengthResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Strong</para>
+        /// </summary>
         [NameInMap("ElasticStrength")]
         [Validation(Required=false)]
         public string ElasticStrength { get; set; }
@@ -240,18 +244,34 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth InventoryHealth { get; set; }
             public class DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("AdequacyScore")]
                 [Validation(Required=false)]
                 public int? AdequacyScore { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("HealthScore")]
                 [Validation(Required=false)]
                 public int? HealthScore { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("HotScore")]
                 [Validation(Required=false)]
                 public int? HotScore { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("SupplyScore")]
                 [Validation(Required=false)]
                 public int? SupplyScore { get; set; }
@@ -268,6 +288,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string Msg { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Available</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }

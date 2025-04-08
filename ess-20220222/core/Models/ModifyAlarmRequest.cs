@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The metric type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>system: system metrics of CloudMonitor</description></item>
+        /// <item><description>system: system metrics of CloudMonitor.</description></item>
         /// <item><description>custom: custom metrics that are reported to CloudMonitor.</description></item>
         /// </list>
         /// 

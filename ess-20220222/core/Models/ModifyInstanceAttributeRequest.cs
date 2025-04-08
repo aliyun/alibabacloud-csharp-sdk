@@ -28,7 +28,6 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// <para>The ID of the ECS instance.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp109k5j3dum1ce6****</para>
@@ -36,6 +35,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public List<string> InstanceIds { get; set; }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
