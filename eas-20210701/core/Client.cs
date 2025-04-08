@@ -10837,6 +10837,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 query["GroupName"] = request.GroupName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeNoWorkspace))
+            {
+                query["IncludeNoWorkspace"] = request.IncludeNoWorkspace;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelShrink))
             {
                 query["Label"] = request.LabelShrink;
@@ -10963,6 +10967,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
                 query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeNoWorkspace))
+            {
+                query["IncludeNoWorkspace"] = request.IncludeNoWorkspace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelShrink))
             {

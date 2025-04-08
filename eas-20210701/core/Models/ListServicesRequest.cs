@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
+        [NameInMap("IncludeNoWorkspace")]
+        [Validation(Required=false)]
+        public bool? IncludeNoWorkspace { get; set; }
+
         /// <summary>
         /// <para>The tag that is used to filter services.</para>
         /// </summary>
