@@ -879,7 +879,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建SelectDB实例</para>
+        /// <para>Creates an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -897,6 +897,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDBInstanceShrinkRequest request = new CreateDBInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MultiZone))
+            {
+                request.MultiZoneShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultiZone, "MultiZone", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
             {
                 request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
@@ -926,6 +930,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             {
                 query["DBInstanceDescription"] = request.DBInstanceDescription;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployScheme))
+            {
+                query["DeployScheme"] = request.DeployScheme;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
@@ -933,6 +941,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
             {
                 query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiZoneShrink))
+            {
+                query["MultiZone"] = request.MultiZoneShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
@@ -1004,7 +1016,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建SelectDB实例</para>
+        /// <para>Creates an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1022,6 +1034,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateDBInstanceShrinkRequest request = new CreateDBInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MultiZone))
+            {
+                request.MultiZoneShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultiZone, "MultiZone", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
             {
                 request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "Tag", "json");
@@ -1051,6 +1067,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             {
                 query["DBInstanceDescription"] = request.DBInstanceDescription;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployScheme))
+            {
+                query["DeployScheme"] = request.DeployScheme;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
@@ -1058,6 +1078,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
             {
                 query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiZoneShrink))
+            {
+                query["MultiZone"] = request.MultiZoneShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
@@ -1129,7 +1153,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建SelectDB实例</para>
+        /// <para>Creates an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1147,7 +1171,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建SelectDB实例</para>
+        /// <para>Creates an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3097,7 +3121,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Region信息</para>
+        /// <para>Queries available regions and zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3142,7 +3166,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Region信息</para>
+        /// <para>Queries available regions and zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3187,7 +3211,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Region信息</para>
+        /// <para>Queries available regions and zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3205,7 +3229,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Region信息</para>
+        /// <para>Queries available regions and zones.</para>
         /// </summary>
         /// 
         /// <param name="request">

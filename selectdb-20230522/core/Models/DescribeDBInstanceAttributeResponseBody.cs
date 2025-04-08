@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
+            [NameInMap("ClusterBinding")]
+            [Validation(Required=false)]
+            public string ClusterBinding { get; set; }
+
             /// <summary>
             /// <para>The number of CPU cores.</para>
             /// 
@@ -212,6 +216,18 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("SubDomain")]
+            [Validation(Required=false)]
+            public string SubDomain { get; set; }
+
+            [NameInMap("VSwitchId")]
+            [Validation(Required=false)]
+            public string VSwitchId { get; set; }
+
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
         }
 
         /// <summary>
@@ -223,6 +239,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
+
+        [NameInMap("DeployScheme")]
+        [Validation(Required=false)]
+        public string DeployScheme { get; set; }
 
         /// <summary>
         /// <para>The description of the instance.</para>
@@ -323,6 +343,32 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [NameInMap("MaintainStarttime")]
         [Validation(Required=false)]
         public string MaintainStarttime { get; set; }
+
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("MultiZone")]
+        [Validation(Required=false)]
+        public List<DescribeDBInstanceAttributeResponseBodyMultiZone> MultiZone { get; set; }
+        public class DescribeDBInstanceAttributeResponseBodyMultiZone : TeaModel {
+            [NameInMap("AvailableIpCount")]
+            [Validation(Required=false)]
+            public long? AvailableIpCount { get; set; }
+
+            [NameInMap("Cidr")]
+            [Validation(Required=false)]
+            public string Cidr { get; set; }
+
+            [NameInMap("VSwitchIds")]
+            [Validation(Required=false)]
+            public List<string> VSwitchIds { get; set; }
+
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The storage capacity of the instance.</para>
@@ -440,6 +486,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string TagValue { get; set; }
 
         }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
 
         /// <summary>
         /// <para>The VPC ID.</para>

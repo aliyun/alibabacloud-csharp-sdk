@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string DBInstanceId { get; set; }
 
+            [NameInMap("DeployScheme")]
+            [Validation(Required=false)]
+            public string DeployScheme { get; set; }
+
             /// <summary>
             /// <para>The description of the instance.</para>
             /// </summary>
@@ -76,6 +80,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [NameInMap("Engine")]
             [Validation(Required=false)]
             public string Engine { get; set; }
+
+            [NameInMap("EngineMinorVersion")]
+            [Validation(Required=false)]
+            public string EngineMinorVersion { get; set; }
 
             /// <summary>
             /// <para>The database engine version of the instance.</para>
@@ -191,6 +199,20 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [NameInMap("MaintainStarttime")]
             [Validation(Required=false)]
             public string MaintainStarttime { get; set; }
+
+            [NameInMap("MultiZone")]
+            [Validation(Required=false)]
+            public List<DescribeDBInstancesResponseBodyItemsMultiZone> MultiZone { get; set; }
+            public class DescribeDBInstancesResponseBodyItemsMultiZone : TeaModel {
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
+                public List<string> VSwitchIds { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The storage capacity of the instance. Unit: GB.</para>

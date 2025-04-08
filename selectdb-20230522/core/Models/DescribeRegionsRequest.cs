@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The zone ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-h</para>
         /// </summary>
