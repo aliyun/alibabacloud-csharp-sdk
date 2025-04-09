@@ -8,26 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class StopRCInstancesRequest : TeaModel {
+    public class DescribeRCInstanceTypesRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>AllTogether</para>
+        /// <para>rds_customprepaid_public_cn</para>
         /// </summary>
-        [NameInMap("BatchOptimization")]
+        [NameInMap("CommodityCode")]
         [Validation(Required=false)]
-        public string BatchOptimization { get; set; }
+        public string CommodityCode { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>MySQL</para>
         /// </summary>
-        [NameInMap("ForceStop")]
+        [NameInMap("Engine")]
         [Validation(Required=false)]
-        public bool? ForceStop { get; set; }
+        public string Engine { get; set; }
 
-        [NameInMap("InstanceIds")]
+        [NameInMap("InstanceType")]
         [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
+        public List<string> InstanceType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>gn8.cm</para>
+        /// </summary>
+        [NameInMap("InstanceTypeFamily")]
+        [Validation(Required=false)]
+        public string InstanceTypeFamily { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

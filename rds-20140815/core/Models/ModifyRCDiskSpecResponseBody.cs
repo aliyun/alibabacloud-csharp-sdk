@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class StopRCInstancesResponseBody : TeaModel {
+    public class ModifyRCDiskSpecResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>481BC3B1-7069-5D37-9B6C-21757F8F9FB1</para>
+        /// <para>245053924720608</para>
+        /// </summary>
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public long? OrderId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

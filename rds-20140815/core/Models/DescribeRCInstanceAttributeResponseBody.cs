@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCInstanceAttributeResponseBody : TeaModel {
+        [NameInMap("AutoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
         /// <summary>
         /// <para>The ID of the cluster to which the instance belongs.</para>
         /// <remarks>

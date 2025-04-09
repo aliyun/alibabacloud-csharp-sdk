@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteReplicationLinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The ID of the DR instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to promote the disaster recovery instance to the primary instance. Valid values:</para>
+        /// <para>Specifies whether to delete the data synchronization link between the DR instance and the primary instance and promote the DR instance to the primary instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b></description></item>
         /// <item><description><b>false</b></description></item>

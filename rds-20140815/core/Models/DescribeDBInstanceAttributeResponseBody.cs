@@ -946,6 +946,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
                 }
 
+                [NameInMap("ReadOnlyStatus")]
+                [Validation(Required=false)]
+                public string ReadOnlyStatus { get; set; }
+
                 /// <summary>
                 /// <para>The latency at which the system replicates data to read-only instances. The system replicates data from the primary instance to the read-only instances at the latency that is specified by the <b>ReadonlyInstanceSQLDelayedTime</b> parameter. Unit: seconds.</para>
                 /// 

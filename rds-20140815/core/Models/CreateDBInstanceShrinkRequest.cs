@@ -918,11 +918,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID. The vSwitch must belong to the zone that is specified by <b>ZoneId</b>.</para>
+        /// <para>The vSwitch ID.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>InstanceNetworkType</b> to <b>VPC</b>, you must also specify this parameter.</description></item>
-        /// <item><description>If you set the <b>ZoneSlaveId1</b> parameter to a value that is not <b>Auto</b>, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,). The ZoneSlaveId1 parameter specifies the zone ID of the secondary node.</description></item>
-        /// <item><description>The value cannot contain <c>spaces</c>, exclamation points <c>(!)</c>, or special characters such as number signs <c>(#)</c>, dollar signs <c>($)</c>, ampersands <c>(&amp;)</c>, and percent signs <c>(%)</c>.</description></item>
+        /// <item><description><b>Relations with zones</b>: Specify the vSwitch ID based on the zones in which the vSwitch belongs to. If you specify two vSwitch IDs, make sure that the vSwitch IDs match the zone IDs specified by the ZoneId and ZoneIdSlave1 parameters.</description></item>
+        /// <item><description><b>Limits on the network type</b>: Set <b>InstanceNetworkType</b> to <b>VPC</b>.</description></item>
+        /// <item><description><b>Limits on multiple vSwitch IDs</b>: If you set <b>ZoneSlaveId1</b> to a value that is not <b>Auto</b>, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</description></item>
+        /// <item><description><b>Limits on characters</b>: The value cannot contain <c>spaces</c> or the following characters: <c>!</c> <c>#</c> <c>￥</c> <c>&amp;</c> <c>%</c></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class StopRCInstancesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AllTogether</para>
+        /// </summary>
         [NameInMap("BatchOptimization")]
         [Validation(Required=false)]
         public string BatchOptimization { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("ForceStop")]
         [Validation(Required=false)]
         public bool? ForceStop { get; set; }
@@ -21,6 +29,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string InstanceIdsShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

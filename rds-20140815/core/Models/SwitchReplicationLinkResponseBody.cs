@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchReplicationLinkResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the DR instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>135****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2F2DD69B-90AF-1E72-923C-87575658A9D9</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>159****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? TaskId { get; set; }
 
         /// <summary>
+        /// <para>The task name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zbtest</para>
         /// </summary>

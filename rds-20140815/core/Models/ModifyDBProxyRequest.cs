@@ -122,9 +122,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         }
 
         /// <summary>
-        /// <para>The network type of the instance. Set the value to <b>VPC</b>.</para>
+        /// <para>The network type of the instance. Only the VPC network type is supported. Set the value to <b>VPC</b>.</para>
         /// <remarks>
-        /// <para>This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</para>
+        /// <para> If you enable the database proxy feature for the instance, you must specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -189,9 +189,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.</para>
+        /// <para>The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the ID.</para>
         /// <remarks>
-        /// <para> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</para>
+        /// <para> If you enable the database proxy feature for the instance, you must specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -202,9 +202,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.</para>
+        /// <para>The ID of the vSwitch to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the ID.</para>
         /// <remarks>
-        /// <para> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</para>
+        /// <para> If you enable the database proxy feature for the instance, you must specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

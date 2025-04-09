@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteReplicationLinkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The ID of the DR instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pgm-bp1trqb4p1xd****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3472****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The name of the task.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test01</para>

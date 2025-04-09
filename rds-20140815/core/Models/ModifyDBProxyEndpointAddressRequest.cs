@@ -23,13 +23,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the database proxy endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Public</b>: Internet</description></item>
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
-        /// <item><description><b>Classic</b>: classic network</description></item>
+        /// <item><description><b>Public</b></description></item>
+        /// <item><description><b>VPC</b> (default)</description></item>
         /// </list>
-        /// <para>If the instance runs MySQL, the default value is <b>Classic</b>.</para>
         /// <remarks>
-        /// <para> If the instance runs PostgreSQL, you must set this parameter to <b>Public</b> or <b>VPC</b>.</para>
+        /// <para> If the RDS instance runs MySQL, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

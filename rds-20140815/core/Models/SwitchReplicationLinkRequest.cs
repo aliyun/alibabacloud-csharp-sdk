@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchReplicationLinkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the source or primary instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The name of the destination DR instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +36,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string TargetInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region in which the destination DR instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

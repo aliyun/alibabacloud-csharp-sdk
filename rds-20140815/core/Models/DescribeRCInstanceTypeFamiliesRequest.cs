@@ -8,14 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class StopRCInstancesResponseBody : TeaModel {
+    public class DescribeRCInstanceTypeFamiliesRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>481BC3B1-7069-5D37-9B6C-21757F8F9FB1</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

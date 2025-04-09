@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>cloud</b> (default): basic disk</description></item>
         /// <item><description><b>cloud_efficiency</b>: ultra disk.</description></item>
         /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
-        /// <item><description><b>cloud_essd</b>: Enterprise SSD (ESSD).</description></item>
+        /// <item><description><b>cloud_essd</b>: ESSD.</description></item>
         /// <item><description><b>cloud_auto</b>: ESSD AutoPL disk</description></item>
         /// <item><description><b>cloud_essd_entry</b>: ESSD Entry disk</description></item>
         /// <item><description><b>elastic_ephemeral_disk_standard</b>: standard elastic ephemeral disk</description></item>
@@ -94,6 +94,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rc-v28c6k3jupp61m2t****</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -177,7 +181,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description>If the size of the snapshot specified by <c>SnapshotId</c> is larger than the value of <c>Size</c>, the size of the created disk is equal to the size of the snapshot.</description></item>
         /// <item><description>If the size of the snapshot specified by <c>SnapshotId</c> is smaller than the value of <c>Size</c>, the size of the created disk is equal to the value of <c>Size</c>.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>

@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string ClusterName { get; set; }
 
+            [NameInMap("Cpu")]
+            [Validation(Required=false)]
+            public int? Cpu { get; set; }
+
             [NameInMap("CreateMode")]
             [Validation(Required=false)]
             public string CreateMode { get; set; }
@@ -60,6 +64,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string DbType { get; set; }
 
+            [NameInMap("DeploymentSetId")]
+            [Validation(Required=false)]
+            public string DeploymentSetId { get; set; }
+
             /// <summary>
             /// <para>The instance description.</para>
             /// 
@@ -69,6 +77,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            [NameInMap("ExpiredTime")]
+            [Validation(Required=false)]
+            public string ExpiredTime { get; set; }
 
             /// <summary>
             /// <para>The time when the task was created. The time is displayed in GMT.</para>
@@ -100,6 +112,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string HostName { get; set; }
 
+            [NameInMap("ImageId")]
+            [Validation(Required=false)]
+            public string ImageId { get; set; }
+
             [NameInMap("InstanceChargeType")]
             [Validation(Required=false)]
             public string InstanceChargeType { get; set; }
@@ -121,6 +137,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("InstanceTypeFamily")]
             [Validation(Required=false)]
             public string InstanceTypeFamily { get; set; }
+
+            [NameInMap("Memory")]
+            [Validation(Required=false)]
+            public int? Memory { get; set; }
 
             [NameInMap("PublicIp")]
             [Validation(Required=false)]
@@ -205,6 +225,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }
+
+            }
+
+            /// <summary>
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("VpcAttributes")]
+            [Validation(Required=false)]
+            public DescribeRCInstancesResponseBodyRCInstancesVpcAttributes VpcAttributes { get; set; }
+            public class DescribeRCInstancesResponseBodyRCInstancesVpcAttributes : TeaModel {
+                [NameInMap("NatIpAddress")]
+                [Validation(Required=false)]
+                public string NatIpAddress { get; set; }
+
+                [NameInMap("PrivateIpAddress")]
+                [Validation(Required=false)]
+                public List<string> PrivateIpAddress { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
 
             }
 
