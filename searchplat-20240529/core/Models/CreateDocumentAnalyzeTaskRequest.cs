@@ -41,6 +41,16 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
 
         }
 
+        [NameInMap("strategy")]
+        [Validation(Required=false)]
+        public CreateDocumentAnalyzeTaskRequestStrategy Strategy { get; set; }
+        public class CreateDocumentAnalyzeTaskRequestStrategy : TeaModel {
+            [NameInMap("enable_semantic")]
+            [Validation(Required=false)]
+            public bool? EnableSemantic { get; set; }
+
+        }
+
     }
 
 }
