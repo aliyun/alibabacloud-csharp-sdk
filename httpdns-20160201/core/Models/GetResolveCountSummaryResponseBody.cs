@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             [Validation(Required=false)]
             public long? Http6 { get; set; }
 
+            [NameInMap("HttpAes")]
+            [Validation(Required=false)]
+            public string HttpAes { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>123</para>
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             [NameInMap("Https6")]
             [Validation(Required=false)]
             public long? Https6 { get; set; }
+
+            [NameInMap("HttpsAes")]
+            [Validation(Required=false)]
+            public string HttpsAes { get; set; }
 
         }
 

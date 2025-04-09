@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             [Validation(Required=false)]
             public int? MonthFreeCount { get; set; }
 
+            [NameInMap("MonthHttpAesResolveCount")]
+            [Validation(Required=false)]
+            public long? MonthHttpAesResolveCount { get; set; }
+
+            [NameInMap("MonthHttpsAesResolveCount")]
+            [Validation(Required=false)]
+            public long? MonthHttpsAesResolveCount { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>3</para>

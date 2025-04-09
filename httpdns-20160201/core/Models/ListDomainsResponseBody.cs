@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
+                [NameInMap("ResolveHttpAes")]
+                [Validation(Required=false)]
+                public long? ResolveHttpAes { get; set; }
+
+                [NameInMap("ResolveHttpsAes")]
+                [Validation(Required=false)]
+                public long? ResolveHttpsAes { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>10</para>
