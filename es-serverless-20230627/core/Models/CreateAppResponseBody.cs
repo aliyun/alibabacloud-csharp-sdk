@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
         [Validation(Required=false)]
         public CreateAppResponseBodyResult Result { get; set; }
         public class CreateAppResponseBodyResult : TeaModel {
+            [NameInMap("appId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>es-serverless-cn-xxx</para>
