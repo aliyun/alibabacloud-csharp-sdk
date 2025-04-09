@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be a positive integer. Default value: 1</para>
+        /// <para>The number of the page to return. The value must be a positive integer. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 10 to 100. Default value: 10</para>
+        /// <para>The number of entries per page. Valid values: 10 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -79,6 +79,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aek2inrfrnw3xby</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

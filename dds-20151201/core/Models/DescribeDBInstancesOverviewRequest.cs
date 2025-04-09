@@ -149,6 +149,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to display instance tags. Default value: False.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("ShowTags")]
         [Validation(Required=false)]
         public bool? ShowTags { get; set; }

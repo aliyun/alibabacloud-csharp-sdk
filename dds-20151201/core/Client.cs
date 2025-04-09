@@ -28,33 +28,26 @@ namespace AlibabaCloud.SDK.Dds20151201
                 {"cn-wulanchabu", "mongodb.aliyuncs.com"},
                 {"cn-hangzhou", "mongodb.aliyuncs.com"},
                 {"cn-shanghai", "mongodb.aliyuncs.com"},
-                {"cn-nanjing", "mongodb.cn-nanjing.aliyuncs.com"},
-                {"cn-fuzhou", "mongodb.cn-fuzhou.aliyuncs.com"},
                 {"cn-shenzhen", "mongodb.aliyuncs.com"},
                 {"cn-heyuan", "mongodb.aliyuncs.com"},
                 {"cn-guangzhou", "mongodb.aliyuncs.com"},
                 {"cn-chengdu", "mongodb.cn-chengdu.aliyuncs.com"},
                 {"cn-hongkong", "mongodb.cn-hongkong.aliyuncs.com"},
                 {"ap-northeast-1", "mongodb.ap-northeast-1.aliyuncs.com"},
-                {"ap-northeast-2", "mongodb.ap-northeast-2.aliyuncs.com"},
                 {"ap-southeast-1", "mongodb.ap-southeast-1.aliyuncs.com"},
                 {"ap-southeast-2", "mongodb.ap-southeast-2.aliyuncs.com"},
                 {"ap-southeast-3", "mongodb.ap-southeast-3.aliyuncs.com"},
                 {"ap-southeast-5", "mongodb.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-6", "mongodb.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-7", "mongodb.ap-southeast-7.aliyuncs.com"},
-                {"cn-zhengzhou-jva", "mongodb.cn-zhengzhou-jva.aliyuncs.com"},
                 {"us-east-1", "mongodb.us-east-1.aliyuncs.com"},
                 {"us-west-1", "mongodb.us-west-1.aliyuncs.com"},
                 {"eu-west-1", "mongodb.eu-west-1.aliyuncs.com"},
                 {"eu-central-1", "mongodb.eu-central-1.aliyuncs.com"},
                 {"ap-south-1", "mongodb.ap-south-1.aliyuncs.com"},
                 {"me-east-1", "mongodb.me-east-1.aliyuncs.com"},
-                {"me-central-1", "mongodb.me-central-1.aliyuncs.com"},
                 {"cn-hangzhou-finance", "mongodb.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "mongodb.aliyuncs.com"},
                 {"cn-shenzhen-finance-1", "mongodb.aliyuncs.com"},
-                {"cn-north-2-gov-1", "mongodb.aliyuncs.com"},
+                {"cn-north-2-gov-1", "mongodb.cn-north-2-gov-1.aliyuncs.com"},
                 {"ap-northeast-2-pop", "mongodb.aliyuncs.com"},
                 {"cn-beijing-finance-1", "mongodb.aliyuncs.com"},
                 {"cn-beijing-finance-pop", "mongodb.aliyuncs.com"},
@@ -4987,6 +4980,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["Region"] = request.Region;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -5091,6 +5088,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -5924,6 +5925,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["InstanceChargeType"] = request.InstanceChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MongoType))
             {
                 query["MongoType"] = request.MongoType;
@@ -6045,6 +6050,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
             {
                 query["InstanceChargeType"] = request.InstanceChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MongoType))
             {
@@ -8896,6 +8905,180 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查看规格信息详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceSpecInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSpecInfoResponse
+        /// </returns>
+        public DescribeDBInstanceSpecInfoResponse DescribeDBInstanceSpecInfoWithOptions(DescribeDBInstanceSpecInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
+            {
+                query["InstanceClass"] = request.InstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDBInstanceSpecInfo",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDBInstanceSpecInfoResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDBInstanceSpecInfoResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看规格信息详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceSpecInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSpecInfoResponse
+        /// </returns>
+        public async Task<DescribeDBInstanceSpecInfoResponse> DescribeDBInstanceSpecInfoWithOptionsAsync(DescribeDBInstanceSpecInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
+            {
+                query["InstanceClass"] = request.InstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDBInstanceSpecInfo",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<DescribeDBInstanceSpecInfoResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<DescribeDBInstanceSpecInfoResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看规格信息详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceSpecInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSpecInfoResponse
+        /// </returns>
+        public DescribeDBInstanceSpecInfoResponse DescribeDBInstanceSpecInfo(DescribeDBInstanceSpecInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDBInstanceSpecInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看规格信息详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBInstanceSpecInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBInstanceSpecInfoResponse
+        /// </returns>
+        public async Task<DescribeDBInstanceSpecInfoResponse> DescribeDBInstanceSpecInfoAsync(DescribeDBInstanceSpecInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDBInstanceSpecInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the primary/secondary switching logs of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
@@ -10547,6 +10730,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -10647,6 +10834,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -10773,6 +10964,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -10861,6 +11056,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -12426,7 +12625,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the pricing information of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12523,7 +12722,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the pricing information of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12620,7 +12819,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the pricing information of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12638,7 +12837,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the pricing information of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16525,6 +16724,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -16597,6 +16800,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {

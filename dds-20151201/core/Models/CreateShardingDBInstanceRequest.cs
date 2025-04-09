@@ -12,10 +12,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The password of the root account. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
-        /// <item><description>The special characters include ! # $ % ^ &amp; \* ( ) _ + - =</description></item>
-        /// <item><description>The password of the account must be 8 to 32 characters in length.</description></item>
+        /// <item><description>The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>The following special characters are supported: ! @ # $ % ^ &amp; \* ( ) _ + - =.</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> For more information about how to resolve failed database connections due to special characters, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if my instance is not connected due to special characters in the password in the connection string of the instance?</a></para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123456Aa</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <item><description><b>PrePaid</b>: subscription</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If this parameter is set to <b>PrePaid</b>, you must also configure the <b>Period</b> parameter.</para>
+        /// <para> If you set this parameter to <b>PrePaid</b>, you must also configure the <b>Period</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -149,7 +152,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DestRegion { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether disk encryption is enabled.</para>
+        /// <para>Specifies whether to enable disk encryption.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -190,11 +193,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <item><description><b>4.0</b></description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</description></item>
-        /// <item><description>If you call this operation to clone an instance, set the value of this parameter to the database engine version of the source instance.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</para>
+        /// </description></item>
+        /// <item><description><para>If you call this operation to clone an instance, set the value of this parameter to the database engine version of the source instance.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -279,8 +284,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The network type of the instance.</para>
-        /// <para>Set the value to <b>VPC</b>.</para>
+        /// <para>The network type of the instance. Set the value to VPC.</para>
+        /// <hr>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -347,7 +352,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The information of the shard node.</para>
+        /// <para>The information of the shard component.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ReplicaSet")]
@@ -355,13 +360,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public List<CreateShardingDBInstanceRequestReplicaSet> ReplicaSet { get; set; }
         public class CreateShardingDBInstanceRequestReplicaSet : TeaModel {
             /// <summary>
-            /// <para>The instance type of the shard node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
+            /// <para>The instance type of the shard component. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
             /// <remarks>
-            /// <list type="bullet">
-            /// <item><description><b>N</b> specifies the serial number of the shard node for which the instance type is specified. For example, <b>ReplicaSet.2.Class</b> specifies the instance type of the second shard node.</description></item>
-            /// <item><description>Valid values of <b>N</b>: <b>2</b> to <b>32</b>.</description></item>
-            /// </list>
             /// </remarks>
+            /// <list type="bullet">
+            /// <item><description><para><b>N</b> specifies the serial number of the shard component for which the instance type is specified. For example, <b>ReplicaSet.2.Class</b> specifies the instance type of the second shard component.</para>
+            /// </description></item>
+            /// <item><description><para>Valid values of <b>N</b>: <b>2</b> to <b>32</b>.</para>
+            /// </description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -372,10 +379,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string Class { get; set; }
 
             /// <summary>
-            /// <para>The number of read-only nodes in the shard node.</para>
+            /// <para>The number of read-only nodes in the shard component.</para>
             /// <para>Valid values: <b>0</b>, <b>1, 2, 3, 4, and 5</b>. Default value: <b>0</b>.</para>
             /// <remarks>
-            /// <para> <b>N</b> specifies the serial number of the shard node for which you want to set the number of read-only nodes. <b>ReplicaSet.2.ReadonlyReplicas</b> specifies the number of read-only nodes in the second shard node.</para>
+            /// <para> <b>N</b> specifies the serial number of the shard component for which you want to set the number of read-only nodes. <b>ReplicaSet.2.ReadonlyReplicas</b> specifies the number of read-only nodes in the second shard component.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -386,13 +393,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public int? ReadonlyReplicas { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity of the shard node. Unit: GB.</para>
+            /// <para>The storage capacity of the shard component. Unit: GB.</para>
             /// <remarks>
-            /// <list type="bullet">
-            /// <item><description>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</description></item>
-            /// <item><description><b>N</b> specifies the serial number of the shard node for which the storage space is specified. For example, <b>ReplicaSet.2.Storage</b> specifies the storage space of the second shard node.</description></item>
-            /// </list>
             /// </remarks>
+            /// <list type="bullet">
+            /// <item><description><para>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
+            /// </description></item>
+            /// <item><description><para><b>N</b> specifies the serial number of the shard component for which the storage capacity is specified. For example, <b>ReplicaSet.2.Storage</b> specifies the storage capacity of the second shard component.</para>
+            /// </description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -436,11 +445,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// <para>The backup restore type of the instance.</para>
+        /// <para>The restoration type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1:  restore an instance to the specified time.</description></item>
-        /// <item><description>2: restore an  released instance to the specified backup set.</description></item>
-        /// <item><description>3：restore an instance to the specified cross-regional backup set.</description></item>
+        /// <item><description>1: restores the instance data to the specified point in time.</description></item>
+        /// <item><description>2: restores the data of the released instance to the specified backup set.</description></item>
+        /// <item><description>3: restores the instance data to the specified cross-region backup set.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -537,11 +546,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The storage engine of the instance. Set the value to <b>WiredTiger</b>.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.</description></item>
-        /// <item><description>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.</para>
+        /// </description></item>
+        /// <item><description><para>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>WiredTiger</para>

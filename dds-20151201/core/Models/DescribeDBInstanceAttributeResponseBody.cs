@@ -535,6 +535,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         [Validation(Required=false)]
                         public string ConnectSting { get; set; }
 
+                        /// <summary>
+                        /// <para>The endpoint of the mongos node.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>s-bp1d8c262a15****.mongodb.rds.aliyuncs.com</para>
+                        /// </summary>
                         [NameInMap("ConnectString")]
                         [Validation(Required=false)]
                         public string ConnectString { get; set; }

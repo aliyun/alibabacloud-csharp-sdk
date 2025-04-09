@@ -35,6 +35,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// <para>The type of the account whose description you can modify. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>db</b>: shard account</description></item>
+        /// <item><description><b>cs</b>: ConfigServer account</description></item>
+        /// <item><description><b>normal</b> (default): replica set account (available)</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can set this parameter only to <b>normal</b>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>normal</para>
+        /// </summary>
         [NameInMap("CharacterType")]
         [Validation(Required=false)]
         public string CharacterType { get; set; }

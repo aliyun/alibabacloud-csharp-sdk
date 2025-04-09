@@ -31,6 +31,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
+        /// <summary>
+        /// <para>The type of the account that you want to create. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>db</b> (default): shard account (available)</description></item>
+        /// <item><description><b>cs</b>: ConfigServer account</description></item>
+        /// <item><description><b>normal</b>: replica set account</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can set this parameter only to <b>db</b>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>db</para>
+        /// </summary>
         [NameInMap("CharacterType")]
         [Validation(Required=false)]
         public string CharacterType { get; set; }

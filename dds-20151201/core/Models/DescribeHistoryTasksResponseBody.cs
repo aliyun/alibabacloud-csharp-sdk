@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
-            public int? Status { get; set; }
+            public string Status { get; set; }
 
             /// <summary>
             /// <para>The details of the task. The task details vary based on the value of the taskType parameter.</para>

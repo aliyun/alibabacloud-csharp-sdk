@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAvailabilityZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the values of the returned <b>RegionName</b> and <b>ZoneName</b> parameters. Valid values:</para>
+        /// <para>The language of the returned <b>RegionName</b> and <b>ZoneName</b> parameter values. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ExcludeZoneId { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing method of the product. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid</b> (default): subscription</description></item>
-        /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>PrePaid</b>: subscription</description></item>
+        /// <item><description><b>PostPaid:</b> pay-as-you-go</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,6 +90,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
+
+        /// <summary>
+        /// <para>The architecture of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>sharding</b>: sharded cluster instance</description></item>
+        /// <item><description><b>replicate</b>: replica set or standalone instance</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>replicate</para>
+        /// </summary>
+        [NameInMap("InstanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
 
         /// <summary>
         /// <para>The edition of the instance. High-Available Edition and Preview Edition (dbfs) are supported.</para>
@@ -121,7 +135,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes. This parameter is available only for replica set instances.</para>
+        /// <para>The number of nodes in the instance.</para>
+        /// <remarks>
+        /// <para> This parameter is available only for replica set instances.</para>
+        /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1</description></item>
+        /// <item><description>3</description></item>
+        /// <item><description>5</description></item>
+        /// <item><description>7</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -149,11 +173,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the instance. </para>
+        /// <para>The storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud</b>: The system displays only zones in which cloud disk-based instances can be deployed. </description></item>
-        /// <item><description><b>local</b>: The system displays only zones in which local disk-based instances can be deployed. </description></item>
-        /// <item><description><b>default</b> or null: The system displays only zones in which cloud disk-based and local disk-based instances can be deployed.</description></item>
+        /// <item><description><b>cloud</b>: displays only zones available for instances that use cloud disks.</description></item>
+        /// <item><description><b>local</b>: only displays zones available for instances that use local disks instances.</description></item>
+        /// <item><description><b>default</b> or unspecified: displays zones available for instances that use cloud disks and those that use local disks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,19 +188,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string StorageSupport { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the instance. Valid values:</para>
+        /// <para>The disk type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud_essd1</b>: PL1 enhanced SSD (ESSD)</description></item>
+        /// <item><description><b>cloud_essd</b>: PL1 Enterprise SSD (ESSD)</description></item>
         /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
         /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
-        /// <item><description><b>local_ssd</b>: Local SSD</description></item>
+        /// <item><description><b>dhg_local_ssd</b>: local SSD</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Instances that run MongoDB 4.4 or later support only cloud disks. <b>cloud_essd1</b> is selected if you leave this parameter empty.</description></item>
-        /// <item><description>Instances that run MongoDB 4.2 and earlier support only local disks. <b>local_ssd</b> is selected if you leave this parameter empty.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>Instances that run MongoDB 4.4 or later only use cloud disks to store data. If you do not specify this parameter, the value <b>cloud_essd1</b> is used by default.</para>
+        /// </description></item>
+        /// <item><description><para>Instances that run MongoDB 4.2 and earlier only use local disks to store data. If you do not specify this parameter, the value <b>local_ssd</b> is used by default.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>local_ssd</para>

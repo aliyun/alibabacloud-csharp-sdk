@@ -1121,7 +1121,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         }
 
                         /// <summary>
-                        /// <para>The discount.</para>
+                        /// <para>The discounted price.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>451.00</para>
@@ -1150,10 +1150,22 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         [Validation(Required=false)]
                         public double? TotalProductFee { get; set; }
 
+                        /// <summary>
+                        /// <para>The price type.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>monthPrice</para>
+                        /// </summary>
                         [NameInMap("priceType")]
                         [Validation(Required=false)]
                         public string PriceType { get; set; }
 
+                        /// <summary>
+                        /// <para>The unit of the price.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>xxxx</para>
+                        /// </summary>
                         [NameInMap("priceUnit")]
                         [Validation(Required=false)]
                         public string PriceUnit { get; set; }
@@ -1236,7 +1248,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         public string PromotionOptionNo { get; set; }
 
                         /// <summary>
-                        /// <para>The IDs of the rules that correspond to the coupon.</para>
+                        /// <para>The promotion IDs.</para>
                         /// </summary>
                         [NameInMap("PromotionRuleIdList")]
                         [Validation(Required=false)]
