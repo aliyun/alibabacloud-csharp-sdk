@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string CertType { get; set; }
 
         /// <summary>
-        /// <para>The server certificates. Only one server certificate is supported.</para>
+        /// <para>The server certificate. Only one server certificate is supported.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only for listeners that use SSL over TCP.</para>
+        /// <para> This parameter takes effect only for TCP/SSL listeners.</para>
         /// </remarks>
         /// 
         /// <b>if can be null:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

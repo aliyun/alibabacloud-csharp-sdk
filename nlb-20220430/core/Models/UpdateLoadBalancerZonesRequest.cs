@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class UpdateLoadBalancerZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>The client token used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para> If you do not set this parameter, the value of <b>RequestId</b> is used.**** The value of <b>RequestId</b> is different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>: sends the request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed. This is the default value.</description></item>
+        /// <item><description><b>true</b>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): validates the request and performs the request. If the request passes the validation, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The NLB instance ID.</para>
+        /// <para>The ID of the NLB instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the NLB instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>The ID of region where the NLB instance is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The mappings between zones and vSwitches. You can specify at most 10 zones.</para>
+        /// <para>The mappings between the zones and the vSwitches. You can specify up to 10 zones.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ZoneMappings")]
@@ -80,11 +80,11 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// <para>The type of the EIP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Common</b></description></item>
-            /// <item><description><b>Anycast</b></description></item>
+            /// <item><description><b>Common</b>: an EIP</description></item>
+            /// <item><description><b>Anycast</b>: an Anycast EIP</description></item>
             /// </list>
             /// <remarks>
-            /// <para>Anycast EIPs are supported only by NLB instances in the China (Hong Kong) region. This parameter is required when <b>AddressType</b> is set to <b>Internet</b>.</para>
+            /// <para> For regions that support Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/470000.html">Limits</a>.This parameter is required if <b>AddressType</b> is set to <b>Internet</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string EipType { get; set; }
 
             /// <summary>
-            /// <para>The private IP addresses.</para>
+            /// <para>The private IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.36.16</para>

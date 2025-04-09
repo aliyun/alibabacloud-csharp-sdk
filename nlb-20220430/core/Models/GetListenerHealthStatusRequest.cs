@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class GetListenerHealthStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the listener of the NLB instance.</para>
+        /// <para>The ID of the listener on the NLB instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

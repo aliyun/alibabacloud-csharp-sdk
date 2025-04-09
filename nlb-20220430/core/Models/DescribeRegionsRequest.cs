@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</para>
+        /// <para>The client token used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate this value. Ensure that the value is unique among all requests. Only ASCII characters are allowed.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// <para> If you do not specify this parameter, the value of <b>RequestId</b> is used.**** <b>RequestId</b> of each request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

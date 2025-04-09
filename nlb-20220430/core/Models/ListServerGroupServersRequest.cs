@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class ListServerGroupServersRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return in each call. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The pagination token used to specify a particular page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first query or no next query is to be sent, ignore this parameter.</description></item>
-        /// <item><description>If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</description></item>
+        /// <item><description>Left this parameter empty if this is the first query or the only query.</description></item>
+        /// <item><description>Set this parameter to the value of NextToken obtained from the previous query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,14 +55,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ServerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The server IDs. You can specify at most 40 servers in each call.</para>
+        /// <para>The IDs of the backend servers. You can specify up to 40 backend servers in each call.</para>
         /// </summary>
         [NameInMap("ServerIds")]
         [Validation(Required=false)]
         public List<string> ServerIds { get; set; }
 
         /// <summary>
-        /// <para>A list of server IP addresses. You can specify at most 40 servers in each call.</para>
+        /// <para>The IP addresses of the backend servers. You can specify up to 40 backend servers in each call.</para>
         /// </summary>
         [NameInMap("ServerIps")]
         [Validation(Required=false)]

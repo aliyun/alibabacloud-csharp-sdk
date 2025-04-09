@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class GetJobStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</para>
+        /// <para>The client token used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> of each API request may be different.</para>
+        /// <para> If you do not set this parameter, the value of <b>RequestId</b> is used.**** The value of <b>RequestId</b> is different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asynchronous task.</para>
+        /// <para>The ID of the asynchronous job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the NLB instance.</para>
+        /// <para>The region ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The type of resource. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>loadbalancer</b>: a Network Load Balancer (NLB) instance</description></item>
         /// <item><description><b>securitypolicy</b>: a security policy</description></item>

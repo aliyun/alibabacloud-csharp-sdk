@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of NextToken.</description></item>
+        /// <item><description>For the first request and last request, you do not need to specify this parameter.</description></item>
+        /// <item><description>You must specify the token obtained from the previous query as the value of NextToken.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The server group ID. You can specify up to 20 server group IDs in each call.</para>
+        /// <para>The server group IDs. You can specify up to 20 server group IDs in each call.</para>
         /// </summary>
         [NameInMap("ServerGroupIds")]
         [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>The type of server group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Instance</b> : allows you to add servers of the <b>Ecs</b>, <b>Ens</b>, and <b>Eci</b> types.</description></item>
+        /// <item><description><b>Instance</b>: allows you to add servers of the <b>Ecs</b>, <b>Ens</b>, and <b>Eci</b> types.</description></item>
         /// <item><description><b>Ip</b>: allows you to add servers by specifying IP addresses.</description></item>
         /// </list>
         /// 
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public class ListServerGroupsRequestTag : TeaModel {
             /// <summary>
             /// <para>The key of the tag. You can specify up to 10 tag keys.</para>
-            /// <para>The tag key can be up to 64 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
             /// <summary>
             /// <para>The value of the tag. You can specify up to 10 tag values.</para>
-            /// <para>The tag value can be up to 128 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> and <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the server group belongs.</para>
+        /// <para>The ID of the virtual private cloud (VPC) in which the server group is deployed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp15zckdt37pq72zv****</para>

@@ -132,7 +132,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 public int? HealthCheckConnectPort { get; set; }
 
                 /// <summary>
-                /// <para>The maximum timeout period of a health check. Unit: seconds. Valid values: <b>1</b> to <b>300</b>.</para>
+                /// <para>The maximum timeout period of a health check response. Unit: seconds. Default value: <b>5</b>.</para>
+                /// <para>Valid values: <b>1</b> to <b>300</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -173,7 +174,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 public bool? HealthCheckEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The response string of UDP health checks. The string must be 1 to 64 characters in length, and can contain letters and digits.</para>
+                /// <para>The response string of UDP health checks. The string must be 1 to 512 characters in length, and can contain letters and digits.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ok</para>
@@ -192,9 +193,16 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 [Validation(Required=false)]
                 public List<string> HealthCheckHttpCode { get; set; }
 
+                [NameInMap("HealthCheckHttpVersion")]
+                [Validation(Required=false)]
+                public string HealthCheckHttpVersion { get; set; }
+
                 /// <summary>
-                /// <para>The interval at which health checks are performed. Unit: seconds.</para>
-                /// <para>Valid values: <b>5</b> to <b>50</b>.</para>
+                /// <para>The interval at which health checks are performed. Unit: seconds. Default value: <b>5</b>.</para>
+                /// <list type="bullet">
+                /// <item><description>If you set <b>HealthCheckType</b> to <b>TCP</b> or <b>HTTP</b>, valid values are <b>1 to 50</b>.</description></item>
+                /// <item><description>If you set <b>HealthCheckType</b> to <b>UDP</b>, valid values are <b>1 to 300</b>. Set the health check interval equal to or larger than the response timeout period to ensure that UDP response timeouts are not determined as no responses.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -204,7 +212,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 public int? HealthCheckInterval { get; set; }
 
                 /// <summary>
-                /// <para>The request string of UDP health checks. The string must be 1 to 64 characters in length, and can contain letters and digits.</para>
+                /// <para>The request string of UDP health checks. The string must be 1 to 512 characters in length, and can contain letters and digits.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hello</para>

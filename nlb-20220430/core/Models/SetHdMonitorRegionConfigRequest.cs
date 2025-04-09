@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class SetHdMonitorRegionConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the Log Service project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string LogProject { get; set; }
 
         /// <summary>
+        /// <para>The name of the MetricStore in Simple Log Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string MetricStore { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the NLB instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2399192.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

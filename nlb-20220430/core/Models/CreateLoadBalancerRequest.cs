@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class CreateLoadBalancerRequest : TeaModel {
         /// <summary>
-        /// <para>The version of the protocol. Valid values:</para>
+        /// <para>The IP version of the NLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ipv4</b> (default)</description></item>
-        /// <item><description><b>DualStack</b></description></item>
+        /// <item><description><b>ipv4</b> (default): IPv4</description></item>
+        /// <item><description><b>DualStack</b>: dual-stack</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string AddressIpVersion { get; set; }
 
         /// <summary>
-        /// <para>The network type of the IPv4 address used by the NLB instance. Valid values:</para>
+        /// <para>The type of the IPv4 address used by the NLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Internet</b>: The NLB instance is assigned a public IP address. The domain name is resolved to the public IP address. The NLB instance is accessible over the Internet.</description></item>
-        /// <item><description><b>Intranet</b>: The NLB instance is assigned only a private IP address. The domain name is resolved to the private IP address. The NLB instance is accessible only within the VPC of the NLB instance.</description></item>
+        /// <item><description><b>Internet</b>: The NLB instance uses a public IP address. The domain name of the instance is resolved to the public IP address. The instance is accessible over the Internet.</description></item>
+        /// <item><description><b>Intranet</b>: The NLB instance uses a private IP address. The domain name of the instance is resolved to the private IP address. The instance is accessible only within the virtual private cloud (VPC) where the instance is deployed.</description></item>
         /// </list>
         /// <remarks>
         /// <para> To enable a public IPv6 address for a dual-stack NLB instance, call the <a href="https://help.aliyun.com/document_detail/445878.html">EnableLoadBalancerIpv6Internet</a> operation.</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string AddressType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the EIP bandwidth plan that is associated with the Internet-facing NLB instance.</para>
+        /// <para>The ID of the Internet Shared Bandwidth instance that is associated with the Internet-facing NLB instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cbwp-bp1vevu8h3ieh****</para>
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>The client token used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request is different.</para>
+        /// <para> If you do not specify this parameter, the value of <b>RequestId</b> is used.**** The value of <b>RequestId</b> is different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -73,10 +73,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public CreateLoadBalancerRequestDeletionProtectionConfig DeletionProtectionConfig { get; set; }
         public class CreateLoadBalancerRequestDeletionProtectionConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable deletion protection. Valid values:</para>
+            /// <para>Specifies whether to enable the deletion protection feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b> (default): no</description></item>
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b> (default)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The reason why the deletion protection feature is enabled or disabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter.</para>
+            /// <para>The reason why the deletion protection feature is enabled or disabled. The reason must be 2 to 128 characters in length, can contain letters, digits, periods (.), underscores (_), and hyphens (-), and must start with a letter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The instance is running</para>
@@ -99,10 +99,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         /// <summary>
         /// <para>The name of the NLB instance.</para>
-        /// <para>The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter.</para>
+        /// <para>It must be 2 to 128 characters in length, can contain letters, digits, periods (.), underscores (_), and hyphens (-), and must start with a letter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NLB1</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string LoadBalancerName { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance. Set the value to <b>network</b>, which specifies an NLB instance.</para>
+        /// <para>The type of the Server Load Balancer (SLB) instance. Set the value to <b>network</b>, which specifies NLB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>network</para>
@@ -161,9 +161,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public CreateLoadBalancerRequestModificationProtectionConfig ModificationProtectionConfig { get; set; }
         public class CreateLoadBalancerRequestModificationProtectionConfig : TeaModel {
             /// <summary>
-            /// <para>The reason why the configuration read-only mode is enabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter.</para>
+            /// <para>The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, can contain letters, digits, periods (.), underscores (_), and hyphens (-), and must start with a letter.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if the <b>Status</b> parameter is set to <b>ConsoleProtection</b>.</para>
+            /// <para> This parameter takes effect only when <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <item><description><b>ConsoleProtection</b>: enables the configuration read-only mode. You can set the <b>Reason</b> parameter.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> If you set this parameter to <b>ConsoleProtection</b>, you cannot use the NLB console to modify instance configurations. However, you can call API operations to modify instance configurations.</para>
+            /// <para> If the parameter is set to <b>ConsoleProtection</b>, the configuration read-only mode is enabled. You cannot modify the configurations of the NLB instance in the NLB console. However, you can call API operations to modify the configurations of the NLB instance.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the resource group to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-atstuj3rtop****</para>
@@ -224,8 +224,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<CreateLoadBalancerRequestTag> Tag { get; set; }
         public class CreateLoadBalancerRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The key of the tag. The tag key can be up to 64 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>. The tag key can contain letters, digits, and the following special characters: _ . : / = + - @</para>
+            /// <para>You can specify up to 20 tags in each call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -235,8 +235,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The value of the tag. The tag value can be up to 128 characters in length, cannot start with <c>acs:</c> or <c>aliyun</c>, and cannot contain <c>http://</c> or <c>https://</c>. The tag value can contain letters, digits, and the following special characters: _ . : / = + - @</para>
+            /// <para>You can specify up to 20 tags in each call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>product</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         }
 
         /// <summary>
-        /// <para>The ID of the VPC where the NLB instance is deployed.</para>
+        /// <para>The ID of the VPC where you want to create the NLB instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The mappings between zones and vSwitches. You must add at least two zones. You can add a maximum of 10 zones.</para>
+        /// <para>The mappings between zones and vSwitches. An NLB instance can be deployed in up to 10 zones. If the region supports two or more zones, you must specify at least two zones.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ZoneMappings")]
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<CreateLoadBalancerRequestZoneMappings> ZoneMappings { get; set; }
         public class CreateLoadBalancerRequestZoneMappings : TeaModel {
             /// <summary>
-            /// <para>The ID of the elastic IP address (EIP) that is associated with the Internet-facing NLB instance. You can specify one EIP for each zone. You must add at least two zones. You can add a maximum of 10 zones.</para>
+            /// <para>The ID of the elastic IP address (EIP) that is associated with the Internet-facing NLB instance. Each zone is assigned one EIP. An NLB instance can be deployed in up to 10 zones. If the region supports two or more zones, specify at least two zones.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eip-bp1aedxso6u80u0qf****</para>
@@ -277,14 +277,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string AllocationId { get; set; }
 
             /// <summary>
-            /// <para>The IPv4 link-local addresses. The IP addresses that the NLB instance uses to communicate with the backend servers. The number of IP addresses must be an even number, which must be at least 2 and at most 8.</para>
+            /// <para>The local IPv4 addresses. The IP addresses that the NLB instance uses to communicate with the backend servers. The number of IP addresses must be an even number, which must be at least 2 and at most 8.</para>
             /// </summary>
             [NameInMap("Ipv4LocalAddresses")]
             [Validation(Required=false)]
             public List<string> Ipv4LocalAddresses { get; set; }
 
             /// <summary>
-            /// <para>The IPv6 address. The IPv6 address that the NLB instance uses to provide external services.</para>
+            /// <para>The VIP of the IPv6 version. The IPv6 address that the NLB instance uses to provide external services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2408:400a:d5:3080:b409:840a:ca:e8e5</para>
@@ -294,14 +294,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string Ipv6Address { get; set; }
 
             /// <summary>
-            /// <para>The IPv6 link-local addresses. The IP addresses that the NLB instance uses to communicate with the backend servers. The number of IP addresses must be an even number, which must be at least 2 and at most 8.</para>
+            /// <para>The local IPv6 addresses. The IP addresses that the NLB instance uses to communicate with the backend servers. The number of IP addresses must be an even number, which must be at least 2 and at most 8.</para>
             /// </summary>
             [NameInMap("Ipv6LocalAddresses")]
             [Validation(Required=false)]
             public List<string> Ipv6LocalAddresses { get; set; }
 
             /// <summary>
-            /// <para>The private IP address. You must add at least two zones. You can add a maximum of 10 zones.</para>
+            /// <para>The private virtual IP address (VIP) of the IPv4 version. The private IPv4 address that the NLB instance uses to provide external services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.10.1</para>
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string PrivateIPv4Address { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an NLB instance. You must add at least two zones. You can add a maximum of 10 zones.</para>
+            /// <para>The ID of the vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an NLB instance. An NLB instance can be deployed in up to 10 zones. If the region supports two or more zones, you must specify at least two zones.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone of the NLB instance. You must add at least two zones. You can add a maximum of 10 zones.</para>
+            /// <para>The ID of the zone where the NLB instance is deployed. An NLB instance can be deployed in up to 10 zones. If the region supports two or more zones, specify at least two zones.</para>
             /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443890.html">DescribeZones</a> operation to query the most recent zone list.</para>
             /// <para>This parameter is required.</para>
             /// 

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class RemoveServersFromServerGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>The client token used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para> If you do not set this parameter, the value of <b>RequestId</b> is used.**** The value of <b>RequestId</b> is different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the NLB instance.</para>
+        /// <para>The ID of the region where the NLB instance is deployed.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ServerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The server groups. You can specify at most 200 server groups in each call.</para>
+        /// <para>The backend servers. You can specify up to 200 backend servers in each call.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Servers")]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<RemoveServersFromServerGroupRequestServers> Servers { get; set; }
         public class RemoveServersFromServerGroupRequestServers : TeaModel {
             /// <summary>
-            /// <para>The port that is used by the backend server. Valid values: <b>1</b> to <b>65535</b>.</para>
+            /// <para>The port that is used by the backend server. Valid values: <b>0</b> to <b>65535</b>. If you do not set this parameter, the default value <b>0</b> is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>443</para>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server group.</para>
+            /// <para>The backend server ID.</para>
             /// <list type="bullet">
-            /// <item><description>If the server group is of the <b>Instance</b> type, set this parameter to the IDs of <b>Elastic Compute Service (ECS) instances</b>, <b>elastic network interfaces (ENIs)</b>, or <b>elastic container instances</b>.</description></item>
-            /// <item><description>If the server group is of the <b>Ip</b> type, set this parameter to IP addresses.</description></item>
+            /// <item><description>If the server group is of the <b>Instance</b> type, set this parameter to the IDs of servers of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
+            /// <item><description>If the server group is of the <b>Ip</b> type, set ServerId to IP addresses.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string ServerId { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses of servers. If the server group type is <b>Ip</b>, set the ServerId parameter to IP addresses.</para>
+            /// <para>The IP addresses of the server. If the server group type is <b>Ip</b>, set the ServerId parameter to IP addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.6.6</para>
@@ -106,12 +106,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string ServerIp { get; set; }
 
             /// <summary>
-            /// <para>The type of backend server. Valid values:</para>
+            /// <para>The type of the backend server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Ecs</b>: ECS instance</description></item>
-            /// <item><description><b>Eni</b>: ENI</description></item>
-            /// <item><description><b>Eci</b>: elastic container instance</description></item>
-            /// <item><description><b>Ip</b>: IP address</description></item>
+            /// <item><description><b>Ecs</b>: the Elastic Compute Service (ECS) instance</description></item>
+            /// <item><description><b>Eni</b>: the elastic network interface (ENI)</description></item>
+            /// <item><description><b>Eci</b>: the elastic container instance</description></item>
+            /// <item><description><b>Ip</b>: the IP address</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

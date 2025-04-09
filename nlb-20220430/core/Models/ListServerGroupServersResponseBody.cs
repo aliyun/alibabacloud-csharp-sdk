@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <para>The ID of the server group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ecs-bp67acfmxazb4p****</para>
+            /// <para>i-bp67acfmxazb4p****</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]

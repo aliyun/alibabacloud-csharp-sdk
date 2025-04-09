@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
     public class UpdateLoadBalancerAttributeRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token. Ensure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para> If you do not specify this parameter, the system uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> is different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of new connections per second supported by the NLB instance in each zone (virtual IP address). Valid values: <b>1</b> to <b>1000000</b>.</para>
+        /// <para>The maximum number of new connections per second in each zone supported by the NLB instance (virtual IP address). Valid values: <b>1</b> to <b>1000000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? CrossZoneEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run, without sending the actual request. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

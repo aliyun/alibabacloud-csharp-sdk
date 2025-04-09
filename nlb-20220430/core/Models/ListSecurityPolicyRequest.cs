@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public class ListSecurityPolicyRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key. You can specify up to 10 tag keys.</para>
-            /// <para>The tag key can be up to 64 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
             /// <summary>
             /// <para>The tag value. You can specify up to 10 tag values.</para>
-            /// <para>The tag value can be up to 128 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>

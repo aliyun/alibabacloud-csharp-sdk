@@ -1594,14 +1594,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>protocol</b> specifies the protocol used to forward requests to the backend servers.</para>
+        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</para>
         /// <list type="bullet">
-        /// <item><description>NLB instances support only backend server groups that use TCP, UDP, or SSL over TCP.</description></item>
-        /// <item><description><b>CreateServerGroup</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.<list type="bullet">
         /// <item><description>If the task is in the <b>Succeeded</b> status, the server group is created.</description></item>
         /// <item><description>If the task is in the <b>Processing</b> status, the server group is being created.</description></item>
-        /// </list>
-        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -1722,14 +1718,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>protocol</b> specifies the protocol used to forward requests to the backend servers.</para>
+        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</para>
         /// <list type="bullet">
-        /// <item><description>NLB instances support only backend server groups that use TCP, UDP, or SSL over TCP.</description></item>
-        /// <item><description><b>CreateServerGroup</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.<list type="bullet">
         /// <item><description>If the task is in the <b>Succeeded</b> status, the server group is created.</description></item>
         /// <item><description>If the task is in the <b>Processing</b> status, the server group is being created.</description></item>
-        /// </list>
-        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -1850,14 +1842,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>protocol</b> specifies the protocol used to forward requests to the backend servers.</para>
+        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</para>
         /// <list type="bullet">
-        /// <item><description>NLB instances support only backend server groups that use TCP, UDP, or SSL over TCP.</description></item>
-        /// <item><description><b>CreateServerGroup</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.<list type="bullet">
         /// <item><description>If the task is in the <b>Succeeded</b> status, the server group is created.</description></item>
         /// <item><description>If the task is in the <b>Processing</b> status, the server group is being created.</description></item>
-        /// </list>
-        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -1881,14 +1869,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>protocol</b> specifies the protocol used to forward requests to the backend servers.</para>
+        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</para>
         /// <list type="bullet">
-        /// <item><description>NLB instances support only backend server groups that use TCP, UDP, or SSL over TCP.</description></item>
-        /// <item><description><b>CreateServerGroup</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.<list type="bullet">
         /// <item><description>If the task is in the <b>Succeeded</b> status, the server group is created.</description></item>
         /// <item><description>If the task is in the <b>Processing</b> status, the server group is being created.</description></item>
-        /// </list>
-        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -2559,7 +2543,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询秒级监控存储配置</para>
+        /// <para>Queries the storage configurations of fine-grained monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2608,7 +2592,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询秒级监控存储配置</para>
+        /// <para>Queries the storage configurations of fine-grained monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2657,7 +2641,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询秒级监控存储配置</para>
+        /// <para>Queries the storage configurations of fine-grained monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2675,7 +2659,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询秒级监控存储配置</para>
+        /// <para>Queries the storage configurations of fine-grained monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3531,7 +3515,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the network type of the IPv6 address of a dual-stack NLB instance from private to the public.</para>
+        /// <para>Changes the network type of the IPv6 address of a dual-stack Network Load Balancer (NLB) instance from internal-facing to Internet-facing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3592,7 +3576,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the network type of the IPv6 address of a dual-stack NLB instance from private to the public.</para>
+        /// <para>Changes the network type of the IPv6 address of a dual-stack Network Load Balancer (NLB) instance from internal-facing to Internet-facing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3653,7 +3637,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the network type of the IPv6 address of a dual-stack NLB instance from private to the public.</para>
+        /// <para>Changes the network type of the IPv6 address of a dual-stack Network Load Balancer (NLB) instance from internal-facing to Internet-facing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3671,7 +3655,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the network type of the IPv6 address of a dual-stack NLB instance from private to the public.</para>
+        /// <para>Changes the network type of the IPv6 address of a dual-stack Network Load Balancer (NLB) instance from internal-facing to Internet-facing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4653,7 +4637,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the basic information about Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4762,7 +4746,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the basic information about Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4871,7 +4855,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the basic information about Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4889,7 +4873,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the basic information about Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6537,8 +6521,13 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置秒级监控存储</para>
+        /// <para>Configures storage for fine-grained monitoring.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to configure a data warehouse for the fine-grained monitoring feature. If a listener in the current region has fine-grained monitoring enabled, you must disable fine-grained monitoring before you can configure a warehouse.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetHdMonitorRegionConfigRequest
@@ -6594,8 +6583,13 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置秒级监控存储</para>
+        /// <para>Configures storage for fine-grained monitoring.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to configure a data warehouse for the fine-grained monitoring feature. If a listener in the current region has fine-grained monitoring enabled, you must disable fine-grained monitoring before you can configure a warehouse.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetHdMonitorRegionConfigRequest
@@ -6651,8 +6645,13 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置秒级监控存储</para>
+        /// <para>Configures storage for fine-grained monitoring.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to configure a data warehouse for the fine-grained monitoring feature. If a listener in the current region has fine-grained monitoring enabled, you must disable fine-grained monitoring before you can configure a warehouse.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetHdMonitorRegionConfigRequest
@@ -6669,8 +6668,13 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置秒级监控存储</para>
+        /// <para>Configures storage for fine-grained monitoring.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to configure a data warehouse for the fine-grained monitoring feature. If a listener in the current region has fine-grained monitoring enabled, you must disable fine-grained monitoring before you can configure a warehouse.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetHdMonitorRegionConfigRequest
@@ -6845,13 +6849,13 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the elastic IP address (EIP) or virtual IP address (VIP) from a zone.</para>
+        /// <para>Removes the elastic IP address (EIP) or virtual IP address (VIP) used in a zone from the DNS record.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>If a Network Load Balancer (NLB) instance is deployed only in one zone, you cannot remove the NLB instance from the zone.</para>
+        /// <para> If the NLB instance is deployed in only one zone, you cannot remove the EIP or VIP from the DNS record.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6917,13 +6921,13 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the elastic IP address (EIP) or virtual IP address (VIP) from a zone.</para>
+        /// <para>Removes the elastic IP address (EIP) or virtual IP address (VIP) used in a zone from the DNS record.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>If a Network Load Balancer (NLB) instance is deployed only in one zone, you cannot remove the NLB instance from the zone.</para>
+        /// <para> If the NLB instance is deployed in only one zone, you cannot remove the EIP or VIP from the DNS record.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6989,13 +6993,13 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the elastic IP address (EIP) or virtual IP address (VIP) from a zone.</para>
+        /// <para>Removes the elastic IP address (EIP) or virtual IP address (VIP) used in a zone from the DNS record.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>If a Network Load Balancer (NLB) instance is deployed only in one zone, you cannot remove the NLB instance from the zone.</para>
+        /// <para> If the NLB instance is deployed in only one zone, you cannot remove the EIP or VIP from the DNS record.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7014,13 +7018,13 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the elastic IP address (EIP) or virtual IP address (VIP) from a zone.</para>
+        /// <para>Removes the elastic IP address (EIP) or virtual IP address (VIP) used in a zone from the DNS record.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>If a Network Load Balancer (NLB) instance is deployed only in one zone, you cannot remove the NLB instance from the zone.</para>
+        /// <para> If the NLB instance is deployed in only one zone, you cannot remove the EIP or VIP from the DNS record.</para>
         /// </remarks>
         /// </description>
         /// 

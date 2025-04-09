@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>50</b>.</para>
+        /// <para>The number of entries to return in each call. Valid values: <b>1</b> to <b>50</b>. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token used to specify a particular page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of NextToken.</description></item>
+        /// <item><description>Leave this parameter empty for the first query or the only query.</description></item>
+        /// <item><description>Set this parameter to the value of NextToken obtained from the previous query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,19 +44,19 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID.</para>
+        /// <para>The IDs of the resources.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of resource to query. Valid values:</para>
+        /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>loadbalancer</b>: a Network Load Balancer (NLB) instance</description></item>
-        /// <item><description><b>securitypolicy</b>: a security policy</description></item>
-        /// <item><description><b>servergroup</b>: a server group</description></item>
-        /// <item><description><b>listener</b>: a listener</description></item>
+        /// <item><description><b>loadbalancer</b>: the Network Load Balancer (NLB) instance</description></item>
+        /// <item><description><b>securitypolicy</b>: the security policy</description></item>
+        /// <item><description><b>servergroup</b>: the server group</description></item>
+        /// <item><description><b>listener</b>: the listener</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tags</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. The tag key can be up to 128 characters in length, and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The key of the tag. The tag key can be up to 128 characters in length, cannot start with <c>acs:</c> or <c>aliyun</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The tag value can be up to 128 characters in length, and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The value of the tag. The tag value can be up to 128 characters in length, cannot start with <c>acs:</c> or <c>aliyun</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>product</para>

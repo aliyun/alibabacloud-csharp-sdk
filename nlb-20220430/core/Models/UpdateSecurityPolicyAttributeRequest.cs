@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class UpdateSecurityPolicyAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The supported cipher suites, which are determined by the TLS protocol version. You can specify at most 32 cipher suites.</para>
-        /// <para>TLS 1.0 and TLS 1.1 support the following cipher suites:</para>
+        /// <para>The supported cipher suites. Valid values of this parameter vary base on the value of TlsVersions. You can specify up to 32 cipher suites.</para>
+        /// <para>TLSv1.0 and TLSv1.1 support the following cipher suites:</para>
         /// <list type="bullet">
         /// <item><description><b>ECDHE-ECDSA-AES128-SHA</b></description></item>
         /// <item><description><b>ECDHE-ECDSA-AES256-SHA</b></description></item>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <item><description><b>AES256-SHA</b></description></item>
         /// <item><description><b>DES-CBC3-SHA</b></description></item>
         /// </list>
-        /// <para>TLS 1.2 supports the following cipher suites:</para>
+        /// <para>TLSv1.2 supports the following cipher suites:</para>
         /// <list type="bullet">
         /// <item><description><b>ECDHE-ECDSA-AES128-SHA</b></description></item>
         /// <item><description><b>ECDHE-ECDSA-AES256-SHA</b></description></item>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <item><description><b>AES128-SHA256</b></description></item>
         /// <item><description><b>AES256-SHA256</b></description></item>
         /// </list>
-        /// <para>TLS 1.3 supports the following cipher suites:</para>
+        /// <para>TLSv1.3 supports the following cipher suites:</para>
         /// <list type="bullet">
         /// <item><description><b>TLS_AES_128_GCM_SHA256</b></description></item>
         /// <item><description><b>TLS_AES_256_GCM_SHA384</b></description></item>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<string> Ciphers { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>The client token used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para> If you do not set this parameter, the value of <b>RequestId</b> is used.**** The value of <b>RequestId</b> is different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,8 +85,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the NLB instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>The ID of the region where the NLB instance is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string SecurityPolicyName { get; set; }
 
         /// <summary>
-        /// <para>The supported versions of the Transport Layer Security (TLS) protocol. Valid values: <b>TLSv1.0</b>, <b>TLSv1.1</b>, <b>TLSv1.2</b>, and <b>TLSv1.3</b>. You can specify at most four TLS protocol versions.</para>
+        /// <para>The supported TLS versions. Valid values: <b>TLSv1.0</b>, <b>TLSv1.1</b>, <b>TLSv1.2</b>, and <b>TLSv1.3</b>. You can specify up to four TLS versions.</para>
         /// </summary>
         [NameInMap("TlsVersions")]
         [Validation(Required=false)]

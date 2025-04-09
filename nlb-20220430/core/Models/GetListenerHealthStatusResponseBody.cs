@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class GetListenerHealthStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The health check status of the server groups that are associated with the listener.</para>
+        /// <para>The health check status of the server group of the listener.</para>
         /// </summary>
         [NameInMap("ListenerHealthStatus")]
         [Validation(Required=false)]
@@ -136,7 +136,6 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                     /// <list type="bullet">
                     /// <item><description><b>Initial</b>: indicates that health checks are configured for the NLB instance, but no data was found.</description></item>
                     /// <item><description><b>Unhealthy</b>: indicates that the backend server consecutively fails health checks.</description></item>
-                    /// <item><description><b>Unused</b>: indicates that the weight of the backend server is 0.</description></item>
                     /// <item><description><b>Unavailable</b>: indicates that health checks are disabled.</description></item>
                     /// </list>
                     /// 
