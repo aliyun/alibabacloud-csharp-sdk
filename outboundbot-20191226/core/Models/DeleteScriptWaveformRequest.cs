@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DeleteScriptWaveformRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ScriptId")]
         [Validation(Required=false)]
         public string ScriptId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ScriptWaveformId")]
         [Validation(Required=false)]
         public string ScriptWaveformId { get; set; }

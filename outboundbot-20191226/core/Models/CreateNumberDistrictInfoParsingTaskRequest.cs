@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string FilePath { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>190464</para>
+        /// </summary>
         [NameInMap("FileSize")]
         [Validation(Required=false)]
         public long? FileSize { get; set; }
