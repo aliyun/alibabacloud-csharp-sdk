@@ -54,6 +54,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public List<string> AllowedIpList { get; set; }
 
+                [NameInMap("BlackIPList")]
+                [Validation(Required=false)]
+                public List<string> BlackIPList { get; set; }
+
+                [NameInMap("BlackIPMap")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> BlackIPMap { get; set; }
+
                 /// <summary>
                 /// <para>The port range. Valid value:</para>
                 /// <para><b>9093/9093</b>.</para>
@@ -64,6 +72,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [NameInMap("PortRange")]
                 [Validation(Required=false)]
                 public string PortRange { get; set; }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
+                [NameInMap("UserDefinedSharedSecurityGroup")]
+                [Validation(Required=false)]
+                public bool? UserDefinedSharedSecurityGroup { get; set; }
 
             }
 
@@ -88,6 +104,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public List<string> AllowedIpList { get; set; }
 
+                [NameInMap("BlackIPList")]
+                [Validation(Required=false)]
+                public List<string> BlackIPList { get; set; }
+
+                [NameInMap("BlackIPMap")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> BlackIPMap { get; set; }
+
                 /// <summary>
                 /// <para>The port range. Valid value:</para>
                 /// <para><b>9092/9092</b>.</para>
@@ -98,6 +122,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [NameInMap("PortRange")]
                 [Validation(Required=false)]
                 public string PortRange { get; set; }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
+                [NameInMap("UserDefinedSharedSecurityGroup")]
+                [Validation(Required=false)]
+                public bool? UserDefinedSharedSecurityGroup { get; set; }
 
             }
 
