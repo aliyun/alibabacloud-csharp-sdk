@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The information about office networks.</para>
+        /// <para>The office networks.</para>
         /// </summary>
         [NameInMap("OfficeSites")]
         [Validation(Required=false)]
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The custom gateway.</para>
+            /// <para>The custom endpoint of the access gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-****.com</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CustomAccessPoint { get; set; }
 
             /// <summary>
-            /// <para>The array of custom DNS addresses.</para>
+            /// <para>The custom DNS addresses.</para>
             /// </summary>
             [NameInMap("CustomDnsAddress")]
             [Validation(Required=false)]
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopVpcEndpoint { get; set; }
 
             /// <summary>
-            /// <para>The array of DNS addresses in the AD domains.</para>
+            /// <para>The DNS addresses for the AD domains.</para>
             /// </summary>
             [NameInMap("DnsAddress")]
             [Validation(Required=false)]
@@ -490,10 +490,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NetworkPackageId { get; set; }
 
             /// <summary>
-            /// <para>The network version. App Streaming is supported by the new version. Valid values:</para>
+            /// <para>The network version. The new version supports App Streaming.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DEFAULT: the legacy version</description></item>
-            /// <item><description>NM: the new version</description></item>
+            /// <item><description>DEFAULT: the old version.</description></item>
+            /// <item><description>NM: the new version.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -584,14 +585,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RdsLicenseStatus { get; set; }
 
             /// <summary>
-            /// <para>The amount of resources.</para>
+            /// <para>The number of resources.</para>
             /// </summary>
             [NameInMap("ResourceAmounts")]
             [Validation(Required=false)]
             public List<DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts> ResourceAmounts { get; set; }
             public class DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts : TeaModel {
                 /// <summary>
-                /// <para>The amount of resources.</para>
+                /// <para>The number of resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -601,10 +602,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public long? Amount { get; set; }
 
                 /// <summary>
-                /// <para>The resource type. Valid values:</para>
+                /// <para>The resource type.</para>
+                /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>desktop: cloud computers</description></item>
-                /// <item><description>desktopGroup: shared cloud computers</description></item>
+                /// <item><description>desktop: the cloud computer.</description></item>
+                /// <item><description>DesktopGroup: the cloud computer share.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -678,7 +680,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>An array of DNS addresses for AD subdomains.</para>
+            /// <para>The DNS addresses for the AD subdomains.</para>
             /// </summary>
             [NameInMap("SubDnsAddress")]
             [Validation(Required=false)]
@@ -720,7 +722,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? TotalEdsCount { get; set; }
 
             /// <summary>
-            /// <para>The number of pooled cloud computers in the cloud computer pool.</para>
+            /// <para>The number of cloud computers in the cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -730,7 +732,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? TotalEdsCountForGroup { get; set; }
 
             /// <summary>
-            /// <para>The total number of network cards.</para>
+            /// <para>The number of network interface controllers (NICs).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

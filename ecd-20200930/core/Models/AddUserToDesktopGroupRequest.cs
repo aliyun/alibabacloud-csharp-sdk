@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The regular users to whom you want to assign the desktop group.</para>
+        /// <para>The IDs of the users to whom you want to grant permissions.</para>
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateConfigGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The list of configuration groups.</para>
+        /// <para>The scheduled task groups.</para>
         /// </summary>
         [NameInMap("ConfigTimers")]
         [Validation(Required=false)]
         public List<CreateConfigGroupRequestConfigTimers> ConfigTimers { get; set; }
         public class CreateConfigGroupRequestConfigTimers : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to allow end users to configure scheduled tasks.</para>
+            /// <para>Specifies whether to allow end users to configure the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? AllowClientSetting { get; set; }
 
             /// <summary>
-            /// <para>The CRON expression for the scheduled task.</para>
+            /// <para>The cron expression specified in the scheduled task.</para>
             /// <remarks>
             /// <para> The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7</para>
             /// </remarks>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CronExpression { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to forcibly execute the scheduled task.</para>
+            /// <para>Specifies whether to forcefully execute the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -79,19 +79,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OperationType { get; set; }
 
             /// <summary>
-            /// <para>The process whitelist. If whitelisted processes are running, the scheduled task upon inactivity does not take effect.</para>
+            /// <para>The process whitelist. If whitelisted processes are running, the scheduled task does not take effect.</para>
             /// </summary>
             [NameInMap("ProcessWhitelist")]
             [Validation(Required=false)]
             public List<string> ProcessWhitelist { get; set; }
 
             /// <summary>
-            /// <para>The reset operation for cloud computers.</para>
+            /// <para>The reset option.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RESET_TYPE_SYSTEM: resets only the system disks of cloud computers.</description></item>
-            /// <item><description>RESET_TYPE_USER_DISK: resets only the data disks of cloud computers.</description></item>
-            /// <item><description>RESET_TYPE_BOTH: resets the system disks and data disks of cloud computers.</description></item>
+            /// <item><description>RESET_TYPE_SYSTEM: resets only the system disk.</description></item>
+            /// <item><description>RESET_TYPE_USER_DISK: resets only the data disk.</description></item>
+            /// <item><description>RESET_TYPE_BOTH: resets the system and data disks.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResetType { get; set; }
 
             /// <summary>
-            /// <para>The type of the scheduled task.</para>
+            /// <para>The scheduled task type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NoOperationDisconnect: scheduled disconnection upon inactivity.</description></item>
@@ -188,10 +188,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the configuration group.</para>
+        /// <para>The group type.</para>
         /// <para>Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>Timer: the scheduled task type.</description></item>
+        /// <item><description>Timer: a scheduled task group.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

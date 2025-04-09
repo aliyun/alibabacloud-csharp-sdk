@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public bool? AutoCleanUserdata { get; set; }
 
+        [NameInMap("DataSnapshotIds")]
+        [Validation(Required=false)]
+        public List<string> DataSnapshotIds { get; set; }
+
         /// <summary>
         /// <para>The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 

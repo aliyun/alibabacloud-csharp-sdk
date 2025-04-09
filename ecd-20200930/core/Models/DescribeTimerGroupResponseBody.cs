@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeTimerGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the configuration group.</para>
+        /// <para>The information about the scheduled task group.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public Dictionary<string, int?> BindCountMap { get; set; }
 
             /// <summary>
-            /// <para>The scheduled task configuration groups.</para>
+            /// <para>The scheduled task configurations.</para>
             /// </summary>
             [NameInMap("ConfigTimers")]
             [Validation(Required=false)]

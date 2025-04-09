@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -138,25 +138,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SnapshotType { get; set; }
 
         /// <summary>
-        /// <para>The type of the disk for which the snapshot is created.</para>
+        /// <para>The disk for which you want to create a snapshot.</para>
         /// <remarks>
         /// <para> The value of this parameter is not case-sensitive.</para>
         /// </remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Data: data disk</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>System: system disk</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
+        /// <item><description>Data: the data disk.</description></item>
+        /// <item><description>System: the system disk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

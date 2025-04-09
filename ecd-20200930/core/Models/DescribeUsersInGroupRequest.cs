@@ -100,19 +100,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>Specifies whether to query user details.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true (default)</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
+        /// <item><description>true (default)</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

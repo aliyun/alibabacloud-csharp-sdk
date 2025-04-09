@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyTimerGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration groups.</para>
+        /// <para>The scheduled task groups.</para>
         /// </summary>
         [NameInMap("ConfigTimers")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? AllowClientSetting { get; set; }
 
             /// <summary>
-            /// <para>The CRON expression for the scheduled task.</para>
+            /// <para>The cron expression specified in the scheduled task.</para>
             /// <remarks>
             /// <para> The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7.</para>
             /// </remarks>
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OperationType { get; set; }
 
             /// <summary>
-            /// <para>The process whitelist. If whitelisted processes are running, the scheduled task upon inactivity does not take effect.</para>
+            /// <para>The process whitelist. If whitelisted processes are running, the scheduled task triggered by inactivity does not take effect.</para>
             /// </summary>
             [NameInMap("ProcessWhitelist")]
             [Validation(Required=false)]
             public List<string> ProcessWhitelist { get; set; }
 
             /// <summary>
-            /// <para>The reset operation.</para>
+            /// <para>The reset option.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>RESET_TYPE_SYSTEM: resets the system disk.</description></item>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResetType { get; set; }
 
             /// <summary>
-            /// <para>The type of the scheduled task.</para>
+            /// <para>The scheduled task type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NoOperationDisconnect: scheduled disconnection upon inactivity.</description></item>

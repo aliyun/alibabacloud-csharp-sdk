@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
+            [NameInMap("DisplayNameNew")]
+            [Validation(Required=false)]
+            public string DisplayNameNew { get; set; }
+
             /// <summary>
             /// <para>The email address.</para>
             /// 
@@ -85,6 +89,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("Phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }
+
+            [NameInMap("UserPrincipalName")]
+            [Validation(Required=false)]
+            public string UserPrincipalName { get; set; }
 
         }
 

@@ -9051,6 +9051,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AutoCleanUserdata"] = request.AutoCleanUserdata;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSnapshotIds))
+            {
+                query["DataSnapshotIds"] = request.DataSnapshotIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -9131,6 +9135,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCleanUserdata))
             {
                 query["AutoCleanUserdata"] = request.AutoCleanUserdata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSnapshotIds))
+            {
+                query["DataSnapshotIds"] = request.DataSnapshotIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -11356,6 +11364,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await DeleteCdsFileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a center policy</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCenterPolicyRequest
         /// </param>
@@ -11412,6 +11425,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a center policy</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCenterPolicyRequest
         /// </param>
@@ -11468,6 +11486,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a center policy</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCenterPolicyRequest
         /// </param>
@@ -11481,6 +11504,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return DeleteCenterPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a center policy</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteCenterPolicyRequest
         /// </param>
@@ -38425,6 +38453,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AfterStatus))
+            {
+                query["AfterStatus"] = request.AfterStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
@@ -38502,6 +38534,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AfterStatus))
+            {
+                query["AfterStatus"] = request.AfterStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;

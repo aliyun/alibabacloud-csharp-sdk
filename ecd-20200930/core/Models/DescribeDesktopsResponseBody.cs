@@ -542,6 +542,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
+            [NameInMap("IsLdap")]
+            [Validation(Required=false)]
+            public bool? IsLdap { get; set; }
+
             /// <summary>
             /// <para>The flag that is used to manage the cloud computer.</para>
             /// <para>Valid values:</para>

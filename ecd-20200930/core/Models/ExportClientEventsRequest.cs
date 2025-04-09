@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ExportClientEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud desktop.</para>
+        /// <para>The cloud computer ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud desktop.</para>
+        /// <para>The cloud computer name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -51,17 +51,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The type of event that you want to query. Valid values:</para>
+        /// <para>The type of the event that you want to query. If you provide multiple values for EventTypes, the response will include events of all the specified types. If you provide no values for EventTypes and EventType, the response will include all events in the designated region.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DESKTOP_CONNECT: The desktop session is established.</description></item>
-        /// <item><description>DESKTOP_DISCONNECT: The desktop session is disconnected.</description></item>
-        /// <item><description>DESKTOP_REBOOT: The cloud desktop is restarted.</description></item>
-        /// <item><description>CLIENT_AD_LOGIN: The AD user logs on to the client.</description></item>
-        /// <item><description>GET_CONNECTION_TICKET: The request to connect to the cloud desktop is sent.</description></item>
-        /// <item><description>DESKTOP_START: The cloud desktop is started.</description></item>
-        /// <item><description>DESKTOP_STOP: The cloud desktop is stopped.</description></item>
+        /// <item><description>DESKTOP_STOP: the shutdown event.</description></item>
+        /// <item><description>GET_LITE_CONNECTION_TICKET: the event of retrieving the connection ticket.</description></item>
+        /// <item><description>DESKTOP_DISCONNECT: the session disconnection event.</description></item>
+        /// <item><description>CLIENT_LOGIN: the user logon event.</description></item>
+        /// <item><description>GET_CONNECTION_TICKET: the connection credential retrieval event.</description></item>
+        /// <item><description>DESKTOP_REBOOT: the restart event.</description></item>
+        /// <item><description>DESKTOP_CONNECT: the session establishment event.</description></item>
+        /// <item><description>DESKTOP_START: the start event.</description></item>
         /// </list>
-        /// <para>If you do not specify a value for this parameter, events of all types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CLIENT_LOGIN</para>
@@ -71,19 +72,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The types of event.</para>
+        /// <para>The types of the events that you want to query. You can include multiple event types, and the response will return events matching the specified types or all events if none are specified.</para>
         /// </summary>
         [NameInMap("EventTypes")]
         [Validation(Required=false)]
         public List<string> EventTypes { get; set; }
 
         /// <summary>
-        /// <para>The language in which the cloud desktop is displayed in the console UI. You can export the list of cloud desktops in the specified language. Valid values:</para>
+        /// <para>The language displayed on the frontend page. The backend uses this setting to define the language of exported files.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>zh-CN</c>: Simplified Chinese</description></item>
-        /// <item><description><c>en-GB</c>: English (United Kingdom)</description></item>
+        /// <item><description>zh-CN: Simplified Chinese.</description></item>
+        /// <item><description>en-GB: British English.</description></item>
         /// </list>
-        /// <para>Default value: <c>zh-CN</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -107,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The office network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-363353****</para>
@@ -117,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace.</para>
+        /// <para>The office network name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -127,7 +128,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

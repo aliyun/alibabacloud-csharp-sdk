@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CloneCenterPolicyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the duplicated cloud computer policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pg-gx2x1dhsmthe9****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RebuildDesktopsRequest : TeaModel {
+        [NameInMap("AfterStatus")]
+        [Validation(Required=false)]
+        public string AfterStatus { get; set; }
+
         /// <summary>
         /// <para>The cloud computer IDs. You can specify the IDs of 1 to 20 cloud computers.</para>
         /// <para>This parameter is required.</para>
