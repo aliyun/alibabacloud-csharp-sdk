@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("OsType")]
+        [Validation(Required=false)]
+        public string OsType { get; set; }
+
         /// <summary>
         /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>

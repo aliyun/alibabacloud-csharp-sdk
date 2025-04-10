@@ -117,6 +117,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DesktopStatus { get; set; }
 
+            [NameInMap("DiskStatus")]
+            [Validation(Required=false)]
+            public string DiskStatus { get; set; }
+
+            [NameInMap("OsType")]
+            [Validation(Required=false)]
+            public string OsType { get; set; }
+
             /// <summary>
             /// <para>The progress of creating the snapshot. Unit: %.</para>
             /// 

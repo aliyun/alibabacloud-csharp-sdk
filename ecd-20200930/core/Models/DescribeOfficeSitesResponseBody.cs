@@ -379,6 +379,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public List<string> FileSystemIds { get; set; }
 
+            [NameInMap("IsLdap")]
+            [Validation(Required=false)]
+            public bool? IsLdap { get; set; }
+
+            [NameInMap("LdapUrl")]
+            [Validation(Required=false)]
+            public string LdapUrl { get; set; }
+
             /// <summary>
             /// <para>Details about registration logs.</para>
             /// </summary>
