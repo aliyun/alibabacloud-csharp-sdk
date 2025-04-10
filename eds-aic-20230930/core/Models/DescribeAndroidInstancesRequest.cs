@@ -128,6 +128,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
+        [NameInMap("OfficeSiteIds")]
+        [Validation(Required=false)]
+        public List<string> OfficeSiteIds { get; set; }
+
         /// <summary>
         /// <para>The sales mode.</para>
         /// <para>Valid values:</para>
