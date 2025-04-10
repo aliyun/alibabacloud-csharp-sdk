@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class SelectResourceResponseBody : TeaModel {
+        [NameInMap("aliyunUid")]
+        [Validation(Required=false)]
+        public string AliyunUid { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</para>
