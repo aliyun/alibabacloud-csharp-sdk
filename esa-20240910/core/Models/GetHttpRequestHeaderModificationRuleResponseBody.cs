@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string Operation { get; set; }
 
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
             /// <summary>
             /// <para>Request header value.</para>
             /// 
