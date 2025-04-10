@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DeleteNodeGroupRequest : TeaModel {
         /// <summary>
+        /// <para>Cluster ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i114444141733395242745</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>Node Group ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i121824791737080429819</para>
         /// </summary>

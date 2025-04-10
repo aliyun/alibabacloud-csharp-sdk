@@ -1179,8 +1179,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群下的节点分组</para>
+        /// <para>Create Node Group under Cluster</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateNodeGroupRequest
@@ -1246,8 +1251,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群下的节点分组</para>
+        /// <para>Create Node Group under Cluster</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateNodeGroupRequest
@@ -1313,8 +1323,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群下的节点分组</para>
+        /// <para>Create Node Group under Cluster</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateNodeGroupRequest
@@ -1331,8 +1346,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群下的节点分组</para>
+        /// <para>Create Node Group under Cluster</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateNodeGroupRequest
@@ -1653,8 +1673,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点分组</para>
+        /// <para>Delete Node Group</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteNodeGroupRequest
@@ -1706,8 +1731,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点分组</para>
+        /// <para>Delete Node Group</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteNodeGroupRequest
@@ -1759,8 +1789,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点分组</para>
+        /// <para>Delete Node Group</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteNodeGroupRequest
@@ -1777,8 +1812,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点分组</para>
+        /// <para>Delete Node Group</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteNodeGroupRequest
@@ -1929,8 +1969,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>诊断任务查询接口</para>
+        /// <para>Diagnostic Task Query Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDiagnosticResultRequest
@@ -1978,8 +2023,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>诊断任务查询接口</para>
+        /// <para>Diagnostic Task Query Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDiagnosticResultRequest
@@ -2027,8 +2077,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>诊断任务查询接口</para>
+        /// <para>Diagnostic Task Query Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDiagnosticResultRequest
@@ -2045,8 +2100,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>诊断任务查询接口</para>
+        /// <para>Diagnostic Task Query Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDiagnosticResultRequest
@@ -6657,8 +6717,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节点分组</para>
+        /// <para>Update Node Group</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateNodeGroupRequest
@@ -6714,8 +6779,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节点分组</para>
+        /// <para>Update Node Group</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateNodeGroupRequest
@@ -6771,8 +6841,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节点分组</para>
+        /// <para>Update Node Group</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateNodeGroupRequest
@@ -6789,8 +6864,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节点分组</para>
+        /// <para>Update Node Group</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateNodeGroupRequest

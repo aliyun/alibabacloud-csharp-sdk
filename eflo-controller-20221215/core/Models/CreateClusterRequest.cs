@@ -591,6 +591,24 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             }
 
+            [NameInMap("SystemDisk")]
+            [Validation(Required=false)]
+            public CreateClusterRequestNodeGroupsSystemDisk SystemDisk { get; set; }
+            public class CreateClusterRequestNodeGroupsSystemDisk : TeaModel {
+                [NameInMap("Category")]
+                [Validation(Required=false)]
+                public string Category { get; set; }
+
+                [NameInMap("PerformanceLevel")]
+                [Validation(Required=false)]
+                public string PerformanceLevel { get; set; }
+
+                [NameInMap("Size")]
+                [Validation(Required=false)]
+                public int? Size { get; set; }
+
+            }
+
             /// <summary>
             /// <para>Instance custom data. It needs to be Base64 encoded, and the original data should not exceed 16 KB.</para>
             /// 

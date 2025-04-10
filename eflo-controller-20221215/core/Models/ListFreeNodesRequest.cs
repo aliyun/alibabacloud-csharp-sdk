@@ -59,17 +59,28 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>Tag information</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListFreeNodesRequestTags> Tags { get; set; }
         public class ListFreeNodesRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The key of tag object</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key_aa</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The value of tag object</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>129</para>
+            /// <para>value_aa</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

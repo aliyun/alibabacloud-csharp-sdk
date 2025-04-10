@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public List<ListClusterNodesResponseBodyNodes> Nodes { get; set; }
         public class ListClusterNodesResponseBodyNodes : TeaModel {
+            /// <summary>
+            /// <para>product code</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bcccluster</para>
+            /// </summary>
             [NameInMap("CommodityCode")]
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
@@ -80,6 +86,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
+            /// <summary>
+            /// <para>image name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alinux3_x86_AMD_R_Host_D3_E3_24.13.00_UEFI_N_250121</para>
+            /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public string ImageName { get; set; }
@@ -193,26 +205,47 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string Sn { get; set; }
 
+            /// <summary>
+            /// <para>tag information</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListClusterNodesResponseBodyNodesTags> Tags { get; set; }
             public class ListClusterNodesResponseBodyNodesTags : TeaModel {
+                /// <summary>
+                /// <para>The key of tag object</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aa_key</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The value of tag object</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aa_value</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>task id</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i28ddkdkkdkdd</para>
+            /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>专有网络交换机ID</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1mxqhw8o20tgv3xk47h</para>
@@ -222,7 +255,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>专有网络ID</para>
+            /// <para>VPC ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-0jltf9vinjz3if3lltdy7</para>

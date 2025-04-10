@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public List<ListFreeNodesResponseBodyNodes> Nodes { get; set; }
         public class ListFreeNodesResponseBodyNodes : TeaModel {
+            /// <summary>
+            /// <para>Product Code</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bccluster_eflocomputing_public_cn</para>
+            /// </summary>
             [NameInMap("CommodityCode")]
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
@@ -80,6 +86,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string NodeId { get; set; }
 
+            /// <summary>
+            /// <para>Node status</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Unused</para>
+            /// </summary>
             [NameInMap("OperatingState")]
             [Validation(Required=false)]
             public string OperatingState { get; set; }
@@ -104,14 +116,29 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string Sn { get; set; }
 
+            /// <summary>
+            /// <para>Tags Info</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListFreeNodesResponseBodyNodesTags> Tags { get; set; }
             public class ListFreeNodesResponseBodyNodesTags : TeaModel {
+                /// <summary>
+                /// <para>The key of tag object</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aa_key</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The value of tag object</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aa_vakye</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

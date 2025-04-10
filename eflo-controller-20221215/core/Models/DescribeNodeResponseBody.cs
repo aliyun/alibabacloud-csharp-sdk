@@ -39,6 +39,32 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        [NameInMap("Disks")]
+        [Validation(Required=false)]
+        public List<DescribeNodeResponseBodyDisks> Disks { get; set; }
+        public class DescribeNodeResponseBodyDisks : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            [NameInMap("DiskId")]
+            [Validation(Required=false)]
+            public string DiskId { get; set; }
+
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public string PerformanceLevel { get; set; }
+
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Expiration time</para>
         /// 
@@ -199,7 +225,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>资源组ID</para>
+        /// <para>Resource group ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmywpvugkh7kq</para>
@@ -218,6 +244,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string Sn { get; set; }
 
+        /// <summary>
+        /// <para>The script by user defined</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>#!/bin/bash
+        /// uptime
+        /// echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</para>
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

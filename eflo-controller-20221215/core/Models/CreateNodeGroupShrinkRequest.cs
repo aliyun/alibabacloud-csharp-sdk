@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class CreateNodeGroupShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Cluster ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,12 +21,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>Node ID.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeGroup")]
         [Validation(Required=false)]
         public string NodeGroupShrink { get; set; }
 
+        /// <summary>
+        /// <para>Node information</para>
+        /// </summary>
         [NameInMap("NodeUnit")]
         [Validation(Required=false)]
         public string NodeUnitShrink { get; set; }

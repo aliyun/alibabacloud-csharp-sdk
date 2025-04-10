@@ -168,6 +168,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
                 }
 
+                /// <summary>
+                /// <para>Host name</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i22c11282.eu95sqa</para>
+                /// </summary>
                 [NameInMap("Hostname")]
                 [Validation(Required=false)]
                 public string Hostname { get; set; }
@@ -193,22 +199,63 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public List<ExtendClusterRequestNodeGroups> NodeGroups { get; set; }
         public class ExtendClusterRequestNodeGroups : TeaModel {
+            /// <summary>
+            /// <para>Number of nodes to purchase. Value range: 0–500.</para>
+            /// <para>If the Amount parameter is set to 0, no nodes will be purchased. Existing nodes will be used for scaling.
+            /// If the Amount parameter is set to 1–500, the specified number of nodes will be purchased and used for scaling.
+            /// Default value: 0</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
             [NameInMap("Amount")]
             [Validation(Required=false)]
             public long? Amount { get; set; }
 
+            /// <summary>
+            /// <para>Whether to enable auto-renewal for purchased nodes.
+            /// Conditions: This parameter takes effect only when the Amount parameter is set to a non-zero value and the ChargeType is PrePaid.
+            /// Valid values:</para>
+            /// <para>True: Enable auto-renewal.
+            /// False: Disable auto-renewal.
+            /// Default value: False</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>True</para>
+            /// </summary>
             [NameInMap("AutoRenew")]
             [Validation(Required=false)]
             public bool? AutoRenew { get; set; }
 
+            /// <summary>
+            /// <para>Billing method for nodes.
+            /// This parameter takes effect only when the Amount parameter is set to a value other than 0.
+            /// Valid values:</para>
+            /// <para>PrePaid: Subscription (prepaid).
+            /// PostPaid: Pay-as-you-go (postpaid).
+            /// Default value: PrePaid</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PostPaid</para>
+            /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
+            /// <summary>
+            /// <para>The hostnames of purchased nodes.
+            /// This parameter takes effect only when the Amount parameter is set to a non-zero value.</para>
+            /// </summary>
             [NameInMap("Hostnames")]
             [Validation(Required=false)]
             public List<string> Hostnames { get; set; }
 
+            /// <summary>
+            /// <para>The login password of node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Addk(*78</para>
+            /// </summary>
             [NameInMap("LoginPassword")]
             [Validation(Required=false)]
             public string LoginPassword { get; set; }
@@ -223,14 +270,29 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string NodeGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The tag of node</para>
+            /// </summary>
             [NameInMap("NodeTag")]
             [Validation(Required=false)]
             public List<ExtendClusterRequestNodeGroupsNodeTag> NodeTag { get; set; }
             public class ExtendClusterRequestNodeGroupsNodeTag : TeaModel {
+                /// <summary>
+                /// <para>The key of tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>my_key</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The value of tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>my_value</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -296,6 +358,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             }
 
+            /// <summary>
+            /// <para>Purchase duration for nodes (unit: month).
+            /// Valid values: 1, 6, 12, 24, 36, 48.
+            /// Conditions: This parameter takes effect only when the Amount parameter is set to a non-zero value and the ChargeType is PrePaid.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6</para>
+            /// </summary>
             [NameInMap("Period")]
             [Validation(Required=false)]
             public long? Period { get; set; }
@@ -311,10 +381,22 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string UserData { get; set; }
 
+            /// <summary>
+            /// <para>VSwitch Id</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-0jly2d537ejphyq6h13ke</para>
+            /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
+            /// <summary>
+            /// <para>Vpc Id</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-zq1econyv63tvyci5hefw</para>
+            /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }

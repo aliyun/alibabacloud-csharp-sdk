@@ -136,14 +136,29 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <para>tag information</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListClustersResponseBodyClustersTags> Tags { get; set; }
             public class ListClustersResponseBodyClustersTags : TeaModel {
+                /// <summary>
+                /// <para>The key of tag object</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aa_key</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The value of tag object</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aa_value</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
