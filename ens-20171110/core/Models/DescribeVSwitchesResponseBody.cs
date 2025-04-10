@@ -134,6 +134,26 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeVSwitchesResponseBodyVSwitchesVSwitchTags Tags { get; set; }
+                public class DescribeVSwitchesResponseBodyVSwitchesVSwitchTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag> Tag { get; set; }
+                    public class DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag : TeaModel {
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
+
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>The ID of the vSwitch.</para>
                 /// 

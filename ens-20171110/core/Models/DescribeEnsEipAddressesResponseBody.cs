@@ -199,6 +199,26 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTags Tags { get; set; }
+                public class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag> Tag { get; set; }
+                    public class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag : TeaModel {
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
+
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
+                    }
+
+                }
+
             }
 
         }

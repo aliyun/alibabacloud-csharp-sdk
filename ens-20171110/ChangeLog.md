@@ -1,3 +1,10 @@
+2025-04-10 Version: 8.0.4
+- Update API DescribeEnsEipAddresses: add response parameters Body.EipAddresses.$.Tags.
+- Update API DescribeNatGateways: add response parameters Body.NatGateways.$.Tags.
+- Update API DescribeNetworks: add response parameters Body.Networks.$.Tags.
+- Update API DescribeVSwitches: add response parameters Body.VSwitches.$.Tags.
+
+
 2025-04-08 Version: 8.0.3
 - Generated csharp 2017-11-10 for Ens.
 
