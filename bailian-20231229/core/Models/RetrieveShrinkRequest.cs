@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string Query { get; set; }
 
+        [NameInMap("QueryHistory")]
+        [Validation(Required=false)]
+        public string QueryHistoryShrink { get; set; }
+
         /// <summary>
         /// <para>Ranking configurations.</para>
         /// </summary>

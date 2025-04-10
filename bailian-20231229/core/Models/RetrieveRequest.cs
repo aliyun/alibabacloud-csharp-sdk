@@ -72,6 +72,20 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string Query { get; set; }
 
+        [NameInMap("QueryHistory")]
+        [Validation(Required=false)]
+        public List<RetrieveRequestQueryHistory> QueryHistory { get; set; }
+        public class RetrieveRequestQueryHistory : TeaModel {
+            [NameInMap("content")]
+            [Validation(Required=false)]
+            public string Content { get; set; }
+
+            [NameInMap("role")]
+            [Validation(Required=false)]
+            public string Role { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Ranking configurations.</para>
         /// </summary>

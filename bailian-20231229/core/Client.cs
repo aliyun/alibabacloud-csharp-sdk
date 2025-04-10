@@ -5173,6 +5173,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 request.ImagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Images, "Images", "simple");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryHistory))
+            {
+                request.QueryHistoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryHistory, "QueryHistory", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rerank))
             {
                 request.RerankShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rerank, "Rerank", "json");
@@ -5209,6 +5213,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryHistoryShrink))
+            {
+                query["QueryHistory"] = request.QueryHistoryShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankShrink))
             {
@@ -5301,6 +5309,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 request.ImagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Images, "Images", "simple");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryHistory))
+            {
+                request.QueryHistoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryHistory, "QueryHistory", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rerank))
             {
                 request.RerankShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rerank, "Rerank", "json");
@@ -5337,6 +5349,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryHistoryShrink))
+            {
+                query["QueryHistory"] = request.QueryHistoryShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankShrink))
             {
