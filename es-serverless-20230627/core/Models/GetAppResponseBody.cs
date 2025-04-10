@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
             [Validation(Required=false)]
             public string AppType { get; set; }
 
+            [NameInMap("chargeType")]
+            [Validation(Required=false)]
+            public string ChargeType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2022-08-15T11:20:52.370Z</para>
@@ -161,6 +165,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("scenario")]
+            [Validation(Required=false)]
+            public string Scenario { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>ACTIVE</para>
@@ -168,6 +176,20 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("tags")]
+            [Validation(Required=false)]
+            public List<GetAppResponseBodyResultTags> Tags { get; set; }
+            public class GetAppResponseBodyResultTags : TeaModel {
+                [NameInMap("key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>

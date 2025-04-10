@@ -152,9 +152,27 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
         [Validation(Required=false)]
         public string Scenario { get; set; }
 
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<CreateAppRequestTags> Tags { get; set; }
+        public class CreateAppRequestTags : TeaModel {
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("version")]
         [Validation(Required=false)]
         public string Version { get; set; }
+
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
         [NameInMap("dryRun")]
         [Validation(Required=false)]

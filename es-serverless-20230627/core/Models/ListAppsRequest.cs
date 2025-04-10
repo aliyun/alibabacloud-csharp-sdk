@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Es_serverless20230627.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public string Tags { get; set; }
+
     }
 
 }
