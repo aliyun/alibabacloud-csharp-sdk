@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         [Validation(Required=false)]
         public long? AccountId { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the check items to be checked.</para>
+        /// </summary>
         [NameInMap("MetricIds")]
         [Validation(Required=false)]
         public List<string> MetricIds { get; set; }

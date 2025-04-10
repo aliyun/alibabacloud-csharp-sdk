@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class CreateAccountFactoryBaselineRequest : TeaModel {
         /// <summary>
-        /// <para>The baseline items.</para>
+        /// <para>An array that contains the baseline items.</para>
         /// <para>You can call the <a href="~~ListAccountFactoryBaselineItems~~">ListAccountFactoryBaselineItems</a> operation to query a list of baseline items supported by the account factory in Cloud Governance Center.</para>
         /// </summary>
         [NameInMap("BaselineItems")]

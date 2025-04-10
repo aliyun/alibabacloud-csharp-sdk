@@ -37,12 +37,12 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public List<ListEvaluationMetricDetailsResponseBodyResources> Resources { get; set; }
         public class ListEvaluationMetricDetailsResponseBodyResources : TeaModel {
             /// <summary>
-            /// <para>合规状态。取值：</para>
+            /// <para>The compliance status of the resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NonCompliant：不合规。</description></item>
-            /// <item><description>Excluded：已忽略。</description></item>
-            /// <item><description>PendingExclusion：已忽略未生效。</description></item>
-            /// <item><description>PendingInclusion：已取消忽略未生效。</description></item>
+            /// <item><description>NonCompliant: non-compliant.</description></item>
+            /// <item><description>Excluded: ignored.</description></item>
+            /// <item><description>PendingExclusion: to be ignored.</description></item>
+            /// <item><description>PendingInclusion: to be unignored.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string ResourceClassification { get; set; }
 
             /// <summary>
-            /// <para>The resource ID.</para>
+            /// <para>The ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26435103783237****</para>
@@ -87,6 +87,9 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 
             /// <summary>
             /// <para>The name of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("ResourceName")]
             [Validation(Required=false)]
@@ -121,6 +124,9 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 
                 /// <summary>
                 /// <para>The value of the resource attribute.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example</para>
                 /// </summary>
                 [NameInMap("PropertyValue")]
                 [Validation(Required=false)]

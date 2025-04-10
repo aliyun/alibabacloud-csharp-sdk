@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class ListEnrolledAccountsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The accounts.</para>
+        /// <para>The enrolled accounts.</para>
         /// </summary>
         [NameInMap("EnrolledAccounts")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public long? AccountUid { get; set; }
 
             /// <summary>
-            /// <para>The baseline ID.</para>
+            /// <para>The ID of the baseline that is implemented.</para>
             /// 
             /// <b>Example:</b>
             /// <para>afb-bp1durvn3lgqe28v****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string BaselineId { get; set; }
 
             /// <summary>
-            /// <para>The time at which the account was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-01T02:38:27Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string FolderId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the billing account.</para>
+            /// <para>The ID of the settlement account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13161210500*****</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public long? PayerAccountUid { get; set; }
 
             /// <summary>
-            /// <para>The creation status of the account. Valid values:</para>
+            /// <para>The creation status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: The account is waiting to be created.</description></item>
+            /// <item><description>Pending: The account is pending to be created.</description></item>
             /// <item><description>Running: The account is being created.</description></item>
             /// <item><description>Finished: The account is created.</description></item>
-            /// <item><description>Failed: The account failed to be created.</description></item>
+            /// <item><description>Failed: The account fails to be created.</description></item>
             /// <item><description>Scheduling: The account is being scheduled.</description></item>
-            /// <item><description>ScheduleFailed: The account failed to be scheduled.</description></item>
+            /// <item><description>ScheduleFailed: The account fails to be scheduled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the information about the account was updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-01T02:38:27Z</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class ListEvaluationMetricDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</para>
+        /// <para>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>103144549568****</para>
@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("SnapshotId")]
+        [Validation(Required=false)]
+        public string SnapshotId { get; set; }
 
     }
 

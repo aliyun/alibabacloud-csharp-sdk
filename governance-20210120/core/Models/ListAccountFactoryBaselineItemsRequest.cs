@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class ListAccountFactoryBaselineItemsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100. Default value: 10</para>
+        /// <para>The maximum number of entries per page.</para>
+        /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

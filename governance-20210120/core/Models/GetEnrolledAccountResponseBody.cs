@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string BaselineId { get; set; }
 
         /// <summary>
-        /// <para>An array that contains baseline items.</para>
+        /// <para>The array that contains baseline items.</para>
         /// </summary>
         [NameInMap("BaselineItems")]
         [Validation(Required=false)]
         public List<GetEnrolledAccountResponseBodyBaselineItems> BaselineItems { get; set; }
         public class GetEnrolledAccountResponseBodyBaselineItems : TeaModel {
             /// <summary>
-            /// <para>The configurations of the baseline item.</para>
+            /// <para>The configuration of the baseline item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;Notifications\&quot;:[{\&quot;GroupKey\&quot;:\&quot;account_msg\&quot;,\&quot;Contacts\&quot;:[{\&quot;Name\&quot;:\&quot;aa\&quot;}],\&quot;PmsgStatus\&quot;:1,\&quot;EmailStatus\&quot;:1,\&quot;SmsStatus\&quot;:1}]}</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public bool? Initialized { get; set; }
 
         /// <summary>
-        /// <para>The input parameters that are used when the account was registered.</para>
+        /// <para>Input parameters used to create an account.</para>
         /// </summary>
         [NameInMap("Inputs")]
         [Validation(Required=false)]
@@ -288,14 +288,29 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             [Validation(Required=false)]
             public long? PayerAccountUid { get; set; }
 
+            /// <summary>
+            /// <para>The tag.</para>
+            /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<GetEnrolledAccountResponseBodyInputsTag> Tag { get; set; }
             public class GetEnrolledAccountResponseBodyInputsTag : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>product</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>governance</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -388,7 +403,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time when the information about the account was updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-01T02:38:27Z</para>

@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string BaselineId { get; set; }
 
         /// <summary>
-        /// <para>An array that contains baseline items.</para>
-        /// <para>If this parameter is specified, the configurations of the baseline items are merged with the baseline of the specified account. The configurations of the same baseline items are subject to the configuration of this parameter. We recommend that you leave this parameter empty and configure the <c>BaselineId</c> parameter to specify an account baseline and apply the configuration of the account baseline to the account.</para>
+        /// <para>The array that contains baseline items.</para>
+        /// <para>If this parameter is specified, the configurations of the baseline items are merged with the baseline applied to the specified account. The configurations of the same baseline items are subject to the configurations of this parameter. We recommend that you leave this parameter empty and configure the <c>BaselineId</c> parameter to specify an account baseline and apply the configurations of the account baseline to the account.</para>
         /// </summary>
         [NameInMap("BaselineItems")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to skip the baseline item. Valid values:</para>
+            /// <para>Whether to skip the baseline item. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>false: The baseline item is not skipped.</description></item>
             /// <item><description>true: The baseline item is skipped.</description></item>
