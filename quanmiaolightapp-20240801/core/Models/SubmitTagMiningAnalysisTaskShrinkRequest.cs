@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
     public class SubmitTagMiningAnalysisTaskShrinkRequest : TeaModel {
+        [NameInMap("apiKey")]
+        [Validation(Required=false)]
+        public string ApiKey { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>clueMining</para>

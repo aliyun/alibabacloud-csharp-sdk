@@ -2853,6 +2853,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["apiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
             {
                 body["businessType"] = request.BusinessType;
@@ -2936,6 +2940,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["apiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
             {
                 body["businessType"] = request.BusinessType;
@@ -3393,6 +3401,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["apiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
             {
                 body["businessType"] = request.BusinessType;
@@ -3484,6 +3496,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["apiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
             {
                 body["businessType"] = request.BusinessType;
