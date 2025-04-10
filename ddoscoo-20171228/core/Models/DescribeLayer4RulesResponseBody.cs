@@ -167,6 +167,20 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
             [Validation(Required=false)]
             public string Remark { get; set; }
 
+            [NameInMap("UsTimeout")]
+            [Validation(Required=false)]
+            public DescribeLayer4RulesResponseBodyListenersUsTimeout UsTimeout { get; set; }
+            public class DescribeLayer4RulesResponseBodyListenersUsTimeout : TeaModel {
+                [NameInMap("ConnectTimeout")]
+                [Validation(Required=false)]
+                public long? ConnectTimeout { get; set; }
+
+                [NameInMap("RsTimeout")]
+                [Validation(Required=false)]
+                public long? RsTimeout { get; set; }
+
+            }
+
         }
 
         /// <summary>

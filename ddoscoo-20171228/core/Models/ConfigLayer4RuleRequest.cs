@@ -23,6 +23,20 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         [Validation(Required=false)]
         public long? ProxyEnable { get; set; }
 
+        [NameInMap("UsTimeout")]
+        [Validation(Required=false)]
+        public ConfigLayer4RuleRequestUsTimeout UsTimeout { get; set; }
+        public class ConfigLayer4RuleRequestUsTimeout : TeaModel {
+            [NameInMap("ConnectTimeout")]
+            [Validation(Required=false)]
+            public long? ConnectTimeout { get; set; }
+
+            [NameInMap("RsTimeout")]
+            [Validation(Required=false)]
+            public long? RsTimeout { get; set; }
+
+        }
+
     }
 
 }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 {
-    public class CreateLayer4RuleRequest : TeaModel {
+    public class CreateLayer4RuleShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,17 +25,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
 
         [NameInMap("UsTimeout")]
         [Validation(Required=false)]
-        public CreateLayer4RuleRequestUsTimeout UsTimeout { get; set; }
-        public class CreateLayer4RuleRequestUsTimeout : TeaModel {
-            [NameInMap("ConnectTimeout")]
-            [Validation(Required=false)]
-            public long? ConnectTimeout { get; set; }
-
-            [NameInMap("RsTimeout")]
-            [Validation(Required=false)]
-            public long? RsTimeout { get; set; }
-
-        }
+        public string UsTimeoutShrink { get; set; }
 
     }
 

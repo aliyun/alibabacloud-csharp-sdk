@@ -491,7 +491,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await ConfigHealthCheckWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ConfigLayer4RuleRequest
         /// </param>
         /// <param name="runtime">
@@ -501,9 +501,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
         /// <returns>
         /// ConfigLayer4RuleResponse
         /// </returns>
-        public ConfigLayer4RuleResponse ConfigLayer4RuleWithOptions(ConfigLayer4RuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ConfigLayer4RuleResponse ConfigLayer4RuleWithOptions(ConfigLayer4RuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ConfigLayer4RuleShrinkRequest request = new ConfigLayer4RuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UsTimeout))
+            {
+                request.UsTimeoutShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UsTimeout, "UsTimeout", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Listeners))
             {
@@ -512,6 +518,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyEnable))
             {
                 query["ProxyEnable"] = request.ProxyEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsTimeoutShrink))
+            {
+                query["UsTimeout"] = request.UsTimeoutShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -539,7 +549,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             }
         }
 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ConfigLayer4RuleRequest
         /// </param>
         /// <param name="runtime">
@@ -549,9 +559,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
         /// <returns>
         /// ConfigLayer4RuleResponse
         /// </returns>
-        public async Task<ConfigLayer4RuleResponse> ConfigLayer4RuleWithOptionsAsync(ConfigLayer4RuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ConfigLayer4RuleResponse> ConfigLayer4RuleWithOptionsAsync(ConfigLayer4RuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ConfigLayer4RuleShrinkRequest request = new ConfigLayer4RuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UsTimeout))
+            {
+                request.UsTimeoutShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UsTimeout, "UsTimeout", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Listeners))
             {
@@ -560,6 +576,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyEnable))
             {
                 query["ProxyEnable"] = request.ProxyEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsTimeoutShrink))
+            {
+                query["UsTimeout"] = request.UsTimeoutShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1659,7 +1679,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             return await CreateAsyncTaskWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateLayer4RuleRequest
         /// </param>
         /// <param name="runtime">
@@ -1669,9 +1689,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
         /// <returns>
         /// CreateLayer4RuleResponse
         /// </returns>
-        public CreateLayer4RuleResponse CreateLayer4RuleWithOptions(CreateLayer4RuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateLayer4RuleResponse CreateLayer4RuleWithOptions(CreateLayer4RuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateLayer4RuleShrinkRequest request = new CreateLayer4RuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UsTimeout))
+            {
+                request.UsTimeoutShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UsTimeout, "UsTimeout", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Listeners))
             {
@@ -1680,6 +1706,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyEnable))
             {
                 query["ProxyEnable"] = request.ProxyEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsTimeoutShrink))
+            {
+                query["UsTimeout"] = request.UsTimeoutShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1707,7 +1737,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             }
         }
 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateLayer4RuleRequest
         /// </param>
         /// <param name="runtime">
@@ -1717,9 +1747,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
         /// <returns>
         /// CreateLayer4RuleResponse
         /// </returns>
-        public async Task<CreateLayer4RuleResponse> CreateLayer4RuleWithOptionsAsync(CreateLayer4RuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateLayer4RuleResponse> CreateLayer4RuleWithOptionsAsync(CreateLayer4RuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateLayer4RuleShrinkRequest request = new CreateLayer4RuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UsTimeout))
+            {
+                request.UsTimeoutShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UsTimeout, "UsTimeout", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Listeners))
             {
@@ -1728,6 +1764,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyEnable))
             {
                 query["ProxyEnable"] = request.ProxyEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsTimeoutShrink))
+            {
+                query["UsTimeout"] = request.UsTimeoutShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
