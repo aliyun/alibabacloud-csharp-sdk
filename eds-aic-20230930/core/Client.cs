@@ -1486,6 +1486,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["OssAppUrl"] = request.OssAppUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignApk))
+            {
+                query["SignApk"] = request.SignApk;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1597,6 +1601,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssAppUrl))
             {
                 query["OssAppUrl"] = request.OssAppUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignApk))
+            {
+                query["SignApk"] = request.SignApk;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4107,6 +4115,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AppName"] = request.AppName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
+            {
+                query["AppType"] = request.AppType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 query["BizRegionId"] = request.BizRegionId;
@@ -4183,6 +4195,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
+            {
+                query["AppType"] = request.AppType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {

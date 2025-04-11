@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            [NameInMap("AppType")]
+            [Validation(Required=false)]
+            public string AppType { get; set; }
+
             /// <summary>
             /// <para>Region id.</para>
             /// 

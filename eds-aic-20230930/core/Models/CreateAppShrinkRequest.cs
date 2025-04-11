@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string OssAppUrl { get; set; }
 
+        [NameInMap("SignApk")]
+        [Validation(Required=false)]
+        public string SignApk { get; set; }
+
     }
 
 }
