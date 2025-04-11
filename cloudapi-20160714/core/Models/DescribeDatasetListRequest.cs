@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string DatasetIds { get; set; }
 
+        /// <summary>
+        /// <para>The name of the dataset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IPwhitelist</para>
+        /// </summary>
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
         public string DatasetName { get; set; }

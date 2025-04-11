@@ -36872,6 +36872,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslOcspCacheEnable))
+            {
+                query["SslOcspCacheEnable"] = request.SslOcspCacheEnable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslOcspEnable))
             {
                 query["SslOcspEnable"] = request.SslOcspEnable;
@@ -36965,6 +36969,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslOcspCacheEnable))
+            {
+                query["SslOcspCacheEnable"] = request.SslOcspCacheEnable;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SslOcspEnable))
             {

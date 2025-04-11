@@ -87,6 +87,16 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>If enable ssl OCSP cache.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
+        [NameInMap("SslOcspCacheEnable")]
+        [Validation(Required=false)]
+        public bool? SslOcspCacheEnable { get; set; }
+
+        /// <summary>
         /// <para>If enable ssl OCSP.</para>
         /// 
         /// <b>Example:</b>
