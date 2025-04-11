@@ -328,6 +328,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public DescribeDtsJobDetailResponseBodyDestinationEndpoint DestinationEndpoint { get; set; }
         public class DescribeDtsJobDetailResponseBodyDestinationEndpoint : TeaModel {
+            [NameInMap("AliyunUid")]
+            [Validation(Required=false)]
+            public string AliyunUid { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the password can be modified. Valid values:</para>
             /// <list type="bullet">
@@ -424,6 +428,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
+
+            [NameInMap("RoleName")]
+            [Validation(Required=false)]
+            public string RoleName { get; set; }
 
             /// <summary>
             /// <para>Indicates whether SSL encryption is enabled. Valid values:</para>

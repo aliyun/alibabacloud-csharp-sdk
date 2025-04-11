@@ -17483,6 +17483,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["Username"] = request.Username;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroEtlJob))
+            {
+                query["ZeroEtlJob"] = request.ZeroEtlJob;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -17614,6 +17618,10 @@ namespace AlibabaCloud.SDK.Dts20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
             {
                 query["Username"] = request.Username;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroEtlJob))
+            {
+                query["ZeroEtlJob"] = request.ZeroEtlJob;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
