@@ -68,6 +68,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string Scope { get; set; }
 
+            /// <summary>
+            /// <para>The list of propagation ranges of the aggregation route.</para>
+            /// <remarks>
+            /// <para> You must specify at least one of the following attributes: Aggregation Scope and Aggregate Scope List. We recommend that you specify the latter. The elements in the two attributes cannot be duplicate.</para>
+            /// </remarks>
+            /// </summary>
             [NameInMap("ScopeList")]
             [Validation(Required=false)]
             public List<string> ScopeList { get; set; }

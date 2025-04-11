@@ -4514,7 +4514,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you add an aggregate route to a route table of an Enterprise Edition transit router, the Enterprise Edition transit router advertises its routes only to route tables of virtual private clouds (VPCs) that are associated with a route table of the Enterprise Edition transit router and have route synchronization enabled.
+        /// <para>After you add an aggregate route to a route table of an Enterprise Edition transit router, the transit router advertises its routes only to route tables of associated virtual private clouds (VPCs) and have route synchronization enabled.
         /// Perform the following operations before you create an aggregate route. Otherwise, the Enterprise Edition transit router does not advertise routes to VPC route tables:</para>
         /// <list type="bullet">
         /// <item><description>Associated forwarding is enabled between the VPCs and the Enterprise Edition transit router. For more information, see <a href="https://help.aliyun.com/document_detail/261242.html">AssociateTransitRouterAttachmentWithRouteTable</a>.</description></item>
@@ -4623,7 +4623,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you add an aggregate route to a route table of an Enterprise Edition transit router, the Enterprise Edition transit router advertises its routes only to route tables of virtual private clouds (VPCs) that are associated with a route table of the Enterprise Edition transit router and have route synchronization enabled.
+        /// <para>After you add an aggregate route to a route table of an Enterprise Edition transit router, the transit router advertises its routes only to route tables of associated virtual private clouds (VPCs) and have route synchronization enabled.
         /// Perform the following operations before you create an aggregate route. Otherwise, the Enterprise Edition transit router does not advertise routes to VPC route tables:</para>
         /// <list type="bullet">
         /// <item><description>Associated forwarding is enabled between the VPCs and the Enterprise Edition transit router. For more information, see <a href="https://help.aliyun.com/document_detail/261242.html">AssociateTransitRouterAttachmentWithRouteTable</a>.</description></item>
@@ -4732,7 +4732,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you add an aggregate route to a route table of an Enterprise Edition transit router, the Enterprise Edition transit router advertises its routes only to route tables of virtual private clouds (VPCs) that are associated with a route table of the Enterprise Edition transit router and have route synchronization enabled.
+        /// <para>After you add an aggregate route to a route table of an Enterprise Edition transit router, the transit router advertises its routes only to route tables of associated virtual private clouds (VPCs) and have route synchronization enabled.
         /// Perform the following operations before you create an aggregate route. Otherwise, the Enterprise Edition transit router does not advertise routes to VPC route tables:</para>
         /// <list type="bullet">
         /// <item><description>Associated forwarding is enabled between the VPCs and the Enterprise Edition transit router. For more information, see <a href="https://help.aliyun.com/document_detail/261242.html">AssociateTransitRouterAttachmentWithRouteTable</a>.</description></item>
@@ -4760,7 +4760,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you add an aggregate route to a route table of an Enterprise Edition transit router, the Enterprise Edition transit router advertises its routes only to route tables of virtual private clouds (VPCs) that are associated with a route table of the Enterprise Edition transit router and have route synchronization enabled.
+        /// <para>After you add an aggregate route to a route table of an Enterprise Edition transit router, the transit router advertises its routes only to route tables of associated virtual private clouds (VPCs) and have route synchronization enabled.
         /// Perform the following operations before you create an aggregate route. Otherwise, the Enterprise Edition transit router does not advertise routes to VPC route tables:</para>
         /// <list type="bullet">
         /// <item><description>Associated forwarding is enabled between the VPCs and the Enterprise Edition transit router. For more information, see <a href="https://help.aliyun.com/document_detail/261242.html">AssociateTransitRouterAttachmentWithRouteTable</a>.</description></item>
@@ -10420,6 +10420,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -10502,6 +10506,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -18180,7 +18188,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set the <b>TransitRouteTableId</b> and <b>TransitRouteTableAggregationCidr</b> parameters to specify the aggregate routes that you want to query. If you set only the <b>TransitRouteTableId</b> parameter, all aggregate routes in the specified route table are queried.</para>
+        /// <para>You can specify the values of the <b>TransitRouteTableId</b> and <b>TransitRouteTableAggregationCidr</b> parameters to query a specified aggregate route. If you specify only the <b>TransitRouteTableId</b> parameter, all aggregated routes in the route table are queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18266,7 +18274,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set the <b>TransitRouteTableId</b> and <b>TransitRouteTableAggregationCidr</b> parameters to specify the aggregate routes that you want to query. If you set only the <b>TransitRouteTableId</b> parameter, all aggregate routes in the specified route table are queried.</para>
+        /// <para>You can specify the values of the <b>TransitRouteTableId</b> and <b>TransitRouteTableAggregationCidr</b> parameters to query a specified aggregate route. If you specify only the <b>TransitRouteTableId</b> parameter, all aggregated routes in the route table are queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18352,7 +18360,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set the <b>TransitRouteTableId</b> and <b>TransitRouteTableAggregationCidr</b> parameters to specify the aggregate routes that you want to query. If you set only the <b>TransitRouteTableId</b> parameter, all aggregate routes in the specified route table are queried.</para>
+        /// <para>You can specify the values of the <b>TransitRouteTableId</b> and <b>TransitRouteTableAggregationCidr</b> parameters to query a specified aggregate route. If you specify only the <b>TransitRouteTableId</b> parameter, all aggregated routes in the route table are queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18375,7 +18383,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set the <b>TransitRouteTableId</b> and <b>TransitRouteTableAggregationCidr</b> parameters to specify the aggregate routes that you want to query. If you set only the <b>TransitRouteTableId</b> parameter, all aggregate routes in the specified route table are queried.</para>
+        /// <para>You can specify the values of the <b>TransitRouteTableId</b> and <b>TransitRouteTableAggregationCidr</b> parameters to query a specified aggregate route. If you specify only the <b>TransitRouteTableId</b> parameter, all aggregated routes in the route table are queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28221,7 +28229,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑聚合路由</para>
+        /// <para>Edit an aggregate route.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28320,7 +28328,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑聚合路由</para>
+        /// <para>Edit an aggregate route.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28419,7 +28427,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑聚合路由</para>
+        /// <para>Edit an aggregate route.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28437,7 +28445,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑聚合路由</para>
+        /// <para>Edit an aggregate route.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32529,6 +32537,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行云企业网预付费带宽包临时升配</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TempUpgradeCenBandwidthPackageSpecRequest
         /// </param>
@@ -32597,6 +32610,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行云企业网预付费带宽包临时升配</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TempUpgradeCenBandwidthPackageSpecRequest
         /// </param>
@@ -32665,6 +32683,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             }
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行云企业网预付费带宽包临时升配</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TempUpgradeCenBandwidthPackageSpecRequest
         /// </param>
@@ -32678,6 +32701,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
             return TempUpgradeCenBandwidthPackageSpecWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>进行云企业网预付费带宽包临时升配</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TempUpgradeCenBandwidthPackageSpecRequest
         /// </param>

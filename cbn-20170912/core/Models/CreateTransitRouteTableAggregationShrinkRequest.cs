@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class CreateTransitRouteTableAggregationShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</para>
+        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the aggregate route.</para>
-        /// <para>The description must be 0 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ _ -.</para>
+        /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the aggregate route.</para>
-        /// <para>The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ _ -. You can also leave the name empty.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -94,8 +94,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouteTableAggregationName { get; set; }
 
         /// <summary>
-        /// <para>The scope of networks that you want to advertise the aggregate route.</para>
-        /// <para>Set the value to <b>VPC</b>, which specified that the aggregate route is advertised to VPCs that are in associated forwarding relationship with a route table of the Enterprise Edition transit router and have route synchronization enabled.</para>
+        /// <para>The scope of networks to which the aggregate route is advertised.</para>
+        /// <para>The valid value is <b>VPC</b>, which indicates that the aggregate route is advertised to all VPCs that are in associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -104,6 +104,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string TransitRouteTableAggregationScope { get; set; }
 
+        /// <summary>
+        /// <para>The list of propagation ranges of the aggregation route.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the following attributes: Aggregation Scope and Aggregate Scope List. We recommend that you specify the latter. The elements in the two attributes cannot be duplicate.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("TransitRouteTableAggregationScopeList")]
         [Validation(Required=false)]
         public string TransitRouteTableAggregationScopeListShrink { get; set; }
