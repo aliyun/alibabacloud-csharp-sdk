@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public ListWafTemplateRulesRequestQueryArgs QueryArgs { get; set; }
         public class ListWafTemplateRulesRequestQueryArgs : TeaModel {
+            [NameInMap("Kinds")]
+            [Validation(Required=false)]
+            public List<string> Kinds { get; set; }
+
             /// <summary>
             /// <para>Rule type.</para>
             /// 

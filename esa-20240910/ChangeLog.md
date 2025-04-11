@@ -1,3 +1,7 @@
+2025-04-11 Version: 2.23.1
+- Update API ListWafTemplateRules: add request parameters QueryArgs.Kinds.
+
+
 2025-04-10 Version: 2.23.0
 - Support API ListCertificatesByRecord.
 - Update API CreateHttpRequestHeaderModificationRule: add request parameters RequestHeaderModification.$.Type.
