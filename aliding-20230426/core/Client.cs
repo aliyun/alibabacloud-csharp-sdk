@@ -15527,6 +15527,224 @@ namespace AlibabaCloud.SDK.Aliding20230426
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取助理能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAssistantCapabilityRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetAssistantCapabilityHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssistantCapabilityResponse
+        /// </returns>
+        public GetAssistantCapabilityResponse GetAssistantCapabilityWithOptions(GetAssistantCapabilityRequest request, GetAssistantCapabilityHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
+            {
+                body["assistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalAssistantId))
+            {
+                body["originalAssistantId"] = request.OriginalAssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                body["protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreadId))
+            {
+                body["threadId"] = request.ThreadId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                body["timeout"] = request.Timeout;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountId))
+            {
+                realHeaders["accountId"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountId);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAssistantCapability",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/ai/v1/assistant/getAssistantCapability",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetAssistantCapabilityResponse>(CallApi(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetAssistantCapabilityResponse>(Execute(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取助理能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAssistantCapabilityRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetAssistantCapabilityHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssistantCapabilityResponse
+        /// </returns>
+        public async Task<GetAssistantCapabilityResponse> GetAssistantCapabilityWithOptionsAsync(GetAssistantCapabilityRequest request, GetAssistantCapabilityHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
+            {
+                body["assistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalAssistantId))
+            {
+                body["originalAssistantId"] = request.OriginalAssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                body["protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreadId))
+            {
+                body["threadId"] = request.ThreadId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                body["timeout"] = request.Timeout;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountId))
+            {
+                realHeaders["accountId"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountId);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAssistantCapability",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/ai/v1/assistant/getAssistantCapability",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
+            {
+                return TeaModel.ToObject<GetAssistantCapabilityResponse>(await CallApiAsync(params_, req, runtime));
+            }
+            else
+            {
+                return TeaModel.ToObject<GetAssistantCapabilityResponse>(await ExecuteAsync(params_, req, runtime));
+            }
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取助理能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAssistantCapabilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssistantCapabilityResponse
+        /// </returns>
+        public GetAssistantCapabilityResponse GetAssistantCapability(GetAssistantCapabilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetAssistantCapabilityHeaders headers = new GetAssistantCapabilityHeaders();
+            return GetAssistantCapabilityWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取助理能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAssistantCapabilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssistantCapabilityResponse
+        /// </returns>
+        public async Task<GetAssistantCapabilityResponse> GetAssistantCapabilityAsync(GetAssistantCapabilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetAssistantCapabilityHeaders headers = new GetAssistantCapabilityHeaders();
+            return await GetAssistantCapabilityWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取群存储空间信息</para>
         /// </summary>
         /// 
