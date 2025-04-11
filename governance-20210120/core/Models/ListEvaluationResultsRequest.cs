@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("Scope")]
+        [Validation(Required=false)]
+        public string Scope { get; set; }
+
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]
         public string SnapshotId { get; set; }

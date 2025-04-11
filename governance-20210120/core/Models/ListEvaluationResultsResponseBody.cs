@@ -53,6 +53,16 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             [Validation(Required=false)]
             public List<ListEvaluationResultsResponseBodyResultsMetricResults> MetricResults { get; set; }
             public class ListEvaluationResultsResponseBodyResultsMetricResults : TeaModel {
+                [NameInMap("AccountSummary")]
+                [Validation(Required=false)]
+                public ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary AccountSummary { get; set; }
+                public class ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary : TeaModel {
+                    [NameInMap("NonCompliant")]
+                    [Validation(Required=false)]
+                    public int? NonCompliant { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The error information.</para>
                 /// <remarks>
