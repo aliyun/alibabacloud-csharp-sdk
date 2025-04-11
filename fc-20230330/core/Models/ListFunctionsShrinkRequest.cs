@@ -9,12 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListFunctionsShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The description of the functions to retrieve.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_description</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The version of Function Compute to which the functions belong. Valid values: v3 and v2. v3: only lists functions of Function Compute 3.0. v2: only lists functions of Function Compute 2.0. By default, this parameter is left empty and functions in both Function Compute 3.0 and Function Compute 2.0 are listed.</para>
+        /// <para>The version of Function Compute to which the functions belong.</para>
+        /// <list type="bullet">
+        /// <item><description>v3: Only lists functions of Function Compute 3.0.</description></item>
+        /// <item><description>v2: Only lists functions of Function Compute 2.0.</description></item>
+        /// </list>
+        /// <para>By default, this parameter is left empty and functions in both Function Compute 3.0 and Function Compute 2.0 are listed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v3</para>
@@ -23,6 +34,12 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string FcVersion { get; set; }
 
+        /// <summary>
+        /// <para>The GPU type of the functions to retrieve.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fc.gpu.tesla.1</para>
+        /// </summary>
         [NameInMap("gpuType")]
         [Validation(Required=false)]
         public string GpuType { get; set; }
@@ -57,10 +74,19 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string Prefix { get; set; }
 
+        /// <summary>
+        /// <para>The runtime of the functions to retrieve.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>python3.10</para>
+        /// </summary>
         [NameInMap("runtime")]
         [Validation(Required=false)]
         public string Runtime { get; set; }
 
+        /// <summary>
+        /// <para>The tag of the functions to retrieve.</para>
+        /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }

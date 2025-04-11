@@ -8,16 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class DisableFunctionInvocationResponseBody : TeaModel {
+    public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>zh-CN</para>
         /// </summary>
-        [NameInMap("success")]
+        [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string AcceptLanguage { get; set; }
 
     }
 
