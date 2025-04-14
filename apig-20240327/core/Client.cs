@@ -6651,6 +6651,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 query["sourceType"] = request.SourceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypes))
+            {
+                query["sourceTypes"] = request.SourceTypes;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6723,6 +6727,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["sourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypes))
+            {
+                query["sourceTypes"] = request.SourceTypes;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
