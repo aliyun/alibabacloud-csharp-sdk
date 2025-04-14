@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeWebReportTopIpResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The information about the IP addresses.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]

@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The source of the statistics. Valid value:</para>
+        /// <para>The source of the statistics. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>visit</b>: indicates all IP addresses.</description></item>
         /// <item><description><b>block</b>: indicates blocked IP addresses.</description></item>

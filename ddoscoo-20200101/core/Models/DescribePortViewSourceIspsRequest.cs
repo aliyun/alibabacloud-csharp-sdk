@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the IDs of instances to query.</para>
+        /// <para>The IDs of the Anti-DDoS Proxy instances to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,8 +35,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs in Resource Management.</para>
-        /// <para>If you do not configure this parameter, the instance belongs to the default resource group.</para>
+        /// <para>The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management.</para>
+        /// <para>If you do not specify this parameter, the instance belongs to the default resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2pz25js****</para>

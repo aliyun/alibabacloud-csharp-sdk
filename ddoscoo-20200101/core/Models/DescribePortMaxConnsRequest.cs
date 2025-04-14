@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The IDs of the Anti-DDoS Proxy instances.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all Anti-DDoS Proxy instances.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

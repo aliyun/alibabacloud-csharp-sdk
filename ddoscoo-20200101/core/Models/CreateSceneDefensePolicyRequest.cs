@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// <para>The template of the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>promotion</b>: important activity</description></item>
-        /// <item><description><b>bypass</b>: all traffic forwarded</description></item>
+        /// <item><description><b>promotion</b>: important activity.</description></item>
+        /// <item><description><b>bypass</b>: all traffic forwarded.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

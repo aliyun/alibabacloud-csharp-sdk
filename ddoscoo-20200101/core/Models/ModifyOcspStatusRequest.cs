@@ -26,10 +26,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// <para>Specifies whether to enable the OCSP feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><b>1</b>: yes.</description></item>
+        /// <item><description><b>0</b>: no.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]

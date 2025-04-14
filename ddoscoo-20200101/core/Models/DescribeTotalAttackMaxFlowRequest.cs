@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances. Separate multiple instance IDs with commas (,). Example: InstanceIds.1, InstanceIds.2, InstanceIds.3.</para>
+        /// <para>The IDs of the Anti-DDoS Proxy instances. Separate multiple instance IDs with commas (,). Example: InstanceIds.1, InstanceIds.2, InstanceIds.3.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribePortMaxConnsResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array consisting of the details of the maximum number of connections that are established over a port of the instance.</para>
+        /// <para>The details of the maximum number of connections that can be established over a port of the instance.</para>
         /// </summary>
         [NameInMap("PortMaxConns")]
         [Validation(Required=false)]

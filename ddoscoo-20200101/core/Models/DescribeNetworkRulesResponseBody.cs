@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeNetworkRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the port forwarding rule.</para>
+        /// <para>The details of the port forwarding rules.</para>
         /// </summary>
         [NameInMap("NetworkRules")]
         [Validation(Required=false)]
@@ -60,6 +60,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public bool? IsAutoCreate { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the payload filtering rule is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: enabled.</description></item>
+            /// <item><description>0: disabled.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("PayloadRuleEnable")]
             [Validation(Required=false)]
             public long? PayloadRuleEnable { get; set; }
@@ -78,10 +88,30 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the traffic diversion switch is on. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: on.</description></item>
+            /// <item><description>1: off.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("ProxyEnable")]
             [Validation(Required=false)]
             public long? ProxyEnable { get; set; }
 
+            /// <summary>
+            /// <para>The status of traffic diversion. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>on: Traffic diversion takes effect.</description></item>
+            /// <item><description>off: Traffic diversion does not take effect.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>on</para>
+            /// </summary>
             [NameInMap("ProxyStatus")]
             [Validation(Required=false)]
             public string ProxyStatus { get; set; }

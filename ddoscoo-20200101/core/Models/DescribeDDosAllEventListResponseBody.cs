@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDDosAllEventListResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of attack events.</para>
+        /// <para>The DDoS attack events.</para>
         /// </summary>
         [NameInMap("AttackEvents")]
         [Validation(Required=false)]

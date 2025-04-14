@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public long? Bps { get; set; }
 
         /// <summary>
-        /// <para>The peak packet rate of attack traffic . Unit: packets per second (pps).</para>
+        /// <para>The peak packet rate of attack traffic. Unit: packets per second (pps).</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

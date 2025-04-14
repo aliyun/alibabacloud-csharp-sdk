@@ -8,12 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
-    public class ModifyWebRuleResponseBody : TeaModel {
+    public class ConfigL7GlobalRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>CB3261D2-7D1B-4ADA-9E98-A200B2CDA2DC</para>
+        /// <para>CF33B4C3-196E-4015-AADD-5CAD00057B80</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

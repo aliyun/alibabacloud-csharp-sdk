@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeWebInstanceRelationsRequest : TeaModel {
         /// <summary>
-        /// <para>The domain names of the website. list</para>
+        /// <para>The domain names of the website.</para>
         /// <remarks>
-        /// <para>A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</para>
+        /// <para> A forwarding rule must be configured for the domain names. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

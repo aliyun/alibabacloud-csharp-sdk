@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details about the administrative region in China from which the requests are sent.</para>
+        /// <para>The details of the administrative region in China from which the requests are sent.</para>
         /// </summary>
         [NameInMap("SourceProvinces")]
         [Validation(Required=false)]

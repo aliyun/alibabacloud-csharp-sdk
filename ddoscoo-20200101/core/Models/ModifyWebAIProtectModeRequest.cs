@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         /// <summary>
         /// <para>The domain name of the website.</para>
         /// <remarks>
-        /// <para>A forwarding rule must be configured for a domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</para>
+        /// <para> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/474212.html">DescribeDomains</a> operation to query all domain names.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

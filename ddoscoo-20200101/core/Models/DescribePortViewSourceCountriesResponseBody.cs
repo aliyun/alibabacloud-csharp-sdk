@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array consisting of countries or areas from which the requests are sent.</para>
+        /// <para>The details about the country or area from which the requests are sent.</para>
         /// </summary>
         [NameInMap("SourceCountrys")]
         [Validation(Required=false)]
