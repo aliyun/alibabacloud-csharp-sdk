@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Obsolete]
         public string AccountName { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Add organization members.</para>
         /// 
@@ -36,14 +38,19 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// </summary>
         [NameInMap("AdminUser")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? AdminUser { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("AuthAdminUser")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? AuthAdminUser { get; set; }
 
         /// <summary>

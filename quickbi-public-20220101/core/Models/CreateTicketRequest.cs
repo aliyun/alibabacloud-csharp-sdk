@@ -9,6 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class CreateTicketRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The user\&quot;s account name.</para>
         /// <list type="bullet">
@@ -24,8 +26,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
+        [Obsolete]
         public string AccountName { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The type of the user\&quot;s account.</para>
         /// <list type="bullet">
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// </summary>
         [NameInMap("AccountType")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? AccountType { get; set; }
 
         /// <summary>

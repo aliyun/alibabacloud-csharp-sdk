@@ -25,6 +25,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public string ChartType { get; set; }
 
+            /// <summary>
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("ConclusionText")]
+            [Validation(Required=false)]
+            public string ConclusionText { get; set; }
+
+            [NameInMap("LogicSql")]
+            [Validation(Required=false)]
+            public string LogicSql { get; set; }
+
             [NameInMap("MetaType")]
             [Validation(Required=false)]
             public List<SmartqQueryAbilityResponseBodyResultMetaType> MetaType { get; set; }
@@ -51,6 +63,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public List<SmartqQueryAbilityResponseBodyResultValues> Values { get; set; }
             public class SmartqQueryAbilityResponseBodyResultValues : TeaModel {
+                /// <summary>
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
                 [NameInMap("Row")]
                 [Validation(Required=false)]
                 public List<string> Row { get; set; }

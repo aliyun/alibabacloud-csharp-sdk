@@ -1763,6 +1763,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return await AuthorizeMenuWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI BatchAddFeishuUsers is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>批量添加飞书用户。</para>
@@ -1778,6 +1782,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <returns>
         /// BatchAddFeishuUsersResponse
         /// </returns>
+        [Obsolete("OpenAPI BatchAddFeishuUsers is deprecated")]
+        // Deprecated
         public BatchAddFeishuUsersResponse BatchAddFeishuUsersWithOptions(BatchAddFeishuUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1828,6 +1834,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             }
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI BatchAddFeishuUsers is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>批量添加飞书用户。</para>
@@ -1843,6 +1853,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <returns>
         /// BatchAddFeishuUsersResponse
         /// </returns>
+        [Obsolete("OpenAPI BatchAddFeishuUsers is deprecated")]
+        // Deprecated
         public async Task<BatchAddFeishuUsersResponse> BatchAddFeishuUsersWithOptionsAsync(BatchAddFeishuUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1893,6 +1905,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             }
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI BatchAddFeishuUsers is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>批量添加飞书用户。</para>
@@ -1905,12 +1921,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <returns>
         /// BatchAddFeishuUsersResponse
         /// </returns>
+        [Obsolete("OpenAPI BatchAddFeishuUsers is deprecated")]
+        // Deprecated
         public BatchAddFeishuUsersResponse BatchAddFeishuUsers(BatchAddFeishuUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return BatchAddFeishuUsersWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI BatchAddFeishuUsers is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>批量添加飞书用户。</para>
@@ -1923,6 +1945,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <returns>
         /// BatchAddFeishuUsersResponse
         /// </returns>
+        [Obsolete("OpenAPI BatchAddFeishuUsers is deprecated")]
+        // Deprecated
         public async Task<BatchAddFeishuUsersResponse> BatchAddFeishuUsersAsync(BatchAddFeishuUsersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9649,6 +9673,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             return await QueryDataRangeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI QueryDataService is deprecated, please use quickbi-public::2022-01-01::QueryData instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Invoke an already created API in the data service.</para>
@@ -9676,6 +9704,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <returns>
         /// QueryDataServiceResponse
         /// </returns>
+        [Obsolete("OpenAPI QueryDataService is deprecated, please use quickbi-public::2022-01-01::QueryData instead.")]
+        // Deprecated
         public QueryDataServiceResponse QueryDataServiceWithOptions(QueryDataServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9718,6 +9748,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             }
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI QueryDataService is deprecated, please use quickbi-public::2022-01-01::QueryData instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Invoke an already created API in the data service.</para>
@@ -9745,6 +9779,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <returns>
         /// QueryDataServiceResponse
         /// </returns>
+        [Obsolete("OpenAPI QueryDataService is deprecated, please use quickbi-public::2022-01-01::QueryData instead.")]
+        // Deprecated
         public async Task<QueryDataServiceResponse> QueryDataServiceWithOptionsAsync(QueryDataServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9787,6 +9823,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             }
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI QueryDataService is deprecated, please use quickbi-public::2022-01-01::QueryData instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Invoke an already created API in the data service.</para>
@@ -9811,12 +9851,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <returns>
         /// QueryDataServiceResponse
         /// </returns>
+        [Obsolete("OpenAPI QueryDataService is deprecated, please use quickbi-public::2022-01-01::QueryData instead.")]
+        // Deprecated
         public QueryDataServiceResponse QueryDataService(QueryDataServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryDataServiceWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI QueryDataService is deprecated, please use quickbi-public::2022-01-01::QueryData instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Invoke an already created API in the data service.</para>
@@ -9841,6 +9887,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <returns>
         /// QueryDataServiceResponse
         /// </returns>
+        [Obsolete("OpenAPI QueryDataService is deprecated, please use quickbi-public::2022-01-01::QueryData instead.")]
+        // Deprecated
         public async Task<QueryDataServiceResponse> QueryDataServiceAsync(QueryDataServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
