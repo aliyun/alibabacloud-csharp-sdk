@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Unique identifier of a Serverless resource group</para>
+        /// <para>The ID of the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

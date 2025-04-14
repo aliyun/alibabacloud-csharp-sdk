@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SamplingConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The strength of the monitoring rule. Valid values:</para>
+        /// <para>The strength of the rule. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Normal</description></item>
         /// <item><description>High</description></item>

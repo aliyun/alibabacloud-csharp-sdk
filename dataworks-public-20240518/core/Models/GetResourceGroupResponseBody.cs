@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request. It is used to locate logs and troubleshoot problems.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The creation time, which is a 64-bit timestamp.</para>
+            /// <para>The time when the resource group was created. The value is a 64-bit timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1727055811000</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who created the resource group.</para>
+            /// <para>The ID of the account that is used to create the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11075500042XXXXX</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string CreateUser { get; set; }
 
             /// <summary>
-            /// <para>The default VPC ID bound to the common resource group.</para>
+            /// <para>The ID of the virtual private cloud (VPC) with which the resource group is associated by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-m2et4f3oc8msfbccXXXXX</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string DefaultVpcId { get; set; }
 
             /// <summary>
-            /// <para>The default switch ID bound to the common resource group.</para>
+            /// <para>The ID of the vSwitch with which the resource group is associated by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-uf8usrhs7hjd9amsXXXXX</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string DefaultVswitchId { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the resource group.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the order instance of the resource group.</para>
+            /// <para>The instance ID of the order that is used to create the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c442b330-3b10-4584-959e-736e4edXXXXX</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? Amount { get; set; }
 
                 /// <summary>
-                /// <para>Specification details.</para>
+                /// <para>The number of compute units (CUs) in the resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2CU</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>Whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

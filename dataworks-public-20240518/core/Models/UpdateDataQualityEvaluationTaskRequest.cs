@@ -419,8 +419,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The hook trigger condition. When this condition is met, the hook action is triggered. Only two conditional expressions are supported:</para>
             /// <list type="bullet">
-            /// <item><description>Specify only one group of rule strength type and rule check status, such as ${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;. In this expression, the hook trigger condition is met if severity is High and status is Critical.</description></item>
-            /// <item><description>Specify multiple groups of rule strength types and rule check status, such as (${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;). In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</description></item>
+            /// <item><description>Specify only one group of rule strength type and rule check status, such as <c>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</c>. In this expression, the hook trigger condition is met if severity is High and status is Critical.</description></item>
+            /// <item><description>Specify multiple groups of rule strength types and rule check status, such as <c>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</c>. In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -476,8 +476,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The notification trigger condition. When this condition is met, the alert notification is triggered. Only two conditional expressions are supported:</para>
             /// <list type="bullet">
-            /// <item><description>Specify only one group of rule strength type and rule check status, such as ${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;. In this expression, the hook trigger condition is met if severity is High and status is Critical.</description></item>
-            /// <item><description>Specify multiple groups of rule strength types and rule check status, such as (${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;). In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</description></item>
+            /// <item><description>Specify only one group of rule strength type and rule check status, such as <c>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</c>. In this expression, the hook trigger condition is met if severity is High and status is Critical.</description></item>
+            /// <item><description>Specify multiple groups of rule strength types and rule check status, such as <c>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</c>. In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -522,14 +522,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <list type="bullet">
                     /// <item><description>atAll: specifies that all members in a group are mentioned when alerts are sent by using DingTalk. This parameter is valid only if you set ReceiverType to DingdingUrl.</description></item>
                     /// </list>
-                    /// <para>Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>WebhookUrl</description></item>
-                    /// <item><description>FeishuUrl</description></item>
-                    /// <item><description>DingdingUrl</description></item>
-                    /// <item><description>WeixinUrl</description></item>
-                    /// <item><description>AliUid</description></item>
-                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{  &quot;atAll&quot;: true }</para>
@@ -540,6 +532,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The type of the alert recipient.</para>
+                    /// <para>Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>WebhookUrl</description></item>
+                    /// <item><description>FeishuUrl</description></item>
+                    /// <item><description>DingdingUrl</description></item>
+                    /// <item><description>WeixinUrl</description></item>
+                    /// <item><description>AliUid</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DingdingUrl</para>

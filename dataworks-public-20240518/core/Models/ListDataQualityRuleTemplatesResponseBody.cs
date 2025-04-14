@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityRuleTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Quality Rule template pagination query results</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListDataQualityRuleTemplatesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListDataQualityRuleTemplatesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>Rule template list</para>
+            /// <para>The templates.</para>
             /// </summary>
             [NameInMap("DataQualityRuleTemplates")]
             [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The category directory where the custom template is stored, separated by slashes. Each level name can be up to 1024 characters in length and cannot contain white space characters or slashes.</para>
+                /// <para>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/ods/order_data</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DirectoryPath { get; set; }
 
                 /// <summary>
-                /// <para>Rule template name, a combination of numbers, English letters, Chinese characters, and half-width punctuation marks, up to 512 characters in length</para>
+                /// <para>The name of the template. The name can be up to 512 characters in length and can contain digits, letters, and punctuation marks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Table row Count Verification</para>

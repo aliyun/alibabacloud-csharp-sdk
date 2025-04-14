@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The description of the task.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the task.</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SQL node</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public BatchUpdateTasksRequestTasksTrigger Trigger { get; set; }
             public class BatchUpdateTasksRequestTasksTrigger : TeaModel {
                 /// <summary>
-                /// <para>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</para>
+                /// <para>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00 00 00 * * ?</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Cron { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</para>
+                /// <para>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <c>yyyy-mm-dd hh:mm:ss</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9999-01-01 00:00:00</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Recurrence { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</para>
+                /// <para>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <c>yyyy-mm-dd hh:mm:ss</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1970-01-01 00:00:00</para>
@@ -269,8 +269,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The trigger type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Scheduler: periodic scheduling</description></item>
-                /// <item><description>Manual: manual scheduling</description></item>
+                /// <item><description>Scheduler: scheduling cycle-based trigger</description></item>
+                /// <item><description>Manual: manual trigger</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

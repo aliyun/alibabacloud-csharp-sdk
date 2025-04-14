@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? BaseLineId { get; set; }
 
             /// <summary>
-            /// <para>The unique code of the client. This parameter is used to create a task asynchronously and implement the idempotence of the task. If you do not specify this parameter when you create the task, the system automatically generates a unique code. The unique code is uniquely associated with the task ID. If you specify this parameter when you update or delete the task, the value of this parameter must be the unique code that is used to create the task.</para>
+            /// <para>The unique code of the client. This parameter is used to create a task asynchronously and implement the idempotence of the task. If you do not specify this parameter when you create the workflow, the system automatically generates a unique code. The unique code is uniquely associated with the workflow ID. If you specify this parameter when you update or delete the workflow, the value of this parameter must be the unique code that is used to create the workflow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Task_0bc5213917368545132902xxxxxxxx</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Unique identifier of a common resource group.</para>
+        /// <para>The ID of the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateAlertRuleRequestNotification Notification { get; set; }
         public class CreateAlertRuleRequestNotification : TeaModel {
             /// <summary>
-            /// <para>The alert channels.</para>
+            /// <para>The alert notification channels.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Channels")]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<string> Channels { get; set; }
 
             /// <summary>
-            /// <para>The interval at which an alert notification is sent. Unit: minutes. Valid values: 5 to 10,000.</para>
+            /// <para>The interval at which an alert notification is sent. Unit: minutes. Valid values: [5,10000].</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? IntervalInMinutes { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of times an alert notification is sent within one calendar day. Valid values: 1 to 10,000.</para>
+            /// <para>The maximum number of times an alert notification can be sent within a calendar day. Valid values: [1, 10000].</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? Maximum { get; set; }
 
             /// <summary>
-            /// <para>The alert recipient.</para>
+            /// <para>The alert recipients.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Receivers")]
@@ -88,13 +88,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The type of the alert recipient. Valid valves:</para>
                 /// <list type="bullet">
                 /// <item><description>AliUid: Alibaba Cloud account ID.</description></item>
-                /// <item><description>Shift Schedules: The personnel in a shift schedule.</description></item>
-                /// <item><description>TaskOwner: The node owner. This parameter is available for custom alerts and event alerts.</description></item>
-                /// <item><description>Owner: The baseline owner. This parameter is available for baseline alerts.</description></item>
+                /// <item><description>Shift Schedules: the personnel in a shift schedule.</description></item>
+                /// <item><description>TaskOwner: the task owner. The task owner can receive custom alerts and event alerts.</description></item>
+                /// <item><description>Owner: the baseline owner. The baseline owner can receive baseline alerts.</description></item>
                 /// <item><description>WebhookUrl: URL of a custom webhook.</description></item>
-                /// <item><description>DingdingUrl: DingTalk chatbot URL.</description></item>
-                /// <item><description>FeishuUrl: Lark chatbot URL.</description></item>
-                /// <item><description>WeixinUrl: WeCom chatbot URL.</description></item>
+                /// <item><description>DingdingUrl: DingTalk webhook URL.</description></item>
+                /// <item><description>FeishuUrl: Lark webhook URL.</description></item>
+                /// <item><description>WeixinUrl: WeCom webhook URL.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ReceiverType { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the alert recipients.</para>
+                /// <para>The ID of the alert recipient.</para>
                 /// </summary>
                 [NameInMap("ReceiverValues")]
                 [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The end of the time range for silence. The time is in the HH:mm:ss format.</para>
+            /// <para>The end time for silence. The time is in the HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00:00</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string SilenceEndTime { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the time range for silence. The time is in the HH:mm:ss format.</para>
+            /// <para>The start time for silence. The time is in the HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00:00</para>

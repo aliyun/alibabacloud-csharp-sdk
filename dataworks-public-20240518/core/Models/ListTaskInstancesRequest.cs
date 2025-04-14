@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListTaskInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The data timestamp.</para>
+        /// <para>The data timestamp. The value of this parameter is 00:00:00 of the day before the scheduling time of the instance. The value is a UNIX timestamp. Unit: milliseconds. Example: 1743350400000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

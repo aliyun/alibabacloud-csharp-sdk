@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityRuleTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The source of the rule template. Required.</para>
+        /// <para>The source of the template. This parameter is required. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>System: System Template</description></item>
-        /// <item><description>UserDefined: user-defined Template</description></item>
+        /// <item><description>System</description></item>
+        /// <item><description>UserDefined</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CreationSource { get; set; }
 
         /// <summary>
-        /// <para>The category directory where the custom template is stored, slash/divider level. Each level name can be up to 1024 characters in length and cannot contain white space characters or backslashes.</para>
+        /// <para>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</para>
         /// 
         /// <b>Example:</b>
         /// <para>/ods/order_data</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DirectoryPath { get; set; }
 
         /// <summary>
-        /// <para>Fuzzy matching of template rule names. If it is a system template, the internationalized name of the system template will be fuzzy matching based on the language.</para>
+        /// <para>The name of the template. If you want to query a system template, set this parameter to the name of the system template. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Table rows</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>DataWorks workspace ID.</para>
+        /// <para>The DataWorks workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

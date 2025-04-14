@@ -287,9 +287,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string JobStatus { get; set; }
 
             /// <summary>
-            /// <para>DatabaseRealtimeMigration (Full Database Real-Time): Perform stream synchronization of multiple tables from multiple source databases. Supports full data only, incremental only, or full + incremental.</para>
-            /// <para>DatabaseOfflineMigration (Full Database Offline): Perform batch synchronization of multiple tables from multiple source databases. Supports full data only, incremental only, or full + incremental.</para>
-            /// <para>SingleTableRealtimeMigration (Single Table Real-Time): Perform stream synchronization of a single table from the source.</para>
+            /// <para>任务类型</para>
+            /// <list type="bullet">
+            /// <item><description><para>DatabaseRealtimeMigration(整库实时):将源端多个库的多个表进行流同步，支持仅全量，仅增量，或全量+增量。</para>
+            /// </description></item>
+            /// <item><description><para>DatabaseOfflineMigration(整库离线):将源端多个库的多个表进行批同步，支持仅全量，仅增量，或全量+增量。</para>
+            /// </description></item>
+            /// <item><description><para>SingleTableRealtimeMigration(单表实时):将源端单个表进行流同步。</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>DatabaseRealtimeMigration</para>
@@ -301,11 +307,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The synchronization type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</description></item>
-            /// <item><description>RealtimeIncremental: real-time incremental synchronization</description></item>
-            /// <item><description>Full: full synchronization</description></item>
-            /// <item><description>OfflineIncremental: batch incremental synchronization</description></item>
-            /// <item><description>FullAndOfflineIncremental: one-time full synchronization and batch incremental synchronization</description></item>
+            /// <item><description>FullAndRealtimeIncremental: full synchronization and real-time incremental synchronization of data in an entire database</description></item>
+            /// <item><description>RealtimeIncremental: real-time incremental synchronization of data in a single table</description></item>
+            /// <item><description>Full: full batch synchronization of data in an entire database</description></item>
+            /// <item><description>OfflineIncremental: batch incremental synchronization of data in an entire database</description></item>
+            /// <item><description>FullAndOfflineIncremental: full synchronization and batch incremental synchronization of data in an entire database</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

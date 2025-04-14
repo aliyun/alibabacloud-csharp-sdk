@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. More than 70 types of data sources are supported in DataWorks.</para>
+        /// <para>The type of the data source. More than 70 types of data sources are supported in DataWorks. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source types</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

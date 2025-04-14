@@ -38,7 +38,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <list type="bullet">
         /// <item><description>InstanceMode: instance mode</description></item>
         /// <item><description>UrlMode: connection string mode</description></item>
-        /// <item><description>CdhMode: CDH cluster mode</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
