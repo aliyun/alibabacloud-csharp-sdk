@@ -1,3 +1,8 @@
+2025-04-14 Version: 6.12.3
+- Update API DescribeIpv6GatewayAttribute: add response parameters Body.OwnerId.
+- Update API DescribeIpv6Gateways: add response parameters Body.Ipv6Gateways.$.OwnerId.
+
+
 2025-04-01 Version: 6.12.2
 - Update API DeleteVSwitch: add request parameters DryRun.
 
