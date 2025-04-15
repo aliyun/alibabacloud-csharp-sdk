@@ -52,6 +52,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             /// <summary>
             /// <para>The benefit of the suggestion.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.4 GB of storage saved</para>
             /// </summary>
             [NameInMap("Benefit")]
             [Validation(Required=false)]
@@ -84,6 +87,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             /// <summary>
             /// <para>The reason why the suggestion was generated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Unused for 15 days, historical usage less than 1%</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]

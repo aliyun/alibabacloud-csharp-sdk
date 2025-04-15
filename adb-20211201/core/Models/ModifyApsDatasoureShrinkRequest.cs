@@ -52,9 +52,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceName { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>The information about the Kafka instance.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -76,7 +74,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string LakehouseIdShrink { get; set; }
 
         /// <summary>
-        /// <para>The retired data source.</para>
+        /// <para>The parameter is no longer supported.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -88,7 +86,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PolarDBMysqlInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The retired data source.</para>
+        /// <para>The parameter is no longer supported.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">

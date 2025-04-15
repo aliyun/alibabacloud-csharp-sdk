@@ -77,9 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>The operation tables.</para>
             /// </summary>
             [NameInMap("OperationTables")]
             [Validation(Required=false)]

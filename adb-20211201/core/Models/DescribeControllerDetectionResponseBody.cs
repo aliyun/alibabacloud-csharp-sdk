@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public class DescribeControllerDetectionResponseBodyDetectionItems : TeaModel {
             /// <summary>
             /// <para>The information about the detection result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>A CPU increase is detected on the access node.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             /// <summary>
             /// <para>The name of the detection item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CPU increase detection</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

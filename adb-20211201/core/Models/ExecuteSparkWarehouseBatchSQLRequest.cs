@@ -13,13 +13,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The name of the client.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Dataworks。</para>
+        /// <para>DataWorks</para>
         /// </summary>
         [NameInMap("Agency")]
         [Validation(Required=false)]
         public string Agency { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +51,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ExecuteTimeLimitInSeconds { get; set; }
 
         /// <summary>
+        /// <para>The SQL statements that you want to execute in batches. Separate multiple SQL statements with semicolons (;). The execution engine executes the SQL statements in sequence in the same session.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +64,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>The name of the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +75,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ResourceGroupName { get; set; }
 
         /// <summary>
+        /// <para>The additional runtime parameter. Specify the parameter in the JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///  &quot;OSSURL&quot;: &quot;oss://testBucketname/&quot;
@@ -82,6 +87,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RuntimeConfig { get; set; }
 
         /// <summary>
+        /// <para>The name of the database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>adb_demo</para>
         /// </summary>

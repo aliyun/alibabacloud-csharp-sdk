@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public class DescribeBadSqlDetectionResponseBodyDetectionItems : TeaModel {
             /// <summary>
             /// <para>The information about the detection result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SQL statements that result in high peak memory are detected.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -90,6 +93,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public class DescribeBadSqlDetectionResponseBodyDetectionItemsResultsDiagnosisResults : TeaModel {
                     /// <summary>
                     /// <para>The diagnostic code.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Large amounts of data are returned to the client.</para>
                     /// </summary>
                     [NameInMap("Code")]
                     [Validation(Required=false)]
@@ -97,6 +103,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
                     /// <summary>
                     /// <para>The information about the diagnostic result.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Large amounts of data are returned to the client. Import the data to OSS.</para>
                     /// </summary>
                     [NameInMap("Detail")]
                     [Validation(Required=false)]

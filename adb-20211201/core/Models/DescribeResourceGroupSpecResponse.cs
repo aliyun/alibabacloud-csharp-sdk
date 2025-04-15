@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
-    public class DeleteProcessInstanceResponse : TeaModel {
+    public class DescribeResourceGroupSpecResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DeleteProcessInstanceResponseBody Body { get; set; }
+        public DescribeResourceGroupSpecResponseBody Body { get; set; }
 
     }
 

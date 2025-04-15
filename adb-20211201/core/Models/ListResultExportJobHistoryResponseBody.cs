@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The query ID that can be used for diagnostics.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612495.html">DescribeDiagnosisSQLInfo</a> operation to query the execution information about a query.</para>
+            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612337.html">DescribeDiagnosisSQLInfo</a> operation to query the execution information about a query.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

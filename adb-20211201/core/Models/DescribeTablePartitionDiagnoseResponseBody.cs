@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public class DescribeTablePartitionDiagnoseResponseBodyDetectionItems : TeaModel {
             /// <summary>
             /// <para>The detection result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Multiple oversized non-partitioned tables are detected.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -53,6 +56,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             /// <summary>
             /// <para>The name of the detection item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Improper partition field diagnostics</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

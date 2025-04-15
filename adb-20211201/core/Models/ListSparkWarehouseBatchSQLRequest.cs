@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ListSparkWarehouseBatchSQLRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +41,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The name of the interactive resource group for which the Spark engine is enabled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

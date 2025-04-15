@@ -118,6 +118,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string SchemaName { get; set; }
 
+        [NameInMap("ShowMvBaseTable")]
+        [Validation(Required=false)]
+        public bool? ShowMvBaseTable { get; set; }
+
     }
 
 }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyClickhouseEngineResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D761DA51-12F8-5457-AAA9-F52B9F436D2D</para>
         /// </summary>

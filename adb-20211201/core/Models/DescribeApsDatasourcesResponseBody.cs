@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsDatasourcesResponseBody : TeaModel {
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>The queried APS data sources.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">

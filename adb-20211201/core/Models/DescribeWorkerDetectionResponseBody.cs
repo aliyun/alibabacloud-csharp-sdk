@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public class DescribeWorkerDetectionResponseBodyDetectionItems : TeaModel {
             /// <summary>
             /// <para>The information about the detection result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>There are a total of 10 tables with an excessive number of primary keys.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             /// <summary>
             /// <para>The name of the detection item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Metric detection</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -56,6 +62,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public class DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorAgg : TeaModel {
                     /// <summary>
                     /// <para>The detection result items of operator metric aggregation.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Peak memory</para>
                     /// </summary>
                     [NameInMap("MetricName")]
                     [Validation(Required=false)]
@@ -178,6 +187,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
                         /// <summary>
                         /// <para>The property information about the operator.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>GROUP BY field: id</para>
                         /// </summary>
                         [NameInMap("OperatorInfo")]
                         [Validation(Required=false)]
@@ -434,6 +446,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public class DescribeWorkerDetectionResponseBodyDetectionItemsResultsTopAccessTables : TeaModel {
                     /// <summary>
                     /// <para>The name of the detection metric.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Peak memory detection</para>
                     /// </summary>
                     [NameInMap("MetricName")]
                     [Validation(Required=false)]

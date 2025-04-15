@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The detection result.</para>
+            /// <para>The detection result items.</para>
             /// </summary>
             [NameInMap("Results")]
             [Validation(Required=false)]
@@ -55,6 +55,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
                 /// <summary>
                 /// <para>The description of the detection result.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Two SQL patterns that have abnormal totalTime metric values are detected. This may result in increased CPU utilization, query slowdown, and degraded system stability. Go to the monitoring page to diagnose the issue and then perform optimization.</para>
                 /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string PatternId { get; set; }
 
                 /// <summary>
-                /// <para>The number of executed SQL patterns within the time range.</para>
+                /// <para>The number of queries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>72</para>
@@ -92,6 +95,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
                 /// <summary>
                 /// <para>The metrics related to the SQL pattern.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Maximum query duration: 1.43s
+                /// Maximum peak memory: 20.73 MB
+                /// Maximum read table data: 10.12 MB</para>
                 /// </summary>
                 [NameInMap("RelatedMetrics")]
                 [Validation(Required=false)]

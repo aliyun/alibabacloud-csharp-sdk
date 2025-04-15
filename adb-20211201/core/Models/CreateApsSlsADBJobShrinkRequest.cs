@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ResourceGroup { get; set; }
 
         /// <summary>
-        /// <para>源集群所处地域ID。</para>
+        /// <para>The region ID of the source cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

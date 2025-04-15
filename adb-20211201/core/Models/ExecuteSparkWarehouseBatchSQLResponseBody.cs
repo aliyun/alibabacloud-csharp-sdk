@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public SparkBatchSQL Data { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CBE843D8-964D-5EA3-9D31-822125611B6E</para>
         /// </summary>

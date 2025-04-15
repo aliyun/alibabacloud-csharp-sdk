@@ -52,9 +52,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceName { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>The information about the Kafka instance.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -132,7 +130,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The retired data source.</para>
+        /// <para>The parameter is no longer supported.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -144,9 +142,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public ModifyApsDatasoureRequestPolarDBMysqlInfo PolarDBMysqlInfo { get; set; }
         public class ModifyApsDatasoureRequestPolarDBMysqlInfo : TeaModel {
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>The parameter is no longer supported.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -158,9 +154,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ConnectUrl { get; set; }
 
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>The parameter is no longer supported.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -172,9 +166,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>The parameter is no longer supported.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -186,9 +178,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>The parameter is no longer supported.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -202,7 +192,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The retired data source.</para>
+        /// <para>The parameter is no longer supported.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -214,9 +204,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public ModifyApsDatasoureRequestRdsMysqlInfo RdsMysqlInfo { get; set; }
         public class ModifyApsDatasoureRequestRdsMysqlInfo : TeaModel {
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>The parameter is no longer supported.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -228,9 +216,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ConnectUrl { get; set; }
 
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>The parameter is no longer supported.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -242,9 +228,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>The parameter is no longer supported.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -256,9 +240,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>The parameter is no longer supported.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">

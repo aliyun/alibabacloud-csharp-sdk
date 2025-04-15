@@ -1,3 +1,13 @@
+2025-04-15 Version: 4.0.0
+- Support API DescribeInclinedTables.
+- Support API DescribeResourceGroupSpec.
+- Delete API DeleteProcessInstance.
+- Update API GetViewObjects: add request parameters ShowMvBaseTable.
+- Update API ModifyDBCluster: delete request parameters OwnerAccount.
+- Update API ModifyDBCluster: delete request parameters OwnerId.
+- Update API ModifyDBCluster: delete request parameters ResourceOwnerAccount.
+
+
 2025-03-31 Version: 3.9.0
 - Support API UpgradeKernelVersion.
 - Update API CreateDBCluster: add request parameters ProductVersion.

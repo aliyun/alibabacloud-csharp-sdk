@@ -50,14 +50,6 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public bool? EnableDefaultResourcePool { get; set; }
 
-        [NameInMap("OwnerAccount")]
-        [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         /// <summary>
         /// <b>Example:</b>
         /// <para>LegacyForm</para>
@@ -90,10 +82,6 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("ReservedNodeSize")]
         [Validation(Required=false)]
         public string ReservedNodeSize { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
         /// <para>The reserved storage resources. Valid values: 0ACU to 2064ACU. The value must be in increments of 24ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</para>

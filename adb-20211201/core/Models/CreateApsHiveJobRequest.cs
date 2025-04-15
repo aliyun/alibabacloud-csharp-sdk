@@ -23,6 +23,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The policy to handle tables with the same name in the destination cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Intercept: reports error and aborts.
+        /// Ignore: ignores and continues migrating the relevant tables.
+        /// Skip: skips related tables and only migrates other tables.</para>
         /// </summary>
         [NameInMap("ConflictStrategy")]
         [Validation(Required=false)]

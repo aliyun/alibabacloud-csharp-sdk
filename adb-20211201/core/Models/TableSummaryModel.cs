@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("MvDetailModel")]
+        [Validation(Required=false)]
+        public OpenStructMvDetailModel MvDetailModel { get; set; }
+
         [NameInMap("Owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }

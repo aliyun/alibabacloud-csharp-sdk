@@ -114,14 +114,42 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public List<DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys> Keys { get; set; }
                 public class DescribePerformanceViewAttributeResponseBodyViewDetailCategoriesKeys : TeaModel {
+                    /// <summary>
+                    /// <para>Indicates whether the multi-cluster feature is enabled. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><para>true</para>
+                    /// </description></item>
+                    /// <item><description><para>false</para>
+                    /// </description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
                     [NameInMap("EnableAutoMc")]
                     [Validation(Required=false)]
                     public bool? EnableAutoMc { get; set; }
 
+                    /// <summary>
+                    /// <para>The database engine of the cluster. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>AnalyticDB</description></item>
+                    /// </list>
+                    /// </summary>
                     [NameInMap("Engine")]
                     [Validation(Required=false)]
                     public List<string> Engine { get; set; }
 
+                    /// <summary>
+                    /// <para>The type of the resource group. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>Interactive</b></description></item>
+                    /// <item><description><b>Job</b></description></item>
+                    /// </list>
+                    /// <remarks>
+                    /// <para> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</para>
+                    /// </remarks>
+                    /// </summary>
                     [NameInMap("GroupType")]
                     [Validation(Required=false)]
                     public List<string> GroupType { get; set; }

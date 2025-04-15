@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             /// <summary>
             /// <para>The benefit of the suggestion.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.4 GB of storage saved</para>
             /// </summary>
             [NameInMap("Benefit")]
             [Validation(Required=false)]
