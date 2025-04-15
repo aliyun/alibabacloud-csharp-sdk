@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string PilotStartTime { get; set; }
 
+            [NameInMap("PilotVersion")]
+            [Validation(Required=false)]
+            public string PilotVersion { get; set; }
+
             /// <summary>
             /// <para>The ID of the region in which the instance resides. The region is supported by MSE.</para>
             /// 
@@ -114,6 +118,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
+
+            [NameInMap("VersionLifeCycle")]
+            [Validation(Required=false)]
+            public string VersionLifeCycle { get; set; }
 
         }
 

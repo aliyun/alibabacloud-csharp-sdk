@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string PilotStartTime { get; set; }
 
+                [NameInMap("PilotVersion")]
+                [Validation(Required=false)]
+                public string PilotVersion { get; set; }
+
                 /// <summary>
                 /// <para>The region where the cluster resides.</para>
                 /// 
@@ -102,6 +106,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
+
+                [NameInMap("VersionLifeCycle")]
+                [Validation(Required=false)]
+                public string VersionLifeCycle { get; set; }
 
             }
 
