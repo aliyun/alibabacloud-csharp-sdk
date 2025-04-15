@@ -51,6 +51,24 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [Validation(Required=false)]
                 public string ServiceCode { get; set; }
 
+                [NameInMap("TextTreeChart")]
+                [Validation(Required=false)]
+                public List<GetCipStatsResponseBodyDataLabelStatChartTextTreeChart> TextTreeChart { get; set; }
+                public class GetCipStatsResponseBodyDataLabelStatChartTextTreeChart : TeaModel {
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>117</para>

@@ -1,3 +1,7 @@
+2025-04-15 Version: 1.3.1
+- Update API GetCipStats: add response parameters Body.Data.LabelStatChart.$.TextTreeChart.
+
+
 2025-03-31 Version: 1.3.0
 - Support API DeleteFeatureConfig.
 - Support API GetFeatureConfig.
