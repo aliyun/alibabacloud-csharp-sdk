@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListConsumerGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The condition that you want to use to filter consumer groups in the instance. If you leave this parameter empty, all consumer groups in the instance are queried.</para>
+        /// <para>The filter condition for the query. If not provided, all consumer groups under the specified instance will be queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CID-TEST</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>Page number, indicating which page of results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>Page size, the maximum number of results to display per page.</para>
+        /// <para>Value range: [10, 100].</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

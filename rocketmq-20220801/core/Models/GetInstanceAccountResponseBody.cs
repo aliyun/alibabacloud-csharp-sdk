@@ -20,12 +20,23 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetInstanceAccountResponseBodyData Data { get; set; }
         public class GetInstanceAccountResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The status of the account.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DISABLE</description></item>
+            /// <item><description>ENABLE</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ENABLE</para>
+            /// </summary>
             [NameInMap("accountStatus")]
             [Validation(Required=false)]
             public string AccountStatus { get; set; }

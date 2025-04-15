@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListMetricMetaResponseBody : TeaModel {
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Topic.NotFound</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Return result</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListMetricMetaResponseBodyData Data { get; set; }
         public class ListMetricMetaResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Paged data</para>
+            /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<ListMetricMetaResponseBodyDataList> List { get; set; }
             public class ListMetricMetaResponseBodyDataList : TeaModel {
                 /// <summary>
+                /// <para>Monitoring item tag</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Bug</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string Category { get; set; }
 
                 /// <summary>
+                /// <para>Monitoring item description</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Using Serverless Devs to deploy the infrastructure of project:get-userinfo-v1-infrastructure-as-template-project</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>Monitoring item name</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SendMessageCountPerInstance</para>
                 /// </summary>
@@ -52,6 +66,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
+            /// <para>Current page number</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>Page size</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -68,6 +86,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageSize { get; set; }
 
             /// <summary>
+            /// <para>Total record count</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -78,22 +98,28 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
+        /// <para>Dynamic error code</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>InstanceId</para>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("dynamicCode")]
         [Validation(Required=false)]
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>The dynamic error message.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>instanceId</para>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("dynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -102,6 +128,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>The topic already exists.</para>
         /// </summary>
@@ -110,6 +138,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8B459455-4A35-5796-BA9D-98EF1AB9A931</para>
         /// </summary>
@@ -118,6 +148,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the operation was successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

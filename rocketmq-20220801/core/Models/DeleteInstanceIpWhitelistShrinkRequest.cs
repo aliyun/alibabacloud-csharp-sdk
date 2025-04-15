@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Obsolete]
         public string IpWhitelist { get; set; }
 
+        /// <summary>
+        /// <para>The IP address whitelist.</para>
+        /// </summary>
         [NameInMap("ipWhitelists")]
         [Validation(Required=false)]
         public string IpWhitelistsShrink { get; set; }

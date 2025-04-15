@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListTopicsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The condition that you want to use to filter topics in the instance. If you leave this parameter empty, all topics in the instance are queried.</para>
+        /// <para>The filter condition for the query. If not provided, all topics under the instance will be queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>topic_test</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The message types of the topics.</para>
+        /// <para>The message type of the topic.</para>
         /// </summary>
         [NameInMap("messageTypes")]
         [Validation(Required=false)]
         public string MessageTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>Page number, indicating which page of results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>Page size, the maximum number of results to display per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

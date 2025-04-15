@@ -39,6 +39,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public long? DeliveryDuration { get; set; }
 
+        /// <summary>
+        /// <para>lastConsumeTimestamp</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1735629607846</para>
+        /// </summary>
         [NameInMap("lastConsumeTimestamp")]
         [Validation(Required=false)]
         public long? LastConsumeTimestamp { get; set; }

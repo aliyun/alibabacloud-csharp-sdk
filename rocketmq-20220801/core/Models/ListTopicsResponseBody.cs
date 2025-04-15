@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListTopicsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>Error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Topic.NotFound</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result data that is returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListTopicsResponseBodyData Data { get; set; }
         public class ListTopicsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The paginated data.</para>
+            /// <para>The topics.</para>
             /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<ListTopicsResponseBodyDataList> List { get; set; }
             public class ListTopicsResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>The time when the topic was created.</para>
+                /// <para>Creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-08-01 20:05:50</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>Instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rmq-cn-7e22ody****</para>
@@ -53,49 +53,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                /// <summary>
+                /// <para>The maximum TPS for message sending.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1000</para>
+                /// </summary>
                 [NameInMap("maxSendTps")]
                 [Validation(Required=false)]
                 public long? MaxSendTps { get; set; }
 
                 /// <summary>
-                /// <para>The message type of the topic.</para>
+                /// <para>The type of messages in the topic.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>TRANSACTION</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>transactional message</para>
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>FIFO</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>ordered message</para>
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>DELAY</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>scheduled or delayed message</para>
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>NORMAL</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>normal message</para>
-                /// <!-- --></description></item>
+                /// <item><description>TRANSACTION: transactional messages</description></item>
+                /// <item><description>FIFO: ordered messages</description></item>
+                /// <item><description>DELAY: scheduled or delayed messages</description></item>
+                /// <item><description>NORMAL: normal messages</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -106,7 +81,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string MessageType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region in which the instance resides.</para>
+                /// <para>The region ID to which the instance belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -116,7 +91,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The remarks on the topic.</para>
+                /// <para>Remark information of the topic.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This is the remark for test.</para>
@@ -126,31 +101,11 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// <para>The state of the topic.</para>
+                /// <para>The topic status.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>RUNNING</para>
-                /// <!-- -->
-                /// 
-                /// <para>: The topic is</para>
-                /// <!-- -->
-                /// 
-                /// <para>running</para>
-                /// <!-- -->
-                /// 
-                /// <para>.</para>
-                /// </description></item>
-                /// <item><description><para>CREATING</para>
-                /// <!-- -->
-                /// 
-                /// <para>: The topic is</para>
-                /// <!-- -->
-                /// 
-                /// <para>being created</para>
-                /// <!-- -->
-                /// 
-                /// <para>.</para>
-                /// </description></item>
+                /// <item><description>RUNNING</description></item>
+                /// <item><description>CREATING</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -161,7 +116,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The name of the topic.</para>
+                /// <para>Topic name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>topic_test</para>
@@ -171,7 +126,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string TopicName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the topic was last updated.</para>
+                /// <para>Last update time of the topic.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-08-01 20:05:50</para>
@@ -183,7 +138,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>Current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -193,7 +148,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>Page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -203,7 +158,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>Total number of results returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -215,7 +170,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// <para>The dynamic error code.</para>
+        /// <para>Dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TopicName</para>
@@ -225,7 +180,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message.</para>
+        /// <para>Dynamic error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>topicName</para>
@@ -235,8 +190,6 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>400</para>
         /// </summary>
@@ -245,7 +198,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>Error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The topic cannot be found.</para>
@@ -255,7 +208,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</para>
+        /// <para>Request ID, each request has a unique ID that can be used for troubleshooting and problem localization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AF9A8B10-C426-530F-A0DD-96320B39****</para>
@@ -265,7 +218,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the execution was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

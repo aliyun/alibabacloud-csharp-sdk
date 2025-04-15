@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class CreateConsumerGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The consumption retry policy that you want to configure for the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</para>
+        /// <para>consume retry policy</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("consumeRetryPolicy")]
@@ -57,12 +57,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         }
 
         /// <summary>
-        /// <para>The message delivery order of the consumer group.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Concurrently: concurrent delivery</description></item>
-        /// <item><description>Orderly: ordered delivery</description></item>
-        /// </list>
+        /// <para>The dynamic error message.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,12 +67,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string DeliveryOrderType { get; set; }
 
+        /// <summary>
+        /// <para>Maximum received message tps</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>300</para>
+        /// </summary>
         [NameInMap("maxReceiveTps")]
         [Validation(Required=false)]
         public long? MaxReceiveTps { get; set; }
 
         /// <summary>
-        /// <para>The remarks on the consumer group.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is the remark for test.</para>

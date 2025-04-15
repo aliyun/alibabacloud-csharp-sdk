@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class GetInstanceAclRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the resource on which you want to grant permissions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string ResourceName { get; set; }
 
         /// <summary>
+        /// <para>The type of the resource on which you want to grant permissions.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Group</description></item>
+        /// <item><description>Topic</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

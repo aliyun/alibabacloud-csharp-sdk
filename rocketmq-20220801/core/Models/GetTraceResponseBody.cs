@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetTraceResponseBodyData Data { get; set; }
         public class GetTraceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Broker trace info.</para>
+            /// <para>The broker trace.</para>
             /// </summary>
             [NameInMap("brokerInfo")]
             [Validation(Required=false)]
@@ -82,6 +82,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public string PresetDelayTime { get; set; }
 
+                /// <summary>
+                /// <para>Withdraw scheduled message request result</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>RECALL_OK</para>
+                /// </summary>
                 [NameInMap("recallResult")]
                 [Validation(Required=false)]
                 public string RecallResult { get; set; }
@@ -438,14 +444,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             }
 
             /// <summary>
-            /// <para>Producer trace info.</para>
+            /// <para>The producer trace.</para>
             /// </summary>
             [NameInMap("producerInfo")]
             [Validation(Required=false)]
             public GetTraceResponseBodyDataProducerInfo ProducerInfo { get; set; }
             public class GetTraceResponseBodyDataProducerInfo : TeaModel {
                 /// <summary>
-                /// <para>Producer record list.</para>
+                /// <para>The production records.</para>
                 /// </summary>
                 [NameInMap("records")]
                 [Validation(Required=false)]
@@ -531,6 +537,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                     [Validation(Required=false)]
                     public string ProduceTime { get; set; }
 
+                    /// <summary>
+                    /// <para>The time when the scheduled message withdrawal request was initiated</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2023-03-22 12:17:08</para>
+                    /// </summary>
                     [NameInMap("recallTime")]
                     [Validation(Required=false)]
                     public string RecallTime { get; set; }

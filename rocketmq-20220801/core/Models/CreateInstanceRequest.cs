@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// <list type="bullet">
         /// <item><description>ons_rmqpost_public_intl: pay-as-you-go</description></item>
         /// <item><description>ons_rmqsub_public_intl: subscription</description></item>
+        /// <item><description>ons_rmqsrvlesspost_public_intl: serverless instance
+        /// serverless instance requires this parameter</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,12 +93,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public int? FlowOutBandwidth { get; set; }
 
                 /// <summary>
-                /// <para>The billing method of Internet usage.</para>
+                /// <para>The metering method of Internet usage.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>payByBandwidth: pay-by-bandwidth. This value is valid only if you enable Internet access.</description></item>
                 /// <item><description>payByTraffic: pay-by-traffic. This value is valid only if you enable Internet access.</description></item>
-                /// <item><description>uninvolved: No billing method is involved. This value is valid only if you disable Internet access.</description></item>
+                /// <item><description>uninvolved: No metering method is involved. This value is valid only if you disable Internet access.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -127,10 +129,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use the public endpoint to access the instance.</para>
+                /// <para>The whitelist that includes the CIDR blocks that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use the public endpoint to access the instance.</para>
                 /// <list type="bullet">
                 /// <item><description>If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</description></item>
-                /// <item><description>If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</description></item>
+                /// <item><description>If you configure an IP address whitelist, only the CIDR blocks in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("ipWhitelist")]
@@ -268,7 +270,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The information about the instance specifications.</para>
+        /// <para>The information about instance specifications.</para>
         /// </summary>
         [NameInMap("productInfo")]
         [Validation(Required=false)]
@@ -329,7 +331,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public float? SendReceiveRatio { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether storage encryption is enabled.</para>
+            /// <para>Specifies whether to enable the encryption at rest feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -339,7 +341,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public bool? StorageEncryption { get; set; }
 
             /// <summary>
-            /// <para>The storage encryption key.</para>
+            /// <para>The key for encryption at rest.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -361,7 +363,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the resource group to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzy6pist7uuna</para>
@@ -428,14 +430,29 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string SubSeriesCode { get; set; }
 
+        /// <summary>
+        /// <para>The tags that you want to add to the instance.</para>
+        /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<CreateInstanceRequestTags> Tags { get; set; }
         public class CreateInstanceRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The <c>key</c> of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aaa</para>
+            /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The <c>value</c> of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bbb</para>
+            /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
             public string Value { get; set; }

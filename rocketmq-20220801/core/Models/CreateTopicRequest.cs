@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class CreateTopicRequest : TeaModel {
+        /// <summary>
+        /// <para>The maximum TPS for message sending.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1500</para>
+        /// </summary>
         [NameInMap("maxSendTps")]
         [Validation(Required=false)]
         public long? MaxSendTps { get; set; }
@@ -19,11 +25,11 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// <list type="bullet">
         /// <item><description>TRANSACTION: transactional messages</description></item>
         /// <item><description>FIFO: ordered messages</description></item>
-        /// <item><description>DELAY: scheduled messages or delayed Message</description></item>
+        /// <item><description>DELAY: scheduled or delayed messages</description></item>
         /// <item><description>NORMAL: normal messages</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The type of messages in the topic must be the same as the type of messages that you want to send. For example, if you create a topic whose message type is ordered messages, the topic can be used to send and receive only ordered messages.</para>
+        /// <para> The type of messages in the topic must be the same as the type of messages that you want to send. For example, if you create a topic whose message type is ordered messages, you can use the topic to send and receive only ordered messages.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -90,6 +90,12 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public long? InflightCount { get; set; }
 
+                /// <summary>
+                /// <para>Last consumption time</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1735629607846</para>
+                /// </summary>
                 [NameInMap("lastConsumeTimestamp")]
                 [Validation(Required=false)]
                 public long? LastConsumeTimestamp { get; set; }

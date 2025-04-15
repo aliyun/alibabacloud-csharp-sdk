@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class UpdateTopicRequest : TeaModel {
+        /// <summary>
+        /// <para>Maximum send message tps</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>500</para>
+        /// </summary>
         [NameInMap("maxSendTps")]
         [Validation(Required=false)]
         public long? MaxSendTps { get; set; }
 
         /// <summary>
-        /// <para>The new remarks on the topic.</para>
+        /// <para>Updated remarks for the topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is the remark for test.</para>

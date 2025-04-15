@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class ListMetricMetaRequest : TeaModel {
         /// <summary>
+        /// <para>Page number, indicating which page of the results to return.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size, indicating the maximum number of results per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
