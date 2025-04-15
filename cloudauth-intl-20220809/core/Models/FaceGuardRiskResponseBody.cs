@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public FaceGuardRiskResponseBodyResult Result { get; set; }
         public class FaceGuardRiskResponseBodyResult : TeaModel {
+            [NameInMap("GuardRiskScore")]
+            [Validation(Required=false)]
+            public double? GuardRiskScore { get; set; }
+
             [NameInMap("RiskExtends")]
             [Validation(Required=false)]
             public string RiskExtends { get; set; }
