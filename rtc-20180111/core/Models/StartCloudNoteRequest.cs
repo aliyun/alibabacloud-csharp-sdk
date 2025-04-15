@@ -115,6 +115,30 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("RealtimeSubtitle")]
+        [Validation(Required=false)]
+        public StartCloudNoteRequestRealtimeSubtitle RealtimeSubtitle { get; set; }
+        public class StartCloudNoteRequestRealtimeSubtitle : TeaModel {
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("Translation")]
+            [Validation(Required=false)]
+            public StartCloudNoteRequestRealtimeSubtitleTranslation Translation { get; set; }
+            public class StartCloudNoteRequestRealtimeSubtitleTranslation : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("TranslateLevel")]
+                [Validation(Required=false)]
+                public int? TranslateLevel { get; set; }
+
+            }
+
+        }
+
         [NameInMap("ServiceInspection")]
         [Validation(Required=false)]
         public StartCloudNoteRequestServiceInspection ServiceInspection { get; set; }
@@ -277,6 +301,28 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
+
+        }
+
+        [NameInMap("Transcription")]
+        [Validation(Required=false)]
+        public StartCloudNoteRequestTranscription Transcription { get; set; }
+        public class StartCloudNoteRequestTranscription : TeaModel {
+            [NameInMap("DiarizationEnabled")]
+            [Validation(Required=false)]
+            public bool? DiarizationEnabled { get; set; }
+
+            [NameInMap("SpeakerCount")]
+            [Validation(Required=false)]
+            public int? SpeakerCount { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("TranscriptionLevel")]
+            [Validation(Required=false)]
+            public int? TranscriptionLevel { get; set; }
 
         }
 

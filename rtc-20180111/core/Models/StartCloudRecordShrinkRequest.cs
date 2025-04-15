@@ -356,6 +356,94 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public List<StartCloudRecordShrinkRequestPanes> Panes { get; set; }
         public class StartCloudRecordShrinkRequestPanes : TeaModel {
+            [NameInMap("Backgrounds")]
+            [Validation(Required=false)]
+            public List<StartCloudRecordShrinkRequestPanesBackgrounds> Backgrounds { get; set; }
+            public class StartCloudRecordShrinkRequestPanesBackgrounds : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.9</para>
+                /// </summary>
+                [NameInMap("Alpha")]
+                [Validation(Required=false)]
+                public double? Alpha { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>backup</para>
+                /// </summary>
+                [NameInMap("Display")]
+                [Validation(Required=false)]
+                public string Display { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.2</para>
+                /// </summary>
+                [NameInMap("Height")]
+                [Validation(Required=false)]
+                public double? Height { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("Layer")]
+                [Validation(Required=false)]
+                public int? Layer { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
+                [NameInMap("PaneBackgroundCropMode")]
+                [Validation(Required=false)]
+                public int? PaneBackgroundCropMode { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://aliyun.com/123xx.jpg">https://aliyun.com/123xx.jpg</a></para>
+                /// </summary>
+                [NameInMap("Url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.2</para>
+                /// </summary>
+                [NameInMap("Width")]
+                [Validation(Required=false)]
+                public double? Width { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.2</para>
+                /// </summary>
+                [NameInMap("X")]
+                [Validation(Required=false)]
+                public double? X { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.2</para>
+                /// </summary>
+                [NameInMap("Y")]
+                [Validation(Required=false)]
+                public double? Y { get; set; }
+
+            }
+
             [NameInMap("Images")]
             [Validation(Required=false)]
             public List<StartCloudRecordShrinkRequestPanesImages> Images { get; set; }
@@ -367,6 +455,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 [NameInMap("Alpha")]
                 [Validation(Required=false)]
                 public double? Alpha { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>backup</para>
+                /// </summary>
+                [NameInMap("Display")]
+                [Validation(Required=false)]
+                public string Display { get; set; }
 
                 /// <summary>
                 /// <para>This parameter is required.</para>
@@ -536,6 +632,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>backup</para>
+                /// </summary>
+                [NameInMap("Display")]
+                [Validation(Required=false)]
+                public string Display { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
                 [NameInMap("Font")]
@@ -681,6 +785,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("ReservePaneForNoCameraUser")]
         [Validation(Required=false)]
         public bool? ReservePaneForNoCameraUser { get; set; }
+
+        [NameInMap("ShowDefaultBackgroundOnMute")]
+        [Validation(Required=false)]
+        public bool? ShowDefaultBackgroundOnMute { get; set; }
 
         /// <summary>
         /// <para>storageConfig</para>

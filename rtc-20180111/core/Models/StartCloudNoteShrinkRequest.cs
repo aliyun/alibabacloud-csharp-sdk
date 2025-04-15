@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string MeetingAssistanceShrink { get; set; }
 
+        [NameInMap("RealtimeSubtitle")]
+        [Validation(Required=false)]
+        public string RealtimeSubtitleShrink { get; set; }
+
         [NameInMap("ServiceInspection")]
         [Validation(Required=false)]
         public string ServiceInspectionShrink { get; set; }
@@ -135,6 +139,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("TextPolish")]
         [Validation(Required=false)]
         public string TextPolishShrink { get; set; }
+
+        [NameInMap("Transcription")]
+        [Validation(Required=false)]
+        public string TranscriptionShrink { get; set; }
 
     }
 
