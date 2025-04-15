@@ -497,6 +497,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string NasId { get; set; }
 
+        [NameInMap("NewSaeVersion")]
+        [Validation(Required=false)]
+        public string NewSaeVersion { get; set; }
+
         /// <summary>
         /// <para>The name of the RAM role used to authenticate the user identity.</para>
         /// <remarks>

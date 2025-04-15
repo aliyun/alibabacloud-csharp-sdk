@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Sae20190506</AssemblyName>
-    <Version>2.0.1</Version>
+    <Version>2.0.2</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud Serverless App Engine (20190506) SDK Library for .NET</Description>
@@ -41,7 +41,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="AlibabaCloud.TeaUtil" Version="0.1.19"/>
-    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.13"/>
+    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.14"/>
     <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.1.2"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
     <PackageReference Include="Tea" Version="1.1.3"/>
