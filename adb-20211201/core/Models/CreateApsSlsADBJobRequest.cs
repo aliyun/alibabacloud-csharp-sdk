@@ -393,7 +393,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The format of the timestamp.</para>
             /// 
             /// <b>Example:</b>
-            /// <para> APSyyyyMMdd</para>
+            /// <para>yyyyMMdd</para>
             /// </summary>
             [NameInMap("Format")]
             [Validation(Required=false)]
