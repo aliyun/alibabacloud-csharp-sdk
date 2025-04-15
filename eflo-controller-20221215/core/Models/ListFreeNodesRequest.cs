@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("OperatingStates")]
+        [Validation(Required=false)]
+        public List<string> OperatingStates { get; set; }
+
         /// <summary>
         /// <para>Resource group ID</para>
         /// 
