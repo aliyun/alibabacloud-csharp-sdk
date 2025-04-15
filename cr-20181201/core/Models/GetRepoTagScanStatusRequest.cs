@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string ScanTaskId { get; set; }
 
+        [NameInMap("ScanType")]
+        [Validation(Required=false)]
+        public string ScanType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>

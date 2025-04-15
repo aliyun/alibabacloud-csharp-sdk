@@ -300,6 +300,24 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public long? SyncedSize { get; set; }
 
+        /// <summary>
+        /// <para>The error message that is returned if the synchronization task fails.</para>
+        /// <remarks>
+        /// <para> The system uses this parameter to return an error message if the synchronization task fails.</para>
+        /// </remarks>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>OSS_POLICY_UNAUTHORIZED: Container Registry is not granted permissions to use Object Storage Service (OSS).</description></item>
+        /// <item><description>TAG_CONFLICT: The destination repository contains an image that has the same tag as the source image, and image tag immutability is enabled for the destination repository.</description></item>
+        /// <item><description>UNSUPPORTED_FORMAT: The manifest and config formats of the image to be synchronized are not supported.</description></item>
+        /// <item><description>INTERNAL_ERROR: The synchronization task failed due to internal issues on the server.</description></item>
+        /// <item><description>NETWORK_ERROR: The synchronization task failed due to unstable network connection.</description></item>
+        /// <item><description>DATA_LENGTH_EXCEEDED: The manifest or config of the image is oversized.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NETWORK_ERROR</para>
+        /// </summary>
         [NameInMap("TaskIssue")]
         [Validation(Required=false)]
         public string TaskIssue { get; set; }

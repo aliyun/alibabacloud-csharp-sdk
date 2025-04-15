@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepositoryRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Container Registry instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -38,6 +41,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The name of the repository.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>repo-test</para>
         /// </summary>
@@ -46,6 +51,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
+        /// <para>The name of the namespace to which the repository belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>repo-namespace-test</para>
         /// </summary>

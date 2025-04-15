@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string ScanService { get; set; }
 
+        [NameInMap("ScanType")]
+        [Validation(Required=false)]
+        public string ScanType { get; set; }
+
         /// <summary>
         /// <para>The version of the image.</para>
         /// <para>This parameter is required.</para>
