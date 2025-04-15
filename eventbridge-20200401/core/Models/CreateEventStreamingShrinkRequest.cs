@@ -61,6 +61,20 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string SourceShrink { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateEventStreamingShrinkRequestTags> Tags { get; set; }
+        public class CreateEventStreamingShrinkRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("Transforms")]
         [Validation(Required=false)]
         public string TransformsShrink { get; set; }

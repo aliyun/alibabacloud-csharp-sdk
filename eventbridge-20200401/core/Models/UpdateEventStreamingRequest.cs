@@ -91,6 +91,22 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public string Arn { get; set; }
 
+                [NameInMap("Network")]
+                [Validation(Required=false)]
+                public string Network { get; set; }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
+                public string VSwitchIds { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
             }
 
             /// <summary>
@@ -993,6 +1009,24 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 }
 
+                [NameInMap("Headers")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkKafkaParametersHeaders Headers { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkKafkaParametersHeaders : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The ID of the ApsaraMQ for Kafka instance.</para>
                 /// </summary>
@@ -1263,6 +1297,132 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Value { get; set; }
 
                 }
+
+            }
+
+            [NameInMap("SinkOpenSourceRabbitMQParameters")]
+            [Validation(Required=false)]
+            public UpdateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters SinkOpenSourceRabbitMQParameters { get; set; }
+            public class UpdateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters : TeaModel {
+                [NameInMap("AuthType")]
+                [Validation(Required=false)]
+                public string AuthType { get; set; }
+
+                [NameInMap("Body")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersBody Body { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersBody : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("Endpoint")]
+                [Validation(Required=false)]
+                public string Endpoint { get; set; }
+
+                [NameInMap("Exchange")]
+                [Validation(Required=false)]
+                public string Exchange { get; set; }
+
+                [NameInMap("MessageId")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersMessageId MessageId { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersMessageId : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
+                public string NetworkType { get; set; }
+
+                [NameInMap("Password")]
+                [Validation(Required=false)]
+                public string Password { get; set; }
+
+                [NameInMap("Properties")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersProperties Properties { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersProperties : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("QueueName")]
+                [Validation(Required=false)]
+                public string QueueName { get; set; }
+
+                [NameInMap("RoutingKey")]
+                [Validation(Required=false)]
+                public UpdateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersRoutingKey RoutingKey { get; set; }
+                public class UpdateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersRoutingKey : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
+                [NameInMap("TargetType")]
+                [Validation(Required=false)]
+                public string TargetType { get; set; }
+
+                [NameInMap("Username")]
+                [Validation(Required=false)]
+                public string Username { get; set; }
+
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
+                public string VSwitchIds { get; set; }
+
+                [NameInMap("VirtualHostName")]
+                [Validation(Required=false)]
+                public string VirtualHostName { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
 
             }
 
@@ -3087,6 +3247,56 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [NameInMap("RoleName")]
                 [Validation(Required=false)]
                 public string RoleName { get; set; }
+
+            }
+
+            [NameInMap("SourceOpenSourceRabbitMQParameters")]
+            [Validation(Required=false)]
+            public UpdateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters SourceOpenSourceRabbitMQParameters { get; set; }
+            public class UpdateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters : TeaModel {
+                [NameInMap("AuthType")]
+                [Validation(Required=false)]
+                public string AuthType { get; set; }
+
+                [NameInMap("BodyDataType")]
+                [Validation(Required=false)]
+                public string BodyDataType { get; set; }
+
+                [NameInMap("Endpoint")]
+                [Validation(Required=false)]
+                public string Endpoint { get; set; }
+
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
+                public string NetworkType { get; set; }
+
+                [NameInMap("Password")]
+                [Validation(Required=false)]
+                public string Password { get; set; }
+
+                [NameInMap("QueueName")]
+                [Validation(Required=false)]
+                public string QueueName { get; set; }
+
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
+                [NameInMap("Username")]
+                [Validation(Required=false)]
+                public string Username { get; set; }
+
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
+                public string VSwitchIds { get; set; }
+
+                [NameInMap("VirtualHostName")]
+                [Validation(Required=false)]
+                public string VirtualHostName { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
 
             }
 

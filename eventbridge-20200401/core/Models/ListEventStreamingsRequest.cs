@@ -56,6 +56,20 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string SourceArn { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<ListEventStreamingsRequestTags> Tags { get; set; }
+        public class ListEventStreamingsRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

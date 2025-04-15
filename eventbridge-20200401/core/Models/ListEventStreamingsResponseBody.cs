@@ -115,6 +115,22 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string Arn { get; set; }
 
+                        [NameInMap("Network")]
+                        [Validation(Required=false)]
+                        public string Network { get; set; }
+
+                        [NameInMap("SecurityGroupId")]
+                        [Validation(Required=false)]
+                        public string SecurityGroupId { get; set; }
+
+                        [NameInMap("VSwitchIds")]
+                        [Validation(Required=false)]
+                        public string VSwitchIds { get; set; }
+
+                        [NameInMap("VpcId")]
+                        [Validation(Required=false)]
+                        public string VpcId { get; set; }
+
                     }
 
                     /// <summary>
@@ -1274,6 +1290,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParameters SinkOpenSourceRabbitMQParameters { get; set; }
                     public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParameters : TeaModel {
+                        [NameInMap("AuthType")]
+                        [Validation(Required=false)]
+                        public string AuthType { get; set; }
+
                         [NameInMap("Body")]
                         [Validation(Required=false)]
                         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersBody Body { get; set; }
@@ -1298,21 +1318,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         [NameInMap("Exchange")]
                         [Validation(Required=false)]
-                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersExchange Exchange { get; set; }
-                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersExchange : TeaModel {
-                            [NameInMap("Form")]
-                            [Validation(Required=false)]
-                            public string Form { get; set; }
-
-                            [NameInMap("Template")]
-                            [Validation(Required=false)]
-                            public string Template { get; set; }
-
-                            [NameInMap("Value")]
-                            [Validation(Required=false)]
-                            public string Value { get; set; }
-
-                        }
+                        public string Exchange { get; set; }
 
                         [NameInMap("MessageId")]
                         [Validation(Required=false)]
@@ -1334,21 +1340,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         [NameInMap("NetworkType")]
                         [Validation(Required=false)]
-                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersNetworkType NetworkType { get; set; }
-                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersNetworkType : TeaModel {
-                            [NameInMap("Form")]
-                            [Validation(Required=false)]
-                            public string Form { get; set; }
-
-                            [NameInMap("Template")]
-                            [Validation(Required=false)]
-                            public string Template { get; set; }
-
-                            [NameInMap("Value")]
-                            [Validation(Required=false)]
-                            public string Value { get; set; }
-
-                        }
+                        public string NetworkType { get; set; }
 
                         [NameInMap("Password")]
                         [Validation(Required=false)]
@@ -1374,21 +1366,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         [NameInMap("QueueName")]
                         [Validation(Required=false)]
-                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersQueueName QueueName { get; set; }
-                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersQueueName : TeaModel {
-                            [NameInMap("Form")]
-                            [Validation(Required=false)]
-                            public string Form { get; set; }
-
-                            [NameInMap("Template")]
-                            [Validation(Required=false)]
-                            public string Template { get; set; }
-
-                            [NameInMap("Value")]
-                            [Validation(Required=false)]
-                            public string Value { get; set; }
-
-                        }
+                        public string QueueName { get; set; }
 
                         [NameInMap("RoutingKey")]
                         [Validation(Required=false)]
@@ -1410,21 +1388,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         [NameInMap("SecurityGroupId")]
                         [Validation(Required=false)]
-                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersSecurityGroupId SecurityGroupId { get; set; }
-                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersSecurityGroupId : TeaModel {
-                            [NameInMap("Form")]
-                            [Validation(Required=false)]
-                            public string Form { get; set; }
-
-                            [NameInMap("Template")]
-                            [Validation(Required=false)]
-                            public string Template { get; set; }
-
-                            [NameInMap("Value")]
-                            [Validation(Required=false)]
-                            public string Value { get; set; }
-
-                        }
+                        public string SecurityGroupId { get; set; }
 
                         [NameInMap("TargetType")]
                         [Validation(Required=false)]
@@ -1436,21 +1400,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         [NameInMap("VSwitchIds")]
                         [Validation(Required=false)]
-                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersVSwitchIds VSwitchIds { get; set; }
-                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersVSwitchIds : TeaModel {
-                            [NameInMap("Form")]
-                            [Validation(Required=false)]
-                            public string Form { get; set; }
-
-                            [NameInMap("Template")]
-                            [Validation(Required=false)]
-                            public string Template { get; set; }
-
-                            [NameInMap("Value")]
-                            [Validation(Required=false)]
-                            public string Value { get; set; }
-
-                        }
+                        public string VSwitchIds { get; set; }
 
                         [NameInMap("VirtualHostName")]
                         [Validation(Required=false)]
@@ -1458,21 +1408,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         [NameInMap("VpcId")]
                         [Validation(Required=false)]
-                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersVpcId VpcId { get; set; }
-                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkOpenSourceRabbitMQParametersVpcId : TeaModel {
-                            [NameInMap("Form")]
-                            [Validation(Required=false)]
-                            public string Form { get; set; }
-
-                            [NameInMap("Template")]
-                            [Validation(Required=false)]
-                            public string Template { get; set; }
-
-                            [NameInMap("Value")]
-                            [Validation(Required=false)]
-                            public string Value { get; set; }
-
-                        }
+                        public string VpcId { get; set; }
 
                     }
 
@@ -2945,6 +2881,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceOpenSourceRabbitMQParameters SourceOpenSourceRabbitMQParameters { get; set; }
                     public class ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceOpenSourceRabbitMQParameters : TeaModel {
+                        [NameInMap("AuthType")]
+                        [Validation(Required=false)]
+                        public string AuthType { get; set; }
+
                         [NameInMap("BodyDataType")]
                         [Validation(Required=false)]
                         public string BodyDataType { get; set; }
