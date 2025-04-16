@@ -48,6 +48,14 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         }
 
+        [NameInMap("AuthorizationLetterAuditPass")]
+        [Validation(Required=false)]
+        public bool? AuthorizationLetterAuditPass { get; set; }
+
+        [NameInMap("AuthorizationLetterId")]
+        [Validation(Required=false)]
+        public string AuthorizationLetterId { get; set; }
+
         /// <summary>
         /// <para>Request status code.</para>
         /// <list type="bullet">

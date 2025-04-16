@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string ApplySceneContent { get; set; }
 
+        [NameInMap("AuthorizationLetterId")]
+        [Validation(Required=false)]
+        public string AuthorizationLetterId { get; set; }
+
         /// <summary>
         /// <para>Additional information to supplement uploaded business proof documents or screenshots, which helps reviewers understand your business details.</para>
         /// <para>This parameter is optional; please fill it out based on your actual needs.</para>

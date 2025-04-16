@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [Validation(Required=false)]
             public string AuditStatus { get; set; }
 
+            [NameInMap("AuthorizationLetterId")]
+            [Validation(Required=false)]
+            public string AuthorizationLetterId { get; set; }
+
             /// <summary>
             /// <para>The type of the signature scenario. The return value ends with &quot;type&quot;. Valid values:</para>
             /// <list type="bullet">
@@ -172,6 +176,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [NameInMap("SignName")]
             [Validation(Required=false)]
             public string SignName { get; set; }
+
+            [NameInMap("authorizationLetterAuditPass")]
+            [Validation(Required=false)]
+            public bool? AuthorizationLetterAuditPass { get; set; }
 
         }
 
