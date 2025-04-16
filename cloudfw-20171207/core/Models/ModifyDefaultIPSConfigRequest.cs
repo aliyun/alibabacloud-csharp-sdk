@@ -15,14 +15,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>1</b>: yes</description></item>
         /// <item><description><b>0</b>: no</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
         [NameInMap("BasicRules")]
         [Validation(Required=false)]
-        public string BasicRules { get; set; }
+        public int? BasicRules { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to enable threat intelligence. Valid values:</para>
@@ -30,14 +29,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>1</b>: yes</description></item>
         /// <item><description><b>0</b>: no</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
         [NameInMap("CtiRules")]
         [Validation(Required=false)]
-        public string CtiRules { get; set; }
+        public int? CtiRules { get; set; }
 
         /// <summary>
         /// <para>The language of the content within the request and response. Valid values:</para>
@@ -53,6 +51,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>The maximum amount of traffic that can be processed by the sensitive data leak detection feature each day.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("MaxSdl")]
         [Validation(Required=false)]
         public long? MaxSdl { get; set; }
@@ -69,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// </summary>
         [NameInMap("PatchRules")]
         [Validation(Required=false)]
-        public string PatchRules { get; set; }
+        public int? PatchRules { get; set; }
 
         /// <summary>
         /// <para>The level of the rule group for the IPS. Valid values:</para>
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// </summary>
         [NameInMap("RuleClass")]
         [Validation(Required=false)]
-        public string RuleClass { get; set; }
+        public int? RuleClass { get; set; }
 
         /// <summary>
         /// <para>The mode of the IPS. Valid values:</para>
@@ -99,7 +103,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// </summary>
         [NameInMap("RunMode")]
         [Validation(Required=false)]
-        public string RunMode { get; set; }
+        public int? RunMode { get; set; }
 
     }
 

@@ -65,6 +65,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string InstanceStatus { get; set; }
 
+        /// <summary>
+        /// <para>The peak Internet traffic that can be protected.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3000</para>
+        /// </summary>
         [NameInMap("InternetBandwidth")]
         [Validation(Required=false)]
         public long? InternetBandwidth { get; set; }
@@ -126,6 +132,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? MaxOverflow { get; set; }
 
+        /// <summary>
+        /// <para>The peak traffic of NAT private network that can be protected.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3000</para>
+        /// </summary>
         [NameInMap("NatBandwidth")]
         [Validation(Required=false)]
         public long? NatBandwidth { get; set; }
@@ -183,6 +195,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public int? Version { get; set; }
 
+        /// <summary>
+        /// <para>The peak cross-VPC traffic that can be protected.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3000</para>
+        /// </summary>
         [NameInMap("VpcBandwidth")]
         [Validation(Required=false)]
         public long? VpcBandwidth { get; set; }

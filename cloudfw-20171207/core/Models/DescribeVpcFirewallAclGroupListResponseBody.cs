@@ -16,6 +16,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public List<DescribeVpcFirewallAclGroupListResponseBodyAclGroupList> AclGroupList { get; set; }
         public class DescribeVpcFirewallAclGroupListResponseBodyAclGroupList : TeaModel {
+            [NameInMap("AclConfig")]
+            [Validation(Required=false)]
+            public DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig AclConfig { get; set; }
+            public class DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig : TeaModel {
+                [NameInMap("StrictMode")]
+                [Validation(Required=false)]
+                public int? StrictMode { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID of the policy group.</para>
             /// <para>Valid values:</para>

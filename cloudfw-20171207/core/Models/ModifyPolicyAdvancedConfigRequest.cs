@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyPolicyAdvancedConfigRequest : TeaModel {
+        [NameInMap("Eips")]
+        [Validation(Required=false)]
+        public List<string> Eips { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable the strict mode for the access control policy. Valid values:</para>
         /// <list type="bullet">

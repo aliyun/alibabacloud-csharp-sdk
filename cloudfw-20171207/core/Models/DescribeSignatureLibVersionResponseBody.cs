@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public long? UpdateTime { get; set; }
+
             /// <summary>
             /// <para>The version number.</para>
             /// 

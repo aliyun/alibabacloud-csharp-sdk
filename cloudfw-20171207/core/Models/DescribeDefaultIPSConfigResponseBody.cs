@@ -37,10 +37,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public int? CtiRules { get; set; }
 
-        [NameInMap("FreeTrailStatus")]
-        [Validation(Required=false)]
-        public string FreeTrailStatus { get; set; }
-
+        /// <summary>
+        /// <para>The maximum amount of traffic that can be processed by the sensitive data leak detection feature each day.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("MaxSdl")]
         [Validation(Required=false)]
         public long? MaxSdl { get; set; }

@@ -33,14 +33,29 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public int? AddressListCount { get; set; }
 
+            /// <summary>
+            /// <para>A list of addresses in the address book, each with a single address description.</para>
+            /// </summary>
             [NameInMap("Addresses")]
             [Validation(Required=false)]
             public List<DescribeAddressBookResponseBodyAclsAddresses> Addresses { get; set; }
             public class DescribeAddressBookResponseBodyAclsAddresses : TeaModel {
+                /// <summary>
+                /// <para>Address information in the address book.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.0.1/32</para>
+                /// </summary>
                 [NameInMap("Address")]
                 [Validation(Required=false)]
                 public string Address { get; set; }
 
+                /// <summary>
+                /// <para>Single address description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>description</para>
+                /// </summary>
                 [NameInMap("Note")]
                 [Validation(Required=false)]
                 public string Note { get; set; }

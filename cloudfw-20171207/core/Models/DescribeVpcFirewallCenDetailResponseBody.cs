@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallSwitchStatus { get; set; }
 
         /// <summary>
-        /// <para>The VPC that is automatically created for the firewall.</para>
+        /// <para>The firewall VPC.</para>
         /// </summary>
         [NameInMap("FirewallVpc")]
         [Validation(Required=false)]
@@ -54,6 +54,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("AllowConfiguration")]
             [Validation(Required=false)]
             public int? AllowConfiguration { get; set; }
+
+            /// <summary>
+            /// <para>Firewall backup availability zone ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-k</para>
+            /// </summary>
+            [NameInMap("StandbyZoneId")]
+            [Validation(Required=false)]
+            public string StandbyZoneId { get; set; }
 
             /// <summary>
             /// <para>The CIDR block of the VPC.</para>
@@ -94,6 +104,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("VswitchId")]
             [Validation(Required=false)]
             public string VswitchId { get; set; }
+
+            /// <summary>
+            /// <para>The availability zone ID of the virtual switch.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-i</para>
+            /// </summary>
+            [NameInMap("VswitchZoneId")]
+            [Validation(Required=false)]
+            public string VswitchZoneId { get; set; }
 
             /// <summary>
             /// <para>The zone ID.</para>

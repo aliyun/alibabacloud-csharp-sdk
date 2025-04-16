@@ -2300,6 +2300,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["FirewallVpcCidrBlock"] = request.FirewallVpcCidrBlock;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVpcStandbyZoneId))
+            {
+                query["FirewallVpcStandbyZoneId"] = request.FirewallVpcStandbyZoneId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVpcZoneId))
             {
                 query["FirewallVpcZoneId"] = request.FirewallVpcZoneId;
@@ -2388,6 +2392,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVpcCidrBlock))
             {
                 query["FirewallVpcCidrBlock"] = request.FirewallVpcCidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVpcStandbyZoneId))
+            {
+                query["FirewallVpcStandbyZoneId"] = request.FirewallVpcStandbyZoneId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallVpcZoneId))
             {
@@ -6284,7 +6292,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default configurations of the intrusion prevention system (IPS).</para>
+        /// <para>Queries the default intrusion prevention system (IPS) configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6326,7 +6334,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default configurations of the intrusion prevention system (IPS).</para>
+        /// <para>Queries the default intrusion prevention system (IPS) configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6368,7 +6376,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default configurations of the intrusion prevention system (IPS).</para>
+        /// <para>Queries the default intrusion prevention system (IPS) configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6386,7 +6394,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default configurations of the intrusion prevention system (IPS).</para>
+        /// <para>Queries the default intrusion prevention system (IPS) configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11614,6 +11622,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["FirewallConfigureStatus"] = request.FirewallConfigureStatus;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -11674,6 +11686,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallConfigureStatus))
             {
                 query["FirewallConfigureStatus"] = request.FirewallConfigureStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallId))
+            {
+                query["FirewallId"] = request.FirewallId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -15690,6 +15706,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Eips))
+            {
+                query["Eips"] = request.Eips;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetSwitch))
             {
                 query["InternetSwitch"] = request.InternetSwitch;
@@ -15747,6 +15767,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Eips))
+            {
+                query["Eips"] = request.Eips;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetSwitch))
             {
                 query["InternetSwitch"] = request.InternetSwitch;

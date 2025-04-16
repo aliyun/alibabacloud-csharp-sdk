@@ -36,6 +36,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public List<DescribeVpcFirewallCenListResponseBodyVpcFirewalls> VpcFirewalls { get; set; }
         public class DescribeVpcFirewallCenListResponseBodyVpcFirewalls : TeaModel {
+            [NameInMap("AclConfig")]
+            [Validation(Required=false)]
+            public DescribeVpcFirewallCenListResponseBodyVpcFirewallsAclConfig AclConfig { get; set; }
+            public class DescribeVpcFirewallCenListResponseBodyVpcFirewallsAclConfig : TeaModel {
+                [NameInMap("StrictMode")]
+                [Validation(Required=false)]
+                public int? StrictMode { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID of the CEN instance.</para>
             /// 

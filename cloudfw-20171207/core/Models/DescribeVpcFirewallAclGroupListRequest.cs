@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string FirewallConfigureStatus { get; set; }
 
+        [NameInMap("FirewallId")]
+        [Validation(Required=false)]
+        public string FirewallId { get; set; }
+
         /// <summary>
         /// <para>The language of the content within the response. Valid values:</para>
         /// <list type="bullet">

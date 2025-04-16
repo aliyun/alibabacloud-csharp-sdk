@@ -180,6 +180,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string TrAttachmentMasterCidr { get; set; }
 
+        [NameInMap("TrAttachmentMasterZone")]
+        [Validation(Required=false)]
+        public string TrAttachmentMasterZone { get; set; }
+
         /// <summary>
         /// <para>The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</para>
         /// 
@@ -189,6 +193,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("TrAttachmentSlaveCidr")]
         [Validation(Required=false)]
         public string TrAttachmentSlaveCidr { get; set; }
+
+        [NameInMap("TrAttachmentSlaveZone")]
+        [Validation(Required=false)]
+        public string TrAttachmentSlaveZone { get; set; }
 
         /// <summary>
         /// <para>The ID of the transit router.</para>

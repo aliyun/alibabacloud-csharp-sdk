@@ -79,10 +79,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? TotalNatTraffic { get; set; }
 
+        /// <summary>
+        /// <para>Data Leak Detection Total Fee Flow.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>22879916142</para>
+        /// </summary>
         [NameInMap("TotalSdlBillTraffic")]
         [Validation(Required=false)]
         public long? TotalSdlBillTraffic { get; set; }
 
+        /// <summary>
+        /// <para>Data Leak Detection Total free usage traffic.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("TotalSdlFreeTraffic")]
         [Validation(Required=false)]
         public long? TotalSdlFreeTraffic { get; set; }

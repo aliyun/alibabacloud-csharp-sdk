@@ -61,6 +61,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallVpcCidrBlock { get; set; }
 
         /// <summary>
+        /// <para>The ID of the backup availability zone to which the firewall belongs. The firewall will automatically switch to the backup availability zone to continue running only if the primary availability zone service is unavailable.
+        /// If this parameter is not filled, the backup availability zone for the firewall will be automatically assigned.</para>
+        /// <remarks>
+        /// <para>This parameter is only effective when creating a VPC firewall for the first time in this CEN region.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-b</para>
+        /// </summary>
+        [NameInMap("FirewallVpcStandbyZoneId")]
+        [Validation(Required=false)]
+        public string FirewallVpcStandbyZoneId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the zone to which the vSwitch belongs. If your service is latency-sensitive, you can specify the same zone for the vSwitch of the firewall and the vSwitch of your business VPC to minimize latency.</para>
         /// <para>If you do not specify a value, a zone is automatically assigned for the vSwitch.</para>
         /// <remarks>

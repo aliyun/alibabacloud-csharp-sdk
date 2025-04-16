@@ -36,6 +36,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public List<DescribeVpcFirewallListResponseBodyVpcFirewalls> VpcFirewalls { get; set; }
         public class DescribeVpcFirewallListResponseBodyVpcFirewalls : TeaModel {
+            [NameInMap("AclConfig")]
+            [Validation(Required=false)]
+            public DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig AclConfig { get; set; }
+            public class DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig : TeaModel {
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// </summary>
+                [NameInMap("StrictMode")]
+                [Validation(Required=false)]
+                public int? StrictMode { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The bandwidth of the Express Connect circuit. Unit: Mbit/s.</para>
             /// 
