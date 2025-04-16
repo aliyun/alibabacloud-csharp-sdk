@@ -113,14 +113,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// </summary>
         [NameInMap("Networks")]
         [Validation(Required=false)]
-        public List<DescribeClusterResponseBodyNetworks> Networks { get; set; }
+        public DescribeClusterResponseBodyNetworks Networks { get; set; }
         public class DescribeClusterResponseBodyNetworks : TeaModel {
-            /// <summary>
-            /// <para>VPC Segment ID</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>vpd-iqd7xunc</para>
-            /// </summary>
             [NameInMap("VpdId")]
             [Validation(Required=false)]
             public string VpdId { get; set; }

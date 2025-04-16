@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// </summary>
             [NameInMap("ReleaseFileSize")]
             [Validation(Required=false)]
-            public long? ReleaseFileSize { get; set; }
+            public string ReleaseFileSize { get; set; }
 
             /// <summary>
             /// <para>image type</para>
