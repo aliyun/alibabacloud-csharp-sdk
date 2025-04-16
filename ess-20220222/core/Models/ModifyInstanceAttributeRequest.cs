@@ -36,6 +36,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The instance IDs.</para>
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
-    public class RemoveInstancesRequest : TeaModel {
+    public class RemoveInstancesShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</para>
         /// 
@@ -59,17 +59,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         [NameInMap("LifecycleHookContext")]
         [Validation(Required=false)]
-        public RemoveInstancesRequestLifecycleHookContext LifecycleHookContext { get; set; }
-        public class RemoveInstancesRequestLifecycleHookContext : TeaModel {
-            [NameInMap("DisableLifecycleHook")]
-            [Validation(Required=false)]
-            public bool? DisableLifecycleHook { get; set; }
-
-            [NameInMap("IgnoredLifecycleHookIds")]
-            [Validation(Required=false)]
-            public List<string> IgnoredLifecycleHookIds { get; set; }
-
-        }
+        public string LifecycleHookContextShrink { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
