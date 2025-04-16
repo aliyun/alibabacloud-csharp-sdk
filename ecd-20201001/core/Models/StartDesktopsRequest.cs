@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20201001.Models
 {
-    public class RebootDesktopsRequest : TeaModel {
+    public class StartDesktopsRequest : TeaModel {
         [NameInMap("ClientOS")]
         [Validation(Required=false)]
         public string ClientOS { get; set; }

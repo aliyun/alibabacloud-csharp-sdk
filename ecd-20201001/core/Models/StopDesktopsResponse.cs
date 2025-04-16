@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20201001.Models
 {
-    public class GetConnectionTicketResponse : TeaModel {
+    public class StopDesktopsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecd20201001.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public GetConnectionTicketResponseBody Body { get; set; }
+        public StopDesktopsResponseBody Body { get; set; }
 
     }
 

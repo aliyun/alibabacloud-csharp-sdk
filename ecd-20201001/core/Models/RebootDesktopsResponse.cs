@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201001.Models
 {
     public class RebootDesktopsResponse : TeaModel {
-        [NameInMap("RequestId")]
-        [Validation(Required=true)]
-        public string RequestId { get; set; }
+        [NameInMap("headers")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Headers { get; set; }
+
+        [NameInMap("statusCode")]
+        [Validation(Required=false)]
+        public int? StatusCode { get; set; }
+
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public RebootDesktopsResponseBody Body { get; set; }
 
     }
 

@@ -8,13 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20201001.Models
 {
-    public class DeleteDirectoriesResponse : TeaModel {
-        [NameInMap("NextToken")]
-        [Validation(Required=true)]
-        public string NextToken { get; set; }
-
+    public class StopDesktopsResponseBody : TeaModel {
         [NameInMap("RequestId")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public string RequestId { get; set; }
 
     }

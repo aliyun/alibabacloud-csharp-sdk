@@ -9,13 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201001.Models
 {
     public class DescribeDirectoriesRequest : TeaModel {
-        [NameInMap("DirectoryType")]
-        [Validation(Required=true)]
-        public string DirectoryType { get; set; }
-
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public List<string> DirectoryId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("DirectoryType")]
+        [Validation(Required=false)]
+        public string DirectoryType { get; set; }
 
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
