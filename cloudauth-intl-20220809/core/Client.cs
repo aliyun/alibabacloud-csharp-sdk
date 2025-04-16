@@ -531,6 +531,170 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>人脸凭证核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeepfakeDetectIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeepfakeDetectIntlResponse
+        /// </returns>
+        public DeepfakeDetectIntlResponse DeepfakeDetectIntlWithOptions(DeepfakeDetectIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceInputType))
+            {
+                query["FaceInputType"] = request.FaceInputType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceUrl))
+            {
+                query["FaceUrl"] = request.FaceUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceBase64))
+            {
+                body["FaceBase64"] = request.FaceBase64;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeepfakeDetectIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeepfakeDetectIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>人脸凭证核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeepfakeDetectIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeepfakeDetectIntlResponse
+        /// </returns>
+        public async Task<DeepfakeDetectIntlResponse> DeepfakeDetectIntlWithOptionsAsync(DeepfakeDetectIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceInputType))
+            {
+                query["FaceInputType"] = request.FaceInputType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceUrl))
+            {
+                query["FaceUrl"] = request.FaceUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceBase64))
+            {
+                body["FaceBase64"] = request.FaceBase64;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeepfakeDetectIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeepfakeDetectIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>人脸凭证核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeepfakeDetectIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeepfakeDetectIntlResponse
+        /// </returns>
+        public DeepfakeDetectIntlResponse DeepfakeDetectIntl(DeepfakeDetectIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeepfakeDetectIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>人脸凭证核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeepfakeDetectIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeepfakeDetectIntlResponse
+        /// </returns>
+        public async Task<DeepfakeDetectIntlResponse> DeepfakeDetectIntlAsync(DeepfakeDetectIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeepfakeDetectIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除用户认证记录结果</para>
         /// </summary>
         /// 
