@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateCloudPhoneNodeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The cloud phone matrixes.</para>
+        /// </summary>
         [NameInMap("NodeInfos")]
         [Validation(Required=false)]
         public List<CreateCloudPhoneNodeResponseBodyNodeInfos> NodeInfos { get; set; }
         public class CreateCloudPhoneNodeResponseBodyNodeInfos : TeaModel {
+            /// <summary>
+            /// <para>The IDs of the cloud phone instances.</para>
+            /// </summary>
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]
             public List<string> InstanceIds { get; set; }
 
             /// <summary>
+            /// <para>The ID of the cloud phone matrix.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cpn-e5kxgjyt8s1mb****</para>
             /// </summary>
@@ -28,6 +36,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>223684716098****</para>
         /// </summary>
@@ -36,6 +46,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>69BCBBE4-FCF2-59B8-AD9D-531EB422****</para>
         /// </summary>

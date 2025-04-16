@@ -179,6 +179,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string ProxyUserName { get; set; }
 
+            [NameInMap("Rules")]
+            [Validation(Required=false)]
+            public List<ModifyPolicyGroupRequestNetRedirectPolicyRules> Rules { get; set; }
+            public class ModifyPolicyGroupRequestNetRedirectPolicyRules : TeaModel {
+                [NameInMap("RuleType")]
+                [Validation(Required=false)]
+                public string RuleType { get; set; }
+
+                [NameInMap("Target")]
+                [Validation(Required=false)]
+                public string Target { get; set; }
+
+            }
+
         }
 
         /// <summary>
