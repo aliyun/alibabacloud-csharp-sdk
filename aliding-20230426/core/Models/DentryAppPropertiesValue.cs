@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
     public class DentryAppPropertiesValue : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>dentry_name</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>dentry_value</para>
+        /// <para>value</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]
