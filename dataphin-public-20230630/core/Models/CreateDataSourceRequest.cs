@@ -70,6 +70,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Description { get; set; }
 
                     /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>dp_test_dev</para>
                     /// </summary>
@@ -78,6 +80,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Name { get; set; }
 
                     /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>MAX_COMPUTE</para>
                     /// </summary>
@@ -150,6 +154,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>dp_test</para>
                 /// </summary>
@@ -158,6 +164,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>This parameter is required.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>MAX_COMPUTE</para>
                 /// </summary>
