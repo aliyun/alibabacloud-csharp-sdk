@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("L7Config")]
+        [Validation(Required=false)]
+        public PAL7Config L7Config { get; set; }
+
         [NameInMap("L7ProxyDomainAutomaticPrefix")]
         [Validation(Required=false)]
         public string L7ProxyDomainAutomaticPrefix { get; set; }
@@ -39,8 +43,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string L7ProxyDomainCustom { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("L7ProxyDomainPrivate")]
         [Validation(Required=false)]
+        [Obsolete]
         public string L7ProxyDomainPrivate { get; set; }
 
         /// <summary>

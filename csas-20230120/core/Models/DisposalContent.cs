@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string AlertContent { get; set; }
 
+        [NameInMap("AlertContentEn")]
+        [Validation(Required=false)]
+        public string AlertContentEn { get; set; }
+
         /// <summary>
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -24,6 +28,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [NameInMap("AlertTitle")]
         [Validation(Required=false)]
         public string AlertTitle { get; set; }
+
+        [NameInMap("AlertTitleEn")]
+        [Validation(Required=false)]
+        public string AlertTitleEn { get; set; }
+
+        [NameInMap("NoticeContent")]
+        [Validation(Required=false)]
+        public string NoticeContent { get; set; }
+
+        [NameInMap("NoticeContentEn")]
+        [Validation(Required=false)]
+        public string NoticeContentEn { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

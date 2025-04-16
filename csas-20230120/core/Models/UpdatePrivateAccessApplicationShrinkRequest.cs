@@ -8,25 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
-    public class CreatePrivateAccessApplicationRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+    public class UpdatePrivateAccessApplicationShrinkRequest : TeaModel {
         [NameInMap("Addresses")]
         [Validation(Required=false)]
         public List<string> Addresses { get; set; }
 
-        [NameInMap("BrowserAccessStatus")]
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pa-application-e12860ef6c48****</para>
+        /// </summary>
+        [NameInMap("ApplicationId")]
         [Validation(Required=false)]
-        public string BrowserAccessStatus { get; set; }
+        public string ApplicationId { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         [NameInMap("L7Config")]
         [Validation(Required=false)]
-        public PAL7Config L7Config { get; set; }
+        public string L7ConfigShrink { get; set; }
 
         [NameInMap("L7ProxyDomainAutomaticPrefix")]
         [Validation(Required=false)]
@@ -36,26 +43,25 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string L7ProxyDomainCustom { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>private_access_application_name</para>
-        /// </summary>
-        [NameInMap("Name")]
+        /// <term><b>Obsolete</b></term>
+        [NameInMap("L7ProxyDomainPrivate")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        [Obsolete]
+        public string L7ProxyDomainPrivate { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <b>Example:</b>
+        /// <para>Cover</para>
         /// </summary>
+        [NameInMap("ModifyType")]
+        [Validation(Required=false)]
+        public string ModifyType { get; set; }
+
         [NameInMap("PortRanges")]
         [Validation(Required=false)]
-        public List<CreatePrivateAccessApplicationRequestPortRanges> PortRanges { get; set; }
-        public class CreatePrivateAccessApplicationRequestPortRanges : TeaModel {
+        public List<UpdatePrivateAccessApplicationShrinkRequestPortRanges> PortRanges { get; set; }
+        public class UpdatePrivateAccessApplicationShrinkRequestPortRanges : TeaModel {
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>80</para>
             /// </summary>
@@ -64,8 +70,6 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public int? Begin { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>81</para>
             /// </summary>
@@ -76,8 +80,6 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>All</para>
         /// </summary>
@@ -86,8 +88,6 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Enabled</para>
         /// </summary>
@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
         [NameInMap("TagIds")]
         [Validation(Required=false)]
         public List<string> TagIds { get; set; }

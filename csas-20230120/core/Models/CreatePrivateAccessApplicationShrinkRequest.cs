@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
-    public class CreatePrivateAccessApplicationRequest : TeaModel {
+    public class CreatePrivateAccessApplicationShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
         [NameInMap("L7Config")]
         [Validation(Required=false)]
-        public PAL7Config L7Config { get; set; }
+        public string L7ConfigShrink { get; set; }
 
         [NameInMap("L7ProxyDomainAutomaticPrefix")]
         [Validation(Required=false)]
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// </summary>
         [NameInMap("PortRanges")]
         [Validation(Required=false)]
-        public List<CreatePrivateAccessApplicationRequestPortRanges> PortRanges { get; set; }
-        public class CreatePrivateAccessApplicationRequestPortRanges : TeaModel {
+        public List<CreatePrivateAccessApplicationShrinkRequestPortRanges> PortRanges { get; set; }
+        public class CreatePrivateAccessApplicationShrinkRequestPortRanges : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
             /// 

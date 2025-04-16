@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("L7Config")]
+            [Validation(Required=false)]
+            public PAL7Config L7Config { get; set; }
+
             [NameInMap("L7ProxyDomainAutomatic")]
             [Validation(Required=false)]
             public string L7ProxyDomainAutomatic { get; set; }
