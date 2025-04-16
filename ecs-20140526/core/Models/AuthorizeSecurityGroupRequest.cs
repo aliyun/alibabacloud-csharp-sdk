@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The security group rules. You can create 1 to 100 security group rules in a request.</para>
+        /// <para>An array of security group rules. You can specify 1 to 100 security group rules in a request.</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</para>
             /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
             /// <remarks>
-            /// <para> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and <c>DestCidrIp</c> in the same request.</para>
+            /// <para> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and <c>DestCidrIp</c> in the same request.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -229,6 +229,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PortRange { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>prl-2ze9743****</para>
+            /// </summary>
+            [NameInMap("PortRangeListId")]
+            [Validation(Required=false)]
+            public string PortRangeListId { get; set; }
+
+            /// <summary>
             /// <para>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</para>
             /// <para>Default value: 1.</para>
             /// 
@@ -250,7 +258,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SourceCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source security group that is specified in the security group rule.</para>
+            /// <para>The ID of the source security group of the security group rule.</para>
             /// <list type="bullet">
             /// <item><description>You must specify at least one of the following parameters: <c>SourceGroupId</c>, <c>SourceCidrIp</c>, <c>Ipv6SourceCidrIp</c>, and <c>SourcePrefixListId</c>.</description></item>
             /// <item><description>If you specify <c>SourceGroupId</c> but do not specify <c>SourceCidrIp</c> or <c>Ipv6SourceCidrIp</c>, you must set <c>NicType</c> to <c>intranet</c>.</description></item>
@@ -313,7 +321,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The ID of the source prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</para>
             /// <para>When you specify this parameter, take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</description></item>
+            /// <item><description>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas&quot; topic.</description></item>
             /// <item><description>If you specify <c>SourceCidrIp</c>, <c>Ipv6SourceCidrIp</c>, or <c>SourceGroupId</c>, this parameter is ignored.</description></item>
             /// </list>
             /// 

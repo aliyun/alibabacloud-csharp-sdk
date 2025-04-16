@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The custom parameters.</para>
+                /// <para>The custom parameters of the command.</para>
                 /// </summary>
                 [NameInMap("ParameterDefinitions")]
                 [Validation(Required=false)]
@@ -165,6 +165,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public string ParameterName { get; set; }
 
+                        /// <summary>
+                        /// <para>The regular expression of the custom parameter.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>^[a-zA-Z0-9_-]{4,32}$</para>
+                        /// </summary>
                         [NameInMap("PatternRegex")]
                         [Validation(Required=false)]
                         public string PatternRegex { get; set; }

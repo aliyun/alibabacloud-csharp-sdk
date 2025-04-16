@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>An array of security group rules. You can specify 1 to 100 security group rules.</para>
+        /// <para>The security group rules. You can specify 1 to 100 security group rules.</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DestPrefixListId { get; set; }
 
             /// <summary>
-            /// <para>The protocol. The values of this parameter are case-insensitive. Valid values:</para>
+            /// <para>The protocol. The values of this parameter are case-insensitive. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>TCP.</description></item>
             /// <item><description>UDP.</description></item>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Ipv6SourceCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Valid values:</para>
+            /// <para>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>internet: public NIC.</para>
             /// </description></item>
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NicType { get; set; }
 
             /// <summary>
-            /// <para>The action of the security group rule. Valid values:</para>
+            /// <para>The action of the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>accept: allows outbound access.</description></item>
             /// <item><description>drop: denies outbound access and returns no responses. In this case, the request times out or the connection cannot be established.</description></item>
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The range of destination port numbers for the protocols specified in the security group rule. Valid values:</para>
+            /// <para>The range of destination port numbers for the protocols specified in the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
             /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
@@ -339,6 +339,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string PortRange { get; set; }
 
+            [NameInMap("PortRangeListId")]
+            [Validation(Required=false)]
+            public string PortRangeListId { get; set; }
+
             /// <summary>
             /// <para>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</para>
             /// <para>Default value: 1.</para>
@@ -351,7 +355,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</para>
+            /// <para>The source IPv4 CIDR blocks and IPv4 addresses are supported.</para>
             /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
             /// 
             /// <b>Example:</b>
@@ -362,14 +366,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SourceCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The range of source port numbers for the protocols specified in the security group rule. Valid values:</para>
+            /// <para>The range of source port numbers for the protocols specified in the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
             /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
             /// <item><description>If you set IpProtocol to GRE, the port number range is -1/-1.</description></item>
             /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1.</description></item>
             /// </list>
-            /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
+            /// <para>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80/80</para>

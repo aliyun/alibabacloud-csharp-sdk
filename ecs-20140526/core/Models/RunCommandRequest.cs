@@ -239,18 +239,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The key-value pairs of the custom parameters that are passed in when the command that can include custom parameters is run. For example, assume that the command content is <c>echo {{name}}</c>. The <c>Parameter</c> parameter can be used to pass in the <c>{&quot;name&quot;:&quot;Jack&quot;}</c> key-value pair. The <c>name</c> key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. As a result, the <c>echo Jack</c> command is run.</para>
-        /// <para>You can specify up to 10 custom parameters. Take note of the following items:</para>
+        /// <para>The key-value pairs of custom parameters to pass in when the command can include custom parameters. For example, the command content is <c>echo {{name}}</c>. You can use <c>Parameters</c> to pass in the <c>{&quot;name&quot;:&quot;Jack&quot;}</c> key-value pair. The <c>name</c> key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. As a result, the <c>echo Jack</c> command is run.</para>
+        /// <para>You can specify 0 to 10 custom parameters. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The key cannot be an empty string. It can be up to 64 characters in length.</description></item>
-        /// <item><description>The value can be an empty string.</description></item>
-        /// <item><description>If you want to retain the command, make sure that the command after Base64 encoding, including custom parameters and original command content, does not exceed 18 KB in size. If you do not want to retain the command, make sure that the command after Base64-encoding does not exceed 24 KB in size. You can set <c>KeepCommand</c> to specify whether to retain the command.</description></item>
+        /// <item><description>The key of a custom parameter can be up to 64 characters in length and cannot be an empty string.</description></item>
+        /// <item><description>The value of a custom parameter can be an empty string.</description></item>
+        /// <item><description>If you want to retain a command, make sure that the command after Base64 encoding, including custom parameters and original command content, does not exceed 18 KB in size. If you do not want to retain the command, make sure that the command after Base64 encoding does not exceed 24 KB in size. You can set <c>KeepCommand</c> to specify whether to retain the command.</description></item>
         /// <item><description>The custom parameter names that are specified by Parameters must be included in the custom parameter names that you specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</description></item>
         /// </list>
-        /// <para>This parameter is empty by default. You can leave this parameter empty to disable the custom parameter feature.</para>
+        /// <para>This parameter is left empty by default, which indicates that the custom parameter feature is disabled.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyvdIqaRY****&quot;}</para>
+        /// <para>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI*************&quot;}</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]

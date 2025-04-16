@@ -83,6 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
             /// <para>The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -93,6 +94,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c>.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

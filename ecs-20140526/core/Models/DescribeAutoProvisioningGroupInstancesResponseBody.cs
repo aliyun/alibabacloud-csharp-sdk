@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoProvisioningGroupInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array consisting of Instance data.</para>
+        /// <para>The information about the instances in the auto provisioning group.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance> Instance { get; set; }
             public class DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance : TeaModel {
                 /// <summary>
-                /// <para>The number of vCPUs.</para>
+                /// <para>The number of vCPU cores of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-bp67acfmxazb4p****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The instance type of the ECS instance.</para>
+                /// <para>The ECS instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.g5.large</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the instance is I/O optimized.</para>
+                /// <para>Indicates whether the instance is an I/O optimized instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public bool? IsSpot { get; set; }
 
                 /// <summary>
-                /// <para>The memory size of the instance. Unit: MiB.</para>
+                /// <para>The memory capacity of the instance. Unit: MiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>
@@ -93,8 +93,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The network type of the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>vpc</description></item>
-                /// <item><description>classic</description></item>
+                /// <item><description>vpc: Virtual Private Cloud (VPC)</description></item>
+                /// <item><description>classic: classic network</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string OsType { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the instance.</para>
+                /// <para>The region ID of the container group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The zone ID of the instance.</para>
+                /// <para>The ID of the zone to which the instance belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-g</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B48A12CD-1295-4A38-A8F0-0E92C937****</para>

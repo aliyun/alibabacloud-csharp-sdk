@@ -106,7 +106,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageFamily { get; set; }
 
         /// <summary>
-        /// <para>The image IDs.</para>
+        /// <para>The ID of the image.</para>
+        /// <para><b>Naming rules for image IDs</b></para>
+        /// <list type="bullet">
+        /// <item><description>IDs of public images are named after the operating system version numbers, architectures, languages, and release dates of the images. For example, the ID of a Windows Server 2008 R2 Enterprise 64-bit (English) public image is win2008r2_64_ent_sp1_en-us_40G_alibase_20190318.vhd.</description></item>
+        /// <item><description>IDs of custom images, shared images, Alibaba Cloud Marketplace images, and community images start with m.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>m-bp1g7004ksh0oeuc****</para>
@@ -116,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The image name.</para>
+        /// <para>The image name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testImageName</para>
@@ -244,7 +249,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100</para>
+        /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>

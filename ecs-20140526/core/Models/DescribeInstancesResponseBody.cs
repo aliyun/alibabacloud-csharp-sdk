@@ -96,6 +96,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public int? CoreCount { get; set; }
 
+                    [NameInMap("EnableVISST")]
+                    [Validation(Required=false)]
+                    public bool? EnableVISST { get; set; }
+
+                    [NameInMap("EnableVRDT")]
+                    [Validation(Required=false)]
+                    public bool? EnableVRDT { get; set; }
+
                     /// <summary>
                     /// <remarks>
                     /// <para> This parameter is deprecated.</para>
@@ -131,6 +139,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [NameInMap("TopologyType")]
                     [Validation(Required=false)]
                     public string TopologyType { get; set; }
+
+                    [NameInMap("TurboMode")]
+                    [Validation(Required=false)]
+                    public string TurboMode { get; set; }
 
                 }
 
@@ -386,6 +398,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public bool? IsSupportUnassociate { get; set; }
 
                 }
+
+                [NameInMap("EnableNVS")]
+                [Validation(Required=false)]
+                public bool? EnableNVS { get; set; }
 
                 /// <summary>
                 /// <para>The expiration time of the instance. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>

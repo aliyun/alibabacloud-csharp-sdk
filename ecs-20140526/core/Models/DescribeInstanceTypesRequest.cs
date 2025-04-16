@@ -24,14 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CpuArchitecture { get; set; }
 
         /// <summary>
-        /// <para>The CPU architectures of instance types. Valid values:</para>
-        /// <remarks>
-        /// <para> Valid values of N: 1 and 2.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>X86</description></item>
-        /// <item><description>ARM</description></item>
-        /// </list>
+        /// <para>The CPU architectures of instance types. You can specify 1 or 2 CPU architectures.</para>
         /// </summary>
         [NameInMap("CpuArchitectures")]
         [Validation(Required=false)]
@@ -51,35 +44,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string GPUSpec { get; set; }
 
         /// <summary>
-        /// <para>The GPU models of instance types. Valid values of N: 1 to 10.</para>
+        /// <para>The GPU models of instance types. You can specify 1 to 10 GPU models.</para>
         /// </summary>
         [NameInMap("GpuSpecs")]
         [Validation(Required=false)]
         public List<string> GpuSpecs { get; set; }
 
         /// <summary>
-        /// <para>The categories of instance types. Valid values:</para>
-        /// <remarks>
-        /// <para> Valid values of N: 1 to 10.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>General-purpose: general-purpose instance type</description></item>
-        /// <item><description>Compute-optimized: compute-optimized instance type</description></item>
-        /// <item><description>Memory-optimized: memory-optimized instance type</description></item>
-        /// <item><description>Big data: big data instance type</description></item>
-        /// <item><description>Local SSDs: instance type with local SSDs</description></item>
-        /// <item><description>High Clock Speed: instance type with high clock speeds</description></item>
-        /// <item><description>Enhanced: enhanced instance type</description></item>
-        /// <item><description>Shared: shared instance type</description></item>
-        /// <item><description>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type</description></item>
-        /// <item><description>Visual Compute-optimized: visual compute-optimized instance type</description></item>
-        /// <item><description>Heterogeneous Service: heterogeneous service instance type</description></item>
-        /// <item><description>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type</description></item>
-        /// <item><description>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</description></item>
-        /// <item><description>ECS Bare Metal: ECS Bare Metal Instance type</description></item>
-        /// <item><description>Super Computing Cluster: SCC instance type</description></item>
-        /// <item><description>High Performance Compute: high-performance computing instance type</description></item>
-        /// </list>
+        /// <para>The categories of instance types. You can specify 1 to 10 categories of instance types.</para>
         /// </summary>
         [NameInMap("InstanceCategories")]
         [Validation(Required=false)]
@@ -129,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// <para>The instance families of instance types that you want to query. Valid values of N: 1 to 10.</para>
+        /// <para>The instance families. You can specify 1 to 10 instance families.</para>
         /// </summary>
         [NameInMap("InstanceTypeFamilies")]
         [Validation(Required=false)]
@@ -147,7 +119,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// <para>Instance type N. Valid values of N: 1 to 10. If this parameter is left empty, information about all instance types is queried.</para>
+        /// <para>The instance types. You can specify 1 to 10 instance types. If this parameter is empty, information about all instance types is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.large</para>
@@ -157,11 +129,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceTypes { get; set; }
 
         /// <summary>
-        /// <para>The categories of local disks. Valid values of N: 1 and 2. For more information, see <a href="~~63138#section_n2w_8yc_5u1~~">Local disks</a>. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances</description></item>
-        /// <item><description>local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances</description></item>
-        /// </list>
+        /// <para>The categories of local disks used by instance types. You can specify 1 or 2 categories of local disks.</para>
         /// </summary>
         [NameInMap("LocalStorageCategories")]
         [Validation(Required=false)]
@@ -584,7 +552,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PhysicalProcessorModel { get; set; }
 
         /// <summary>
-        /// <para>The CPU models of instance types. Valid values of N: 1 to 10.</para>
+        /// <para>The CPU models of instance types. You can specify 1 to 10 CPU models.</para>
         /// </summary>
         [NameInMap("PhysicalProcessorModels")]
         [Validation(Required=false)]

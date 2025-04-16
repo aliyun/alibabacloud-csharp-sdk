@@ -20,6 +20,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceType> InstanceType { get; set; }
             public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType : TeaModel {
+                [NameInMap("Attributes")]
+                [Validation(Required=false)]
+                public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributes Attributes { get; set; }
+                public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributes : TeaModel {
+                    [NameInMap("Attribute")]
+                    [Validation(Required=false)]
+                    public List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute> Attribute { get; set; }
+                    public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute : TeaModel {
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</para>
                 /// 
@@ -62,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions CpuOptions { get; set; }
                 public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions : TeaModel {
                     /// <summary>
-                    /// <para>CPU core.</para>
+                    /// <para>The number of CPU cores.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -72,7 +92,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public int? Core { get; set; }
 
                     /// <summary>
-                    /// <para>CPU core factor.</para>
+                    /// <para>The CPU option step size.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -82,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public int? CoreFactor { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether Hyper-Threading is adjustable.</para>
+                    /// <para>Indicates whether HT can be enabled or disabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -105,9 +125,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// <para>CPU threads per core.</para>
+                    /// <para>The number of threads per CPU core.</para>
                     /// <remarks>
-                    /// <para><c>CpuOptions.ThreadsPerCore=1</c> indicates the shutdown of CPU Hyper-Threading.</para>
+                    /// <para> <c>If the value of CpuOptions.ThreadPerCore is 1, Hyper-Threading (HT) is disabled.</c></para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -556,7 +576,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public int? PrimaryEniQueueNumber { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of QPs per ERI.</para>
+                /// <para>The maximum number of QPs per instance, which varies based on the instance type.</para>
+                /// <list type="bullet">
+                /// <item><description>For enterprise-level CPU-based instance types, the value of <c>QueuePairNumber</c> is the maximum number of QPs per instance.</description></item>
+                /// <item><description>For GPU-accelerated instance types, the maximum number of QPs per instance is calculated by using the following formula: Value of <c>QueuePairNumber</c> × Value of NetworkCardQuantity.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22</para>

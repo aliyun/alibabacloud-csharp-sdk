@@ -183,6 +183,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string PortRange { get; set; }
 
+        [NameInMap("PortRangeListId")]
+        [Validation(Required=false)]
+        public string PortRangeListId { get; set; }
+
         /// <summary>
         /// <para>The priority of the security group rule. Valid values: 1 to 100.</para>
         /// <para>Default value: 1.</para>

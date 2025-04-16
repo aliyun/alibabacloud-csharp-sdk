@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details of the zones and their supported resources.</para>
+        /// <para>Details about the zones and their supported resources.</para>
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The supported disk categories. Valid values:</para>
+                /// <para>The categories of cloud disks that can be created. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>cloud: basic disk</description></item>
                 /// <item><description>cloud_ssd: standard SSD</description></item>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <item><description>IoOptimized: I/O optimized instance</description></item>
                 /// <item><description>Instance: instance</description></item>
                 /// <item><description>DedicatedHost: dedicated host</description></item>
-                /// <item><description>disk: disk</description></item>
+                /// <item><description>disk: cloud disk</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("AvailableResourceCreation")]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         public bool? IoOptimized { get; set; }
 
                         /// <summary>
-                        /// <para>The supported network types</para>
+                        /// <para>The supported network types.</para>
                         /// </summary>
                         [NameInMap("NetworkTypes")]
                         [Validation(Required=false)]
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// <para>The supported categories of system disks that can be created.</para>
+                        /// <para>The categories of system disks that can be created.</para>
                         /// </summary>
                         [NameInMap("SystemDiskCategories")]
                         [Validation(Required=false)]

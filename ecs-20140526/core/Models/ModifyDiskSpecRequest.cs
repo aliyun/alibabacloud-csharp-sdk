@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class ModifyDiskSpecRequestPerformanceControlOptions : TeaModel {
             /// <summary>
             /// <para>The new IOPS rate of the cloud disk. You can modify the IOPS rate of only cloud disks in dedicated block storage clusters.</para>
-            /// <para>Valid values: 900 to maximum IOPS per cloud disk (with an increment of 100).</para>
+            /// <para>Valid values: 900 to maximum IOPS per disk (with an increment of 100).</para>
             /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Block storage performance</a>.</para>
             /// 
             /// <b>Example:</b>
@@ -140,10 +140,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
+        /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk.</para>
+        /// <para>Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
         /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
         /// <remarks>
-        /// <para> This parameter is available only if you set DiskCategory to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</para>
+        /// <para> This parameter is available only if you set <c>DiskCategory</c> to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

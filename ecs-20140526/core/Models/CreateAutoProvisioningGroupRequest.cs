@@ -98,11 +98,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk> DataDisk { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk : TeaModel {
+                [NameInMap("AutoSnapshotPolicyId")]
+                [Validation(Required=false)]
+                public string AutoSnapshotPolicyId { get; set; }
+
                 /// <summary>
-                /// <para>Specifies whether to enable the performance burst feature for data disk N. Valid values:</para>
+                /// <para>Specifies whether to enable the performance burst feature for the system disk. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description>true: force attaches the disk to the instance.</description></item>
+                /// <item><description>false: disables the performance burst feature for the system disk.</description></item>
                 /// </list>
                 /// <remarks>
                 /// <para> This parameter is available only if you set LaunchConfiguration.DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
@@ -118,9 +122,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The category of data disk N. Valid values of N: 1 to 16. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>cloud_efficiency: ultra disk.</description></item>
+                /// <item><description>cloud_efficiency: utra disk.</description></item>
                 /// <item><description>cloud_ssd: standard SSD.</description></item>
-                /// <item><description>cloud_essd: ESSD.</description></item>
+                /// <item><description>cloud_essd: enterprise SSD (ESSD).</description></item>
                 /// <item><description>cloud: basic disk.</description></item>
                 /// </list>
                 /// <para>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</para>
@@ -136,8 +140,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>Specifies whether to release data disk N when the instance to which the data disk is attached is released. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description>true: releases data disk N when the associated instance is released.</description></item>
+                /// <item><description>false: does not release data disk N when the associated instance is released.</description></item>
                 /// </list>
                 /// <para>Default value: true.</para>
                 /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
@@ -170,7 +174,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Device { get; set; }
 
                 /// <summary>
-                /// <para>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
+                /// <para>The name of data disk N. The name must be 2 to 128 characters in length The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
                 /// <para>This parameter is left empty by default.</para>
                 /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
                 /// 
@@ -196,8 +200,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>Specifies whether to encrypt data disk N. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description>true: encrypts system disk N.</description></item>
+                /// <item><description>false: does not encrypt system disk N.</description></item>
                 /// </list>
                 /// <para>Default value: false.</para>
                 /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
@@ -222,12 +226,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The performance level of the Enterprise SSD (ESSD) to use as data disk N. The value of N in this parameter must be the same as the value of N in <c>LaunchConfiguration.DataDisk.N.Category</c>. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
-                /// <item><description>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
-                /// <item><description>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</description></item>
-                /// <item><description>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</description></item>
+                /// <item><description>PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</description></item>
+                /// <item><description>PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.</description></item>
+                /// <item><description>PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</description></item>
+                /// <item><description>PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.</description></item>
                 /// </list>
-                /// <para>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
+                /// <para>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
                 /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
                 /// 
                 /// <b>Example:</b>
@@ -545,11 +549,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk SystemDisk { get; set; }
             public class CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk : TeaModel {
+                [NameInMap("AutoSnapshotPolicyId")]
+                [Validation(Required=false)]
+                public string AutoSnapshotPolicyId { get; set; }
+
                 /// <summary>
                 /// <para>Specifies whether to enable the performance burst feature for the system disk. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description>true: force attaches the disk to the instance.</description></item>
+                /// <item><description>false: disables the performance burst feature for the system disk.</description></item>
                 /// </list>
                 /// <remarks>
                 /// <para> This parameter is available only if you set <c>LaunchConfiguration.SystemDisk.Category</c> to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
@@ -584,8 +592,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>Specifies whether to encrypt the system disk. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description>true: encrypts system disk N.</description></item>
+                /// <item><description>false: does not encrypt system disk N.</description></item>
                 /// </list>
                 /// <para>Default value: false.</para>
                 /// <para>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</para>
@@ -609,7 +617,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string KMSKeyId { get; set; }
 
                 /// <summary>
-                /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
+                /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
                 /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
                 /// <remarks>
                 /// <para> This parameter is available only if you set LaunchConfiguration.SystemDisk.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
@@ -734,21 +742,71 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string UserData { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable auto-renewal for the reserved instance. This parameter is required only when the instance uses the subscription billing method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true</description></item>
+            /// <item><description>false (default)</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("AutoRenew")]
             [Validation(Required=false)]
             public bool? AutoRenew { get; set; }
 
+            /// <summary>
+            /// <para>The auto-renewal period of the instance. Valid values:</para>
+            /// <para>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
+            /// <para>Default value: 1.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("AutoRenewPeriod")]
             [Validation(Required=false)]
             public int? AutoRenewPeriod { get; set; }
 
+            [NameInMap("ImageOptions")]
+            [Validation(Required=false)]
+            public CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions ImageOptions { get; set; }
+            public class CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions : TeaModel {
+                [NameInMap("LoginAsNonRoot")]
+                [Validation(Required=false)]
+                public bool? LoginAsNonRoot { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The subscription period of the instance. The unit is specified by <c>PeriodUnit</c>. This parameter takes effect and is required only if the subscription billing method is selected. Valid values:</para>
+            /// <para>Valid values if PeriodUnit is set to Month: 1, 2, 3, 6, and 12.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Period")]
             [Validation(Required=false)]
             public int? Period { get; set; }
 
+            /// <summary>
+            /// <para>The unit of the subscription period. Default value: Month. Valid values:</para>
+            /// <para>Month</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Month</para>
+            /// </summary>
             [NameInMap("PeriodUnit")]
             [Validation(Required=false)]
             public string PeriodUnit { get; set; }
+
+            [NameInMap("SpotDuration")]
+            [Validation(Required=false)]
+            public int? SpotDuration { get; set; }
+
+            [NameInMap("SpotInterruptionBehavior")]
+            [Validation(Required=false)]
+            public string SpotInterruptionBehavior { get; set; }
 
         }
 
@@ -816,8 +874,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of supplemental instances. When the sum of the <c>PayAsYouGoTargetCapacity</c> and <c>SpotTargetCapacity</c> values is smaller than the <c>TotalTargetCapacity</c> value, the auto provisioning group creates instances of the specified type to meet the total target capacity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PayAsYouGo: pay-as-you-go instances</description></item>
-        /// <item><description>Spot: preemptible instances.</description></item>
+        /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
+        /// <item><description>Spot: preemptible instance</description></item>
         /// </list>
         /// <para>Default value: Spot.</para>
         /// 
@@ -882,7 +940,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to include burstable instance types. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Exclude: does not include burstable instance types.</description></item>
+            /// <item><description>Exclude: excludes burstable instance types.</description></item>
             /// <item><description>Include: includes burstable instance types.</description></item>
             /// <item><description>Required: includes only burstable instance types.</description></item>
             /// </list>
@@ -896,7 +954,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string BurstablePerformance { get; set; }
 
             /// <summary>
-            /// <para>The number of vCPU cores of the instance type.</para>
+            /// <para>The numbers of vCPUs of instance types.</para>
             /// </summary>
             [NameInMap("Cores")]
             [Validation(Required=false)]
@@ -909,16 +967,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<string> ExcludedInstanceTypes { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the image. You can use this parameter to specify the image that is used by the current resource pool. If you do not specify this parameter, the image that is configured in <c>LaunchConfiguration.ImageId</c> or the launch template is used by default. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query the available images. Note: This parameter is supported only when <c>AutoProvisioningGroupType</c> is set to instant.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aliyun_3_x64_20G_alibase_20210425.vhd</para>
+            /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values:</para>
+            /// <para>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values of Nextended configuration N， Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</description></item>
-            /// <item><description>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see the <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> topic.</description></item>
-            /// <item><description>CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</description></item>
+            /// <item><description>EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not ensure stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</description></item>
+            /// <item><description>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
+            /// <item><description>CreditEntryLevel: credit entry level. This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For information about burstable instances, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a>.</description></item>
             /// </list>
             /// <para>Valid values of N: 1 to 10.</para>
             /// 
@@ -930,7 +994,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceFamilyLevel { get; set; }
 
             /// <summary>
-            /// <para>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+            /// <para>The instance type in extended configuration N. Valid values of N: 1 to 20. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.g5.large</para>
@@ -942,7 +1006,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The maximum price of preemptible instances in extended configuration N.</para>
             /// <remarks>
-            /// <para> If you specify one or more other <c>LaunchTemplateConfig.N.*</c> parameters, you must also specify <c>LaunchTemplateConfig.N.MaxPrice</c>.</para>
+            /// <para> If you specify one or more <c>LaunchTemplateConfig.N.*</c> parameters, you must also specify <c>LaunchTemplateConfig.N.MaxPrice</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -965,7 +1029,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? MaxQuantity { get; set; }
 
             /// <summary>
-            /// <para>The memory sizes of the instance type.</para>
+            /// <para>The memory sizes of instance types.</para>
             /// </summary>
             [NameInMap("Memories")]
             [Validation(Required=false)]
@@ -984,7 +1048,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The ID of the vSwitch in extended configuration N. The zone of the ECS instances created from the extended configuration is determined by the vSwitch.</para>
             /// <remarks>
-            /// <para> If you specify one or more other <c>LaunchTemplateConfig.N.*</c> parameters, you must also specify <c>LaunchTemplateConfig.N.VSwitchId</c>.</para>
+            /// <para> If you specify one or more <c>LaunchTemplateConfig.N.*</c> parameters, you must also specify <c>LaunchTemplateConfig.N.VSwitchId</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1093,18 +1157,36 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string PayAsYouGoTargetCapacity { get; set; }
 
+        /// <summary>
+        /// <para>The capacity details of the subscription instance.</para>
+        /// </summary>
         [NameInMap("PrePaidOptions")]
         [Validation(Required=false)]
         public CreateAutoProvisioningGroupRequestPrePaidOptions PrePaidOptions { get; set; }
         public class CreateAutoProvisioningGroupRequestPrePaidOptions : TeaModel {
+            /// <summary>
+            /// <para>The minimum capacity set for different instance types. This parameter is valid only when <c>AutoProvisioningGroupType</c> is set to request.</para>
+            /// </summary>
             [NameInMap("SpecifyCapacityDistribution")]
             [Validation(Required=false)]
             public List<CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution> SpecifyCapacityDistribution { get; set; }
             public class CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution : TeaModel {
+                /// <summary>
+                /// <para>Details about the instance types. Duplicate instance types are not allowed and the instance types are within the LaunchTemplateConfig.InstanceType range.</para>
+                /// </summary>
                 [NameInMap("InstanceTypes")]
                 [Validation(Required=false)]
                 public List<string> InstanceTypes { get; set; }
 
+                /// <summary>
+                /// <para>The minimum number of instances to be delivered within the <c>InstanceTypes</c> range.</para>
+                /// <remarks>
+                /// <para> <c>sum(MinTargetCapacity)&lt;= TotalTargetCapacity</c> indicates that the sum of MinTargetCapacity values of all instance types cannot exceed the TotalTargetCapacity value. If any instance type set cannot meet the MinTargetCapacity requirement due to insufficient inventory or other reasons, the entire request fails.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
+                /// </summary>
                 [NameInMap("MinTargetCapacity")]
                 [Validation(Required=false)]
                 public int? MinTargetCapacity { get; set; }

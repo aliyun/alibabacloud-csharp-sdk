@@ -54,6 +54,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The resource type supported by the diagnostic metric set.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>instance</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>instance</para>

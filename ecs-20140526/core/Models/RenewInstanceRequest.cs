@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The synchronized expiration date. Set the value to a synchronized expiration date that you specified. Otherwise, the call fails. If you configure this parameter, your instance will be renewed to the specified synchronized expiration date. Valid values: 1 to 28.</para>
-        /// <para>For information about how to synchronize the expiration dates of instances, see <a href="https://help.aliyun.com/document_detail/108486.html">Synchronize the expiration dates of subscription instances</a>.</para>
+        /// <para>Specifies the <a href="https://help.aliyun.com/document_detail/63396.html">unified expiration date</a>. Valid values: 1 to 28.</para>
+        /// <para>To use this parameter, you must <a href="~~63396#694cb636c0rp6~~">specify a unified expiration date for the ECS instance</a>. The value of this parameter must be the same as the specified unified expiration date. Otherwise, the call fails.</para>
         /// <remarks>
-        /// <para>The renewal period-related parameter pair (<c>Period</c> and <c>PeriodUnit</c>) and <c>ExpectedRenewDay</c> are mutually exclusive.</para>
+        /// <para> You must specify the renewal period-related parameter pair (<c>Period</c> and <c>PeriodUnit</c>) or <c>ExpectedRenewDay</c>, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

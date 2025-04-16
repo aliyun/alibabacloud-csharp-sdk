@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? EnableJumboFrame { get; set; }
 
+        [NameInMap("EnableNetworkEncryption")]
+        [Validation(Required=false)]
+        public bool? EnableNetworkEncryption { get; set; }
+
         /// <summary>
         /// <para>The hostname of the instance. Take note of the following items:</para>
         /// <list type="bullet">

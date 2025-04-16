@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The attributes of the image.</para>
+                /// <para>The feature attributes of the image.</para>
                 /// </summary>
                 [NameInMap("Features")]
                 [Validation(Required=false)]
@@ -300,6 +300,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     /// <item><description>v1: You cannot set the image metadata access mode to security hardening when you create instances from the image.</description></item>
                     /// <item><description>v2: You can set the image metadata access mode to security hardening when you create instances from the image.</description></item>
                     /// </list>
+                    /// <para><a href="https://help.aliyun.com/document_detail/108460.html">Overview of instance metadata</a>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>v2</para>

@@ -406,12 +406,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>f1c9fa9de5752***</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
         /// <para>The page number.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If MaxResults and NextToken are used to query results by page, ignore this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -422,6 +436,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The number of entries per page.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If MaxResults and NextToken are used to query results by page, ignore this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -441,7 +463,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances returned.</para>
+        /// <para>The total number of instances.</para>
+        /// <remarks>
+        /// <para> If you specify the MaxResults and NextToken request parameters to perform a paged query, the value of the TotalCount response parameter is invalid.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

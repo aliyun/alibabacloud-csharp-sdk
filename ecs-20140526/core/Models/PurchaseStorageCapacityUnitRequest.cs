@@ -120,6 +120,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group to which to add the SCU. You can specify only the IDs of the resource groups that you have permissions to access.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-bp67acfmxazb4p****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -133,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The time at which the SCU takes effect. The time can be up to six months from the creation time of the SCU. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHHZ format. The time must be in UTC.</para>
+        /// <para>The time at which the SCU takes effect. The time can be up to 180 days from the creation time of the SCU. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHHZ format. The time must be in UTC.</para>
         /// <para>This parameter is left empty by default, which indicates that the SCU takes effect immediately after it is created.</para>
         /// 
         /// <b>Example:</b>
@@ -144,14 +150,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags to add to the SCU. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<PurchaseStorageCapacityUnitRequestTag> Tag { get; set; }
         public class PurchaseStorageCapacityUnitRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the SCU. N is the identifier of the tag key that you specify. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The key of tag N to add to the SCU. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -161,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N. N is the identifier of the tag value that you specify and corresponds to the N in <c>Tag.N.Key</c>. Valid values: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with <c>acs:</c> or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The value of tag N to add to the SCU. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

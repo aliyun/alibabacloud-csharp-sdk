@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The type of the private pool that is associated with the elasticity assurance. Valid values:</para>
+            /// <para>The type of the private pool with which you want to associate the elasticity assurance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Open: open private pool. If you use the elasticity assurance to create ECS instances, the open private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the ECS instances.</description></item>
+            /// <item><description>Open: open private pool. If you use the elasticity assurance to create Elastic Compute Service (ECS) instances, the open private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the ECS instances.</description></item>
             /// <item><description>Target: targeted private pool. If you use the elasticity assurance to create ECS instances, the specified private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the private pool, the ECS instances fail to be created.</description></item>
             /// </list>
             /// <para>Default value: Open.</para>
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The validity period of the elasticity assurance. The unit of the validity period is determined by the PeriodUnit value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When the PeriodUnit parameter is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
-        /// <item><description>When the PeriodUnit parameter is set to Year, valid values are 1, 2, 3, 4, and 5.</description></item>
+        /// <item><description>When PeriodUnit is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
+        /// <item><description>When PeriodUnit is set to Year, valid values are 1, 2, 3, 4, and 5.</description></item>
         /// </list>
         /// <para>Default value: 1.</para>
         /// 

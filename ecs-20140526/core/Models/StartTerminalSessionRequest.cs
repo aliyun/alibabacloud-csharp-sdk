@@ -22,6 +22,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string CommandLine { get; set; }
 
+        [NameInMap("ConnectionType")]
+        [Validation(Required=false)]
+        public string ConnectionType { get; set; }
+
         /// <summary>
         /// <para>The instance IDs.</para>
         /// <para>This parameter is required.</para>

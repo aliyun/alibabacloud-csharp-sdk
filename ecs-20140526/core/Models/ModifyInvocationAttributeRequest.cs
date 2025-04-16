@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>This parameter is empty by default, which indicates not to modify the key-value pairs of the custom parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyvdIqaRY****&quot;}</para>
+        /// <para>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI*************&quot;}</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]

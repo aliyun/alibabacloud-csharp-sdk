@@ -181,10 +181,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The number of entries to return on each page. Valid values: 10 to 100.</para>
+        /// <para>Default values:</para>
+        /// <list type="bullet">
+        /// <item><description>If you set a value greater than 0 and less than 10, the default value is 10.</description></item>
+        /// <item><description>If you set this parameter to a value that is greater than 100, the default value is 100.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public long? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>f1c9fa9de5752***</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -198,8 +215,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
-        /// <para>Default value: 1.</para>
+        /// <remarks>
+        /// <para> This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -209,8 +227,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <remarks>
+        /// <para> This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

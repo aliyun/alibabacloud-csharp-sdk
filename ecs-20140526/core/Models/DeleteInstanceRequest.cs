@@ -24,14 +24,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully release the instance in the <b>Running</b> (<c>Running</c>) state. Valid values:</para>
+        /// <para>Specifies whether to forcefully release the ECS instance in the <b>Running</b> (<c>Running</c>) state. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: forcefully releases the instance in the <b>Running</b> (<c>Running</c>) state.</description></item>
-        /// <item><description>false: normally releases the instance. This value take effects only if the instance is in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
+        /// <item><description>true: forcefully releases the ECS instance in the <b>Running</b> (<c>Running</c>) state.</description></item>
+        /// <item><description>false: normally releases the ECS instance. This value is valid only if the instance is in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
-        /// <para>**</para>
-        /// <para><b>Warning</b> When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</para>
+        /// <remarks>
+        /// <para>Warning: When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -39,6 +40,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("Force")]
         [Validation(Required=false)]
         public bool? Force { get; set; }
+
+        [NameInMap("ForceStop")]
+        [Validation(Required=false)]
+        public bool? ForceStop { get; set; }
 
         /// <summary>
         /// <para>The ID of the instance.</para>

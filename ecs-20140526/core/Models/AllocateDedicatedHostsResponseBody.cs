@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AllocateDedicatedHostsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the dedicated hosts.</para>
+        /// <para>A list of dedicated host IDs.</para>
         /// </summary>
         [NameInMap("DedicatedHostIdSets")]
         [Validation(Required=false)]
@@ -22,6 +22,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// <para>The ID of the order.</para>
+        /// <remarks>
+        /// <para> This parameter has a return value only when the dedicated host is a subscription one (request parameter <b>ChargeType set to PrePaid</b>).</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>23841229****</para>
+        /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
         public string OrderId { get; set; }

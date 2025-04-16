@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeHpcClustersResponseBodyHpcClustersHpcCluster> HpcCluster { get; set; }
             public class DescribeHpcClustersResponseBodyHpcClustersHpcCluster : TeaModel {
                 /// <summary>
+                /// <para>The description of the HPC cluster.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>testDescription</para>
                 /// </summary>
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string HpcClusterId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the HPC cluster.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>testName</para>
                 /// </summary>

@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public CreateImagePipelineRequestAdvancedOptions AdvancedOptions { get; set; }
         public class CreateImagePipelineRequestAdvancedOptions : TeaModel {
             /// <summary>
-            /// <para>是否禁用目标镜像名称自动增加后缀。可能值：</para>
+            /// <para>Specifies whether to disable the feature that automatically adds a suffix to the name of the image created based on the image template. Valid value:</para>
             /// <list type="bullet">
-            /// <item><description>disable：禁用。</description></item>
+            /// <item><description>disable</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to retain Cloud Assistant Agent that is installed during the image building process. During the image building process, the system automatically installs Cloud Assistant Agent on the intermediate instance to run commands. You can choose whether to retain Cloud Assistant Agent that is installed during the image building process in the new image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: retains Cloud Assistant Agent that is installed during the image building process in the new image.</description></item>
-            /// <item><description>false: does not retain Cloud Assistant Agent that is installed during the image building process in the new image.</description></item>
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// <remarks>
@@ -141,7 +141,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The image family. The image family name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https:// and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The family of the image created based on the image template.</para>
+        /// <remarks>
+        /// <para> This parameter is no longer used. We recommend that you use ImageOptions.ImageFamily.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -154,8 +157,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The prefix of the image name. The prefix must be 2 to 64 characters in length. The prefix must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The prefix can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
-        /// <para>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (<c>ExecutionId</c>) in the format of <c>{ImageName}_{ExecutionId}</c>.</para>
+        /// <para>The name prefix of the image created based on the image template.</para>
+        /// <remarks>
+        /// <para> This parameter is no longer used. We recommend that you use ImageOptions.ImageName.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>testImageName</para>
@@ -166,14 +171,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>目标镜像属性。</para>
+        /// <para>The attributes of the image created based on the image template.</para>
         /// </summary>
         [NameInMap("ImageOptions")]
         [Validation(Required=false)]
         public CreateImagePipelineRequestImageOptions ImageOptions { get; set; }
         public class CreateImagePipelineRequestImageOptions : TeaModel {
             /// <summary>
-            /// <para>描述信息。长度为2~256个英文或中文字符，不能以<c>http://</c>和<c>https://</c>开头。</para>
+            /// <para>The description of the image. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is description.</para>
@@ -183,7 +188,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>目标镜像族系。长度为 2~128 个英文或中文字符。必须以大小写字母或中文开头，不能以 aliyun 和 acs:开头，不能包含 http://或者 https://。可以包含数字、半角冒号（:）、下划线（_）或者短划线（-）。</para>
+            /// <para>The image family. The image family name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https:// and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>family</para>
@@ -193,18 +198,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ImageFamily { get; set; }
 
             /// <summary>
-            /// <para>目标镜像特性相关属性。</para>
+            /// <para>The feature attributes of the image.</para>
             /// </summary>
             [NameInMap("ImageFeatures")]
             [Validation(Required=false)]
             public CreateImagePipelineRequestImageOptionsImageFeatures ImageFeatures { get; set; }
             public class CreateImagePipelineRequestImageOptionsImageFeatures : TeaModel {
                 /// <summary>
-                /// <para>构建的目标镜像是否支持 NVMe。可能值：</para>
+                /// <para>Specifies whether the image created based on the image template supports the NVMe protocol. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>supported：支持。表示以该镜像创建的实例支持 NVMe 协议。</description></item>
-                /// <item><description>unsupported：不支持。表示以该镜像创建的实例不支持 NVMe 协议。</description></item>
-                /// <item><description>auto：自动检测。由系统自动检测您的镜像是否安装NVMe驱动，该行为发生在构建阶段前，若您在构建时安装或者卸载了NVMe驱动，可能会出现结果偏差，建议您根据构建内容设置为supported或unsupported。</description></item>
+                /// <item><description>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</description></item>
+                /// <item><description>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</description></item>
+                /// <item><description>auto: The system automatically detects whether the image supports the NVMe protocol. The system automatically detects whether the NVMe driver is installed on your image before the new image is built. If you install or uninstall the NVMe driver during the image building process, the detection result may be incorrect. We recommend that you set the value to supported or unsupported based on the image building content.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -217,8 +222,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>目标镜像名称前缀。长度为2~64个字符，必须以大小写字母或中文开头，不能以<c>http://</c>和<c>https://</c>开头。可以包含中文、英文、数字、半角冒号（:）、下划线（_）、半角句号（.）或者短划线（-）。</para>
-            /// <para>最终完整的镜像名称由系统自动拼接名称前缀与构建任务ID（<c>ExecutionId</c>），格式为<c>{ImageName}_{ExecutionId}</c>。</para>
+            /// <para>The prefix of the image name. The prefix must be 2 to 64 characters in length. The prefix must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The prefix can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+            /// <para>The system generates the final image name that consists of the specified prefix and the ID of the build task (<c>ExecutionId</c>) in the format of <c>{ImageName}_{ExecutionId}</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testImageName</para>
@@ -228,14 +233,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ImageName { get; set; }
 
             /// <summary>
-            /// <para>目标镜像标签。</para>
+            /// <para>The tags to add to the image.</para>
             /// </summary>
             [NameInMap("ImageTags")]
             [Validation(Required=false)]
             public List<CreateImagePipelineRequestImageOptionsImageTags> ImageTags { get; set; }
             public class CreateImagePipelineRequestImageOptionsImageTags : TeaModel {
                 /// <summary>
-                /// <para>标签键。N 的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持 128 个字符，不能以<c>aliyun</c>和<c>acs:</c>开头，不能包含<c>http://</c>或者<c>https://</c>。</para>
+                /// <para>The key of tag N to add to the image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -245,7 +250,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>资源的标签值。N 的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持 128 个字符，不能以<c>acs:</c>开头，不能包含<c>http://</c>或者<c>https://</c>。</para>
+                /// <para>The value of tag N to add to the image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
@@ -281,7 +286,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Architecture { get; set; }
 
             /// <summary>
-            /// <para>The new boot mode of the image. Valid values:</para>
+            /// <para>The boot mode of the image. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>BIOS: BIOS mode</description></item>
             /// <item><description>UEFI: Unified Extensible Firmware Interface (UEFI) mode</description></item>
@@ -371,7 +376,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public CreateImagePipelineRequestImportImageOptionsFeatures Features { get; set; }
             public class CreateImagePipelineRequestImportImageOptionsFeatures : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether the imported original image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</para>
+                /// <para>Specifies whether the imported source image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</description></item>
                 /// <item><description>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</description></item>
@@ -406,8 +411,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The operating system type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>windows: Windows operating systems</description></item>
-            /// <item><description>linux: Linux operating systems</description></item>
+            /// <item><description>windows</description></item>
+            /// <item><description>linux</description></item>
             /// </list>
             /// <para>Default value: linux.</para>
             /// 
@@ -510,12 +515,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether the image created based on the image template supports the NVMe protocol. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</description></item>
-        /// <item><description>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</description></item>
-        /// <item><description>auto: The system automatically detects whether the image supports the NVMe protocol. The system automatically detects whether the NVMe driver is installed on your image before the new image is built. If you install or uninstall the NVMe driver during the image building process, the detection result may be incorrect. We recommend that you set the value to supported or unsupported based on the image building content.</description></item>
-        /// </list>
+        /// <para>Specifies whether the image created based on the image template supports the NVMe protocol.</para>
+        /// <remarks>
+        /// <para> This parameter is no longer used. We recommend that you use ImageOptions.ImageFeatures.NvmeSupport.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>auto</para>

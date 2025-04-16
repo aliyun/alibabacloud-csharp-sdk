@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? FailedCount { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was complete.</para>
+        /// <para>The time when the task was completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-11-23T02:19Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string FinishedTime { get; set; }
 
         /// <summary>
-        /// <para>An array consisting of OperationProgress data of each subtask.</para>
+        /// <para>The return data of the task.</para>
         /// </summary>
         [NameInMap("OperationProgressSet")]
         [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string OperationStatus { get; set; }
 
                 /// <summary>
-                /// <para>An array consisting of RelatedItem data.</para>
+                /// <para>The type of resource information.</para>
                 /// </summary>
                 [NameInMap("RelatedItemSet")]
                 [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -150,10 +150,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? SuccessCount { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the task can be canceled (<a href="https://www.alibabacloud.com/help/en/elastic-compute-service/latest/canceltask">CancelTask</a>). Valid values: </para>
+        /// <para>Indicates whether the task can be canceled by calling the <a href="https://help.aliyun.com/document_detail/25624.html">CancelTask</a> operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The task can be canceled.</description></item>
-        /// <item><description>false: The task cannot be canceled.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SupportCancel { get; set; }
 
         /// <summary>
-        /// <para>The operation name of the task.</para>
+        /// <para>The name of the operation that generated the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ExportImage</para>

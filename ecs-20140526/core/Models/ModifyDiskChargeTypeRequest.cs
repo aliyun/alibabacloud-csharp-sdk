@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>PrePaid (default): changes the billing method from pay-as-you-go to subscription.</description></item>
         /// <item><description>PostPaid: changes the billing method from subscription to pay-as-you-go.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> When you change the billing method of a pay-as-you-go disk to subscription, the billing cycle of the disk is automatically synchronized with that of the associated ECS instance.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>

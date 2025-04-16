@@ -105,14 +105,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the automatic snapshot policy feature for the disk. Valid values:</para>
+        /// <para>Specifies whether to enable the automatic snapshot policy feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: enables the automatic snapshot policy feature for the cloud disk.</description></item>
+        /// <item><description>false: disables the automatic snapshot policy feature for the cloud disk.</description></item>
         /// </list>
         /// <para>This parameter is empty by default, which indicates that the current value remains unchanged.</para>
         /// <remarks>
-        /// <para> By default, the automatic snapshot policy feature is enabled for cloud disks. You need to only apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</para>
+        /// <para> This parameter is deprecated. By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

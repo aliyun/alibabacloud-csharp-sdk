@@ -52,6 +52,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Force { get; set; }
 
         /// <summary>
+        /// <para>释放<b>运行中</b>（<c>Running</c>）的实例时的是否采取强制关机策略。仅当<c>Force=true</c>时生效。取值范围：</para>
+        /// <list type="bullet">
+        /// <item><description>true：强制关机并释放实例。相当于典型的断电操作，实例会直接进入资源释放流程。<remarks>
+        /// <para>Warning: 强制释放相当于断电，实例内存以及存储中的临时数据都会被擦除，无法恢复。</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>false：在实例释放前，系统将优先执行标准关机流程，该模式会导致实例释放动作持续几分钟。用户在操作系统关机时，配置一些业务排水动作，从而减少业务系统的噪声。</description></item>
+        /// </list>
+        /// <para>默认值：true。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("ForceStop")]
+        [Validation(Required=false)]
+        public bool? ForceStop { get; set; }
+
+        /// <summary>
         /// <para>The IDs of ECS instances. You can specify 1 to 100 ECS instances.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -90,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release the expired subscription instance. Valid values:</para>
+        /// <para>Specifies whether to release the expired subscription ECS instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>

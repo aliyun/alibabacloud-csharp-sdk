@@ -14,16 +14,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ReplaceSystemDiskRequestSystemDisk SystemDisk { get; set; }
         public class ReplaceSystemDiskRequestSystemDisk : TeaModel {
             /// <summary>
-            /// <para>The capacity of the new system disk. Unit: GiB. Valid values for different disk categories:</para>
+            /// <para>The capacity of the new system disk. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>Basic disk: Max{20, Size of the image specified by ImageId} to 500.</para>
             /// </description></item>
             /// <item><description><para>Enterprise SSD (ESSD):</para>
             /// <list type="bullet">
-            /// <item><description>PL0: Max{1, Size of the image specified by ImageId} to 2048.</description></item>
-            /// <item><description>PL1: Max{20, Size of the image specified by ImageId} to 2048.</description></item>
-            /// <item><description>PL2: Max{461, Size of the image specified by ImageId} to 2048.</description></item>
-            /// <item><description>PL3: Max{1261, Size of the image specified by ImageId} to 2048.</description></item>
+            /// <item><description>PL0 ESSD: Max{1, Size of the image specified by ImageId} to 2048.</description></item>
+            /// <item><description>PL1 ESSD: Max{20, Size of the image specified by ImageId} to 2048.</description></item>
+            /// <item><description>PL2 ESSD: Max{461, Size of the image specified by ImageId} to 2048.</description></item>
+            /// <item><description>PL3 ESSD: Max{1261, Size of the image specified by ImageId} to 2048.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para>ESSD AutoPL disk: Max{1, Size of the image specified by ImageId} to 2048.</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description><para>Other disk categories: Max{20, Size of the image specified by ImageId} to 2048.</para>
             /// </description></item>
             /// </list>
-            /// <para>Default value: 40 or the size of the image specified by ImageId, whichever is greater.</para>
+            /// <para>Default value: Max{40, Size of the image specified by ImageId}.</para>
             /// <remarks>
             /// <para> If the capacity of the new system disk exceeds <c>Max{20, Capacity of the original system disk}</c>, you are charged for the excess capacity.</para>
             /// </remarks>

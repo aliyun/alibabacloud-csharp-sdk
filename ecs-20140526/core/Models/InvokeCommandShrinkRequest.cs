@@ -146,17 +146,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The key-value pairs of custom parameters to be passed in when the custom parameter feature is enabled. Number of custom parameters: 0 to 10.</para>
+        /// <para>The key-value pairs of custom parameters to pass in when the custom parameter feature is enabled. You can specify up to 10 custom parameters.</para>
         /// <list type="bullet">
-        /// <item><description>Keys in a Map collection can be up to 64 characters in length, and cannot be empty strings.</description></item>
-        /// <item><description>Values in a Map collection can be empty strings.</description></item>
-        /// <item><description>The size of the Base64-encoded custom parameters and original command content cannot exceed 18 KB.</description></item>
-        /// <item><description>The custom parameter names specified in the value of Parameters must be included in the custom parameters specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</description></item>
+        /// <item><description>Each key in a Map collection cannot be an empty string, and can be up to 64 characters in length.</description></item>
+        /// <item><description>Each value in a Map collection can be an empty string.</description></item>
+        /// <item><description>The size of the command after Base64 encoding, including the custom parameters and the original command content, cannot exceed 18 KB.</description></item>
+        /// <item><description>The custom parameter names that are specified by Parameters must be included in the custom parameter names that you specified when you created the command. You can use empty strings to represent the custom parameters that are not specified.</description></item>
         /// </list>
         /// <para>If you want to disable the custom parameter feature, you can leave this parameter empty.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyv******aRY&quot;}</para>
+        /// <para>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI************&quot;}</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]

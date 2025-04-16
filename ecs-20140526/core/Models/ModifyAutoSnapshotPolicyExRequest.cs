@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyAutoSnapshotPolicyExRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The retention period of the snapshot copy in the destination region. Unit: days. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>-1: The snapshot copy is retained until it is deleted.</description></item>
+        /// <item><description>1 to 65535: The snapshot copy is retained for a specified number of days.</description></item>
+        /// </list>
+        /// <para>Default value: -1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -93,7 +98,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The destination region to which to copy the snapshot. You can specify only a single destination region.</para>
+        /// <para>Specifies whether to enable cross-region replication for the automatic snapshot.</para>
+        /// <list type="bullet">
+        /// <item><description>true: enables cross-region replication for the automatic snapshot.</description></item>
+        /// <item><description>false: disables cross-region replication for the automatic snapshot.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -115,12 +124,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the snapshot copy in the destination region. Unit: days. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>\-1: The snapshot is permanently retained.</description></item>
-        /// <item><description>1 to 65535: The automatic snapshot is retained for the specified number of days.</description></item>
-        /// </list>
-        /// <para>Default value: -1.</para>
+        /// <para>The destination region to which to copy the snapshot. You can specify only a single destination region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cn-hangzhou&quot;]</para>
@@ -130,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TargetCopyRegions { get; set; }
 
         /// <summary>
-        /// <para>The name of the automatic snapshot policy. If this parameter is not specified, the original name of the automatic snapshot policy is retained.</para>
+        /// <para>The ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25530.html">DescribeAutoSnapshotPolicyEx</a> operation to query available automatic snapshot policies.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -141,12 +145,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. For example, a value of 1 indicates 01:00:00.</para>
-        /// <para>To schedule multiple automatic snapshots to be created in a day, you can specify multiple hours.</para>
-        /// <list type="bullet">
-        /// <item><description>You can specify up to 24 points in time.</description></item>
-        /// <item><description>You must set this parameter to a JSON array such as <c>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</c>. Separate the points in time with commas (,).</description></item>
-        /// </list>
+        /// <para>The name of the automatic snapshot policy. If this parameter is not specified, the original name of the automatic snapshot policy is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SPTestName</para>
@@ -156,7 +155,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoSnapshotPolicyName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25530.html">DescribeAutoSnapshotPolicyEx</a> operation to query available automatic snapshot policies.</para>
+        /// <para>The region ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -167,12 +166,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the automatic snapshot. Unit: days. Valid values:</para>
+        /// <para>The days of the week on which to create automatic snapshots. Valid values are 1 to 7, which correspond to the days of the week. For example, a value of 1 indicates Monday.</para>
+        /// <para>To schedule multiple automatic snapshots to be created in a week, you can specify multiple days.</para>
         /// <list type="bullet">
-        /// <item><description>\-1: The automatic snapshot is permanently retained.</description></item>
-        /// <item><description>1 to 65536: The auto snapshot is retained for the specified number of days.</description></item>
+        /// <item><description>You can specify up to seven days over a one-week period.</description></item>
+        /// <item><description>You must set this parameter to a JSON array such as <c>[&quot;1&quot;, &quot;2&quot; ... &quot;7&quot;]</c>. Separate the values in the array with commas (,).</description></item>
         /// </list>
-        /// <para>Default value: -1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;1&quot;, &quot;7&quot;]</para>
@@ -182,11 +181,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RepeatWeekdays { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable cross-region replication for the automatic snapshot.</para>
+        /// <para>The retention period of the automatic snapshot. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables cross-region replication for the automatic snapshot.</description></item>
-        /// <item><description>false: disables cross-region replication for the automatic snapshot.</description></item>
+        /// <item><description>\-1: The automatic snapshot is permanently retained.</description></item>
+        /// <item><description>1 to 65536: The auto snapshot is retained for the specified number of days.</description></item>
         /// </list>
+        /// <para>Default value: -1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -196,11 +196,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? RetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The days of the week on which to create automatic snapshots. Valid values are 1 to 7, which correspond to the days of the week. For example, a value of 1 indicates Monday.</para>
-        /// <para>To schedule multiple automatic snapshots to be created in a week, you can specify multiple days.</para>
+        /// <para>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. For example, a value of 1 indicates 01:00:00.</para>
+        /// <para>To schedule multiple automatic snapshots to be created in a day, you can specify multiple hours.</para>
         /// <list type="bullet">
-        /// <item><description>You can specify up to seven days over a one-week period.</description></item>
-        /// <item><description>You must set this parameter to a JSON array such as <c>[&quot;1&quot;, &quot;2&quot; ... &quot;7&quot;]</c>. Separate the values in the array with commas (,).</description></item>
+        /// <item><description>You can specify up to 24 points in time.</description></item>
+        /// <item><description>You must set this parameter to a JSON array such as <c>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</c>. Separate the points in time with commas (,).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -183,13 +183,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the automatic snapshot policy feature for the cloud disk.</para>
+        /// <para>Specifies whether the automatic snapshot policy feature is enabled for the cloud disk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
         /// </list>
         /// <remarks>
-        /// <para>By default, the automatic snapshot policy feature is enabled for cloud disks that are already created. Additionally, only the automatic snapshot policy needs to be applied to a cloud disk before you can use the automatic snapshot policy.</para>
+        /// <para> This parameter is deprecated. By default, the automatic snapshot policy feature is enabled for cloud disks. You need to only apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

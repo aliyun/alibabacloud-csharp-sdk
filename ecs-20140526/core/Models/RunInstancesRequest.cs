@@ -1236,7 +1236,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<RunInstancesRequestNetworkInterface> NetworkInterface { get; set; }
         public class RunInstancesRequestNetworkInterface : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to release ENI N when the instance is released. Valid values:</para>
+            /// <para>Specifies whether to release ENI N when the associated instance is released. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false</description></item>
@@ -1255,11 +1255,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The description of ENI N.</para>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
             /// <item><description>The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, you do not need to specify this parameter.</description></item>
+            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you do not need to specify this parameter.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1288,7 +1288,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The IPv6 addresses to assign to the primary ENI. You can assign up to 10 IPv6 addresses to the primary ENI. Valid values of the second N: 1 to 10.</para>
             /// <para>Example: <c>Ipv6Address.1=2001:db8:1234:1a00::***</c>.</para>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>This parameter takes effect only when <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>. If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</description></item>
             /// <item><description>If you specify this parameter, you must set <c>Amount</c> to 1 and cannot specify <c>Ipv6AddressCount</c>, <c>Ipv6Address.N</c>, or <c>NetworkInterface.N.Ipv6AddressCount</c>.</description></item>
@@ -1300,7 +1300,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The number of IPv6 addresses to randomly generate for the primary ENI. Valid values: 1 to 10.</para>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>This parameter takes effect only when <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>. If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you cannot specify this parameter.</description></item>
             /// <item><description>If you specify this parameter, you cannot specify <c>Ipv6AddressCount</c>, <c>Ipv6Address.N</c>, or <c>NetworkInterface.N.Ipv6Address.N</c>.</description></item>
@@ -1315,7 +1315,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The index of the network card for ENI N.</para>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>You can specify network card indexes only for instances of specific instance types.</description></item>
             /// <item><description>If you set NetworkInterface.N.InstanceType to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</description></item>
@@ -1330,7 +1330,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? NetworkCardIndex { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ENI to attach to the instance.</para>
+            /// <para>The ID of ENI N to attach to the instance.</para>
             /// <para>If you specify this parameter, you must set <c>Amount</c> to 1.</para>
             /// <remarks>
             /// <para> This parameter takes effect only for secondary ENIs. After you specify an existing secondary ENI, you cannot specify other ENI creation parameters.</para>
@@ -1345,10 +1345,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The name of ENI N. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
-            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, you do not need to specify this parameter.</description></item>
+            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you do not need to specify this parameter.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1378,7 +1378,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The primary IP address to assign to ENI N.</para>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description><para>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</para>
             /// <list type="bullet">
@@ -1386,7 +1386,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>If you specify this parameter, set <c>Amount</c> to a numeric value greater than 1, and set NetworkInterface.N.InstanceType to Primary, you cannot set <c>NetworkInterface.2.InstanceType</c> to Secondary to attach a secondary ENI.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, this parameter is equivalent to <c>PrivateIpAddress</c>. You cannot specify this parameter and <c>PrivateIpAddress</c> in the same request.</para>
+            /// <item><description><para>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, this parameter is equivalent to <c>PrivateIpAddress</c>. You cannot specify both this parameter and <c>PrivateIpAddress</c> in the same request.</para>
             /// </description></item>
             /// <item><description><para>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.</para>
             /// </description></item>
@@ -1406,7 +1406,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The number of queues supported by ENI N.</para>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
             /// <item><description>The value of this parameter cannot exceed the maximum number of queues allowed per ENI.</description></item>
@@ -1437,10 +1437,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The receive (Rx) queue depth of ENI N.</para>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <remarks>
+            /// <para> This parameter is in invitational preview and is not publicly available. To use this parameter, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
+            /// </remarks>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</description></item>
-            /// <item><description>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</description></item>
+            /// <item><description>This parameter is applicable only to 7th-generation or later ECS instance types.</description></item>
+            /// <item><description>This parameter is applicable to Linux images.</description></item>
+            /// <item><description>A larger Rx queue depth yields higher inbound throughput and reduces packet loss rates but consumes more memory.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1452,11 +1456,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The ID of the security group to which to assign ENI N.</para>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
-            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, you must specify this parameter. In this case, this parameter is equivalent to <c>SecurityGroupId</c>, and you cannot specify <c>SecurityGroupId</c>, <c>SecurityGroupIds.N</c>, or <c>NetworkInterface.N.SecurityGroupIds.N</c>.</description></item>
-            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</description></item>
+            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you must specify this parameter. In this case, this parameter is equivalent to <c>SecurityGroupId</c> and you cannot specify <c>SecurityGroupId</c>, <c>SecurityGroupIds.N</c>, or <c>NetworkInterface.N.SecurityGroupIds.N</c>.</description></item>
+            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Secondary</c> or left empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1472,7 +1476,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>The value of the first N in this parameter cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
             /// <item><description>The second N in this parameter indicates that one or more security group IDs can be specified. The valid values of the second N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</description></item>
             /// </list>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, you must specify this parameter or <c>NetworkInterface.N.SecurityGroupId</c>. In this case, this parameter is equivalent to <c>SecurityGroupIds.N</c>, and you cannot specify <c>SecurityGroupId</c>, <c>SecurityGroupIds.N</c>, or <c>NetworkInterface.N.SecurityGroupId</c>.</description></item>
             /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</description></item>
@@ -1499,10 +1503,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The Tx queue depth of ENI N.</para>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <remarks>
+            /// <para> This parameter is in invitational preview and is not publicly available. To use this parameter, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
+            /// </remarks>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</description></item>
-            /// <item><description>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</description></item>
+            /// <item><description>This parameter is applicable only to 7th-generation or later ECS instance types.</description></item>
+            /// <item><description>This parameter is applicable to Linux images.</description></item>
+            /// <item><description>A larger Tx queue depth yields higher outbound throughput and reduces packet loss rates but consumes more memory.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1514,11 +1522,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The ID of the vSwitch to which to connect ENI N.</para>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</description></item>
-            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Primary</c>, you must specify this parameter. In this case, this parameter is equivalent to <c>VSwitchId</c>. You cannot specify both NetworkInterface.N.VSwitchId and <c>VSwitchId</c> in the same request.</description></item>
-            /// <item><description>If you set <c>NetworkInterface.N.InstanceType</c> to <c>Secondary</c> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the VSwitchId value.</description></item>
+            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you must specify this parameter. In this case, this parameter is equivalent to <c>VSwitchId</c>. You cannot specify both NetworkInterface.N.VSwitchId and <c>VSwitchId</c> in the same request.</description></item>
+            /// <item><description>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Secondary</c> or left empty, you do not need to specify this parameter. The default value is the VSwitchId value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1569,6 +1577,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("EnableJumboFrame")]
             [Validation(Required=false)]
             public bool? EnableJumboFrame { get; set; }
+
+            [NameInMap("EnableNetworkEncryption")]
+            [Validation(Required=false)]
+            public bool? EnableNetworkEncryption { get; set; }
 
         }
 
@@ -1908,7 +1920,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StorageSetId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of partitions in the storage set. Valid values: greater than or equal to 2.</para>
+        /// <para>The maximum number of partitions in the storage set. Valid values: integers greater than or equal to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

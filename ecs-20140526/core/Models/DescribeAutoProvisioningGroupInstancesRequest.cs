@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>Pages start from page 1.</para>
         /// <para>Default value: 1.</para>
         /// 
@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Maximum value: 100.</para>
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
