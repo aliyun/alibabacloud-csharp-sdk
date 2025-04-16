@@ -38,6 +38,310 @@ namespace AlibabaCloud.SDK.Ecd20201001
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用mcp工具</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CalMcpToolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CalMcpToolResponse
+        /// </returns>
+        public CalMcpToolResponse CalMcpToolWithOptions(CalMcpToolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Args))
+            {
+                body["Args"] = request.Args;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorization))
+            {
+                body["Authorization"] = request.Authorization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["ExternalUserId"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Server))
+            {
+                body["Server"] = request.Server;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tool))
+            {
+                body["Tool"] = request.Tool;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CalMcpTool",
+                Version = "2020-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CalMcpToolResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用mcp工具</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CalMcpToolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CalMcpToolResponse
+        /// </returns>
+        public async Task<CalMcpToolResponse> CalMcpToolWithOptionsAsync(CalMcpToolRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Args))
+            {
+                body["Args"] = request.Args;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorization))
+            {
+                body["Authorization"] = request.Authorization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["ExternalUserId"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Server))
+            {
+                body["Server"] = request.Server;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tool))
+            {
+                body["Tool"] = request.Tool;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CalMcpTool",
+                Version = "2020-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CalMcpToolResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用mcp工具</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CalMcpToolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CalMcpToolResponse
+        /// </returns>
+        public CalMcpToolResponse CalMcpTool(CalMcpToolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CalMcpToolWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用mcp工具</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CalMcpToolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CalMcpToolResponse
+        /// </returns>
+        public async Task<CalMcpToolResponse> CalMcpToolAsync(CalMcpToolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CalMcpToolWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 mcp session</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcpSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcpSessionResponse
+        /// </returns>
+        public CreateMcpSessionResponse CreateMcpSessionWithOptions(CreateMcpSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorization))
+            {
+                body["Authorization"] = request.Authorization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["ExternalUserId"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMcpSession",
+                Version = "2020-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMcpSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 mcp session</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcpSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcpSessionResponse
+        /// </returns>
+        public async Task<CreateMcpSessionResponse> CreateMcpSessionWithOptionsAsync(CreateMcpSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorization))
+            {
+                body["Authorization"] = request.Authorization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["ExternalUserId"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMcpSession",
+                Version = "2020-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMcpSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 mcp session</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcpSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcpSessionResponse
+        /// </returns>
+        public CreateMcpSessionResponse CreateMcpSession(CreateMcpSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMcpSessionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 mcp session</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcpSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcpSessionResponse
+        /// </returns>
+        public async Task<CreateMcpSessionResponse> CreateMcpSessionAsync(CreateMcpSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMcpSessionWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// DescribeDesktopsRequest
         /// </param>
@@ -514,6 +818,254 @@ namespace AlibabaCloud.SDK.Ecd20201001
             return await GetConnectionTicketWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMcpResource</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMcpResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpResourceResponse
+        /// </returns>
+        public GetMcpResourceResponse GetMcpResourceWithOptions(GetMcpResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorization))
+            {
+                body["Authorization"] = request.Authorization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMcpResource",
+                Version = "2020-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMcpResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMcpResource</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMcpResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpResourceResponse
+        /// </returns>
+        public async Task<GetMcpResourceResponse> GetMcpResourceWithOptionsAsync(GetMcpResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorization))
+            {
+                body["Authorization"] = request.Authorization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMcpResource",
+                Version = "2020-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMcpResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMcpResource</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMcpResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpResourceResponse
+        /// </returns>
+        public GetMcpResourceResponse GetMcpResource(GetMcpResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMcpResourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMcpResource</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMcpResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpResourceResponse
+        /// </returns>
+        public async Task<GetMcpResourceResponse> GetMcpResourceAsync(GetMcpResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMcpResourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工具列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcpToolsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpToolsResponse
+        /// </returns>
+        public ListMcpToolsResponse ListMcpToolsWithOptions(ListMcpToolsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorization))
+            {
+                body["Authorization"] = request.Authorization;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcpTools",
+                Version = "2020-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcpToolsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工具列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcpToolsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpToolsResponse
+        /// </returns>
+        public async Task<ListMcpToolsResponse> ListMcpToolsWithOptionsAsync(ListMcpToolsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorization))
+            {
+                body["Authorization"] = request.Authorization;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcpTools",
+                Version = "2020-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcpToolsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工具列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcpToolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpToolsResponse
+        /// </returns>
+        public ListMcpToolsResponse ListMcpTools(ListMcpToolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMcpToolsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工具列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcpToolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpToolsResponse
+        /// </returns>
+        public async Task<ListMcpToolsResponse> ListMcpToolsAsync(ListMcpToolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMcpToolsWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// RebootDesktopsRequest
         /// </param>
@@ -636,6 +1188,134 @@ namespace AlibabaCloud.SDK.Ecd20201001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RebootDesktopsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 mcp session</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseMcpSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseMcpSessionResponse
+        /// </returns>
+        public ReleaseMcpSessionResponse ReleaseMcpSessionWithOptions(ReleaseMcpSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorization))
+            {
+                body["Authorization"] = request.Authorization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleaseMcpSession",
+                Version = "2020-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleaseMcpSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 mcp session</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseMcpSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseMcpSessionResponse
+        /// </returns>
+        public async Task<ReleaseMcpSessionResponse> ReleaseMcpSessionWithOptionsAsync(ReleaseMcpSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorization))
+            {
+                body["Authorization"] = request.Authorization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReleaseMcpSession",
+                Version = "2020-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReleaseMcpSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 mcp session</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseMcpSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseMcpSessionResponse
+        /// </returns>
+        public ReleaseMcpSessionResponse ReleaseMcpSession(ReleaseMcpSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReleaseMcpSessionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 mcp session</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReleaseMcpSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReleaseMcpSessionResponse
+        /// </returns>
+        public async Task<ReleaseMcpSessionResponse> ReleaseMcpSessionAsync(ReleaseMcpSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReleaseMcpSessionWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
