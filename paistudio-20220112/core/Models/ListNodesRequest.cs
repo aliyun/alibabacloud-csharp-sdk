@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string QuotaId { get; set; }
 
+        [NameInMap("ReasonCodes")]
+        [Validation(Required=false)]
+        public string ReasonCodes { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>rg69rj0leslwdnbe</para>
