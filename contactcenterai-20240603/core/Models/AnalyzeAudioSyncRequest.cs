@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 {
-    public class CreateTaskRequest : TeaModel {
+    public class AnalyzeAudioSyncRequest : TeaModel {
         [NameInMap("categoryTags")]
         [Validation(Required=false)]
-        public List<CreateTaskRequestCategoryTags> CategoryTags { get; set; }
-        public class CreateTaskRequestCategoryTags : TeaModel {
+        public List<AnalyzeAudioSyncRequestCategoryTags> CategoryTags { get; set; }
+        public class AnalyzeAudioSyncRequestCategoryTags : TeaModel {
             [NameInMap("tagDesc")]
             [Validation(Required=false)]
             public string TagDesc { get; set; }
@@ -27,86 +27,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public string CustomPrompt { get; set; }
 
-        [NameInMap("dialogue")]
-        [Validation(Required=false)]
-        public CreateTaskRequestDialogue Dialogue { get; set; }
-        public class CreateTaskRequestDialogue : TeaModel {
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
-            [NameInMap("sentences")]
-            [Validation(Required=false)]
-            public List<CreateTaskRequestDialogueSentences> Sentences { get; set; }
-            public class CreateTaskRequestDialogueSentences : TeaModel {
-                /// <summary>
-                /// <para>This parameter is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>user</para>
-                /// </summary>
-                [NameInMap("role")]
-                [Validation(Required=false)]
-                public string Role { get; set; }
-
-                /// <summary>
-                /// <para>This parameter is required.</para>
-                /// </summary>
-                [NameInMap("text")]
-                [Validation(Required=false)]
-                public string Text { get; set; }
-
-            }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>session-01</para>
-            /// </summary>
-            [NameInMap("sessionId")]
-            [Validation(Required=false)]
-            public string SessionId { get; set; }
-
-        }
-
-        [NameInMap("examples")]
-        [Validation(Required=false)]
-        public CreateTaskRequestExamples Examples { get; set; }
-        public class CreateTaskRequestExamples : TeaModel {
-            [NameInMap("output")]
-            [Validation(Required=false)]
-            public string Output { get; set; }
-
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
-            [NameInMap("sentences")]
-            [Validation(Required=false)]
-            public List<CreateTaskRequestExamplesSentences> Sentences { get; set; }
-            public class CreateTaskRequestExamplesSentences : TeaModel {
-                /// <summary>
-                /// <para>This parameter is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>user</para>
-                /// </summary>
-                [NameInMap("role")]
-                [Validation(Required=false)]
-                public string Role { get; set; }
-
-                /// <summary>
-                /// <para>This parameter is required.</para>
-                /// </summary>
-                [NameInMap("text")]
-                [Validation(Required=false)]
-                public string Text { get; set; }
-
-            }
-
-        }
-
         [NameInMap("fields")]
         [Validation(Required=false)]
-        public List<CreateTaskRequestFields> Fields { get; set; }
-        public class CreateTaskRequestFields : TeaModel {
+        public List<AnalyzeAudioSyncRequestFields> Fields { get; set; }
+        public class AnalyzeAudioSyncRequestFields : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>phoneNumber</para>
@@ -115,36 +39,24 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
             [NameInMap("desc")]
             [Validation(Required=false)]
             public string Desc { get; set; }
 
             [NameInMap("enumValues")]
             [Validation(Required=false)]
-            public List<CreateTaskRequestFieldsEnumValues> EnumValues { get; set; }
-            public class CreateTaskRequestFieldsEnumValues : TeaModel {
-                /// <summary>
-                /// <para>This parameter is required.</para>
-                /// </summary>
+            public List<AnalyzeAudioSyncRequestFieldsEnumValues> EnumValues { get; set; }
+            public class AnalyzeAudioSyncRequestFieldsEnumValues : TeaModel {
                 [NameInMap("desc")]
                 [Validation(Required=false)]
                 public string Desc { get; set; }
 
-                /// <summary>
-                /// <para>This parameter is required.</para>
-                /// </summary>
                 [NameInMap("enumValue")]
                 [Validation(Required=false)]
                 public string EnumValue { get; set; }
 
             }
 
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -152,8 +64,6 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>tyxmTurbo</para>
         /// </summary>
@@ -161,6 +71,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public string ModelCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>jsonObject</para>
+        /// </summary>
         [NameInMap("responseFormatType")]
         [Validation(Required=false)]
         public string ResponseFormatType { get; set; }
@@ -171,41 +85,26 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
         [NameInMap("serviceInspection")]
         [Validation(Required=false)]
-        public CreateTaskRequestServiceInspection ServiceInspection { get; set; }
-        public class CreateTaskRequestServiceInspection : TeaModel {
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
+        public AnalyzeAudioSyncRequestServiceInspection ServiceInspection { get; set; }
+        public class AnalyzeAudioSyncRequestServiceInspection : TeaModel {
             [NameInMap("inspectionContents")]
             [Validation(Required=false)]
-            public List<CreateTaskRequestServiceInspectionInspectionContents> InspectionContents { get; set; }
-            public class CreateTaskRequestServiceInspectionInspectionContents : TeaModel {
-                /// <summary>
-                /// <para>This parameter is required.</para>
-                /// </summary>
+            public List<AnalyzeAudioSyncRequestServiceInspectionInspectionContents> InspectionContents { get; set; }
+            public class AnalyzeAudioSyncRequestServiceInspectionInspectionContents : TeaModel {
                 [NameInMap("content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
-                /// <summary>
-                /// <para>This parameter is required.</para>
-                /// </summary>
                 [NameInMap("title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
 
             }
 
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
             [NameInMap("inspectionIntroduction")]
             [Validation(Required=false)]
             public string InspectionIntroduction { get; set; }
 
-            /// <summary>
-            /// <para>This parameter is required.</para>
-            /// </summary>
             [NameInMap("sceneIntroduction")]
             [Validation(Required=false)]
             public string SceneIntroduction { get; set; }
@@ -216,11 +115,11 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>text</para>
+        /// <para>false</para>
         /// </summary>
-        [NameInMap("taskType")]
+        [NameInMap("stream")]
         [Validation(Required=false)]
-        public string TaskType { get; set; }
+        public bool? Stream { get; set; }
 
         [NameInMap("templateIds")]
         [Validation(Required=false)]
@@ -228,8 +127,12 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
         [NameInMap("transcription")]
         [Validation(Required=false)]
-        public CreateTaskRequestTranscription Transcription { get; set; }
-        public class CreateTaskRequestTranscription : TeaModel {
+        public AnalyzeAudioSyncRequestTranscription Transcription { get; set; }
+        public class AnalyzeAudioSyncRequestTranscription : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>nls</para>
+            /// </summary>
             [NameInMap("asrModelCode")]
             [Validation(Required=false)]
             public string AsrModelCode { get; set; }
@@ -260,6 +163,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             [Validation(Required=false)]
             public string FileName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>low</para>
+            /// </summary>
             [NameInMap("level")]
             [Validation(Required=false)]
             public string Level { get; set; }
@@ -276,6 +183,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
             [Validation(Required=false)]
             public List<string> ServiceChannelKeywords { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>esnvknv*****skdnvjksd</para>
+            /// </summary>
             [NameInMap("vocabularyId")]
             [Validation(Required=false)]
             public string VocabularyId { get; set; }
@@ -294,8 +205,12 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
 
         [NameInMap("variables")]
         [Validation(Required=false)]
-        public List<CreateTaskRequestVariables> Variables { get; set; }
-        public class CreateTaskRequestVariables : TeaModel {
+        public List<AnalyzeAudioSyncRequestVariables> Variables { get; set; }
+        public class AnalyzeAudioSyncRequestVariables : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>name</para>
+            /// </summary>
             [NameInMap("variableCode")]
             [Validation(Required=false)]
             public string VariableCode { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public List<string> ImageUrls { get; set; }
 
+        [NameInMap("responseFormatType")]
+        [Validation(Required=false)]
+        public string ResponseFormatType { get; set; }
+
         [NameInMap("resultTypes")]
         [Validation(Required=false)]
         public List<string> ResultTypes { get; set; }

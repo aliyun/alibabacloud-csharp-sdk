@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public bool? Stream { get; set; }
 
+        [NameInMap("responseFormatType")]
+        [Validation(Required=false)]
+        public string ResponseFormatType { get; set; }
+
     }
 
 }

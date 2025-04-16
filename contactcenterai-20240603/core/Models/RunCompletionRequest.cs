@@ -149,6 +149,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public List<long?> TemplateIds { get; set; }
 
+        [NameInMap("responseFormatType")]
+        [Validation(Required=false)]
+        public string ResponseFormatType { get; set; }
+
         [NameInMap("variables")]
         [Validation(Required=false)]
         public List<RunCompletionRequestVariables> Variables { get; set; }

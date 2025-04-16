@@ -163,6 +163,10 @@ namespace AlibabaCloud.SDK.ContactCenterAI20240603.Models
         [Validation(Required=false)]
         public string ModelCode { get; set; }
 
+        [NameInMap("responseFormatType")]
+        [Validation(Required=false)]
+        public string ResponseFormatType { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
