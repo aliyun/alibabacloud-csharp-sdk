@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public List<JobSpec> JobSpecs { get; set; }
 
         /// <summary>
-        /// <para>The job type. The value is case-sensitive. Valid values:</para>
+        /// <para>The job type. The value is case-sensitive. The following job types are supported:</para>
         /// <list type="bullet">
         /// <item><description>TFJob</description></item>
         /// <item><description>PyTorchJob</description></item>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <para>The ID of the resource group. This parameter is optional.</para>
         /// <list type="bullet">
         /// <item><description>If you leave this parameter empty, the job is submitted to a public resource group.</description></item>
-        /// <item><description>If a resource quota is associated with the current workspace, you can specify the resource quota ID. For more information about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</description></item>
+        /// <item><description>If a resource quota is bound to the current workspace, you can specify the resource quota ID. For more information about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The job type. You can query any job type. The default value null indicates any job type. Valid values:</para>
+        /// <para>The job type. The default value null indicates any type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>TFJob</description></item>
         /// <item><description>PyTorchJob</description></item>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of jobs per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? ShowOwn { get; set; }
 
         /// <summary>
-        /// <para>The sorting field in the returned job list. Valid values:</para>
+        /// <para>The sorting field. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>DisplayName</description></item>
         /// <item><description>JobType</description></item>
