@@ -1,3 +1,7 @@
+2025-04-17 Version: 3.8.1
+- Update API SubmitWorkflowJob: add response parameters Body.TaskId.
+
+
 2025-03-21 Version: 3.8.0
 - Support API GetDailyPlayRegionStatis.
 
