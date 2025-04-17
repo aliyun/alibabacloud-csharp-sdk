@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string AndroidInstanceName { get; set; }
 
+        [NameInMap("AuthorizedUserId")]
+        [Validation(Required=false)]
+        public string AuthorizedUserId { get; set; }
+
         /// <summary>
         /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> operation to query the regions where Cloud Phone is supported.</para>
         /// 

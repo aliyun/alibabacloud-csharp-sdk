@@ -262,6 +262,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string PolicyGroupName { get; set; }
 
+            [NameInMap("PolicyRelatedResources")]
+            [Validation(Required=false)]
+            public ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources PolicyRelatedResources { get; set; }
+            public class ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources : TeaModel {
+                [NameInMap("AndroidInstanceGroupIds")]
+                [Validation(Required=false)]
+                public List<string> AndroidInstanceGroupIds { get; set; }
+
+                [NameInMap("CloudPhoneMatrixIds")]
+                [Validation(Required=false)]
+                public List<string> CloudPhoneMatrixIds { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The height of the resolution.</para>
             /// 
