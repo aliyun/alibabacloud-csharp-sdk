@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
     public class RunMarketingInformationWritingRequest : TeaModel {
+        [NameInMap("apiKey")]
+        [Validation(Required=false)]
+        public string ApiKey { get; set; }
+
         [NameInMap("customLimitation")]
         [Validation(Required=false)]
         public string CustomLimitation { get; set; }

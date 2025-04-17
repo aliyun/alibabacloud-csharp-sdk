@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public RunMarketingInformationWritingResponseBodyHeader Header { get; set; }
         public class RunMarketingInformationWritingResponseBodyHeader : TeaModel {
+            [NameInMap("errorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>result-generated</para>

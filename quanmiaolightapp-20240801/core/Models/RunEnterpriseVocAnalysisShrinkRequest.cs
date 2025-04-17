@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
     public class RunEnterpriseVocAnalysisShrinkRequest : TeaModel {
+        [NameInMap("akProxy")]
+        [Validation(Required=false)]
+        public string AkProxy { get; set; }
+
+        [NameInMap("apiKey")]
+        [Validation(Required=false)]
+        public string ApiKey { get; set; }
+
         /// <summary>
         /// <para>需要进行VOC分析的文本内容（content、contents、url、fileKey 四选一。优先级从小到大）</para>
         /// 

@@ -1315,6 +1315,14 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AkProxy))
+            {
+                body["akProxy"] = request.AkProxy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["apiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 body["content"] = request.Content;
@@ -1395,6 +1403,14 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AkProxy))
+            {
+                body["akProxy"] = request.AkProxy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["apiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 body["content"] = request.Content;
@@ -2089,6 +2105,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["apiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomLimitation))
             {
                 body["customLimitation"] = request.CustomLimitation;
@@ -2159,6 +2179,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["apiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomLimitation))
             {
                 body["customLimitation"] = request.CustomLimitation;
@@ -2273,6 +2297,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["apiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
             {
                 body["businessType"] = request.BusinessType;
@@ -2349,6 +2377,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["apiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
             {
                 body["businessType"] = request.BusinessType;
@@ -3769,6 +3801,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["apiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentsShrink))
             {
                 body["contents"] = request.ContentsShrink;
@@ -3861,6 +3897,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["apiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentsShrink))
             {
                 body["contents"] = request.ContentsShrink;

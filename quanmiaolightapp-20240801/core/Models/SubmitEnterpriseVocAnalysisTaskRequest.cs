@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
     public class SubmitEnterpriseVocAnalysisTaskRequest : TeaModel {
+        [NameInMap("apiKey")]
+        [Validation(Required=false)]
+        public string ApiKey { get; set; }
+
         [NameInMap("contents")]
         [Validation(Required=false)]
         public List<SubmitEnterpriseVocAnalysisTaskRequestContents> Contents { get; set; }
