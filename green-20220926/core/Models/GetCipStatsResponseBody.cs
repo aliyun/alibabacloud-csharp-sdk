@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
             [NameInMap("TotalStat")]
             [Validation(Required=false)]
-            public Dictionary<string, object> TotalStat { get; set; }
+            public Dictionary<string, Dictionary<string, object>> TotalStat { get; set; }
 
             [NameInMap("Uids")]
             [Validation(Required=false)]
