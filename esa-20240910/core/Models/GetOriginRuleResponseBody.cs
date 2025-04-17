@@ -43,6 +43,26 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string DnsRecord { get; set; }
 
+        [NameInMap("Follow302Enable")]
+        [Validation(Required=false)]
+        public string Follow302Enable { get; set; }
+
+        [NameInMap("Follow302MaxTries")]
+        [Validation(Required=false)]
+        public string Follow302MaxTries { get; set; }
+
+        [NameInMap("Follow302RetainArgs")]
+        [Validation(Required=false)]
+        public string Follow302RetainArgs { get; set; }
+
+        [NameInMap("Follow302RetainHeader")]
+        [Validation(Required=false)]
+        public string Follow302RetainHeader { get; set; }
+
+        [NameInMap("Follow302TargetHost")]
+        [Validation(Required=false)]
+        public string Follow302TargetHost { get; set; }
+
         /// <summary>
         /// <para>HOST carried in the origin request.</para>
         /// 
