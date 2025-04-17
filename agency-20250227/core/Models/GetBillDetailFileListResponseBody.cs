@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             [Validation(Required=false)]
             public string FileUrl { get; set; }
 
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
