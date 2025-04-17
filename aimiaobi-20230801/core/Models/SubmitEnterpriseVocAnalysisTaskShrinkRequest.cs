@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class SubmitEnterpriseVocAnalysisTaskShrinkRequest : TeaModel {
+        [NameInMap("ApiKey")]
+        [Validation(Required=false)]
+        public string ApiKey { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>

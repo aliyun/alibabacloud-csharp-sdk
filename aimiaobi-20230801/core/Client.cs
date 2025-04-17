@@ -18778,6 +18778,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 request.FilterTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterTags, "FilterTags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["ApiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentTagsShrink))
             {
                 body["ContentTags"] = request.ContentTagsShrink;
@@ -18870,6 +18874,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 request.FilterTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FilterTags, "FilterTags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["ApiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentTagsShrink))
             {
                 body["ContentTags"] = request.ContentTagsShrink;
