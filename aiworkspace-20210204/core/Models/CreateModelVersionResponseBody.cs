@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateModelVersionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21645FCD-BAB9-5742-89AE-AEB27****B2E</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The version of the model.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.1.0</para>
         /// </summary>

@@ -8,26 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
-    public class CreateWorkspaceResponseBody : TeaModel {
+    public class DatasetFileMetasStat : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>1e195c5116124202371861018d5bde</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Count")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>1234</para>
+        /// <para>cat</para>
         /// </summary>
-        [NameInMap("WorkspaceId")]
+        [NameInMap("Key")]
         [Validation(Required=false)]
-        public string WorkspaceId { get; set; }
+        public string Key { get; set; }
 
     }
 

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string DatasetVersion { get; set; }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>90******-f5c5-4cd4-927e-1f45e1cb8b62_1729644433000</para>
@@ -29,12 +33,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? PageSize { get; set; }
 
         /// <summary>

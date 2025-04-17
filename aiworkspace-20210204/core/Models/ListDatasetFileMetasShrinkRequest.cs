@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
-    public class ListDatasetFileMetasRequest : TeaModel {
+    public class ListDatasetFileMetasShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         [NameInMap("QueryFileTypeIncludeAny")]
         [Validation(Required=false)]
-        public List<string> QueryFileTypeIncludeAny { get; set; }
+        public string QueryFileTypeIncludeAnyShrink { get; set; }
 
         [NameInMap("QueryImage")]
         [Validation(Required=false)]
@@ -86,15 +86,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         [NameInMap("QueryTagsExclude")]
         [Validation(Required=false)]
-        public List<string> QueryTagsExclude { get; set; }
+        public string QueryTagsExcludeShrink { get; set; }
 
         [NameInMap("QueryTagsIncludeAll")]
         [Validation(Required=false)]
-        public List<string> QueryTagsIncludeAll { get; set; }
+        public string QueryTagsIncludeAllShrink { get; set; }
 
         [NameInMap("QueryTagsIncludeAny")]
         [Validation(Required=false)]
-        public List<string> QueryTagsIncludeAny { get; set; }
+        public string QueryTagsIncludeAnyShrink { get; set; }
 
         [NameInMap("QueryText")]
         [Validation(Required=false)]

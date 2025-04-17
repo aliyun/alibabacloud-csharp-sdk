@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListWorkspacesRequest : TeaModel {
         /// <summary>
+        /// <para>The list of returned fields of workspace details. Used to limit the fields in the returned results. Separate multiple fields with commas (,). Currently, only Id is supported, which is the workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Id</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Fields { get; set; }
 
         /// <summary>
+        /// <para>The modules, separated by commas (,). Default value: PAI.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PAI</para>
         /// </summary>
@@ -26,6 +30,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ModuleList { get; set; }
 
         /// <summary>
+        /// <para>The query options. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>GetWorkspaces (default): Obtains a list of Workspaces.</description></item>
+        /// <item><description>GetResourceLimits: Obtains a list of ResourceLimits.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>GetWorkspaces</para>
         /// </summary>
@@ -34,6 +44,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Option { get; set; }
 
         /// <summary>
+        /// <para>The order of results (ascending or descending). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ASC: ascending order. This is the default value.</description></item>
+        /// <item><description>DESC: descending order.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ASC</para>
         /// </summary>
@@ -42,6 +58,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
+        /// <para>The page number of the workspace list. Pages start from page 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +68,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -57,11 +77,23 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID. To obtain the ID of a resource group, see <a href="https://help.aliyun.com/zh/resource-management/resource-group/user-guide/view-basic-information-of-a-resource-group?spm=a2c4g.11186623.help-menu-94362.d_2_0_1.86386c21FKqhTk%5C&scm=20140722.H_151181._.OR_help-T_cn~zh-V_1">View basic information of a resource group</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmwp7rky****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>Specifies how to sort the results. Default value: GmtCreateTime. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>GmtCreateTime: Sort by the time when created.</description></item>
+        /// <item><description>GmtModifiedTime: Sort by the time when modified.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>
         /// </summary>
@@ -70,6 +102,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>The workspace status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ENABLED</description></item>
+        /// <item><description>INITIALIZING</description></item>
+        /// <item><description>FAILURE</description></item>
+        /// <item><description>DISABLED</description></item>
+        /// <item><description>FROZEN</description></item>
+        /// <item><description>UPDATING</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ENABLED</para>
         /// </summary>
@@ -78,6 +120,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to display workspace details. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false (default)</description></item>
+        /// <item><description>true</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -86,6 +134,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public bool? Verbose { get; set; }
 
         /// <summary>
+        /// <para>The workspace IDs. Separate multiple IDs by commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123,234</para>
         /// </summary>
@@ -94,6 +144,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string WorkspaceIds { get; set; }
 
         /// <summary>
+        /// <para>The name of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>abc</para>
         /// </summary>

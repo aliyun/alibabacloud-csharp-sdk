@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
-    public class CreateDatasetVersionLabelsResponseBody : TeaModel {
+    public class DeleteUserConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The configuration item keys. Currently, only customizePAIAssumedRole.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8D7B2E70-F770-505B-A672-09F1D8F2EC1E</para>
+        /// <para>tempStoragePath</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("ConfigKey")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ConfigKey { get; set; }
 
     }
 

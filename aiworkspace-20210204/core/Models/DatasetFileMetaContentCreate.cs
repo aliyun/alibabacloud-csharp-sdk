@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2021-01-12T14:36:01Z</para>
+        /// <para>2021-01-12T14:36:01.000Z</para>
         /// </summary>
         [NameInMap("FileCreateTime")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2021-01-12T14:36:01Z</para>
+        /// <para>2021-01-12T14:36:01.000Z</para>
         /// </summary>
         [NameInMap("FileUpdateTime")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{&quot;user&quot;:[&quot;cat&quot;]}</para>
+        /// <para>{&quot;user&quot;:{&quot;add&quot;:[&quot;cat&quot;]}}</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

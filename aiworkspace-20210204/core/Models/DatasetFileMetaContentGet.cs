@@ -29,11 +29,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2021-01-12T14:36:01Z</para>
+        /// <para>2021-01-12T14:36:01.000Z</para>
         /// </summary>
         [NameInMap("FileCreateTime")]
         [Validation(Required=false)]
         public string FileCreateTime { get; set; }
+
+        [NameInMap("FileDir")]
+        [Validation(Required=false)]
+        public string FileDir { get; set; }
 
         [NameInMap("FileFingerPrint")]
         [Validation(Required=false)]
@@ -51,7 +55,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2021-01-12T14:36:01Z</para>
+        /// <para>2021-01-12T14:36:01.000Z</para>
         /// </summary>
         [NameInMap("FileUpdateTime")]
         [Validation(Required=false)]
@@ -60,6 +64,30 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("MetaAttributes")]
         [Validation(Required=false)]
         public string MetaAttributes { get; set; }
+
+        [NameInMap("SemanticIndexJobId")]
+        [Validation(Required=false)]
+        public string SemanticIndexJobId { get; set; }
+
+        /// <summary>
+        /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-01-12T14:36:01.000Z</para>
+        /// </summary>
+        [NameInMap("SemanticIndexUpdateTime")]
+        [Validation(Required=false)]
+        public string SemanticIndexUpdateTime { get; set; }
+
+        /// <summary>
+        /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-01-12T14:36:01.000Z</para>
+        /// </summary>
+        [NameInMap("TagUpdateTime")]
+        [Validation(Required=false)]
+        public string TagUpdateTime { get; set; }
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
