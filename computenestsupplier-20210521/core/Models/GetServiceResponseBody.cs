@@ -1135,6 +1135,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string SupplierUrl { get; set; }
 
+        [NameInMap("SupportContacts")]
+        [Validation(Required=false)]
+        public List<GetServiceResponseBodySupportContacts> SupportContacts { get; set; }
+        public class GetServiceResponseBodySupportContacts : TeaModel {
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The service tags.</para>
         /// </summary>
