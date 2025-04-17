@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 {
     public class DeleteListenerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5C6E3548-086F-5FF6-A2B3-B1871B3AB488</para>
         /// </summary>

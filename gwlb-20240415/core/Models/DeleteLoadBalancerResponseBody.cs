@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 {
     public class DeleteLoadBalancerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>37907828-01AB-5AC3-9DDE-25D419091D54</para>
         /// </summary>

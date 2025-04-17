@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 {
     public class UpdateLoadBalancerAttributeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B956C629-0E8C-5EFF-BAC1-B0E3A8C5CBDD</para>
         /// </summary>

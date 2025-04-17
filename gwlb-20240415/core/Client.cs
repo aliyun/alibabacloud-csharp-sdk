@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("gwlb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +39,27 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务器组中添加后端服务器</para>
+        /// <para>Adds backend servers to the server group of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <ol>
+        /// <item><description>You can call the ListServerGroups operation to query the status of the server group.</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
+        /// </list>
+        /// <ol start="2">
+        /// <item><description>You can call the ListServerGroupServers operation to query the status of the backend server.</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If the backend server is in the <b>Adding</b> state, the backend server is being added to the server group.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the server is running.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddServersToServerGroupRequest
@@ -99,8 +118,27 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务器组中添加后端服务器</para>
+        /// <para>Adds backend servers to the server group of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <ol>
+        /// <item><description>You can call the ListServerGroups operation to query the status of the server group.</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
+        /// </list>
+        /// <ol start="2">
+        /// <item><description>You can call the ListServerGroupServers operation to query the status of the backend server.</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If the backend server is in the <b>Adding</b> state, the backend server is being added to the server group.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the server is running.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddServersToServerGroupRequest
@@ -159,8 +197,27 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务器组中添加后端服务器</para>
+        /// <para>Adds backend servers to the server group of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <ol>
+        /// <item><description>You can call the ListServerGroups operation to query the status of the server group.</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
+        /// </list>
+        /// <ol start="2">
+        /// <item><description>You can call the ListServerGroupServers operation to query the status of the backend server.</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If the backend server is in the <b>Adding</b> state, the backend server is being added to the server group.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the server is running.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddServersToServerGroupRequest
@@ -177,8 +234,27 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务器组中添加后端服务器</para>
+        /// <para>Adds backend servers to the server group of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <ol>
+        /// <item><description>You can call the ListServerGroups operation to query the status of the server group.</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
+        /// </list>
+        /// <ol start="2">
+        /// <item><description>You can call the ListServerGroupServers operation to query the status of the backend server.</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If the backend server is in the <b>Adding</b> state, the backend server is being added to the server group.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the server is running.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddServersToServerGroupRequest
@@ -195,8 +271,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建监听</para>
+        /// <para>Creates a listener for a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>CreateListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <b>GetListenerAttribute</b> operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the listener is in the <b>Provisioning</b> state, the listener is being created.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the listener is running.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateListenerRequest
@@ -263,8 +348,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建监听</para>
+        /// <para>Creates a listener for a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>CreateListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <b>GetListenerAttribute</b> operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the listener is in the <b>Provisioning</b> state, the listener is being created.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the listener is running.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateListenerRequest
@@ -331,8 +425,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建监听</para>
+        /// <para>Creates a listener for a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>CreateListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <b>GetListenerAttribute</b> operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the listener is in the <b>Provisioning</b> state, the listener is being created.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the listener is running.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateListenerRequest
@@ -349,8 +452,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建监听</para>
+        /// <para>Creates a listener for a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>CreateListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <b>GetListenerAttribute</b> operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the listener is in the <b>Provisioning</b> state, the listener is being created.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the listener is running.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateListenerRequest
@@ -367,8 +479,21 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建负载均衡实例</para>
+        /// <para>Creates a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.</para>
+        /// <list type="bullet">
+        /// <item><description>When you create a GWLB instance, the service-linked role AliyunServiceRoleForGwlb is automatically created.</description></item>
+        /// <item><description>CreateLoadBalancer is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of a GWLB instance.<list type="bullet">
+        /// <item><description>If the GWLB instance is in the Provisioning state, the GWLB instance is being created.</description></item>
+        /// <item><description>If the GWLB instance is in the Active state, the GWLB instance is created.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLoadBalancerRequest
@@ -443,8 +568,21 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建负载均衡实例</para>
+        /// <para>Creates a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.</para>
+        /// <list type="bullet">
+        /// <item><description>When you create a GWLB instance, the service-linked role AliyunServiceRoleForGwlb is automatically created.</description></item>
+        /// <item><description>CreateLoadBalancer is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of a GWLB instance.<list type="bullet">
+        /// <item><description>If the GWLB instance is in the Provisioning state, the GWLB instance is being created.</description></item>
+        /// <item><description>If the GWLB instance is in the Active state, the GWLB instance is created.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLoadBalancerRequest
@@ -519,8 +657,21 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建负载均衡实例</para>
+        /// <para>Creates a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.</para>
+        /// <list type="bullet">
+        /// <item><description>When you create a GWLB instance, the service-linked role AliyunServiceRoleForGwlb is automatically created.</description></item>
+        /// <item><description>CreateLoadBalancer is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of a GWLB instance.<list type="bullet">
+        /// <item><description>If the GWLB instance is in the Provisioning state, the GWLB instance is being created.</description></item>
+        /// <item><description>If the GWLB instance is in the Active state, the GWLB instance is created.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLoadBalancerRequest
@@ -537,8 +688,21 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建负载均衡实例</para>
+        /// <para>Creates a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.</para>
+        /// <list type="bullet">
+        /// <item><description>When you create a GWLB instance, the service-linked role AliyunServiceRoleForGwlb is automatically created.</description></item>
+        /// <item><description>CreateLoadBalancer is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of a GWLB instance.<list type="bullet">
+        /// <item><description>If the GWLB instance is in the Provisioning state, the GWLB instance is being created.</description></item>
+        /// <item><description>If the GWLB instance is in the Active state, the GWLB instance is created.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateLoadBalancerRequest
@@ -555,8 +719,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务器组</para>
+        /// <para>Creates a server group for a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the server group is in the <b>Creating</b> state, it indicates that the server group is being created.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, it indicates that the server group is created.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateServerGroupRequest
@@ -601,6 +774,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415
             {
                 body["Scheduler"] = request.Scheduler;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerFailoverMode))
+            {
+                body["ServerFailoverMode"] = request.ServerFailoverMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerGroupName))
             {
                 body["ServerGroupName"] = request.ServerGroupName;
@@ -643,8 +820,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务器组</para>
+        /// <para>Creates a server group for a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the server group is in the <b>Creating</b> state, it indicates that the server group is being created.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, it indicates that the server group is created.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateServerGroupRequest
@@ -689,6 +875,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415
             {
                 body["Scheduler"] = request.Scheduler;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerFailoverMode))
+            {
+                body["ServerFailoverMode"] = request.ServerFailoverMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerGroupName))
             {
                 body["ServerGroupName"] = request.ServerGroupName;
@@ -731,8 +921,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务器组</para>
+        /// <para>Creates a server group for a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the server group is in the <b>Creating</b> state, it indicates that the server group is being created.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, it indicates that the server group is created.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateServerGroupRequest
@@ -749,8 +948,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务器组</para>
+        /// <para>Creates a server group for a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the server group is in the <b>Creating</b> state, it indicates that the server group is being created.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, it indicates that the server group is created.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateServerGroupRequest
@@ -767,8 +975,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除监听</para>
+        /// <para>Deletes a listener from a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>DeleteListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <b>GetListenerAttribute</b> operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the listener is in the <b>Deleting</b> state, the listener is being deleted.</description></item>
+        /// <item><description>If the listener cannot be found, the listener is deleted.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteListenerRequest
@@ -817,8 +1034,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除监听</para>
+        /// <para>Deletes a listener from a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>DeleteListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <b>GetListenerAttribute</b> operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the listener is in the <b>Deleting</b> state, the listener is being deleted.</description></item>
+        /// <item><description>If the listener cannot be found, the listener is deleted.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteListenerRequest
@@ -867,8 +1093,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除监听</para>
+        /// <para>Deletes a listener from a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>DeleteListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <b>GetListenerAttribute</b> operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the listener is in the <b>Deleting</b> state, the listener is being deleted.</description></item>
+        /// <item><description>If the listener cannot be found, the listener is deleted.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteListenerRequest
@@ -885,8 +1120,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除监听</para>
+        /// <para>Deletes a listener from a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>DeleteListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <b>GetListenerAttribute</b> operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the listener is in the <b>Deleting</b> state, the listener is being deleted.</description></item>
+        /// <item><description>If the listener cannot be found, the listener is deleted.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteListenerRequest
@@ -903,7 +1147,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除负载均衡实例</para>
+        /// <para>Deletes a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -953,7 +1197,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除负载均衡实例</para>
+        /// <para>Deletes a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1003,7 +1247,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除负载均衡实例</para>
+        /// <para>Deletes a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1021,7 +1265,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除负载均衡实例</para>
+        /// <para>Deletes a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1039,8 +1283,13 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务器组</para>
+        /// <para>Deletes a server group from a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can delete server groups that are not associated with listeners.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteServerGroupRequest
@@ -1089,8 +1338,13 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务器组</para>
+        /// <para>Deletes a server group from a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can delete server groups that are not associated with listeners.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteServerGroupRequest
@@ -1139,8 +1393,13 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务器组</para>
+        /// <para>Deletes a server group from a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can delete server groups that are not associated with listeners.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteServerGroupRequest
@@ -1157,8 +1416,13 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务器组</para>
+        /// <para>Deletes a server group from a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can delete server groups that are not associated with listeners.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteServerGroupRequest
@@ -1175,7 +1439,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域</para>
+        /// <para>Queries the most recent region list of Gateway Load Balancer (GWLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1217,7 +1481,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域</para>
+        /// <para>Queries the most recent region list of Gateway Load Balancer (GWLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1259,7 +1523,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域</para>
+        /// <para>Queries the most recent region list of Gateway Load Balancer (GWLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1277,7 +1541,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域</para>
+        /// <para>Queries the most recent region list of Gateway Load Balancer (GWLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1295,7 +1559,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可用区</para>
+        /// <para>Queries the most recent zone list of Gateway Load Balancer (GWLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1337,7 +1601,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可用区</para>
+        /// <para>Queries the most recent zone list of Gateway Load Balancer (GWLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1379,7 +1643,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可用区</para>
+        /// <para>Queries the most recent zone list of Gateway Load Balancer (GWLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1397,7 +1661,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可用区</para>
+        /// <para>Queries the most recent zone list of Gateway Load Balancer (GWLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1415,7 +1679,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询监听详细信息</para>
+        /// <para>Queries the details of a Gateway Load Balancer (GWLB) listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1457,7 +1721,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询监听详细信息</para>
+        /// <para>Queries the details of a Gateway Load Balancer (GWLB) listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1499,7 +1763,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询监听详细信息</para>
+        /// <para>Queries the details of a Gateway Load Balancer (GWLB) listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1517,7 +1781,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询监听详细信息</para>
+        /// <para>Queries the details of a Gateway Load Balancer (GWLB) listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1535,7 +1799,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询监听健康检查状态</para>
+        /// <para>Queries the health check status of a Gateway Load Balancer (GWLB) listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1599,7 +1863,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询监听健康检查状态</para>
+        /// <para>Queries the health check status of a Gateway Load Balancer (GWLB) listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1663,7 +1927,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询监听健康检查状态</para>
+        /// <para>Queries the health check status of a Gateway Load Balancer (GWLB) listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1681,7 +1945,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询监听健康检查状态</para>
+        /// <para>Queries the health check status of a Gateway Load Balancer (GWLB) listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1699,7 +1963,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询负载均衡实例详细信息</para>
+        /// <para>Queries the details of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1741,7 +2005,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询负载均衡实例详细信息</para>
+        /// <para>Queries the details of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1783,7 +2047,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询负载均衡实例详细信息</para>
+        /// <para>Queries the details of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1801,7 +2065,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询负载均衡实例详细信息</para>
+        /// <para>Queries the details of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1819,7 +2083,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询监听列表</para>
+        /// <para>Queries Gateway Load Balancer (GWLB) listeners.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1887,7 +2151,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询监听列表</para>
+        /// <para>Queries Gateway Load Balancer (GWLB) listeners.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1955,7 +2219,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询监听列表</para>
+        /// <para>Queries Gateway Load Balancer (GWLB) listeners.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1973,7 +2237,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询监听列表</para>
+        /// <para>Queries Gateway Load Balancer (GWLB) listeners.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1991,7 +2255,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询负载均衡实例列表</para>
+        /// <para>Queries Gateway Load Balancer (GWLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2049,6 +2313,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415
             {
                 bodyFlat["Tag"] = request.Tag;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficMode))
+            {
+                body["TrafficMode"] = request.TrafficMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcIds))
             {
                 bodyFlat["VpcIds"] = request.VpcIds;
@@ -2083,7 +2351,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询负载均衡实例列表</para>
+        /// <para>Queries Gateway Load Balancer (GWLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2141,6 +2409,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415
             {
                 bodyFlat["Tag"] = request.Tag;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficMode))
+            {
+                body["TrafficMode"] = request.TrafficMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcIds))
             {
                 bodyFlat["VpcIds"] = request.VpcIds;
@@ -2175,7 +2447,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询负载均衡实例列表</para>
+        /// <para>Queries Gateway Load Balancer (GWLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2193,7 +2465,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询负载均衡实例列表</para>
+        /// <para>Queries Gateway Load Balancer (GWLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2211,7 +2483,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务器组中的服务器列表</para>
+        /// <para>Queries the server groups of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2279,7 +2551,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务器组中的服务器列表</para>
+        /// <para>Queries the server groups of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2347,7 +2619,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务器组中的服务器列表</para>
+        /// <para>Queries the server groups of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2365,7 +2637,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务器组中的服务器列表</para>
+        /// <para>Queries the server groups of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2383,7 +2655,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务器组列表</para>
+        /// <para>Queries the server groups of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2463,7 +2735,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务器组列表</para>
+        /// <para>Queries the server groups of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2543,7 +2815,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务器组列表</para>
+        /// <para>Queries the server groups of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2561,7 +2833,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务器组列表</para>
+        /// <para>Queries the server groups of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2579,7 +2851,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签</para>
+        /// <para>Queries the tags of resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2643,7 +2915,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签</para>
+        /// <para>Queries the tags of resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2707,7 +2979,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签</para>
+        /// <para>Queries the tags of resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2725,7 +2997,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签</para>
+        /// <para>Queries the tags of resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2743,7 +3015,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迁移资源组</para>
+        /// <para>Changes the resource group to which a specified cloud resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2801,7 +3073,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迁移资源组</para>
+        /// <para>Changes the resource group to which a specified cloud resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2859,7 +3131,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迁移资源组</para>
+        /// <para>Changes the resource group to which a specified cloud resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2877,7 +3149,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>迁移资源组</para>
+        /// <para>Changes the resource group to which a specified cloud resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2895,8 +3167,31 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务器组中删除后端服务器</para>
+        /// <para>Removes backend servers from the server group of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>RemoveServersFromServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <ol>
+        /// <item><description>You can call the ListServerGroups operation to query the status of a server group.<list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>You can call the ListServerGroupServers operation to query the status of a backend server.<list type="bullet">
+        /// <item><description>If the backend server is in the <b>Removing</b> state, the backend server is being removed from the server group.</description></item>
+        /// <item><description>If the backend server cannot be found, the backend server is no longer in the server group.<remarks>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If connection draining id enabled (<b>ConnectionDrainEnabled</b> set to true) for the server group of the backend server, the backend server that you remove enters the <b>Removing</b> state before entering the <b>Draining</b> state. When the connection draining timeout period (<b>ConnectionDrainTimeout</b>) ends, the backend server is removed from the server group.</description></item>
+        /// <item><description>You can add the backend server to the server group again before the connection draining timeout period ends. In this case, the status of the backend server changes from <b>Draining</b> to <b>Adding</b>. After the backend server is added to the server group, the backend server enters the <b>Available</b> state.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveServersFromServerGroupRequest
@@ -2955,8 +3250,31 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务器组中删除后端服务器</para>
+        /// <para>Removes backend servers from the server group of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>RemoveServersFromServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <ol>
+        /// <item><description>You can call the ListServerGroups operation to query the status of a server group.<list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>You can call the ListServerGroupServers operation to query the status of a backend server.<list type="bullet">
+        /// <item><description>If the backend server is in the <b>Removing</b> state, the backend server is being removed from the server group.</description></item>
+        /// <item><description>If the backend server cannot be found, the backend server is no longer in the server group.<remarks>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If connection draining id enabled (<b>ConnectionDrainEnabled</b> set to true) for the server group of the backend server, the backend server that you remove enters the <b>Removing</b> state before entering the <b>Draining</b> state. When the connection draining timeout period (<b>ConnectionDrainTimeout</b>) ends, the backend server is removed from the server group.</description></item>
+        /// <item><description>You can add the backend server to the server group again before the connection draining timeout period ends. In this case, the status of the backend server changes from <b>Draining</b> to <b>Adding</b>. After the backend server is added to the server group, the backend server enters the <b>Available</b> state.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveServersFromServerGroupRequest
@@ -3015,8 +3333,31 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务器组中删除后端服务器</para>
+        /// <para>Removes backend servers from the server group of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>RemoveServersFromServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <ol>
+        /// <item><description>You can call the ListServerGroups operation to query the status of a server group.<list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>You can call the ListServerGroupServers operation to query the status of a backend server.<list type="bullet">
+        /// <item><description>If the backend server is in the <b>Removing</b> state, the backend server is being removed from the server group.</description></item>
+        /// <item><description>If the backend server cannot be found, the backend server is no longer in the server group.<remarks>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If connection draining id enabled (<b>ConnectionDrainEnabled</b> set to true) for the server group of the backend server, the backend server that you remove enters the <b>Removing</b> state before entering the <b>Draining</b> state. When the connection draining timeout period (<b>ConnectionDrainTimeout</b>) ends, the backend server is removed from the server group.</description></item>
+        /// <item><description>You can add the backend server to the server group again before the connection draining timeout period ends. In this case, the status of the backend server changes from <b>Draining</b> to <b>Adding</b>. After the backend server is added to the server group, the backend server enters the <b>Available</b> state.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveServersFromServerGroupRequest
@@ -3033,8 +3374,31 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务器组中删除后端服务器</para>
+        /// <para>Removes backend servers from the server group of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>RemoveServersFromServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <ol>
+        /// <item><description>You can call the ListServerGroups operation to query the status of a server group.<list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>You can call the ListServerGroupServers operation to query the status of a backend server.<list type="bullet">
+        /// <item><description>If the backend server is in the <b>Removing</b> state, the backend server is being removed from the server group.</description></item>
+        /// <item><description>If the backend server cannot be found, the backend server is no longer in the server group.<remarks>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If connection draining id enabled (<b>ConnectionDrainEnabled</b> set to true) for the server group of the backend server, the backend server that you remove enters the <b>Removing</b> state before entering the <b>Draining</b> state. When the connection draining timeout period (<b>ConnectionDrainTimeout</b>) ends, the backend server is removed from the server group.</description></item>
+        /// <item><description>You can add the backend server to the server group again before the connection draining timeout period ends. In this case, the status of the backend server changes from <b>Draining</b> to <b>Adding</b>. After the backend server is added to the server group, the backend server enters the <b>Available</b> state.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveServersFromServerGroupRequest
@@ -3051,7 +3415,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加资源标签</para>
+        /// <para>Creates and adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3115,7 +3479,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加资源标签</para>
+        /// <para>Creates and adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3179,7 +3543,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加资源标签</para>
+        /// <para>Creates and adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3197,7 +3561,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加资源标签</para>
+        /// <para>Creates and adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3215,7 +3579,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源标签</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3283,7 +3647,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源标签</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3351,7 +3715,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源标签</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3369,7 +3733,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除资源标签</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3387,8 +3751,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新监听属性</para>
+        /// <para>Updates the configurations of a Gateway Load Balancer (GWLB) listener.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <b>GetListenerAttribute</b> operation to query the status of a listener.</para>
+        /// <list type="bullet">
+        /// <item><description>If the listener is in the <b>Configuring</b> state, the listener is being modified.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the listener is modified.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateListenerAttributeRequest
@@ -3445,8 +3818,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新监听属性</para>
+        /// <para>Updates the configurations of a Gateway Load Balancer (GWLB) listener.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <b>GetListenerAttribute</b> operation to query the status of a listener.</para>
+        /// <list type="bullet">
+        /// <item><description>If the listener is in the <b>Configuring</b> state, the listener is being modified.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the listener is modified.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateListenerAttributeRequest
@@ -3503,8 +3885,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新监听属性</para>
+        /// <para>Updates the configurations of a Gateway Load Balancer (GWLB) listener.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <b>GetListenerAttribute</b> operation to query the status of a listener.</para>
+        /// <list type="bullet">
+        /// <item><description>If the listener is in the <b>Configuring</b> state, the listener is being modified.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the listener is modified.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateListenerAttributeRequest
@@ -3521,8 +3912,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新监听属性</para>
+        /// <para>Updates the configurations of a Gateway Load Balancer (GWLB) listener.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <b>GetListenerAttribute</b> operation to query the status of a listener.</para>
+        /// <list type="bullet">
+        /// <item><description>If the listener is in the <b>Configuring</b> state, the listener is being modified.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the listener is modified.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateListenerAttributeRequest
@@ -3539,8 +3939,15 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新负载均衡实例属性</para>
+        /// <para>Updates the attributes of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  UpdateLoadBalancerAttribute is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.
+        ///     *   If the GWLB instance is in the Configuring state, the GWLB instance is being modified.
+        ///     *   If the GWLB instance is in the Active state, the GWLB instance is modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoadBalancerAttributeRequest
@@ -3572,6 +3979,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415
             {
                 body["LoadBalancerName"] = request.LoadBalancerName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficMode))
+            {
+                body["TrafficMode"] = request.TrafficMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -3593,8 +4004,15 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新负载均衡实例属性</para>
+        /// <para>Updates the attributes of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  UpdateLoadBalancerAttribute is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.
+        ///     *   If the GWLB instance is in the Configuring state, the GWLB instance is being modified.
+        ///     *   If the GWLB instance is in the Active state, the GWLB instance is modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoadBalancerAttributeRequest
@@ -3626,6 +4044,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415
             {
                 body["LoadBalancerName"] = request.LoadBalancerName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficMode))
+            {
+                body["TrafficMode"] = request.TrafficMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -3647,8 +4069,15 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新负载均衡实例属性</para>
+        /// <para>Updates the attributes of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  UpdateLoadBalancerAttribute is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.
+        ///     *   If the GWLB instance is in the Configuring state, the GWLB instance is being modified.
+        ///     *   If the GWLB instance is in the Active state, the GWLB instance is modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoadBalancerAttributeRequest
@@ -3665,8 +4094,15 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新负载均衡实例属性</para>
+        /// <para>Updates the attributes of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  UpdateLoadBalancerAttribute is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.
+        ///     *   If the GWLB instance is in the Configuring state, the GWLB instance is being modified.
+        ///     *   If the GWLB instance is in the Active state, the GWLB instance is modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoadBalancerAttributeRequest
@@ -3683,8 +4119,21 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新负载均衡实例可用区</para>
+        /// <para>Updates the zones of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.
+        /// UpdateLoadBalancerZones is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.</para>
+        /// <list type="bullet">
+        /// <item><description>If the GWLB instance is in the Configuring state, the GWLB instance is being modified.</description></item>
+        /// <item><description>If the GWLB instance is in the Active state, the GWLB instance is modified.<remarks>
+        /// <para> Before you call this operation, make sure that all zone parameters, including the current zones and the zones that you want to add, are specified. If you do not specify the current zones, the current zones are deleted. You can call the GetLoadBalancerAttribute operation to query the current zones of a GWLB instance.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoadBalancerZonesRequest
@@ -3743,8 +4192,21 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新负载均衡实例可用区</para>
+        /// <para>Updates the zones of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.
+        /// UpdateLoadBalancerZones is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.</para>
+        /// <list type="bullet">
+        /// <item><description>If the GWLB instance is in the Configuring state, the GWLB instance is being modified.</description></item>
+        /// <item><description>If the GWLB instance is in the Active state, the GWLB instance is modified.<remarks>
+        /// <para> Before you call this operation, make sure that all zone parameters, including the current zones and the zones that you want to add, are specified. If you do not specify the current zones, the current zones are deleted. You can call the GetLoadBalancerAttribute operation to query the current zones of a GWLB instance.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoadBalancerZonesRequest
@@ -3803,8 +4265,21 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新负载均衡实例可用区</para>
+        /// <para>Updates the zones of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.
+        /// UpdateLoadBalancerZones is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.</para>
+        /// <list type="bullet">
+        /// <item><description>If the GWLB instance is in the Configuring state, the GWLB instance is being modified.</description></item>
+        /// <item><description>If the GWLB instance is in the Active state, the GWLB instance is modified.<remarks>
+        /// <para> Before you call this operation, make sure that all zone parameters, including the current zones and the zones that you want to add, are specified. If you do not specify the current zones, the current zones are deleted. You can call the GetLoadBalancerAttribute operation to query the current zones of a GWLB instance.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoadBalancerZonesRequest
@@ -3821,8 +4296,21 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新负载均衡实例可用区</para>
+        /// <para>Updates the zones of a Gateway Load Balancer (GWLB) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.
+        /// UpdateLoadBalancerZones is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.</para>
+        /// <list type="bullet">
+        /// <item><description>If the GWLB instance is in the Configuring state, the GWLB instance is being modified.</description></item>
+        /// <item><description>If the GWLB instance is in the Active state, the GWLB instance is modified.<remarks>
+        /// <para> Before you call this operation, make sure that all zone parameters, including the current zones and the zones that you want to add, are specified. If you do not specify the current zones, the current zones are deleted. You can call the GetLoadBalancerAttribute operation to query the current zones of a GWLB instance.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoadBalancerZonesRequest
@@ -3839,8 +4327,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务器组属性</para>
+        /// <para>Updates the attributes of a server group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>UpdateServerGroupAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the configuration of the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the configuration of the server group is modified.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateServerGroupAttributeRequest
@@ -3877,6 +4374,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415
             {
                 body["Scheduler"] = request.Scheduler;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerFailoverMode))
+            {
+                body["ServerFailoverMode"] = request.ServerFailoverMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerGroupId))
             {
                 body["ServerGroupId"] = request.ServerGroupId;
@@ -3911,8 +4412,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务器组属性</para>
+        /// <para>Updates the attributes of a server group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>UpdateServerGroupAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the configuration of the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the configuration of the server group is modified.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateServerGroupAttributeRequest
@@ -3949,6 +4459,10 @@ namespace AlibabaCloud.SDK.Gwlb20240415
             {
                 body["Scheduler"] = request.Scheduler;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerFailoverMode))
+            {
+                body["ServerFailoverMode"] = request.ServerFailoverMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerGroupId))
             {
                 body["ServerGroupId"] = request.ServerGroupId;
@@ -3983,8 +4497,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务器组属性</para>
+        /// <para>Updates the attributes of a server group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>UpdateServerGroupAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the configuration of the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the configuration of the server group is modified.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateServerGroupAttributeRequest
@@ -4001,8 +4524,17 @@ namespace AlibabaCloud.SDK.Gwlb20240415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务器组属性</para>
+        /// <para>Updates the attributes of a server group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>UpdateServerGroupAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</para>
+        /// <list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the configuration of the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the configuration of the server group is modified.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateServerGroupAttributeRequest

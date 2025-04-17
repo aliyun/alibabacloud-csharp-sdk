@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 {
     public class UntagResourcesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3DC0064C-C09E-5C99-8FD4-9CDB2DA7FA21</para>
         /// </summary>

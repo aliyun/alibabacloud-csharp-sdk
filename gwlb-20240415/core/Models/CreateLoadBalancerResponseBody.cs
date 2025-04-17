@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 {
     public class CreateLoadBalancerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The GWLB instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gwlb-9njtjmqt7zfcqm****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>00B19438-66BB-58C3-8C2F-DA5B6F95CBDA</para>
         /// </summary>

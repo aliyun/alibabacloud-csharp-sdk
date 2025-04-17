@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 {
     public class GetLoadBalancerAttributeRequest : TeaModel {
         /// <summary>
+        /// <para>The GWLB instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

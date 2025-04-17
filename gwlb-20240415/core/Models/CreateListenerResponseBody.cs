@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 {
     public class CreateListenerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The listener ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>lsn-wi3c0v30ivysrg****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         public string ListenerId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A045E652-D298-5E70-A978-7247135336FB</para>
         /// </summary>

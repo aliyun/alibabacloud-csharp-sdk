@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
 {
     public class CreateServerGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>54B48E3D-DF70-471B-AA93-08E683A1B45</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Gwlb20240415.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The server group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sgp-atstuj3rtoptyui****</para>
         /// </summary>
