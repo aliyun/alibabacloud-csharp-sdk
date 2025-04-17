@@ -8,15 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class OpenStructDescribeRegionsOutput : TeaModel {
+    public class DescribeRegionsOutput : TeaModel {
         [NameInMap("Regions")]
         [Validation(Required=false)]
-        public OpenStructDescribeRegionsOutputRegions Regions { get; set; }
-        public class OpenStructDescribeRegionsOutputRegions : TeaModel {
+        public DescribeRegionsOutputRegions Regions { get; set; }
+        public class DescribeRegionsOutputRegions : TeaModel {
             [NameInMap("Region")]
             [Validation(Required=false)]
-            public List<OpenStructDescribeRegionsOutputRegionsRegion> Region { get; set; }
-            public class OpenStructDescribeRegionsOutputRegionsRegion : TeaModel {
+            public List<DescribeRegionsOutputRegionsRegion> Region { get; set; }
+            public class DescribeRegionsOutputRegionsRegion : TeaModel {
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }

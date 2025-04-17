@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class OpenStructFunctionRestriction : TeaModel {
+    public class FunctionRestriction : TeaModel {
         [NameInMap("disable")]
         [Validation(Required=false)]
         public bool? Disable { get; set; }

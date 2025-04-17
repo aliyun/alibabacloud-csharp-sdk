@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public OpenStructDescribeRegionsOutput Body { get; set; }
+        public DescribeRegionsOutput Body { get; set; }
 
     }
 

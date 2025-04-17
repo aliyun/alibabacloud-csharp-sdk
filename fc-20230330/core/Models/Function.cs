@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         [NameInMap("invocationRestriction")]
         [Validation(Required=false)]
-        public OpenStructFunctionRestriction InvocationRestriction { get; set; }
+        public FunctionRestriction InvocationRestriction { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
