@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
+        [NameInMap("referenceContent")]
+        [Validation(Required=false)]
+        public string ReferenceContent { get; set; }
+
     }
 
 }
