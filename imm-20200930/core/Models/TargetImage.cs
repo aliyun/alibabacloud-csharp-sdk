@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public double? Interval { get; set; }
 
+            [NameInMap("Mode")]
+            [Validation(Required=false)]
+            public string Mode { get; set; }
+
             [NameInMap("Number")]
             [Validation(Required=false)]
             public int? Number { get; set; }
@@ -87,6 +91,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public double? StartTime { get; set; }
+
+            [NameInMap("Threshold")]
+            [Validation(Required=false)]
+            public int? Threshold { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
@@ -120,6 +128,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public int? Margin { get; set; }
 
+            [NameInMap("Mode")]
+            [Validation(Required=false)]
+            public string Mode { get; set; }
+
             [NameInMap("Number")]
             [Validation(Required=false)]
             public int? Number { get; set; }
@@ -143,6 +155,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public double? StartTime { get; set; }
+
+            [NameInMap("Threshold")]
+            [Validation(Required=false)]
+            public int? Threshold { get; set; }
 
             [NameInMap("TileHeight")]
             [Validation(Required=false)]

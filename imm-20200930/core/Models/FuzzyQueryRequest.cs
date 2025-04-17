@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The sort field. For more information, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</para>
+        /// <para>The sort fields. For more information, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</para>
         /// <list type="bullet">
         /// <item><description>Separate multiple sort fields with commas (,). Example: <c>Size,Filename</c>.</description></item>
         /// <item><description>You can specify up to five sort fields.</description></item>

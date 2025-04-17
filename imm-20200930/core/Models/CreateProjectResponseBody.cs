@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The project. For more information, click Project.</para>
+        /// <para>The project.</para>
         /// </summary>
         [NameInMap("Project")]
         [Validation(Required=false)]

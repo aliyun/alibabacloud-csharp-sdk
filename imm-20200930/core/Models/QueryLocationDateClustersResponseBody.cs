@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class QueryLocationDateClustersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of spatiotemporal groups.</para>
+        /// <para>The list of spatiotemporal clusters.</para>
         /// </summary>
         [NameInMap("LocationDateClusters")]
         [Validation(Required=false)]

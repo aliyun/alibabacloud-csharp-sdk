@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The file whose metadata you want to update. The value must be in the JSON format.</para>
+        /// <para>The file and its metadata items to be updated. The value must be in the JSON format.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("File")]

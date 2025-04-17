@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DetectImageLabelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The labels that are detected.</para>
+        /// <para>The list of labels detected.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]

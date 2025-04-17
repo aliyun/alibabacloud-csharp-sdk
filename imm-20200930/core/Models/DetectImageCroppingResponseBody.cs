@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DetectImageCroppingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The image croppings.</para>
+        /// <para>The image cropping suggestions.</para>
         /// </summary>
         [NameInMap("Croppings")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateTriggerShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The processing templates.</para>
+        /// <para>The templates.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Actions")]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The notification settings. The operation supports multiple messaging middleware options. For more information about notification messages, see Asynchronous message examples. You can use one of the following methods to receive notification messages:</para>
-        /// <para>Activate and connect to EventBridge in the same region as the IMM project. For more information, see IMM events. Activate Simple Message Queue in the same region as the IMM project and configure a subscription.</para>
+        /// <para>In the region in which the IMM project is located, use EventBridge to receive task notifications. For more information, see IMM events. In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task notifications.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]

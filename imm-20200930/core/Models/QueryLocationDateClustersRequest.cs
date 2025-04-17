@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Address Address { get; set; }
 
         /// <summary>
-        /// <para>The time range during which the spatiotemporal clustering groups are generated.</para>
+        /// <para>The time range during which the spatiotemporal clusters were generated.</para>
         /// </summary>
         [NameInMap("CreateTimeRange")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The time range when the clustering groups are ended.</para>
+        /// <para>The time range during which the latest photo in a cluster was taken.</para>
         /// </summary>
         [NameInMap("LocationDateClusterEndTimeRange")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<string> LocationDateClusterLevels { get; set; }
 
         /// <summary>
-        /// <para>The time range when the clustering groups are started.</para>
+        /// <para>The time range during which the earliest photo in a cluster was taken.</para>
         /// </summary>
         [NameInMap("LocationDateClusterStartTimeRange")]
         [Validation(Required=false)]
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The time range during which the spatiotemporal clustering groups are updated.</para>
+        /// <para>The time range during which the spatiotemporal clusters were updated.</para>
         /// </summary>
         [NameInMap("UpdateTimeRange")]
         [Validation(Required=false)]

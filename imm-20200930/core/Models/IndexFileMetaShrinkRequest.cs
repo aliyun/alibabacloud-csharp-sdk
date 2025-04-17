@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The file for which you want to create an index. The value must be in the JSON format.</para>
+        /// <para>The file for which you want to create a metadata index. The value must be in the JSON format.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("File")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string FileShrink { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For more information, click Notification. For information about the formats of asynchronous notifications, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</para>
+        /// <para>The notification settings. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]

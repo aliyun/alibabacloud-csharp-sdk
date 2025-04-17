@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DetectImageCodesRequest : TeaModel {
         /// <summary>
-        /// <para><b>If you do not have special requirements, leave this parameter empty.</b></para>
-        /// <para>The authorization chain. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
+        /// <para><b>If you have no special requirements, leave this parameter empty.</b></para>
+        /// <para>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]

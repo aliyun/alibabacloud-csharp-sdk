@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The input data source.</para>
+        /// <para>The data source configurations.</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]

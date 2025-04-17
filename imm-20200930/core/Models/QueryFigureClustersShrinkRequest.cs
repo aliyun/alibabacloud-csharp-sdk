@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class QueryFigureClustersShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The time period during which the faces are grouped together.</para>
+        /// <para>The time range within which the face group was created.</para>
         /// </summary>
         [NameInMap("CreateTimeRange")]
         [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The time period during which the faces in the group are updated.</para>
+        /// <para>The time range within which the face group was last updated.</para>
         /// </summary>
         [NameInMap("UpdateTimeRange")]
         [Validation(Required=false)]

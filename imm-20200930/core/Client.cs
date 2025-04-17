@@ -3724,10 +3724,12 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
         /// <list type="bullet">
-        /// <item><description>The operation searches for faces within the face boundary in each input image.</description></item>
-        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// <item><description>The operation searches for faces that are similar to the face within the largest bounding box in each input image.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3805,10 +3807,12 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
         /// <list type="bullet">
-        /// <item><description>The operation searches for faces within the face boundary in each input image.</description></item>
-        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// <item><description>The operation searches for faces that are similar to the face within the largest bounding box in each input image.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3886,10 +3890,12 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
         /// <list type="bullet">
-        /// <item><description>The operation searches for faces within the face boundary in each input image.</description></item>
-        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// <item><description>The operation searches for faces that are similar to the face within the largest bounding box in each input image.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3913,10 +3919,12 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
         /// <list type="bullet">
-        /// <item><description>The operation searches for faces within the face boundary in each input image.</description></item>
-        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// <item><description>The operation searches for faces that are similar to the face within the largest bounding box in each input image.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5274,9 +5282,9 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <description>
         /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that the project that you want to use exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
-        /// <item><description>You can call this operation to splice up to eight images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</description></item>
-        /// <item><description>The CreateImageSplicingTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period elapses, the task information is no longer retrievable. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.</description></item>
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>You can call this operation to merge up to 10 images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5400,9 +5408,9 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <description>
         /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that the project that you want to use exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
-        /// <item><description>You can call this operation to splice up to eight images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</description></item>
-        /// <item><description>The CreateImageSplicingTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period elapses, the task information is no longer retrievable. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.</description></item>
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>You can call this operation to merge up to 10 images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5526,9 +5534,9 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <description>
         /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that the project that you want to use exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
-        /// <item><description>You can call this operation to splice up to eight images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</description></item>
-        /// <item><description>The CreateImageSplicingTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period elapses, the task information is no longer retrievable. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.</description></item>
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>You can call this operation to merge up to 10 images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5554,9 +5562,9 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <description>
         /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that the project that you want to use exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
-        /// <item><description>You can call this operation to splice up to eight images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</description></item>
-        /// <item><description>The CreateImageSplicingTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period elapses, the task information is no longer retrievable. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.</description></item>
+        /// <item><description>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</description></item>
+        /// <item><description>You can call this operation to merge up to 10 images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6387,7 +6395,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</description></item>
         /// <item><description>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</description></item>
         /// <item><description>In the region in which the IMM project is located, create an ApsaraMQ for RocketMQ 4.0 instance, a topic, and a group to receive task notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about how to use ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/169009.html">Call HTTP SDKs to send and subscribe to messages</a>.</description></item>
-        /// <item><description>In the region in which the IMM project is located, use <a href="https://www.aliyun.com/product/aliware/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</description></item>
+        /// <item><description>In the region in which the IMM project is located, use <a href="https://www.alibabacloud.com/en/product/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6608,7 +6616,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</description></item>
         /// <item><description>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</description></item>
         /// <item><description>In the region in which the IMM project is located, create an ApsaraMQ for RocketMQ 4.0 instance, a topic, and a group to receive task notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about how to use ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/169009.html">Call HTTP SDKs to send and subscribe to messages</a>.</description></item>
-        /// <item><description>In the region in which the IMM project is located, use <a href="https://www.aliyun.com/product/aliware/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</description></item>
+        /// <item><description>In the region in which the IMM project is located, use <a href="https://www.alibabacloud.com/en/product/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6829,7 +6837,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</description></item>
         /// <item><description>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</description></item>
         /// <item><description>In the region in which the IMM project is located, create an ApsaraMQ for RocketMQ 4.0 instance, a topic, and a group to receive task notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about how to use ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/169009.html">Call HTTP SDKs to send and subscribe to messages</a>.</description></item>
-        /// <item><description>In the region in which the IMM project is located, use <a href="https://www.aliyun.com/product/aliware/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</description></item>
+        /// <item><description>In the region in which the IMM project is located, use <a href="https://www.alibabacloud.com/en/product/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -6878,7 +6886,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</description></item>
         /// <item><description>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</description></item>
         /// <item><description>In the region in which the IMM project is located, create an ApsaraMQ for RocketMQ 4.0 instance, a topic, and a group to receive task notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about how to use ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/169009.html">Call HTTP SDKs to send and subscribe to messages</a>.</description></item>
-        /// <item><description>In the region in which the IMM project is located, use <a href="https://www.aliyun.com/product/aliware/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</description></item>
+        /// <item><description>In the region in which the IMM project is located, use <a href="https://www.alibabacloud.com/en/product/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -8184,23 +8192,25 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
         /// <list type="bullet">
         /// <item><description>The detection result is sent as an asynchronous notification. The Suggestion parameter in asynchronous notifications supports the following values:<list type="bullet">
         /// <item><description>pass: No non-compliant content is found.</description></item>
         /// <item><description>block: Non-compliant content is detected. The Categories field value indicates the non-compliance category. For more information, see <a href="https://help.aliyun.com/document_detail/2743995.html">Content moderation results</a>.</description></item>
-        /// <item><description>review: A manual review is needed before an asynchronous notification is sent to inform you about the result.</description></item>
+        /// <item><description>review: A manual review is needed. After the manual review is completed, an asynchronous notification is sent to inform you about the result.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The following video frame requirements apply:<list type="bullet">
         /// <item><description>The URLs for video frames must use HTTP or HTTPS.</description></item>
         /// <item><description>Video frames must be in PNG, JPG, JPEG, BMP, GIF, or WebP format.</description></item>
         /// <item><description>The size of a video frame cannot exceed 10 MB.</description></item>
-        /// <item><description>The recommended resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than the recommended resolution may affect detection accuracy.</description></item>
-        /// <item><description>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to detect are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</description></item>
+        /// <item><description>The resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than this recommended resolution may affect detection accuracy.</description></item>
+        /// <item><description>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to be detected are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications. &gt;</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8298,23 +8308,25 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
         /// <list type="bullet">
         /// <item><description>The detection result is sent as an asynchronous notification. The Suggestion parameter in asynchronous notifications supports the following values:<list type="bullet">
         /// <item><description>pass: No non-compliant content is found.</description></item>
         /// <item><description>block: Non-compliant content is detected. The Categories field value indicates the non-compliance category. For more information, see <a href="https://help.aliyun.com/document_detail/2743995.html">Content moderation results</a>.</description></item>
-        /// <item><description>review: A manual review is needed before an asynchronous notification is sent to inform you about the result.</description></item>
+        /// <item><description>review: A manual review is needed. After the manual review is completed, an asynchronous notification is sent to inform you about the result.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The following video frame requirements apply:<list type="bullet">
         /// <item><description>The URLs for video frames must use HTTP or HTTPS.</description></item>
         /// <item><description>Video frames must be in PNG, JPG, JPEG, BMP, GIF, or WebP format.</description></item>
         /// <item><description>The size of a video frame cannot exceed 10 MB.</description></item>
-        /// <item><description>The recommended resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than the recommended resolution may affect detection accuracy.</description></item>
-        /// <item><description>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to detect are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</description></item>
+        /// <item><description>The resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than this recommended resolution may affect detection accuracy.</description></item>
+        /// <item><description>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to be detected are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications. &gt;</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8412,23 +8424,25 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
         /// <list type="bullet">
         /// <item><description>The detection result is sent as an asynchronous notification. The Suggestion parameter in asynchronous notifications supports the following values:<list type="bullet">
         /// <item><description>pass: No non-compliant content is found.</description></item>
         /// <item><description>block: Non-compliant content is detected. The Categories field value indicates the non-compliance category. For more information, see <a href="https://help.aliyun.com/document_detail/2743995.html">Content moderation results</a>.</description></item>
-        /// <item><description>review: A manual review is needed before an asynchronous notification is sent to inform you about the result.</description></item>
+        /// <item><description>review: A manual review is needed. After the manual review is completed, an asynchronous notification is sent to inform you about the result.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The following video frame requirements apply:<list type="bullet">
         /// <item><description>The URLs for video frames must use HTTP or HTTPS.</description></item>
         /// <item><description>Video frames must be in PNG, JPG, JPEG, BMP, GIF, or WebP format.</description></item>
         /// <item><description>The size of a video frame cannot exceed 10 MB.</description></item>
-        /// <item><description>The recommended resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than the recommended resolution may affect detection accuracy.</description></item>
-        /// <item><description>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to detect are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</description></item>
+        /// <item><description>The resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than this recommended resolution may affect detection accuracy.</description></item>
+        /// <item><description>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to be detected are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications. &gt;</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8452,23 +8466,25 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</para>
+        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****
+        ///     **
+        ///     <b>Note</b> Asynchronous processing does not guarantee timely task completion.</para>
         /// <list type="bullet">
         /// <item><description>The detection result is sent as an asynchronous notification. The Suggestion parameter in asynchronous notifications supports the following values:<list type="bullet">
         /// <item><description>pass: No non-compliant content is found.</description></item>
         /// <item><description>block: Non-compliant content is detected. The Categories field value indicates the non-compliance category. For more information, see <a href="https://help.aliyun.com/document_detail/2743995.html">Content moderation results</a>.</description></item>
-        /// <item><description>review: A manual review is needed before an asynchronous notification is sent to inform you about the result.</description></item>
+        /// <item><description>review: A manual review is needed. After the manual review is completed, an asynchronous notification is sent to inform you about the result.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The following video frame requirements apply:<list type="bullet">
         /// <item><description>The URLs for video frames must use HTTP or HTTPS.</description></item>
         /// <item><description>Video frames must be in PNG, JPG, JPEG, BMP, GIF, or WebP format.</description></item>
         /// <item><description>The size of a video frame cannot exceed 10 MB.</description></item>
-        /// <item><description>The recommended resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than the recommended resolution may affect detection accuracy.</description></item>
-        /// <item><description>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to detect are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</description></item>
+        /// <item><description>The resolution for video frames is not lower than 256 × 256 pixels. A frame resolution lower than this recommended resolution may affect detection accuracy.</description></item>
+        /// <item><description>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to be detected are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications. &gt;</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12688,7 +12704,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <list type="bullet">
         /// <item><description>The operation generates an access token that is valid for 30 minutes and a refresh token that is valid for 1 day.</description></item>
         /// <item><description>The returned expiration time is in UTC.</description></item>
-        /// <item><description>The operation supports the following input formats:<list type="bullet">
+        /// <item><description>The operation supports the following document types:<list type="bullet">
         /// <item><description>Word files: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</description></item>
         /// <item><description>Presentation files: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</description></item>
         /// <item><description>Spreadsheet documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</description></item>
@@ -12698,7 +12714,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <item><description>The operation supports an input document that is up to 200 MB in size.</description></item>
         /// <item><description>The operation supports an input document that contains up to 5,000 pages.</description></item>
         /// <item><description>For a project created before December 1, 2023, you are charged for previewing or editing a document in the project based on the number of times the document is opened. For a project created on or after December 1, 2023, you are charged based on the number of API operation calls made for previewing or editing a document. If you want to switch to API call-based billing for document previewing and editing, use a project created on or after December 1, 2023. In API call-based billing, one API call allows only one user to use the feature. If multiple users use the information returned by the API call, only the last user has access to the document and the access permissions of other users are revoked.</description></item>
-        /// <item><description>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<remarks>
+        /// <item><description>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information about how to send and receive messages by using the SMQ SDK, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<remarks>
         /// <para> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</para>
         /// </remarks>
         /// </description></item>
@@ -12835,7 +12851,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <list type="bullet">
         /// <item><description>The operation generates an access token that is valid for 30 minutes and a refresh token that is valid for 1 day.</description></item>
         /// <item><description>The returned expiration time is in UTC.</description></item>
-        /// <item><description>The operation supports the following input formats:<list type="bullet">
+        /// <item><description>The operation supports the following document types:<list type="bullet">
         /// <item><description>Word files: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</description></item>
         /// <item><description>Presentation files: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</description></item>
         /// <item><description>Spreadsheet documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</description></item>
@@ -12845,7 +12861,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <item><description>The operation supports an input document that is up to 200 MB in size.</description></item>
         /// <item><description>The operation supports an input document that contains up to 5,000 pages.</description></item>
         /// <item><description>For a project created before December 1, 2023, you are charged for previewing or editing a document in the project based on the number of times the document is opened. For a project created on or after December 1, 2023, you are charged based on the number of API operation calls made for previewing or editing a document. If you want to switch to API call-based billing for document previewing and editing, use a project created on or after December 1, 2023. In API call-based billing, one API call allows only one user to use the feature. If multiple users use the information returned by the API call, only the last user has access to the document and the access permissions of other users are revoked.</description></item>
-        /// <item><description>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<remarks>
+        /// <item><description>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information about how to send and receive messages by using the SMQ SDK, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<remarks>
         /// <para> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</para>
         /// </remarks>
         /// </description></item>
@@ -12982,7 +12998,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <list type="bullet">
         /// <item><description>The operation generates an access token that is valid for 30 minutes and a refresh token that is valid for 1 day.</description></item>
         /// <item><description>The returned expiration time is in UTC.</description></item>
-        /// <item><description>The operation supports the following input formats:<list type="bullet">
+        /// <item><description>The operation supports the following document types:<list type="bullet">
         /// <item><description>Word files: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</description></item>
         /// <item><description>Presentation files: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</description></item>
         /// <item><description>Spreadsheet documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</description></item>
@@ -12992,7 +13008,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <item><description>The operation supports an input document that is up to 200 MB in size.</description></item>
         /// <item><description>The operation supports an input document that contains up to 5,000 pages.</description></item>
         /// <item><description>For a project created before December 1, 2023, you are charged for previewing or editing a document in the project based on the number of times the document is opened. For a project created on or after December 1, 2023, you are charged based on the number of API operation calls made for previewing or editing a document. If you want to switch to API call-based billing for document previewing and editing, use a project created on or after December 1, 2023. In API call-based billing, one API call allows only one user to use the feature. If multiple users use the information returned by the API call, only the last user has access to the document and the access permissions of other users are revoked.</description></item>
-        /// <item><description>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<remarks>
+        /// <item><description>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information about how to send and receive messages by using the SMQ SDK, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<remarks>
         /// <para> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</para>
         /// </remarks>
         /// </description></item>
@@ -13023,7 +13039,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <list type="bullet">
         /// <item><description>The operation generates an access token that is valid for 30 minutes and a refresh token that is valid for 1 day.</description></item>
         /// <item><description>The returned expiration time is in UTC.</description></item>
-        /// <item><description>The operation supports the following input formats:<list type="bullet">
+        /// <item><description>The operation supports the following document types:<list type="bullet">
         /// <item><description>Word files: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</description></item>
         /// <item><description>Presentation files: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</description></item>
         /// <item><description>Spreadsheet documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</description></item>
@@ -13033,7 +13049,7 @@ namespace AlibabaCloud.SDK.Imm20200930
         /// <item><description>The operation supports an input document that is up to 200 MB in size.</description></item>
         /// <item><description>The operation supports an input document that contains up to 5,000 pages.</description></item>
         /// <item><description>For a project created before December 1, 2023, you are charged for previewing or editing a document in the project based on the number of times the document is opened. For a project created on or after December 1, 2023, you are charged based on the number of API operation calls made for previewing or editing a document. If you want to switch to API call-based billing for document previewing and editing, use a project created on or after December 1, 2023. In API call-based billing, one API call allows only one user to use the feature. If multiple users use the information returned by the API call, only the last user has access to the document and the access permissions of other users are revoked.</description></item>
-        /// <item><description>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<remarks>
+        /// <item><description>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information about how to send and receive messages by using the SMQ SDK, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<remarks>
         /// <para> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</para>
         /// </remarks>
         /// </description></item>
@@ -20211,7 +20227,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒体集</para>
+        /// <para>Updates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20285,7 +20301,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒体集</para>
+        /// <para>Updates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20359,7 +20375,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒体集</para>
+        /// <para>Updates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20377,7 +20393,7 @@ namespace AlibabaCloud.SDK.Imm20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒体集</para>
+        /// <para>Updates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class UpdateDatasetResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The dataset.</para>
+        /// </summary>
         [NameInMap("Dataset")]
         [Validation(Required=false)]
         public Dataset Dataset { get; set; }

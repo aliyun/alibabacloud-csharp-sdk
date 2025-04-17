@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetFigureClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the face clustering task.</para>
+        /// <para>The information about the face cluster.</para>
         /// </summary>
         [NameInMap("FigureCluster")]
         [Validation(Required=false)]

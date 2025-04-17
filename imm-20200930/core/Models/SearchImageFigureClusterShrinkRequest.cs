@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
     public class SearchImageFigureClusterShrinkRequest : TeaModel {
         /// <summary>
         /// <para><b>If you have no special requirements, leave this parameter empty.</b></para>
-        /// <para>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
+        /// <para>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]

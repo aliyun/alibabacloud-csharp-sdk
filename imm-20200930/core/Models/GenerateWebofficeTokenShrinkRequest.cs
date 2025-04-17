@@ -19,10 +19,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para> The pricing for document previews varies based on whether cache preview is enabled or disabled.</para>
         /// </remarks>
         /// <remarks>
-        /// <para> If you specify this parameter, the Pemission.copy parameter does not take effect. &gt;</para>
-        /// </remarks>
-        /// <remarks>
-        /// <para> Printing is not supported during cache preview.</para>
+        /// <para> During a cache preview, document content search and printing are not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,7 +77,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public bool? Hidecmb { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. Only Simple Message Queue messages are supported. For more information, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.</para>
+        /// <para>The notification settings. Only SMQ messages are supported. For more information, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.</para>
         /// <remarks>
         /// <para> A notification is sent after the document is saved or renamed.</para>
         /// </remarks>

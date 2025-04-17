@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListTasksShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The range of task end time. You can specify this parameter to filter tasks that end within the specified range.</para>
+        /// <para>The task end time range. You can specify this parameter to filter tasks that end within the specified range.</para>
         /// </summary>
         [NameInMap("EndTimeRange")]
         [Validation(Required=false)]
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ASC: sorts the results in ascending order. This is the default sort order.</description></item>
-        /// <item><description>DES: sorts the results in descending order.</description></item>
+        /// <item><description>asc: in ascending order. This is the default value.</description></item>
+        /// <item><description>desc: in descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The range of task start time. You can specify this parameter to filter tasks that start within the specified range.</para>
+        /// <para>The task start time range. You can specify this parameter to filter tasks that start within the specified range.</para>
         /// </summary>
         [NameInMap("StartTimeRange")]
         [Validation(Required=false)]

@@ -50,6 +50,22 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public List<CreateMediaConvertTaskRequestSources> Sources { get; set; }
         public class CreateMediaConvertTaskRequestSources : TeaModel {
+            [NameInMap("AlignMode")]
+            [Validation(Required=false)]
+            public string AlignMode { get; set; }
+
+            [NameInMap("Attached")]
+            [Validation(Required=false)]
+            public bool? Attached { get; set; }
+
+            [NameInMap("DisableAudio")]
+            [Validation(Required=false)]
+            public bool? DisableAudio { get; set; }
+
+            [NameInMap("DisableVideo")]
+            [Validation(Required=false)]
+            public bool? DisableVideo { get; set; }
+
             /// <summary>
             /// <para>The transcoding duration of the media. Unit: seconds. Default value: 0. A value of 0 specifies that the transcoding duration lasts until the end of the video.</para>
             /// 
