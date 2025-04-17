@@ -173,6 +173,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string UpgradeMode { get; set; }
 
+            [NameInMap("cutOver")]
+            [Validation(Required=false)]
+            public bool? CutOver { get; set; }
+
+            [NameInMap("totalLogicRepDelayTime")]
+            [Validation(Required=false)]
+            public int? TotalLogicRepDelayTime { get; set; }
+
+            [NameInMap("totalLogicRepLatencyMB")]
+            [Validation(Required=false)]
+            public int? TotalLogicRepLatencyMB { get; set; }
+
+            [NameInMap("zeroDownTimeConnectionString")]
+            [Validation(Required=false)]
+            public string ZeroDownTimeConnectionString { get; set; }
+
+            [NameInMap("zeroDownTimePort")]
+            [Validation(Required=false)]
+            public int? ZeroDownTimePort { get; set; }
+
         }
 
         /// <summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCInstanceTypesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The commodity code of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rds_customprepaid_public_cn</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
+        /// <para>The database engine. Set the value to MySQL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        /// <summary>
+        /// <para>The instance types.</para>
+        /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceTypeShrink { get; set; }
 
         /// <summary>
+        /// <para>The instance family. You can call the <b>DescribeRCInstanceTypeFamilies</b> operation to query the instance families of instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gn8.cm</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

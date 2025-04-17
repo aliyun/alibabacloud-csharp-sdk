@@ -136,6 +136,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public int? TaskId { get; set; }
 
+            [NameInMap("UpgradeMode")]
+            [Validation(Required=false)]
+            public string UpgradeMode { get; set; }
+
         }
 
         /// <summary>

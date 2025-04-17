@@ -77,6 +77,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        [NameInMap("RebootTime")]
+        [Validation(Required=false)]
+        public string RebootTime { get; set; }
+
+        [NameInMap("RebootWhenFinished")]
+        [Validation(Required=false)]
+        public bool? RebootWhenFinished { get; set; }
+
         /// <summary>
         /// <para>The region ID of the instance.</para>
         /// 

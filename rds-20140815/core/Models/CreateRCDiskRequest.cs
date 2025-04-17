@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>cloud</b> (default): basic disk</description></item>
         /// <item><description><b>cloud_efficiency</b>: ultra disk.</description></item>
         /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
-        /// <item><description><b>cloud_essd</b>: ESSD.</description></item>
+        /// <item><description><b>cloud_essd</b>: Enterprise ESSD (ESSD).</description></item>
         /// <item><description><b>cloud_auto</b>: ESSD AutoPL disk</description></item>
         /// <item><description><b>cloud_essd_entry</b>: ESSD Entry disk</description></item>
         /// <item><description><b>elastic_ephemeral_disk_standard</b>: standard elastic ephemeral disk</description></item>
@@ -95,6 +95,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance to which you want to attach the disk.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rc-v28c6k3jupp61m2t****</para>
         /// </summary>
@@ -151,7 +153,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The disk size. Unit: GiB. This parameter is required. Valid values:</para>
+        /// <para>The disk size. Unit: GiB. This parameter is required.</para>
         /// <list type="bullet">
         /// <item><description><para>Valid values if you set DiskCategory to <b>cloud</b>: 5 to 2000.</para>
         /// </description></item>

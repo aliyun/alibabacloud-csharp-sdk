@@ -79,11 +79,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use a coupon. Valid values:</para>
+        /// <para>Specifies whether to use a coupon. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: uses a coupon.</description></item>
-        /// <item><description><b>false</b> (default): does not use a coupon.</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
         /// </list>
+        /// <remarks>
+        /// <para> If you downgrade the specifications of an instance after you use coupons, the used coupons cannot be refunded.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -162,17 +165,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>Finance</b>: RDS Basic Edition for serverless instances</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Serverless instance</para>
+        /// <item><description><para>Serverless RDS instance</para>
         /// <list type="bullet">
         /// <item><description><b>serverless_basic</b>: RDS Basic Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</description></item>
         /// <item><description><b>serverless_standard</b>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</description></item>
         /// <item><description><b>serverless_ha</b>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</description></item>
         /// </list>
+        /// <para>**</para>
+        /// <para><b>Note</b> This parameter is required if PayType is set to Serverless.</para>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is required when you create a serverless instance.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>HighAvailability</para>
@@ -470,30 +472,34 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The database engine version of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Regular instance</para>
+        /// <item><description><para>Regular RDS instance</para>
         /// <list type="bullet">
         /// <item><description>Valid values when you set Engine to MySQL: <b>5.5</b>, <b>5.6</b>, <b>5.7</b>, and <b>8.0</b></description></item>
         /// <item><description>Valid values when you set Engine to SQLServer: <b>08r2_ent_ha</b> (cloud disks, discontinued), <b>2008r2</b> (local disks, discontinued), <b>2012</b> (SQL Server EE Basic), <b>2012_ent_ha</b>, <b>2012_std_ha</b>, <b>2012_web</b>, <b>2014_ent_ha</b>, <b>2014_std_ha</b>, <b>2016_ent_ha</b>, <b>2016_std_ha</b>, <b>2016_web</b>, <b>2017_ent</b>, <b>2017_std_ha</b>, <b>2017_web</b>, <b>2019_ent</b>, <b>2019_std_ha</b>, <b>2019_web</b>, <b>2022_ent</b>, <b>2022_std_ha</b>, and <b>2022_web</b></description></item>
-        /// <item><description>Valid values when you set Engine to PostgreSQL: <b>10.0</b>, <b>11.0</b>, <b>12.0</b>, <b>13.0</b>, <b>14.0</b>, <b>15.0</b>, and <b>16.0</b></description></item>
-        /// <item><description>Valid value if you set Engine to MariaDB: <b>10.3</b></description></item>
+        /// <item><description>Valid values when you set Engine to PostgreSQL: <b>10.0</b>, <b>11.0</b>, <b>12.0</b>, <b>13.0</b>, <b>14.0</b>, <b>15.0</b>, <b>16.0</b>, and <b>17.0</b></description></item>
+        /// <item><description>Valid values when you set Engine to MariaDB: <b>10.3</b> and <b>10.6</b></description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Serverless instance</para>
+        /// <item><description><para>Serverless RDS instance</para>
         /// <list type="bullet">
         /// <item><description>Valid values when you set Engine to MySQL: <b>5.7</b> and <b>8.0</b></description></item>
         /// <item><description>Valid values when you set Engine to SQLServer: <b>2016_std_sl</b>, <b>2017_std_sl</b>, and <b>2019_std_sl</b></description></item>
-        /// <item><description>Valid values when you set Engine to PostgreSQL: <b>14.0</b>, <b>15.0</b>, and <b>16.0</b></description></item>
+        /// <item><description>Valid values when you set Engine to PostgreSQL: <b>14.0</b>, <b>15.0</b>, <b>16.0</b>, and <b>17.0</b></description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>ApsaraDB RDS for MariaDB does not support serverless instances.</description></item>
-        /// <item><description>RDS instances that run SQL Server: <c>_ent</c> specifies SQL Server EE (Always On), <c>_ent_ha</c> specifies SQL Server EE, <c>_std_ha</c> specifies SQL Server SE, and <c>_web</c> specifies SQL Server Web.</description></item>
-        /// <item><description>RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).</description></item>
-        /// <item><description>Babelfish is supported only for RDS instances that run PostgreSQL 15.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>ApsaraDB RDS for MariaDB does not support serverless instances.</para>
+        /// </description></item>
+        /// <item><description><para>RDS instances that run SQL Server: <c>_ent</c> specifies SQL Server EE (Always On), <c>_ent_ha</c> specifies SQL Server EE, <c>_std_ha</c> specifies SQL Server SE, and <c>_web</c> specifies SQL Server Web.</para>
+        /// </description></item>
+        /// <item><description><para>RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).</para>
+        /// </description></item>
+        /// <item><description><para>Babelfish is supported only for RDS instances that run PostgreSQL 15.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -547,8 +553,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable the write optimization feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>optimized</b>: enables the feature.</description></item>
-        /// <item><description><b>none</b>: disables the feature.</description></item>
+        /// <item><description><b>optimized</b></description></item>
+        /// <item><description><b>none</b> (default)</description></item>
         /// </list>
         /// <remarks>
         /// <para> For more information about the write optimization feature, see <a href="https://help.aliyun.com/document_detail/2858761.html">Write optimization</a>.</para>
@@ -632,7 +638,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -657,7 +663,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) that is provided by your Alibaba Cloud account for RAM users. RAM users can use the ARN to connect ApsaraDB RDS to KMS. You can call the CheckCloudResourceAuthorized operation to query the ARN.</para>
+        /// <para>The Alibaba Cloud Resource Name (ARN) that is provided by your Alibaba Cloud account for Resource Access Management (RAM) users. RAM users can use the ARN to connect to ApsaraDB RDS to Key Management Service (KMS). You can call the CheckCloudResourceAuthorized operation to query the ARN.</para>
+        /// <remarks>
+        /// <para> When you enable the encryption, you must specify the RoleARN.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1406xxxxxx:role/aliyunrdsinstanceencryptiondefaultrole</para>
@@ -667,7 +676,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RoleARN { get; set; }
 
         /// <summary>
-        /// <para>The IP address whitelist of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Use a database client or the CLI to connect to an ApsaraDB RDS for MySQL instance</a>. If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</para>
+        /// <para>The IP address whitelist of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Configure an IP address whitelist</a>. Separate multiple IP addresses or CIDR blocks with commas (,). You can add up to 1,000 IP addresses or CIDR blocks to the whitelist. The entries in the IP address whitelist must be in one of the following formats:</para>
         /// <list type="bullet">
         /// <item><description>IP addresses, such as 10.10.XX.XX.</description></item>
         /// <item><description>CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</description></item>
@@ -712,7 +721,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The maximum number of RDS Capacity Units (RCUs). Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Serverless ApsaraDB RDS for MySQL instances: <b>1 to 32</b></description></item>
-            /// <item><description>Serverless ApsaraDB RDS for SQL Server instances: <b>2 to 8</b></description></item>
+            /// <item><description>Serverless ApsaraDB RDS for SQL Server instances: <b>2 to 16</b></description></item>
             /// <item><description>Serverless ApsaraDB RDS for PostgreSQL instances: <b>1 to 14</b></description></item>
             /// </list>
             /// <remarks>
@@ -730,7 +739,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The minimum number of RCUs. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Serverless ApsaraDB RDS for MySQL instances: <b>0.5 to 32</b>.</description></item>
-            /// <item><description>Serverless ApsaraDB RDS for SQL Server instances: <b>2 to 8</b>. Only integers are supported.</description></item>
+            /// <item><description>Serverless ApsaraDB RDS for SQL Server instances: <b>2 to 16</b>. Only integers are supported.</description></item>
             /// <item><description>Serverless ApsaraDB RDS for PostgreSQL instances: <b>0.5 to 14</b></description></item>
             /// </list>
             /// <remarks>

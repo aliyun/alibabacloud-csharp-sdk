@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string TargetMajorVersion { get; set; }
 
+        [NameInMap("UpgradeMode")]
+        [Validation(Required=false)]
+        public string UpgradeMode { get; set; }
+
     }
 
 }
