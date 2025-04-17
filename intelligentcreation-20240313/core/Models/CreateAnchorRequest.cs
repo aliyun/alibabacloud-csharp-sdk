@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class CreateAnchorRequest : TeaModel {
+        [NameInMap("anchorCategory")]
+        [Validation(Required=false)]
+        public string AnchorCategory { get; set; }
+
         [NameInMap("anchorMaterialName")]
         [Validation(Required=false)]
         public string AnchorMaterialName { get; set; }
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [NameInMap("useScene")]
         [Validation(Required=false)]
         public string UseScene { get; set; }
+
+        [NameInMap("videoOssKey")]
+        [Validation(Required=false)]
+        public string VideoOssKey { get; set; }
 
     }
 

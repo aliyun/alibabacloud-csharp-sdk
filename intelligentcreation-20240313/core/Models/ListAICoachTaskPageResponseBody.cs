@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public string FinishTime { get; set; }
 
+            [NameInMap("gmtCreate")]
+            [Validation(Required=false)]
+            public string GmtCreate { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>FINISHED</para>

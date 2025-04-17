@@ -68,6 +68,16 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                     [Validation(Required=false)]
                     public string Id { get; set; }
 
+                    [NameInMap("mask")]
+                    [Validation(Required=false)]
+                    public SubmitProjectTaskRequestFramesLayersMaterialMask Mask { get; set; }
+                    public class SubmitProjectTaskRequestFramesLayersMaterialMask : TeaModel {
+                        [NameInMap("url")]
+                        [Validation(Required=false)]
+                        public string Url { get; set; }
+
+                    }
+
                     [NameInMap("speed")]
                     [Validation(Required=false)]
                     public string Speed { get; set; }

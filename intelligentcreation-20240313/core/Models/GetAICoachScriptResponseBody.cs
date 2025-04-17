@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 
         }
 
+        [NameInMap("closingRemarks")]
+        [Validation(Required=false)]
+        public string ClosingRemarks { get; set; }
+
         [NameInMap("completeStrategy")]
         [Validation(Required=false)]
         public GetAICoachScriptResponseBodyCompleteStrategy CompleteStrategy { get; set; }
@@ -141,6 +145,48 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public Dictionary<string, int?> Expressiveness { get; set; }
 
+        [NameInMap("expressivenessList")]
+        [Validation(Required=false)]
+        public List<GetAICoachScriptResponseBodyExpressivenessList> ExpressivenessList { get; set; }
+        public class GetAICoachScriptResponseBodyExpressivenessList : TeaModel {
+            [NameInMap("desc")]
+            [Validation(Required=false)]
+            public string Desc { get; set; }
+
+            [NameInMap("enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("expressivenessId")]
+            [Validation(Required=false)]
+            public string ExpressivenessId { get; set; }
+
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("rule")]
+            [Validation(Required=false)]
+            public string Rule { get; set; }
+
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            [NameInMap("weight")]
+            [Validation(Required=false)]
+            public int? Weight { get; set; }
+
+        }
+
+        [NameInMap("gifDynamicUrl")]
+        [Validation(Required=false)]
+        public string GifDynamicUrl { get; set; }
+
+        [NameInMap("gifStaticUrl")]
+        [Validation(Required=false)]
+        public string GifStaticUrl { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2025-02-24 12:00:00</para>
@@ -192,6 +238,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("openingRemarks")]
+        [Validation(Required=false)]
+        public string OpeningRemarks { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -480,6 +530,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [NameInMap("assessmentPoint")]
             [Validation(Required=false)]
             public int? AssessmentPoint { get; set; }
+
+            [NameInMap("assessmentPointEnabled")]
+            [Validation(Required=false)]
+            public bool? AssessmentPointEnabled { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

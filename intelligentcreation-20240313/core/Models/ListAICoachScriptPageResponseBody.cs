@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public string AssessmentScope { get; set; }
 
+            [NameInMap("closingRemarks")]
+            [Validation(Required=false)]
+            public string ClosingRemarks { get; set; }
+
             [NameInMap("completeStrategy")]
             [Validation(Required=false)]
             public ListAICoachScriptPageResponseBodyListCompleteStrategy CompleteStrategy { get; set; }
@@ -91,6 +95,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public Dictionary<string, string> Expressiveness { get; set; }
 
+            [NameInMap("gifDynamicUrl")]
+            [Validation(Required=false)]
+            public string GifDynamicUrl { get; set; }
+
+            [NameInMap("gifStaticUrl")]
+            [Validation(Required=false)]
+            public string GifStaticUrl { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2024-12-25 14:00:00</para>
@@ -134,6 +146,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("openingRemarks")]
+            [Validation(Required=false)]
+            public string OpeningRemarks { get; set; }
 
             [NameInMap("orderAckFlag")]
             [Validation(Required=false)]
@@ -214,6 +230,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                 [NameInMap("assessmentPoint")]
                 [Validation(Required=false)]
                 public int? AssessmentPoint { get; set; }
+
+                [NameInMap("assessmentPointEnabled")]
+                [Validation(Required=false)]
+                public bool? AssessmentPointEnabled { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public List<QueryAvatarProjectResponseBodyFrames> Frames { get; set; }
         public class QueryAvatarProjectResponseBodyFrames : TeaModel {
+            [NameInMap("index")]
+            [Validation(Required=false)]
+            public int? Index { get; set; }
+
             [NameInMap("layers")]
             [Validation(Required=false)]
             public List<QueryAvatarProjectResponseBodyFramesLayers> Layers { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
                 [NameInMap("height")]
                 [Validation(Required=false)]
                 public int? Height { get; set; }
+
+                [NameInMap("index")]
+                [Validation(Required=false)]
+                public int? Index { get; set; }
 
                 [NameInMap("material")]
                 [Validation(Required=false)]
@@ -77,13 +85,33 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public QueryAvatarProjectResponseBodyFramesVideoScript VideoScript { get; set; }
             public class QueryAvatarProjectResponseBodyFramesVideoScript : TeaModel {
+                [NameInMap("emotion")]
+                [Validation(Required=false)]
+                public string Emotion { get; set; }
+
+                [NameInMap("pitchRate")]
+                [Validation(Required=false)]
+                public string PitchRate { get; set; }
+
                 [NameInMap("speedRate")]
                 [Validation(Required=false)]
                 public string SpeedRate { get; set; }
 
+                [NameInMap("textContent")]
+                [Validation(Required=false)]
+                public string TextContent { get; set; }
+
+                [NameInMap("voiceLanguage")]
+                [Validation(Required=false)]
+                public string VoiceLanguage { get; set; }
+
                 [NameInMap("voiceTemplateId")]
                 [Validation(Required=false)]
                 public string VoiceTemplateId { get; set; }
+
+                [NameInMap("volume")]
+                [Validation(Required=false)]
+                public int? Volume { get; set; }
 
             }
 
@@ -112,6 +140,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [NameInMap("scaleType")]
         [Validation(Required=false)]
         public string ScaleType { get; set; }
+
+        [NameInMap("scriptModelTag")]
+        [Validation(Required=false)]
+        public string ScriptModelTag { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
