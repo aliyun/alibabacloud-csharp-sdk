@@ -2,6 +2,10 @@
 - Update API ListFunctions: add request parameters functionName.
 
 
+2025-04-18 Version: 4.3.2
+- Update API ListFunctions: add request parameters functionName.
+
+
 2025-04-17 Version: 4.3.1
 - Generated csharp 2023-03-30 for FC.
 
