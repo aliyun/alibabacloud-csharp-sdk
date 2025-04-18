@@ -32,8 +32,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string CustName { get; set; }
 
         /// <summary>
-        /// <para>法人/经办人手机号</para>
-        /// <para>This parameter is required.</para>
+        /// <para>经办人/法人电话</para>
         /// 
         /// <b>Example:</b>
         /// <para>130*****8888</para>
