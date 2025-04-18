@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public string BehaviorReason { get; set; }
 
+                [NameInMap("PropertiesData")]
+                [Validation(Required=false)]
+                public string PropertiesData { get; set; }
+
                 /// <summary>
                 /// <para>The name of the resource property.</para>
                 /// 
@@ -150,6 +154,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [NameInMap("PropertyName")]
                 [Validation(Required=false)]
                 public string PropertyName { get; set; }
+
+                [NameInMap("RequestInfo")]
+                [Validation(Required=false)]
+                public string RequestInfo { get; set; }
 
                 /// <summary>
                 /// <para>The name of the resource that is defined in the template.</para>
