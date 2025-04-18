@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// <para>The status of the image build command risk.</para>
         /// 

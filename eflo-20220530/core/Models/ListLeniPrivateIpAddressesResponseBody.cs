@@ -135,6 +135,10 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
 
             }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             /// <summary>
             /// <para>The total number of entries.</para>
             /// 

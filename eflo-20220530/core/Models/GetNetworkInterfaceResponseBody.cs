@@ -211,6 +211,10 @@ namespace AlibabaCloud.SDK.Eflo20220530.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             /// <summary>
             /// <para>Service network interface controller address</para>
             /// 
