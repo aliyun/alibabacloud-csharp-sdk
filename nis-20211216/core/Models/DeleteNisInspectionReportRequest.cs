@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class DeleteNisInspectionReportRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>nir-ffd1af****196d0</para>
         /// </summary>
         [NameInMap("InspectionReportId")]
         [Validation(Required=false)]

@@ -10,91 +10,127 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class GetVbrFlowTopNResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A7F0D6EC-E19E-58AC-AC9F-08036763960F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The ranking result of hybrid cloud traffic data.
+        /// <para>The ranking result of hybrid cloud traffic data.</para>
         /// </summary>
         [NameInMap("VirtualBorderRouterFlowlogTopN")]
         [Validation(Required=false)]
         public List<GetVbrFlowTopNResponseBodyVirtualBorderRouterFlowlogTopN> VirtualBorderRouterFlowlogTopN { get; set; }
         public class GetVbrFlowTopNResponseBodyVirtualBorderRouterFlowlogTopN : TeaModel {
             /// <summary>
-            /// The account ID.
+            /// <para>The account ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>156237031628****</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
             /// <summary>
-            /// The CEN connection ID.
+            /// <para>The CEN connection ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tr-attach-u6v1j3jre0fe9h****</para>
             /// </summary>
             [NameInMap("AttachmentId")]
             [Validation(Required=false)]
             public string AttachmentId { get; set; }
 
             /// <summary>
-            /// The total volume of traffic in the specified time range.
+            /// <para>The total volume of traffic in the specified time range.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>108</para>
             /// </summary>
             [NameInMap("Bytes")]
             [Validation(Required=false)]
             public double? Bytes { get; set; }
 
             /// <summary>
-            /// The local IP address.
+            /// <para>The local IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>120.24.X.X</para>
             /// </summary>
             [NameInMap("CloudIp")]
             [Validation(Required=false)]
             public string CloudIp { get; set; }
 
             /// <summary>
-            /// The local port.
+            /// <para>The local port.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("CloudPort")]
             [Validation(Required=false)]
             public string CloudPort { get; set; }
 
             /// <summary>
-            /// The local region where the local IP address resides.
+            /// <para>The local region where the local IP address resides.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-shanghai</para>
             /// </summary>
             [NameInMap("CloudRegion")]
             [Validation(Required=false)]
             public string CloudRegion { get; set; }
 
             /// <summary>
-            /// The remote IP address.
+            /// <para>The remote IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>222.85.X.X</para>
             /// </summary>
             [NameInMap("OtherIp")]
             [Validation(Required=false)]
             public string OtherIp { get; set; }
 
             /// <summary>
-            /// The remote port.
+            /// <para>The remote port.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10965</para>
             /// </summary>
             [NameInMap("OtherPort")]
             [Validation(Required=false)]
             public string OtherPort { get; set; }
 
             /// <summary>
-            /// The total number of packets in the specified time range.
+            /// <para>The total number of packets in the specified time range.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>66</para>
             /// </summary>
             [NameInMap("Packets")]
             [Validation(Required=false)]
             public double? Packets { get; set; }
 
             /// <summary>
-            /// The protocol number.
+            /// <para>The protocol number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6</para>
             /// </summary>
             [NameInMap("Protocol")]
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
             /// <summary>
-            /// The ID of the VBR that is associated with the Express Connect circuit.
+            /// <para>The ID of the VBR that is associated with the Express Connect circuit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vbr-k1atj46citwuek42j****</para>
             /// </summary>
             [NameInMap("VirtualBorderRouterId")]
             [Validation(Required=false)]

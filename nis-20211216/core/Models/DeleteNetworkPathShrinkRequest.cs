@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class DeleteNetworkPathShrinkRequest : TeaModel {
         /// <summary>
-        /// The IDs of network paths.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of network paths.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NetworkPathIds")]
         [Validation(Required=false)]
         public string NetworkPathIdsShrink { get; set; }
 
         /// <summary>
-        /// The region ID of the network path that you want to delete.
+        /// <para>The region ID of the network path that you want to delete.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

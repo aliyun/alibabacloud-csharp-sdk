@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class DeleteNetworkReachableAnalysisRequest : TeaModel {
         /// <summary>
-        /// The IDs of the tasks for analyzing network reachability.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the tasks for analyzing network reachability.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NetworkReachableAnalysisIds")]
         [Validation(Required=false)]
         public List<string> NetworkReachableAnalysisIds { get; set; }
 
         /// <summary>
-        /// The ID of the region for which you want to delete a task for analyzing network reachability.
+        /// <para>The ID of the region for which you want to delete a task for analyzing network reachability.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
