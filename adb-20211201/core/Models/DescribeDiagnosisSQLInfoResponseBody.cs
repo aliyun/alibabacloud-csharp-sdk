@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public List<DescribeDiagnosisSQLInfoResponseBodyStageInfos> StageInfos { get; set; }
         public class DescribeDiagnosisSQLInfoResponseBodyStageInfos : TeaModel {
+            [NameInMap("ExecutionType")]
+            [Validation(Required=false)]
+            public string ExecutionType { get; set; }
+
             /// <summary>
             /// <para>The total amount of input data in the stage. Unit: bytes.</para>
             /// 

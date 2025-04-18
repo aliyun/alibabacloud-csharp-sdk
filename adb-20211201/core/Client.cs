@@ -13911,7 +13911,35 @@ namespace AlibabaCloud.SDK.Adb20211201
         public DescribeDiagnosisSQLInfoResponse DescribeDiagnosisSQLInfoWithOptions(DescribeDiagnosisSQLInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessId))
+            {
+                query["ProcessId"] = request.ProcessId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessRcHost))
+            {
+                query["ProcessRcHost"] = request.ProcessRcHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessStartTime))
+            {
+                query["ProcessStartTime"] = request.ProcessStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessState))
+            {
+                query["ProcessState"] = request.ProcessState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -13922,7 +13950,7 @@ namespace AlibabaCloud.SDK.Adb20211201
                 Version = "2021-12-01",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -13954,7 +13982,35 @@ namespace AlibabaCloud.SDK.Adb20211201
         public async Task<DescribeDiagnosisSQLInfoResponse> DescribeDiagnosisSQLInfoWithOptionsAsync(DescribeDiagnosisSQLInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessId))
+            {
+                query["ProcessId"] = request.ProcessId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessRcHost))
+            {
+                query["ProcessRcHost"] = request.ProcessRcHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessStartTime))
+            {
+                query["ProcessStartTime"] = request.ProcessStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessState))
+            {
+                query["ProcessState"] = request.ProcessState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -13965,7 +14021,7 @@ namespace AlibabaCloud.SDK.Adb20211201
                 Version = "2021-12-01",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
