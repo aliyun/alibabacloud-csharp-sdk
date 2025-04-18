@@ -1,3 +1,6 @@
+2025-04-18 Version: 1.6.1
+- Generated csharp 2020-12-03 for pai-dlc.
+
 2025-04-17 Version: 1.6.0
 - Support API GetRayDashboard.
 
