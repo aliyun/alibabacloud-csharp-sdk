@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string ApplicationCode { get; set; }
 
+        [NameInMap("BizParam")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> BizParam { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

@@ -15225,6 +15225,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             LlmSmartCallShrinkRequest request = new LlmSmartCallShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizParam))
+            {
+                request.BizParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizParam, "BizParam", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PromptParam))
             {
                 request.PromptParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PromptParam, "PromptParam", "json");
@@ -15237,6 +15241,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationCode))
             {
                 query["ApplicationCode"] = request.ApplicationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizParamShrink))
+            {
+                query["BizParam"] = request.BizParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalledNumber))
             {
@@ -15297,6 +15305,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             LlmSmartCallShrinkRequest request = new LlmSmartCallShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizParam))
+            {
+                request.BizParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizParam, "BizParam", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PromptParam))
             {
                 request.PromptParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PromptParam, "PromptParam", "json");
@@ -15309,6 +15321,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationCode))
             {
                 query["ApplicationCode"] = request.ApplicationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizParamShrink))
+            {
+                query["BizParam"] = request.BizParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalledNumber))
             {
