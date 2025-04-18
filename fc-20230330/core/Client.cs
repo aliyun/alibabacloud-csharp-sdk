@@ -4692,6 +4692,10 @@ namespace AlibabaCloud.SDK.FC20230330
             {
                 query["fcVersion"] = request.FcVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionName))
+            {
+                query["functionName"] = request.FunctionName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuType))
             {
                 query["gpuType"] = request.GpuType;
@@ -4776,6 +4780,10 @@ namespace AlibabaCloud.SDK.FC20230330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FcVersion))
             {
                 query["fcVersion"] = request.FcVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionName))
+            {
+                query["functionName"] = request.FunctionName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuType))
             {

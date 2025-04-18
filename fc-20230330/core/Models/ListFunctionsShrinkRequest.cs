@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string FcVersion { get; set; }
 
+        [NameInMap("functionName")]
+        [Validation(Required=false)]
+        public string FunctionName { get; set; }
+
         /// <summary>
         /// <para>The GPU type of the functions to retrieve.</para>
         /// 
