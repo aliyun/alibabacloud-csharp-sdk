@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class GetTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The validity period. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         public int? ExpireTime { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

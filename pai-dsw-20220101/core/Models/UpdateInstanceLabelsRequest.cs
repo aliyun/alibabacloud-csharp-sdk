@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class UpdateInstanceLabelsRequest : TeaModel {
         /// <summary>
+        /// <para>The tags that you want to update.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Labels")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         public List<UpdateInstanceLabelsRequestLabels> Labels { get; set; }
         public class UpdateInstanceLabelsRequestLabels : TeaModel {
             /// <summary>
+            /// <para>The key of the custom tag.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The value of the custom tag.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

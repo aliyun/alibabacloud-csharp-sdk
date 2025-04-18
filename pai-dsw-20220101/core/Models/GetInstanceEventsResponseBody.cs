@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class GetInstanceEventsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>InternalError: an internal error. All errors, except for parameter validation errors, are classified as internal errors.</description></item>
+        /// <item><description>ValidationError: a parameter validation error.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>None</para>
         /// </summary>
@@ -17,11 +23,21 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The events.</para>
+        /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
         public List<string> Events { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>400: One or more parameters are invalid.</description></item>
+        /// <item><description>404: The instance does not exist.</description></item>
+        /// <item><description>200: The request is normal.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -30,6 +46,8 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dsw-730xxxxxxxxxx</para>
         /// </summary>
@@ -38,6 +56,8 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>XXX</para>
         /// </summary>
@@ -46,6 +66,8 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E7D55162-4489-1619-AAF5-3F97D5FCA948</para>
         /// </summary>
@@ -54,6 +76,12 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
