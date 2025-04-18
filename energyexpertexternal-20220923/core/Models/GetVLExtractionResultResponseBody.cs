@@ -8,35 +8,35 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
-    public class GetDocumentAnalyzeResultResponseBody : TeaModel {
+    public class GetVLExtractionResultResponseBody : TeaModel {
         /// <summary>
         /// <para>Returned Data</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public GetDocumentAnalyzeResultResponseBodyData Data { get; set; }
-        public class GetDocumentAnalyzeResultResponseBodyData : TeaModel {
+        public GetVLExtractionResultResponseBodyData Data { get; set; }
+        public class GetVLExtractionResultResponseBodyData : TeaModel {
             /// <summary>
             /// <para>Document Parsing Result</para>
             /// </summary>
             [NameInMap("kvListInfo")]
             [Validation(Required=false)]
-            public List<GetDocumentAnalyzeResultResponseBodyDataKvListInfo> KvListInfo { get; set; }
-            public class GetDocumentAnalyzeResultResponseBodyDataKvListInfo : TeaModel {
+            public List<GetVLExtractionResultResponseBodyDataKvListInfo> KvListInfo { get; set; }
+            public class GetVLExtractionResultResponseBodyDataKvListInfo : TeaModel {
                 /// <summary>
-                /// <para>Recalled Content</para>
+                /// <para>Recall content</para>
                 /// </summary>
                 [NameInMap("context")]
                 [Validation(Required=false)]
-                public GetDocumentAnalyzeResultResponseBodyDataKvListInfoContext Context { get; set; }
-                public class GetDocumentAnalyzeResultResponseBodyDataKvListInfoContext : TeaModel {
+                public GetVLExtractionResultResponseBodyDataKvListInfoContext Context { get; set; }
+                public class GetVLExtractionResultResponseBodyDataKvListInfoContext : TeaModel {
                     /// <summary>
                     /// <para>Confidence</para>
                     /// </summary>
                     [NameInMap("confidence")]
                     [Validation(Required=false)]
-                    public GetDocumentAnalyzeResultResponseBodyDataKvListInfoContextConfidence Confidence { get; set; }
-                    public class GetDocumentAnalyzeResultResponseBodyDataKvListInfoContextConfidence : TeaModel {
+                    public GetVLExtractionResultResponseBodyDataKvListInfoContextConfidence Confidence { get; set; }
+                    public class GetVLExtractionResultResponseBodyDataKvListInfoContextConfidence : TeaModel {
                         /// <summary>
                         /// <para>Confidence of Key</para>
                         /// 
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                     }
 
                     /// <summary>
-                    /// <para>Key Recall Information</para>
+                    /// <para>Key recall information details</para>
                     /// </summary>
                     [NameInMap("key")]
                     [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                 }
 
                 /// <summary>
-                /// <para>Field Key Name</para>
+                /// <para>Field Key name</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Tenant</para>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                 public string KeyName { get; set; }
 
                 /// <summary>
-                /// <para>Field Key Value</para>
+                /// <para>Field key value</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Aliyun XXX Co., Ltd.</para>
+                /// <para>Alibaba Cloud XXX Co., Ltd.</para>
                 /// </summary>
                 [NameInMap("keyValue")]
                 [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>83A5A7DD-8974-5769-952E-590A97BEA34E</para>

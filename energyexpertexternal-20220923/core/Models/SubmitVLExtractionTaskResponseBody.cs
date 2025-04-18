@@ -8,31 +8,31 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
-    public class SubmitDocumentAnalyzeJobResponseBody : TeaModel {
+    public class SubmitVLExtractionTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>Returned data structure.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public SubmitDocumentAnalyzeJobResponseBodyData Data { get; set; }
-        public class SubmitDocumentAnalyzeJobResponseBodyData : TeaModel {
+        public SubmitVLExtractionTaskResponseBodyData Data { get; set; }
+        public class SubmitVLExtractionTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The job ID.</para>
+            /// <para>Task ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>adkc-kk2k41-kk2ol-222424</para>
+            /// <para>411ce93a-7eb5-40cf-836a-53c32f097663</para>
             /// </summary>
-            [NameInMap("jobId")]
+            [NameInMap("taskId")]
             [Validation(Required=false)]
-            public string JobId { get; set; }
+            public string TaskId { get; set; }
 
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4A0AEC56-5C9A-5D47-93DF-7227836FFF82</para>
+        /// <para>83A5A7DD-8974-5769-952E-590A97BEA34E</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

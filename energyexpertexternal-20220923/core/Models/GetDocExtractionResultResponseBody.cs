@@ -8,37 +8,37 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
-    public class GetDocumentAnalyzeResultResponseBody : TeaModel {
+    public class GetDocExtractionResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returned Data</para>
+        /// <para>Returned data structure.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public GetDocumentAnalyzeResultResponseBodyData Data { get; set; }
-        public class GetDocumentAnalyzeResultResponseBodyData : TeaModel {
+        public GetDocExtractionResultResponseBodyData Data { get; set; }
+        public class GetDocExtractionResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Document Parsing Result</para>
+            /// <para>Details of document parsing results</para>
             /// </summary>
             [NameInMap("kvListInfo")]
             [Validation(Required=false)]
-            public List<GetDocumentAnalyzeResultResponseBodyDataKvListInfo> KvListInfo { get; set; }
-            public class GetDocumentAnalyzeResultResponseBodyDataKvListInfo : TeaModel {
+            public List<GetDocExtractionResultResponseBodyDataKvListInfo> KvListInfo { get; set; }
+            public class GetDocExtractionResultResponseBodyDataKvListInfo : TeaModel {
                 /// <summary>
-                /// <para>Recalled Content</para>
+                /// <para>Recalled content</para>
                 /// </summary>
                 [NameInMap("context")]
                 [Validation(Required=false)]
-                public GetDocumentAnalyzeResultResponseBodyDataKvListInfoContext Context { get; set; }
-                public class GetDocumentAnalyzeResultResponseBodyDataKvListInfoContext : TeaModel {
+                public GetDocExtractionResultResponseBodyDataKvListInfoContext Context { get; set; }
+                public class GetDocExtractionResultResponseBodyDataKvListInfoContext : TeaModel {
                     /// <summary>
-                    /// <para>Confidence</para>
+                    /// <para>Confidence level</para>
                     /// </summary>
                     [NameInMap("confidence")]
                     [Validation(Required=false)]
-                    public GetDocumentAnalyzeResultResponseBodyDataKvListInfoContextConfidence Confidence { get; set; }
-                    public class GetDocumentAnalyzeResultResponseBodyDataKvListInfoContextConfidence : TeaModel {
+                    public GetDocExtractionResultResponseBodyDataKvListInfoContextConfidence Confidence { get; set; }
+                    public class GetDocExtractionResultResponseBodyDataKvListInfoContextConfidence : TeaModel {
                         /// <summary>
-                        /// <para>Confidence of Key</para>
+                        /// <para>Key confidence level</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0.9994202852249146</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                         public double? KeyConfidence { get; set; }
 
                         /// <summary>
-                        /// <para>Confidence of Value</para>
+                        /// <para>value confidence level</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0.9794202852249146</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                     }
 
                     /// <summary>
-                    /// <para>Key Recall Information</para>
+                    /// <para>Details of key recall information</para>
                     /// </summary>
                     [NameInMap("key")]
                     [Validation(Required=false)]
                     public List<ContentItem> Key { get; set; }
 
                     /// <summary>
-                    /// <para>Value Recall Information</para>
+                    /// <para>Details of value recall information</para>
                     /// </summary>
                     [NameInMap("value")]
                     [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                 }
 
                 /// <summary>
-                /// <para>Field Key Name</para>
+                /// <para>Field key name</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Tenant</para>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
                 public string KeyName { get; set; }
 
                 /// <summary>
-                /// <para>Field Key Value</para>
+                /// <para>Field key value</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Aliyun XXX Co., Ltd.</para>
+                /// <para>Alibaba Cloud XXX Co., Ltd.</para>
                 /// </summary>
                 [NameInMap("keyValue")]
                 [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>83A5A7DD-8974-5769-952E-590A97BEA34E</para>

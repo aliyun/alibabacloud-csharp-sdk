@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class GetDocumentAnalyzeResultRequest : TeaModel {
         /// <summary>
+        /// <para>Job ID, specifying which document\&quot;s parsing result to query. This is a return parameter from the \&quot;Submit Document Parsing Job\&quot; interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
