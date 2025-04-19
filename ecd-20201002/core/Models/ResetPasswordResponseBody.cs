@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class ResetPasswordResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A00477A5-167F-56D2-A315-EA77E4BD****</para>
         /// </summary>

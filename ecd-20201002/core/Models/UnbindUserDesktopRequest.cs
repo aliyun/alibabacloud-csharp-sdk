@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class UnbindUserDesktopRequest : TeaModel {
         /// <summary>
+        /// <para>The client ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string ClientId { get; set; }
 
         /// <summary>
+        /// <para>The client type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>windows</para>
         /// </summary>
@@ -28,6 +31,13 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string ClientType { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable forced unbinding.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Even when end users connect to cloud computers, the forced unbinding is still enforced.</description></item>
+        /// <item><description>false: Forced unbinding is only enforced when end users are disconnected from cloud computers.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -36,6 +46,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public bool? Force { get; set; }
 
         /// <summary>
+        /// <para>The logon token.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string LoginToken { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The cloud computer ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

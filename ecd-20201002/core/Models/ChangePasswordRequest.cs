@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class ChangePasswordRequest : TeaModel {
         /// <summary>
+        /// <para>The client ID. The system generates a unique ID for each client.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string ClientId { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string EndUserId { get; set; }
 
         /// <summary>
+        /// <para>The logon token.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string LoginToken { get; set; }
 
         /// <summary>
+        /// <para>The new password.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string NewPassword { get; set; }
 
         /// <summary>
+        /// <para>The office network ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +65,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
+        /// <para>The current password.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +76,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string OldPassword { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +87,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

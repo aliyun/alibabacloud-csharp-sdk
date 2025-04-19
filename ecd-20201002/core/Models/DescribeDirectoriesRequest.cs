@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class DescribeDirectoriesRequest : TeaModel {
         /// <summary>
+        /// <para>The client ID. The system generates a unique ID for each client.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,15 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
+        /// <summary>
+        /// <para>The directory IDs.</para>
+        /// </summary>
         [NameInMap("DirectoryId")]
         [Validation(Required=false)]
         public List<string> DirectoryId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

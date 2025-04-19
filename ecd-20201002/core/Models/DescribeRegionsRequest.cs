@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
+        /// <para>The client ID. The system generates a unique ID for each client.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string ClientId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

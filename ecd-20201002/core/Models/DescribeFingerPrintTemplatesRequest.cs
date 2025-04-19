@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class DescribeFingerPrintTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The client ID. The system generates a unique ID for each client.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string ClientId { get; set; }
 
         /// <summary>
+        /// <para>The logon token.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string LoginToken { get; set; }
 
         /// <summary>
+        /// <para>The region ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

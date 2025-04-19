@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class ResetSnapshotRequest : TeaModel {
         /// <summary>
+        /// <para>The client ID. The system generates a unique ID for each client.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,18 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
+        /// <summary>
+        /// <para>The cloud computer ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecd-e964cr92klwqb****</para>
+        /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
 
         /// <summary>
+        /// <para>The logon token.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string LoginToken { get; set; }
 
         /// <summary>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +53,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>05182b8c-bb0d-49d3-963c-ee63a507****</para>
         /// </summary>
@@ -52,6 +63,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The snapshot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,6 +73,12 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string SnapshotId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to stop the cloud computer.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("StopDesktop")]
         [Validation(Required=false)]
         public bool? StopDesktop { get; set; }
