@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeDesktopGroupsResponseBodyDesktopGroups> DesktopGroups { get; set; }
         public class DescribeDesktopGroupsResponseBodyDesktopGroups : TeaModel {
             /// <summary>
-            /// <para>The number of concurrent sessions per cloud computer within the multi-session many-to-many share.</para>
+            /// <para>The number of concurrent sessions allowed for each cloud computer within the multi-session many-to-many share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,10 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? BindAmount { get; set; }
 
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description>For subscription cloud computer shares, this parameter indicates the number of purchased cloud computers. Valid values: 0 to 200.</description></item>
-            /// <item><description>For pay-as-you-go cloud computer shares, this parameter indicates the minimum number of cloud computers created in the initial batch. Default value: 1. Valid values: 0 to <c>MaxDesktopsCount</c>.</description></item>
-            /// </list>
+            /// <para>This parameter is applicable only to subscription cloud computer shares. It defines the initial number of cloud computers that are purchased. Valid values: 0 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -343,7 +340,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? LoadPolicy { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of cloud computers allowed in the pay-as-you-go cloud computer share.</para>
+            /// <list type="bullet">
+            /// <item><description>For pay-as-you-go cloud computer shares, this parameter defines the maximum number of cloud computers allowed.</description></item>
+            /// <item><description>For subscription cloud computer shares, this parameter defines the total number of cloud computers, including both the initially purchased cloud computers (<c>BuyDesktopsCount</c>) and those that can be auto-created.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -363,7 +363,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of cloud computers that can be automatically created in the subscription cloud computer share.</para>
+            /// <list type="bullet">
+            /// <item><description>For pay-as-you-go cloud computer shares, this parameter defines the minimum number of cloud computers allowed.</description></item>
+            /// <item><description>For subscription cloud computer shares, this parameter defines the number of cloud computers that are initially purchased (<c>BuyDesktopsCount</c>).</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -533,8 +536,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</para>
-            /// <para><c>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</c>.</para>
-            /// <para>If the session ratio exceeds the threshold, new cloud computers are provisioned. If it falls below the threshold, additional cloud computers are removed.</para>
+            /// <para><c>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</c></para>
+            /// <para>When the specified threshold is reached, new cloud computers are automatically created. When the specified threshold is not reached, idle cloud computers are released.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.85</para>
@@ -652,7 +655,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>用户组织单元路径。</para>
+            /// <para>The user\&quot;s organizational unit path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com\wuying\users</para>

@@ -145,6 +145,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> EventTypes { get; set; }
 
+        [NameInMap("FillHardwareInfo")]
+        [Validation(Required=false)]
+        public bool? FillHardwareInfo { get; set; }
+
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
         /// <summary>
         /// <para>The number of entries per page.\
         /// Default value: 100.</para>

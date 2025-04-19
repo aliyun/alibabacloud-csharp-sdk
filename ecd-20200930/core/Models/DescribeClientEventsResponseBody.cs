@@ -266,6 +266,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("TerminalInfo")]
+            [Validation(Required=false)]
+            public DescribeClientEventsResponseBodyEventsTerminalInfo TerminalInfo { get; set; }
+            public class DescribeClientEventsResponseBodyEventsTerminalInfo : TeaModel {
+                [NameInMap("Model")]
+                [Validation(Required=false)]
+                public string Model { get; set; }
+
+                [NameInMap("ProductName")]
+                [Validation(Required=false)]
+                public string ProductName { get; set; }
+
+                [NameInMap("SerialNumber")]
+                [Validation(Required=false)]
+                public string SerialNumber { get; set; }
+
+            }
+
         }
 
         /// <summary>

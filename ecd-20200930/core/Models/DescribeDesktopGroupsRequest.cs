@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud computer pool.</para>
+        /// <para>The IDs of the cloud computer shares.</para>
         /// </summary>
         [NameInMap("DesktopGroupIds")]
         [Validation(Required=false)]
@@ -78,11 +78,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the shared group is a multi-cloud computer type.</para>
+        /// <para>Specifies whether the cloud computer share is a many-to-many share.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: a multi-cloud computer type.</description></item>
-        /// <item><description>false: a single-cloud computer type.</description></item>
+        /// <item><description>true: The cloud computer share is a many-to-many share.</description></item>
+        /// <item><description>false: The cloud computer share is a one-to-many share.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
