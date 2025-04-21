@@ -104,6 +104,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string PrefixListName { get; set; }
 
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceGroupId { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public DescribePrefixListsResponseBodyPrefixListsPrefixListTags Tags { get; set; }
+                public class DescribePrefixListsResponseBodyPrefixListsPrefixListTags : TeaModel {
+                    [NameInMap("Tag")]
+                    [Validation(Required=false)]
+                    public List<DescribePrefixListsResponseBodyPrefixListsPrefixListTagsTag> Tag { get; set; }
+                    public class DescribePrefixListsResponseBodyPrefixListsPrefixListTagsTag : TeaModel {
+                        [NameInMap("TagKey")]
+                        [Validation(Required=false)]
+                        public string TagKey { get; set; }
+
+                        [NameInMap("TagValue")]
+                        [Validation(Required=false)]
+                        public string TagValue { get; set; }
+
+                    }
+
+                }
+
             }
 
         }

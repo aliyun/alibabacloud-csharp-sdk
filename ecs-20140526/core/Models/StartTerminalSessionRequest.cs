@@ -22,6 +22,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string CommandLine { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Intranet</para>
+        /// </summary>
         [NameInMap("ConnectionType")]
         [Validation(Required=false)]
         public string ConnectionType { get; set; }

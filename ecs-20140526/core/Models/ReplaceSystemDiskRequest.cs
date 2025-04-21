@@ -139,10 +139,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to encrypt the disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: encrypts the disk.</description></item>
-        /// <item><description>false: does not encrypt the disk.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
-        /// <para>Default value: false</para>
+        /// <para>Default value: false.</para>
+        /// <remarks>
+        /// <para> When you use a shared encrypted image to create the disk based on an encrypted snapshot, you must set Encrypted to true to ensure that the disk uses an encryption key of your own.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -152,8 +155,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image to be used to replace the system disk.</para>
-        /// <para>If the <c>DiskId</c> parameter is not specified, this parameter is required.</para>
+        /// <para>The ID of the image used to replace the system disk. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-bp67acfmxazb4ph****</para>

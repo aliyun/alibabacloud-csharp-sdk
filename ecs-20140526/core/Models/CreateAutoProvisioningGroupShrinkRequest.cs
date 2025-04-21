@@ -98,6 +98,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk> DataDisk { get; set; }
             public class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>sp-bp67acfmxazb4p****</para>
+                /// </summary>
                 [NameInMap("AutoSnapshotPolicyId")]
                 [Validation(Required=false)]
                 public string AutoSnapshotPolicyId { get; set; }
@@ -549,6 +553,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk SystemDisk { get; set; }
             public class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>sp-bp67acfmxazb4p****</para>
+                /// </summary>
                 [NameInMap("AutoSnapshotPolicyId")]
                 [Validation(Required=false)]
                 public string AutoSnapshotPolicyId { get; set; }
@@ -772,6 +780,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationImageOptions ImageOptions { get; set; }
             public class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationImageOptions : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("LoginAsNonRoot")]
                 [Validation(Required=false)]
                 public bool? LoginAsNonRoot { get; set; }
@@ -800,10 +812,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string PeriodUnit { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("SpotDuration")]
             [Validation(Required=false)]
             public int? SpotDuration { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Terminate</para>
+            /// </summary>
             [NameInMap("SpotInterruptionBehavior")]
             [Validation(Required=false)]
             public string SpotInterruptionBehavior { get; set; }
@@ -978,7 +998,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values of Nextended configuration N， Valid values:</para>
+            /// <para>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values of Nextended configuration N, Valid values:</para>
             /// <list type="bullet">
             /// <item><description>EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not ensure stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</description></item>
             /// <item><description>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
