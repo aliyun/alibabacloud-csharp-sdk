@@ -1,3 +1,6 @@
+2025-04-21 Version: 3.4.1
+- Generated csharp 2022-08-09 for Cloudauth-intl.
+
 2025-04-16 Version: 3.4.0
 - Support API DeepfakeDetectIntl.
 
