@@ -143,6 +143,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string Runtime { get; set; }
 
+        [NameInMap("sessionAffinity")]
+        [Validation(Required=false)]
+        public string SessionAffinity { get; set; }
+
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<Tag> Tags { get; set; }

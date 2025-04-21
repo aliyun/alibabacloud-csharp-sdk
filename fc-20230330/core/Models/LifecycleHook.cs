@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class LifecycleHook : TeaModel {
+        [NameInMap("command")]
+        [Validation(Required=false)]
+        public List<string> Command { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>index.initializer</para>
