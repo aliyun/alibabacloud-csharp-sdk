@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? DateTimeInterval { get; set; }
 
+        [NameInMap("ManifestDuration")]
+        [Validation(Required=false)]
+        public int? ManifestDuration { get; set; }
+
         [NameInMap("MaxVideoBitrate")]
         [Validation(Required=false)]
         public int? MaxVideoBitrate { get; set; }
@@ -33,9 +37,17 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public int? MinVideoBitrate { get; set; }
 
+        [NameInMap("PresentationDelay")]
+        [Validation(Required=false)]
+        public int? PresentationDelay { get; set; }
+
         [NameInMap("SegmentCount")]
         [Validation(Required=false)]
         public int? SegmentCount { get; set; }
+
+        [NameInMap("SegmentTemplateFormat")]
+        [Validation(Required=false)]
+        public string SegmentTemplateFormat { get; set; }
 
         [NameInMap("StreamOrder")]
         [Validation(Required=false)]

@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public List<GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList> SubJobList { get; set; }
             public class GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList : TeaModel {
+                [NameInMap("Duration")]
+                [Validation(Required=false)]
+                public float? Duration { get; set; }
+
                 /// <summary>
                 /// <para>The error code that is returned if the subjob failed. This parameter is not returned if the subjob is successful.</para>
                 /// 

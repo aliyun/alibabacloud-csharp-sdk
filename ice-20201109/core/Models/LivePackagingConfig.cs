@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public LivePackagingConfigDrmConfig DrmConfig { get; set; }
         public class LivePackagingConfigDrmConfig : TeaModel {
+            [NameInMap("ContentId")]
+            [Validation(Required=false)]
+            public string ContentId { get; set; }
+
             [NameInMap("EncryptionMethod")]
             [Validation(Required=false)]
             public string EncryptionMethod { get; set; }
