@@ -13,6 +13,12 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
         [Validation(Required=false)]
         public string ParamsShrink { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://shanghai.oss-cn-shanghai.aliyuncs.com/download/xxxx.mp4">https://shanghai.oss-cn-shanghai.aliyuncs.com/download/xxxx.mp4</a></para>
+        /// </summary>
         [NameInMap("VideoUrl")]
         [Validation(Required=false)]
         public string VideoUrl { get; set; }

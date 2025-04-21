@@ -17,14 +17,26 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
             [Validation(Required=false)]
             public List<SplitVideoPartsResponseBodyDataElements> Elements { get; set; }
             public class SplitVideoPartsResponseBodyDataElements : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10.06</para>
+                /// </summary>
                 [NameInMap("BeginTime")]
                 [Validation(Required=false)]
                 public float? BeginTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>17.3</para>
+                /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public float? EndTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("Index")]
                 [Validation(Required=false)]
                 public long? Index { get; set; }
@@ -63,6 +75,10 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>A00A3C17-61D5-1489-860D-B709F83A7C40</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
         public DetectVideoShotResponseBodyData Data { get; set; }
         public class DetectVideoShotResponseBodyData : TeaModel {
             /// <summary>
-            /// 1
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ShotFrameIds")]
             [Validation(Required=false)]
@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0033B795-09C7-4EB9-A33C-EBA325192B0D</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

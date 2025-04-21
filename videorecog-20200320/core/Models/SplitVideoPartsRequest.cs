@@ -21,6 +21,12 @@ namespace AlibabaCloud.SDK.Videorecog20200320.Models
         [Validation(Required=false)]
         public string Template { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/ocr/xxxx.mp4">https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/ocr/xxxx.mp4</a></para>
+        /// </summary>
         [NameInMap("VideoUrl")]
         [Validation(Required=false)]
         public string VideoUrl { get; set; }
