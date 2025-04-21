@@ -19,17 +19,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
-        /// <summary>
-        /// <para>The plug-in configuration. The configuration content of the WebAssembly (Wasm) plug-in is in the YAML format. The configuration content of the Lua plug-in is Lua code.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>status_code: 200
-        /// headers:</para>
-        /// <list type="bullet">
-        /// <item><description>Content-Type=application/json
-        /// body: &quot;{\&quot;rule\&quot;: \&quot;global\&quot;}&quot;</description></item>
-        /// </list>
-        /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }

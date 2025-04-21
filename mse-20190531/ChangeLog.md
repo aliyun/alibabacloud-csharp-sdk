@@ -1,3 +1,6 @@
+2025-04-21 Version: 6.17.5
+- Generated csharp 2019-05-31 for mse.
+
 2025-04-15 Version: 6.17.4
 - Update API GetGovernanceKubernetesCluster: add response parameters Body.Data.PilotVersion.
 - Update API GetGovernanceKubernetesCluster: add response parameters Body.Data.VersionLifeCycle.

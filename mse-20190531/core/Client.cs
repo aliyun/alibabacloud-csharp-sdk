@@ -7759,10 +7759,6 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
-            {
-                query["Config"] = request.Config;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigLevel))
             {
                 query["ConfigLevel"] = request.ConfigLevel;
@@ -7783,9 +7779,15 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["ResourceIdList"] = request.ResourceIdListShrink;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7831,10 +7833,6 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
-            {
-                query["Config"] = request.Config;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigLevel))
             {
                 query["ConfigLevel"] = request.ConfigLevel;
@@ -7855,9 +7853,15 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["ResourceIdList"] = request.ResourceIdListShrink;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -39243,10 +39247,6 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
-            {
-                query["Config"] = request.Config;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigLevel))
             {
                 query["ConfigLevel"] = request.ConfigLevel;
@@ -39283,9 +39283,15 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["ResourceIdList"] = request.ResourceIdListShrink;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -39331,10 +39337,6 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
-            {
-                query["Config"] = request.Config;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigLevel))
             {
                 query["ConfigLevel"] = request.ConfigLevel;
@@ -39371,9 +39373,15 @@ namespace AlibabaCloud.SDK.Mse20190531
             {
                 query["ResourceIdList"] = request.ResourceIdListShrink;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
