@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// </summary>
             [NameInMap("FlowActionData")]
             [Validation(Required=false)]
-            public Dictionary<string, string> FlowActionData { get; set; }
+            public Dictionary<string, object> FlowActionData { get; set; }
 
             /// <summary>
             /// <para>The Flow token.</para>
