@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class ListFileRequest : TeaModel {
         /// <summary>
-        /// <para>The category of the file. Valid values:</para>
-        /// <para>app: installation package. zip: compressed package. image: image. doc: document. video: video. audio: audio. others: other files.</para>
+        /// <para>The file category. Valid values:</para>
+        /// <para>app: installation package zip: compressed package image doc: document video audio others</para>
         /// <para>By default, files of all categories are returned.</para>
         /// 
         /// <b>Example:</b>
@@ -32,13 +32,19 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string DriveId { get; set; }
 
         /// <summary>
-        /// <para>The fields to return.</para>
-        /// <ol>
-        /// <item><description>If this parameter is set to \*, all fields of the file except the fields that must be specified are returned.</description></item>
-        /// <item><description>If only specific fields are required, you can specify the following fields: url, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,exif.</description></item>
-        /// <item><description>The investigation_info field is returned only if you specify this field.</description></item>
-        /// </ol>
-        /// <para>By default, all fields except the fields that must be specified are returned.</para>
+        /// <para>The field that is used to return additional information about a child subject. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>url: returns the URL of the thumbnail of a file in the response.</description></item>
+        /// <item><description>exif: returns the Exchangeable Image File Format (EXIF) data of a file in the response.</description></item>
+        /// <item><description>cropping_suggestion: returns the cropping suggestion on a file in the response.</description></item>
+        /// <item><description>characteristic_hash: returns the characteristic hash value of a file in the response.</description></item>
+        /// <item><description>video_metadata: returns the metadata of a video file, such as the video duration, bitrate, height, and width, in the response.</description></item>
+        /// <item><description>video_preview_metadata: returns the transcoding information of a video file, such as the transcoding specification for each definition, in the response.</description></item>
+        /// <item><description>investigation_info: returns the investigation information in the response.</description></item>
+        /// <item><description>dir_size: returns the statistics on each subfolder in the response.</description></item>
+        /// <item><description>user_tags: returns the user tags of each child subject in the response.</description></item>
+        /// </list>
+        /// <para>You can specify multiple fields by separating them with commas (,). Example: &quot;url,dir_size,user_tags&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// <para>The maximum number of results to return. Valid values: 1 to 100.</para>
-        /// <para>The number of returned results must be less than or equal to the specified number.</para>
+        /// <para>The number of returned entries must be less than or equal to the value of this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -61,8 +67,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
-        /// By default, this parameter is empty.</para>
+        /// <para>The name of the entry after which the list begins. Entries whose names are alphabetically after the value of this parameter are returned. If you do not specify this parameter, all entries are returned.\
+        /// This parameter is left empty by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</para>
@@ -72,54 +78,15 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The sorting field.</para>
+        /// <para>The sorting field. Valid values:</para>
+        /// <para>created_at: sorts the entries by creation time. updated_at: sorts the entries by update time. size: sorts the entries by file size. name: sorts the entries by file name.</para>
         /// <para>Default value: created_at.</para>
-        /// <para>Valid values:</para>
+        /// <para>Enumeration:</para>
         /// <list type="bullet">
-        /// <item><description><para>updated_at</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>sorts the results based on the time when the file was last modified</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// <item><description><para>size</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>sorts the results based on the size of the file</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// <item><description><para>name</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>sorts the results based on the name of the file</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// <item><description><para>created_at</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>sorts the results based on the time when the file was created</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
+        /// <item><description>updated_at: update time</description></item>
+        /// <item><description>size: file size</description></item>
+        /// <item><description>name: file name</description></item>
+        /// <item><description>created_at: creation time</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,7 +98,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         /// <summary>
         /// <para>The sorting direction. Valid values:</para>
-        /// <para>ASC: ascending order. DESC: descending order.</para>
+        /// <para>ASC: ascending order DESC: descending order</para>
         /// <para>Default value: ASC.</para>
         /// 
         /// <b>Example:</b>
@@ -153,7 +120,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string ParentFileId { get; set; }
 
         /// <summary>
-        /// <para>The share ID. If you want to manage a file by using a share link, carry the <c>x-share-token</c> header for authentication in the request and specify share_id. In this case, <c>drive_id</c> is invalid. Otherwise, use an <c>AccessKey pair</c> or <c>access token</c> for authentication and specify <c>drive_id</c>. You must specify one of <c>share_id</c> and <c>drive_id</c>.</para>
+        /// <para>The share ID. If you want to share a file, carry the <c>x-share-token</c> header for authentication in the request and specify share_id. In this case, <c>drive_id</c> is invalid. Otherwise, use an <c>AccessKey pair</c> or <c>access token</c> for authentication and specify <c>drive_id</c>. You must specify one of <c>share_id</c> and <c>drive_id</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7JQX1FswpQ8</para>
@@ -163,8 +130,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string ShareId { get; set; }
 
         /// <summary>
-        /// <para>The state of the file. Valid values:</para>
-        /// <para>available: Only normal files are returned. uploading: Only files that are being uploaded are returned.</para>
+        /// <para>The state of the files to return. Valid values:</para>
+        /// <para>available: returns only normal files. uploading: returns only files that are being uploaded.</para>
         /// <para>By default, only files in the available state are returned.</para>
         /// 
         /// <b>Example:</b>
@@ -182,8 +149,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public Dictionary<string, ImageProcess> ThumbnailProcesses { get; set; }
 
         /// <summary>
-        /// <para>The type of the file. Valid values:</para>
-        /// <para>file: Only files are returned. folder: Only folders are returned.</para>
+        /// <para>The file type. Valid values:</para>
+        /// <para>file: returns only files. folder: returns only folders.</para>
         /// <para>By default, files of all types are returned.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class AuditLogExportResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the asynchronous task used to export audit logs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4221bf6e6ab43c255edc4463bf3a6f5f5d31****</para>
         /// </summary>

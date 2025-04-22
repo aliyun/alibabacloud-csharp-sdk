@@ -494,8 +494,13 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出审计日志</para>
+        /// <para>Exports audit logs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Log audit is a value-added feature that is provided by Drive and Photo Service (PDS) Developer Edition. Before you call this operation, make sure that you learn about the <a href="https://www.alibabacloud.com/help/document_detail/425220.html">value-added billable items</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AuditLogExportRequest
@@ -552,8 +557,13 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出审计日志</para>
+        /// <para>Exports audit logs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Log audit is a value-added feature that is provided by Drive and Photo Service (PDS) Developer Edition. Before you call this operation, make sure that you learn about the <a href="https://www.alibabacloud.com/help/document_detail/425220.html">value-added billable items</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AuditLogExportRequest
@@ -610,8 +620,13 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出审计日志</para>
+        /// <para>Exports audit logs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Log audit is a value-added feature that is provided by Drive and Photo Service (PDS) Developer Edition. Before you call this operation, make sure that you learn about the <a href="https://www.alibabacloud.com/help/document_detail/425220.html">value-added billable items</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AuditLogExportRequest
@@ -629,8 +644,13 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出审计日志</para>
+        /// <para>Exports audit logs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Log audit is a value-added feature that is provided by Drive and Photo Service (PDS) Developer Edition. Before you call this operation, make sure that you learn about the <a href="https://www.alibabacloud.com/help/document_detail/425220.html">value-added billable items</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AuditLogExportRequest
@@ -14754,7 +14774,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries files. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175890.html">https://help.aliyun.com/document_detail/175890.html</a>.</para>
+        /// <para>Searches for files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14832,7 +14852,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries files. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175890.html">https://help.aliyun.com/document_detail/175890.html</a>.</para>
+        /// <para>Searches for files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14910,7 +14930,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries files. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175890.html">https://help.aliyun.com/document_detail/175890.html</a>.</para>
+        /// <para>Searches for files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14929,7 +14949,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries files. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175890.html">https://help.aliyun.com/document_detail/175890.html</a>.</para>
+        /// <para>Searches for files.</para>
         /// </summary>
         /// 
         /// <param name="request">

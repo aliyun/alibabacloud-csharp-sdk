@@ -61,6 +61,14 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public long? Status { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>LRS</para>
+        /// </summary>
+        [NameInMap("store_redundancy_type")]
+        [Validation(Required=false)]
+        public string StoreRedundancyType { get; set; }
+
         [NameInMap("updated_at")]
         [Validation(Required=false)]
         public string UpdatedAt { get; set; }

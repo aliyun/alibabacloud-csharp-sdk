@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string Expiration { get; set; }
 
+        [NameInMap("has_pwd")]
+        [Validation(Required=false)]
+        public bool? HasPwd { get; set; }
+
         /// <summary>
         /// <para>The number of times that the shared files are previewed.</para>
         /// 
