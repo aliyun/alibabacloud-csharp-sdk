@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
             [NameInMap("AuthorizationLetterId")]
             [Validation(Required=false)]
-            public string AuthorizationLetterId { get; set; }
+            public long? AuthorizationLetterId { get; set; }
 
             /// <summary>
             /// <para>The type of the signature scenario. The return value ends with &quot;type&quot;. Valid values:</para>

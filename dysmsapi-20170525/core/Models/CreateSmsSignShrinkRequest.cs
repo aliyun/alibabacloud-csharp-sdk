@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
         [NameInMap("AuthorizationLetterId")]
         [Validation(Required=false)]
-        public string AuthorizationLetterId { get; set; }
+        public long? AuthorizationLetterId { get; set; }
 
         /// <summary>
         /// <para>Additional information to supplement uploaded business proof documents or screenshots, which helps reviewers understand your business details.</para>

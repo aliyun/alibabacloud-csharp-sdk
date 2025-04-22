@@ -908,6 +908,166 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更换签名的资质和授权书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeSignatureQualificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeSignatureQualificationResponse
+        /// </returns>
+        public ChangeSignatureQualificationResponse ChangeSignatureQualificationWithOptions(ChangeSignatureQualificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationLetterId))
+            {
+                query["AuthorizationLetterId"] = request.AuthorizationLetterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationId))
+            {
+                query["QualificationId"] = request.QualificationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureName))
+            {
+                query["SignatureName"] = request.SignatureName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeSignatureQualification",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeSignatureQualificationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更换签名的资质和授权书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeSignatureQualificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeSignatureQualificationResponse
+        /// </returns>
+        public async Task<ChangeSignatureQualificationResponse> ChangeSignatureQualificationWithOptionsAsync(ChangeSignatureQualificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationLetterId))
+            {
+                query["AuthorizationLetterId"] = request.AuthorizationLetterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationId))
+            {
+                query["QualificationId"] = request.QualificationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignatureName))
+            {
+                query["SignatureName"] = request.SignatureName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeSignatureQualification",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeSignatureQualificationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更换签名的资质和授权书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeSignatureQualificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeSignatureQualificationResponse
+        /// </returns>
+        public ChangeSignatureQualificationResponse ChangeSignatureQualification(ChangeSignatureQualificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChangeSignatureQualificationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更换签名的资质和授权书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeSignatureQualificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeSignatureQualificationResponse
+        /// </returns>
+        public async Task<ChangeSignatureQualificationResponse> ChangeSignatureQualificationAsync(ChangeSignatureQualificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChangeSignatureQualificationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Checks whether a mobile phone number can receive card messages.</para>
         /// </summary>
         /// 
@@ -1568,6 +1728,210 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSmartShortUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建委托授权书</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateSmsAuthorizationLetterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmsAuthorizationLetterResponse
+        /// </returns>
+        public CreateSmsAuthorizationLetterResponse CreateSmsAuthorizationLetterWithOptions(CreateSmsAuthorizationLetterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSmsAuthorizationLetterShrinkRequest request = new CreateSmsAuthorizationLetterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SignList))
+            {
+                request.SignListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SignList, "SignList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorization))
+            {
+                query["Authorization"] = request.Authorization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationLetterExpDate))
+            {
+                query["AuthorizationLetterExpDate"] = request.AuthorizationLetterExpDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationLetterName))
+            {
+                query["AuthorizationLetterName"] = request.AuthorizationLetterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationLetterPic))
+            {
+                query["AuthorizationLetterPic"] = request.AuthorizationLetterPic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationCode))
+            {
+                query["OrganizationCode"] = request.OrganizationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyAuthorization))
+            {
+                query["ProxyAuthorization"] = request.ProxyAuthorization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignListShrink))
+            {
+                query["SignList"] = request.SignListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSmsAuthorizationLetter",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSmsAuthorizationLetterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建委托授权书</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateSmsAuthorizationLetterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmsAuthorizationLetterResponse
+        /// </returns>
+        public async Task<CreateSmsAuthorizationLetterResponse> CreateSmsAuthorizationLetterWithOptionsAsync(CreateSmsAuthorizationLetterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSmsAuthorizationLetterShrinkRequest request = new CreateSmsAuthorizationLetterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SignList))
+            {
+                request.SignListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SignList, "SignList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Authorization))
+            {
+                query["Authorization"] = request.Authorization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationLetterExpDate))
+            {
+                query["AuthorizationLetterExpDate"] = request.AuthorizationLetterExpDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationLetterName))
+            {
+                query["AuthorizationLetterName"] = request.AuthorizationLetterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationLetterPic))
+            {
+                query["AuthorizationLetterPic"] = request.AuthorizationLetterPic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationCode))
+            {
+                query["OrganizationCode"] = request.OrganizationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyAuthorization))
+            {
+                query["ProxyAuthorization"] = request.ProxyAuthorization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignListShrink))
+            {
+                query["SignList"] = request.SignListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSmsAuthorizationLetter",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSmsAuthorizationLetterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建委托授权书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmsAuthorizationLetterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmsAuthorizationLetterResponse
+        /// </returns>
+        public CreateSmsAuthorizationLetterResponse CreateSmsAuthorizationLetter(CreateSmsAuthorizationLetterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSmsAuthorizationLetterWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建委托授权书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmsAuthorizationLetterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmsAuthorizationLetterResponse
+        /// </returns>
+        public async Task<CreateSmsAuthorizationLetterResponse> CreateSmsAuthorizationLetterAsync(CreateSmsAuthorizationLetterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSmsAuthorizationLetterWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3666,6 +4030,150 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetOSSInfoForUploadFileWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传文件获取oss配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQualificationOssInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQualificationOssInfoResponse
+        /// </returns>
+        public GetQualificationOssInfoResponse GetQualificationOssInfoWithOptions(GetQualificationOssInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetQualificationOssInfo",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetQualificationOssInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传文件获取oss配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQualificationOssInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQualificationOssInfoResponse
+        /// </returns>
+        public async Task<GetQualificationOssInfoResponse> GetQualificationOssInfoWithOptionsAsync(GetQualificationOssInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetQualificationOssInfo",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetQualificationOssInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传文件获取oss配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQualificationOssInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQualificationOssInfoResponse
+        /// </returns>
+        public GetQualificationOssInfoResponse GetQualificationOssInfo(GetQualificationOssInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetQualificationOssInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传文件获取oss配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQualificationOssInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQualificationOssInfoResponse
+        /// </returns>
+        public async Task<GetQualificationOssInfoResponse> GetQualificationOssInfoAsync(GetQualificationOssInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetQualificationOssInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6086,6 +6594,194 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryShortUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询委托授权书</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QuerySmsAuthorizationLetterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsAuthorizationLetterResponse
+        /// </returns>
+        public QuerySmsAuthorizationLetterResponse QuerySmsAuthorizationLetterWithOptions(QuerySmsAuthorizationLetterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QuerySmsAuthorizationLetterShrinkRequest request = new QuerySmsAuthorizationLetterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AuthorizationLetterIdList))
+            {
+                request.AuthorizationLetterIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AuthorizationLetterIdList, "AuthorizationLetterIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationLetterIdListShrink))
+            {
+                query["AuthorizationLetterIdList"] = request.AuthorizationLetterIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationCode))
+            {
+                query["OrganizationCode"] = request.OrganizationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                query["SignName"] = request.SignName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySmsAuthorizationLetter",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySmsAuthorizationLetterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询委托授权书</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QuerySmsAuthorizationLetterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsAuthorizationLetterResponse
+        /// </returns>
+        public async Task<QuerySmsAuthorizationLetterResponse> QuerySmsAuthorizationLetterWithOptionsAsync(QuerySmsAuthorizationLetterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QuerySmsAuthorizationLetterShrinkRequest request = new QuerySmsAuthorizationLetterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AuthorizationLetterIdList))
+            {
+                request.AuthorizationLetterIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AuthorizationLetterIdList, "AuthorizationLetterIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationLetterIdListShrink))
+            {
+                query["AuthorizationLetterIdList"] = request.AuthorizationLetterIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationCode))
+            {
+                query["OrganizationCode"] = request.OrganizationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                query["SignName"] = request.SignName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySmsAuthorizationLetter",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySmsAuthorizationLetterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询委托授权书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySmsAuthorizationLetterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsAuthorizationLetterResponse
+        /// </returns>
+        public QuerySmsAuthorizationLetterResponse QuerySmsAuthorizationLetter(QuerySmsAuthorizationLetterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuerySmsAuthorizationLetterWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询委托授权书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySmsAuthorizationLetterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsAuthorizationLetterResponse
+        /// </returns>
+        public async Task<QuerySmsAuthorizationLetterResponse> QuerySmsAuthorizationLetterAsync(QuerySmsAuthorizationLetterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuerySmsAuthorizationLetterWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
