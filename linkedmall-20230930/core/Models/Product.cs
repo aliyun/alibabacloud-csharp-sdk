@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.Linkedmall20230930.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("servicePromises")]
+        [Validation(Required=false)]
+        public List<string> ServicePromises { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>21000017</para>
