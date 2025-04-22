@@ -4160,6 +4160,158 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>A号码报备数据删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecretAPhoneNoToCustRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecretAPhoneNoToCustResponse
+        /// </returns>
+        public DeleteSecretAPhoneNoToCustResponse DeleteSecretAPhoneNoToCustWithOptions(DeleteSecretAPhoneNoToCustRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ANoWhiteGroupId))
+            {
+                query["ANoWhiteGroupId"] = request.ANoWhiteGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSecretAPhoneNoToCust",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSecretAPhoneNoToCustResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A号码报备数据删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecretAPhoneNoToCustRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecretAPhoneNoToCustResponse
+        /// </returns>
+        public async Task<DeleteSecretAPhoneNoToCustResponse> DeleteSecretAPhoneNoToCustWithOptionsAsync(DeleteSecretAPhoneNoToCustRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ANoWhiteGroupId))
+            {
+                query["ANoWhiteGroupId"] = request.ANoWhiteGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSecretAPhoneNoToCust",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSecretAPhoneNoToCustResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A号码报备数据删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecretAPhoneNoToCustRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecretAPhoneNoToCustResponse
+        /// </returns>
+        public DeleteSecretAPhoneNoToCustResponse DeleteSecretAPhoneNoToCust(DeleteSecretAPhoneNoToCustRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSecretAPhoneNoToCustWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A号码报备数据删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecretAPhoneNoToCustRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecretAPhoneNoToCustResponse
+        /// </returns>
+        public async Task<DeleteSecretAPhoneNoToCustResponse> DeleteSecretAPhoneNoToCustAsync(DeleteSecretAPhoneNoToCustRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSecretAPhoneNoToCustWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a blacklist.</para>
         /// </summary>
         /// 
@@ -6348,6 +6500,158 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryRecordFileDownloadUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A号码报备状态查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySecretAPhoneNoToCustRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySecretAPhoneNoToCustResponse
+        /// </returns>
+        public QuerySecretAPhoneNoToCustResponse QuerySecretAPhoneNoToCustWithOptions(QuerySecretAPhoneNoToCustRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ANoWhiteGroupId))
+            {
+                query["ANoWhiteGroupId"] = request.ANoWhiteGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySecretAPhoneNoToCust",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySecretAPhoneNoToCustResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A号码报备状态查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySecretAPhoneNoToCustRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySecretAPhoneNoToCustResponse
+        /// </returns>
+        public async Task<QuerySecretAPhoneNoToCustResponse> QuerySecretAPhoneNoToCustWithOptionsAsync(QuerySecretAPhoneNoToCustRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ANoWhiteGroupId))
+            {
+                query["ANoWhiteGroupId"] = request.ANoWhiteGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNoA))
+            {
+                query["PhoneNoA"] = request.PhoneNoA;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySecretAPhoneNoToCust",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySecretAPhoneNoToCustResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A号码报备状态查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySecretAPhoneNoToCustRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySecretAPhoneNoToCustResponse
+        /// </returns>
+        public QuerySecretAPhoneNoToCustResponse QuerySecretAPhoneNoToCust(QuerySecretAPhoneNoToCustRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuerySecretAPhoneNoToCustWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A号码报备状态查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySecretAPhoneNoToCustRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySecretAPhoneNoToCustResponse
+        /// </returns>
+        public async Task<QuerySecretAPhoneNoToCustResponse> QuerySecretAPhoneNoToCustAsync(QuerySecretAPhoneNoToCustRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuerySecretAPhoneNoToCustWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
