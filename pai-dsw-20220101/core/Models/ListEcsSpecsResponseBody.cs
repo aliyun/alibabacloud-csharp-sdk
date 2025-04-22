@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [Validation(Required=false)]
             public long? GPU { get; set; }
 
+            [NameInMap("GPUMemorySize")]
+            [Validation(Required=false)]
+            public float? GPUMemorySize { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>v100</para>
@@ -122,6 +126,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [NameInMap("Price")]
             [Validation(Required=false)]
             public double? Price { get; set; }
+
+            [NameInMap("SpotStockStatus")]
+            [Validation(Required=false)]
+            public string SpotStockStatus { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
