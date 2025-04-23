@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        [NameInMap("NewSaeVersion")]
+        [Validation(Required=false)]
+        public string NewSaeVersion { get; set; }
+
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }

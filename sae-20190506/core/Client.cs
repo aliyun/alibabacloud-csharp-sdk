@@ -7725,6 +7725,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Memory"] = request.Memory;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewSaeVersion))
+            {
+                query["NewSaeVersion"] = request.NewSaeVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
                 query["ResourceType"] = request.ResourceType;
@@ -7782,6 +7786,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
             {
                 query["Memory"] = request.Memory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewSaeVersion))
+            {
+                query["NewSaeVersion"] = request.NewSaeVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {

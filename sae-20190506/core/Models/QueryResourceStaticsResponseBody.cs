@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public float? Cpu { get; set; }
 
+                [NameInMap("EphemeralStorage")]
+                [Validation(Required=false)]
+                public float? EphemeralStorage { get; set; }
+
                 /// <summary>
                 /// <para>The memory usage. Unit: GiB per minute.</para>
                 /// 
@@ -81,6 +85,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
                 public float? Cpu { get; set; }
+
+                [NameInMap("Cu")]
+                [Validation(Required=false)]
+                public float? Cu { get; set; }
+
+                [NameInMap("EphemeralStorage")]
+                [Validation(Required=false)]
+                public float? EphemeralStorage { get; set; }
 
                 [NameInMap("IdleCpu")]
                 [Validation(Required=false)]
