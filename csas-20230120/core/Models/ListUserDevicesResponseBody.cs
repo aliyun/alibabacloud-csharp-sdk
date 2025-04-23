@@ -223,6 +223,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string Username { get; set; }
 
+            [NameInMap("Workshop")]
+            [Validation(Required=false)]
+            public string Workshop { get; set; }
+
         }
 
         /// <summary>
