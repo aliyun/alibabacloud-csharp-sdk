@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateDatasetFileMetasResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The metadata records that fail to be updated for the dataset files.</para>
+        /// </summary>
         [NameInMap("FailedDetails")]
         [Validation(Required=false)]
         public List<DatasetFileMetaResponse> FailedDetails { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5A14FA81-DD4E-******-6343FE44B941</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the metadata records of all dataset files were updated. Valid values: true and false. If the value is false, view the failure details specified by FailedDetails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

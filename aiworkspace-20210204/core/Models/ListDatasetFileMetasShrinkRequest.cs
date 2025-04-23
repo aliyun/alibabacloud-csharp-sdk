@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListDatasetFileMetasShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The dataset version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
+        /// <para>The end time when the file is updated. This parameter is used when you want to query file metadata during a period of time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -41,6 +43,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token.</para>
+        /// <remarks>
+        /// <para> If you do not configure this parameter, the data on the first page is returned. A return value other than Null of this parameter indicates that not all entries have been returned. You can use this value as an input parameter to obtain entries on the next page. The value Null indicates that all query results have been returned.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>90a6ee35-****-4cd4-927e-1f45e1cb8b62_1729644433000</para>
         /// </summary>
@@ -49,6 +56,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy. Default value: ASC.</para>
+        /// <list type="bullet">
+        /// <item><description>ASC</description></item>
+        /// <item><description>DESC</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
         /// </summary>
@@ -59,6 +72,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -96,11 +110,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string QueryTagsIncludeAnyShrink { get; set; }
 
+        /// <summary>
+        /// <para>The text content to be queried.</para>
+        /// </summary>
         [NameInMap("QueryText")]
         [Validation(Required=false)]
         public string QueryText { get; set; }
 
         /// <summary>
+        /// <para>The retrieval type.</para>
+        /// <list type="bullet">
+        /// <item><description>TAG (default)</description></item>
+        /// <item><description>VECTOR</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>TAG</para>
         /// </summary>
@@ -109,6 +132,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string QueryType { get; set; }
 
         /// <summary>
+        /// <para>The similarity score. Only dataset files whose similarity score is greater than the value of ScoreThreshold are returned. This parameter is valid only when QueryType is set to VECTOR.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.6</para>
         /// </summary>
@@ -117,6 +142,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public float? ScoreThreshold { get; set; }
 
         /// <summary>
+        /// <para>The field used to sort the results. Default value: GmtCreateTime. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>FileCreateTime (default): The results are sorted by the time when the file is created.</description></item>
+        /// <item><description>FileUpdateTime: The results are sorted by the time when the file is last modified.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>FileCreateTime</para>
         /// </summary>
@@ -125,6 +156,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>The start time when the file is updated. This parameter is used when you want to query file metadata during a period of time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -146,6 +178,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ThumbnailMode { get; set; }
 
         /// <summary>
+        /// <para>The number of search results to return. A maximum of Top K search results can be returned. This parameter is valid only when QueryType is set to VECTOR.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -154,6 +188,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? TopK { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace to which the dataset belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

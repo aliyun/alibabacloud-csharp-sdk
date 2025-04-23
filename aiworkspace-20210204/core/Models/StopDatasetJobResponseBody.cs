@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class StopDatasetJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F620FFD3-FFDC-5873-A70C-6971CC45F467</para>
         /// </summary>

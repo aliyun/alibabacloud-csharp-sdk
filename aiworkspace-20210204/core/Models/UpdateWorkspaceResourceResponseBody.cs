@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateWorkspaceResourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5A14FA81-DD4E-******-6343FE44B941</para>
         /// </summary>
@@ -17,6 +19,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The updated resource IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Resource-dks******jkf</para>
+        /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }

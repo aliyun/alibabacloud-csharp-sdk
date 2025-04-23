@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. To obtain the ID of a resource group, see <a href="https://help.aliyun.com/zh/resource-management/resource-group/user-guide/view-basic-information-of-a-resource-group?spm=a2c4g.11186623.help-menu-94362.d_2_0_1.86386c21FKqhTk%5C&scm=20140722.H_151181._.OR_help-T_cn~zh-V_1">View basic information of a resource group</a>.</para>
+        /// <para>The resource group ID. To obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmwp7rky****</para>

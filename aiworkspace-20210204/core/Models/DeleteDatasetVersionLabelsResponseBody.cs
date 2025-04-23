@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DeleteDatasetVersionLabelsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Id of the request</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

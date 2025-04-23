@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateWorkspaceResourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1e195c5116124202371861018d5bde</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The resources.</para>
+        /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<CreateWorkspaceResourceResponseBodyResources> Resources { get; set; }
         public class CreateWorkspaceResourceResponseBodyResources : TeaModel {
             /// <summary>
+            /// <para>The resource ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
+        /// <para>The total number of resources.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

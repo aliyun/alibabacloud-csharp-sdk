@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
-    public class ListModelsRequest : TeaModel {
+    public class ListModelsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The collection where the model is located. You can specify multiple collections and separate them with commas (,).</para>
         /// 
@@ -132,17 +132,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         [NameInMap("Tag")]
         [Validation(Required=false)]
-        public List<ListModelsRequestTag> Tag { get; set; }
-        public class ListModelsRequestTag : TeaModel {
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagShrink { get; set; }
 
         /// <summary>
         /// <para>The task used to filter the models that belong to the task type. Example: text-classification.</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateDatasetJobConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D5BFFEE3-6025-443F-8A03-02D619B5C4B9</para>
         /// </summary>

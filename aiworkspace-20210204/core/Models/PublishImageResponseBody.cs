@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class PublishImageResponseBody : TeaModel {
         /// <summary>
+        /// <para>The image ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>image-dk******fa</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ImageId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A0F049F0-8D69-5BAC-8F10-B******A34C</para>
         /// </summary>

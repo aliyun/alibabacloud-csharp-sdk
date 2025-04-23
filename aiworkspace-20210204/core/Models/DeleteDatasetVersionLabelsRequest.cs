@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DeleteDatasetVersionLabelsRequest : TeaModel {
         /// <summary>
+        /// <para>The tag keys. Multiple tags are separated by commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

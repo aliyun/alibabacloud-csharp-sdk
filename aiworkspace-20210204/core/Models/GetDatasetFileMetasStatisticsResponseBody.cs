@@ -8,24 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
-    public class CreateDatasetJobConfigResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The configuration ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>dscfg-xxxxxxxxxxxxxx</para>
-        /// </summary>
-        [NameInMap("DatasetJobConfigId")]
+    public class GetDatasetFileMetasStatisticsResponseBody : TeaModel {
+        [NameInMap("DatasetFileMetasStats")]
         [Validation(Required=false)]
-        public string DatasetJobConfigId { get; set; }
+        public List<DatasetFileMetasStat> DatasetFileMetasStats { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>5A14FA81-DD4E-******-6343FE44B941</para>
+        /// <para>73</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ADF6D849-*****-7E7030F0CE53</para>
+        /// </summary>
+        [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 

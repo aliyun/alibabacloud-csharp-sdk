@@ -10,25 +10,27 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetDatasetVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>数据集的数据量</para>
+        /// <para>The number of data records.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000</para>
         /// </summary>
         [NameInMap("DataCount")]
         [Validation(Required=false)]
         public long? DataCount { get; set; }
 
         /// <summary>
-        /// <para>数据集版本的数据大小。</para>
+        /// <para>The size of the dataset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000</para>
         /// </summary>
         [NameInMap("DataSize")]
         [Validation(Required=false)]
         public long? DataSize { get; set; }
 
         /// <summary>
-        /// <para>数据源类型。支持以下取值：</para>
-        /// <list type="bullet">
-        /// <item><description>OSS：阿里云对象存储（OSS）。</description></item>
-        /// <item><description>NAS：阿里云文件存储（NAS）。</description></item>
-        /// </list>
+        /// <para>The type of the data source.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DataSourceType")]
@@ -36,106 +38,153 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>代表资源一级ID的资源属性字段</para>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-dkdbnnap0g7b6su4yg</para>
         /// </summary>
         [NameInMap("DatasetId")]
         [Validation(Required=false)]
         public string DatasetId { get; set; }
 
         /// <summary>
-        /// <para>数据集版本的描述信息。</para>
+        /// <para>The version description.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The creation time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-12-13T10:22:05.694Z</para>
+        /// </summary>
         [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>创建时间。</para>
+        /// <para>The last modification time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-12-13T10:22:05.694Z</para>
         /// </summary>
         [NameInMap("GmtModifiedTime")]
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
+        /// <summary>
+        /// <para>The dataset configurations to be imported to a storage, such as Object Storage Service (OSS), File Storage NAS (NAS), or Cloud Parallel File Storage (CPFS).</para>
+        /// <para><b>OSS</b></para>
+        /// <para>{ &quot;region&quot;: &quot;${region}&quot;,// The region ID. $bucket = $options[&quot;bucket&quot;]; // The bucket name. &quot;path&quot;: &quot;${path}&quot; // The file path. }</para>
+        /// <para><b>NAS</b></para>
+        /// <para><b>CPFS</b></para>
+        /// <para><b>CPFS for Lingjun</b></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;region&quot;: &quot;cn-wulanchabu&quot;,
+        ///     &quot;fileSystemId&quot;: &quot;bmcpfs-xxxxxxxxxxx&quot;,
+        ///     &quot;path&quot;: &quot;/mnt&quot;,
+        ///     &quot;mountTarget&quot;: &quot;cpfs-xxxxxxxxxxxx-vpc-gacs9f.cn-wulanchabu.cpfs.aliyuncs.com&quot;,
+        ///     &quot;isVpcMount&quot;: true
+        /// }</para>
+        /// </summary>
         [NameInMap("ImportInfo")]
         [Validation(Required=false)]
         public string ImportInfo { get; set; }
 
         /// <summary>
-        /// <para>代表资源标签的资源属性字段</para>
+        /// <para>The resource tags.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
+        /// <summary>
+        /// <para>The access permission on the dataset when the dataset is mounted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RO: read-only permissions</description></item>
+        /// <item><description>RW: read and write permissions</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RO</para>
+        /// </summary>
         [NameInMap("MountAccess")]
         [Validation(Required=false)]
         public string MountAccess { get; set; }
 
         /// <summary>
-        /// <para>扩展字段，JsonString类型。
-        /// 当DLC使用数据集时，可通过配置mountPath字段指定数据集默认挂载路径。</para>
+        /// <para>The extended fields.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///   &quot;mountPath&quot;: &quot;/mnt/data/&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>数据集的属性。支持以下取值：</para>
-        /// <list type="bullet">
-        /// <item><description>FILE：文件。</description></item>
-        /// <item><description>DIRECTORY：文件夹。</description></item>
-        /// </list>
+        /// <para>The property of the dataset.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DIRECTORY</para>
         /// </summary>
         [NameInMap("Property")]
         [Validation(Required=false)]
         public string Property { get; set; }
 
+        /// <summary>
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C55DF3DA-F120-5E37-A374-F49365531701</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>数据来源ID。</para>
+        /// <para>The ID of the source dataset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-rbvg5wzljzjhc9ks92</para>
         /// </summary>
         [NameInMap("SourceId")]
         [Validation(Required=false)]
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>数据来源类型，默认为USER。支持以下取值：</para>
-        /// <list type="bullet">
-        /// <item><description>PAI-PUBLIC-DATASET：PAI公共数据集。</description></item>
-        /// <item><description>ITAG：iTAG模块标注结果生成的数据集。</description></item>
-        /// <item><description>USER：用户注册的数据集。</description></item>
-        /// </list>
+        /// <para>The type of the data source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>USER</para>
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>Uri配置样例如下：</para>
-        /// <list type="bullet">
-        /// <item><description>数据源类型为OSS：<c>oss://bucket.endpoint/object</c></description></item>
-        /// <item><description>数据源类型为NAS：
-        /// 通用型NAS格式为：<c>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</c>；
-        /// CPFS1.0：<c>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</c>；
-        /// CPFS2.0：<c>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</c>。
-        /// CPFS1.0和CPFS2.0根据fsid的格式来区分：CPFS1.0 格式为cpfs-&lt;8位ascii字符&gt;；CPFS2.0 格式为cpfs-&lt;16为ascii字符&gt;。</description></item>
-        /// </list>
+        /// <para>The sample URI of the dataset.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss://ai4d-br7hx9ngzelo2o6uip.oss-cn-shanghai.aliyuncs.com/365349/data-1157703270994901/datasets/aka108o/</para>
         /// </summary>
         [NameInMap("Uri")]
         [Validation(Required=false)]
         public string Uri { get; set; }
 
         /// <summary>
-        /// <para>代表资源名称的资源属性字段</para>
+        /// <para>The version name of the dataset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v1</para>
         /// </summary>
         [NameInMap("VersionName")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DeleteDatasetJobConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DA869D1B-035A-43B2-ACC1-C56681BD9FAA</para>
         /// </summary>

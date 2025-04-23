@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
                 /// <para>The property code.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>commodity_type。</para>
+                /// <para>commodity_type</para>
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
                 /// <para>The property value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>oss。</para>
+                /// <para>oss</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

@@ -9,15 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateDatasetRequest : TeaModel {
+        /// <summary>
+        /// <para>The description of the dataset.</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The list of role names in the workspace that have read and write permissions on the mounted database. The names start with PAI are basic role names and the names start with role- are custom role names. If the list contains asterisks (\*), all roles have read and write permissions.</para>
+        /// <list type="bullet">
+        /// <item><description>If you set the value to [&quot;PAI.AlgoOperator&quot;, &quot;role-hiuwpd01ncrokkgp21&quot;], the account of the specified role is granted the read and write permissions.</description></item>
+        /// <item><description>If you set the value to [&quot;\*&quot;], all accounts are granted the read and write permissions.</description></item>
+        /// <item><description>If you set the value to [], only the creator of the dataset has the read and write permissions.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("MountAccessReadWriteRoleIdList")]
         [Validation(Required=false)]
         public List<string> MountAccessReadWriteRoleIdList { get; set; }
 
         /// <summary>
+        /// <para>The dataset name. You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>myName</para>
         /// </summary>
@@ -26,6 +39,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The extended field, which is a JSON string. When you use the dataset in Deep Learning Containers (DLC), you can configure the mountPath field to specify the default mount path of the dataset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///   &quot;mountPath&quot;: &quot;/mnt/data/&quot;

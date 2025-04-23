@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListWorkspaceUsersRequest : TeaModel {
+        /// <summary>
+        /// <para>The display names of users who can be added to the workspace as members.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>doctest****</para>
+        /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]
         public string UserName { get; set; }

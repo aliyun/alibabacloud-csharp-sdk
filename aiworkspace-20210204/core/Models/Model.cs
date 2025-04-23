@@ -117,6 +117,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Provider { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<Label> Tags { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>text-classifiaction</para>

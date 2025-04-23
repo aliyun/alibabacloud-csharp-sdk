@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListDatasetJobsRequest : TeaModel {
         /// <summary>
+        /// <para>The dataset version name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
+        /// <para>The action to be performed on the job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SemanticIndex</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string JobAction { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234</para>
         /// </summary>

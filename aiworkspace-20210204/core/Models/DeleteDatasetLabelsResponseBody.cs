@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DeleteDatasetLabelsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>64B50C1D-D4C2-560C-86A3-A6ED****16D</para>
         /// </summary>

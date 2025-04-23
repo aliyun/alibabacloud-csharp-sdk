@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class LogRunMetricsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ADF6D849-*****-7E7030F0CE53</para>

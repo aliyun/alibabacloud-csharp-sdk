@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateDatasetJobConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The configuration content. Format:</para>
+        /// <list type="bullet">
+        /// <item><description>MultimodalIntelligentTag</description></item>
+        /// </list>
+        /// <para>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</para>
+        /// <list type="bullet">
+        /// <item><description>MultimodalSemanticIndex</description></item>
+        /// </list>
+        /// <para>{ &quot;defaultModelId&quot;: &quot;xxx&quot; &quot;defaultModelVersion&quot;:&quot;1.0.0&quot; }</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +29,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The configuration type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>MultimodalIntelligentTag</description></item>
+        /// <item><description>MultimodalSemanticIndex</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +45,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ConfigType { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

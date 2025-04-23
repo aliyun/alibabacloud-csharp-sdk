@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateMemberRequest : TeaModel {
         /// <summary>
+        /// <para>The members.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Members")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<CreateMemberRequestMembers> Members { get; set; }
         public class CreateMemberRequestMembers : TeaModel {
             /// <summary>
+            /// <para>The list of roles.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Roles")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public List<string> Roles { get; set; }
 
             /// <summary>
+            /// <para>The member IDs. Multiple member IDs are separated by commas (,). You can call <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a> to obtain the member IDs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

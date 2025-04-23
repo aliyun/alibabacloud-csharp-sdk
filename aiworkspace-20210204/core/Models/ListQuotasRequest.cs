@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListQuotasRequest : TeaModel {
         /// <summary>
+        /// <para>The quota name. Fuzzy search is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>quota-name</para>
         /// </summary>

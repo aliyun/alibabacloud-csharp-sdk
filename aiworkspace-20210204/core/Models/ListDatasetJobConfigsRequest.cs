@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListDatasetJobConfigsRequest : TeaModel {
         /// <summary>
+        /// <para>The configuration type.</para>
+        /// <list type="bullet">
+        /// <item><description>MultimodalIntelligentTag</description></item>
+        /// <item><description>MultimodalSemanticIndex</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>MultimodalIntelligentTag</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ConfigType { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>431514</para>
         /// </summary>

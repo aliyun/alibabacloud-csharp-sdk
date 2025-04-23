@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetDatasetJobConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>114243</para>
         /// </summary>

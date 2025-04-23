@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListExperimentResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of experiments.</para>
+        /// </summary>
         [NameInMap("Experiments")]
         [Validation(Required=false)]
         public List<Experiment> Experiments { get; set; }
 
         /// <summary>
+        /// <para>The pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? NextPageToken { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0C6835C5-A424-5AFB-ACC2-F1E3CA1ABF7C</para>
         /// </summary>

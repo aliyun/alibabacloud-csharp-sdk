@@ -8,9 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
-    public class UpdateDatasetJobRequest : TeaModel {
+    public class GetDatasetFileMetasStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The dataset version name.</para>
+        /// <b>Example:</b>
+        /// <para>filedir</para>
+        /// </summary>
+        [NameInMap("AggregateBy")]
+        [Validation(Required=false)]
+        public string AggregateBy { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>
@@ -20,17 +28,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The dataset job description.</para>
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("Description")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>478**</para>
+        /// <para>145883</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

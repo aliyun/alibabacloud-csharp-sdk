@@ -116,6 +116,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Origin { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<Label> Tag { get; set; }
+
         /// <summary>
         /// <para>The task of the model. Describes the specific problem that the model solves. Example: text-classification.</para>
         /// 

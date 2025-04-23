@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DeleteDatasetLabelsRequest : TeaModel {
         /// <summary>
+        /// <para>The tag key. You can call <a href="https://help.aliyun.com/document_detail/457218.html">GetDataset</a> to obtain the tag key. Multiple tag keys are separated by commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>key1,key2</para>
         /// </summary>
