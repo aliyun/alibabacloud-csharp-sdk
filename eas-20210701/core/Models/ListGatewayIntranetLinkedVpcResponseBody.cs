@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public List<ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList> IntranetLinkedVpcList { get; set; }
         public class ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList : TeaModel {
+            [NameInMap("AccountId")]
+            [Validation(Required=false)]
+            public string AccountId { get; set; }
+
             [NameInMap("AuthoritativeDnsEnabled")]
             [Validation(Required=false)]
             public bool? AuthoritativeDnsEnabled { get; set; }

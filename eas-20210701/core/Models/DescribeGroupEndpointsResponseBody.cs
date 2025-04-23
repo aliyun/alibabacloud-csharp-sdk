@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string AccessToken { get; set; }
 
         /// <summary>
-        /// <para>The endpoints of service groups.</para>
+        /// <para>The endpoints of the service group.</para>
         /// </summary>
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
