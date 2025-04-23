@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListNodesNoPagingResponseBody : TeaModel {
         /// <summary>
-        /// The list of nodes.
+        /// <para>The list of nodes.</para>
         /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]
@@ -21,43 +21,59 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListNodesNoPagingResponseBodyNodesNodeInfo> NodeInfo { get; set; }
             public class ListNodesNoPagingResponseBodyNodesNodeInfo : TeaModel {
                 /// <summary>
-                /// The node name.
+                /// <para>The node name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>compute0</para>
                 /// </summary>
                 [NameInMap("HostName")]
                 [Validation(Required=false)]
                 public string HostName { get; set; }
 
                 /// <summary>
-                /// The node ID.
+                /// <para>The node ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>i-bp13p7vlcb1uihfv****</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The image ID.
+                /// <para>The image ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>centos_7_02_64_20G_alibase_20170818****</para>
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The node type.
+                /// <para>The node type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs.n1.tiny</para>
                 /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// The status of the node. Valid values:
+                /// <para>The status of the node. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>uninit: The node is being installed.</description></item>
+                /// <item><description>exception: An exception occurred on the node.</description></item>
+                /// <item><description>running: The node is running.</description></item>
+                /// <item><description>initing: The node is being initialized.</description></item>
+                /// <item><description>releasing: The node is being released.</description></item>
+                /// <item><description>untracking: The node is not added to the cluster.</description></item>
+                /// <item><description>stopped: The node is stopped.</description></item>
+                /// </list>
                 /// 
-                /// *   uninit: The node is being installed.
-                /// *   exception: An exception occurred on the node.
-                /// *   running: The node is running.
-                /// *   initing: The node is being initialized.
-                /// *   releasing: The node is being released.
-                /// *   untracking: The node is not added to the cluster.
-                /// *   stopped: The node is stopped.
+                /// <b>Example:</b>
+                /// <para>untracking</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -68,7 +84,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,11 +10,13 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class DeleteJobTemplatesRequest : TeaModel {
         /// <summary>
-        /// The list of job templates. A maximum of 20 job templates can be deleted.
+        /// <para>The IDs of the job templates that you want to delete. You can specify a maximum of 20 job template IDs.</para>
+        /// <para>Format of job template IDs: <c>[{&quot;Id&quot;: &quot;0.sched****&quot;},{&quot;Id&quot;: &quot;1.sched****&quot;}]</c>. Separate multiple job template IDs with commas (,).</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87248.html">ListJobTemplates</a> operation to query job template IDs.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Format: `[{"Id": "0.sched****"},{"Id": "1.sched****"}]`. Separate multiple job templates with commas (,).
-        /// 
-        /// You can call the [ListJobTemplates](~~87248~~) operation to obtain the job template ID.
+        /// <b>Example:</b>
+        /// <para>[{&quot;Id&quot;:&quot;ehpc-job-tmpl-6RVcMK****&quot;},{&quot;Id&quot;: &quot;ehpc-job-tmpl-6RxO5y****&quot;}]</para>
         /// </summary>
         [NameInMap("Templates")]
         [Validation(Required=false)]

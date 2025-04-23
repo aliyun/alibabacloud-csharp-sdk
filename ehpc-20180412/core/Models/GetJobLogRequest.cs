@@ -10,46 +10,60 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class GetJobLogRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-jeJki6****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The node on which the job runs.
+        /// <para>The node on which the job runs.</para>
+        /// <list type="bullet">
+        /// <item><description>If the job is completed, you do not need to specify the parameter.</description></item>
+        /// <item><description>If the job is running, you must specify the parameter.</description></item>
+        /// </list>
         /// 
-        /// *   If the job is completed, you do not need to specify the parameter.
-        /// *   If the job is running, you must specify the parameter.
+        /// <b>Example:</b>
+        /// <para>compute000</para>
         /// </summary>
         [NameInMap("ExecHost")]
         [Validation(Required=false)]
         public string ExecHost { get; set; }
 
         /// <summary>
-        /// The ID of the job.
+        /// <para>The ID of the job.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.scheduler****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// The position where logs start to be read.
+        /// <para>The position where logs start to be read.</para>
+        /// <para>Unit: bits</para>
+        /// <para>Default value: 0</para>
         /// 
-        /// Unit: bits
-        /// 
-        /// Default value: 0
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Offset")]
         [Validation(Required=false)]
         public long? Offset { get; set; }
 
         /// <summary>
-        /// The maximum size of logs that you can read in a single request.
+        /// <para>The maximum size of logs that you can read in a single request.</para>
+        /// <para>Unit: bits</para>
+        /// <para>Default value: 1024</para>
         /// 
-        /// Unit: bits
-        /// 
-        /// Default value: 1024
+        /// <b>Example:</b>
+        /// <para>1024</para>
         /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]

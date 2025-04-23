@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListAvailableEcsTypesResponseBody : TeaModel {
         /// <summary>
-        /// The instance family to which the instance type belongs.
+        /// <para>The instance family to which the instance type belongs.</para>
         /// </summary>
         [NameInMap("InstanceTypeFamilies")]
         [Validation(Required=false)]
@@ -21,21 +21,27 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo> InstanceTypeFamilyInfo { get; set; }
             public class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo : TeaModel {
                 /// <summary>
-                /// The instance family.
+                /// <para>The instance family.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs-3</para>
                 /// </summary>
                 [NameInMap("Generation")]
                 [Validation(Required=false)]
                 public string Generation { get; set; }
 
                 /// <summary>
-                /// The ID of the instance family. For more information, see [Instance families](~~25378~~).
+                /// <para>The ID of the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs.n4</para>
                 /// </summary>
                 [NameInMap("InstanceTypeFamilyId")]
                 [Validation(Required=false)]
                 public string InstanceTypeFamilyId { get; set; }
 
                 /// <summary>
-                /// The list of instance types.
+                /// <para>The list of instance types.</para>
                 /// </summary>
                 [NameInMap("Types")]
                 [Validation(Required=false)]
@@ -46,87 +52,121 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     public List<ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo> TypesInfo { get; set; }
                     public class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo : TeaModel {
                         /// <summary>
-                        /// The number of vCPUs.
+                        /// <para>The number of vCPUs.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>4</para>
                         /// </summary>
                         [NameInMap("CpuCoreCount")]
                         [Validation(Required=false)]
                         public int? CpuCoreCount { get; set; }
 
                         /// <summary>
-                        /// The maximum number of elastic network interfaces (ENIs) that can be bound to an ECS instance.
+                        /// <para>The maximum number of elastic network interfaces (ENIs) that can be bound to an ECS instance.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2</para>
                         /// </summary>
                         [NameInMap("EniQuantity")]
                         [Validation(Required=false)]
                         public int? EniQuantity { get; set; }
 
                         /// <summary>
-                        /// The number of GPUs of an ECS instance.
+                        /// <para>The number of GPUs of an ECS instance.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2</para>
                         /// </summary>
                         [NameInMap("GPUAmount")]
                         [Validation(Required=false)]
                         public int? GPUAmount { get; set; }
 
                         /// <summary>
-                        /// The GPU type of the ECS instance.
+                        /// <para>The GPU type of the ECS instance.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>NVIDIA V100</para>
                         /// </summary>
                         [NameInMap("GPUSpec")]
                         [Validation(Required=false)]
                         public string GPUSpec { get; set; }
 
                         /// <summary>
-                        /// The maximum inbound internal bandwidth. Unit: Kbit/s.
+                        /// <para>The maximum inbound internal bandwidth. Unit: Kbit/s.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>10240000</para>
                         /// </summary>
                         [NameInMap("InstanceBandwidthRx")]
                         [Validation(Required=false)]
                         public int? InstanceBandwidthRx { get; set; }
 
                         /// <summary>
-                        /// The maximum outbound internal bandwidth. Unit: Kbit/s.
+                        /// <para>The maximum outbound internal bandwidth. Unit: Kbit/s.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>10240000</para>
                         /// </summary>
                         [NameInMap("InstanceBandwidthTx")]
                         [Validation(Required=false)]
                         public int? InstanceBandwidthTx { get; set; }
 
                         /// <summary>
-                        /// The inbound packet forwarding rate over the internal network. Unit: pps.
+                        /// <para>The inbound packet forwarding rate over the internal network. Unit: pps.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>9000000</para>
                         /// </summary>
                         [NameInMap("InstancePpsRx")]
                         [Validation(Required=false)]
                         public int? InstancePpsRx { get; set; }
 
                         /// <summary>
-                        /// The outbound packet forwarding rate over the internal network. Unit: pps.
+                        /// <para>The outbound packet forwarding rate over the internal network. Unit: pps.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>9000000</para>
                         /// </summary>
                         [NameInMap("InstancePpsTx")]
                         [Validation(Required=false)]
                         public int? InstancePpsTx { get; set; }
 
                         /// <summary>
-                        /// The ID of the ECS instance type.
+                        /// <para>The ID of the ECS instance type.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>ecs.n4.xlarge</para>
                         /// </summary>
                         [NameInMap("InstanceTypeId")]
                         [Validation(Required=false)]
                         public string InstanceTypeId { get; set; }
 
                         /// <summary>
-                        /// The memory size of the ECS instance. Unit: GiB.
+                        /// <para>The memory size of the ECS instance. Unit: GiB.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>8</para>
                         /// </summary>
                         [NameInMap("MemorySize")]
                         [Validation(Required=false)]
                         public int? MemorySize { get; set; }
 
                         /// <summary>
-                        /// The status of the ECS instance. Valid values:
+                        /// <para>The status of the ECS instance. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>SoldOut</description></item>
+                        /// <item><description>Available</description></item>
+                        /// </list>
                         /// 
-                        /// *   SoldOut
-                        /// *   Available
+                        /// <b>Example:</b>
+                        /// <para>Available</para>
                         /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
                         public string Status { get; set; }
 
                         /// <summary>
-                        /// The list of zone IDs.
+                        /// <para>The list of zone IDs.</para>
                         /// </summary>
                         [NameInMap("ZoneIds")]
                         [Validation(Required=false)]
@@ -147,17 +187,24 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D9DD3AF8-1F91-4075-8669-55D10E45****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Specifies whether preemptible instances are supported. Valid values:
+        /// <para>Specifies whether preemptible instances are supported. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false: not supported</description></item>
+        /// <item><description>true: supported</description></item>
+        /// </list>
         /// 
-        /// *   false: not supported
-        /// *   true: supported
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("SupportSpotInstance")]
         [Validation(Required=false)]

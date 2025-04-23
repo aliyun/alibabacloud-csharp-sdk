@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class DescribePriceResponseBody : TeaModel {
         /// <summary>
-        /// The array of cluster prices. If you query the prices of multiple nodes in the cluster, the sequence of the prices in the returned value of PriceInfo is the same as that of the nodes in the request parameters. For example, the first price in the value of PriceInfo is the price of the first node specified in the request parameters.
+        /// <para>The array of cluster prices. If you query the prices of multiple nodes in the cluster, the sequence of the prices in the returned value of PriceInfo is the same as the sequence of the nodes in the request parameters. For example, the first price in the value of PriceInfo is the price of the first node specified in the request parameters.</para>
         /// </summary>
         [NameInMap("Prices")]
         [Validation(Required=false)]
@@ -21,38 +21,48 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<DescribePriceResponseBodyPricesPriceInfo> PriceInfo { get; set; }
             public class DescribePriceResponseBodyPricesPriceInfo : TeaModel {
                 /// <summary>
-                /// The currency that is used to measure the price. Valid values:
+                /// <para>The currency that is used to measure the price. Valid values:</para>
+                /// <para>USD</para>
                 /// 
-                /// USD
+                /// <b>Example:</b>
+                /// <para>USD</para>
                 /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// The type of the node. Valid values:
+                /// <para>The node type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Manager: management node</description></item>
+                /// <item><description>Login: logon node</description></item>
+                /// <item><description>Compute: compute node</description></item>
+                /// </list>
                 /// 
-                /// *   Manager: management node
-                /// *   Login: logon node
-                /// *   Compute: compute node
+                /// <b>Example:</b>
+                /// <para>Compute</para>
                 /// </summary>
                 [NameInMap("NodeType")]
                 [Validation(Required=false)]
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// The original price of the image.
+                /// <para>The original price.</para>
+                /// <para>Unit: USD.</para>
                 /// 
-                /// Unit: USD.
+                /// <b>Example:</b>
+                /// <para>1258</para>
                 /// </summary>
                 [NameInMap("OriginalPrice")]
                 [Validation(Required=false)]
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// The final price.
+                /// <para>The final price.</para>
+                /// <para>Unit: USD.</para>
                 /// 
-                /// Unit: USD.
+                /// <b>Example:</b>
+                /// <para>1258</para>
                 /// </summary>
                 [NameInMap("TradePrice")]
                 [Validation(Required=false)]
@@ -63,16 +73,21 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>54FF9025-2C2F-42EB-870D-0DF5B0ACF24E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total price.
+        /// <para>The total price.</para>
+        /// <para>Unit: USD.</para>
         /// 
-        /// Unit: USD.
+        /// <b>Example:</b>
+        /// <para>1258</para>
         /// </summary>
         [NameInMap("TotalTradePrice")]
         [Validation(Required=false)]

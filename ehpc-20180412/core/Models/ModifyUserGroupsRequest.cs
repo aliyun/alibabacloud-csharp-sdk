@@ -10,44 +10,56 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ModifyUserGroupsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the asynchronous mode for this request.
+        /// <para>Specifies whether to use asynchronous message links to change the user group.</para>
+        /// <para>Default value: false.</para>
         /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Async")]
         [Validation(Required=false)]
         public bool? Async { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to obtain the cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The information about the user.
+        /// <para>The users. You can specify 1 to 100 users.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public List<ModifyUserGroupsRequestUser> User { get; set; }
         public class ModifyUserGroupsRequestUser : TeaModel {
             /// <summary>
-            /// The new permission group of the user N. Valid values:
+            /// <para>The user group to be changed. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>users: ordinary permissions, which are suitable for ordinary users that need only to submit and debug jobs.</description></item>
+            /// <item><description>wheel: sudo permissions, which are suitable for administrators who need to manage clusters. In addition to submitting and debugging jobs, you can also run sudo commands to install software and restart nodes.</description></item>
+            /// </list>
             /// 
-            /// *   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.
-            /// *   wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.
+            /// <b>Example:</b>
+            /// <para>users</para>
             /// </summary>
             [NameInMap("Group")]
             [Validation(Required=false)]
             public string Group { get; set; }
 
             /// <summary>
-            /// The name of the user N whose permissions you want to modify. Valid values of N: 1 to 100.
+            /// <para>The username.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/188572.html">ListUsers</a> operation to query the usernames in the cluster.</para>
             /// 
-            /// You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.
+            /// <b>Example:</b>
+            /// <para>user11</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

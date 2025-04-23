@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListClusterLogsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The details about operations logs.
+        /// <para>The queried operations logs.</para>
         /// </summary>
         [NameInMap("Logs")]
         [Validation(Required=false)]
@@ -28,28 +31,56 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListClusterLogsResponseBodyLogsLogInfo> LogInfo { get; set; }
             public class ListClusterLogsResponseBodyLogsLogInfo : TeaModel {
                 /// <summary>
-                /// The time when the log was created.
+                /// <para>The time when the log was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2019-09-18T13:24:13.000</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The severity level of the log entry.
+                /// <para>The level of the log entry. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>warn</description></item>
+                /// <item><description>error</description></item>
+                /// <item><description>info</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>info</para>
                 /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
                 public string Level { get; set; }
 
                 /// <summary>
-                /// The content of the log entry.
+                /// <para>The content of the log.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Begin to create cluster</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// The name of the operation.
+                /// <para>The type of the operation. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>CreateCluster</description></item>
+                /// <item><description>StartCluster</description></item>
+                /// <item><description>StopCluster</description></item>
+                /// <item><description>DeleteCluster</description></item>
+                /// <item><description>AddNodes</description></item>
+                /// <item><description>StartNodes</description></item>
+                /// <item><description>ResetNodes</description></item>
+                /// <item><description>StopNodes</description></item>
+                /// <item><description>DeleteNodes</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CreateCluster</para>
                 /// </summary>
                 [NameInMap("Operation")]
                 [Validation(Required=false)]
@@ -60,28 +91,40 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The number of the returned page.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries that are returned per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BBC2F93D-003A-49C4-850C-B826EECF6667</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of entries.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

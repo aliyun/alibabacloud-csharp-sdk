@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class DescribeAutoScaleConfigRequest : TeaModel {
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

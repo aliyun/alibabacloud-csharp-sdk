@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class GetIfEcsTypeSupportHtConfigRequest : TeaModel {
         /// <summary>
-        /// The instance type of the ECS instance.
+        /// <para>The Elastic Compute Service (ECS) instance type.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs.g6.large</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]

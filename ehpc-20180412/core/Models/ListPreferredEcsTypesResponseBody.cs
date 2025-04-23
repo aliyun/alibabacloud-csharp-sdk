@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListPreferredEcsTypesResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of recommended ECS instances. Each SeriesInfo element contains the recommended ECS instance types for various nodes in the E-HPC cluster.
+        /// <para>The list of recommended ECS instances. Each SeriesInfo element contains the recommended ECS instance types for various nodes in the E-HPC cluster.</para>
         /// </summary>
         [NameInMap("Series")]
         [Validation(Required=false)]
@@ -28,14 +31,14 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListPreferredEcsTypesResponseBodySeriesSeriesInfo> SeriesInfo { get; set; }
             public class ListPreferredEcsTypesResponseBodySeriesSeriesInfo : TeaModel {
                 /// <summary>
-                /// Recommended instance types for nodes in an E-HPC cluser.
+                /// <para>Recommended instance types for nodes in an E-HPC cluser.</para>
                 /// </summary>
                 [NameInMap("Roles")]
                 [Validation(Required=false)]
                 public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles Roles { get; set; }
                 public class ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles : TeaModel {
                     /// <summary>
-                    /// The list of recommended ECS instance types for compute nodes.
+                    /// <para>The list of recommended ECS instance types for compute nodes.</para>
                     /// </summary>
                     [NameInMap("Compute")]
                     [Validation(Required=false)]
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     }
 
                     /// <summary>
-                    /// The list of recommended ECS instance types for logon nodes.
+                    /// <para>The list of recommended ECS instance types for logon nodes.</para>
                     /// </summary>
                     [NameInMap("Login")]
                     [Validation(Required=false)]
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                     }
 
                     /// <summary>
-                    /// The list of recommended ECS instance types for management nodes.
+                    /// <para>The list of recommended ECS instance types for management nodes.</para>
                     /// </summary>
                     [NameInMap("Manager")]
                     [Validation(Required=false)]
@@ -76,24 +79,32 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
                 /// <summary>
-                /// The ID of the ECS instance series. Valid values:
+                /// <para>The ID of the ECS instance series. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>HighCompute: compute-optimized instance families</description></item>
+                /// <item><description>HighMem: memory-optimized instance families</description></item>
+                /// <item><description>GPU: GPU-accelerated instance families</description></item>
+                /// <item><description>All: all instance families</description></item>
+                /// </list>
                 /// 
-                /// *   HighCompute: compute-optimized instance families
-                /// *   HighMem: memory-optimized instance families
-                /// *   GPU: GPU-accelerated instance families
-                /// *   All: all instance families
+                /// <b>Example:</b>
+                /// <para>All</para>
                 /// </summary>
                 [NameInMap("SeriesId")]
                 [Validation(Required=false)]
                 public string SeriesId { get; set; }
 
                 /// <summary>
-                /// The name of the instance series. Valid values:
+                /// <para>The name of the instance series. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>SeriesHighCompute</description></item>
+                /// <item><description>SeriesHighMem</description></item>
+                /// <item><description>SeriesGPU</description></item>
+                /// <item><description>SeriesAll</description></item>
+                /// </list>
                 /// 
-                /// *   SeriesHighCompute
-                /// *   SeriesHighMem
-                /// *   SeriesGPU
-                /// *   SeriesAll
+                /// <b>Example:</b>
+                /// <para>SeriesAll</para>
                 /// </summary>
                 [NameInMap("SeriesName")]
                 [Validation(Required=false)]
@@ -104,7 +115,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// Indicates whether preemptible instances are supported.
+        /// <para>Indicates whether preemptible instances are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("SupportSpotInstance")]
         [Validation(Required=false)]

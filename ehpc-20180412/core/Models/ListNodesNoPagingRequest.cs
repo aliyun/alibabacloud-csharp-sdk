@@ -10,41 +10,53 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListNodesNoPagingRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The name of the node. You can perform a fuzzy search. MySQL regular expressions are supported.
+        /// <para>The name of the node. You can perform a fuzzy search. MySQL regular expressions are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Compute0</para>
         /// </summary>
         [NameInMap("HostName")]
         [Validation(Required=false)]
         public string HostName { get; set; }
 
         /// <summary>
-        /// The type of the node. Valid values:
+        /// <para>The type of the node. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Manager: management node</description></item>
+        /// <item><description>Login: logon node</description></item>
+        /// <item><description>Compute: compute node</description></item>
+        /// </list>
+        /// <para>Default value: Compute.</para>
         /// 
-        /// *   Manager: management node
-        /// *   Login: logon node
-        /// *   Compute: compute node
-        /// 
-        /// Default value: Compute.
+        /// <b>Example:</b>
+        /// <para>Compute</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public string Role { get; set; }
 
         /// <summary>
-        /// The sorting method of the node list. Valid values:
+        /// <para>The sorting method of the node list. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Forward: sorts the nodes in chronological order.</description></item>
+        /// <item><description>Backward: sorts the nodes in reverse chronological order.</description></item>
+        /// </list>
+        /// <para>Default value: Forward.</para>
         /// 
-        /// *   Forward: sorts the nodes in chronological order.
-        /// *   Backward: sorts the nodes in reverse chronological order.
-        /// 
-        /// Default value: Forward.
+        /// <b>Example:</b>
+        /// <para>Forward</para>
         /// </summary>
         [NameInMap("Sequence")]
         [Validation(Required=false)]

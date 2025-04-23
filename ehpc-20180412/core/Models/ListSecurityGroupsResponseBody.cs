@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListSecurityGroupsResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6D9A3378-61CA-4415-BEB0-1168C2A15975</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The security group ID.
+        /// <para>The security group ID.</para>
         /// </summary>
         [NameInMap("SecurityGroups")]
         [Validation(Required=false)]
@@ -30,7 +33,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The number of security groups.
+        /// <para>The total number of security groups that are assigned to the E-HPC cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

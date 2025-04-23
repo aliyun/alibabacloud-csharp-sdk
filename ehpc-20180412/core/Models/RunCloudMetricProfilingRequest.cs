@@ -10,48 +10,66 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class RunCloudMetricProfilingRequest : TeaModel {
         /// <summary>
-        /// The ID of the E-HPC cluster.
+        /// <para>The ID of the E-HPC cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-jeJki6****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The duration of the profiling process. Unit: seconds.
+        /// <para>The duration of the profiling process. Unit: seconds.</para>
+        /// <para>Value values: 10 to 300.</para>
+        /// <para>Default value: 30.</para>
         /// 
-        /// Value values: 10 to 300.
-        /// 
-        /// Default value: 30.
+        /// <b>Example:</b>
+        /// <para>300</para>
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
         /// <summary>
-        /// The sampling frequency. Unit: Hz. Valid values: 1 to 2000.
+        /// <para>The sampling frequency. Unit: Hz. Valid values: 1 to 2000.</para>
+        /// <para>Default value: 2000.</para>
         /// 
-        /// Default value: 2000.
+        /// <b>Example:</b>
+        /// <para>2000</para>
         /// </summary>
         [NameInMap("Freq")]
         [Validation(Required=false)]
         public int? Freq { get; set; }
 
         /// <summary>
-        /// The hostname.
+        /// <para>The hostname.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>compute0</para>
         /// </summary>
         [NameInMap("HostName")]
         [Validation(Required=false)]
         public string HostName { get; set; }
 
         /// <summary>
-        /// The ID of the profiling process.
+        /// <para>The ID of the profiling process.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>29075</para>
         /// </summary>
         [NameInMap("ProcessId")]
         [Validation(Required=false)]
         public int? ProcessId { get; set; }
 
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class DeleteQueueRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The name of the queue that you want to delete.
+        /// <para>The name of the queue that you want to delete.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/92176.html">ListQueues</a> operation to query the name of the queue.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListQueues](~~92176~~) operation to query the name of the queue.
+        /// <b>Example:</b>
+        /// <para>workq</para>
         /// </summary>
         [NameInMap("QueueName")]
         [Validation(Required=false)]

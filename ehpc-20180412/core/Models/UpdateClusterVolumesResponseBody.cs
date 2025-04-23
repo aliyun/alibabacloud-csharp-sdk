@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class UpdateClusterVolumesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F6757FA4-8FED-4602-B7F5-3550C0842122</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

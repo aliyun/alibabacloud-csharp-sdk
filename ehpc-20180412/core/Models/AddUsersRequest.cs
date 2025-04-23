@@ -10,62 +10,74 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class AddUsersRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the asynchronous mode for this request.
+        /// <para>Specifies whether to use asynchronous message links to add the users.</para>
+        /// <para>Default value: false.</para>
         /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Async")]
         [Validation(Required=false)]
         public bool? Async { get; set; }
 
         /// <summary>
-        /// The cluster ID.
+        /// <para>The cluster ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to obtain the cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The information about the user.
+        /// <para>The users. You can specify 1 to 100 users.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public List<AddUsersRequestUser> User { get; set; }
         public class AddUsersRequestUser : TeaModel {
             /// <summary>
-            /// The permission group to which the user N belongs. Valid values:
+            /// <para>The permission group of the new user. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>users: ordinary permissions, which are suitable for ordinary users that need only to submit and debug jobs.</description></item>
+            /// <item><description>wheel: sudo permissions, which are suitable for administrators who need to manage clusters. In addition to submitting and debugging jobs, you can also run sudo commands to install software and restart nodes.</description></item>
+            /// </list>
             /// 
-            /// *   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.
-            /// *   wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.
-            /// 
-            /// Valid values of N: 1 to 100.
+            /// <b>Example:</b>
+            /// <para>users</para>
             /// </summary>
             [NameInMap("Group")]
             [Validation(Required=false)]
             public string Group { get; set; }
 
             /// <summary>
-            /// The name of the user that you want to add. The name must be 6 to 30 characters in length and can contain letters, digits, and periods (.). It must start with a letter.
+            /// <para>The username of the new user. The username must be 6 to 30 characters in length, and can contain letters, digits and periods (.). The username must start with a letter.</para>
             /// 
-            /// Valid values of N: 1 to 100.
+            /// <b>Example:</b>
+            /// <para>user1</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The password of the Nth user. The password must be 8 to 30 characters in length and contain three of the following items:
+            /// <para>The password of the new user. The password must be 8 to 30 characters in length and must contain at least three of the following character types:</para>
+            /// <list type="bullet">
+            /// <item><description>Uppercase letter</description></item>
+            /// <item><description>Lowercase letter</description></item>
+            /// <item><description>Digit</description></item>
+            /// <item><description>Special character: <c>()~!@#$%^&amp;*-_+=|{}[]:;\\&quot;/&lt;&gt;,.?/</c></description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> We recommend that you use HTTPS to call this operation to avoid password leaks.</para>
+            /// </remarks>
             /// 
-            /// *   Uppercase letter
-            /// *   Lowercase letter
-            /// *   Digit
-            /// *   Special character: `()~!@#$%^&*-_+=|{}[]:;\"/<>,.?/`
-            /// 
-            /// Valid values of N: 1 to 100.
-            /// 
-            /// >  We recommend that you use HTTPS to call API operations to avoid password leaks.
+            /// <b>Example:</b>
+            /// <para>1@a2****</para>
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]

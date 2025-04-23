@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class DescribeEstackImageResponseBody : TeaModel {
         /// <summary>
-        /// The array of base images.
+        /// <para>The array of base images.</para>
         /// </summary>
         [NameInMap("ImageList")]
         [Validation(Required=false)]
@@ -21,35 +21,50 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<DescribeEstackImageResponseBodyImageListImageListInfo> ImageListInfo { get; set; }
             public class DescribeEstackImageResponseBodyImageListImageListInfo : TeaModel {
                 /// <summary>
-                /// The image name.
+                /// <para>The image name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tensorflow-21.09-tf1-py3.sif</para>
                 /// </summary>
                 [NameInMap("ImageName")]
                 [Validation(Required=false)]
                 public string ImageName { get; set; }
 
                 /// <summary>
-                /// The size of the image.
+                /// <para>The size of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>65535 GiB</para>
                 /// </summary>
                 [NameInMap("ImageSize")]
                 [Validation(Required=false)]
                 public int? ImageSize { get; set; }
 
                 /// <summary>
-                /// The type of the image.
+                /// <para>The type of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>singularity</para>
                 /// </summary>
                 [NameInMap("ImageType")]
                 [Validation(Required=false)]
                 public string ImageType { get; set; }
 
                 /// <summary>
-                /// The download URL of the image.
+                /// <para>The download URL of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://xxxx.oss-cn-hangzhou.aliyuncs.com/eStackPackage/singularity/tensorflow-21.09-tf1-py3.sif">http://xxxx.oss-cn-hangzhou.aliyuncs.com/eStackPackage/singularity/tensorflow-21.09-tf1-py3.sif</a></para>
                 /// </summary>
                 [NameInMap("ImageUrl")]
                 [Validation(Required=false)]
                 public string ImageUrl { get; set; }
 
                 /// <summary>
-                /// The time when the image was last modified.
+                /// <para>The time when the image was last modified.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-05-05T07:10:55.000Z</para>
                 /// </summary>
                 [NameInMap("RecentUpdateTime")]
                 [Validation(Required=false)]
@@ -60,28 +75,40 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The page number returned.
+        /// <para>The page number returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2D69A58F-345C-4FDE-88E4-BF518948xxxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of images.
+        /// <para>The total number of images.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

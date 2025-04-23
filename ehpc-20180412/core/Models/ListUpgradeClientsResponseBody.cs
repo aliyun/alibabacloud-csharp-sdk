@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListUpgradeClientsResponseBody : TeaModel {
         /// <summary>
-        /// The upgrade records of the cluster client.
+        /// <para>The update records of ehpcutil in the cluster.</para>
         /// </summary>
         [NameInMap("ClientRecords")]
         [Validation(Required=false)]
         public List<ListUpgradeClientsResponseBodyClientRecords> ClientRecords { get; set; }
         public class ListUpgradeClientsResponseBodyClientRecords : TeaModel {
             /// <summary>
-            /// The version of the E-HPC client after the upgrade.
+            /// <para>The version of ehpcutil after the update.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.2.21</para>
             /// </summary>
             [NameInMap("NewVersion")]
             [Validation(Required=false)]
             public string NewVersion { get; set; }
 
             /// <summary>
-            /// The version of the E-HPC client before the upgrade.
+            /// <para>The version of ehpcutil before the update.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.2.16</para>
             /// </summary>
             [NameInMap("OldVersion")]
             [Validation(Required=false)]
             public string OldVersion { get; set; }
 
             /// <summary>
-            /// The ID of the user that upgraded the E-HPC client.
+            /// <para>The user ID (UID) whose ehpcutil is updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>129******84</para>
             /// </summary>
             [NameInMap("SubUid")]
             [Validation(Required=false)]
             public string SubUid { get; set; }
 
             /// <summary>
-            /// The time when the operation was performed.
+            /// <para>The update time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-08-26T06:26:57.000Z</para>
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -47,21 +59,30 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The current version of the E-HPC client.
+        /// <para>The current version of ehpcutil in the cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.2.21</para>
         /// </summary>
         [NameInMap("CurrentVersion")]
         [Validation(Required=false)]
         public string CurrentVersion { get; set; }
 
         /// <summary>
-        /// The latest version of the E-HPC client.
+        /// <para>The latest version of ehpcutil that is released.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.2.22</para>
         /// </summary>
         [NameInMap("LatestVersion")]
         [Validation(Required=false)]
         public string LatestVersion { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>89A1AC0F-4A6C-4F3D-98F9-BEF9A823****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

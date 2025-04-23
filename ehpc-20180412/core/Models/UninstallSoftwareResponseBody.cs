@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class UninstallSoftwareResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C84FB8EF-5580-4B82-9BDE-6657814C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

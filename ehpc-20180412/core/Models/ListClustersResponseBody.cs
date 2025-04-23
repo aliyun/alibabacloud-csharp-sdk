@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListClustersResponseBody : TeaModel {
         /// <summary>
-        /// The list of clusters.
+        /// <para>The list of clusters.</para>
         /// </summary>
         [NameInMap("Clusters")]
         [Validation(Required=false)]
@@ -21,84 +21,116 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListClustersResponseBodyClustersClusterInfoSimple> ClusterInfoSimple { get; set; }
             public class ListClustersResponseBodyClustersClusterInfoSimple : TeaModel {
                 /// <summary>
-                /// The server type of the account. Valid values:
+                /// <para>The server type of the account. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>nis</description></item>
+                /// <item><description>ldap</description></item>
+                /// </list>
                 /// 
-                /// *   nis
-                /// *   ldap
+                /// <b>Example:</b>
+                /// <para>nis</para>
                 /// </summary>
                 [NameInMap("AccountType")]
                 [Validation(Required=false)]
                 public string AccountType { get; set; }
 
                 /// <summary>
-                /// The operating system tag of the base image. The tag was used only by the management node.
+                /// <para>The operating system tag of the base image. The tag was used only by the management node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CentOS_7.2_64</para>
                 /// </summary>
                 [NameInMap("BaseOsTag")]
                 [Validation(Required=false)]
                 public string BaseOsTag { get; set; }
 
                 /// <summary>
-                /// The version of the client.
+                /// <para>The version of the client.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.0.64</para>
                 /// </summary>
                 [NameInMap("ClientVersion")]
                 [Validation(Required=false)]
                 public string ClientVersion { get; set; }
 
                 /// <summary>
-                /// The maximum hourly price for the ECS instance under the compute node. The return value can be accurate to three decimal places.
+                /// <para>The maximum hourly price for the ECS instance under the compute node. The return value can be accurate to three decimal places.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.034</para>
                 /// </summary>
                 [NameInMap("ComputeSpotPriceLimit")]
                 [Validation(Required=false)]
                 public float? ComputeSpotPriceLimit { get; set; }
 
                 /// <summary>
-                /// The bidding method of the compute nodes. Valid values:
+                /// <para>The bidding method of the compute nodes. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>NoSpot: The instances of the compute node are pay-as-you-go instances.</description></item>
+                /// <item><description>SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.</description></item>
+                /// <item><description>SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.</description></item>
+                /// </list>
                 /// 
-                /// *   NoSpot: The instances of the compute node are pay-as-you-go instances.
-                /// *   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.
-                /// *   SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.
+                /// <b>Example:</b>
+                /// <para>NoSpot</para>
                 /// </summary>
                 [NameInMap("ComputeSpotStrategy")]
                 [Validation(Required=false)]
                 public string ComputeSpotStrategy { get; set; }
 
                 /// <summary>
-                /// The information about compute nodes.
+                /// <para>The information about compute nodes.</para>
                 /// </summary>
                 [NameInMap("Computes")]
                 [Validation(Required=false)]
                 public ListClustersResponseBodyClustersClusterInfoSimpleComputes Computes { get; set; }
                 public class ListClustersResponseBodyClustersClusterInfoSimpleComputes : TeaModel {
                     /// <summary>
-                    /// The number of abnormal nodes.
+                    /// <para>The number of abnormal nodes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("ExceptionCount")]
                     [Validation(Required=false)]
                     public int? ExceptionCount { get; set; }
 
                     /// <summary>
-                    /// The number of normal nodes.
+                    /// <para>The number of normal nodes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("NormalCount")]
                     [Validation(Required=false)]
                     public int? NormalCount { get; set; }
 
                     /// <summary>
-                    /// The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.
+                    /// <para>The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("OperatingCount")]
                     [Validation(Required=false)]
                     public int? OperatingCount { get; set; }
 
                     /// <summary>
-                    /// The number of stopped nodes.
+                    /// <para>The number of stopped nodes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("StoppedCount")]
                     [Validation(Required=false)]
                     public int? StoppedCount { get; set; }
 
                     /// <summary>
-                    /// The total number of nodes.
+                    /// <para>The total number of nodes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2</para>
                     /// </summary>
                     [NameInMap("Total")]
                     [Validation(Required=false)]
@@ -107,164 +139,226 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
                 /// <summary>
-                /// The number of compute nodes in the cluster.
+                /// <para>The number of compute nodes in the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// The time when the instance was created.
+                /// <para>The time when the instance was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2020-10-30T07:39:20.000Z</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// The mode in which the cluster was deployed. Valid values:
+                /// <para>The mode in which the cluster was deployed. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.</description></item>
+                /// <item><description>Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.</description></item>
+                /// <item><description>Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.</description></item>
+                /// <item><description>Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.</description></item>
+                /// </list>
                 /// 
-                /// *   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.
-                /// *   Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.
-                /// *   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.
-                /// *   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.
+                /// <b>Example:</b>
+                /// <para>Standard</para>
                 /// </summary>
                 [NameInMap("DeployMode")]
                 [Validation(Required=false)]
                 public string DeployMode { get; set; }
 
                 /// <summary>
-                /// The description of the cluster.
+                /// <para>The description of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>clusterdescription</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The version of E-HPC.
+                /// <para>The version of E-HPC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.0.0</para>
                 /// </summary>
                 [NameInMap("EhpcVersion")]
                 [Validation(Required=false)]
                 public string EhpcVersion { get; set; }
 
                 /// <summary>
-                /// Indicates whether plug-ins were used in the cluster. Valid values:
+                /// <para>Indicates whether plug-ins were used in the cluster. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: Plug-ins are used.</description></item>
+                /// <item><description>false: Plug-ins are not used.</description></item>
+                /// </list>
+                /// <para>Default value: false</para>
                 /// 
-                /// *   true: Plug-ins are used.
-                /// *   false: Plug-ins are not used.
-                /// 
-                /// Default value: false
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("HasPlugin")]
                 [Validation(Required=false)]
                 public bool? HasPlugin { get; set; }
 
                 /// <summary>
-                /// The ID of the cluster.
+                /// <para>The ID of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ehpc-hz-jeJki6****</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The ID of the image.
+                /// <para>The ID of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>wi_1607_x64_dtc_zh_40G_alibase****</para>
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The type of the image. Valid values:
+                /// <para>The type of the image. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>system: public image</description></item>
+                /// <item><description>self: custom image</description></item>
+                /// <item><description>others: shared image</description></item>
+                /// <item><description>marketplace: Alibaba Cloud Marketplace image</description></item>
+                /// </list>
                 /// 
-                /// *   system: public image
-                /// *   self: custom image
-                /// *   others: shared image
-                /// *   marketplace: Alibaba Cloud Marketplace image
+                /// <b>Example:</b>
+                /// <para>system</para>
                 /// </summary>
                 [NameInMap("ImageOwnerAlias")]
                 [Validation(Required=false)]
                 public string ImageOwnerAlias { get; set; }
 
                 /// <summary>
-                /// The billing method of the nodes in the cluster. Valid values:
+                /// <para>The billing method of the nodes in the cluster. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>PostPaid: pay-as-you-go</description></item>
+                /// <item><description>PrePaid: subscription</description></item>
+                /// </list>
                 /// 
-                /// *   PostPaid: pay-as-you-go
-                /// *   PrePaid: subscription
+                /// <b>Example:</b>
+                /// <para>PostPaid</para>
                 /// </summary>
                 [NameInMap("InstanceChargeType")]
                 [Validation(Required=false)]
                 public string InstanceChargeType { get; set; }
 
                 /// <summary>
-                /// The instance type of the compute nodes.
+                /// <para>The instance type of the compute nodes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs.n1.tiny</para>
                 /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// Indicates whether a scaling group was enabled. Valid values:
+                /// <para>Indicates whether a scaling group was enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: A scaling group is enabled.</description></item>
+                /// <item><description>false: No scaling group is enabled.</description></item>
+                /// </list>
                 /// 
-                /// *   true: A scaling group is enabled.
-                /// *   false: No scaling group is enabled.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("IsComputeEss")]
                 [Validation(Required=false)]
                 public bool? IsComputeEss { get; set; }
 
                 /// <summary>
-                /// The location where the cluster was deployed. Valid values:
+                /// <para>The location where the cluster was deployed. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>OnPremise: The cluster is deployed on a hybrid cloud.</description></item>
+                /// <item><description>PublicCloud: The cluster is deployed on a public cloud.</description></item>
+                /// </list>
                 /// 
-                /// *   OnPremise: The cluster is deployed on a hybrid cloud.
-                /// *   PublicCloud: The cluster is deployed on a public cloud.
+                /// <b>Example:</b>
+                /// <para>PublicCloud</para>
                 /// </summary>
                 [NameInMap("Location")]
                 [Validation(Required=false)]
                 public string Location { get; set; }
 
                 /// <summary>
-                /// The list of logon nodes.
+                /// <para>The list of logon nodes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;Id&quot;: &quot;i-bp13x4is8pvdhws7e****&quot;}</para>
                 /// </summary>
                 [NameInMap("LoginNodes")]
                 [Validation(Required=false)]
                 public string LoginNodes { get; set; }
 
                 /// <summary>
-                /// The list of management nodes.
+                /// <para>The list of management nodes.</para>
                 /// </summary>
                 [NameInMap("Managers")]
                 [Validation(Required=false)]
                 public ListClustersResponseBodyClustersClusterInfoSimpleManagers Managers { get; set; }
                 public class ListClustersResponseBodyClustersClusterInfoSimpleManagers : TeaModel {
                     /// <summary>
-                    /// The number of abnormal nodes.
+                    /// <para>The number of abnormal nodes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("ExceptionCount")]
                     [Validation(Required=false)]
                     public int? ExceptionCount { get; set; }
 
                     /// <summary>
-                    /// The number of normal nodes.
+                    /// <para>The number of normal nodes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("NormalCount")]
                     [Validation(Required=false)]
                     public int? NormalCount { get; set; }
 
                     /// <summary>
-                    /// The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.
+                    /// <para>The number of nodes that are being used in the queue. This includes those that are being initialized, installed, or released.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("OperatingCount")]
                     [Validation(Required=false)]
                     public int? OperatingCount { get; set; }
 
                     /// <summary>
-                    /// The number of stopped nodes.
+                    /// <para>The number of stopped nodes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("StoppedCount")]
                     [Validation(Required=false)]
                     public int? StoppedCount { get; set; }
 
                     /// <summary>
-                    /// The total number of management nodes.
+                    /// <para>The total number of management nodes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2</para>
                     /// </summary>
                     [NameInMap("Total")]
                     [Validation(Required=false)]
@@ -273,96 +367,131 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
                 /// <summary>
-                /// The name of the cluster.
+                /// <para>The name of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The prefix of the node.
+                /// <para>The prefix of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
                 /// </summary>
                 [NameInMap("NodePrefix")]
                 [Validation(Required=false)]
                 public string NodePrefix { get; set; }
 
                 /// <summary>
-                /// The suffix of the node.
+                /// <para>The suffix of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>name</para>
                 /// </summary>
                 [NameInMap("NodeSuffix")]
                 [Validation(Required=false)]
                 public string NodeSuffix { get; set; }
 
                 /// <summary>
-                /// The operating system tag of the image.
+                /// <para>The operating system tag of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CentOS_7.2_64</para>
                 /// </summary>
                 [NameInMap("OsTag")]
                 [Validation(Required=false)]
                 public string OsTag { get; set; }
 
                 /// <summary>
-                /// The ID of the region.
+                /// <para>The ID of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// The resource group ID.You can call the ListResourceGroups operation to query the IDs of resource groups.
+                /// <para>The resource group ID.You can call the ListResourceGroups operation to query the IDs of resource groups.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-acfmxazb4ph****</para>
                 /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// The type of the scheduler. Valid values:
+                /// <para>The type of the scheduler. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>pbs</description></item>
+                /// <item><description>slurm</description></item>
+                /// <item><description>opengridscheduler</description></item>
+                /// <item><description>deadline</description></item>
+                /// </list>
                 /// 
-                /// *   pbs
-                /// *   slurm
-                /// *   opengridscheduler
-                /// *   deadline
+                /// <b>Example:</b>
+                /// <para>pbs</para>
                 /// </summary>
                 [NameInMap("SchedulerType")]
                 [Validation(Required=false)]
                 public string SchedulerType { get; set; }
 
                 /// <summary>
-                /// The status of the cluster. Valid values:
+                /// <para>The status of the cluster. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>uninit: The cluster is not initialized.</description></item>
+                /// <item><description>creating: The cluster is being created.</description></item>
+                /// <item><description>init: The cluster is being initialized.</description></item>
+                /// <item><description>running: The cluster is running.</description></item>
+                /// <item><description>exception: The cluster encounters an exception.</description></item>
+                /// <item><description>releasing: The cluster is being released.</description></item>
+                /// </list>
                 /// 
-                /// *   uninit: The cluster is not initialized.
-                /// *   creating: The cluster is being created.
-                /// *   init: The cluster is being initialized.
-                /// *   running: The cluster is running.
-                /// *   exception: The cluster encounters an exception.
-                /// *   releasing: The cluster is being released.
+                /// <b>Example:</b>
+                /// <para>running</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The statistics of all resources in the cluster.
+                /// <para>The statistics of all resources in the cluster.</para>
                 /// </summary>
                 [NameInMap("TotalResources")]
                 [Validation(Required=false)]
                 public ListClustersResponseBodyClustersClusterInfoSimpleTotalResources TotalResources { get; set; }
                 public class ListClustersResponseBodyClustersClusterInfoSimpleTotalResources : TeaModel {
                     /// <summary>
-                    /// The number of CPU cores. Unit: cores.
+                    /// <para>The number of CPU cores. Unit: cores.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("Cpu")]
                     [Validation(Required=false)]
                     public int? Cpu { get; set; }
 
                     /// <summary>
-                    /// The number of GPU cards. Unit: cards.
+                    /// <para>The number of GPU cards. Unit: cards.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("Gpu")]
                     [Validation(Required=false)]
                     public int? Gpu { get; set; }
 
                     /// <summary>
-                    /// The memory size. Unit: MiB.
+                    /// <para>The memory size. Unit: MiB.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1024</para>
                     /// </summary>
                     [NameInMap("Memory")]
                     [Validation(Required=false)]
@@ -371,28 +500,37 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
                 /// <summary>
-                /// The number of consumed resources in the cluster.
+                /// <para>The number of consumed resources in the cluster.</para>
                 /// </summary>
                 [NameInMap("UsedResources")]
                 [Validation(Required=false)]
                 public ListClustersResponseBodyClustersClusterInfoSimpleUsedResources UsedResources { get; set; }
                 public class ListClustersResponseBodyClustersClusterInfoSimpleUsedResources : TeaModel {
                     /// <summary>
-                    /// The number of CPU cores. Unit: cores.
+                    /// <para>The number of CPU cores. Unit: cores.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("Cpu")]
                     [Validation(Required=false)]
                     public int? Cpu { get; set; }
 
                     /// <summary>
-                    /// The number of GPU cards. Unit: cards.
+                    /// <para>The number of GPU cards. Unit: cards.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("Gpu")]
                     [Validation(Required=false)]
                     public int? Gpu { get; set; }
 
                     /// <summary>
-                    /// The memory size. Unit: MiB.
+                    /// <para>The memory size. Unit: MiB.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1024</para>
                     /// </summary>
                     [NameInMap("Memory")]
                     [Validation(Required=false)]
@@ -401,21 +539,30 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
                 /// <summary>
-                /// The ID of the vSwitch.
+                /// <para>The ID of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-bp1lfcjbfb099rrjn****</para>
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// The ID of the virtual private cloud (VPC).
+                /// <para>The ID of the virtual private cloud (VPC).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-b3f3edefefeep0760yju****</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// The ID of the zone.
+                /// <para>The ID of the zone.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-c</para>
                 /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
@@ -426,28 +573,40 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The number of the returned page.
+        /// <para>The number of the returned page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of returned entries.
+        /// <para>The total number of returned entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

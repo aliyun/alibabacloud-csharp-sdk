@@ -10,22 +10,30 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class SetQueueRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Node")]
         [Validation(Required=false)]
         public List<SetQueueRequestNode> Node { get; set; }
         public class SetQueueRequestNode : TeaModel {
             /// <summary>
-            /// The name of the compute node that you want to move. Valid values of N: 1 to 100.
+            /// <para>The name of the compute node that you want to move. Valid values of N: 1 to 100.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87161.html">ListNodes</a> operation to query the names of the compute nodes.</para>
             /// 
-            /// You can call the [ListNodes](~~87161~~) operation to query the names of the compute nodes.
+            /// <b>Example:</b>
+            /// <para>compute1</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -34,9 +42,12 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The name of the destination queue.
+        /// <para>The name of the destination queue.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/92176.html">ListQueues</a> operation to query the queue name.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListQueues](~~92176~~) operation to query the queue name.
+        /// <b>Example:</b>
+        /// <para>work</para>
         /// </summary>
         [NameInMap("QueueName")]
         [Validation(Required=false)]

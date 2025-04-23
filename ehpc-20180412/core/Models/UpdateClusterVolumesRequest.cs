@@ -10,56 +10,73 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class UpdateClusterVolumesRequest : TeaModel {
         /// <summary>
-        /// The list of file system information.
+        /// <para>The file systems that you want to mount.</para>
         /// </summary>
         [NameInMap("AdditionalVolumes")]
         [Validation(Required=false)]
         public List<UpdateClusterVolumesRequestAdditionalVolumes> AdditionalVolumes { get; set; }
         public class UpdateClusterVolumesRequestAdditionalVolumes : TeaModel {
             /// <summary>
-            /// The queue name of the attached mounted file system.
+            /// <para>The queue name of the file system to be mounted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>work</para>
             /// </summary>
             [NameInMap("JobQueue")]
             [Validation(Required=false)]
             public string JobQueue { get; set; }
 
             /// <summary>
-            /// The on-premises mount directory for the additional mounted file system.
+            /// <para>The on-premises mount directory of the file system to be mounted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/ff</para>
             /// </summary>
             [NameInMap("LocalDirectory")]
             [Validation(Required=false)]
             public string LocalDirectory { get; set; }
 
             /// <summary>
-            /// The storage location of the attached mounted file system. Valid values:
+            /// <para>The storage location of the file system to be mounted. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>OnPremise: The file system is stored in a hybrid cloud.</description></item>
+            /// <item><description>PublicCloud: The file system cluster is stored in a public cloud.</description></item>
+            /// </list>
             /// 
-            /// *   OnPremise: The cluster is deployed on a hybrid cloud.
-            /// *   PublicCloud: The cluster is deployed on a public cloud.
+            /// <b>Example:</b>
+            /// <para>PublicCloud</para>
             /// </summary>
             [NameInMap("Location")]
             [Validation(Required=false)]
             public string Location { get; set; }
 
             /// <summary>
-            /// The remote directory to be mounted by the additional mounted file system.
+            /// <para>The remote directory to which the file system is mounted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/test</para>
             /// </summary>
             [NameInMap("RemoteDirectory")]
             [Validation(Required=false)]
             public string RemoteDirectory { get; set; }
 
             /// <summary>
-            /// The array of the node on which the file system is mounted.
+            /// <para>The array of the nodes to which the file system is mounted.</para>
             /// </summary>
             [NameInMap("Roles")]
             [Validation(Required=false)]
             public List<UpdateClusterVolumesRequestAdditionalVolumesRoles> Roles { get; set; }
             public class UpdateClusterVolumesRequestAdditionalVolumesRoles : TeaModel {
                 /// <summary>
-                /// The node type on which the additional mounted file system is mounted. Valid values:
+                /// <para>The type of the node to which the file system is mounted. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Manager: management node</description></item>
+                /// <item><description>Login: logon node</description></item>
+                /// <item><description>Compute: compute node</description></item>
+                /// </list>
                 /// 
-                /// *   Manager: management node
-                /// *   Login: logon node
-                /// *   Compute: compute node
+                /// <b>Example:</b>
+                /// <para>[&quot;Compute&quot;]</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -68,38 +85,54 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             }
 
             /// <summary>
-            /// The ID of the additional mounted file system.
+            /// <para>The ID of the file system to be mounted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>extreme-00b88****</para>
             /// </summary>
             [NameInMap("VolumeId")]
             [Validation(Required=false)]
             public string VolumeId { get; set; }
 
             /// <summary>
-            /// The mount option of the attached mounted file system.
+            /// <para>The mount option of the file system to be mounted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>-t nfs -o vers=3,nolock,noresvport</para>
             /// </summary>
             [NameInMap("VolumeMountOption")]
             [Validation(Required=false)]
             public string VolumeMountOption { get; set; }
 
             /// <summary>
-            /// The domain name of the mount target for the additional mounted file system.
+            /// <para>The endpoint of the mount target of the file system.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0088****-sihc.cn-hangzhou.extreme.nas.aliyuncs.com</para>
             /// </summary>
             [NameInMap("VolumeMountpoint")]
             [Validation(Required=false)]
             public string VolumeMountpoint { get; set; }
 
             /// <summary>
-            /// The protocol type of the additional mounted file system. Valid values:
+            /// <para>The protocol type of the file system to be mounted. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NFS</description></item>
+            /// <item><description>SMB</description></item>
+            /// </list>
             /// 
-            /// *   NFS
-            /// *   SMB
+            /// <b>Example:</b>
+            /// <para>NFS</para>
             /// </summary>
             [NameInMap("VolumeProtocol")]
             [Validation(Required=false)]
             public string VolumeProtocol { get; set; }
 
             /// <summary>
-            /// The type of the additional mounted file system. Only NAS is supported.
+            /// <para>The type of the file system to be mounted. Set the value to NAS.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NAS</para>
             /// </summary>
             [NameInMap("VolumeType")]
             [Validation(Required=false)]
@@ -108,7 +141,11 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

@@ -10,17 +10,20 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class StopVisualServiceResponseBody : TeaModel {
         /// <summary>
-        /// The status of the VNC Remote Service. Valid values:
+        /// <para>The returned message.</para>
         /// 
-        /// *   Service started
-        /// *   Service stopped
+        /// <b>Example:</b>
+        /// <para>Service stopped</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>896D338C-E4F4-41EC-A154-D605E5DE6880</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

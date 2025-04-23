@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class InstallSoftwareRequest : TeaModel {
         /// <summary>
-        /// The name of the software that you want to install.
+        /// <para>The name of the software that you want to install.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87216.html">ListSoftwares</a> operation to query the software that can be installed.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListSoftwares](~~87216~~) operation to query the software that can be installed.
+        /// <b>Example:</b>
+        /// <para>ABYSS_2.1.5</para>
         /// </summary>
         [NameInMap("Application")]
         [Validation(Required=false)]
         public string Application { get; set; }
 
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The cluster ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+        /// <b>Example:</b>
+        /// <para>ehpc-hz-jeJki6****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

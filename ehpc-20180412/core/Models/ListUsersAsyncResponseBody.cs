@@ -10,49 +10,67 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListUsersAsyncResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the asynchronous task.
+        /// <para>The ID of the asynchronous task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>t-sh03egi3mls****</para>
         /// </summary>
         [NameInMap("AsyncId")]
         [Validation(Required=false)]
         public string AsyncId { get; set; }
 
         /// <summary>
-        /// The status of the asynchronous task.
+        /// <para>The status of the asynchronous task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("AsyncStatus")]
         [Validation(Required=false)]
         public string AsyncStatus { get; set; }
 
         /// <summary>
-        /// The number of the page returned. Pages start from page 1.
+        /// <para>The number of the page returned. Pages start from page 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries returned per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9A05F620-ED46-4A57-95F1-C67D6D3C5DD2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The total number of users.
+        /// <para>The total number of users.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// The list of users.
+        /// <para>The list of users.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -63,35 +81,50 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListUsersAsyncResponseBodyUsersUserInfo> UserInfo { get; set; }
             public class ListUsersAsyncResponseBodyUsersUserInfo : TeaModel {
                 /// <summary>
-                /// The time when the user was created.
+                /// <para>The time when the user was created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2022-09-28T09:05:26.000Z</para>
                 /// </summary>
                 [NameInMap("AddTime")]
                 [Validation(Required=false)]
                 public string AddTime { get; set; }
 
                 /// <summary>
-                /// The user groups.
+                /// <para>The user groups.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>wheel</para>
                 /// </summary>
                 [NameInMap("Group")]
                 [Validation(Required=false)]
                 public string Group { get; set; }
 
                 /// <summary>
-                /// The user group ID.
+                /// <para>The user group ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// The username of the account.
+                /// <para>The username of the account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>testuser</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The user ID.
+                /// <para>The user ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1000</para>
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]

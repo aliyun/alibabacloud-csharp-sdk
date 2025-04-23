@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListCustomImagesResponseBody : TeaModel {
         /// <summary>
-        /// The list of custom images and shared images that are supported by the E-HPC.
+        /// <para>The list of community images, including custom images and shared images.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
@@ -21,51 +21,55 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
             public List<ListCustomImagesResponseBodyImagesImageInfo> ImageInfo { get; set; }
             public class ListCustomImagesResponseBodyImagesImageInfo : TeaModel {
                 /// <summary>
-                /// The image tag of the base operating system.
+                /// <para>The image tag of the operating system.</para>
                 /// </summary>
                 [NameInMap("BaseOsTag")]
                 [Validation(Required=false)]
                 public ListCustomImagesResponseBodyImagesImageInfoBaseOsTag BaseOsTag { get; set; }
                 public class ListCustomImagesResponseBodyImagesImageInfoBaseOsTag : TeaModel {
                     /// <summary>
-                    /// The architecture of the operating system. Valid values:
+                    /// <para>The architecture of the operating system. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>i386</description></item>
+                    /// <item><description>x86_64</description></item>
+                    /// </list>
                     /// 
-                    /// *   i386
-                    /// *   x86\_64
+                    /// <b>Example:</b>
+                    /// <para>i386</para>
                     /// </summary>
                     [NameInMap("Architecture")]
                     [Validation(Required=false)]
                     public string Architecture { get; set; }
 
                     /// <summary>
-                    /// The image tag of the operating system.
+                    /// <para>The tags of the image.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>CentOS_7.2_64</para>
                     /// </summary>
                     [NameInMap("OsTag")]
                     [Validation(Required=false)]
                     public string OsTag { get; set; }
 
                     /// <summary>
-                    /// The release version of the operating system. Valid values:
+                    /// <para>The OS. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>CentOS</description></item>
+                    /// <item><description>windows</description></item>
+                    /// </list>
                     /// 
-                    /// *   CentOS
-                    /// *   Ubuntu
-                    /// *   SUSE
-                    /// *   OpenSUSE
-                    /// *   Debian
-                    /// *   CoreOS
-                    /// *   Aliyun
-                    /// *   Windows Server 2003
-                    /// *   Windows Server 2008
-                    /// *   Windows Server 2012
-                    /// *   Others Linux
-                    /// *   Customized Linux
+                    /// <b>Example:</b>
+                    /// <para>CentOS</para>
                     /// </summary>
                     [NameInMap("Platform")]
                     [Validation(Required=false)]
                     public string Platform { get; set; }
 
                     /// <summary>
-                    /// The version number of the operating system.
+                    /// <para>The version of the operating system.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>7.2</para>
                     /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
@@ -74,76 +78,105 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
                 /// <summary>
-                /// The description of the image.
+                /// <para>The description of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ExampleDescription</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// The ID of the image.
+                /// <para>The image ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>m-bp181x855551ww5yq****</para>
                 /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// The name of the image.
+                /// <para>The name of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CHESS5V5.0.27</para>
                 /// </summary>
                 [NameInMap("ImageName")]
                 [Validation(Required=false)]
                 public string ImageName { get; set; }
 
                 /// <summary>
-                /// The type of image. Valid values:
+                /// <para>The type of the image. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>self: custom image</description></item>
+                /// <item><description>others: shared image</description></item>
+                /// </list>
                 /// 
-                /// *   self: custom image
-                /// *   others: shared image
+                /// <b>Example:</b>
+                /// <para>self</para>
                 /// </summary>
                 [NameInMap("ImageOwnerAlias")]
                 [Validation(Required=false)]
                 public string ImageOwnerAlias { get; set; }
 
                 /// <summary>
-                /// An array of system images that are supported by E-HPC.
+                /// <para>An array of system images that are supported by E-HPC.</para>
                 /// </summary>
                 [NameInMap("OsTag")]
                 [Validation(Required=false)]
                 public ListCustomImagesResponseBodyImagesImageInfoOsTag OsTag { get; set; }
                 public class ListCustomImagesResponseBodyImagesImageInfoOsTag : TeaModel {
                     /// <summary>
-                    /// The architecture of the operating system. Valid values:
+                    /// <para>The architecture of the operating system. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>i386</description></item>
+                    /// <item><description>x86_64</description></item>
+                    /// </list>
                     /// 
-                    /// *   i386
-                    /// *   x86\_64
+                    /// <b>Example:</b>
+                    /// <para>x86_64</para>
                     /// </summary>
                     [NameInMap("Architecture")]
                     [Validation(Required=false)]
                     public string Architecture { get; set; }
 
                     /// <summary>
-                    /// The image tag of the base operating system.
+                    /// <para>The image tag of the operating system.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>CentOS_7.2_64</para>
                     /// </summary>
                     [NameInMap("BaseOsTag")]
                     [Validation(Required=false)]
                     public string BaseOsTag { get; set; }
 
                     /// <summary>
-                    /// The image tag of the operating system.
+                    /// <para>The tag of the image.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>CentOS_7.2_64</para>
                     /// </summary>
                     [NameInMap("OsTag")]
                     [Validation(Required=false)]
                     public string OsTag { get; set; }
 
                     /// <summary>
-                    /// The platform of the operating system.
+                    /// <para>The OS.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>CentOS</para>
                     /// </summary>
                     [NameInMap("Platform")]
                     [Validation(Required=false)]
                     public string Platform { get; set; }
 
                     /// <summary>
-                    /// The version of the operating system.
+                    /// <para>The version of the operating system.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>7.2</para>
                     /// </summary>
                     [NameInMap("Version")]
                     [Validation(Required=false)]
@@ -152,62 +185,82 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
                 }
 
                 /// <summary>
-                /// The script that is run after the image is installed.
+                /// <remarks>
+                /// <para> This parameter is not publicly available.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example.sh</para>
                 /// </summary>
                 [NameInMap("PostInstallScript")]
                 [Validation(Required=false)]
                 public string PostInstallScript { get; set; }
 
                 /// <summary>
-                /// The billing unit of the image. Valid values:
+                /// <remarks>
+                /// <para> This parameter is not publicly available.</para>
+                /// </remarks>
                 /// 
-                /// *   Hour
-                /// *   Month
-                /// *   Year
+                /// <b>Example:</b>
+                /// <para>Month</para>
                 /// </summary>
                 [NameInMap("PricingCycle")]
                 [Validation(Required=false)]
                 public string PricingCycle { get; set; }
 
                 /// <summary>
-                /// The product code on Alibaba Cloud Marketplace.
+                /// <remarks>
+                /// <para> This parameter is not publicly available.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cmjj028279</para>
                 /// </summary>
                 [NameInMap("ProductCode")]
                 [Validation(Required=false)]
                 public string ProductCode { get; set; }
 
                 /// <summary>
-                /// The size of the image. Unit: GiB
+                /// <para>The size of the image. Unit: GiB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>40</para>
                 /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public int? Size { get; set; }
 
                 /// <summary>
-                /// The stock keeping unit (SKU) of the image. Valid values:
+                /// <remarks>
+                /// <para> This parameter is not publicly available.</para>
+                /// </remarks>
                 /// 
-                /// \-ECS: pay-as-you-go
-                /// 
-                /// \-package: subscription
+                /// <b>Example:</b>
+                /// <para>ECS</para>
                 /// </summary>
                 [NameInMap("SkuCode")]
                 [Validation(Required=false)]
                 public string SkuCode { get; set; }
 
                 /// <summary>
-                /// The status of the image. Valid values:
+                /// <remarks>
+                /// <para> This parameter is not publicly available.</para>
+                /// </remarks>
                 /// 
-                /// *   UnAvailable: The image is unavailable.
-                /// *   Available: The image is available.
-                /// *   Creating: The image is being created.
-                /// *   CreateFailed: The image has failed to be created.
+                /// <b>Example:</b>
+                /// <para>Available</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// The owner of the image.
+                /// <remarks>
+                /// <para> This parameter is not publicly available.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>127****</para>
                 /// </summary>
                 [NameInMap("Uid")]
                 [Validation(Required=false)]
@@ -218,7 +271,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

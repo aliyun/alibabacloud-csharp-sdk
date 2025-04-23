@@ -10,111 +10,149 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class ListTasksResponseBody : TeaModel {
         /// <summary>
-        /// The page number of the returned page.
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries returned per page.
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>89A1AC0F-4A6C-4F3D-98F9-BEF9A823****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The list of task information.
+        /// <para>The queried tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<ListTasksResponseBodyTasks> Tasks { get; set; }
         public class ListTasksResponseBodyTasks : TeaModel {
             /// <summary>
-            /// The ID of the cluster.
+            /// <para>The cluster ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ehpc-hz-FYUr32****</para>
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// The current step of the task.
+            /// <para>The current step of the task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>16</para>
             /// </summary>
             [NameInMap("CurrentStep")]
             [Validation(Required=false)]
             public int? CurrentStep { get; set; }
 
             /// <summary>
-            /// The list of error messages returned for the task.
+            /// <para>The error messages returned for the task.</para>
+            /// <para>You can view the error messages and the corresponding solutions in the <a href="https://error-center.alibabacloud.com/status/product/EHPC">Error Center</a>.</para>
             /// 
-            /// For information about error messages and their solutions, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/EHPC).
+            /// <b>Example:</b>
+            /// <para>[]</para>
             /// </summary>
             [NameInMap("Errors")]
             [Validation(Required=false)]
             public string Errors { get; set; }
 
             /// <summary>
-            /// The request parameters of the task. The value is a JSON string.
+            /// <para>The request parameters of the task. The value is a JSON string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;requestId\&quot;:\&quot;0A6CA33E-BFBF-4F92-BDAE-4E8860DA****\&quot;,\&quot;uid\&quot;:\&quot;160998252992****\&quot;,\&quot;bid\&quot;:\&quot;268**\&quot;,\&quot;clusterId\&quot;:\&quot;ehpc-hz-ysQtcZ****\&quot;}</para>
             /// </summary>
             [NameInMap("Request")]
             [Validation(Required=false)]
             public string Request { get; set; }
 
             /// <summary>
-            /// The result of the task. Valid values:
+            /// <para>The result of the task. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>If you set TaskType to CreateCluster or AddComputes, the value of this parameter is in the <c>{\\&quot;Instances\\&quot;:[]}</c> format. The value indicates the information about the nodes that are added to the cluster.</description></item>
+            /// <item><description>If you set TaskType to a value other than CreateCluster and AddComputes, the value of this parameter is in the <c>{}</c> format.</description></item>
+            /// </list>
             /// 
-            /// *   If TaskType is set to CreateCluster and AddComputes, the value is in the `{\"Instances\":[]}` format, which indicates the information of the nodes added to the cluster.
-            /// *   If TaskType is set to a value other than CreateCluster and AddComputes, the value is in the `{}` format.
+            /// <b>Example:</b>
+            /// <para>{\&quot;Instances\&quot;:[{\&quot;InstanceId\&quot;:\&quot;i-bp1inb1j2xz8pnoi****\&quot;,\&quot;Ip\&quot;:\&quot;192.168.<em>.</em>\&quot;,\&quot;Hostname\&quot;:\&quot;login0\&quot;,\&quot;role\&quot;:\&quot;login\&quot;}]}</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public string Result { get; set; }
 
             /// <summary>
-            /// The status of the task. Valid values:
+            /// <para>The status of the task. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Processing: The task is running.</description></item>
+            /// <item><description>Success: The task succeeded.</description></item>
+            /// <item><description>Failed: The task failed.</description></item>
+            /// <item><description>PartialFail: The task partially failed.</description></item>
+            /// </list>
             /// 
-            /// *   Processing: The task is running.
-            /// *   Success: The task is completed.
-            /// *   Fail: The task failed.
-            /// *   PartialFail: The task partially failed.
+            /// <b>Example:</b>
+            /// <para>Processing</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// <para>The task ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>B745C159-3155-4B94-95D0-4B73D4D2****</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
             /// <summary>
-            /// The type of the task. Valid values:
+            /// <para>The task type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CreateCluster: creates a cluster by calling the <a href="https://help.aliyun.com/document_detail/87100.html">CreateCluster</a> operation.</description></item>
+            /// <item><description>StartCluster: starts a cluster by calling the <a href="https://help.aliyun.com/document_detail/200345.html">StartCluster</a> operation.</description></item>
+            /// <item><description>StopCluster: stops a cluster by calling the <a href="https://help.aliyun.com/document_detail/200346.html">StopCluster</a> operation.</description></item>
+            /// <item><description>DeleteCluster: releases a cluster by calling the <a href="https://help.aliyun.com/document_detail/87110.html">DeleteCluster</a> operation.</description></item>
+            /// <item><description>AddComputes: adds nodes to a cluster by calling the <a href="https://help.aliyun.com/document_detail/87147.html">AddNodes</a> operation.</description></item>
+            /// <item><description>StartComputes: starts nodes by calling the <a href="https://help.aliyun.com/document_detail/87159.html">StartNodes</a> operation.</description></item>
+            /// <item><description>ResetCompute: resets nodes by calling the <a href="https://help.aliyun.com/document_detail/87158.html">ResetNodes</a> operation.</description></item>
+            /// <item><description>StopComputes: stops nodes by calling the <a href="https://help.aliyun.com/document_detail/87160.html">StopNodes</a> operation.</description></item>
+            /// <item><description>DeleteComputes: deletes nodes by calling the <a href="https://help.aliyun.com/document_detail/87155.html">DeleteNodes</a> operation.</description></item>
+            /// </list>
             /// 
-            /// *   CreateCluster: creates a cluster by calling the [CreateCluster](~~87100~~) operation.
-            /// *   StartCluster: starts a cluster by calling the [StartCluster](~~200345~~) operation.
-            /// *   StopCluster: stops a cluster by calling the [StopCluster](~~200346~~) operation.
-            /// *   DeleteCluster: releases a cluster by calling the [DeleteCluster](~~87110~~) operation.
-            /// *   AddComputes: adds nodes to a cluster by calling the [AddNodes](~~87147~~) operation.
-            /// *   StartComputes: starts nodes by calling the [StartNodes](~~87159~~) operation.
-            /// *   ResetCompute: resets nodes by calling the [ResetNodes](~~87158~~) operation.
-            /// *   StopComputes: stops nodes by calling the [StopNodes](~~87160~~) operation.
-            /// *   DeleteComputes: deletes nodes by calling the [DeleteNodes](~~87155~~) operation.
+            /// <b>Example:</b>
+            /// <para>StopCluster</para>
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]
             public string TaskType { get; set; }
 
             /// <summary>
-            /// The total number of steps of the task.
+            /// <para>The total number of steps of the task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>35</para>
             /// </summary>
             [NameInMap("TotalSteps")]
             [Validation(Required=false)]
@@ -123,7 +161,10 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
         }
 
         /// <summary>
-        /// The total number of entries of the task.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

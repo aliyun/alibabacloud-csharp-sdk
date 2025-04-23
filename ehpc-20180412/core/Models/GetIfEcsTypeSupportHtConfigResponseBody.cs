@@ -10,37 +10,51 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class GetIfEcsTypeSupportHtConfigResponseBody : TeaModel {
         /// <summary>
-        /// Indicates whether Hyper-Threading is enabled by default. Valid values:
+        /// <para>Indicates whether Hyper-Threading is enabled by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Hyper-Threading is enabled by default.</description></item>
+        /// <item><description>false: Hyper-Threading is disabled by default.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> By default, Hyper-Threading is not enabled for Super Computing Cluster (SCC) instance families but is enabled for other instance families.</para>
+        /// </remarks>
         /// 
-        /// *   true: Hyper-Threading is enabled by default.
-        /// 
-        /// *   false: Hyper-Threading is disabled by default
-        /// 
-        /// > By default, Hyper-Threading is not enabled for the SCC specification family, while Hyper-Threading is enabled for other specification families by default.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DefaultHtEnabled")]
         [Validation(Required=false)]
         public bool? DefaultHtEnabled { get; set; }
 
         /// <summary>
-        /// The instance type of the ECS instance.
+        /// <para>The ECS instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs.g6.large</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80CA7A93-7291-4402-B63D-86DF334E0A1F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether hyper-threading is supported. Valid values:
+        /// <para>Indicates whether hyper-threading is supported. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Hyper-threading is supported.</description></item>
+        /// <item><description>false: Hyper-threading is not supported.</description></item>
+        /// </list>
         /// 
-        /// *   true: Hyper-Threading is supported.
-        /// *   false: Hyper-Threading is not supported.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("SupportHtConfig")]
         [Validation(Required=false)]

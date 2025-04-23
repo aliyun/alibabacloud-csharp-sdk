@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.EHPC20180412.Models
 {
     public class SubmitServerlessJobResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the serverless job.
+        /// <para>The ID of the serverless job.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
