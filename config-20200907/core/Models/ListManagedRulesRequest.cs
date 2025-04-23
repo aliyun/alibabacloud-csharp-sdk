@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListManagedRulesRequest : TeaModel {
+        /// <summary>
+        /// <para>The scope for filtering managed rules allows you to filter out managed rules without resource coverage. The possible values are:</para>
+        /// <list type="bullet">
+        /// <item><description><para>ALL: All rules.</para>
+        /// </description></item>
+        /// <item><description><para>UNCOVERED_RESOURCE: Filters managed rules where some resources are not covered.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ALL</para>
+        /// </summary>
         [NameInMap("FilterType")]
         [Validation(Required=false)]
         public string FilterType { get; set; }

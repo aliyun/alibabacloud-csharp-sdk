@@ -211,6 +211,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceIdsScope { get; set; }
 
         /// <summary>
+        /// <para>The names of the resource to which the rule applies.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-xxx</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -273,13 +278,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         }
 
-        /// <term><b>Obsolete</b></term>
-        /// 
         /// <summary>
-        /// <para>The logical relationship among the tag keys if you specify multiple tag keys for the <c>TagKeyScope</c> parameter. For example, if you set the <c>TagKeyScope</c> parameter to <c>ECS,OSS</c> and the TagKeyLogicScope parameter to <c>AND</c>, the rule applies to resources with both the <c>ECS</c> and <c>OSS</c> tag keys. Valid values:</para>
+        /// <para>The logical relationship when parameter <c>TagsScope</c> takes multiple values, for example: When the parameter <c>TagsScope</c> is <c>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;, &quot;TagsScope.1.TagValue&quot;:&quot;a&quot;, &quot;TagsScope.2.TagKey&quot;:&quot;b&quot;, &quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</c>, if this parameter is set to<c> AND</c>, it means that the rule only applies to resources bound with both tags <c>a:a</c> and <c>b:b</c>. If not specified, the default logic is <c>OR</c>.</para>
+        /// <para>It can also be used for the deprecated field <c>TagKeyScope</c> (not recommended), for example: When the parameter <c>TagKeyScope</c> has a value of <c>ECS</c>,<c>OSS</c>, if this parameter is set to <c>AND</c>, it means that the rule only applies to resources bound with both labels <c>ECS</c> and <c>OSS</c>.</para>
+        /// <para>Values:</para>
         /// <list type="bullet">
-        /// <item><description>AND</description></item>
-        /// <item><description>OR</description></item>
+        /// <item><description><para>AND: And.</para>
+        /// </description></item>
+        /// <item><description><para>OR: Or.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -287,12 +294,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// </summary>
         [NameInMap("TagKeyLogicScope")]
         [Validation(Required=false)]
-        [Obsolete]
         public string TagKeyLogicScope { get; set; }
 
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
         /// <para>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</para>
         /// <remarks>
         /// <para> This parameter applies only to a managed rule. You must configure the <c>TagKeyScope</c> and <c>TagValueScope</c> parameters at the same time.</para>
@@ -309,6 +316,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
         /// <para>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</para>
         /// <remarks>
         /// <para> This parameter applies only to a managed rule. You must configure the <c>TagKeyScope</c> and <c>TagValueScope</c> parameters at the same time.</para>

@@ -545,6 +545,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ResourceIdsScope { get; set; }
 
             /// <summary>
+            /// <para>The names of the resource to which the rule applies.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-xxx</para>
+            /// 
             /// <b>if can be null:</b>
             /// <c>true</c>
             /// </summary>
@@ -686,28 +691,31 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             }
 
-            /// <term><b>Obsolete</b></term>
-            /// 
             /// <summary>
-            /// <para>The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule.</para>
-            /// <remarks>
-            /// <para>This parameter applies only to a managed rule.</para>
-            /// </remarks>
+            /// <para>When retrieving details of rules created using the parameter <c>TagsScope</c>, this field will not be returned.</para>
+            /// <para>To retrieve rules created using the deprecated field <c>TagKeyScope</c> (not recommended): for example, when the parameter <c>TagKeyScope</c> has a value of ECS,OSS, if this parameter is set to <c>AND</c>, it means that the rule only applies to resources bound with both labels ECS and OSS.</para>
+            /// <para>Values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>AND: And.</para>
+            /// </description></item>
+            /// <item><description><para>OR: Or.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>120886317861****</para>
             /// </summary>
             [NameInMap("TagKeyLogicScope")]
             [Validation(Required=false)]
-            [Obsolete]
             public string TagKeyLogicScope { get; set; }
 
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
+            /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
             /// <para>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</para>
             /// <remarks>
-            /// <para>The <c>TagKeyScope</c> and <c>TagValueScope</c> parameters are returned at the same time.</para>
+            /// <para> The TagKeyScope and <c>TagValueScope</c> parameters are returned at the same time.``</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -721,9 +729,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</para>
+            /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
+            /// <para>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</para>
             /// <remarks>
-            /// <para>The <c>TagKeyScope</c> and <c>TagValueScope</c> parameters are returned at the same time.</para>
+            /// <para> The TagKeyScope and <c>TagValueScope</c> parameters are returned at the same time.``</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

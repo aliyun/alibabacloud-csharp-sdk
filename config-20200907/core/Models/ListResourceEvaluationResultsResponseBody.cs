@@ -68,6 +68,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? ConfigRuleInvokedTimestamp { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>00000089-4e0d-58b5-a96a-8e54112110f3</para>
+                /// </summary>
+                [NameInMap("EvaluationId")]
+                [Validation(Required=false)]
+                public string EvaluationId { get; set; }
+
+                /// <summary>
                 /// <para>The identifying information about the compliance evaluation result.</para>
                 /// </summary>
                 [NameInMap("EvaluationResultIdentifier")]
@@ -192,6 +200,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [NameInMap("InvokingEventMessageType")]
                 [Validation(Required=false)]
                 public string InvokingEventMessageType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1744696393000</para>
+                /// </summary>
+                [NameInMap("LastNonCompliantRecordTimestamp")]
+                [Validation(Required=false)]
+                public long? LastNonCompliantRecordTimestamp { get; set; }
 
                 /// <summary>
                 /// <para>Indicates whether the remediation template is enabled. Valid values:</para>

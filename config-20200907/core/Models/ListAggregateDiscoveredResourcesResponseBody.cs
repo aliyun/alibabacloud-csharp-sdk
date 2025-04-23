@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateDiscoveredResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried resources.</para>
+        /// <para>The information about the resources.</para>
         /// </summary>
         [NameInMap("DiscoveredResourceProfiles")]
         [Validation(Required=false)]
         public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles DiscoveredResourceProfiles { get; set; }
         public class ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles : TeaModel {
             /// <summary>
-            /// <para>The queried resource.</para>
+            /// <para>The details of the resources.</para>
             /// </summary>
             [NameInMap("DiscoveredResourceProfileList")]
             [Validation(Required=false)]
@@ -141,6 +141,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public string Tags { get; set; }
 
+                /// <summary>
+                /// <para>The time when the resource was last updated. The value must be a timestamp in milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1722441600000</para>
+                /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public long? UpdateTime { get; set; }

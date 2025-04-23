@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the resource in the account group belongs.</para>
+        /// <para>Required. The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100931896542****</para>

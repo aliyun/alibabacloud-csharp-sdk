@@ -109,6 +109,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The folder ID. Separate multiple folder IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fd-brHdgv****,fd-brHdgk****</para>
+        /// </summary>
         [NameInMap("FolderId")]
         [Validation(Required=false)]
         public string FolderId { get; set; }
