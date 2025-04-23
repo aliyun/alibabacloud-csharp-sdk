@@ -344,6 +344,74 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         }
 
+        [NameInMap("WorkflowTaskDetail")]
+        [Validation(Required=false)]
+        public GetJobDetailResponseBodyWorkflowTaskDetail WorkflowTaskDetail { get; set; }
+        public class GetJobDetailResponseBodyWorkflowTaskDetail : TeaModel {
+            [NameInMap("ActivityResults")]
+            [Validation(Required=false)]
+            public string ActivityResults { get; set; }
+
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            [NameInMap("FinishTime")]
+            [Validation(Required=false)]
+            public string FinishTime { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
+
+            [NameInMap("TaskInput")]
+            [Validation(Required=false)]
+            public string TaskInput { get; set; }
+
+            [NameInMap("UserData")]
+            [Validation(Required=false)]
+            public string UserData { get; set; }
+
+            [NameInMap("Workflow")]
+            [Validation(Required=false)]
+            public GetJobDetailResponseBodyWorkflowTaskDetailWorkflow Workflow { get; set; }
+            public class GetJobDetailResponseBodyWorkflowTaskDetailWorkflow : TeaModel {
+                [NameInMap("AppId")]
+                [Validation(Required=false)]
+                public string AppId { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public string CreateTime { get; set; }
+
+                [NameInMap("ModifiedTime")]
+                [Validation(Required=false)]
+                public string ModifiedTime { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+                [NameInMap("WorkflowId")]
+                [Validation(Required=false)]
+                public string WorkflowId { get; set; }
+
+            }
+
+        }
+
     }
 
 }

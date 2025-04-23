@@ -1,3 +1,7 @@
+2025-04-23 Version: 3.8.2
+- Update API GetJobDetail: add response parameters Body.WorkflowTaskDetail.
+
+
 2025-04-17 Version: 3.8.1
 - Update API SubmitWorkflowJob: add response parameters Body.TaskId.
 
