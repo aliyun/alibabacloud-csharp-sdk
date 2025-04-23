@@ -1,3 +1,7 @@
+2025-04-23 Version: 6.17.6
+- Update API QueryConfig: add response parameters Body.Data.NacosRunningEnv.grayAuth.
+
+
 2025-04-21 Version: 6.17.5
 - Generated csharp 2019-05-31 for mse.
 

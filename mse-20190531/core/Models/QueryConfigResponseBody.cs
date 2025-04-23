@@ -269,6 +269,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public bool? EmptyProtect { get; set; }
 
+                [NameInMap("grayAuth")]
+                [Validation(Required=false)]
+                public string GrayAuth { get; set; }
+
             }
 
             /// <summary>
