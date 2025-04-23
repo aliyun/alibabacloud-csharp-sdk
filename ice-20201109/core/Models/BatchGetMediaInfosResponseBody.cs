@@ -151,6 +151,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo MediaBasicInfo { get; set; }
             public class BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo : TeaModel {
+                [NameInMap("Biz")]
+                [Validation(Required=false)]
+                public string Biz { get; set; }
+
                 /// <summary>
                 /// <para>The business type of the media asset.</para>
                 /// 
