@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The list of usernames that must be exactly matched.</para>
+        /// <para>The usernames that must be exactly matched.</para>
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
         public List<string> EndUserIds { get; set; }
 
         /// <summary>
-        /// <para>The list of usernames to be exactly excluded.</para>
+        /// <para>The usernames that must be exactly excluded.</para>
         /// </summary>
         [NameInMap("ExcludeEndUserIds")]
         [Validation(Required=false)]
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public bool? IsQueryAllSubOrgs { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 1 to 500</description></item>
-        /// <item><description>Default value: 500</description></item>
+        /// <item><description>Valid values: 1 to 500.</description></item>
+        /// <item><description>Default value: 500.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of convenience users that are associated with the property value.</para>
+        /// <para>The number of convenience accounts that are associated with the specified custom property value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -30,12 +30,18 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the convenience user.</para>
+        /// <para>The convenience accounts.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<FilterUsersResponseBodyUsers> Users { get; set; }
         public class FilterUsersResponseBodyUsers : TeaModel {
+            /// <summary>
+            /// <para>The date when a convenience account is automatically locked.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-03-03</para>
+            /// </summary>
             [NameInMap("AutoLockTime")]
             [Validation(Required=false)]
             public string AutoLockTime { get; set; }
@@ -200,10 +206,25 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public string OwnerType { get; set; }
 
+            /// <summary>
+            /// <para>By default, user account passwords do not expire. However, you can set a validity period between 30 and 365 days. Once the period expires, end users must change their password before they can log on to terminals.</para>
+            /// <remarks>
+            /// <para> The feature is in invitational preview. If you want to use this feature, submit a ticket.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
             [NameInMap("PasswordExpireDays")]
             [Validation(Required=false)]
             public int? PasswordExpireDays { get; set; }
 
+            /// <summary>
+            /// <para>The number of days remaining until the account password expires.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("PasswordExpireRestDays")]
             [Validation(Required=false)]
             public int? PasswordExpireRestDays { get; set; }
@@ -239,22 +260,11 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The status of the convenience user.</para>
+            /// <para>The remarks on the convenience account.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>0: The convenience user is normal.</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>9: The convenience user is locked.</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
+            /// <item><description>0: The convenience account is normal.</description></item>
+            /// <item><description>9: The convenience account is locked.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

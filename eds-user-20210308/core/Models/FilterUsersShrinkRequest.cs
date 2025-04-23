@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are used to sort query results.</para>
+        /// <para>The parameter that might affect the sorting logic.</para>
         /// </summary>
         [NameInMap("OrderParam")]
         [Validation(Required=false)]
@@ -128,7 +128,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string OrgId { get; set; }
 
         /// <summary>
-        /// <para>The type of the account ownership.</para>
+        /// <para>The activation type of the convenience account.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CreateFromManager: administrator-activated.</description></item>
+        /// <item><description>Normal: user-activated.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>

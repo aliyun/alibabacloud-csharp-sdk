@@ -111,19 +111,19 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are used to sort query results.</para>
+        /// <para>The parameter that might affect the sorting logic.</para>
         /// </summary>
         [NameInMap("OrderParam")]
         [Validation(Required=false)]
         public FilterUsersRequestOrderParam OrderParam { get; set; }
         public class FilterUsersRequestOrderParam : TeaModel {
             /// <summary>
-            /// <para>The parameter based on which to sort query results.</para>
+            /// <para>The field that you want to sort by.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>EndUserId: the username.</description></item>
-            /// <item><description>id: the ID of the user primary key.</description></item>
-            /// <item><description>gmt_created: the time when the convenience user was created.</description></item>
+            /// <item><description>id: the ID of the primary key.</description></item>
+            /// <item><description>gmt_created: the creation time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -134,22 +134,11 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string OrderField { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to sort query results in ascending or descending order.</para>
+            /// <para>The direction of the sort.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ASC: ascending</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>DESC (default): descending</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
+            /// <item><description>ASC: the ascending order.</description></item>
+            /// <item><description>DESC (default): the descending order.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -172,7 +161,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string OrgId { get; set; }
 
         /// <summary>
-        /// <para>The type of the account ownership.</para>
+        /// <para>The activation type of the convenience account.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CreateFromManager: administrator-activated.</description></item>
+        /// <item><description>Normal: user-activated.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>

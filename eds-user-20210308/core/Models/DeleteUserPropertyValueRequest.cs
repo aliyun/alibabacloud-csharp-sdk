@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DeleteUserPropertyValueRequest : TeaModel {
         /// <summary>
-        /// <para>The property ID.</para>
+        /// <para>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the property ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? PropertyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the property value.</para>
+        /// <para>The property value ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the property value ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? PropertyValueId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the convenience user.</para>
+        /// <para>The user ID. You can call the <a href="~~DescribeUsers~~">DescribeUsers</a> operation to query the user ID, which is the return value of the <c>Id</c> parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
