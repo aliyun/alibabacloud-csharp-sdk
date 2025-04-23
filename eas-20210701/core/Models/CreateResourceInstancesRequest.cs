@@ -77,6 +77,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? SystemDiskSize { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The user-defined information. This parameter is not in use.</para>
         /// 
@@ -85,6 +87,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
+        [Obsolete]
         public string UserData { get; set; }
 
         /// <summary>

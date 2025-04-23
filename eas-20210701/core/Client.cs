@@ -1444,6 +1444,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 body["Labels"] = request.Labels;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
+            {
+                body["ResourceName"] = request.ResourceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
                 body["ResourceType"] = request.ResourceType;
@@ -1526,6 +1530,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
             {
                 body["Labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
+            {
+                body["ResourceName"] = request.ResourceName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {

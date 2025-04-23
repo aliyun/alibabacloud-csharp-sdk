@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Labels { get; set; }
 
+        [NameInMap("ResourceName")]
+        [Validation(Required=false)]
+        public string ResourceName { get; set; }
+
         /// <summary>
         /// <para>The type of the resource group. Valid values:</para>
         /// <list type="bullet">
