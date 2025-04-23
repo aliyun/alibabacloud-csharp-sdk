@@ -2788,6 +2788,158 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除资质对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSmsQualificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmsQualificationResponse
+        /// </returns>
+        public DeleteSmsQualificationResponse DeleteSmsQualificationWithOptions(DeleteSmsQualificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationGroupId))
+            {
+                query["QualificationGroupId"] = request.QualificationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSmsQualification",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSmsQualificationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除资质对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSmsQualificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmsQualificationResponse
+        /// </returns>
+        public async Task<DeleteSmsQualificationResponse> DeleteSmsQualificationWithOptionsAsync(DeleteSmsQualificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationGroupId))
+            {
+                query["QualificationGroupId"] = request.QualificationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSmsQualification",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSmsQualificationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除资质对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSmsQualificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmsQualificationResponse
+        /// </returns>
+        public DeleteSmsQualificationResponse DeleteSmsQualification(DeleteSmsQualificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSmsQualificationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除资质对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSmsQualificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSmsQualificationResponse
+        /// </returns>
+        public async Task<DeleteSmsQualificationResponse> DeleteSmsQualificationAsync(DeleteSmsQualificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSmsQualificationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a signature.</para>
         /// </summary>
         /// 
@@ -6598,6 +6750,158 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询单个资质详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySingleSmsQualificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySingleSmsQualificationResponse
+        /// </returns>
+        public QuerySingleSmsQualificationResponse QuerySingleSmsQualificationWithOptions(QuerySingleSmsQualificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationGroupId))
+            {
+                query["QualificationGroupId"] = request.QualificationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySingleSmsQualification",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySingleSmsQualificationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单个资质详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySingleSmsQualificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySingleSmsQualificationResponse
+        /// </returns>
+        public async Task<QuerySingleSmsQualificationResponse> QuerySingleSmsQualificationWithOptionsAsync(QuerySingleSmsQualificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationGroupId))
+            {
+                query["QualificationGroupId"] = request.QualificationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySingleSmsQualification",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySingleSmsQualificationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单个资质详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySingleSmsQualificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySingleSmsQualificationResponse
+        /// </returns>
+        public QuerySingleSmsQualificationResponse QuerySingleSmsQualification(QuerySingleSmsQualificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuerySingleSmsQualificationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单个资质详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySingleSmsQualificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySingleSmsQualificationResponse
+        /// </returns>
+        public async Task<QuerySingleSmsQualificationResponse> QuerySingleSmsQualificationAsync(QuerySingleSmsQualificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuerySingleSmsQualificationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询委托授权书</para>
         /// </summary>
         /// 
@@ -6782,6 +7086,206 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QuerySmsAuthorizationLetterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资质审核列表页</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySmsQualificationRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsQualificationRecordResponse
+        /// </returns>
+        public QuerySmsQualificationRecordResponse QuerySmsQualificationRecordWithOptions(QuerySmsQualificationRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyName))
+            {
+                query["CompanyName"] = request.CompanyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonName))
+            {
+                query["LegalPersonName"] = request.LegalPersonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationGroupName))
+            {
+                query["QualificationGroupName"] = request.QualificationGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseBySelf))
+            {
+                query["UseBySelf"] = request.UseBySelf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkOrderId))
+            {
+                query["WorkOrderId"] = request.WorkOrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySmsQualificationRecord",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySmsQualificationRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资质审核列表页</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySmsQualificationRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsQualificationRecordResponse
+        /// </returns>
+        public async Task<QuerySmsQualificationRecordResponse> QuerySmsQualificationRecordWithOptionsAsync(QuerySmsQualificationRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyName))
+            {
+                query["CompanyName"] = request.CompanyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonName))
+            {
+                query["LegalPersonName"] = request.LegalPersonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationGroupName))
+            {
+                query["QualificationGroupName"] = request.QualificationGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseBySelf))
+            {
+                query["UseBySelf"] = request.UseBySelf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkOrderId))
+            {
+                query["WorkOrderId"] = request.WorkOrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySmsQualificationRecord",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySmsQualificationRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资质审核列表页</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySmsQualificationRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsQualificationRecordResponse
+        /// </returns>
+        public QuerySmsQualificationRecordResponse QuerySmsQualificationRecord(QuerySmsQualificationRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuerySmsQualificationRecordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资质审核列表页</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySmsQualificationRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsQualificationRecordResponse
+        /// </returns>
+        public async Task<QuerySmsQualificationRecordResponse> QuerySmsQualificationRecordAsync(QuerySmsQualificationRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuerySmsQualificationRecordWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7510,6 +8014,150 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QuerySmsTemplateListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证手机验证码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RequiredPhoneCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RequiredPhoneCodeResponse
+        /// </returns>
+        public RequiredPhoneCodeResponse RequiredPhoneCodeWithOptions(RequiredPhoneCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNo))
+            {
+                query["PhoneNo"] = request.PhoneNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RequiredPhoneCode",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RequiredPhoneCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证手机验证码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RequiredPhoneCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RequiredPhoneCodeResponse
+        /// </returns>
+        public async Task<RequiredPhoneCodeResponse> RequiredPhoneCodeWithOptionsAsync(RequiredPhoneCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNo))
+            {
+                query["PhoneNo"] = request.PhoneNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RequiredPhoneCode",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RequiredPhoneCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证手机验证码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RequiredPhoneCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RequiredPhoneCodeResponse
+        /// </returns>
+        public RequiredPhoneCodeResponse RequiredPhoneCode(RequiredPhoneCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RequiredPhoneCodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证手机验证码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RequiredPhoneCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RequiredPhoneCodeResponse
+        /// </returns>
+        public async Task<RequiredPhoneCodeResponse> RequiredPhoneCodeAsync(RequiredPhoneCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RequiredPhoneCodeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8650,6 +9298,354 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建资质对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitSmsQualificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSmsQualificationResponse
+        /// </returns>
+        public SubmitSmsQualificationResponse SubmitSmsQualificationWithOptions(SubmitSmsQualificationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitSmsQualificationShrinkRequest request = new SubmitSmsQualificationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BusinessLicensePics))
+            {
+                request.BusinessLicensePicsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BusinessLicensePics, "BusinessLicensePics", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtherFiles))
+            {
+                request.OtherFilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtherFiles, "OtherFiles", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardExpDate))
+            {
+                query["AdminIDCardExpDate"] = request.AdminIDCardExpDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardFrontFace))
+            {
+                query["AdminIDCardFrontFace"] = request.AdminIDCardFrontFace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardNo))
+            {
+                query["AdminIDCardNo"] = request.AdminIDCardNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardPic))
+            {
+                query["AdminIDCardPic"] = request.AdminIDCardPic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardType))
+            {
+                query["AdminIDCardType"] = request.AdminIDCardType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminName))
+            {
+                query["AdminName"] = request.AdminName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminPhoneNo))
+            {
+                query["AdminPhoneNo"] = request.AdminPhoneNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessLicensePicsShrink))
+            {
+                query["BusinessLicensePics"] = request.BusinessLicensePicsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BussinessLicenseExpDate))
+            {
+                query["BussinessLicenseExpDate"] = request.BussinessLicenseExpDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyCode))
+            {
+                query["CertifyCode"] = request.CertifyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyName))
+            {
+                query["CompanyName"] = request.CompanyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyType))
+            {
+                query["CompanyType"] = request.CompanyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIDCardNo))
+            {
+                query["LegalPersonIDCardNo"] = request.LegalPersonIDCardNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIDCardType))
+            {
+                query["LegalPersonIDCardType"] = request.LegalPersonIDCardType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIdCardBackSide))
+            {
+                query["LegalPersonIdCardBackSide"] = request.LegalPersonIdCardBackSide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIdCardEffTime))
+            {
+                query["LegalPersonIdCardEffTime"] = request.LegalPersonIdCardEffTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIdCardFrontSide))
+            {
+                query["LegalPersonIdCardFrontSide"] = request.LegalPersonIdCardFrontSide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonName))
+            {
+                query["LegalPersonName"] = request.LegalPersonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationCode))
+            {
+                query["OrganizationCode"] = request.OrganizationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherFilesShrink))
+            {
+                query["OtherFiles"] = request.OtherFilesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationName))
+            {
+                query["QualificationName"] = request.QualificationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseBySelf))
+            {
+                query["UseBySelf"] = request.UseBySelf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhetherShare))
+            {
+                query["WhetherShare"] = request.WhetherShare;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSmsQualification",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSmsQualificationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建资质对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitSmsQualificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSmsQualificationResponse
+        /// </returns>
+        public async Task<SubmitSmsQualificationResponse> SubmitSmsQualificationWithOptionsAsync(SubmitSmsQualificationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitSmsQualificationShrinkRequest request = new SubmitSmsQualificationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BusinessLicensePics))
+            {
+                request.BusinessLicensePicsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BusinessLicensePics, "BusinessLicensePics", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtherFiles))
+            {
+                request.OtherFilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtherFiles, "OtherFiles", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardExpDate))
+            {
+                query["AdminIDCardExpDate"] = request.AdminIDCardExpDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardFrontFace))
+            {
+                query["AdminIDCardFrontFace"] = request.AdminIDCardFrontFace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardNo))
+            {
+                query["AdminIDCardNo"] = request.AdminIDCardNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardPic))
+            {
+                query["AdminIDCardPic"] = request.AdminIDCardPic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardType))
+            {
+                query["AdminIDCardType"] = request.AdminIDCardType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminName))
+            {
+                query["AdminName"] = request.AdminName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminPhoneNo))
+            {
+                query["AdminPhoneNo"] = request.AdminPhoneNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessLicensePicsShrink))
+            {
+                query["BusinessLicensePics"] = request.BusinessLicensePicsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BussinessLicenseExpDate))
+            {
+                query["BussinessLicenseExpDate"] = request.BussinessLicenseExpDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyCode))
+            {
+                query["CertifyCode"] = request.CertifyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyName))
+            {
+                query["CompanyName"] = request.CompanyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyType))
+            {
+                query["CompanyType"] = request.CompanyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIDCardNo))
+            {
+                query["LegalPersonIDCardNo"] = request.LegalPersonIDCardNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIDCardType))
+            {
+                query["LegalPersonIDCardType"] = request.LegalPersonIDCardType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIdCardBackSide))
+            {
+                query["LegalPersonIdCardBackSide"] = request.LegalPersonIdCardBackSide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIdCardEffTime))
+            {
+                query["LegalPersonIdCardEffTime"] = request.LegalPersonIdCardEffTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIdCardFrontSide))
+            {
+                query["LegalPersonIdCardFrontSide"] = request.LegalPersonIdCardFrontSide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonName))
+            {
+                query["LegalPersonName"] = request.LegalPersonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationCode))
+            {
+                query["OrganizationCode"] = request.OrganizationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherFilesShrink))
+            {
+                query["OtherFiles"] = request.OtherFilesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationName))
+            {
+                query["QualificationName"] = request.QualificationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseBySelf))
+            {
+                query["UseBySelf"] = request.UseBySelf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhetherShare))
+            {
+                query["WhetherShare"] = request.WhetherShare;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSmsQualification",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSmsQualificationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建资质对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSmsQualificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSmsQualificationResponse
+        /// </returns>
+        public SubmitSmsQualificationResponse SubmitSmsQualification(SubmitSmsQualificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitSmsQualificationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建资质对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSmsQualificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSmsQualificationResponse
+        /// </returns>
+        public async Task<SubmitSmsQualificationResponse> SubmitSmsQualificationAsync(SubmitSmsQualificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitSmsQualificationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Attaches tags to a message template.</para>
         /// </summary>
         /// 
@@ -9218,6 +10214,322 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改资质对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateSmsQualificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmsQualificationResponse
+        /// </returns>
+        public UpdateSmsQualificationResponse UpdateSmsQualificationWithOptions(UpdateSmsQualificationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSmsQualificationShrinkRequest request = new UpdateSmsQualificationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BusinessLicensePics))
+            {
+                request.BusinessLicensePicsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BusinessLicensePics, "BusinessLicensePics", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtherFiles))
+            {
+                request.OtherFilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtherFiles, "OtherFiles", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardExpDate))
+            {
+                query["AdminIDCardExpDate"] = request.AdminIDCardExpDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardFrontFace))
+            {
+                query["AdminIDCardFrontFace"] = request.AdminIDCardFrontFace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardNo))
+            {
+                query["AdminIDCardNo"] = request.AdminIDCardNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardPic))
+            {
+                query["AdminIDCardPic"] = request.AdminIDCardPic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardType))
+            {
+                query["AdminIDCardType"] = request.AdminIDCardType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminName))
+            {
+                query["AdminName"] = request.AdminName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminPhoneNo))
+            {
+                query["AdminPhoneNo"] = request.AdminPhoneNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessLicensePicsShrink))
+            {
+                query["BusinessLicensePics"] = request.BusinessLicensePicsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BussinessLicenseExpDate))
+            {
+                query["BussinessLicenseExpDate"] = request.BussinessLicenseExpDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyCode))
+            {
+                query["CertifyCode"] = request.CertifyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyName))
+            {
+                query["CompanyName"] = request.CompanyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIDCardNo))
+            {
+                query["LegalPersonIDCardNo"] = request.LegalPersonIDCardNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIDCardType))
+            {
+                query["LegalPersonIDCardType"] = request.LegalPersonIDCardType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIdCardBackSide))
+            {
+                query["LegalPersonIdCardBackSide"] = request.LegalPersonIdCardBackSide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIdCardEffTime))
+            {
+                query["LegalPersonIdCardEffTime"] = request.LegalPersonIdCardEffTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIdCardFrontSide))
+            {
+                query["LegalPersonIdCardFrontSide"] = request.LegalPersonIdCardFrontSide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonName))
+            {
+                query["LegalPersonName"] = request.LegalPersonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherFilesShrink))
+            {
+                query["OtherFiles"] = request.OtherFilesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationGroupId))
+            {
+                query["QualificationGroupId"] = request.QualificationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSmsQualification",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSmsQualificationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改资质对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateSmsQualificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmsQualificationResponse
+        /// </returns>
+        public async Task<UpdateSmsQualificationResponse> UpdateSmsQualificationWithOptionsAsync(UpdateSmsQualificationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSmsQualificationShrinkRequest request = new UpdateSmsQualificationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BusinessLicensePics))
+            {
+                request.BusinessLicensePicsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BusinessLicensePics, "BusinessLicensePics", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OtherFiles))
+            {
+                request.OtherFilesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OtherFiles, "OtherFiles", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardExpDate))
+            {
+                query["AdminIDCardExpDate"] = request.AdminIDCardExpDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardFrontFace))
+            {
+                query["AdminIDCardFrontFace"] = request.AdminIDCardFrontFace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardNo))
+            {
+                query["AdminIDCardNo"] = request.AdminIDCardNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardPic))
+            {
+                query["AdminIDCardPic"] = request.AdminIDCardPic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminIDCardType))
+            {
+                query["AdminIDCardType"] = request.AdminIDCardType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminName))
+            {
+                query["AdminName"] = request.AdminName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminPhoneNo))
+            {
+                query["AdminPhoneNo"] = request.AdminPhoneNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessLicensePicsShrink))
+            {
+                query["BusinessLicensePics"] = request.BusinessLicensePicsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BussinessLicenseExpDate))
+            {
+                query["BussinessLicenseExpDate"] = request.BussinessLicenseExpDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyCode))
+            {
+                query["CertifyCode"] = request.CertifyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyName))
+            {
+                query["CompanyName"] = request.CompanyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIDCardNo))
+            {
+                query["LegalPersonIDCardNo"] = request.LegalPersonIDCardNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIDCardType))
+            {
+                query["LegalPersonIDCardType"] = request.LegalPersonIDCardType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIdCardBackSide))
+            {
+                query["LegalPersonIdCardBackSide"] = request.LegalPersonIdCardBackSide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIdCardEffTime))
+            {
+                query["LegalPersonIdCardEffTime"] = request.LegalPersonIdCardEffTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonIdCardFrontSide))
+            {
+                query["LegalPersonIdCardFrontSide"] = request.LegalPersonIdCardFrontSide;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LegalPersonName))
+            {
+                query["LegalPersonName"] = request.LegalPersonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtherFilesShrink))
+            {
+                query["OtherFiles"] = request.OtherFilesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualificationGroupId))
+            {
+                query["QualificationGroupId"] = request.QualificationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSmsQualification",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSmsQualificationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改资质对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmsQualificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmsQualificationResponse
+        /// </returns>
+        public UpdateSmsQualificationResponse UpdateSmsQualification(UpdateSmsQualificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateSmsQualificationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改资质对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSmsQualificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSmsQualificationResponse
+        /// </returns>
+        public async Task<UpdateSmsQualificationResponse> UpdateSmsQualificationAsync(UpdateSmsQualificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateSmsQualificationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Update Text SMS Signature</para>
         /// </summary>
         /// 
@@ -9742,6 +11054,158 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSmsTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送手机验证码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidPhoneCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidPhoneCodeResponse
+        /// </returns>
+        public ValidPhoneCodeResponse ValidPhoneCodeWithOptions(ValidPhoneCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyCode))
+            {
+                query["CertifyCode"] = request.CertifyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNo))
+            {
+                query["PhoneNo"] = request.PhoneNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidPhoneCode",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidPhoneCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送手机验证码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidPhoneCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidPhoneCodeResponse
+        /// </returns>
+        public async Task<ValidPhoneCodeResponse> ValidPhoneCodeWithOptionsAsync(ValidPhoneCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyCode))
+            {
+                query["CertifyCode"] = request.CertifyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneNo))
+            {
+                query["PhoneNo"] = request.PhoneNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidPhoneCode",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidPhoneCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送手机验证码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidPhoneCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidPhoneCodeResponse
+        /// </returns>
+        public ValidPhoneCodeResponse ValidPhoneCode(ValidPhoneCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ValidPhoneCodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送手机验证码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidPhoneCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidPhoneCodeResponse
+        /// </returns>
+        public async Task<ValidPhoneCodeResponse> ValidPhoneCodeAsync(ValidPhoneCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ValidPhoneCodeWithOptionsAsync(request, runtime);
         }
 
     }
