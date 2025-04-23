@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
-    public class InitializeRequest : TeaModel {
+    public class InitializeShrinkRequest : TeaModel {
         [NameInMap("AppQualityCheck")]
         [Validation(Required=false)]
         public string AppQualityCheck { get; set; }
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 
         [NameInMap("DocPageConfig")]
         [Validation(Required=false)]
-        public List<string> DocPageConfig { get; set; }
+        public string DocPageConfigShrink { get; set; }
 
         [NameInMap("DocScanMode")]
         [Validation(Required=false)]

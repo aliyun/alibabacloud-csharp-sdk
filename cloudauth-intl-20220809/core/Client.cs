@@ -2210,7 +2210,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <para>认证初始化</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// InitializeRequest
         /// </param>
         /// <param name="runtime">
@@ -2220,9 +2220,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// InitializeResponse
         /// </returns>
-        public InitializeResponse InitializeWithOptions(InitializeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public InitializeResponse InitializeWithOptions(InitializeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InitializeShrinkRequest request = new InitializeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DocPageConfig))
+            {
+                request.DocPageConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocPageConfig, "DocPageConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppQualityCheck))
             {
@@ -2244,6 +2250,18 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["Crop"] = request.Crop;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateOfBirth))
+            {
+                query["DateOfBirth"] = request.DateOfBirth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateOfExpiry))
+            {
+                query["DateOfExpiry"] = request.DateOfExpiry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocPageConfigShrink))
+            {
+                query["DocPageConfig"] = request.DocPageConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocScanMode))
             {
                 query["DocScanMode"] = request.DocScanMode;
@@ -2255,6 +2273,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocVideo))
             {
                 query["DocVideo"] = request.DocVideo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentNumber))
+            {
+                query["DocumentNumber"] = request.DocumentNumber;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperienceCode))
             {
@@ -2279,6 +2301,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageConfig))
             {
                 query["LanguageConfig"] = request.LanguageConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MRTDInput))
+            {
+                query["MRTDInput"] = request.MRTDInput;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
@@ -2339,6 +2365,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StyleConfig))
             {
                 query["StyleConfig"] = request.StyleConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseNFC))
+            {
+                query["UseNFC"] = request.UseNFC;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
@@ -2370,7 +2400,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <para>认证初始化</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// InitializeRequest
         /// </param>
         /// <param name="runtime">
@@ -2380,9 +2410,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// InitializeResponse
         /// </returns>
-        public async Task<InitializeResponse> InitializeWithOptionsAsync(InitializeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<InitializeResponse> InitializeWithOptionsAsync(InitializeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InitializeShrinkRequest request = new InitializeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DocPageConfig))
+            {
+                request.DocPageConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocPageConfig, "DocPageConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppQualityCheck))
             {
@@ -2404,6 +2440,18 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["Crop"] = request.Crop;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateOfBirth))
+            {
+                query["DateOfBirth"] = request.DateOfBirth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DateOfExpiry))
+            {
+                query["DateOfExpiry"] = request.DateOfExpiry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocPageConfigShrink))
+            {
+                query["DocPageConfig"] = request.DocPageConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocScanMode))
             {
                 query["DocScanMode"] = request.DocScanMode;
@@ -2415,6 +2463,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocVideo))
             {
                 query["DocVideo"] = request.DocVideo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentNumber))
+            {
+                query["DocumentNumber"] = request.DocumentNumber;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperienceCode))
             {
@@ -2439,6 +2491,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageConfig))
             {
                 query["LanguageConfig"] = request.LanguageConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MRTDInput))
+            {
+                query["MRTDInput"] = request.MRTDInput;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
@@ -2499,6 +2555,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StyleConfig))
             {
                 query["StyleConfig"] = request.StyleConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseNFC))
+            {
+                query["UseNFC"] = request.UseNFC;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
