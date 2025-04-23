@@ -17,6 +17,30 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         [Validation(Required=false)]
         public string BillMonth { get; set; }
 
+        [NameInMap("OssAccessKeyId")]
+        [Validation(Required=false)]
+        public string OssAccessKeyId { get; set; }
+
+        [NameInMap("OssAccessKeySecret")]
+        [Validation(Required=false)]
+        public string OssAccessKeySecret { get; set; }
+
+        [NameInMap("OssBucketName")]
+        [Validation(Required=false)]
+        public string OssBucketName { get; set; }
+
+        [NameInMap("OssEndpoint")]
+        [Validation(Required=false)]
+        public string OssEndpoint { get; set; }
+
+        [NameInMap("OssRegion")]
+        [Validation(Required=false)]
+        public string OssRegion { get; set; }
+
+        [NameInMap("OssSecurityToken")]
+        [Validation(Required=false)]
+        public string OssSecurityToken { get; set; }
+
     }
 
 }

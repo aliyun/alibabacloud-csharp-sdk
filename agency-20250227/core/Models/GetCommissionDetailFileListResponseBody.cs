@@ -35,9 +35,17 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             [Validation(Required=false)]
             public List<GetCommissionDetailFileListResponseBodyDataFileList> FileList { get; set; }
             public class GetCommissionDetailFileListResponseBodyDataFileList : TeaModel {
+                [NameInMap("BucketSyncStatus")]
+                [Validation(Required=false)]
+                public string BucketSyncStatus { get; set; }
+
                 [NameInMap("CommissionPolicyName")]
                 [Validation(Required=false)]
                 public string CommissionPolicyName { get; set; }
+
+                [NameInMap("FileName")]
+                [Validation(Required=false)]
+                public string FileName { get; set; }
 
                 [NameInMap("FileType")]
                 [Validation(Required=false)]

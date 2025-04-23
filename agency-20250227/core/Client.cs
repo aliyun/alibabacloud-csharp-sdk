@@ -287,6 +287,30 @@ namespace AlibabaCloud.SDK.Agency20250227
             {
                 query["BillMonth"] = request.BillMonth;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssAccessKeyId))
+            {
+                query["OssAccessKeyId"] = request.OssAccessKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssAccessKeySecret))
+            {
+                query["OssAccessKeySecret"] = request.OssAccessKeySecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
+            {
+                query["OssBucketName"] = request.OssBucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssEndpoint))
+            {
+                query["OssEndpoint"] = request.OssEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssRegion))
+            {
+                query["OssRegion"] = request.OssRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssSecurityToken))
+            {
+                query["OssSecurityToken"] = request.OssSecurityToken;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -328,6 +352,30 @@ namespace AlibabaCloud.SDK.Agency20250227
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillMonth))
             {
                 query["BillMonth"] = request.BillMonth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssAccessKeyId))
+            {
+                query["OssAccessKeyId"] = request.OssAccessKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssAccessKeySecret))
+            {
+                query["OssAccessKeySecret"] = request.OssAccessKeySecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
+            {
+                query["OssBucketName"] = request.OssBucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssEndpoint))
+            {
+                query["OssEndpoint"] = request.OssEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssRegion))
+            {
+                query["OssRegion"] = request.OssRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssSecurityToken))
+            {
+                query["OssSecurityToken"] = request.OssSecurityToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
