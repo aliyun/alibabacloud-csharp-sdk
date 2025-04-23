@@ -466,7 +466,43 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// </summary>
                 [NameInMap("parameter")]
                 [Validation(Required=false)]
-                public Dictionary<string, object> Parameter { get; set; }
+                public GetQuotaResponseBodyDataSubQuotaInfoListParameter Parameter { get; set; }
+                public class GetQuotaResponseBodyDataSubQuotaInfoListParameter : TeaModel {
+                    [NameInMap("elasticReservedCU")]
+                    [Validation(Required=false)]
+                    public long? ElasticReservedCU { get; set; }
+
+                    [NameInMap("enablePriority")]
+                    [Validation(Required=false)]
+                    public bool? EnablePriority { get; set; }
+
+                    [NameInMap("forceReservedMin")]
+                    [Validation(Required=false)]
+                    public bool? ForceReservedMin { get; set; }
+
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// </summary>
+                    [NameInMap("maxCU")]
+                    [Validation(Required=false)]
+                    public long? MaxCU { get; set; }
+
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// </summary>
+                    [NameInMap("minCU")]
+                    [Validation(Required=false)]
+                    public long? MinCU { get; set; }
+
+                    [NameInMap("schedulerType")]
+                    [Validation(Required=false)]
+                    public string SchedulerType { get; set; }
+
+                    [NameInMap("singleJobCULimit")]
+                    [Validation(Required=false)]
+                    public long? SingleJobCULimit { get; set; }
+
+                }
 
                 /// <summary>
                 /// <para>The ID of the parent resource.</para>
@@ -1018,7 +1054,43 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             /// </summary>
             [NameInMap("parameter")]
             [Validation(Required=false)]
-            public Dictionary<string, object> Parameter { get; set; }
+            public GetQuotaResponseBodySubQuotaInfoListParameter Parameter { get; set; }
+            public class GetQuotaResponseBodySubQuotaInfoListParameter : TeaModel {
+                [NameInMap("elasticReservedCU")]
+                [Validation(Required=false)]
+                public long? ElasticReservedCU { get; set; }
+
+                [NameInMap("enablePriority")]
+                [Validation(Required=false)]
+                public bool? EnablePriority { get; set; }
+
+                [NameInMap("forceReservedMin")]
+                [Validation(Required=false)]
+                public bool? ForceReservedMin { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// </summary>
+                [NameInMap("maxCU")]
+                [Validation(Required=false)]
+                public long? MaxCU { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// </summary>
+                [NameInMap("minCU")]
+                [Validation(Required=false)]
+                public long? MinCU { get; set; }
+
+                [NameInMap("schedulerType")]
+                [Validation(Required=false)]
+                public string SchedulerType { get; set; }
+
+                [NameInMap("singleJobCULimit")]
+                [Validation(Required=false)]
+                public long? SingleJobCULimit { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The ID of the parent resource.</para>

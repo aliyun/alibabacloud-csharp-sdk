@@ -9,6 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetQuotaRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The trusted AccessKey pairs.</para>
         /// 
@@ -17,6 +19,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// </summary>
         [NameInMap("AkProven")]
         [Validation(Required=false)]
+        [Obsolete]
         public string AkProven { get; set; }
 
         /// <summary>
@@ -29,6 +32,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public bool? Mock { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The region ID.</para>
         /// 
@@ -37,8 +42,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// </summary>
         [NameInMap("region")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Region { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The tenant ID.</para>
         /// 
@@ -47,6 +55,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TenantId { get; set; }
 
     }

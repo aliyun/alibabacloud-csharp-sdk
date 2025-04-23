@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public long? MaxItem { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The service ID.</para>
         /// 
@@ -47,8 +49,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// </summary>
         [NameInMap("productId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ProductId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The ID of the region.</para>
         /// 
@@ -57,6 +62,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// </summary>
         [NameInMap("region")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Region { get; set; }
 
         /// <summary>
@@ -69,6 +75,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public string SaleTags { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The ID of the tenant.</para>
         /// 
@@ -77,6 +85,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string TenantId { get; set; }
 
     }

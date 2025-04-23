@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <para>The name of the partition that you want to use for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20241201</para>
+        /// <para>ds=20241201</para>
         /// </summary>
         [NameInMap("partitionPrefix")]
         [Validation(Required=false)]
