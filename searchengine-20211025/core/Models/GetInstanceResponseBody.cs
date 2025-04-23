@@ -411,6 +411,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string Version { get; set; }
 
+            [NameInMap("zoneCount")]
+            [Validation(Required=false)]
+            public int? ZoneCount { get; set; }
+
         }
 
     }
