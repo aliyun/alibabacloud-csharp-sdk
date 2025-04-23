@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
         [Validation(Required=false)]
         public List<string> CheckIds { get; set; }
 
+        [NameInMap("CheckPlanId")]
+        [Validation(Required=false)]
+        public long? CheckPlanId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>ecs</para>

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
         [Validation(Required=false)]
         public string CheckId { get; set; }
 
+        [NameInMap("CheckPlanId")]
+        [Validation(Required=false)]
+        public long? CheckPlanId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -48,6 +52,14 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
         [NameInMap("RegionIds")]
         [Validation(Required=false)]
         public List<string> RegionIds { get; set; }
+
+        [NameInMap("ResourceGroupIdList")]
+        [Validation(Required=false)]
+        public List<string> ResourceGroupIdList { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public string ResourceId { get; set; }
 
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]

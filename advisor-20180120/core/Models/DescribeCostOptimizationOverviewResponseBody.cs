@@ -133,6 +133,14 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
             [Validation(Required=false)]
             public string OptResourceNum { get; set; }
 
+            [NameInMap("ProcessedResourceCount")]
+            [Validation(Required=false)]
+            public string ProcessedResourceCount { get; set; }
+
+            [NameInMap("ProcessedSaveAmount")]
+            [Validation(Required=false)]
+            public string ProcessedSaveAmount { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>95***135</para>
@@ -140,6 +148,10 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public long? TaskId { get; set; }
+
+            [NameInMap("WaitProcessResourceCount")]
+            [Validation(Required=false)]
+            public string WaitProcessResourceCount { get; set; }
 
         }
 
