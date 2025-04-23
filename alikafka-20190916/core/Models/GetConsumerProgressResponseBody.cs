@@ -251,6 +251,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public long? TotalDiff { get; set; }
 
+            [NameInMap("state")]
+            [Validation(Required=false)]
+            public string State { get; set; }
+
         }
 
         /// <summary>
