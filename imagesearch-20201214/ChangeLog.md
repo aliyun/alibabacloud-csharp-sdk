@@ -1,3 +1,6 @@
+2025-04-23 Version: 4.2.3
+- Generated csharp 2020-12-14 for ImageSearch.
+
 2025-04-09 Version: 4.2.2
 - Generated csharp 2020-12-14 for ImageSearch.
 
