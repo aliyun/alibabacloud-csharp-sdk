@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsProductInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the <b>DescribeDomainInfo</b> operation to obtain the instance ID.</para>
+        /// <para>The ID of the DNS instance. . You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaininfo?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainInfo</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

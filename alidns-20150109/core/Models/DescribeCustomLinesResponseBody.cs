@@ -36,6 +36,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            [NameInMap("IpSegmentList")]
+            [Validation(Required=false)]
+            public List<DescribeCustomLinesResponseBodyCustomLinesIpSegmentList> IpSegmentList { get; set; }
+            public class DescribeCustomLinesResponseBodyCustomLinesIpSegmentList : TeaModel {
+                [NameInMap("EndIp")]
+                [Validation(Required=false)]
+                public string EndIp { get; set; }
+
+                [NameInMap("StartIp")]
+                [Validation(Required=false)]
+                public string StartIp { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The name of the custom line.</para>
             /// 
@@ -89,7 +103,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned pages.</para>
+        /// <para>The total number of pages returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

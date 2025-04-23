@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The resource ID.</para>
+        /// <para>The ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +45,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The type of the resource. Valid value: Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>DOMAIN</b>: domain name</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDomainRemarkRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name that already exists in Alibaba Cloud DNS.</para>
+        /// <para>The domain name that already exists in Alibaba Cloud Domain Name System (DNS). You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains </a>operation to obtain the domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The description of your domain name.</para>
+        /// <para>The description of the domain name.</para>
         /// <para>It can be up to 50 characters in length and can contain digits, letters, and the following special characters: _ - , .</para>
         /// </summary>
         [NameInMap("Remark")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DeleteSubDomainRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The host record.</para>
+        /// <para>The hostname.</para>
         /// 
         /// <b>Example:</b>
         /// <para>www</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RR { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of deleted DNS records.</para>
+        /// <para>The total number of the DNS records to be deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

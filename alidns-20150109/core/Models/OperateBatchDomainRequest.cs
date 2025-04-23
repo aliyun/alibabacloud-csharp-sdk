@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class OperateBatchDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The Domain Name System (DNS) records. You can submit up to 1,000 DNS records.</para>
+        /// <para>The DNS records. You can submit up to 1,000 DNS records.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainRecordInfo")]
@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Line { get; set; }
 
             /// <summary>
+            /// <para>The new hostname (used only for modification operations, not for external users).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mail</para>
             /// </summary>
@@ -50,6 +52,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string NewRr { get; set; }
 
             /// <summary>
+            /// <para>The new type of the DNS record (used only for modification operations, not for external users).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AAAA</para>
             /// </summary>
@@ -58,6 +62,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string NewType { get; set; }
 
             /// <summary>
+            /// <para>The new value of the DNS record (used only for modification operations, not for external users).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>114.92.XX.XX</para>
             /// </summary>
@@ -113,7 +119,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The record value.</para>
+            /// <para>The value of the DNS record.</para>
             /// <remarks>
             /// <para> This parameter is required if you set Type to <b>RR_ADD</b> or <b>RR_DEL</b>.</para>
             /// </remarks>
@@ -128,7 +134,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
+        /// <para>Default value: zh</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>

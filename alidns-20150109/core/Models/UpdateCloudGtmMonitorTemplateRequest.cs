@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The health check nodes. You can call the <a href="~~ListCloudGtmMonitorNodes~~">ListCloudGtmMonitorNodes</a> operation to obtain the health check nodes.</para>
+        /// <para>The health check nodes. You can call the <a href="https://help.aliyun.com/document_detail/2797327.html">ListCloudGtmMonitorNodes</a> operation to obtain the health check nodes.</para>
         /// </summary>
         [NameInMap("IspCityNodes")]
         [Validation(Required=false)]

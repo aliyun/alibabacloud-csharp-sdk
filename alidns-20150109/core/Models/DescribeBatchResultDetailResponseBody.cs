@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The record value.</para>
+                /// <para>The value of the DNS record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.0.2.0</para>

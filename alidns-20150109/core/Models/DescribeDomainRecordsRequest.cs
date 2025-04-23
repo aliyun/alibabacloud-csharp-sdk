@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The domain name.</para>
+        /// <para>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,6 +39,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <item><description>If you set GroupId to -2, all domain names are queried.</description></item>
         /// <item><description>You can also specify GroupId based on the actual group ID.</description></item>
         /// </list>
+        /// <para>You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaingroups?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainGroups </a>operation to obtain the ID of the domain name group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2223</para>

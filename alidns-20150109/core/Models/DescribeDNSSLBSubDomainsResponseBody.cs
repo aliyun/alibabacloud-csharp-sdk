@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public long? RecordCount { get; set; }
 
                 /// <summary>
-                /// <para>The subdomain name.</para>
+                /// <para>The name of the subdomain.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.example.com">www.example.com</a></para>

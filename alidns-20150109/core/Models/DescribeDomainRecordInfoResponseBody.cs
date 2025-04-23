@@ -130,7 +130,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state of the DNS records. Valid values: <b>Enable and Disable</b>.</para>
+        /// <para>The status of the DNS record. Valid values:</para>
+        /// <para>Enable: enabled</para>
+        /// <para>Disable: disabled</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enable</para>
@@ -140,7 +142,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time-to-live (TTL) of the DNS record.</para>
+        /// <para>The time for which the DNS record is cached in a local DNS system.</para>
         /// 
         /// <b>Example:</b>
         /// <para>600</para>

@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <item><description><b>RR_ADD</b>: adds Domain Name System (DNS) records in batches.</description></item>
         /// <item><description><b>RR_DEL</b>: deletes DNS records in batches.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> Do not perform filtering when this field is empty.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>DOMAIN_ADD</para>
@@ -26,7 +29,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string BatchType { get; set; }
 
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language of the content within the request and response. Default: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -66,7 +73,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the batch operation task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>83618818</para>

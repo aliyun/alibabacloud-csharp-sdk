@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDomainRecordRemarkRequest : TeaModel {
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DNS record.</para>
+        /// <para>The ID of the DNS record. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomainrecords?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainRecords</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +35,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RecordId { get; set; }
 
         /// <summary>
-        /// <para>The description of the DNS record.</para>
+        /// <para>The description of the DNS record. This parameter is empty by default. If this parameter is empty, the original remarks are deleted.</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

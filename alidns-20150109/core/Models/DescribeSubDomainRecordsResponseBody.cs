@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeSubDomainRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned DNS records.</para>
+        /// <para>The returned Domain Name System (DNS) records.</para>
         /// </summary>
         [NameInMap("DomainRecords")]
         [Validation(Required=false)]

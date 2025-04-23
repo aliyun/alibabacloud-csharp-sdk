@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>The end time of the query (timestamp, unit: milliseconds). &gt;Warning: If the query time span is too large and the amount of resolution logs for the queried domain is excessive, it may lead to a query timeout or inaccurate query results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1709196299999</para>
         /// </summary>
@@ -38,6 +40,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? EndTimestamp { get; set; }
 
         /// <summary>
+        /// <para>Return value language, options: </para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese </description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
+        /// <para>Default: en</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -46,6 +55,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Module type </para>
+        /// <list type="bullet">
+        /// <item><description>AUTHORITY (default): Public Authoritative DNS </description></item>
+        /// <item><description>RECURSION: Public Recursive DNS</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>AUTHORITY</para>
         /// </summary>
@@ -54,6 +69,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Module { get; set; }
 
         /// <summary>
+        /// <para>Page number, default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -62,6 +79,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size for query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -70,6 +89,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Query parameters </para>
+        /// <list type="bullet">
+        /// <item><description>sourceIp: Source IP address </description></item>
+        /// <item><description>queryNameFuzzy: Domain name (fuzzy value) </description></item>
+        /// <item><description>queryType: Record type </description></item>
+        /// <item><description>value: Resolution result </description></item>
+        /// <item><description>status: Status </description></item>
+        /// <item><description>serverIp: Resolution server IP</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;sourceIp&quot;:&quot;59.82.XX.XX&quot;,&quot;queryType&quot;:&quot;A&quot;}</para>
         /// </summary>
@@ -78,6 +107,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string QueryCondition { get; set; }
 
         /// <summary>
+        /// <para>The start time of the query (timestamp, unit: milliseconds).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1709192640000</para>
         /// </summary>

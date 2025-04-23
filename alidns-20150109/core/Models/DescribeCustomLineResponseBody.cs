@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom line.</para>
+        /// <para>The ID/Name of the custom line.</para>
         /// 
         /// <b>Example:</b>
         /// <para>597</para>

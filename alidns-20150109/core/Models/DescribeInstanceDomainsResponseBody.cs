@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeInstanceDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The domain names that are bound to the Alibaba Cloud DNS instance.</para>
+        /// <para>The domain names that are bound to the DNS instance.</para>
         /// </summary>
         [NameInMap("InstanceDomains")]
         [Validation(Required=false)]

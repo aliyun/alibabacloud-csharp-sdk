@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The resource ID.</para>
+        /// <para>The ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +35,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The type of the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>DOMAIN</b>: domain name</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +49,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag to add to the resource.</para>
+        /// <para>The tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -50,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the resource. The tag key can be up to 20 characters in length and cannot start with acs: or aliyun.</para>
+            /// <para>The tag key. The tag key can be up to 20 characters in length and cannot start with <c>acs:</c> or<c>aliyun</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abcd</para>
@@ -60,7 +67,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the resource. The tag value can be up to 20 characters in length.</para>
+            /// <para>The tag value. The tag value can be up to 20 bytes in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abcd</para>
