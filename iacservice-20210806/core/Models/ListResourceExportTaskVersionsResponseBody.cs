@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("elapsedTime")]
+            [Validation(Required=false)]
+            public long? ElapsedTime { get; set; }
+
             [NameInMap("excludeRules")]
             [Validation(Required=false)]
             public List<ListResourceExportTaskVersionsResponseBodyExportTasksExcludeRules> ExcludeRules { get; set; }

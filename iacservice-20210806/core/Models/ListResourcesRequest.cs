@@ -17,14 +17,23 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("sourceType")]
         [Validation(Required=false)]
         public string SourceType { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("sourceValue")]
         [Validation(Required=false)]
         public string SourceValue { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("specType")]
         [Validation(Required=false)]
         public string SpecType { get; set; }

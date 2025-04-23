@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -16,13 +13,21 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string Comment { get; set; }
 
-        [NameInMap("timeStamps")]
-        [Validation(Required=false)]
-        public string TimeStamps { get; set; }
-
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("jobResult")]
         [Validation(Required=false)]
         public string JobResult { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2022-06-13 17:11:34</para>
+        /// </summary>
+        [NameInMap("timeStamps")]
+        [Validation(Required=false)]
+        public string TimeStamps { get; set; }
 
     }
 

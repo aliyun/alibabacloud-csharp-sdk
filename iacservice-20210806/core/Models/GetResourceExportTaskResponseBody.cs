@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public GetResourceExportTaskResponseBodyTask Task { get; set; }
         public class GetResourceExportTaskResponseBodyTask : TeaModel {
+            [NameInMap("configPath")]
+            [Validation(Required=false)]
+            public string ConfigPath { get; set; }
+
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            [NameInMap("elapsedTime")]
+            [Validation(Required=false)]
+            public long? ElapsedTime { get; set; }
 
             [NameInMap("excludeRules")]
             [Validation(Required=false)]
@@ -116,6 +124,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [NameInMap("taskOutputPath")]
             [Validation(Required=false)]
             public string TaskOutputPath { get; set; }
+
+            [NameInMap("terraformContext")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> TerraformContext { get; set; }
+
+            [NameInMap("terraformProviderVersion")]
+            [Validation(Required=false)]
+            public string TerraformProviderVersion { get; set; }
 
             [NameInMap("terraformVersion")]
             [Validation(Required=false)]

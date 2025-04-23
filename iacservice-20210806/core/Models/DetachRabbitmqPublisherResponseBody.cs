@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class DetachRabbitmqPublisherResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>BF72A6FB-B071-5F2E-A036-9D62545B962C</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

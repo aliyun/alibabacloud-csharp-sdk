@@ -9,36 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class UpdateProjectResponseBody : TeaModel {
-        [NameInMap("project")]
-        [Validation(Required=false)]
-        public UpdateProjectResponseBodyProject Project { get; set; }
-        public class UpdateProjectResponseBodyProject : TeaModel {
-            [NameInMap("createTime")]
-            [Validation(Required=false)]
-            public string CreateTime { get; set; }
-
-            [NameInMap("description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            [NameInMap("groupCnt")]
-            [Validation(Required=false)]
-            public long? GroupCnt { get; set; }
-
-            [NameInMap("id")]
-            [Validation(Required=false)]
-            public string Id { get; set; }
-
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            [NameInMap("taskCnt")]
-            [Validation(Required=false)]
-            public long? TaskCnt { get; set; }
-
-        }
-
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>C62888F6-254D-5589-BF05-0D9EE698C187</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateJobResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>job-518855d9a058c32798c319561f</para>
+        /// </summary>
         [NameInMap("jobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>136B3926-DD90-5DB2-96EC-8BAD6407D1C9</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

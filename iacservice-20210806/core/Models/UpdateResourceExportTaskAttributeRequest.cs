@@ -9,9 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class UpdateResourceExportTaskAttributeRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("configPath")]
+        [Validation(Required=false)]
+        public string ConfigPath { get; set; }
 
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -63,6 +70,9 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 
         }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -70,6 +80,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [NameInMap("ramRole")]
         [Validation(Required=false)]
         public string RamRole { get; set; }
+
+        [NameInMap("terraformProviderVersion")]
+        [Validation(Required=false)]
+        public string TerraformProviderVersion { get; set; }
 
         [NameInMap("terraformVersion")]
         [Validation(Required=false)]
