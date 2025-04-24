@@ -17,6 +17,32 @@ namespace AlibabaCloud.SDK.Ecd20201001.Models
         [Validation(Required=false)]
         public GetMcpResourceResponseBodyData Data { get; set; }
         public class GetMcpResourceResponseBodyData : TeaModel {
+            [NameInMap("DesktopInfo")]
+            [Validation(Required=false)]
+            public GetMcpResourceResponseBodyDataDesktopInfo DesktopInfo { get; set; }
+            public class GetMcpResourceResponseBodyDataDesktopInfo : TeaModel {
+                [NameInMap("AppId")]
+                [Validation(Required=false)]
+                public string AppId { get; set; }
+
+                [NameInMap("AuthCode")]
+                [Validation(Required=false)]
+                public string AuthCode { get; set; }
+
+                [NameInMap("ConnectionProperties")]
+                [Validation(Required=false)]
+                public string ConnectionProperties { get; set; }
+
+                [NameInMap("ResourceId")]
+                [Validation(Required=false)]
+                public string ResourceId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+            }
+
             [NameInMap("ResourceUrl")]
             [Validation(Required=false)]
             public string ResourceUrl { get; set; }
