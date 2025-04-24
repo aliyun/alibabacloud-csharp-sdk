@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public int? DiskSize { get; set; }
 
+        [NameInMap("enableLongLiving")]
+        [Validation(Required=false)]
+        public bool? EnableLongLiving { get; set; }
+
         [NameInMap("environmentVariables")]
         [Validation(Required=false)]
         public Dictionary<string, string> EnvironmentVariables { get; set; }
