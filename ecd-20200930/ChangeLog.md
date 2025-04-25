@@ -1,3 +1,6 @@
+2025-04-25 Version: 4.8.5
+- Generated csharp 2020-09-30 for ecd.
+
 2025-04-19 Version: 4.8.4
 - Update API DescribeClientEvents: add request parameters FillHardwareInfo.
 - Update API DescribeClientEvents: add request parameters Language.

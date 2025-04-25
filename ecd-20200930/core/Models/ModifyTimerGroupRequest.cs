@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The cron expression specified in the scheduled task.</para>
             /// <remarks>
-            /// <para> The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7.</para>
+            /// <para> The time must be in UTC. For example, if your local time is 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OperationType { get; set; }
 
             /// <summary>
-            /// <para>The process whitelist. If whitelisted processes are running, the scheduled task triggered by inactivity does not take effect.</para>
+            /// <para>The process whitelist. If whitelisted processes are running, the scheduled task does not take effect upon inactivity.</para>
             /// </summary>
             [NameInMap("ProcessWhitelist")]
             [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The scheduled task type.</para>
-            /// <para>Valid values:</para>
+            /// <para>Valid value:</para>
             /// <list type="bullet">
             /// <item><description>NoOperationDisconnect: scheduled disconnection upon inactivity.</description></item>
             /// <item><description>NoConnect: scheduled disconnection upon specified operation (OperationType).</description></item>

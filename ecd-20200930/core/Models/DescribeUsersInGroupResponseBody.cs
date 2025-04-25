@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUsersInGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of authorized users.</para>
+        /// <para>The authorized users.</para>
         /// </summary>
         [NameInMap("EndUsers")]
         [Validation(Required=false)]

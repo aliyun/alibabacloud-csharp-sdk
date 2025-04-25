@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The business type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: public cloud.</description></item>
+        /// <item><description>1: public cloud</description></item>
         /// <item><description>8: commercial edition.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -390,9 +390,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The redirection type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>deviceRedirect: enables device redirection.</description></item>
-            /// <item><description>usbRedirect: enables USB redirection.</description></item>
-            /// <item><description>off: disables any type of redirection.</description></item>
+            /// <item><description>deviceRedirect: device redirection</description></item>
+            /// <item><description>usbRedirect: USB redirection.</description></item>
+            /// <item><description>off: any type of redirection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -435,14 +435,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The peripheral type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>usbKey: U keys.</description></item>
+            /// <item><description>usbKey: UKeys</description></item>
             /// <item><description>other: other peripheral devices.</description></item>
             /// <item><description>graphicsTablet: graphics tablets.</description></item>
             /// <item><description>cardReader: card readers.</description></item>
             /// <item><description>printer: printers.</description></item>
             /// <item><description>scanner: scanners.</description></item>
             /// <item><description>storage: storage devices.</description></item>
-            /// <item><description>camera: cameras.</description></item>
+            /// <item><description>camera: web cameras.</description></item>
             /// <item><description>networkInterfaceCard: NIC devices.</description></item>
             /// </list>
             /// 
@@ -477,9 +477,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The redirection type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>deviceRedirect: enables device redirection.</description></item>
-            /// <item><description>usbRedirect: enables USB redirection.</description></item>
-            /// <item><description>off: disables any type of redirection.</description></item>
+            /// <item><description>deviceRedirect: device redirection</description></item>
+            /// <item><description>usbRedirect: USB redirection.</description></item>
+            /// <item><description>off: any type of redirection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -596,11 +596,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DomainResolveRuleType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enforce session bandwidth limit.</para>
+        /// <para>Specifies whether to enforce a bandwidth limit for sessions.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>off: doesn\&quot;t enforce session bandwidth limit.</description></item>
-        /// <item><description>on: enforces session bandwidth limit.</description></item>
+        /// <item><description>off: doesn\&quot;t enforce a bandwidth limit for sessions.</description></item>
+        /// <item><description>on: enforces a bandwidth limit for sessions.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -626,11 +626,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserApplyAdminCoordinate { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether end users in the same workspace can share cloud computers.</para>
+        /// <para>Specifies whether to allow end users from the same office network to share cloud computers.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>off: End users in the same workspace cannot share cloud computers.</description></item>
-        /// <item><description>on: End users in the same workspace can share cloud computers.</description></item>
+        /// <item><description>off: doesn\&quot;t allow end users from the same office network to share cloud computers.</description></item>
+        /// <item><description>on: allows end users from the same office network to share cloud computers.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -793,14 +793,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MemorySingleRateLimit { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display the Restart button in the DesktopAssistant menu when end users connect to cloud computers from mobile clients (Android clients and iOS clients).</para>
+        /// <para>Specifies whether to display the Restart button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</para>
         /// <remarks>
         /// <para> This feature applies to only mobile clients of version 7.4.0 or later.</para>
         /// </remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>off: doesn\&quot;t display the Restart button in the DesktopAssistant menu.</description></item>
-        /// <item><description>on: displays the Restart button in the DesktopAssistant menu.</description></item>
+        /// <item><description>off: doesn\&quot;t display the Restart button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</description></item>
+        /// <item><description>on: displays the Restart button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -811,14 +811,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string MobileRestart { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display the Stop button in the DesktopAssistant menu when end users connect to cloud computers from mobile clients (Android clients and iOS clients).</para>
+        /// <para>Specifies whether to display the Stop button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</para>
         /// <remarks>
         /// <para> This feature applies to only mobile clients of version 7.4.0 or later.</para>
         /// </remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>off: doesn\&quot;t display the Stop button in the DesktopAssistant menu.</description></item>
-        /// <item><description>on: displays the Stop button in the DesktopAssistant menu.</description></item>
+        /// <item><description>off: doesn\&quot;t display the Stop button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</description></item>
+        /// <item><description>on: displays the Stop button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -858,7 +858,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NetRedirect { get; set; }
 
         /// <summary>
-        /// <para>The network redirection policies.</para>
+        /// <para>The network redirection rules.</para>
         /// <remarks>
         /// <para> This parameter is in private preview and only available to specific users.</para>
         /// </remarks>
@@ -1361,7 +1361,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> ScopeValue { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth peak of the session. Valid values: 2000 to 100000.</para>
+        /// <para>The bandwidth peak allowed for sessions. Unit: Kbit/s. Valid values: 2000 to 100000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -1524,7 +1524,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The average bitrate for video encoding. Valid values: 1000 to 50000.</para>
+        /// <para>The average bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -1554,7 +1554,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? VideoEncMinQP { get; set; }
 
         /// <summary>
-        /// <para>The peak bitrate for video encoding. Valid values: 1000 to 50000.</para>
+        /// <para>The peak bitrate allowed for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>

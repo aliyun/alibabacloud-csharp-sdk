@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeGuestApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the applications.</para>
+        /// <para>The applications.</para>
         /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string IconUrl { get; set; }
 
             /// <summary>
-            /// <para>The I/O read and write performance.</para>
+            /// <para>The I/O read and write performance. Unit: byte/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>124906.0</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Pid { get; set; }
 
             /// <summary>
-            /// <para>The process information.</para>
+            /// <para>The processes.</para>
             /// </summary>
             [NameInMap("ProcessData")]
             [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public double? CpuPercent { get; set; }
 
                 /// <summary>
-                /// <para>The GPU utilization (%).</para>
+                /// <para>The GPU usage (%).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public double? GpuPercent { get; set; }
 
                 /// <summary>
-                /// <para>The I/O read and write performance.</para>
+                /// <para>The I/O read and write performance. Unit: byte/s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>124906.0</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public double? Iospeed { get; set; }
 
                 /// <summary>
-                /// <para>The memory utilization (%).</para>
+                /// <para>The memory usage (%).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>34</para>
@@ -196,7 +196,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProcessPath { get; set; }
 
             /// <summary>
-            /// <para>The application status.</para>
+            /// <para>The status of the application.</para>
+            /// <para>Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description>Idle: The application is installed in the cloud computer but is not running.</description></item>
+            /// <item><description>Running: The application has been installed in the cloud computer and is running.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>

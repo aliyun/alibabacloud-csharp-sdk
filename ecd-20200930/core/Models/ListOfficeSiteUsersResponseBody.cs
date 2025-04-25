@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The usernames of AD users.\
-        /// If the only Administrator and Guest users exist in the enterprise AD, an empty User array is returned.</para>
+        /// <para>The usernames of the AD accounts.\
+        /// If the only Administrator and Guest users exist in the enterprise AD directory, an empty User array is returned.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? AssignedDesktopNumber { get; set; }
 
             /// <summary>
-            /// <para>The display name of the user.</para>
+            /// <para>The display name of the AD account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alice</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The name of the AD user.</para>
+            /// <para>The username of the AD account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alice</para>

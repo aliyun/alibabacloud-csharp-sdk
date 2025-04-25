@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DownloadCdsFileRequest : TeaModel {
         /// <summary>
+        /// <para>The enterprise drive ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+cds-643267****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
+        /// <para>The file ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>63f3257b68b018170b194d87b875512d108f****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
+        /// <para>The team ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cg-i1ruuudp92qpj****</para>
         /// </summary>
@@ -42,6 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

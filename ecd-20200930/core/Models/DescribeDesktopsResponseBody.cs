@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the cloud computers.</para>
+        /// <para>The cloud computers.</para>
         /// </summary>
         [NameInMap("Desktops")]
         [Validation(Required=false)]

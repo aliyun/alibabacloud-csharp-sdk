@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeClientEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the events of an end user.</para>
+        /// <para>The user events.</para>
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]

@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CloneCenterPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The business type. Valid values:</para>
+        /// <para>The business type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: public cloud.</description></item>
+        /// <item><description>1: public cloud</description></item>
         /// <item><description>8: commercial edition.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. Set the value to cn-shanghai.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,10 +59,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid values:</para>
+        /// <para>The resource type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>desktop: cloud computers.</description></item>
         /// <item><description>app: cloud applications.</description></item>
+        /// <item><description>desktop: cloud computers.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

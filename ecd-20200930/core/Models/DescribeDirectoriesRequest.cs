@@ -31,11 +31,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The directory type.</para>
-        /// <para>Valid values:</para>
+        /// <para>Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>SIMPLE: a directory of the convenience account type</description></item>
-        /// <item><description>AD_CONNECTOR: an AD directory</description></item>
-        /// <item><description>RAM: a RAM directory</description></item>
+        /// <item><description>SIMPLE: the convenience directory.</description></item>
+        /// <item><description>AD_CONNECTOR: the Active Directory (AD) directory.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
