@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string Amount { get; set; }
 
+            [NameInMap("CertainAmount")]
+            [Validation(Required=false)]
+            public string CertainAmount { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>59243658</para>
