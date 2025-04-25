@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string NewImageName { get; set; }
 
+            [NameInMap("Reason")]
+            [Validation(Required=false)]
+            public string Reason { get; set; }
+
             /// <summary>
             /// <para>The status of the image modification.</para>
             /// <para>Valid values:</para>

@@ -460,6 +460,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 [Validation(Required=false)]
                 public string OptCommand { get; set; }
 
+                [NameInMap("Platforms")]
+                [Validation(Required=false)]
+                public string Platforms { get; set; }
+
                 /// <summary>
                 /// <para>The redirection type.</para>
                 /// <para>Valid values:</para>
@@ -684,6 +688,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("InternetCommunicationProtocol")]
             [Validation(Required=false)]
             public string InternetCommunicationProtocol { get; set; }
+
+            [NameInMap("InternetPrinter")]
+            [Validation(Required=false)]
+            public string InternetPrinter { get; set; }
 
             /// <summary>
             /// <para>The permissions on local disk mapping.</para>
@@ -1215,6 +1223,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("ResourceRegionId")]
             [Validation(Required=false)]
             public string ResourceRegionId { get; set; }
+
+            [NameInMap("SafeMenu")]
+            [Validation(Required=false)]
+            public string SafeMenu { get; set; }
 
             /// <summary>
             /// <para>The effective scope of the policy.</para>

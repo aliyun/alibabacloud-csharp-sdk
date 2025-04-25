@@ -5602,6 +5602,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await CreateCdsFileShareLinkWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建无地域策略</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCenterPolicyRequest
         /// </param>
@@ -5735,6 +5740,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetCommunicationProtocol))
             {
                 query["InternetCommunicationProtocol"] = request.InternetCommunicationProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetPrinter))
+            {
+                query["InternetPrinter"] = request.InternetPrinter;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
@@ -5883,6 +5892,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
                 query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SafeMenu))
+            {
+                query["SafeMenu"] = request.SafeMenu;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
@@ -6031,6 +6044,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateCenterPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建无地域策略</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCenterPolicyRequest
         /// </param>
@@ -6164,6 +6182,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetCommunicationProtocol))
             {
                 query["InternetCommunicationProtocol"] = request.InternetCommunicationProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetPrinter))
+            {
+                query["InternetPrinter"] = request.InternetPrinter;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
@@ -6313,6 +6335,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ResourceType"] = request.ResourceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SafeMenu))
+            {
+                query["SafeMenu"] = request.SafeMenu;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
                 query["Scope"] = request.Scope;
@@ -6460,6 +6486,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<CreateCenterPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建无地域策略</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCenterPolicyRequest
         /// </param>
@@ -6473,6 +6504,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return CreateCenterPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建无地域策略</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCenterPolicyRequest
         /// </param>
@@ -29061,6 +29097,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["InternetCommunicationProtocol"] = request.InternetCommunicationProtocol;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetPrinter))
+            {
+                query["InternetPrinter"] = request.InternetPrinter;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
                 query["LocalDrive"] = request.LocalDrive;
@@ -29220,6 +29260,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeSecurityPolicyRule))
             {
                 query["RevokeSecurityPolicyRule"] = request.RevokeSecurityPolicyRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SafeMenu))
+            {
+                query["SafeMenu"] = request.SafeMenu;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
@@ -29507,6 +29551,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["InternetCommunicationProtocol"] = request.InternetCommunicationProtocol;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetPrinter))
+            {
+                query["InternetPrinter"] = request.InternetPrinter;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
                 query["LocalDrive"] = request.LocalDrive;
@@ -29666,6 +29714,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeSecurityPolicyRule))
             {
                 query["RevokeSecurityPolicyRule"] = request.RevokeSecurityPolicyRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SafeMenu))
+            {
+                query["SafeMenu"] = request.SafeMenu;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
