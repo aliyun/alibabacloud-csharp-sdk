@@ -266,6 +266,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             }
 
+            [NameInMap("SinkBaiLianParameters")]
+            [Validation(Required=false)]
+            public SinkBaiLianParameters SinkBaiLianParameters { get; set; }
+
             [NameInMap("SinkCustomizedKafkaConnectorParameters")]
             [Validation(Required=false)]
             public UpdateEventStreamingRequestSinkSinkCustomizedKafkaConnectorParameters SinkCustomizedKafkaConnectorParameters { get; set; }
@@ -3219,6 +3223,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string Topic { get; set; }
 
             }
+
+            [NameInMap("SourceMySQLParameters")]
+            [Validation(Required=false)]
+            public SourceMySQLParameters SourceMySQLParameters { get; set; }
 
             [NameInMap("SourceOSSParameters")]
             [Validation(Required=false)]
