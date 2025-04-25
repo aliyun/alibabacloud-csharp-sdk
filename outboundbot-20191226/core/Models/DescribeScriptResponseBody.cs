@@ -149,6 +149,28 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public bool? NewBargeInEnable { get; set; }
 
+            [NameInMap("NluEngine")]
+            [Validation(Required=false)]
+            public string NluEngine { get; set; }
+
+            [NameInMap("NluProfile")]
+            [Validation(Required=false)]
+            public DescribeScriptResponseBodyScriptNluProfile NluProfile { get; set; }
+            public class DescribeScriptResponseBodyScriptNluProfile : TeaModel {
+                [NameInMap("FcFunction")]
+                [Validation(Required=false)]
+                public string FcFunction { get; set; }
+
+                [NameInMap("FcHttpTriggerUrl")]
+                [Validation(Required=false)]
+                public string FcHttpTriggerUrl { get; set; }
+
+                [NameInMap("FcRegion")]
+                [Validation(Required=false)]
+                public string FcRegion { get; set; }
+
+            }
+
             [NameInMap("Scene")]
             [Validation(Required=false)]
             public string Scene { get; set; }

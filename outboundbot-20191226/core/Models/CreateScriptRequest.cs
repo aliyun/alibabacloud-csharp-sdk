@@ -120,6 +120,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string ScriptName { get; set; }
 
+        [NameInMap("ScriptNluProfileJsonString")]
+        [Validation(Required=false)]
+        public string ScriptNluProfileJsonString { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>[]</para>

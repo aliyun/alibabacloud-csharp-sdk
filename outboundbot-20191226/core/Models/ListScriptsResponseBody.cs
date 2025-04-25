@@ -137,6 +137,24 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 [Validation(Required=false)]
                 public string NluEngine { get; set; }
 
+                [NameInMap("NluProfile")]
+                [Validation(Required=false)]
+                public ListScriptsResponseBodyScriptsListNluProfile NluProfile { get; set; }
+                public class ListScriptsResponseBodyScriptsListNluProfile : TeaModel {
+                    [NameInMap("FcFunction")]
+                    [Validation(Required=false)]
+                    public string FcFunction { get; set; }
+
+                    [NameInMap("FcHttpTriggerUrl")]
+                    [Validation(Required=false)]
+                    public string FcHttpTriggerUrl { get; set; }
+
+                    [NameInMap("FcRegion")]
+                    [Validation(Required=false)]
+                    public string FcRegion { get; set; }
+
+                }
+
                 [NameInMap("RejectReason")]
                 [Validation(Required=false)]
                 public string RejectReason { get; set; }
