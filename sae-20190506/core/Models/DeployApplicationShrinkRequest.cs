@@ -297,6 +297,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ImageUrl { get; set; }
 
+        [NameInMap("InitContainersConfig")]
+        [Validation(Required=false)]
+        public string InitContainersConfigShrink { get; set; }
+
         /// <summary>
         /// <para>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c>.</para>
         /// 

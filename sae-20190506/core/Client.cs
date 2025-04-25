@@ -883,6 +883,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateApplicationShrinkRequest request = new CreateApplicationShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InitContainersConfig))
+            {
+                request.InitContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InitContainersConfig, "InitContainersConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SidecarContainersConfig))
             {
                 request.SidecarContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SidecarContainersConfig, "SidecarContainersConfig", "json");
@@ -1148,6 +1152,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSidecarResourceIsolated))
             {
                 body["EnableSidecarResourceIsolated"] = request.EnableSidecarResourceIsolated;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitContainersConfigShrink))
+            {
+                body["InitContainersConfig"] = request.InitContainersConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MicroRegistrationConfig))
             {
@@ -1220,6 +1228,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateApplicationShrinkRequest request = new CreateApplicationShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InitContainersConfig))
+            {
+                request.InitContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InitContainersConfig, "InitContainersConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SidecarContainersConfig))
             {
                 request.SidecarContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SidecarContainersConfig, "SidecarContainersConfig", "json");
@@ -1485,6 +1497,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSidecarResourceIsolated))
             {
                 body["EnableSidecarResourceIsolated"] = request.EnableSidecarResourceIsolated;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitContainersConfigShrink))
+            {
+                body["InitContainersConfig"] = request.InitContainersConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MicroRegistrationConfig))
             {
@@ -5328,6 +5344,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DeployApplicationShrinkRequest request = new DeployApplicationShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InitContainersConfig))
+            {
+                request.InitContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InitContainersConfig, "InitContainersConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SidecarContainersConfig))
             {
                 request.SidecarContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SidecarContainersConfig, "SidecarContainersConfig", "json");
@@ -5581,6 +5601,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSidecarResourceIsolated))
             {
                 body["EnableSidecarResourceIsolated"] = request.EnableSidecarResourceIsolated;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitContainersConfigShrink))
+            {
+                body["InitContainersConfig"] = request.InitContainersConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MicroRegistrationConfig))
             {
@@ -5662,6 +5686,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DeployApplicationShrinkRequest request = new DeployApplicationShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InitContainersConfig))
+            {
+                request.InitContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InitContainersConfig, "InitContainersConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SidecarContainersConfig))
             {
                 request.SidecarContainersConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SidecarContainersConfig, "SidecarContainersConfig", "json");
@@ -5915,6 +5943,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSidecarResourceIsolated))
             {
                 body["EnableSidecarResourceIsolated"] = request.EnableSidecarResourceIsolated;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitContainersConfigShrink))
+            {
+                body["InitContainersConfig"] = request.InitContainersConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MicroRegistrationConfig))
             {

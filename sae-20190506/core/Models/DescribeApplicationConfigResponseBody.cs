@@ -332,6 +332,54 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string ImageUrl { get; set; }
 
+            [NameInMap("InitContainersConfig")]
+            [Validation(Required=false)]
+            public List<DescribeApplicationConfigResponseBodyDataInitContainersConfig> InitContainersConfig { get; set; }
+            public class DescribeApplicationConfigResponseBodyDataInitContainersConfig : TeaModel {
+                [NameInMap("Command")]
+                [Validation(Required=false)]
+                public string Command { get; set; }
+
+                [NameInMap("CommandArgs")]
+                [Validation(Required=false)]
+                public string CommandArgs { get; set; }
+
+                [NameInMap("ConfigMapMountDesc")]
+                [Validation(Required=false)]
+                public List<DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc> ConfigMapMountDesc { get; set; }
+                public class DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc : TeaModel {
+                    [NameInMap("ConfigMapId")]
+                    [Validation(Required=false)]
+                    public long? ConfigMapId { get; set; }
+
+                    [NameInMap("ConfigMapName")]
+                    [Validation(Required=false)]
+                    public string ConfigMapName { get; set; }
+
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("MountPath")]
+                    [Validation(Required=false)]
+                    public string MountPath { get; set; }
+
+                }
+
+                [NameInMap("Envs")]
+                [Validation(Required=false)]
+                public string Envs { get; set; }
+
+                [NameInMap("ImageUrl")]
+                [Validation(Required=false)]
+                public string ImageUrl { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c>.</para>
             /// 

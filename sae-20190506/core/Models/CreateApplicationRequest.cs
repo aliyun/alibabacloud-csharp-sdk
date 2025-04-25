@@ -204,6 +204,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ImageUrl { get; set; }
 
+        [NameInMap("InitContainersConfig")]
+        [Validation(Required=false)]
+        public List<InitContainerConfig> InitContainersConfig { get; set; }
+
         /// <summary>
         /// <para>custom-args</para>
         /// 
