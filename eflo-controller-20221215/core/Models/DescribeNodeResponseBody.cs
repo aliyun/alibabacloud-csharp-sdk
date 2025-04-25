@@ -39,26 +39,69 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        /// <summary>
+        /// <para>Disk infos</para>
+        /// </summary>
         [NameInMap("Disks")]
         [Validation(Required=false)]
         public List<DescribeNodeResponseBodyDisks> Disks { get; set; }
         public class DescribeNodeResponseBodyDisks : TeaModel {
+            /// <summary>
+            /// <para>The category of the disk.</para>
+            /// <list type="bullet">
+            /// <item><description>cloud_ssd: all-flash disk.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cloud_essd</para>
+            /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>d-bp1fi88ryk4yah8a6yos</para>
+            /// </summary>
             [NameInMap("DiskId")]
             [Validation(Required=false)]
             public string DiskId { get; set; }
 
+            /// <summary>
+            /// <para>The performance level of the ESSD. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
+            /// <item><description>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PL1</para>
+            /// </summary>
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
 
+            /// <summary>
+            /// <para>The size of the disk. Unit: GiB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
 
+            /// <summary>
+            /// <para>The type of the disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>system: system disk</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>system</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -74,6 +117,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [NameInMap("ExpiredTime")]
         [Validation(Required=false)]
         public string ExpiredTime { get; set; }
+
+        /// <summary>
+        /// <para>是否支持文件存储挂载</para>
+        /// </summary>
+        [NameInMap("FileSystemMountEnabled")]
+        [Validation(Required=false)]
+        public bool? FileSystemMountEnabled { get; set; }
 
         /// <summary>
         /// <para>Hostname</para>

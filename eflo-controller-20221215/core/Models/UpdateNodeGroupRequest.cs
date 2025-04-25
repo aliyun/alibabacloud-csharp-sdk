@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class UpdateNodeGroupRequest : TeaModel {
+        [NameInMap("FileSystemMountEnabled")]
+        [Validation(Required=false)]
+        public bool? FileSystemMountEnabled { get; set; }
+
+        /// <summary>
+        /// <para>The name of the key pair.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sc-key</para>
+        /// </summary>
+        [NameInMap("KeyPairName")]
+        [Validation(Required=false)]
+        public string KeyPairName { get; set; }
+
         /// <summary>
         /// <para>Node group name</para>
         /// 

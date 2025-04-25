@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("FileSystemMountEnabled")]
+            [Validation(Required=false)]
+            public bool? FileSystemMountEnabled { get; set; }
+
             /// <summary>
             /// <para>Group ID.</para>
             /// 

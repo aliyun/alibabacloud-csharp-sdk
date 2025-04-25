@@ -8,26 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
-    public class UpdateNodeGroupResponseBody : TeaModel {
+    public class DeleteVscResponseBody : TeaModel {
         /// <summary>
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8F065DDD-6996-5973-9691-9EC57BD0072E</para>
+        /// <para>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <para>Task ID</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>i15374011238111706</para>
-        /// </summary>
-        [NameInMap("TaskId")]
-        [Validation(Required=false)]
-        public string TaskId { get; set; }
 
     }
 

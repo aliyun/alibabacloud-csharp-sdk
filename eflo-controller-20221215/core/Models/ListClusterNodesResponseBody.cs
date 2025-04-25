@@ -57,6 +57,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
+            /// <para>whether or not support file system mount</para>
+            /// </summary>
+            [NameInMap("FileSystemMountEnabled")]
+            [Validation(Required=false)]
+            public bool? FileSystemMountEnabled { get; set; }
+
+            /// <summary>
             /// <para>Hostname</para>
             /// 
             /// <b>Example:</b>

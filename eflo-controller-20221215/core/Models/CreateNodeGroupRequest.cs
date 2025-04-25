@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string Az { get; set; }
 
+            [NameInMap("FileSystemMountEnabled")]
+            [Validation(Required=false)]
+            public bool? FileSystemMountEnabled { get; set; }
+
             /// <summary>
             /// <para>Image ID.</para>
             /// <para>This parameter is required.</para>
@@ -49,6 +53,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
+
+            /// <summary>
+            /// <para>The name of the key pair.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-keypair</para>
+            /// </summary>
+            [NameInMap("KeyPairName")]
+            [Validation(Required=false)]
+            public string KeyPairName { get; set; }
 
             /// <summary>
             /// <para>Machine type</para>
@@ -82,18 +96,45 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string NodeGroupName { get; set; }
 
+            /// <summary>
+            /// <para>SystemDisk</para>
+            /// </summary>
             [NameInMap("SystemDisk")]
             [Validation(Required=false)]
             public CreateNodeGroupRequestNodeGroupSystemDisk SystemDisk { get; set; }
             public class CreateNodeGroupRequestNodeGroupSystemDisk : TeaModel {
+                /// <summary>
+                /// <para>Disk performance level</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cloud_essd</para>
+                /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
+                /// <summary>
+                /// <para>The performance level of the disk if the disk is an ESSD. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
+                /// <item><description>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
+                /// </list>
+                /// <para>Default value: PL1.</para>
+                /// <para>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PL!</para>
+                /// </summary>
                 [NameInMap("PerformanceLevel")]
                 [Validation(Required=false)]
                 public string PerformanceLevel { get; set; }
 
+                /// <summary>
+                /// <para>System disk size</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>250</para>
+                /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public int? Size { get; set; }
