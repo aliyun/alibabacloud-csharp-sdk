@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreateUsersResponseBody : TeaModel {
+        [NameInMap("AllSucceed")]
+        [Validation(Required=false)]
+        public bool? AllSucceed { get; set; }
+
         /// <summary>
         /// <para>The result of user creation.</para>
         /// </summary>
