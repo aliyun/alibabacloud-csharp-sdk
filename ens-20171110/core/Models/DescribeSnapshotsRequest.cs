@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</para>
+        /// <para>The ID of the ENS node. You can query the node ID by calling the <a href="https://help.aliyun.com/document_detail/2637662.html">DescribeEnsRegions</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The maximum value is <b>100</b>.</para>
+        /// <para>The number of entries to return on each page. Maximum value: <b>100</b>.</para>
         /// <para>Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>

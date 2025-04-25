@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The region of the target OSS where the image is to be stored.</para>
+        /// <para>The region of the destination OSS bucket where the image is to be stored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -65,6 +65,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string TargetOSSRegionId { get; set; }
 
+        /// <summary>
+        /// <para>创建镜像是否包含数据盘。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>取值
+        /// true：附带数据盘
+        /// false：默认值，不附带数据盘</para>
+        /// </summary>
         [NameInMap("WithDataDisks")]
         [Validation(Required=false)]
         public bool? WithDataDisks { get; set; }

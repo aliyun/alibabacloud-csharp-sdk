@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// <para>The number of entries to return on each page. Maximum value: <b>100</b>.</para>
-        /// <para>Default value: <b>10</b></para>
+        /// <para>Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

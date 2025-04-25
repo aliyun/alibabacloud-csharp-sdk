@@ -217,11 +217,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The scheduling algorithm. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>wrr</b>: Backend servers with higher weights receive more requests than those with lower weights.</description></item>
-        /// <item><description><b>wlc</b>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</description></item>
+        /// <item><description><b>wlc</b>: Requests are distributed based on the weights and number of connections to backend servers. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</description></item>
         /// <item><description><b>rr</b>: Requests are distributed to backend servers in sequence.</description></item>
-        /// <item><description><b>sch</b>: Consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</description></item>
-        /// <item><description><b>qch</b>: Consistent hashing based on Quick UDP Internet Connection (QUIC) IDs. Requests that contain the same QUIC ID are scheduled to the same backend server.</description></item>
-        /// <item><description><b>iqch</b>: Consistent hashing based on three specific bytes of iQUIC CID. Requests with the same second, third, and forth bytes are scheduled to the same backend server.</description></item>
+        /// <item><description><b>sch</b>: consistent hashing based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</description></item>
+        /// <item><description><b>qch</b>: consistent hashing based on QUIC connection IDs (CIDs). Requests that contain the same QUIC CID are distributed to the same backend server.</description></item>
+        /// <item><description><b>iqch</b>: consistent hashing based on three specific bytes of iQUIC CIDs. Requests with the same second, third, and fourth bytes are distributed to the same backend server.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

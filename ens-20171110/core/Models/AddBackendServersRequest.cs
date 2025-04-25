@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backend server.</para>
+            /// <para>The ID of the ENS instance.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

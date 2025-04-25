@@ -20,15 +20,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyPairId { get; set; }
 
         /// <summary>
-        /// <para>The name of the key pair. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can contain the following characters:</para>
+        /// <para>The name of the key pair that you want to bind to the simple application server. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can contain the following characters:</para>
         /// <list type="bullet">
-        /// <item><description>Digits</description></item>
+        /// <item><description>Numbers.</description></item>
         /// <item><description>:</description></item>
         /// <item><description>_</description></item>
-        /// <item><description><list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
-        /// </description></item>
+        /// <item><description>.</description></item>
         /// </list>
         /// <para>You can specify only one name. By default, all key pairs are queried.</para>
         /// 

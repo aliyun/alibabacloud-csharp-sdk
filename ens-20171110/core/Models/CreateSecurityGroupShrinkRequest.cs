@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Schema of Response</para>
+        /// <para>An array of security group rules. You can specify up to 200 IDs of security group rules.</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]

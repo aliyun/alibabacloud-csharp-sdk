@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ValidRsNum { get; set; }
 
             /// <summary>
-            /// <para>The VIP of the instance.</para>
+            /// <para>The virtual IP address (VIP) of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.8.<em>.</em></para>

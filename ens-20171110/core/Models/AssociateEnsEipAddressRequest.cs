@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The type of instance with which you want to associate the EIP. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Nat</b>: a NAT gateway.</description></item>
-        /// <item><description><b>SlbInstance</b>: an ELB instance.</description></item>
-        /// <item><description><b>NetworkInterface</b>: a secondary elastic network interface (ENI).</description></item>
-        /// <item><description><b>NatSlbInstance</b>: If you want to associate multiple EIPs to an ELB instance, you need to set the parameter to this value.</description></item>
-        /// <item><description><b>EnsInstance</b> (default): an ENS instance.</description></item>
+        /// <item><description><b>Nat</b>: NAT gateway.</description></item>
+        /// <item><description><b>SlbInstance</b>: Edge Load Balancer (ELB) instance.</description></item>
+        /// <item><description><b>NetworkInterface</b>: secondary elastic network interface (ENI).</description></item>
+        /// <item><description><b>NatSlbInstance</b>: If you want to associate multiple EIPs with an ELB instance, you need to set the parameter to this value.</description></item>
+        /// <item><description><b>EnsInstance</b> (default): ENS instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

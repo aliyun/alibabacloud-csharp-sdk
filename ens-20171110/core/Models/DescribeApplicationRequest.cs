@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OutDetailStatParams { get; set; }
 
         /// <summary>
-        /// <para>The resource filter.</para>
+        /// <para>The resource filtering condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;regionCode\&quot;: \&quot;cn-wuxi-telecom_unicom_cmcc-3\&quot;,    \&quot;ispCode\&quot;: \&quot;telecom\&quot;,    \&quot;count\&quot;: 2	},{    \&quot;regionCode\&quot;: \&quot;cn-shanghai-cmcc\&quot;,    \&quot;count\&quot;: 4	}]</para>

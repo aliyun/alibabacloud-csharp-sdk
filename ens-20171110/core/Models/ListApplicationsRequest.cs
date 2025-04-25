@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OutAppInfoParams { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. This parameter is optional if you want to return all information about the applications.</para>
+        /// <para>The page number. Pages start from page 1. This parameter is optional if you want to return the push status of all data files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

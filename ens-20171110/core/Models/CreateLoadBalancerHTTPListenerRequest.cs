@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateLoadBalancerHTTPListenerRequest : TeaModel {
         /// <summary>
-        /// <para>The port used by the backend ELB server of the ELB instance. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <para>The port used by the backend server of the ELB instance. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8080</para>
@@ -116,13 +116,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthCheckInterval { get; set; }
 
         /// <summary>
-        /// <para>The health check method used in HTTP health checks. Valid values:</para>
+        /// <para>The HTTP request method for health checks. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>head</b> (default)</description></item>
         /// <item><description><b>get</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set HealthCheck to on.</para>
+        /// <para> This parameter takes effect only if the HealthCheck parameter is set to on.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? IdleTimeout { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable HTTP-to-HTTPS redirection. Valid values:</para>
+        /// <para>Specifies whether to enable redirection from HTTP to HTTPS. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>on</b></description></item>
         /// <item><description><b>off</b> (default)</description></item>
@@ -252,14 +252,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? RequestTimeout { get; set; }
 
         /// <summary>
-        /// <para>The routing algorithm. Valid values:</para>
+        /// <para>The scheduling algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>wrr</b>: Backend servers with higher weights receive more requests than backend servers with lower weights. This is the default value.</description></item>
-        /// <item><description><b>wlc</b>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</description></item>
+        /// <item><description><b>wrr</b> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</description></item>
+        /// <item><description><b>wlc</b>: Requests are distributed based on the weights and number of connections to backend servers. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</description></item>
         /// <item><description><b>rr</b>: Requests are distributed to backend servers in sequence.</description></item>
-        /// <item><description><b>sch</b>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</description></item>
-        /// <item><description><b>qch</b>: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</description></item>
-        /// <item><description><b>iqch</b>: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</description></item>
+        /// <item><description><b>sch</b>: consistent hashing based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</description></item>
+        /// <item><description><b>qch</b>: consistent hashing based on QUIC connection IDs (CIDs). Requests that contain the same QUIC CID are distributed to the same backend server.</description></item>
+        /// <item><description><b>iqch</b>: consistent hashing based on three specific bytes of iQUIC CIDs. Requests with the same second, third, and fourth bytes are distributed to the same backend server.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

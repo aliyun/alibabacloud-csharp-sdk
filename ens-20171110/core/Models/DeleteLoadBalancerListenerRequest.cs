@@ -25,13 +25,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <remarks>
         /// <para> This parameter is required if the same port is used by listeners that use different protocols.</para>
         /// </remarks>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>tcp</description></item>
-        /// <item><description>udp</description></item>
-        /// <item><description>http</description></item>
-        /// <item><description>https</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>tcp</para>

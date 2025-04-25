@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string MinDate { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. This parameter is optional if you want to return the distribution status of all data files.</para>
+        /// <para>The page number. Pages start from page 1. This parameter is optional if you want to return the push status of all data files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

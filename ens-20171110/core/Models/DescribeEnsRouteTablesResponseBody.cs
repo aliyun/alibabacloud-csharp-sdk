@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<DescribeEnsRouteTablesResponseBodyRouteTables> RouteTables { get; set; }
         public class DescribeEnsRouteTablesResponseBodyRouteTables : TeaModel {
             /// <summary>
-            /// <para>The type of the route table. Valid values:</para>
+            /// <para>The type of the resource with which the route table is associated. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>VSwitch</b> (default): vSwitch route table</description></item>
-            /// <item><description><b>Gateway</b>: gateway route table</description></item>
+            /// <item><description><b>VSwitch</b></description></item>
+            /// <item><description><b>Gateway</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,8 +71,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the network.</para>
-            /// <para>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -92,7 +91,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>Is the gateway routing table the default.</para>
+            /// <para>Specifies whether it is the default gateway route table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Elastic IP address (EIP) pass-through. Valid values:</para>
+        /// <para>Specifies whether to enable elastic IP address (EIP) pass-through. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>on</b></description></item>
         /// <item><description><b>off</b> (default)</description></item>
@@ -185,14 +185,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PersistenceTimeout { get; set; }
 
         /// <summary>
-        /// <para>The routing algorithm. Valid values:</para>
+        /// <para>The scheduling algorithm. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>wrr</b>: Backend servers with higher weights receive more requests than those with lower weights.</description></item>
-        /// <item><description><b>wlc</b>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections to a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</description></item>
+        /// <item><description><b>wlc</b>: Requests are distributed based on the weights and number of connections to backend servers. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</description></item>
         /// <item><description><b>rr</b>: Requests are distributed to backend servers in sequence.</description></item>
-        /// <item><description><b>sch</b>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</description></item>
-        /// <item><description><b>qch</b>: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</description></item>
-        /// <item><description><b>iqch</b>: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</description></item>
+        /// <item><description><b>sch</b>: consistent hashing based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</description></item>
+        /// <item><description><b>qch</b>: consistent hashing based on QUIC connection IDs (CIDs). Requests that contain the same QUIC CID are distributed to the same backend server.</description></item>
+        /// <item><description><b>iqch</b>: consistent hashing based on three specific bytes of iQUIC CIDs. Requests with the same second, third, and fourth bytes are distributed to the same backend server.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

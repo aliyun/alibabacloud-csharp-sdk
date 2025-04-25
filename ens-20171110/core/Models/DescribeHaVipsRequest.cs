@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of edge nodes. You can specify 1 to 100 IDs.</para>
+        /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }

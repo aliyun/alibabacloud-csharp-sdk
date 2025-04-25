@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateLoadBalancerHTTPSListenerRequest : TeaModel {
         /// <summary>
-        /// <para>The listening port that is used by the backend instances. Valid values: 1 to 65535.</para>
+        /// <para>The backend port that is used by the ELB instance. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8080</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? ForwardPort { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the health check feature. Valid values:</para>
+        /// <para>Indicates whether the health check feature is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>on</b></description></item>
         /// <item><description><b>off</b></description></item>
@@ -142,13 +142,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthCheckInterval { get; set; }
 
         /// <summary>
-        /// <para>The health check method used by HTTP listeners. Valid values:</para>
+        /// <para>The HTTP request method for health checks. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>head</b> (default): requests the head of the page.</description></item>
         /// <item><description><b>get</b>: requests the specified part of the page and returns the entity body.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set HealthCheck to on.</para>
+        /// <para> This parameter takes effect only if the HealthCheck parameter is set to on.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? IdleTimeout { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable HTTP-to-HTTPS redirection. Valid values:</para>
+        /// <para>Specifies whether to enable redirection from HTTP to HTTPS. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>on</b></description></item>
         /// <item><description><b>off</b> (default)</description></item>
@@ -273,14 +273,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? RequestTimeout { get; set; }
 
         /// <summary>
-        /// <para>The routing algorithm. Valid values:</para>
+        /// <para>The scheduling algorithm. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>wrr</b> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</description></item>
         /// <item><description><b>wlc</b>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</description></item>
         /// <item><description><b>rr</b>: Requests are distributed to backend servers in sequence.</description></item>
-        /// <item><description><b>sch</b>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</description></item>
-        /// <item><description><b>qch</b>: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</description></item>
-        /// <item><description><b>iqch</b>: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</description></item>
+        /// <item><description><b>sch</b>: consistent hashing based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</description></item>
+        /// <item><description><b>qch</b>: consistent hashing based on QUIC connection IDs (CIDs). Requests that contain the same QUIC CID are distributed to the same backend server.</description></item>
+        /// <item><description><b>iqch</b>: consistent hashing based on three specific bytes of iQUIC CIDs. Requests with the same second, third, and fourth bytes are distributed to the same backend server.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -302,13 +302,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ServerCertificateId { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to handle a cookie. Valid values:</para>
+        /// <para>The method that is used to handle cookies. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>insert</b>: inserts a cookie. ELB inserts a session cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. Subsequent requests to ELB carry this cookie, and ELB determines the destination servers of the requests based on the cookies.</description></item>
-        /// <item><description><b>server</b>: rewrites a cookie. When ELB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. The next request from the client carries the user-defined cookie, and the listener forwards this request to the recorded backend server.</description></item>
+        /// <item><description><b>server</b>: rewrites the original cookie. SLB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required if you set StickySession to on.</para>
+        /// <para> This parameter is required when the StickySession parameter is set to on.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

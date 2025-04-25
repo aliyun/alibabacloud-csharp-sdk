@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<string> DestinationRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The namespaces.</para>
+        /// <para>An array that consists of queried namespaces.</para>
         /// </summary>
         [NameInMap("Namespaces")]
         [Validation(Required=false)]

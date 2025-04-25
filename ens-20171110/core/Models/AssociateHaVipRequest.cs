@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The type of the instance to be associated with the HAVIP. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EnsInstance (default): ENS instance.</description></item>
-        /// <item><description>NetworkInterface: ENI. If you want to associate the HAVIP with an ENI, this parameter is required.</description></item>
+        /// <item><description>EnsInstance (default): ENS instance</description></item>
+        /// <item><description>NetworkInterface: elastic network interface (ENI)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

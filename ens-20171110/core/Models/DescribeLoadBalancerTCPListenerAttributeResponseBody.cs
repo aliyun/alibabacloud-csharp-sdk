@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerTCPListenerAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The backend port that is used by the ELB instance. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <para>The port used by the backend server of the ELB instance. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8080</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? BackendServerPort { get; set; }
 
         /// <summary>
-        /// <para>The maximum bandwidth of the elastic IP address (EIP). Default value: 5. Valid values: <b>5</b> to <b>10000</b>. Unit: Mbit/s.</para>
+        /// <para>The peak bandwidth of the Edge Load Balancer (ELB) instance. The default value is -1, which indicates that the bandwidth is not limited.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The description of the listener.</para>
+        /// <para>The name of the listener.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthCheckConnectPort { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</para>
+        /// <para>The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</para>
         /// <list type="bullet">
         /// <item><description>Default value: 5.</description></item>
         /// <item><description>Valid values: <b>1</b> to <b>300</b>.</description></item>
@@ -100,9 +100,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is returned only if you set HealthCheck to on.</para>
+        /// <item><description><para>This parameter takes effect only if the HealthCheck parameter is set to on.</para>
         /// </description></item>
-        /// <item><description><para>If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</para>
+        /// <item><description><para>If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -170,13 +170,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string HealthCheckType { get; set; }
 
         /// <summary>
-        /// <para>The Uniform Resource Identifier (URI) that is used for health checks. The URI must be <b>1</b> to <b>80</b> characters in length.</para>
+        /// <para>The URI used for health checks. The URI must be <b>1</b> to <b>80</b> characters in length.</para>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The URL must start with a forward slash (<c>/</c>) and contain characters other than forward slashes (<c>/</c>).</para>
+        /// <item><description><para>A URL must start with a forward slash (<c>/</c>) but cannot contain only forward slashes (<c>/</c>).</para>
         /// </description></item>
-        /// <item><description><para>This parameter is returned only if you set HealthCheck to on.</para>
+        /// <item><description><para>This parameter takes effect only if the HealthCheck parameter is set to on.</para>
         /// </description></item>
         /// </list>
         /// 

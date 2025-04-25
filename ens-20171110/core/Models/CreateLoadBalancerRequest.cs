@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateLoadBalancerRequest : TeaModel {
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. This prevents repeated operations caused by multiple retries.</para>
+        /// <list type="bullet">
+        /// <item><description>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</description></item>
+        /// <item><description>If you retry an API request with the same client token and request parameters after it has completed successfully, the result of the original request is returned. The server status does not change.</description></item>
+        /// <item><description>You can initiate a retry when the operation times out or the error code is PROCESSING. The idempotence is valid. If HTTP status code 200 is returned, the client receives the same result as the last request. However, your server status is not affected. If HTTP status code 4xx is returned and error code is not PROCESSING, the idempotence is invalid.</description></item>
+        /// <item><description>A client token is valid for 10 minutes.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>26C28756-2586-17AF-B802-0DC50D8FDEBB</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>Specifies whether to enable authentication. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enable authentication.</description></item>
-        /// <item><description><b>0</b> (default): disable authentication.</description></item>
+        /// <item><description><b>1</b>: Authentication is enabled.</description></item>
+        /// <item><description><b>0</b> (default): Authentication is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string IsAuth { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the volume. Valid values:</para>
+        /// <para>Indicates whether the volume is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b> (default): enable the volume.</description></item>
-        /// <item><description><b>0</b>: disable the volume.</description></item>
+        /// <item><description><b>1</b> (default): The volume is enabled.</description></item>
+        /// <item><description><b>0</b>: The volume is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

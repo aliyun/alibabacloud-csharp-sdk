@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string MountTargetName { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The number of the page to return. Pages start from page 1. Default value: 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The maximum value is 100. Default value: 10.</para>
+        /// <para>The number of entries returned per page. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

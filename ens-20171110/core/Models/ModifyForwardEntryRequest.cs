@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyForwardEntryRequest : TeaModel {
         /// <summary>
-        /// <para>The elastic IP address (EIP) that is used to access the Internet.</para>
+        /// <para>The EIP in the DNAT entry. The public IP address is used to access the Internet.</para>
         /// 
         /// <b>Example:</b>
         /// <para>121.XXX.XXX.28</para>
@@ -23,8 +23,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The external port or port range that is used for port forwarding.</para>
         /// <list type="bullet">
         /// <item><description>Valid values: 1 to 65535.</description></item>
-        /// <item><description>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</description></item>
+        /// <item><description>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20. The first port and the last port are included.</description></item>
         /// <item><description>If you set ExternalPort to a port range, you must also set InternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</description></item>
+        /// <item><description>The maximum port range is 1000.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,10 +77,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InternalIp { get; set; }
 
         /// <summary>
-        /// <para>The internal port or port range that is used for port forwarding.</para>
+        /// <para>The private port or port range that is used in port forwarding.</para>
         /// <list type="bullet">
         /// <item><description>Valid values: 1 to 65535.</description></item>
-        /// <item><description>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</description></item>
+        /// <item><description>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20. The first port and the last port are included.</description></item>
+        /// <item><description>If you set InternalPort to a port range, you must also set ExternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</description></item>
+        /// <item><description>The maximum port range is 1000.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

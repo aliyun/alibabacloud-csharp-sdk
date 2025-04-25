@@ -20,7 +20,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. This prevents repeated operations caused by multiple retries.</para>
+        /// <list type="bullet">
+        /// <item><description>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</description></item>
+        /// <item><description>If you use a ClientToken that has been used and other request parameters remain unchanged in a repeated request, the client will receive the same result as the first request. This does not affect the status of your server.</description></item>
+        /// <item><description>You can initiate a retry when the operation times out or the error code is PROCESSING. The idempotence is valid. If HTTP status code 200 is returned, the client receives the same result as the last request. However, your server status is not affected. If HTTP status code 4xx is returned and error code is not PROCESSING, the idempotence is invalid.</description></item>
+        /// <item><description>A client token is valid for 10 minutes.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>26C28756-2586-17AF-B802-0DC50D8FDEBB</para>

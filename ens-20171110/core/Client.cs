@@ -344,9 +344,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Usage notes</h1>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 100 times per second.</description></item>
         /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
         /// <item><description>Internal networks and IPv4 addresses are not supported.</description></item>
         /// </list>
@@ -404,9 +403,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Usage notes</h1>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 100 times per second.</description></item>
         /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
         /// <item><description>Internal networks and IPv4 addresses are not supported.</description></item>
         /// </list>
@@ -464,9 +462,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Usage notes</h1>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 100 times per second.</description></item>
         /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
         /// <item><description>Internal networks and IPv4 addresses are not supported.</description></item>
         /// </list>
@@ -492,9 +489,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Usage notes</h1>
+        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 100 times per second.</description></item>
         /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
         /// <item><description>Internal networks and IPv4 addresses are not supported.</description></item>
         /// </list>
@@ -19983,8 +19979,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改启动配置，只支持异构实例(PCFarm裸金属)。</para>
+        /// <para>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceBootConfigurationRequest
@@ -20037,8 +20038,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改启动配置，只支持异构实例(PCFarm裸金属)。</para>
+        /// <para>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceBootConfigurationRequest
@@ -20091,8 +20097,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改启动配置，只支持异构实例(PCFarm裸金属)。</para>
+        /// <para>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceBootConfigurationRequest
@@ -20109,8 +20120,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改启动配置，只支持异构实例(PCFarm裸金属)。</para>
+        /// <para>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceBootConfigurationRequest
@@ -23719,7 +23735,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The specifications of resources that can be purchased in subscription billing mode are queried.</para>
+        /// <para>Queries the specifications of resources that can be purchased in subscription billing mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23773,7 +23789,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The specifications of resources that can be purchased in subscription billing mode are queried.</para>
+        /// <para>Queries the specifications of resources that can be purchased in subscription billing mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23827,7 +23843,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The specifications of resources that can be purchased in subscription billing mode are queried.</para>
+        /// <para>Queries the specifications of resources that can be purchased in subscription billing mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23845,7 +23861,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The specifications of resources that can be purchased in subscription billing mode are queried.</para>
+        /// <para>Queries the specifications of resources that can be purchased in subscription billing mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29425,8 +29441,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>For internal connections, instances that are associated with a vSwitch automatically take effect. For public connections such as intelligent acceleration, you need to manually add the instances.</para>
+        /// <para>Performs networking.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// JoinVSwitchesToEpnInstanceRequest
@@ -29471,8 +29492,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>For internal connections, instances that are associated with a vSwitch automatically take effect. For public connections such as intelligent acceleration, you need to manually add the instances.</para>
+        /// <para>Performs networking.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// JoinVSwitchesToEpnInstanceRequest
@@ -29517,8 +29543,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>For internal connections, instances that are associated with a vSwitch automatically take effect. For public connections such as intelligent acceleration, you need to manually add the instances.</para>
+        /// <para>Performs networking.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// JoinVSwitchesToEpnInstanceRequest
@@ -29535,8 +29566,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>For internal connections, instances that are associated with a vSwitch automatically take effect. For public connections such as intelligent acceleration, you need to manually add the instances.</para>
+        /// <para>Performs networking.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// JoinVSwitchesToEpnInstanceRequest
@@ -32044,6 +32080,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["AutoRenew"] = request.AutoRenew;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingCycle))
+            {
+                query["BillingCycle"] = request.BillingCycle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeDataDisks))
             {
                 query["IncludeDataDisks"] = request.IncludeDataDisks;
@@ -32121,6 +32161,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingCycle))
+            {
+                query["BillingCycle"] = request.BillingCycle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeDataDisks))
             {
@@ -36607,7 +36651,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes shared data groups (SDGs) that are deployed on instances.</para>
+        /// <para>Removes a deployed shared data group (SDG) and restore local storage.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36651,7 +36695,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes shared data groups (SDGs) that are deployed on instances.</para>
+        /// <para>Removes a deployed shared data group (SDG) and restore local storage.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36695,7 +36739,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes shared data groups (SDGs) that are deployed on instances.</para>
+        /// <para>Removes a deployed shared data group (SDG) and restore local storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36713,7 +36757,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes shared data groups (SDGs) that are deployed on instances.</para>
+        /// <para>Removes a deployed shared data group (SDG) and restore local storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38427,7 +38471,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases instances.</para>
+        /// <para>Creates a pay-as-you-go or subscription ENS instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38623,7 +38667,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases instances.</para>
+        /// <para>Creates a pay-as-you-go or subscription ENS instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38819,7 +38863,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases instances.</para>
+        /// <para>Creates a pay-as-you-go or subscription ENS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38837,7 +38881,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purchases instances.</para>
+        /// <para>Creates a pay-as-you-go or subscription ENS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39883,7 +39927,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of the listener for an Edge Load Balancer (ELB) instance.</para>
+        /// <para>Modifies the status of an Edge Load Balancer (ELB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -39937,7 +39981,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of the listener for an Edge Load Balancer (ELB) instance.</para>
+        /// <para>Modifies the status of an Edge Load Balancer (ELB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -39991,7 +40035,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of the listener for an Edge Load Balancer (ELB) instance.</para>
+        /// <para>Modifies the status of an Edge Load Balancer (ELB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -40017,7 +40061,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of the listener for an Edge Load Balancer (ELB) instance.</para>
+        /// <para>Modifies the status of an Edge Load Balancer (ELB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

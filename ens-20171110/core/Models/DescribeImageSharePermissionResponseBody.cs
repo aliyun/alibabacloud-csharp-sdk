@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A44EE357-6174-5E37-A801-48F5790F9ACE</para>

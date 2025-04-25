@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        [NameInMap("BillingCycle")]
+        [Validation(Required=false)]
+        public string BillingCycle { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to change the billing method of all data disks that are created with the instance to subscription when you change the billing method of the instance from pay-as-you-go to subscription. Valid values:</para>
         /// <para>true</para>

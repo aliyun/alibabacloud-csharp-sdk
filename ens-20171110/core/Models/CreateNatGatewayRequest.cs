@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The ID of the new vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-5savh5ngxh8sbj14bu7n****</para>

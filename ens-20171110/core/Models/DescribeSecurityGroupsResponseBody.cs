@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public int? InstanceCount { get; set; }
 
                 /// <summary>
-                /// <para>The list of instance IDs.</para>
+                /// <para>The IDs of the instances that are associated with the security group.</para>
                 /// </summary>
                 [NameInMap("InstanceIds")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// <para>The IDs of ENIs.</para>
+                /// <para>The IDs of the ENIs that are associated with the security group.</para>
                 /// </summary>
                 [NameInMap("NetworkInterfaceIds")]
                 [Validation(Required=false)]

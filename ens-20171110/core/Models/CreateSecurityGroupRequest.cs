@@ -20,17 +20,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Schema of Response</para>
+        /// <para>An array of security group rules. You can specify up to 200 IDs of security group rules.</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
         public List<CreateSecurityGroupRequestPermissions> Permissions { get; set; }
         public class CreateSecurityGroupRequestPermissions : TeaModel {
             /// <summary>
-            /// <para>The description of the SDG.</para>
-            /// <remarks>
-            /// <para> We recommend that you specify this parameter in details for subsequent queries.</para>
-            /// </remarks>
+            /// <para>The description. It must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testDescription</para>
@@ -41,7 +38,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// <para>The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</para>
-            /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.0.0/0</para>
@@ -52,6 +48,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// <para>The direction in which the security group rule is applied.</para>
+            /// <list type="bullet">
+            /// <item><description>egress</description></item>
+            /// <item><description>ingress</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -62,13 +62,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Direction { get; set; }
 
             /// <summary>
-            /// <para>The protocol. The values of this parameter are case-insensitive. Valid values:</para>
+            /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP.</description></item>
-            /// <item><description>UDP.</description></item>
-            /// <item><description>ICMP.</description></item>
-            /// <item><description>ICMPv6.</description></item>
-            /// <item><description>GRE.</description></item>
+            /// <item><description>TCP</description></item>
+            /// <item><description>UDP</description></item>
+            /// <item><description>ICMP</description></item>
             /// <item><description>ALL: All protocols are supported.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
@@ -83,10 +81,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The action of the security group rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>accept: allows inbound access.</description></item>
-            /// <item><description>drop: denies inbound access and returns no responses. In this case, the request times out or the connection cannot be established.</description></item>
+            /// <item><description>Accept</description></item>
+            /// <item><description>Drop</description></item>
             /// </list>
-            /// <para>Default value: accept.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -101,8 +98,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <list type="bullet">
             /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
             /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
-            /// <item><description>If you set IpProtocol to GRE, the port number range is -1/-1.</description></item>
-            /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</description></item>
+            /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -115,7 +111,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// <para>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</para>
-            /// <para>Default value: 1.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -127,7 +122,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// <para>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</para>
-            /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.0.0/0</para>
@@ -139,12 +133,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The range of source port numbers for the protocols specified in the security group rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
+            /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
             /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
-            /// <item><description>If you set IpProtocol to GRE, the port number range is -1/-1.</description></item>
             /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</description></item>
             /// </list>
-            /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22/22</para>

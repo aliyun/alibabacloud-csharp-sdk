@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsRouteTablesRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the route table. Valid values:</para>
+        /// <para>The type of the resource with which the route table is associated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VSwitch</b> (default): vSwitch route table</description></item>
-        /// <item><description><b>Gateway</b>: gateway route table</description></item>
+        /// <item><description><b>VSwitch</b></description></item>
+        /// <item><description><b>Gateway</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,8 +81,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The name of the route table that you want to query.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the route table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tftest-nat04</para>
@@ -92,9 +91,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RouteTableName { get; set; }
 
         /// <summary>
-        /// <para>The type of the NAT.</para>
+        /// <para>The SNAT type.</para>
         /// <list type="bullet">
-        /// <item><description>Empty: symmetric NAT.</description></item>
         /// <item><description>FullCone: full cone NAT.</description></item>
         /// </list>
         /// 

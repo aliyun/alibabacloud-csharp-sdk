@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateHaVipRequest : TeaModel {
         /// <summary>
+        /// <para>The number of HAVIPs that you want to create. Valid values: 1 to 10. The value can be only 1 if you specify an IP address.</para>
+        /// <para>Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>

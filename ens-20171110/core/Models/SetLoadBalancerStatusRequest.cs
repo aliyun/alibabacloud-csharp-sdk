@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the listener after the modification. Valid values:</para>
+        /// <para>The new instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b>: The listener for the instance can forward the received traffic based on forwarding rules.</description></item>
-        /// <item><description><b>InActive</b>: The listener for the instance does not forward the received traffic.</description></item>
+        /// <item><description><b>Active</b></description></item>
+        /// <item><description><b>InActive</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

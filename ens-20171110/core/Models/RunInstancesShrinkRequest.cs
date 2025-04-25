@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AutoReleaseTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the premium bandwidth plan. Examples:</para>
+        /// <para>Specifies whether to enable auto-renewal for the premium bandwidth plan. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>.</description></item>
         /// <item><description><b>false</b> (default).</description></item>
@@ -79,7 +79,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The Internet service provider (ISP).</para>
         /// <remarks>
-        /// <para> This parameter is not available if ScheduleAreaLevel is set to Region and is required if ScheduleAreaLevel is set to other values.</para>
+        /// <para> This parameter required if ScheduleAreaLevel is set to Region.\
+        /// If you set ScheduleAreaLevel to Region, a node has multiple ISPs, and you do not specify an ISP, then the create instance uses the ISP of the node. If the node has two ISPs, such as China Mobile and China Unicom, the created instance has two ISPs.\
+        /// You can call the DescribeRegionIsps operation to query ISPs of the edge node.<a href="~~2637461~~"></a></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -144,10 +146,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceChargeStrategy { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. Examples:</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>PrePaid</b>: subscription.</description></item>
-        /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>PostPaid:</b> pay-as-you-go.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -362,7 +364,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ScheduleAreaLevel { get; set; }
 
         /// <summary>
-        /// <para>The scheduling price policy. Examples:</para>
+        /// <para>The scheduling price policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>PriceHighPriority</b>: The high price prevails.</description></item>
         /// <item><description><b>PriceLowPriority</b>: The low price prevails.</description></item>

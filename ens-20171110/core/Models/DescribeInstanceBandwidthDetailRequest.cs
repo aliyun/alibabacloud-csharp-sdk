@@ -44,6 +44,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceType { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -52,6 +54,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 200.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

@@ -142,22 +142,42 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     [Validation(Required=false)]
                     public List<DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag> Tag { get; set; }
                     public class DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>TestKey</para>
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <term><b>Obsolete</b></term>
+                        /// 
+                        /// <summary>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TestKey</para>
+                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         [Obsolete]
                         public string TagKey { get; set; }
 
                         /// <term><b>Obsolete</b></term>
+                        /// 
+                        /// <summary>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TestValue</para>
+                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         [Obsolete]
                         public string TagValue { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>TestValue</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

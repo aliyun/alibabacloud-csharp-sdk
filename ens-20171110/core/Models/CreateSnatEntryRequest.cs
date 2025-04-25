@@ -10,13 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateSnatEntryRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable EIP affinity. Valid values:</para>
+        /// <para>Specifies whether to enable IP affinity. If you do not specify this parameter, IP affinity is enabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no</description></item>
-        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b></description></item>
         /// </list>
-        /// <para>**</para>
-        /// <para><b>Description</b> After you enable EIP affinity, if multiple EIPs are associated with an SNAT entry, each client uses one EIP to access the Internet. If EIP affinity is disabled, each client uses a random EIP to access the Internet.</para>
+        /// <remarks>
+        /// <para> After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

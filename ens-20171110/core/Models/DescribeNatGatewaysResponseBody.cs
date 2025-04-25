@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of elastic IP addresses (EIPs) that are associated with the Internet NAT gateway.</para>
+            /// <para>The EIPs that are associated with the NAT gateway.</para>
             /// </summary>
             [NameInMap("IpLists")]
             [Validation(Required=false)]
             public List<DescribeNatGatewaysResponseBodyNatGatewaysIpLists> IpLists { get; set; }
             public class DescribeNatGatewaysResponseBodyNatGatewaysIpLists : TeaModel {
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The ID of the EIP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eip-50g****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string AllocationId { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the EIP associated with the NAT gateway.</para>
+                /// <para>The EIP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8.XX.XX.162</para>
@@ -68,8 +68,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <list type="bullet">
                 /// <item><description><b>UsedByForwardTable</b>: The EIP is specified in a DNAT entry.</description></item>
                 /// <item><description><b>UsedBySnatTable</b>: The EIP is specified in an SNAT entry.</description></item>
-                /// <item><description><b>UsedByForwardSnatTable</b>: The EIP is specified in both an SNAT entry and a DNAT entry.</description></item>
-                /// <item><description><b>Idle</b>: The EIP is not specified in a DNAT or SNAT entry.</description></item>
+                /// <item><description><b>Idle</b>: The EIP is not specified in an SNAT entry or a DNAT entry.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -122,11 +121,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Spec { get; set; }
 
             /// <summary>
-            /// <para>The status of the SNAT entry.</para>
+            /// <para>The status of the NAT gateway. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: The SNAT entry is being created or modified.</description></item>
-            /// <item><description>Available: The SNAT entry is available.</description></item>
-            /// <item><description>Deleting: The SNAT entry is being deleted.</description></item>
+            /// <item><description><b>Creating</b>: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the Creating state until the operation is completed.</description></item>
+            /// <item><description><b>Available</b>: The NAT gateway is in the Available state after the creation is complete.</description></item>
+            /// <item><description><b>Deleting</b>: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the Deleting state until the operation is completed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,22 +139,42 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeNatGatewaysResponseBodyNatGatewaysTags> Tags { get; set; }
             public class DescribeNatGatewaysResponseBodyNatGatewaysTags : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <term><b>Obsolete</b></term>
+                /// 
+                /// <summary>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
+                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 [Obsolete]
                 public string TagKey { get; set; }
 
                 /// <term><b>Obsolete</b></term>
+                /// 
+                /// <summary>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
+                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 [Obsolete]
                 public string TagValue { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

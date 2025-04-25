@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class SetBackendServersRequest : TeaModel {
         /// <summary>
-        /// <para>The list of backend servers that you want to add. You can modify at most 20 backend servers.</para>
+        /// <para>The list of backend servers that you added. You can modify the weights of up to 20 backend servers in each request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackendServers")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<SetBackendServersRequestBackendServers> BackendServers { get; set; }
         public class SetBackendServersRequestBackendServers : TeaModel {
             /// <summary>
-            /// <para>The ID of the instance that you want to use as the backend server.</para>
+            /// <para>The ID of the instance that you use as the backend server.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The type of the backend server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ens</b>: ENS instance.</description></item>
-            /// <item><description><b>eni</b>: Elastic Network Interface (ENI) instance.</description></item>
+            /// <item><description><b>ens</b>: ENS instance</description></item>
+            /// <item><description><b>eni</b>: elastic network interface (ENI)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

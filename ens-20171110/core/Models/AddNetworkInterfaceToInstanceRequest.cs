@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AddNetworkInterfaceToInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to specify the instance.</para>
+        /// <para>Specifies whether to automatically restart the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

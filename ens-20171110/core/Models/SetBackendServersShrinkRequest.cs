@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class SetBackendServersShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of backend servers that you want to add. You can modify at most 20 backend servers.</para>
+        /// <para>The list of backend servers that you added. You can modify the weights of up to 20 backend servers in each request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackendServers")]

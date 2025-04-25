@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The information about images.</para>
+        /// <para>The information about the images.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Platform { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Edge Node Service (ENS) node.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-qingdao</para>

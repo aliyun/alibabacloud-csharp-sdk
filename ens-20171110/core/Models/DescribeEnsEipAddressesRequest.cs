@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AssociatedInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance with which you want to associate the EIP. Valid values:</para>
+        /// <para>The type of the instance that is associated with the EIP. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>EnsInstance</b>: ENS instance in a VPC</description></item>
-        /// <item><description><b>SlbInstance</b>: Edge Load Balancer (ELB) instance</description></item>
+        /// <item><description><b>SlbInstance</b>: SLB instance</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,6 +73,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        /// <summary>
+        /// <para>ENS节点ID数组。数组长度：1~100。</para>
+        /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }

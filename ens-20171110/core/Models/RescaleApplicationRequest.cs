@@ -21,12 +21,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The level of resource scaling. The value must be of the enumerated data type. Valid values:</para>
+        /// <para>The level of resource scaling. The value is of the enumeration type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>AreaIspCode (default): scales resources based on the Internet service provider (ISP).</description></item>
         /// <item><description>RegionId: scales resources based on the edge node.</description></item>
         /// <item><description>InstanceId: scales resources based on the instance ID. Resource scale-out specifies resource hosting and scale-in specifies resource release.</description></item>
         /// </list>
+        /// <para>Default value: AreaIspCode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RegionId</para>

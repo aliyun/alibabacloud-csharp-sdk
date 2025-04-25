@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The new source CIDR block of the inbound or outbound traffic.</para>
+        /// <para>The source CIDR block is available when you configure a route entry in the gateway route table, but is not unavailable when you configure a route entry in the vSwitch route table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.XXX.XXX.0/24</para>

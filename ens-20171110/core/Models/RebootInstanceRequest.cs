@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RebootInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether to stop the instance forcibly before you reboot it. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to forcefully stop the instance before you restart it.</para>
         /// <list type="bullet">
         /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>false</b> (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

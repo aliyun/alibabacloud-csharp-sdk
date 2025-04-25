@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? FailedCount { get; set; }
 
                 /// <summary>
-                /// <para>Details about failed tasks.</para>
+                /// <para>Details about the failed tasks.</para>
                 /// </summary>
                 [NameInMap("FailedItems")]
                 [Validation(Required=false)]

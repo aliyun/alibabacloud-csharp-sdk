@@ -57,11 +57,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the disk to be attached is released with the instance. Valid values:</para>
+                /// <para>Indicates whether the disk is released when the instance to which the disk is attached is released. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The disk will be released when the ECS instance is released.</description></item>
-                /// <item><description>false: The disk will be retained when the ECS instance is released.</description></item>
-                /// <item><description>If you leave this parameter empty, the default value is used.</description></item>
+                /// <item><description>true: The disk is released when the associated instance is released.</description></item>
+                /// <item><description>false: The disk is retained when the associated instance is released.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

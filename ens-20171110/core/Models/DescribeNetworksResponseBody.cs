@@ -61,10 +61,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string EnsRegionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the gateway route table associated with the IPv6 gateway.</para>
-                /// <remarks>
-                /// <para> This parameter is available only when the IPv6 gateway is associated with a gateway route table.</para>
-                /// </remarks>
+                /// <para>The ID of the gateway route table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rt-5*****tbs</para>
@@ -158,22 +155,42 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     [Validation(Required=false)]
                     public List<DescribeNetworksResponseBodyNetworksNetworkTagsTag> Tag { get; set; }
                     public class DescribeNetworksResponseBodyNetworksNetworkTagsTag : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>TestKey</para>
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
                         /// <term><b>Obsolete</b></term>
+                        /// 
+                        /// <summary>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TestKey</para>
+                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         [Obsolete]
                         public string TagKey { get; set; }
 
                         /// <term><b>Obsolete</b></term>
+                        /// 
+                        /// <summary>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>TestValue</para>
+                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         [Obsolete]
                         public string TagValue { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>TestValue</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The node information.</para>
+        /// <para>The IDs of edge nodes. N indicates the number of edge node IDs that you can specify at the same time. Valid values of N: 1 to 100.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>A list of multicast source IDs.</para>
+        /// <para>The IDs of the elastic network interfaces (ENIs). N indicates the number of ENI IDs that you can specify at the same time. Valid values of N: 1 to 100.</para>
         /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]

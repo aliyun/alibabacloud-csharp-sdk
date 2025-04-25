@@ -127,11 +127,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                         public string EncryptKeyId { get; set; }
 
                         /// <summary>
-                        /// <para>Specifies whether to encrypt the new system disk. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description><b>true</b></description></item>
-                        /// <item><description><b>false</b> (default): no</description></item>
-                        /// </list>
+                        /// <para>Specifies whether to encrypt the disk.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>

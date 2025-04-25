@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the ACL rule controls inbound or outbound access requests. Valid values:</para>
+        /// <para>The direction in which the rule is applied. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ingress</b></description></item>
         /// <item><description><b>egress</b></description></item>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The protocol. Valid values:</para>
+        /// <para>The type of the protocol. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>icmp</b>: ICMP</description></item>
         /// <item><description><b>tcp</b>: TCP</description></item>

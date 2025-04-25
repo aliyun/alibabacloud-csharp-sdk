@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENS node. You can query the node ID by calling the <a href="~~DescribeEnsRegions~~">DescribeEnsRegions</a> operation.</para>
+        /// <para>The ID of the edge node.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

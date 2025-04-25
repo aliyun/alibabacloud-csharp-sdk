@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The node information.</para>
+        /// <para>The IDs of edge nodes. You can specify 1 to 100 IDs.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The list of vSwitches in the network.</para>
+        /// <para>The IDs of vSwitches. You can specify 1 to 100 IDs.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]

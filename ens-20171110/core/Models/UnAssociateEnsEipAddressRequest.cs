@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AllocationId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully release the instance if it is in the Running status. Valid values:</para>
+        /// <para>Specifies whether to disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true. If you set the Force parameter to true, temporary data in the memory and storage of the instance is erased and cannot be restored after you call the operation, which is similar to the effect of a power-off action.</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><b>false</b> (default): does not disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway.</description></item>
+        /// <item><description><b>true</b>: disassociates the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
