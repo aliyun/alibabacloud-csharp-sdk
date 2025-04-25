@@ -16,6 +16,42 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public GetMediaConnectFlowInputResponseBodyContent Content { get; set; }
         public class GetMediaConnectFlowInputResponseBodyContent : TeaModel {
+            [NameInMap("BackupCidrs")]
+            [Validation(Required=false)]
+            public string BackupCidrs { get; set; }
+
+            [NameInMap("BackupCreateTime")]
+            [Validation(Required=false)]
+            public string BackupCreateTime { get; set; }
+
+            [NameInMap("BackupInputName")]
+            [Validation(Required=false)]
+            public string BackupInputName { get; set; }
+
+            [NameInMap("BackupInputStatus")]
+            [Validation(Required=false)]
+            public string BackupInputStatus { get; set; }
+
+            [NameInMap("BackupInputUrl")]
+            [Validation(Required=false)]
+            public string BackupInputUrl { get; set; }
+
+            [NameInMap("BackupMaxBitrate")]
+            [Validation(Required=false)]
+            public int? BackupMaxBitrate { get; set; }
+
+            [NameInMap("BackupSrtLatency")]
+            [Validation(Required=false)]
+            public int? BackupSrtLatency { get; set; }
+
+            [NameInMap("BackupSrtPassphrase")]
+            [Validation(Required=false)]
+            public string BackupSrtPassphrase { get; set; }
+
+            [NameInMap("BackupSrtPbkeyLen")]
+            [Validation(Required=false)]
+            public int? BackupSrtPbkeyLen { get; set; }
+
             /// <summary>
             /// <para>The IP address whitelist in CIDR format. CIDR blocks are separated with commas (,).</para>
             /// 
@@ -63,6 +99,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("InputProtocol")]
             [Validation(Required=false)]
             public string InputProtocol { get; set; }
+
+            [NameInMap("InputStatus")]
+            [Validation(Required=false)]
+            public string InputStatus { get; set; }
 
             /// <summary>
             /// <para>The source URL.</para>

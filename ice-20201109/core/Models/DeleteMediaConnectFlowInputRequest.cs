@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string FlowId { get; set; }
 
+        [NameInMap("InputName")]
+        [Validation(Required=false)]
+        public string InputName { get; set; }
+
     }
 
 }

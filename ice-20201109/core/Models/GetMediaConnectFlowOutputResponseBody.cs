@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("Forbid")]
+            [Validation(Required=false)]
+            public string Forbid { get; set; }
+
             /// <summary>
             /// <para>The output name.</para>
             /// 

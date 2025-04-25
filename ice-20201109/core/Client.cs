@@ -9929,6 +9929,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["FlowId"] = request.FlowId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputName))
+            {
+                query["InputName"] = request.InputName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9979,6 +9983,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowId))
             {
                 query["FlowId"] = request.FlowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputName))
+            {
+                query["InputName"] = request.InputName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -47660,6 +47668,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["InputFromUrl"] = request.InputFromUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputName))
+            {
+                query["InputName"] = request.InputName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxBitrate))
             {
                 query["MaxBitrate"] = request.MaxBitrate;
@@ -47733,6 +47745,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputFromUrl))
             {
                 query["InputFromUrl"] = request.InputFromUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputName))
+            {
+                query["InputName"] = request.InputName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxBitrate))
             {

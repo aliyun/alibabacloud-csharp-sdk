@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string InputFromUrl { get; set; }
 
+        [NameInMap("InputName")]
+        [Validation(Required=false)]
+        public string InputName { get; set; }
+
         /// <summary>
         /// <para>The maximum bitrate. Unit: bit/s.</para>
         /// 

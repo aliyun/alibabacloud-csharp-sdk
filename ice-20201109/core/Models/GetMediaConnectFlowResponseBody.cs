@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("FlowFailover")]
+            [Validation(Required=false)]
+            public string FlowFailover { get; set; }
+
             /// <summary>
             /// <para>The flow ID.</para>
             /// 
