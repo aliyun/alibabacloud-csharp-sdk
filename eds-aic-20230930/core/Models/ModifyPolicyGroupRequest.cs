@@ -235,6 +235,36 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public int? ResolutionWidth { get; set; }
 
+        [NameInMap("Watermark")]
+        [Validation(Required=false)]
+        public ModifyPolicyGroupRequestWatermark Watermark { get; set; }
+        public class ModifyPolicyGroupRequestWatermark : TeaModel {
+            [NameInMap("WatermarkColor")]
+            [Validation(Required=false)]
+            public int? WatermarkColor { get; set; }
+
+            [NameInMap("WatermarkCustomText")]
+            [Validation(Required=false)]
+            public string WatermarkCustomText { get; set; }
+
+            [NameInMap("WatermarkFontSize")]
+            [Validation(Required=false)]
+            public int? WatermarkFontSize { get; set; }
+
+            [NameInMap("WatermarkSwitch")]
+            [Validation(Required=false)]
+            public string WatermarkSwitch { get; set; }
+
+            [NameInMap("WatermarkTransparencyValue")]
+            [Validation(Required=false)]
+            public int? WatermarkTransparencyValue { get; set; }
+
+            [NameInMap("WatermarkTypes")]
+            [Validation(Required=false)]
+            public List<string> WatermarkTypes { get; set; }
+
+        }
+
     }
 
 }

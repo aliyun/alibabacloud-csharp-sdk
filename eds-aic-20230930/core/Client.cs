@@ -2198,6 +2198,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 request.NetRedirectPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetRedirectPolicy, "NetRedirectPolicy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Watermark))
+            {
+                request.WatermarkShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Watermark, "Watermark", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CameraRedirect))
             {
@@ -2238,6 +2242,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionWidth))
             {
                 body["ResolutionWidth"] = request.ResolutionWidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkShrink))
+            {
+                body["Watermark"] = request.WatermarkShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2282,6 +2290,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 request.NetRedirectPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetRedirectPolicy, "NetRedirectPolicy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Watermark))
+            {
+                request.WatermarkShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Watermark, "Watermark", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CameraRedirect))
             {
@@ -2322,6 +2334,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionWidth))
             {
                 body["ResolutionWidth"] = request.ResolutionWidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkShrink))
+            {
+                body["Watermark"] = request.WatermarkShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6445,7 +6461,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client. They can then call the <a href="https://help.aliyun.com/zh/wuying-workspace/developer-reference/api-metaspace-2022-03-07-applycoordinationwithcode?spm=a2c4g.11174283.help-menu-68242.d_5_3_2_1.70e5e380fUFgOH%5C&scm=20140722.H_2863194._.OR_help-T_cn~zh-V_1">ApplyCoordinationWithCode</a> operation to initiate a coordination request, which will provide them with a connection token.</para>
+        /// <para>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6496,7 +6512,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client. They can then call the <a href="https://help.aliyun.com/zh/wuying-workspace/developer-reference/api-metaspace-2022-03-07-applycoordinationwithcode?spm=a2c4g.11174283.help-menu-68242.d_5_3_2_1.70e5e380fUFgOH%5C&scm=20140722.H_2863194._.OR_help-T_cn~zh-V_1">ApplyCoordinationWithCode</a> operation to initiate a coordination request, which will provide them with a connection token.</para>
+        /// <para>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6547,7 +6563,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client. They can then call the <a href="https://help.aliyun.com/zh/wuying-workspace/developer-reference/api-metaspace-2022-03-07-applycoordinationwithcode?spm=a2c4g.11174283.help-menu-68242.d_5_3_2_1.70e5e380fUFgOH%5C&scm=20140722.H_2863194._.OR_help-T_cn~zh-V_1">ApplyCoordinationWithCode</a> operation to initiate a coordination request, which will provide them with a connection token.</para>
+        /// <para>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6570,7 +6586,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client. They can then call the <a href="https://help.aliyun.com/zh/wuying-workspace/developer-reference/api-metaspace-2022-03-07-applycoordinationwithcode?spm=a2c4g.11174283.help-menu-68242.d_5_3_2_1.70e5e380fUFgOH%5C&scm=20140722.H_2863194._.OR_help-T_cn~zh-V_1">ApplyCoordinationWithCode</a> operation to initiate a coordination request, which will provide them with a connection token.</para>
+        /// <para>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7874,6 +7890,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 request.NetRedirectPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetRedirectPolicy, "NetRedirectPolicy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Watermark))
+            {
+                request.WatermarkShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Watermark, "Watermark", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CameraRedirect))
             {
@@ -7914,6 +7934,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionWidth))
             {
                 body["ResolutionWidth"] = request.ResolutionWidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkShrink))
+            {
+                body["Watermark"] = request.WatermarkShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7958,6 +7982,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 request.NetRedirectPolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NetRedirectPolicy, "NetRedirectPolicy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Watermark))
+            {
+                request.WatermarkShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Watermark, "Watermark", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CameraRedirect))
             {
@@ -7998,6 +8026,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResolutionWidth))
             {
                 body["ResolutionWidth"] = request.ResolutionWidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkShrink))
+            {
+                body["Watermark"] = request.WatermarkShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8708,6 +8740,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         public RenewCloudPhoneNodesResponse RenewCloudPhoneNodesWithOptions(RenewCloudPhoneNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -8727,6 +8764,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -8762,6 +8800,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         public async Task<RenewCloudPhoneNodesResponse> RenewCloudPhoneNodesWithOptionsAsync(RenewCloudPhoneNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -8781,6 +8824,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10188,6 +10232,134 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateInstanceGroupImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新实例镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceImageResponse
+        /// </returns>
+        public UpdateInstanceImageResponse UpdateInstanceImageWithOptions(UpdateInstanceImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdList))
+            {
+                query["InstanceIdList"] = request.InstanceIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstanceImage",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstanceImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新实例镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceImageResponse
+        /// </returns>
+        public async Task<UpdateInstanceImageResponse> UpdateInstanceImageWithOptionsAsync(UpdateInstanceImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdList))
+            {
+                query["InstanceIdList"] = request.InstanceIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstanceImage",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstanceImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新实例镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceImageResponse
+        /// </returns>
+        public UpdateInstanceImageResponse UpdateInstanceImage(UpdateInstanceImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateInstanceImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新实例镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceImageResponse
+        /// </returns>
+        public async Task<UpdateInstanceImageResponse> UpdateInstanceImageAsync(UpdateInstanceImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateInstanceImageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

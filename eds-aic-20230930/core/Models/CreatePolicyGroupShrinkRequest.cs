@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public int? ResolutionWidth { get; set; }
 
+        [NameInMap("Watermark")]
+        [Validation(Required=false)]
+        public string WatermarkShrink { get; set; }
+
     }
 
 }

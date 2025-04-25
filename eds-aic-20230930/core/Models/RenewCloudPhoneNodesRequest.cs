@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RenewCloudPhoneNodesRequest : TeaModel {
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable the auto-renewal feature.</para>
         /// <para>Valid values:</para>
