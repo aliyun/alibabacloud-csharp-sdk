@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class ListSubscriptionByTopicRequest : TeaModel {
+        [NameInMap("EndpointType")]
+        [Validation(Required=false)]
+        public string EndpointType { get; set; }
+
+        [NameInMap("EndpointValue")]
+        [Validation(Required=false)]
+        public string EndpointValue { get; set; }
+
         /// <summary>
         /// <para>The page number. Valid values: 1 to 100000000. If you set this parameter to a value smaller than 1, the value of this parameter is 1 by default. If you set this parameter to a value greater than 100000000, the value of this parameter is 100000000 by default.</para>
         /// 
