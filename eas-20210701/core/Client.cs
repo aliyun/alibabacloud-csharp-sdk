@@ -9859,6 +9859,14 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 query["QuotaId"] = request.QuotaId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceAliasName))
+            {
+                query["ResourceAliasName"] = request.ResourceAliasName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
             {
                 query["ResourceName"] = request.ResourceName;
@@ -9982,6 +9990,14 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaId))
             {
                 query["QuotaId"] = request.QuotaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceAliasName))
+            {
+                query["ResourceAliasName"] = request.ResourceAliasName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceName))
             {

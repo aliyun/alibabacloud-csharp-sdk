@@ -104,6 +104,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string QuotaId { get; set; }
 
+        [NameInMap("ResourceAliasName")]
+        [Validation(Required=false)]
+        public string ResourceAliasName { get; set; }
+
+        [NameInMap("ResourceId")]
+        [Validation(Required=false)]
+        public string ResourceId { get; set; }
+
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The name or ID of the resource group to which the service belongs.</para>
         /// 
@@ -112,6 +122,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// </summary>
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ResourceName { get; set; }
 
         [NameInMap("ResourceType")]
