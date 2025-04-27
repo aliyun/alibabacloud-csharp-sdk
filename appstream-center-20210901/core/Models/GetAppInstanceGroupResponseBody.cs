@@ -490,6 +490,24 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags> Tags { get; set; }
+            public class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Scope")]
+                [Validation(Required=false)]
+                public string Scope { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
         }
 
         /// <summary>
