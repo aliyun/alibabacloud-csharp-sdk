@@ -455,6 +455,20 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 
         }
 
+        [NameInMap("scoreConfig")]
+        [Validation(Required=false)]
+        public GetAICoachScriptResponseBodyScoreConfig ScoreConfig { get; set; }
+        public class GetAICoachScriptResponseBodyScoreConfig : TeaModel {
+            [NameInMap("enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("passScore")]
+            [Validation(Required=false)]
+            public string PassScore { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
