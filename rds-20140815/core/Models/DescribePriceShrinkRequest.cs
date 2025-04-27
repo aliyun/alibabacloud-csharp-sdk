@@ -23,13 +23,13 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The commodity code of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>bards</b>: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).</description></item>
-        /// <item><description><b>rds</b> (default): The instance is a subscription primary instance. This value is available on the China site (aliyun.com).</description></item>
+        /// <item><description><b>rds</b> (default): The instance is a subscription primary instance. This value is available at the China site (aliyun.com).</description></item>
         /// <item><description><b>rords</b>: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).</description></item>
         /// <item><description><b>rds_rordspre_public_cn</b>: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).</description></item>
         /// <item><description><b>bards_intl</b>: The instance is a pay-as-you-go primary instance. This value is available at the international site (alibabacloud.com).</description></item>
         /// <item><description><b>rds_intl</b>: The instance is a subscription primary instance. This value is available at the international site (alibabacloud.com).</description></item>
         /// <item><description><b>rords_intl</b>: The instance is a pay-as-you-go read-only instance. This value is available at the international site (alibabacloud.com).</description></item>
-        /// <item><description><b>rds_rordspre_public_intl</b>: The instance is a subscription read-only instance. This value is available on the international site (alibabacloud.com).</description></item>
+        /// <item><description><b>rds_rordspre_public_intl</b>: The instance is a subscription read-only instance. This value is available at the international site (alibabacloud.com).</description></item>
         /// </list>
         /// <remarks>
         /// <para> If you want to query the price of a read-only instance, you must specify this parameter.</para>

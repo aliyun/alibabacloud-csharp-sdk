@@ -56,14 +56,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The category of the data disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud</b> (default): basic disk</description></item>
         /// <item><description><b>cloud_efficiency</b>: ultra disk.</description></item>
         /// <item><description><b>cloud_ssd</b>: standard SSD.</description></item>
-        /// <item><description><b>cloud_essd</b>: Enterprise ESSD (ESSD).</description></item>
-        /// <item><description><b>cloud_auto</b>: ESSD AutoPL disk</description></item>
-        /// <item><description><b>cloud_essd_entry</b>: ESSD Entry disk</description></item>
-        /// <item><description><b>elastic_ephemeral_disk_standard</b>: standard elastic ephemeral disk</description></item>
-        /// <item><description><b>elastic_ephemeral_disk_premium</b>: premium elastic ephemeral disk</description></item>
+        /// <item><description><b>cloud_essd</b>: ESSD.</description></item>
+        /// <item><description><b>cloud_auto</b>: ESSD AutoPL disk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +70,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The disk name. The name must be 2 to 128 characters in length and can contain letters and digits. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters and digits. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <para>By default, this parameter is left empty.</para>
         /// 
         /// <b>Example:</b>
@@ -112,7 +108,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>PL2</b>: A single ESSD delivers up to 100,000 random read/write IOPS.</description></item>
         /// <item><description><b>PL3</b>: A single ESSD delivers up to 1,000,000 random read/write IOPS.</description></item>
         /// </list>
-        /// <para>For information about ESSD PLs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
+        /// <para>For information about ESSD PLs, see <a href="https://help.aliyun.com/document_detail/2859916.html">ESSDs</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -153,11 +149,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The disk size. Unit: GiB. This parameter is required.</para>
+        /// <para>The disk size. Unit: GiB. This parameter is required. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values if you set DiskCategory to <b>cloud</b>: 5 to 2000.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_efficiency</b>: 20 to 32768.</para>
+        /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_essd_entry</b>: 10 to 32768.</para>
         /// </description></item>
         /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_ssd</b>: 20 to 32768.</para>
         /// </description></item>
@@ -170,12 +164,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// </description></item>
         /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_auto</b>: 1 to 65536.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values if you set DiskCategory to <b>cloud_essd_entry</b>: 10 to 32768.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values if you set DiskCategory to <b>elastic_ephemeral_disk_standard</b>: 64 to 8192.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values if you set DiskCategory to <b>elastic_ephemeral_disk_premium</b>: 64 to 8192.</para>
         /// </description></item>
         /// </list>
         /// <para>If <c>SnapshotId</c> is specified, the following limits apply to <c>SnapshotId</c> and <c>Size</c>:</para>
@@ -208,6 +196,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The zone ID.</para>
+        /// <para>This parameter is required if you do not specify <b>InstanceId</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-a</para>

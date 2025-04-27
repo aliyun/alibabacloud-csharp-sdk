@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CreateRCDiskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The disk ID.</para>
+        /// <para>The cloud disk ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rcd-2zegrjtnkp6dqbe1egca</para>
