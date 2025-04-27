@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string DomainWhitelistSchemaId { get; set; }
 
+            [NameInMap("EndpointHardeningSchemaId")]
+            [Validation(Required=false)]
+            public string EndpointHardeningSchemaId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>approval-schema-090134f1ebff****</para>
@@ -72,6 +76,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [NameInMap("SoftwareBlockSchemaId")]
             [Validation(Required=false)]
             public string SoftwareBlockSchemaId { get; set; }
+
+            [NameInMap("SoftwareHardeningSchemaId")]
+            [Validation(Required=false)]
+            public string SoftwareHardeningSchemaId { get; set; }
 
         }
 

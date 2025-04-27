@@ -115,6 +115,20 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            [NameInMap("EndpointHardeningPolicies")]
+            [Validation(Required=false)]
+            public UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies EndpointHardeningPolicies { get; set; }
+            public class UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies : TeaModel {
+                [NameInMap("PolicyIds")]
+                [Validation(Required=false)]
+                public List<string> PolicyIds { get; set; }
+
+                [NameInMap("SchemaId")]
+                [Validation(Required=false)]
+                public string SchemaId { get; set; }
+
+            }
+
             [NameInMap("PeripheraBlockPolicies")]
             [Validation(Required=false)]
             public UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies PeripheraBlockPolicies { get; set; }
@@ -175,6 +189,20 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <b>Example:</b>
                 /// <para>approval-schema-090134f1ebff****</para>
                 /// </summary>
+                [NameInMap("SchemaId")]
+                [Validation(Required=false)]
+                public string SchemaId { get; set; }
+
+            }
+
+            [NameInMap("SoftwareHardeningPolicies")]
+            [Validation(Required=false)]
+            public UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies SoftwareHardeningPolicies { get; set; }
+            public class UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies : TeaModel {
+                [NameInMap("PolicyIds")]
+                [Validation(Required=false)]
+                public List<string> PolicyIds { get; set; }
+
                 [NameInMap("SchemaId")]
                 [Validation(Required=false)]
                 public string SchemaId { get; set; }
