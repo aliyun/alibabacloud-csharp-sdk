@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
+        [NameInMap("ClientName")]
+        [Validation(Required=false)]
+        public string ClientName { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>windows_\&quot;Windows 10 Pro\&quot; 10.0 (Build 22631)</para>
@@ -218,6 +222,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
         [NameInMap("PhoneVerifyCode")]
         [Validation(Required=false)]
         public string PhoneVerifyCode { get; set; }
+
+        [NameInMap("ProfileRegion")]
+        [Validation(Required=false)]
+        public string ProfileRegion { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

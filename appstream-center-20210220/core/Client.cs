@@ -275,6 +275,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             {
                 query["ClientId"] = request.ClientId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientName))
+            {
+                query["ClientName"] = request.ClientName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientOS))
             {
                 query["ClientOS"] = request.ClientOS;
@@ -370,6 +374,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneVerifyCode))
             {
                 query["PhoneVerifyCode"] = request.PhoneVerifyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfileRegion))
+            {
+                query["ProfileRegion"] = request.ProfileRegion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -455,6 +463,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             {
                 query["ClientId"] = request.ClientId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientName))
+            {
+                query["ClientName"] = request.ClientName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientOS))
             {
                 query["ClientOS"] = request.ClientOS;
@@ -550,6 +562,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneVerifyCode))
             {
                 query["PhoneVerifyCode"] = request.PhoneVerifyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfileRegion))
+            {
+                query["ProfileRegion"] = request.ProfileRegion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

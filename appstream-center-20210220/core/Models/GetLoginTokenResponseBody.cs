@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
         [Validation(Required=false)]
         public string NextStage { get; set; }
 
+        [NameInMap("NickName")]
+        [Validation(Required=false)]
+        public string NickName { get; set; }
+
         [NameInMap("OfficeSites")]
         [Validation(Required=false)]
         public List<string> OfficeSites { get; set; }
