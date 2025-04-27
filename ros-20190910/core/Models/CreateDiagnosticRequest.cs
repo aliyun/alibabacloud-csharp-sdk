@@ -12,6 +12,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The keyword in the diagnosis.</para>
         /// <para>You can specify the ID of the stack that you want to diagnose.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>37A5679B-8488-5A5D-8D5C-90E66A577A5D</para>

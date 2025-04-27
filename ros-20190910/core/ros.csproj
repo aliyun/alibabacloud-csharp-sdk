@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.ROS20190910</AssemblyName>
-    <Version>2.5.4</Version>
+    <Version>2.5.5</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud Resource Orchestration Service (20190910) SDK Library for .NET</Description>
