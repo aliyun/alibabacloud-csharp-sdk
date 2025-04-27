@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LTAI5t8be*******tEJ6vfo</para>
+        /// <para>yourAccessKeyID</para>
         /// </summary>
         [NameInMap("accountAccessKey")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4c1a6367ce4c4255e9617326f9133ac6359533f6</para>
+        /// <para>4c1a6367ce4c4255e9617326f9133ac635******</para>
         /// </summary>
         [NameInMap("secretSign")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>22c2d7d1769cb53c5a6d9213248e2de524c4f799</para>
+        /// <para>22c2d7d1769cb53c5a6d9213248e2de524******</para>
         /// </summary>
         [NameInMap("signature")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MjphbXFwLWNuLXp***********************Q4YmVNbVZNMWVSWnRFSjZ2Zm8=</para>
+        /// <para>Mjo****************</para>
         /// </summary>
         [NameInMap("userName")]
         [Validation(Required=false)]

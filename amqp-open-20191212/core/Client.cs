@@ -577,6 +577,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Edition))
+            {
+                query["Edition"] = request.Edition;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptedInstance))
             {
                 query["EncryptedInstance"] = request.EncryptedInstance;
@@ -616,6 +620,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodCycle))
             {
                 query["PeriodCycle"] = request.PeriodCycle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvisionedCapacity))
+            {
+                query["ProvisionedCapacity"] = request.ProvisionedCapacity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueCapacity))
             {
@@ -708,6 +716,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Edition))
+            {
+                query["Edition"] = request.Edition;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptedInstance))
             {
                 query["EncryptedInstance"] = request.EncryptedInstance;
@@ -747,6 +759,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodCycle))
             {
                 query["PeriodCycle"] = request.PeriodCycle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvisionedCapacity))
+            {
+                query["ProvisionedCapacity"] = request.ProvisionedCapacity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueCapacity))
             {
@@ -3295,7 +3311,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变更实例，升降配</para>
+        /// <para>Upgrades or downgrades the configurations of an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3393,7 +3409,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变更实例，升降配</para>
+        /// <para>Upgrades or downgrades the configurations of an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3491,7 +3507,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变更实例，升降配</para>
+        /// <para>Upgrades or downgrades the configurations of an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3509,7 +3525,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变更实例，升降配</para>
+        /// <para>Upgrades or downgrades the configurations of an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

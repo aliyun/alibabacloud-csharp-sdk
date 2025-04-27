@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <para>The Alibaba Cloud account ID or Resource Access Management (RAM) user to which the AccessKey pair that is used to create the static username and password belongs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1565*******973901</para>
+        /// <para>1565************1</para>
         /// </summary>
         [NameInMap("masterUid")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <para>The AccessKey ID that is used to create the static username and password.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LTAI5***********eRZtEJ6vfo</para>
+        /// <para>LTAI****************</para>
         /// </summary>
         [NameInMap("accessKey")]
         [Validation(Required=false)]

@@ -12,7 +12,6 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <summary>
         /// <para>The timestamp that indicates when the pair of static username and password that you want to delete was created. Unit: milliseconds.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/472730.html">ListAccounts</a> operation to view the timestamp.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1671175303522</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class UpdateInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,13 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The returned data, which includes orderId and instanceId. Sample returned data:</para>
+        /// <pre><code class="language-json">&quot;Data&quot;: {
+        ///     &quot;instanceId&quot;: &quot;amqp-cn-xxxxx&quot;,
+        ///     &quot;orderId&quot;: 22222
+        ///   }
+        /// </c></pre>
+        /// 
         /// <b>Example:</b>
         /// <para>{“instanceId”: “amqp-cn-jtexxxxx”, “orderId”: 2222222}</para>
         /// </summary>
@@ -26,6 +35,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public object Data { get; set; }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InstanceNotExist</para>
         /// </summary>
@@ -34,6 +45,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>628705FD-03EE-4ABE-BB21-E1672960***</para>
         /// </summary>
@@ -42,6 +55,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -50,6 +65,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string StatusCode { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

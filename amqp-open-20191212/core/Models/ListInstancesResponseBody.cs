@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -43,6 +43,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 [Validation(Required=false)]
                 public string ClassicEndpoint { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the encryption at rest feature is enabled for the instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("EncryptedInstance")]
                 [Validation(Required=false)]
                 public bool? EncryptedInstance { get; set; }
@@ -92,6 +98,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the Key Management Service (KMS) key used for the data disk.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key-bjj66c2a893vmhawtq5fd</para>
+                /// </summary>
                 [NameInMap("KmsKeyId")]
                 [Validation(Required=false)]
                 public string KmsKeyId { get; set; }
@@ -180,6 +192,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 [Validation(Required=false)]
                 public string PublicEndpoint { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the resource group to which the instance belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rg-aek3axfj2w4czrq</para>
+                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
@@ -224,14 +242,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public bool? SupportEIP { get; set; }
 
                 /// <summary>
-                /// <para>标签列表。</para>
+                /// <para>The tags that are added to the instance.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<ListInstancesResponseBodyDataInstancesTags> Tags { get; set; }
                 public class ListInstancesResponseBodyDataInstancesTags : TeaModel {
                     /// <summary>
-                    /// <para>标签键。</para>
+                    /// <para>The tag key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>region</para>
@@ -241,7 +259,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>标签值。</para>
+                    /// <para>The tag value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>hangzhou</para>

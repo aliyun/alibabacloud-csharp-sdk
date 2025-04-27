@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal duration. Unit: months.</para>
+        /// <para>The auto-renewal period. The unit of the auto-renewal period is specified by RenewalDurationUnit. Default value: Month.</para>
         /// <remarks>
         /// <para> This parameter takes effect only if you set AutoRenew to true. Default value: 1.</para>
         /// </remarks>
@@ -46,12 +46,22 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("Edition")]
+        [Validation(Required=false)]
+        public string Edition { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable storage encryption for the instance. This parameter is available only for exclusive instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("EncryptedInstance")]
         [Validation(Required=false)]
         public bool? EncryptedInstance { get; set; }
 
         /// <summary>
-        /// <para>The instance name. We recommend that you specify a name that does not exceed 64 characters in length.</para>
+        /// <para>The name of the instance. We recommend that you specify a name that does not exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amqp-xxxxx</para>
@@ -61,12 +71,13 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The instance edition. Valid values:</para>
+        /// <para>The instance edition. Valid values if you create a subscription instance:</para>
         /// <list type="bullet">
-        /// <item><description>professional: Professional Edition</description></item>
+        /// <item><description>professional: Professional Edition.</description></item>
         /// <item><description>enterprise: Enterprise Edition</description></item>
         /// <item><description>vip: Enterprise Platinum Edition</description></item>
         /// </list>
+        /// <para>If you create a serverless instance, you do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>professional</para>
@@ -76,6 +87,15 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string InstanceType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Key Management Service (KMS)-managed key used for storage encryption. This parameter is available only for exclusive instances and required only if you set EncryptedInstance to true. The key must meet the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>The key cannot be a service key.</description></item>
+        /// <item><description>The key must be in the Enabled state.</description></item>
+        /// <item><description>The key must be a symmetric key.</description></item>
+        /// <item><description>The key must be used for encryption and decryption.</description></item>
+        /// <item><description>After the key is expired or deleted, you cannot read or write data and exceptions can occur in the ApsaraMQ for RabbitMQ instance.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>key-xxx</para>
         /// </summary>
@@ -84,7 +104,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string KmsKeyId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of connections that can be established to the instance. Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</para>
+        /// <para>The maximum number of connections that can be established to the instance.</para>
+        /// <para>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50000</para>
@@ -94,7 +115,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public int? MaxConnections { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of EIP-based TPS on the instance. Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</para>
+        /// <para>The maximum number of Internet-based TPS on the instance.</para>
+        /// <para>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>128</para>
@@ -104,7 +126,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public long? MaxEipTps { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of virtual private cloud (VPC)-based transactions per second (TPS) on the instance. Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</para>
+        /// <para>The maximum number of virtual private cloud (VPC)-based transactions per second (TPS) on the instance.</para>
+        /// <para>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -114,13 +137,11 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public long? MaxPrivateTps { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid value:</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Subscription</description></item>
+        /// <item><description>Subscription: subscription instance</description></item>
+        /// <item><description>PayAsYouGo: serverless instance</description></item>
         /// </list>
-        /// <remarks>
-        /// <para> API operations provided by ApsaraMQ for RabbitMQ are supported only by subscription instances. You can set this parameter only to Subscription.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -149,9 +170,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <item><description>Month</description></item>
         /// <item><description>Year</description></item>
         /// </list>
-        /// <remarks>
-        /// <para> This parameter takes effect only if you set PaymentType to Subscription. Default value: Month.</para>
-        /// </remarks>
+        /// <para>This parameter is valid only if you set PaymentType to Subscription. Default value: Month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -160,13 +179,13 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string PeriodCycle { get; set; }
 
+        [NameInMap("ProvisionedCapacity")]
+        [Validation(Required=false)]
+        public int? ProvisionedCapacity { get; set; }
+
         /// <summary>
-        /// <para>The number of queues. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Professional Edition: 50 to 1000. The number of queues must increase in increments of 5.</description></item>
-        /// <item><description>Enterprise Edition: 200 to 6000. The number of queues must increase in increments of 100.</description></item>
-        /// <item><description>Enterprise Platinum Edition: 10000 to 80000. The number of queues must increase in increments of 100.</description></item>
-        /// </list>
+        /// <para>The number of queues on the instance.</para>
+        /// <para>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -181,7 +200,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <item><description>AutoRenewal</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you configure both this parameter and AutoRenew, the value of this parameter is used.</para>
+        /// <para> If you configure both this parameter and AutoRenew, the value of this parameter is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -205,14 +224,20 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string RenewalDurationUnit { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmvvajg5qkxhi</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the pay-as-you-go instance. Valid values:</para>
+        /// <para>The billing method of the serverless instance. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>onDemand: You are charged based on your actual usage</description></item>
+        /// <item><description>onDemand: You are charged based on your actual usage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -225,13 +250,13 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <summary>
         /// <para>The storage capacity. Unit: GB. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Professional Edition and Enterprise Edition instances: Set this parameter to 0.</description></item>
+        /// <item><description>Professional Edition and Enterprise Edition instances: Set the value to 0.</description></item>
         /// </list>
         /// <remarks>
         /// <para> The value 0 specifies that storage space is available for Professional Edition and Enterprise Edition instances, but no storage fees are generated.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Platinum Edition instances: Set the value to m × 100, where m ranges from 7 to 28.</description></item>
+        /// <item><description>Enterprise Platinum Edition instances: Set the value to m × 100, where m is an integer that ranges from 7 to 28.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -264,7 +289,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Enterprise Platinum Edition instances allow you to retain message traces for 15 days free of charge. If you use an Enterprise Platinum Edition instance, you can set this parameter only to true and TracingStorageTime only to 15.</para>
+        /// <item><description><para>Enterprise Platinum Edition instances allow you to retain message traces for 15 days free of charge. If you create an Enterprise Platinum Edition instance, you can set this parameter only to true and TracingStorageTime only to 15.</para>
         /// </description></item>
         /// <item><description><para>For instances of other editions, you can set this parameter to true or false.</para>
         /// </description></item>
@@ -284,9 +309,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <item><description>7</description></item>
         /// <item><description>15</description></item>
         /// </list>
-        /// <remarks>
-        /// <para> This parameter takes effect only if you set SupportTracing to true.</para>
-        /// </remarks>
+        /// <para>This parameter is valid only if you set SupportTracing to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

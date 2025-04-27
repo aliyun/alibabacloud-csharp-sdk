@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             /// <para>The AccessKey ID that is used to create the password.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>LTAI5***********eRZtEJ6vfo</para>
+            /// <para>LTAI****************</para>
             /// </summary>
             [NameInMap("AccessKey")]
             [Validation(Required=false)]

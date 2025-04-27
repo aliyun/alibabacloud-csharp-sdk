@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group to which the instances belong.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekzu74zjgdu4mq</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
