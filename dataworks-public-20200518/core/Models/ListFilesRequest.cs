@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListFilesRequest : TeaModel {
-        [NameInMap("CommitStatus")]
-        [Validation(Required=false)]
-        public int? CommitStatus { get; set; }
-
         /// <summary>
         /// <para>The exact matching file name. The file name of the query result is exactly the same as this parameter.</para>
         /// 
