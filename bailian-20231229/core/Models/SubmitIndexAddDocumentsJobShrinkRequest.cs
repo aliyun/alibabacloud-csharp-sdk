@@ -16,6 +16,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string CategoryIdsShrink { get; set; }
 
+        [NameInMap("ChunkMode")]
+        [Validation(Required=false)]
+        public string ChunkMode { get; set; }
+
+        [NameInMap("ChunkSize")]
+        [Validation(Required=false)]
+        public int? ChunkSize { get; set; }
+
         /// <summary>
         /// <para>The list of the primary key IDs of the documents.</para>
         /// </summary>
@@ -33,6 +41,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [NameInMap("IndexId")]
         [Validation(Required=false)]
         public string IndexId { get; set; }
+
+        [NameInMap("OverlapSize")]
+        [Validation(Required=false)]
+        public int? OverlapSize { get; set; }
+
+        [NameInMap("Separator")]
+        [Validation(Required=false)]
+        public string Separator { get; set; }
 
         /// <summary>
         /// <para>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>

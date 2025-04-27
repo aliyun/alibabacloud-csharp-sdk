@@ -5071,6 +5071,14 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["CategoryIds"] = request.CategoryIdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkMode))
+            {
+                query["ChunkMode"] = request.ChunkMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkSize))
+            {
+                query["ChunkSize"] = request.ChunkSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIdsShrink))
             {
                 query["DocumentIds"] = request.DocumentIdsShrink;
@@ -5078,6 +5086,14 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
             {
                 query["IndexId"] = request.IndexId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverlapSize))
+            {
+                query["OverlapSize"] = request.OverlapSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Separator))
+            {
+                query["Separator"] = request.Separator;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
@@ -5149,6 +5165,14 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["CategoryIds"] = request.CategoryIdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkMode))
+            {
+                query["ChunkMode"] = request.ChunkMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkSize))
+            {
+                query["ChunkSize"] = request.ChunkSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentIdsShrink))
             {
                 query["DocumentIds"] = request.DocumentIdsShrink;
@@ -5156,6 +5180,14 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IndexId))
             {
                 query["IndexId"] = request.IndexId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverlapSize))
+            {
+                query["OverlapSize"] = request.OverlapSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Separator))
+            {
+                query["Separator"] = request.Separator;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
